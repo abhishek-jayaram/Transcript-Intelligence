@@ -1,0 +1,123 @@
+name: transcript-intelligence
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  validate-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scikit-learn matplotlib joblib
+
+      - name: Smoke test the master file
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("Sentiment_Dataset/master_meetings.json")
+          with path.open("r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          meetings = data["meetings"] if isinstance(data, dict) and "meetings" in data else data
+          print("meetings:", len(meetings))
+          print("first keys:", list(meetings[0].keys())[:10])
+          PY
+
+      - name: Stage cleaned outputs where the combiner expects them
+        run: |
+          mkdir -p Data/cleaned_output
+          cp cleaned_output/*.json Data/cleaned_output/
+
+      - name: Build master meetings file
+        run: |
+          python Data/combine_cleaned_data.py
+
+      - name: Build training table
+        run: |
+          python Training_table/training_dataset.py
+
+      - name: Run theme discovery
+        run: |
+          mkdir -p generated/theme_outputs
+          python theme_outputs/Theme.py \
+            --input Data/master_meetings.json \
+            --outdir generated/theme_outputs \
+            --n-topics 8
+
+      - name: Run sentiment analysis
+        run: |
+          python Data/sentiment_analysis.py
+
+      - name: Train and evaluate classifier
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          from sklearn.model_selection import StratifiedKFold, cross_val_predict
+          from sklearn.pipeline import Pipeline
+          from sklearn.feature_extraction.text import TfidfVectorizer
+          from sklearn.linear_model import LogisticRegression
+          from sklearn.metrics import classification_report, confusion_matrix
+
+          df = pd.read_csv("Data/labeling_sheet.csv")
+          df["manual_label"] = df["manual_label"].astype(str).str.strip()
+
+          for col in ["title", "summary", "topics", "action_items"]:
+              if col not in df.columns:
+                  df[col] = ""
+
+          df["combined_text"] = (
+              df["title"].fillna("") + " " +
+              df["summary"].fillna("") + " " +
+              df["topics"].fillna("") + " " +
+              df["action_items"].fillna("")
+          )
+
+          X = df["combined_text"]
+          y = df["manual_label"]
+
+          model = Pipeline([
+              ("tfidf", TfidfVectorizer(
+                  max_features=5000,
+                  ngram_range=(1, 2),
+                  stop_words="english"
+              )),
+              ("clf", LogisticRegression(
+                  max_iter=2000,
+                  class_weight="balanced"
+              ))
+          ])
+
+          cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+          preds = cross_val_predict(model, X, y, cv=cv)
+
+          print(classification_report(y, preds, digits=4))
+          print(confusion_matrix(y, preds))
+          PY
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: transcript-intelligence-artifacts
+          path: |
+            Data/master_meetings.json
+            training_dataset.csv
+            sentiment_by_call_type.png
+            sentiment_summary.csv
+            sentiment_distribution.csv
+            generated/theme_outputs/**
