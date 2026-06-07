@@ -25,6 +25,14 @@ Usage:
         --speaker-meta speaker-meta(2).json \
         --events events(2).json \
         --out cleaned_meeting.json
+
+This script is a meeting data cleaner and normalizer 
+
+1. Text Cleaning — normalizes whitespace, fixes em-dashes, removes extra spaces before punctuation, across all text fields.
+2. Participant Classification — infers internal vs external attendees by comparing each participant's email domain against the organizer's domain.
+3. Transcript Processing — cleans each speaker turn, then merges consecutive turns from the same speaker (within 1 second gap) into larger coherent segments.
+4. Stats Generation — counts turn counts per speaker and total speaking time in seconds per speaker.
+5. Record Assembly — bundles everything into a single CleanMeetingRecord dataclass and writes it to an output JSON.
 """
 
 from __future__ import annotations
