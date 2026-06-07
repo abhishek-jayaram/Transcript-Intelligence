@@ -18,6 +18,9 @@ External
 customer-facing calls (56 meetings) are markedly more positive,indicating healthy renewals, demos, and adoption discussions. We include tables of theme counts andsentiment summary, plus charts to visualize these trends. Finally, we outline stakeholderimplications, limitations, and next steps in an actionable roadmap (see Appendix for scripts and datasources)
 
 
+<img width="1440" height="1264" alt="image" src="https://github.com/user-attachments/assets/af987894-0d0d-4aad-a7fb-6b7efc3b6d40" />
+
+
 # Data Sources & Assumptions
 # Data:
 We analyzed
