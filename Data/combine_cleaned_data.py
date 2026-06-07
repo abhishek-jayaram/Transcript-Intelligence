@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Combine all cleaned meeting data into a single master file."""
 
 import json

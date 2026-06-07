@@ -1,6 +1,6 @@
 
-#This pipeline that reads labeled text data → trains a TF-IDF + Logistic Regression classifier → and 
-# honestly evaluates how well it generalizes using cross-validation, without any data leakage.
+"""This pipeline that reads labeled text data → trains a TF-IDF + Logistic Regression classifier → and 
+ honestly evaluates how well it generalizes using cross-validation, without any data leakage"""
 
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
