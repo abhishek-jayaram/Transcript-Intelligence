@@ -1,0 +1,434 @@
+{
+  "meeting_id": "01KQ46A9DE0AECB006D897A0",
+  "title": "Detect Outage - Escalation Bridge",
+  "organizer_email": "tyler.washington@aegiscloud.com",
+  "host_email": "tyler.washington@aegiscloud.com",
+  "start_time": "2026-03-11T11:00:00.000Z",
+  "end_time": "2026-03-11T11:17:06.000Z",
+  "duration_minutes": 17.1,
+  "participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Tyler Washington",
+    "1": "Diana Reeves",
+    "2": "Marcus Williams"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 4.5,
+      "end_time": 8.1,
+      "duration": 3.5999999999999996,
+      "text": "Okay, I think everyone's on - Diana, Marcus, you both there?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 8.9,
+      "end_time": 16.1,
+      "duration": 7.200000000000001,
+      "text": "Yeah I'm here, I've been here for like five minutes actually, I was waiting on the bridge code to work."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 17.0,
+      "end_time": 22.1,
+      "duration": 5.100000000000001,
+      "text": "Sorry, yeah the - the conferencing system was being weird, I don't know. Marcus?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 23.1,
+      "end_time": 29.2,
+      "duration": 6.099999999999998,
+      "text": "Present. I've got the incident channel pulled up and I'm looking at the logs right now."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 29.8,
+      "end_time": 39.2,
+      "duration": 9.400000000000002,
+      "text": "Okay good. So - Diana, before you say anything, I want to give you a status update first so we're all working from the same picture, okay?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 40.2,
+      "end_time": 46.3,
+      "duration": 6.099999999999994,
+      "text": "Tyler I have eight customers blowing up my phone right now, so please, go ahead, talk fast."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 46.9,
+      "end_time": 62.2,
+      "duration": 15.300000000000004,
+      "text": "Right. So - so the event processing pipeline went down at approximately 2:47 AM this morning. We're seeing a cascading failure that started in the ingestion layer and basically knocked out the entire threat monitoring feed for Detect. Nobody is getting alerts right now."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 63.2,
+      "end_time": 70.8,
+      "duration": 7.599999999999994,
+      "text": "Nobody is - okay so you're telling me that every single Detect customer is flying blind right now? Like zero visibility?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 71.7,
+      "end_time": 75.3,
+      "duration": 3.5999999999999943,
+      "text": "That is correct, yes. Zero event processing, zero alerts going out."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 76.5,
+      "end_time": 85.7,
+      "duration": 9.200000000000003,
+      "text": "Tyler, this is - this is really bad. Do you understand how bad this is? We have enterprise customers who have contractual SLA commitments around monitoring uptime."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 87.0,
+      "end_time": 91.0,
+      "duration": 4.0,
+      "text": "I know, Diana, I know. We're - we are working it."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 91.5,
+      "end_time": 111.3,
+      "duration": 19.799999999999997,
+      "text": "Can I jump in here? So from a support standpoint, I've already had, uh, eleven tickets come in since about 6 AM when people started getting to work and noticed their dashboards were blank. Hartwell Financial, Crestwood Health, um, Meridian Logistics - all of them are asking for ETAs and I have nothing to give them."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 111.7,
+      "end_time": 116.3,
+      "duration": 4.599999999999994,
+      "text": "Okay so Marcus what are you telling them right now? What's the messaging?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 117.4,
+      "end_time": 126.0,
+      "duration": 8.599999999999994,
+      "text": "I'm telling them we're aware of a service disruption affecting Detect and that our engineering team is actively investigating. That's... that's basically all I have."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 126.4,
+      "end_time": 135.5,
+      "duration": 9.099999999999994,
+      "text": "That is not good enough, that is not - Tyler, can you give me something more concrete? What is the root cause, do we actually know?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 136.1,
+      "end_time": 153.4,
+      "duration": 17.30000000000001,
+      "text": "We think - and I want to be careful here because we're still digging - but we think it's a single point of failure in the ingestion layer. Basically one node failed and instead of the load distributing properly it just, uh, it cascaded. Took everything downstream with it."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 154.5,
+      "end_time": 165.2,
+      "duration": 10.699999999999989,
+      "text": "A single point of failure? We have a single point of failure in production in a threat monitoring pipeline? How is that even - how did that get through architecture review?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 166.3,
+      "end_time": 177.0,
+      "duration": 10.699999999999989,
+      "text": "Diana, I - look, I hear you and honestly I'm asking myself the same question right now but that is a conversation for after we fix it, okay? Can we focus?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 177.8,
+      "end_time": 188.1,
+      "duration": 10.299999999999983,
+      "text": "No, I'm sorry, I'm not letting that go because I need to understand this for when I talk to customers. Hartwell's CISO is going to ask me that exact question."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 189.2,
+      "end_time": 199.5,
+      "duration": 10.300000000000011,
+      "text": "Then tell him we identified an architectural gap in our event ingestion redundancy and we are remediating it. That's the honest answer and it's all we have right now."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 200.3,
+      "end_time": 204.6,
+      "duration": 4.299999999999983,
+      "text": "I need an ETA Tyler. What is your best estimate for restoration?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 205.8,
+      "end_time": 223.2,
+      "duration": 17.399999999999977,
+      "text": "Uh - okay so honestly, we're looking at somewhere between four and eight hours to get the pipeline stable again. We need to stand up redundant nodes and we don't want to rush it because if we botch the recovery we could lose event data on top of everything else."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 224.6,
+      "end_time": 234.7,
+      "duration": 10.099999999999994,
+      "text": "Four to eight hours. Tyler, it's already been - what, almost four hours since 2:47? So we could be looking at twelve hours total of zero threat monitoring visibility."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 235.4,
+      "end_time": 240.0,
+      "duration": 4.599999999999994,
+      "text": "In a worst case scenario, yes. I'm not going to sugarcoat it."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 240.6,
+      "end_time": 249.9,
+      "duration": 9.300000000000011,
+      "text": "I've got - okay, I just got another ticket while we've been talking. Crestwood Health is saying they're, quote, evaluating alternative vendors. They're asking about SentinelShield."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 251.1,
+      "end_time": 258.9,
+      "duration": 7.799999999999983,
+      "text": "Of course they are. Of course. Marcus, flag that one to me directly, I'm going to call Crestwood's account lead personally."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 259.3,
+      "end_time": 260.9,
+      "duration": 1.599999999999966,
+      "text": "Yeah, flagging it now."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 261.4,
+      "end_time": 274.9,
+      "duration": 13.5,
+      "text": "Diana I want to - I want to propose something. Can we do thirty-minute status update emails going out to all affected customers? Marcus coordinates, engineering feeds me the latest, and we keep a consistent message. No more vacuum."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 276.2,
+      "end_time": 282.4,
+      "duration": 6.199999999999989,
+      "text": "Yes. Yes, that is the bare minimum we should be doing, why is that not already happening?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 283.0,
+      "end_time": 288.0,
+      "duration": 5.0,
+      "text": "Because we've been triaging the actual technical failure, Diana, we don't have unlimited people here."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 288.8,
+      "end_time": 298.0,
+      "duration": 9.199999999999989,
+      "text": "Marcus, can you own the customer comms cadence? I'll draft the first email template right now and get it to you in the next fifteen minutes."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 299.2,
+      "end_time": 306.1,
+      "duration": 6.900000000000034,
+      "text": "Yeah, I can do that. Should I loop in the CSMs for their specific accounts or keep it centralized?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 306.9,
+      "end_time": 314.3,
+      "duration": 7.400000000000034,
+      "text": "Loop them in but all comms go through you so we don't have five different people saying five different things. One voice."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 314.8,
+      "end_time": 316.3,
+      "duration": 1.5,
+      "text": "Got it."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 317.3,
+      "end_time": 329.0,
+      "duration": 11.699999999999989,
+      "text": "Tyler - and I'm asking this seriously, not to be combative - do we need to escalate this to the executive team? Like does Raj need to know about this right now?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 330.2,
+      "end_time": 339.5,
+      "duration": 9.300000000000011,
+      "text": "I already pinged Raj at 4 AM. He's aware. He's not on this bridge because we told him we'd update him at noon with status."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 340.6,
+      "end_time": 357.2,
+      "duration": 16.599999999999966,
+      "text": "Okay. Okay good. Alright - so Tyler, your team is on remediation, you will feed Marcus updates every thirty minutes, Marcus coordinates customer comms, I'm going to personally call Crestwood and Hartwell in the next hour. Does that - does that cover the immediate next steps?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 358.2,
+      "end_time": 369.1,
+      "duration": 10.900000000000034,
+      "text": "That covers it. And Diana - for what it's worth, I'm sorry. This should not have happened and I know that doesn't fix anything but... we are going to get it fixed."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 369.9,
+      "end_time": 383.9,
+      "duration": 14.0,
+      "text": "I know you are. I know. But Tyler, when this is over we are having a very long conversation about redundancy architecture because I cannot - I cannot go back to customers with something like this again. I just can't."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 384.5,
+      "end_time": 394.8,
+      "duration": 10.300000000000011,
+      "text": "Agreed. That conversation is going to happen, I promise. Okay - I need to get back to the incident. Marcus, I'll send you the first update by 10:30."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 395.1,
+      "end_time": 398.2,
+      "duration": 3.099999999999966,
+      "text": "I'll be watching for it. Alright, let's go."
+    }
+  ],
+  "transcript_text": "Tyler Washington: Okay, I think everyone's on - Diana, Marcus, you both there?\nDiana Reeves: Yeah I'm here, I've been here for like five minutes actually, I was waiting on the bridge code to work.\nTyler Washington: Sorry, yeah the - the conferencing system was being weird, I don't know. Marcus?\nMarcus Williams: Present. I've got the incident channel pulled up and I'm looking at the logs right now.\nTyler Washington: Okay good. So - Diana, before you say anything, I want to give you a status update first so we're all working from the same picture, okay?\nDiana Reeves: Tyler I have eight customers blowing up my phone right now, so please, go ahead, talk fast.\nTyler Washington: Right. So - so the event processing pipeline went down at approximately 2:47 AM this morning. We're seeing a cascading failure that started in the ingestion layer and basically knocked out the entire threat monitoring feed for Detect. Nobody is getting alerts right now.\nDiana Reeves: Nobody is - okay so you're telling me that every single Detect customer is flying blind right now? Like zero visibility?\nTyler Washington: That is correct, yes. Zero event processing, zero alerts going out.\nDiana Reeves: Tyler, this is - this is really bad. Do you understand how bad this is? We have enterprise customers who have contractual SLA commitments around monitoring uptime.\nTyler Washington: I know, Diana, I know. We're - we are working it.\nMarcus Williams: Can I jump in here? So from a support standpoint, I've already had, uh, eleven tickets come in since about 6 AM when people started getting to work and noticed their dashboards were blank. Hartwell Financial, Crestwood Health, um, Meridian Logistics - all of them are asking for ETAs and I have nothing to give them.\nDiana Reeves: Okay so Marcus what are you telling them right now? What's the messaging?\nMarcus Williams: I'm telling them we're aware of a service disruption affecting Detect and that our engineering team is actively investigating. That's... that's basically all I have.\nDiana Reeves: That is not good enough, that is not - Tyler, can you give me something more concrete? What is the root cause, do we actually know?\nTyler Washington: We think - and I want to be careful here because we're still digging - but we think it's a single point of failure in the ingestion layer. Basically one node failed and instead of the load distributing properly it just, uh, it cascaded. Took everything downstream with it.\nDiana Reeves: A single point of failure? We have a single point of failure in production in a threat monitoring pipeline? How is that even - how did that get through architecture review?\nTyler Washington: Diana, I - look, I hear you and honestly I'm asking myself the same question right now but that is a conversation for after we fix it, okay? Can we focus?\nDiana Reeves: No, I'm sorry, I'm not letting that go because I need to understand this for when I talk to customers. Hartwell's CISO is going to ask me that exact question.\nTyler Washington: Then tell him we identified an architectural gap in our event ingestion redundancy and we are remediating it. That's the honest answer and it's all we have right now.\nDiana Reeves: I need an ETA Tyler. What is your best estimate for restoration?\nTyler Washington: Uh - okay so honestly, we're looking at somewhere between four and eight hours to get the pipeline stable again. We need to stand up redundant nodes and we don't want to rush it because if we botch the recovery we could lose event data on top of everything else.\nDiana Reeves: Four to eight hours. Tyler, it's already been - what, almost four hours since 2:47? So we could be looking at twelve hours total of zero threat monitoring visibility.\nTyler Washington: In a worst case scenario, yes. I'm not going to sugarcoat it.\nMarcus Williams: I've got - okay, I just got another ticket while we've been talking. Crestwood Health is saying they're, quote, evaluating alternative vendors. They're asking about SentinelShield.\nDiana Reeves: Of course they are. Of course. Marcus, flag that one to me directly, I'm going to call Crestwood's account lead personally.\nMarcus Williams: Yeah, flagging it now.\nTyler Washington: Diana I want to - I want to propose something. Can we do thirty-minute status update emails going out to all affected customers? Marcus coordinates, engineering feeds me the latest, and we keep a consistent message. No more vacuum.\nDiana Reeves: Yes. Yes, that is the bare minimum we should be doing, why is that not already happening?\nTyler Washington: Because we've been triaging the actual technical failure, Diana, we don't have unlimited people here.\nDiana Reeves: Marcus, can you own the customer comms cadence? I'll draft the first email template right now and get it to you in the next fifteen minutes.\nMarcus Williams: Yeah, I can do that. Should I loop in the CSMs for their specific accounts or keep it centralized?\nDiana Reeves: Loop them in but all comms go through you so we don't have five different people saying five different things. One voice.\nMarcus Williams: Got it.\nDiana Reeves: Tyler - and I'm asking this seriously, not to be combative - do we need to escalate this to the executive team? Like does Raj need to know about this right now?\nTyler Washington: I already pinged Raj at 4 AM. He's aware. He's not on this bridge because we told him we'd update him at noon with status.\nDiana Reeves: Okay. Okay good. Alright - so Tyler, your team is on remediation, you will feed Marcus updates every thirty minutes, Marcus coordinates customer comms, I'm going to personally call Crestwood and Hartwell in the next hour. Does that - does that cover the immediate next steps?\nTyler Washington: That covers it. And Diana - for what it's worth, I'm sorry. This should not have happened and I know that doesn't fix anything but... we are going to get it fixed.\nDiana Reeves: I know you are. I know. But Tyler, when this is over we are having a very long conversation about redundancy architecture because I cannot - I cannot go back to customers with something like this again. I just can't.\nTyler Washington: Agreed. That conversation is going to happen, I promise. Okay - I need to get back to the incident. Marcus, I'll send you the first update by 10:30.\nMarcus Williams: I'll be watching for it. Alright, let's go.",
+  "summary": "A critical outage call was held between Tyler (engineering), Diana (customer success/sales), and Marcus (support) regarding a complete failure of the Detect threat monitoring pipeline that began at 2:47 AM. The ingestion layer experienced a cascading failure from a single point of failure, leaving all Detect customers with zero alert visibility. The estimated restoration window is four to eight hours, potentially resulting in up to twelve total hours of downtime. The team aligned on a remediation and communication plan, including thirty-minute customer status updates, direct outreach to at-risk enterprise accounts, and a post-incident architecture review.",
+  "topics": [
+    "service outage",
+    "incident response",
+    "customer communication",
+    "architecture gap",
+    "churn risk",
+    "sla compliance"
+  ],
+  "action_items": [
+    "Diana Reeves: Personally call Crestwood Health and Hartwell Financial account leads within the next hour",
+    "Diana Reeves: Draft first customer communication email template and send to Marcus within fifteen minutes",
+    "Marcus Williams: Own customer comms cadence, coordinate with CSMs, and ensure one centralized voice for all outreach",
+    "Tyler Washington: Feed engineering status updates to Marcus every thirty minutes, starting by 10:30"
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": 1.8,
+  "key_moments": [
+    {
+      "time": 87.0,
+      "text": "Diana confirms all Detect customers have zero event processing and zero alert visibility during the outage",
+      "type": "concern",
+      "speaker": "Diana Reeves"
+    },
+    {
+      "time": 312.0,
+      "text": "Tyler reveals the root cause is a single point of failure in the ingestion layer, prompting sharp pushback from Diana about how it passed architecture review",
+      "type": "technical_issue",
+      "speaker": "Tyler Washington"
+    },
+    {
+      "time": 441.0,
+      "text": "Marcus reports that Crestwood Health is actively evaluating competitor SentinelShield, signaling potential churn",
+      "type": "churn_signal",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 498.0,
+      "text": "Tyler proposes thirty-minute status update emails to all affected customers, and the team aligns on a coordinated comms plan",
+      "type": "positive_pivot",
+      "speaker": "Tyler Washington"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Join",
+      "time_seconds": 19.0,
+      "timestamp_ms": 1773226819000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 36.0,
+      "timestamp_ms": 1773226836000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 37.0,
+      "timestamp_ms": 1773226837000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 1020.0,
+      "timestamp_ms": 1773227820000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Leave",
+      "time_seconds": 1009.0,
+      "timestamp_ms": 1773227809000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 1024.0,
+      "timestamp_ms": 1773227824000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Tyler Washington": 16,
+      "Diana Reeves": 17,
+      "Marcus Williams": 8
+    },
+    "speaker_total_seconds": {
+      "Tyler Washington": 150.3,
+      "Diana Reeves": 152.1,
+      "Marcus Williams": 56.9
+    }
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "meeting_id": "01KQD1270E98A7DFC55ADCF8",
+  "title": "Protect Performance - Scalability Concerns",
+  "organizer_email": "tyler.washington@aegiscloud.com",
+  "host_email": "tyler.washington@aegiscloud.com",
+  "start_time": "2026-04-15T16:45:00.000Z",
+  "end_time": "2026-04-15T17:08:30.000Z",
+  "duration_minutes": 23.5,
+  "participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Chris Lee",
+    "1": "Nina Kowalski",
+    "2": "Tyler Washington",
+    "3": "Sofia Petrov"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 3.9,
+      "end_time": 8.4,
+      "duration": 4.5,
+      "text": "Alright, I think we're all on - can everyone hear me okay?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 8.8,
+      "end_time": 11.0,
+      "duration": 2.1999999999999993,
+      "text": "Yeah, I can hear you."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 11.9,
+      "end_time": 13.4,
+      "duration": 1.5,
+      "text": "Yep, good here."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 14.5,
+      "end_time": 16.0,
+      "duration": 1.5,
+      "text": "Same, I'm on."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 16.5,
+      "end_time": 36.7,
+      "duration": 20.200000000000003,
+      "text": "Okay good, so - let's just dive in because I don't want this to run long. The reason I called this is, uh, we've been getting some pretty alarming signals from the Protect module over the last couple of weeks and I think we need to talk through what's actually happening before this becomes a customer-facing issue."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 37.5,
+      "end_time": 47.1,
+      "duration": 9.600000000000001,
+      "text": "Yeah, I'm glad we're finally having this conversation honestly. I've been flagging some of these benchmark numbers for like three weeks now and it feels like nothing's moved."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 48.0,
+      "end_time": 64.0,
+      "duration": 16.0,
+      "text": "Okay, let's not - I hear you Nina, and I want to get to that, but let's just start with the actual data so we're all on the same page. Tyler, you ran the load tests last week, can you walk us through what you saw?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 64.4,
+      "end_time": 88.9,
+      "duration": 24.5,
+      "text": "Sure, yeah. So we ran a simulated backup workload at roughly 2x our current P95 customer scale, and the results were... not great. Throughput started degrading at around the 60% load mark, and by the time we hit full simulated load we were seeing backup job queue times spike to like - I think the worst number was 47 minutes for a job that should complete in under five."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 89.7,
+      "end_time": 92.6,
+      "duration": 2.8999999999999915,
+      "text": "47 minutes? I - sorry, did you say 47?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 93.7,
+      "end_time": 101.7,
+      "duration": 8.0,
+      "text": "Yeah. 47. And that's not even worst-case, that's just what we observed in the test window. It could be worse under sustained load."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 103.2,
+      "end_time": 108.9,
+      "duration": 5.700000000000003,
+      "text": "That's... I mean that's genuinely bad. Like that's not a tuning problem, that's a fundamental architecture concern."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 109.2,
+      "end_time": 129.2,
+      "duration": 19.999999999999986,
+      "text": "Right, which is sort of what I've been trying to say. The scheduler - and look, I don't want to throw anyone under the bus here - but the job scheduler isn't built to handle concurrent dispatch at this scale. It was designed for, I don't know, a much smaller customer footprint than where we're heading."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 130.1,
+      "end_time": 141.4,
+      "duration": 11.300000000000011,
+      "text": "Okay and this is exactly what I documented in QA-1847 back in, uh, late February. The concurrency ceiling on the scheduler queue was a known risk item. I flagged it as high severity."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 142.6,
+      "end_time": 157.0,
+      "duration": 14.400000000000006,
+      "text": "Nina, I know you flagged it. It was on the backlog. We were dealing with - look, we had the Detect outage in March, that pulled a lot of engineering bandwidth, and some things got deprioritized. That's just the reality."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 157.9,
+      "end_time": 170.7,
+      "duration": 12.799999999999983,
+      "text": "I understand that, Chris, and I'm not trying to relitigate prioritization decisions. But I think we have to acknowledge that we knew about this and we're now sitting here looking at 47-minute queue times. That's... that's uncomfortable."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 172.2,
+      "end_time": 177.1,
+      "duration": 4.900000000000006,
+      "text": "It is uncomfortable. I'm not disagreeing. Let's focus on what we do about it."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 178.3,
+      "end_time": 202.3,
+      "duration": 24.0,
+      "text": "So I've been doing some digging since Tyler shared the numbers yesterday, and I think there are actually two separate issues tangled together here. One is the scheduler concurrency problem which Nina flagged, and the other is - and this one I actually didn't expect - the snapshot deduplication layer is doing a lot of synchronous I/O that it really shouldn't be. Like it's blocking on disk reads mid-job."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 203.1,
+      "end_time": 212.4,
+      "duration": 9.300000000000011,
+      "text": "Oh, yeah - I actually saw that too in the traces. There's this dedup check that happens inline and it's just... it's not async. It never was."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 213.7,
+      "end_time": 222.5,
+      "duration": 8.800000000000011,
+      "text": "So that's compounding the queue problem. Because jobs are blocking longer than they should, which backs up the queue, which makes the scheduler worse."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 223.4,
+      "end_time": 228.7,
+      "duration": 5.299999999999983,
+      "text": "It's like, it's a pressure cooker situation. Each problem makes the other one worse. Great."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 229.8,
+      "end_time": 239.7,
+      "duration": 9.899999999999977,
+      "text": "Okay, so realistically - what are we looking at in terms of effort to fix the scheduler concurrency issue? Sofia, you know that codebase better than anyone."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 240.8,
+      "end_time": 267.2,
+      "duration": 26.399999999999977,
+      "text": "Honestly? It's not a quick fix. The scheduler wasn't designed to be horizontally scalable. To do this properly we'd probably need to refactor the dispatch layer, introduce some kind of distributed queue - I keep thinking something like a partitioned queue model would actually solve this - but we're talking weeks of work. Plural. Not two weeks, more like... six to eight minimum if we want to do it right and not create new problems."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 268.4,
+      "end_time": 281.7,
+      "duration": 13.300000000000011,
+      "text": "Six to eight weeks. Okay. And we're heading into what's supposed to be a growth quarter for Protect. Sales has been pushing it pretty hard post the Comply v2 launch - they want to bundle them together."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 282.4,
+      "end_time": 292.1,
+      "duration": 9.700000000000045,
+      "text": "Which is great for the business but if we scale the customer base and the infrastructure can't handle it, we're going to have outages. Real ones. Customer-impacting ones."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 292.8,
+      "end_time": 305.9,
+      "duration": 13.099999999999966,
+      "text": "And that's the last thing we need right now. After March, after the Detect thing - honestly our credibility with some of these enterprise customers is already fragile. Another major incident would be... it would not be good."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 307.2,
+      "end_time": 329.0,
+      "duration": 21.80000000000001,
+      "text": "Yeah, I think about that a lot. The Detect outage - the six hours of no visibility - that shook some people. I know we fixed it, the redundant nodes, the circuit breaker stuff, all of that. But trust takes a while to rebuild and piling a Protect failure on top of that is not something I want to explain to leadership."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 329.3,
+      "end_time": 340.9,
+      "duration": 11.599999999999966,
+      "text": "So what do we do in the meantime? Like is there a stopgap? Because six to eight weeks for a full refactor doesn't help us if we're onboarding new customers next month."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 342.3,
+      "end_time": 362.3,
+      "duration": 20.0,
+      "text": "There might be some things we can do at the config level. Like we could tighten the job concurrency limits per tenant - basically throttle how many concurrent backup jobs any single customer can run - which buys us some headroom on the queue. It's not a fix, it's a band-aid, but it could prevent the worst-case blowups."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 362.8,
+      "end_time": 370.4,
+      "duration": 7.599999999999966,
+      "text": "Yeah but then we're artificially limiting the product for customers who are paying for, you know, enterprise-grade backup. That feels wrong."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 371.7,
+      "end_time": 376.7,
+      "duration": 5.0,
+      "text": "It does feel wrong. But the alternative might be an outage, which is worse."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 377.8,
+      "end_time": 391.6,
+      "duration": 13.800000000000011,
+      "text": "I agree with Sofia. A graceful degradation we control is better than an uncontrolled failure. We implement the throttle as a temporary measure, we communicate it internally, and we stay off the critical path while we do the real fix."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 392.1,
+      "end_time": 399.5,
+      "duration": 7.399999999999977,
+      "text": "And the async dedup issue - is that more tractable? Like can we decouple that faster than the scheduler work?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 400.5,
+      "end_time": 418.0,
+      "duration": 17.5,
+      "text": "Yeah, actually I think the dedup thing is more isolated. If we move the deduplication check to an async worker and just do a quick hash lookup first with a fallback... I mean I'd need to prototype it but I think that's a one to two week effort. Maybe less."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 419.1,
+      "end_time": 424.5,
+      "duration": 5.399999999999977,
+      "text": "Okay, that's at least something. That's one concrete thing we can actually move on quickly."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 425.6,
+      "end_time": 439.4,
+      "duration": 13.799999999999955,
+      "text": "Can I ask something that might be uncomfortable? Do we need to be having a conversation about whether sales should be slowing down Protect commitments right now? Like, should we be having a conversation with them about customer onboarding pace?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 440.3,
+      "end_time": 453.0,
+      "duration": 12.699999999999989,
+      "text": "Ugh. I mean - yes, probably. That's going to be a fun conversation. Sales is riding high on the Comply v2 momentum and they're not going to love being told to pump the brakes on Protect."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 453.9,
+      "end_time": 465.0,
+      "duration": 11.100000000000023,
+      "text": "I know, but better to have that conversation now than to have it after a customer's backups fail during a ransomware event or something. Like, that's the scenario we're trying to avoid."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 466.4,
+      "end_time": 482.2,
+      "duration": 15.800000000000011,
+      "text": "You're right. Okay. I'll set up time with the sales lead this week. I'll frame it as a scaling preparation conversation rather than a stop-selling conversation. But the message will basically be: let's be thoughtful about onboarding pace for the next six to eight weeks."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 483.6,
+      "end_time": 495.9,
+      "duration": 12.299999999999955,
+      "text": "That's probably the right framing. And in parallel, Tyler and I can start sketching out the scheduler architecture? Like even just getting the design doc started so we know what we're actually committing to?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 496.3,
+      "end_time": 505.9,
+      "duration": 9.599999999999966,
+      "text": "Yeah, let's do that. I can pull together the load test traces and annotate them so you've got the full picture of where things are falling apart."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 507.0,
+      "end_time": 524.3,
+      "duration": 17.299999999999955,
+      "text": "Good. Nina, can you put together a summary of the QA findings - the existing ticket plus anything new from the test results - so I have something to bring to leadership? I need to brief them this week and I want the data to speak for itself."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 525.1,
+      "end_time": 535.0,
+      "duration": 9.899999999999977,
+      "text": "Yeah, I can have that to you by tomorrow morning. And I'll include the timeline of when things were flagged because I think that's... I think that context matters."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 536.2,
+      "end_time": 554.1,
+      "duration": 17.899999999999977,
+      "text": "Understood. Okay - I think we have a rough path forward. It's not a great situation, I won't pretend it is, but at least we're not walking into it blind anymore. Let's regroup end of week and see where we are on the dedup fix and the design doc. Sound good?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 555.1,
+      "end_time": 556.6,
+      "duration": 1.5,
+      "text": "Works for me."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 557.0,
+      "end_time": 558.8,
+      "duration": 1.7999999999999545,
+      "text": "Same, I'll have the summary ready."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 559.2,
+      "end_time": 562.2,
+      "duration": 3.0,
+      "text": "Yeah, sounds good. I'll ping Tyler offline to coordinate."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 563.3,
+      "end_time": 567.5,
+      "duration": 4.2000000000000455,
+      "text": "Alright. Thanks everyone. Not a fun call but an important one. Talk later."
+    }
+  ],
+  "transcript_text": "Chris Lee: Alright, I think we're all on - can everyone hear me okay?\nNina Kowalski: Yeah, I can hear you.\nTyler Washington: Yep, good here.\nSofia Petrov: Same, I'm on.\nChris Lee: Okay good, so - let's just dive in because I don't want this to run long. The reason I called this is, uh, we've been getting some pretty alarming signals from the Protect module over the last couple of weeks and I think we need to talk through what's actually happening before this becomes a customer-facing issue.\nNina Kowalski: Yeah, I'm glad we're finally having this conversation honestly. I've been flagging some of these benchmark numbers for like three weeks now and it feels like nothing's moved.\nChris Lee: Okay, let's not - I hear you Nina, and I want to get to that, but let's just start with the actual data so we're all on the same page. Tyler, you ran the load tests last week, can you walk us through what you saw?\nTyler Washington: Sure, yeah. So we ran a simulated backup workload at roughly 2x our current P95 customer scale, and the results were... not great. Throughput started degrading at around the 60% load mark, and by the time we hit full simulated load we were seeing backup job queue times spike to like - I think the worst number was 47 minutes for a job that should complete in under five.\nSofia Petrov: 47 minutes? I - sorry, did you say 47?\nTyler Washington: Yeah. 47. And that's not even worst-case, that's just what we observed in the test window. It could be worse under sustained load.\nSofia Petrov: That's... I mean that's genuinely bad. Like that's not a tuning problem, that's a fundamental architecture concern.\nTyler Washington: Right, which is sort of what I've been trying to say. The scheduler - and look, I don't want to throw anyone under the bus here - but the job scheduler isn't built to handle concurrent dispatch at this scale. It was designed for, I don't know, a much smaller customer footprint than where we're heading.\nNina Kowalski: Okay and this is exactly what I documented in QA-1847 back in, uh, late February. The concurrency ceiling on the scheduler queue was a known risk item. I flagged it as high severity.\nChris Lee: Nina, I know you flagged it. It was on the backlog. We were dealing with - look, we had the Detect outage in March, that pulled a lot of engineering bandwidth, and some things got deprioritized. That's just the reality.\nNina Kowalski: I understand that, Chris, and I'm not trying to relitigate prioritization decisions. But I think we have to acknowledge that we knew about this and we're now sitting here looking at 47-minute queue times. That's... that's uncomfortable.\nChris Lee: It is uncomfortable. I'm not disagreeing. Let's focus on what we do about it.\nSofia Petrov: So I've been doing some digging since Tyler shared the numbers yesterday, and I think there are actually two separate issues tangled together here. One is the scheduler concurrency problem which Nina flagged, and the other is - and this one I actually didn't expect - the snapshot deduplication layer is doing a lot of synchronous I/O that it really shouldn't be. Like it's blocking on disk reads mid-job.\nTyler Washington: Oh, yeah - I actually saw that too in the traces. There's this dedup check that happens inline and it's just... it's not async. It never was.\nSofia Petrov: So that's compounding the queue problem. Because jobs are blocking longer than they should, which backs up the queue, which makes the scheduler worse.\nNina Kowalski: It's like, it's a pressure cooker situation. Each problem makes the other one worse. Great.\nChris Lee: Okay, so realistically - what are we looking at in terms of effort to fix the scheduler concurrency issue? Sofia, you know that codebase better than anyone.\nSofia Petrov: Honestly? It's not a quick fix. The scheduler wasn't designed to be horizontally scalable. To do this properly we'd probably need to refactor the dispatch layer, introduce some kind of distributed queue - I keep thinking something like a partitioned queue model would actually solve this - but we're talking weeks of work. Plural. Not two weeks, more like... six to eight minimum if we want to do it right and not create new problems.\nChris Lee: Six to eight weeks. Okay. And we're heading into what's supposed to be a growth quarter for Protect. Sales has been pushing it pretty hard post the Comply v2 launch - they want to bundle them together.\nTyler Washington: Which is great for the business but if we scale the customer base and the infrastructure can't handle it, we're going to have outages. Real ones. Customer-impacting ones.\nNina Kowalski: And that's the last thing we need right now. After March, after the Detect thing - honestly our credibility with some of these enterprise customers is already fragile. Another major incident would be... it would not be good.\nChris Lee: Yeah, I think about that a lot. The Detect outage - the six hours of no visibility - that shook some people. I know we fixed it, the redundant nodes, the circuit breaker stuff, all of that. But trust takes a while to rebuild and piling a Protect failure on top of that is not something I want to explain to leadership.\nTyler Washington: So what do we do in the meantime? Like is there a stopgap? Because six to eight weeks for a full refactor doesn't help us if we're onboarding new customers next month.\nSofia Petrov: There might be some things we can do at the config level. Like we could tighten the job concurrency limits per tenant - basically throttle how many concurrent backup jobs any single customer can run - which buys us some headroom on the queue. It's not a fix, it's a band-aid, but it could prevent the worst-case blowups.\nNina Kowalski: Yeah but then we're artificially limiting the product for customers who are paying for, you know, enterprise-grade backup. That feels wrong.\nSofia Petrov: It does feel wrong. But the alternative might be an outage, which is worse.\nChris Lee: I agree with Sofia. A graceful degradation we control is better than an uncontrolled failure. We implement the throttle as a temporary measure, we communicate it internally, and we stay off the critical path while we do the real fix.\nTyler Washington: And the async dedup issue - is that more tractable? Like can we decouple that faster than the scheduler work?\nSofia Petrov: Yeah, actually I think the dedup thing is more isolated. If we move the deduplication check to an async worker and just do a quick hash lookup first with a fallback... I mean I'd need to prototype it but I think that's a one to two week effort. Maybe less.\nChris Lee: Okay, that's at least something. That's one concrete thing we can actually move on quickly.\nNina Kowalski: Can I ask something that might be uncomfortable? Do we need to be having a conversation about whether sales should be slowing down Protect commitments right now? Like, should we be having a conversation with them about customer onboarding pace?\nChris Lee: Ugh. I mean - yes, probably. That's going to be a fun conversation. Sales is riding high on the Comply v2 momentum and they're not going to love being told to pump the brakes on Protect.\nNina Kowalski: I know, but better to have that conversation now than to have it after a customer's backups fail during a ransomware event or something. Like, that's the scenario we're trying to avoid.\nChris Lee: You're right. Okay. I'll set up time with the sales lead this week. I'll frame it as a scaling preparation conversation rather than a stop-selling conversation. But the message will basically be: let's be thoughtful about onboarding pace for the next six to eight weeks.\nSofia Petrov: That's probably the right framing. And in parallel, Tyler and I can start sketching out the scheduler architecture? Like even just getting the design doc started so we know what we're actually committing to?\nTyler Washington: Yeah, let's do that. I can pull together the load test traces and annotate them so you've got the full picture of where things are falling apart.\nChris Lee: Good. Nina, can you put together a summary of the QA findings - the existing ticket plus anything new from the test results - so I have something to bring to leadership? I need to brief them this week and I want the data to speak for itself.\nNina Kowalski: Yeah, I can have that to you by tomorrow morning. And I'll include the timeline of when things were flagged because I think that's... I think that context matters.\nChris Lee: Understood. Okay - I think we have a rough path forward. It's not a great situation, I won't pretend it is, but at least we're not walking into it blind anymore. Let's regroup end of week and see where we are on the dedup fix and the design doc. Sound good?\nTyler Washington: Works for me.\nNina Kowalski: Same, I'll have the summary ready.\nSofia Petrov: Yeah, sounds good. I'll ping Tyler offline to coordinate.\nChris Lee: Alright. Thanks everyone. Not a fun call but an important one. Talk later.",
+  "summary": "The team convened to discuss alarming performance issues in the Protect module, triggered by load testing results showing backup job queue times spiking to 47 minutes at 2x P95 customer scale. Two compounding root causes were identified: a job scheduler not built for concurrent dispatch at current scale, and a synchronous I/O bottleneck in the snapshot deduplication layer. The full scheduler fix is estimated at six to eight weeks, raising concern about an upcoming growth quarter where sales is actively bundling Protect with Comply v2. As interim measures, the team agreed to throttle per-tenant job concurrency, fast-track an async fix for the dedup issue, and have a proactive conversation with sales about slowing Protect onboarding pace.",
+  "topics": [
+    "performance degradation",
+    "architecture scalability",
+    "technical debt",
+    "incident risk",
+    "sales alignment",
+    "backup infrastructure"
+  ],
+  "action_items": [
+    "Chris Lee: Set up a conversation with the sales lead this week to discuss thoughtful onboarding pace for Protect over the next six to eight weeks",
+    "Nina Kowalski: Compile a QA summary document including QA-1847 findings, new load test data, and timeline of when issues were flagged, to deliver to Chris by tomorrow morning",
+    "Sofia Petrov: Prototype the async deduplication worker fix and coordinate with Tyler on the scheduler architecture design doc",
+    "Tyler Washington: Annotate load test traces and share with Sofia to support the scheduler architecture design document"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.2,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Tyler reveals backup job queue times spiked to 47 minutes for a job that should complete in under five minutes during load testing at 2x P95 scale",
+      "type": "technical_issue",
+      "speaker": "Tyler Washington"
+    },
+    {
+      "time": 298.0,
+      "text": "Nina points out she flagged the scheduler concurrency ceiling as high severity in QA-1847 in late February, raising concern that a known risk was deprioritized and has now materialized",
+      "type": "concern",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 520.0,
+      "text": "Sofia estimates the scheduler refactor will take six to eight weeks minimum, creating a critical timing conflict with the active Protect sales push following Comply v2 launch",
+      "type": "feature_gap",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 820.0,
+      "text": "Nina raises the uncomfortable question of whether sales should slow down Protect customer commitments now to avoid a customer-impacting failure during a ransomware event or similar scenario",
+      "type": "churn_signal",
+      "speaker": "Nina Kowalski"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 15.0,
+      "timestamp_ms": 1776271515000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 30.0,
+      "timestamp_ms": 1776271530000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Join",
+      "time_seconds": 55.0,
+      "timestamp_ms": 1776271555000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 58.0,
+      "timestamp_ms": 1776271558000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 1385.0,
+      "timestamp_ms": 1776272885000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 1404.0,
+      "timestamp_ms": 1776272904000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Leave",
+      "time_seconds": 1404.0,
+      "timestamp_ms": 1776272904000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 1389.0,
+      "timestamp_ms": 1776272889000
+    }
+  ],
+  "stats": {
+    "turn_count": 47,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Chris Lee": 15,
+      "Nina Kowalski": 11,
+      "Tyler Washington": 10,
+      "Sofia Petrov": 11
+    },
+    "speaker_total_seconds": {
+      "Chris Lee": 192.1,
+      "Nina Kowalski": 98.5,
+      "Tyler Washington": 103.1,
+      "Sofia Petrov": 127.1
+    }
+  }
+}

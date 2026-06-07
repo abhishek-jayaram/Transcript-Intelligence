@@ -1,0 +1,441 @@
+{
+  "meeting_id": "01KQ4D504CE09A8F6ECA1F5A",
+  "title": "Product Sync - Identity Roadmap",
+  "organizer_email": "ananya.sharma@aegiscloud.com",
+  "host_email": "ananya.sharma@aegiscloud.com",
+  "start_time": "2026-02-09T17:30:00.000Z",
+  "end_time": "2026-02-09T18:09:24.000Z",
+  "duration_minutes": 39.4,
+  "participants": [
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "hannah.liu@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "hannah.liu@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Ananya Sharma",
+    "1": "Hannah Liu",
+    "2": "Nina Kowalski"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 6.7,
+      "end_time": 12.0,
+      "duration": 5.3,
+      "text": "Alright, I think everyone's on - Hannah, Nina, can you both hear me okay?"
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 12.7,
+      "end_time": 14.2,
+      "duration": 1.5,
+      "text": "Yep, loud and clear."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 15.6,
+      "end_time": 17.2,
+      "duration": 1.5999999999999996,
+      "text": "Same here, I'm good."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 18.0,
+      "end_time": 32.9,
+      "duration": 14.899999999999999,
+      "text": "Okay great. So, um, I think the main thing we wanted to get through today is the Identity roadmap for Q2, specifically around the MFA expansion and then the SSO connector work. Hannah, do you want to kind of set the stage?"
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 34.2,
+      "end_time": 60.2,
+      "duration": 26.0,
+      "text": "Yeah, for sure. So, at a high level, the ask from leadership is that we have a clearer story around Aegis Identity by end of Q2. Right now the feedback we're getting from sales is that the IAM side feels a little thin compared to what SentinelShield is putting out there. So the focus areas are - one, the MFA policy engine, and two, the SSO connector library, we want to expand that significantly."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 61.4,
+      "end_time": 77.4,
+      "duration": 16.000000000000007,
+      "text": "Right, and I think the SSO connector piece is actually the more tractable one in the near term. We already have the SAML 2.0 foundation in place, so adding connectors for, say, Okta, Azure AD, that's - it's work but it's not like, greenfield work."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 77.8,
+      "end_time": 84.7,
+      "duration": 6.900000000000006,
+      "text": "How many connectors are we talking about? Because from a QA standpoint, each one is basically its own test surface."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 85.4,
+      "end_time": 99.1,
+      "duration": 13.699999999999989,
+      "text": "Yeah, that's a fair point. I think we were penciling in something like six to eight new connectors by end of Q2. But I want to hear what's realistic from Ananya's side before we commit to that number publicly."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 100.6,
+      "end_time": 111.3,
+      "duration": 10.700000000000003,
+      "text": "Six to eight is... doable, but it depends a lot on how we scope the testing cycles. Like if Nina's team needs, what, two weeks per connector for full regression?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 112.5,
+      "end_time": 133.2,
+      "duration": 20.69999999999999,
+      "text": "It's not quite that bad. For a connector where the underlying SAML flow is already validated, we can probably get that down to, I'd say, a week of focused testing if we have good test environments set up. The problem is historically we've had to wait on engineering to provision those environments and that's where time gets lost."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 133.5,
+      "end_time": 147.1,
+      "duration": 13.599999999999994,
+      "text": "Okay yeah, that's a real bottleneck. I actually put a ticket in - I want to say like two sprints ago - to get a dedicated staging tenant for Identity testing and it's still sitting in the infrastructure queue."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 148.1,
+      "end_time": 152.9,
+      "duration": 4.800000000000011,
+      "text": "I didn't know that was still open. Do you know who's blocking it?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 153.4,
+      "end_time": 163.9,
+      "duration": 10.5,
+      "text": "It's not really blocked, it just hasn't been prioritized. I think the infra team has been heads down on the Detect pipeline work so everything else kind of got deprioritized."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 165.0,
+      "end_time": 176.0,
+      "duration": 11.0,
+      "text": "Okay, I can follow up with the infra lead on that. That actually needs to happen regardless of what we decide today, so let me just take that as an action item."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 177.4,
+      "end_time": 179.6,
+      "duration": 2.1999999999999886,
+      "text": "That would be great, yeah."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 180.3,
+      "end_time": 192.3,
+      "duration": 12.0,
+      "text": "So, going back to MFA - Ananya, what's the current state of the policy engine? I know we had some design discussions back in December but I feel like things shifted after the holidays."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 193.5,
+      "end_time": 219.8,
+      "duration": 26.30000000000001,
+      "text": "Yeah, so the design did shift a bit. The original plan was to build a rules-based engine where admins could define MFA requirements per user group and per application. That's still the core of it. What changed is we're now also looking at adding a risk-signal layer, so the system can factor in things like login location, device fingerprint, time of day - and then either require step-up auth or flag it for review."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 221.2,
+      "end_time": 232.9,
+      "duration": 11.700000000000017,
+      "text": "Okay, that's - I mean, that's a bigger scope than what I had in my head. Is that all in scope for Q2 or is the risk-signal piece more of a later phase?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 234.4,
+      "end_time": 247.3,
+      "duration": 12.900000000000006,
+      "text": "Honestly I think we should phase it. The core rules engine, that's Q2. The risk-signal layer I'd push to Q3 at the earliest. It requires integrating with some telemetry pipelines that aren't fully built out yet."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 248.0,
+      "end_time": 260.7,
+      "duration": 12.699999999999989,
+      "text": "That makes sense to me. From a QA perspective, testing adaptive MFA is significantly more complex - you basically need to simulate all these different environmental conditions. So keeping that separate is probably the right call."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 261.5,
+      "end_time": 276.1,
+      "duration": 14.600000000000023,
+      "text": "Agreed. And honestly from a product narrative standpoint, we can still tell a strong story with the rules-based engine. Being able to say you can set granular MFA policies per role, per app, that's already differentiated from what CyberNova offers right now."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 277.0,
+      "end_time": 282.8,
+      "duration": 5.800000000000011,
+      "text": "Yeah I think that's right. CyberNova's IAM is pretty much all-or-nothing on MFA from what I've seen."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 284.0,
+      "end_time": 298.5,
+      "duration": 14.5,
+      "text": "Okay so let's try to nail down some rough timelines. If we're targeting the rules engine for Q2, what does that look like sprint by sprint? I know it's early but even a rough shape would help me with planning."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 298.9,
+      "end_time": 318.3,
+      "duration": 19.400000000000034,
+      "text": "So, rough shape - I'd say February and into early March is design finalization and we start building out the policy schema, the data model. Mid-March through April is core implementation. And then ideally late April we're handing off to Nina's team for testing, which gives us... a May release window if everything goes smoothly."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 319.0,
+      "end_time": 339.0,
+      "duration": 20.0,
+      "text": "May is tight but not impossible. The thing I'd flag is that late April hand-off only works if the spec is really locked before we start testing. Last time, and I don't want to relitigate this, but last time we got a build that was still in flux and we wasted like a week and a half."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 339.8,
+      "end_time": 359.2,
+      "duration": 19.399999999999977,
+      "text": "No that's a totally fair callout, and I take ownership of that - the spec on the last feature wasn't clean enough when it went to QA. What I'd suggest is we set a hard cutoff, like spec is locked two weeks before the hand-off date, and if it's not locked, we don't hand off."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 360.7,
+      "end_time": 371.8,
+      "duration": 11.100000000000023,
+      "text": "I'm supportive of that. And from my side, I'll make sure the acceptance criteria are written into the spec from the beginning so Nina's team isn't guessing at what done looks like."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 372.5,
+      "end_time": 381.7,
+      "duration": 9.199999999999989,
+      "text": "That would genuinely help a lot. If we have acceptance criteria upfront, we can start building test cases in parallel with development instead of waiting."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 382.7,
+      "end_time": 410.2,
+      "duration": 27.5,
+      "text": "Good, let's make that the standard going forward for Identity work. Okay, so - SSO connectors. Do we want to talk about prioritization? Like which connectors do we tackle first? Yeah, so I've been looking at this. Based on what sales has been logging in the CRM, Okta is by far the most requested. After that it's Azure AD, then Google Workspace. Everything else is pretty scattered - Ping Identity comes up occasionally, Duo, a few others."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 410.7,
+      "end_time": 424.6,
+      "duration": 13.900000000000034,
+      "text": "Okay so Okta, Azure AD, Google Workspace as the first three. That actually makes sense from an engineering standpoint too because those three have the most mature and well-documented APIs, so we're less likely to hit weird edge cases."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 426.1,
+      "end_time": 437.4,
+      "duration": 11.299999999999955,
+      "text": "From a testing standpoint I'll need access to sandbox environments for all three. Okta I'm pretty sure we have a dev account already. Azure AD and Google Workspace I'd need to confirm."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 438.4,
+      "end_time": 449.7,
+      "duration": 11.300000000000011,
+      "text": "We definitely have the Okta dev account. Azure AD - I think we have one through our internal Nextera agreement but I'd have to check with IT. Google Workspace I'm not sure about."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 450.4,
+      "end_time": 461.5,
+      "duration": 11.100000000000023,
+      "text": "Can you both just check and send me what you find? I'd rather know now if there's a gap so we can sort it out before it becomes a blocker in March."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 462.3,
+      "end_time": 465.4,
+      "duration": 3.099999999999966,
+      "text": "Yeah I'll check on the Azure one this week."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 466.8,
+      "end_time": 471.7,
+      "duration": 4.899999999999977,
+      "text": "Same, I'll figure out the Okta account situation and confirm it's still active."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 473.1,
+      "end_time": 495.3,
+      "duration": 22.19999999999999,
+      "text": "Great. Okay I think we're in decent shape on the high-level plan. Let me just recap what I've got - MFA policy rules engine is the Q2 priority, spec locked mid-April, hand-off to QA late April, targeting May GA. SSO connectors, starting with Okta, Azure AD, Google Workspace. And I'm following up on the infra staging environment ticket. Does that sound right to everyone?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 495.8,
+      "end_time": 508.7,
+      "duration": 12.899999999999977,
+      "text": "That covers it from my side. The one thing I'd add is we should probably schedule a mid-point check-in, like sometime in March, just to make sure we're on track before things get too far along."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 509.1,
+      "end_time": 514.8,
+      "duration": 5.699999999999932,
+      "text": "Agreed. I'll put something on the calendar for mid-March - same group, probably thirty minutes."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 515.7,
+      "end_time": 517.2,
+      "duration": 1.5,
+      "text": "Works for me."
+    },
+    {
+      "speaker_name": "Hannah Liu",
+      "start_time": 518.5,
+      "end_time": 522.6,
+      "duration": 4.100000000000023,
+      "text": "Alright, I think that's everything. Thanks both, this was a useful sync."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 524.0,
+      "end_time": 527.8,
+      "duration": 3.7999999999999545,
+      "text": "Yeah, good to get on the same page. Talk soon."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 528.7,
+      "end_time": 530.2,
+      "duration": 1.5,
+      "text": "Thanks everyone, bye."
+    }
+  ],
+  "transcript_text": "Ananya Sharma: Alright, I think everyone's on - Hannah, Nina, can you both hear me okay?\nHannah Liu: Yep, loud and clear.\nNina Kowalski: Same here, I'm good.\nAnanya Sharma: Okay great. So, um, I think the main thing we wanted to get through today is the Identity roadmap for Q2, specifically around the MFA expansion and then the SSO connector work. Hannah, do you want to kind of set the stage?\nHannah Liu: Yeah, for sure. So, at a high level, the ask from leadership is that we have a clearer story around Aegis Identity by end of Q2. Right now the feedback we're getting from sales is that the IAM side feels a little thin compared to what SentinelShield is putting out there. So the focus areas are - one, the MFA policy engine, and two, the SSO connector library, we want to expand that significantly.\nAnanya Sharma: Right, and I think the SSO connector piece is actually the more tractable one in the near term. We already have the SAML 2.0 foundation in place, so adding connectors for, say, Okta, Azure AD, that's - it's work but it's not like, greenfield work.\nNina Kowalski: How many connectors are we talking about? Because from a QA standpoint, each one is basically its own test surface.\nHannah Liu: Yeah, that's a fair point. I think we were penciling in something like six to eight new connectors by end of Q2. But I want to hear what's realistic from Ananya's side before we commit to that number publicly.\nAnanya Sharma: Six to eight is... doable, but it depends a lot on how we scope the testing cycles. Like if Nina's team needs, what, two weeks per connector for full regression?\nNina Kowalski: It's not quite that bad. For a connector where the underlying SAML flow is already validated, we can probably get that down to, I'd say, a week of focused testing if we have good test environments set up. The problem is historically we've had to wait on engineering to provision those environments and that's where time gets lost.\nAnanya Sharma: Okay yeah, that's a real bottleneck. I actually put a ticket in - I want to say like two sprints ago - to get a dedicated staging tenant for Identity testing and it's still sitting in the infrastructure queue.\nHannah Liu: I didn't know that was still open. Do you know who's blocking it?\nAnanya Sharma: It's not really blocked, it just hasn't been prioritized. I think the infra team has been heads down on the Detect pipeline work so everything else kind of got deprioritized.\nHannah Liu: Okay, I can follow up with the infra lead on that. That actually needs to happen regardless of what we decide today, so let me just take that as an action item.\nNina Kowalski: That would be great, yeah.\nHannah Liu: So, going back to MFA - Ananya, what's the current state of the policy engine? I know we had some design discussions back in December but I feel like things shifted after the holidays.\nAnanya Sharma: Yeah, so the design did shift a bit. The original plan was to build a rules-based engine where admins could define MFA requirements per user group and per application. That's still the core of it. What changed is we're now also looking at adding a risk-signal layer, so the system can factor in things like login location, device fingerprint, time of day - and then either require step-up auth or flag it for review.\nHannah Liu: Okay, that's - I mean, that's a bigger scope than what I had in my head. Is that all in scope for Q2 or is the risk-signal piece more of a later phase?\nAnanya Sharma: Honestly I think we should phase it. The core rules engine, that's Q2. The risk-signal layer I'd push to Q3 at the earliest. It requires integrating with some telemetry pipelines that aren't fully built out yet.\nNina Kowalski: That makes sense to me. From a QA perspective, testing adaptive MFA is significantly more complex - you basically need to simulate all these different environmental conditions. So keeping that separate is probably the right call.\nHannah Liu: Agreed. And honestly from a product narrative standpoint, we can still tell a strong story with the rules-based engine. Being able to say you can set granular MFA policies per role, per app, that's already differentiated from what CyberNova offers right now.\nAnanya Sharma: Yeah I think that's right. CyberNova's IAM is pretty much all-or-nothing on MFA from what I've seen.\nHannah Liu: Okay so let's try to nail down some rough timelines. If we're targeting the rules engine for Q2, what does that look like sprint by sprint? I know it's early but even a rough shape would help me with planning.\nAnanya Sharma: So, rough shape - I'd say February and into early March is design finalization and we start building out the policy schema, the data model. Mid-March through April is core implementation. And then ideally late April we're handing off to Nina's team for testing, which gives us... a May release window if everything goes smoothly.\nNina Kowalski: May is tight but not impossible. The thing I'd flag is that late April hand-off only works if the spec is really locked before we start testing. Last time, and I don't want to relitigate this, but last time we got a build that was still in flux and we wasted like a week and a half.\nAnanya Sharma: No that's a totally fair callout, and I take ownership of that - the spec on the last feature wasn't clean enough when it went to QA. What I'd suggest is we set a hard cutoff, like spec is locked two weeks before the hand-off date, and if it's not locked, we don't hand off.\nHannah Liu: I'm supportive of that. And from my side, I'll make sure the acceptance criteria are written into the spec from the beginning so Nina's team isn't guessing at what done looks like.\nNina Kowalski: That would genuinely help a lot. If we have acceptance criteria upfront, we can start building test cases in parallel with development instead of waiting.\nHannah Liu: Good, let's make that the standard going forward for Identity work. Okay, so - SSO connectors. Do we want to talk about prioritization? Like which connectors do we tackle first?\nHannah Liu: Yeah, so I've been looking at this. Based on what sales has been logging in the CRM, Okta is by far the most requested. After that it's Azure AD, then Google Workspace. Everything else is pretty scattered - Ping Identity comes up occasionally, Duo, a few others.\nAnanya Sharma: Okay so Okta, Azure AD, Google Workspace as the first three. That actually makes sense from an engineering standpoint too because those three have the most mature and well-documented APIs, so we're less likely to hit weird edge cases.\nNina Kowalski: From a testing standpoint I'll need access to sandbox environments for all three. Okta I'm pretty sure we have a dev account already. Azure AD and Google Workspace I'd need to confirm.\nAnanya Sharma: We definitely have the Okta dev account. Azure AD - I think we have one through our internal Nextera agreement but I'd have to check with IT. Google Workspace I'm not sure about.\nHannah Liu: Can you both just check and send me what you find? I'd rather know now if there's a gap so we can sort it out before it becomes a blocker in March.\nAnanya Sharma: Yeah I'll check on the Azure one this week.\nNina Kowalski: Same, I'll figure out the Okta account situation and confirm it's still active.\nHannah Liu: Great. Okay I think we're in decent shape on the high-level plan. Let me just recap what I've got - MFA policy rules engine is the Q2 priority, spec locked mid-April, hand-off to QA late April, targeting May GA. SSO connectors, starting with Okta, Azure AD, Google Workspace. And I'm following up on the infra staging environment ticket. Does that sound right to everyone?\nAnanya Sharma: That covers it from my side. The one thing I'd add is we should probably schedule a mid-point check-in, like sometime in March, just to make sure we're on track before things get too far along.\nHannah Liu: Agreed. I'll put something on the calendar for mid-March - same group, probably thirty minutes.\nNina Kowalski: Works for me.\nHannah Liu: Alright, I think that's everything. Thanks both, this was a useful sync.\nAnanya Sharma: Yeah, good to get on the same page. Talk soon.\nNina Kowalski: Thanks everyone, bye.",
+  "summary": "Ananya Sharma, Hannah Liu, and Nina Kowalski held a planning sync focused on the Aegis Identity Q2 roadmap. The team aligned on two primary workstreams: an MFA policy rules engine and an expanded SSO connector library, with the risk-signal/adaptive MFA layer pushed to Q3 due to scope and technical dependencies. They established a rough timeline targeting a May GA for the MFA rules engine and prioritized Okta, Azure AD, and Google Workspace as the first SSO connectors. Key process improvements were agreed upon, including locking specs two weeks before QA hand-off and including acceptance criteria upfront to enable parallel test case development.",
+  "topics": [
+    "identity roadmap",
+    "mfa policy engine",
+    "sso connectors",
+    "qa process",
+    "sprint planning",
+    "infrastructure bottleneck"
+  ],
+  "action_items": [
+    "Hannah Liu: Follow up with the infra lead to prioritize the dedicated Identity staging tenant ticket",
+    "Ananya Sharma: Check on Azure AD sandbox account availability through the internal Nextera agreement",
+    "Nina Kowalski: Confirm the Okta dev account is still active and available for QA testing",
+    "Hannah Liu: Schedule a mid-March check-in for the same group to review progress against the Q2 plan"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.8,
+  "key_moments": [
+    {
+      "time": 142.0,
+      "text": "Nina flags that provisioning test environments is a recurring bottleneck causing time loss in QA cycles",
+      "type": "concern",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 198.0,
+      "text": "Hannah takes ownership of escalating the stalled infrastructure staging tenant ticket as an immediate action item",
+      "type": "action_item",
+      "speaker": "Hannah Liu"
+    },
+    {
+      "time": 487.0,
+      "text": "Nina raises that a prior hand-off of an in-flux build wasted a week and a half; Ananya acknowledges ownership and proposes a hard spec-lock policy two weeks before hand-off",
+      "type": "technical_issue",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 534.0,
+      "text": "Team agrees to include acceptance criteria in specs from the start, enabling QA to build test cases in parallel with development going forward",
+      "type": "positive_pivot",
+      "speaker": "Hannah Liu"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Hannah Liu",
+      "event_type": "Join",
+      "time_seconds": 7.0,
+      "timestamp_ms": 1770658207000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 28.0,
+      "timestamp_ms": 1770658228000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 54.0,
+      "timestamp_ms": 1770658254000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 2336.0,
+      "timestamp_ms": 1770660536000
+    },
+    {
+      "participant_name": "Hannah Liu",
+      "event_type": "Leave",
+      "time_seconds": 2351.0,
+      "timestamp_ms": 1770660551000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 2349.0,
+      "timestamp_ms": 1770660549000
+    }
+  ],
+  "stats": {
+    "turn_count": 43,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Ananya Sharma": 16,
+      "Hannah Liu": 16,
+      "Nina Kowalski": 11
+    },
+    "speaker_total_seconds": {
+      "Ananya Sharma": 199.8,
+      "Hannah Liu": 190.8,
+      "Nina Kowalski": 92.5
+    }
+  }
+}

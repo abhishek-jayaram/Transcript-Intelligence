@@ -1,0 +1,596 @@
+{
+  "meeting_id": "01KQ1267C6AA7D9B3125FEC8",
+  "title": "SOC 2 Audit Preparation - Internal",
+  "organizer_email": "tyler.washington@aegiscloud.com",
+  "host_email": "tyler.washington@aegiscloud.com",
+  "start_time": "2026-02-26T10:15:00.000Z",
+  "end_time": "2026-02-26T10:51:54.000Z",
+  "duration_minutes": 36.9,
+  "participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Raj Kapoor",
+    "1": "Tyler Washington",
+    "2": "Ravi Gupta",
+    "3": "Brian Cho",
+    "4": "Mike Romano"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 7.1,
+      "end_time": 17.5,
+      "duration": 10.4,
+      "text": "Alright, I think we've got everyone on. Let me just do a quick roll call - Tyler, Raj, Ravi, Brian, Mike - okay yeah looks like we're all here."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 18.1,
+      "end_time": 19.6,
+      "duration": 1.5,
+      "text": "Yep, I'm here."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 20.0,
+      "end_time": 21.5,
+      "duration": 1.5,
+      "text": "Here."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 22.4,
+      "end_time": 24.0,
+      "duration": 1.6000000000000014,
+      "text": "Yeah, good to go."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 24.7,
+      "end_time": 28.6,
+      "duration": 3.900000000000002,
+      "text": "Here, sorry I'm like thirty seconds late, had a thing."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 29.6,
+      "end_time": 49.8,
+      "duration": 20.199999999999996,
+      "text": "No worries. Okay so, the reason I pulled everyone together today - as you all know we've got our SOC 2 Type II audit window coming up, and I want to make sure we're not scrambling at the last minute. The auditors are going to want evidence going back several months so we need to be organized now."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 50.7,
+      "end_time": 55.5,
+      "duration": 4.799999999999997,
+      "text": "Do we have the audit window confirmed? Last I heard it was still tentative."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 56.1,
+      "end_time": 66.7,
+      "duration": 10.600000000000001,
+      "text": "Yeah, it got confirmed last week. We're looking at a roughly ninety-day observation period, starting March first and running through end of May. Auditors will do their fieldwork in June."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 67.8,
+      "end_time": 74.9,
+      "duration": 7.1000000000000085,
+      "text": "Okay, so we've got like three days before the observation period actually kicks off. That's not a ton of runway."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 75.5,
+      "end_time": 89.4,
+      "duration": 13.900000000000006,
+      "text": "Right, which is why we're doing this now. I want to go through the key control areas and figure out who owns what. Tyler, I was going to start with you on the access control and change management side."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 90.8,
+      "end_time": 106.7,
+      "duration": 15.900000000000006,
+      "text": "Sure. So for access control, I think we're in pretty decent shape. We've got access reviews running quarterly, last one was - uh, I want to say January fifteenth? I'd have to double-check the exact date. And we're logging provisioning and deprovisioning events through Aegis Identity."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 107.4,
+      "end_time": 117.7,
+      "duration": 10.299999999999997,
+      "text": "Are those logs being retained for the right duration? SOC 2 auditors are going to want to see at minimum a year of retention depending on the trust service criteria."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 118.6,
+      "end_time": 126.0,
+      "duration": 7.400000000000006,
+      "text": "That's actually a good question. Ravi, you're closer to the logging infrastructure - what are we configured to right now?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 126.6,
+      "end_time": 146.0,
+      "duration": 19.400000000000006,
+      "text": "So right now I believe we're at thirteen months retention for the identity and access logs specifically. I set that up back in Q3. For the broader system logs it's a bit more varied - some are at ninety days, some at a year. I can pull together a full inventory this week if that's helpful."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 146.9,
+      "end_time": 154.7,
+      "duration": 7.799999999999983,
+      "text": "Yeah, please do that. And flag anything that's under a year, we should probably normalize that before March first if we can."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 155.7,
+      "end_time": 158.1,
+      "duration": 2.4000000000000057,
+      "text": "I can have something by Wednesday."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 159.3,
+      "end_time": 163.0,
+      "duration": 3.6999999999999886,
+      "text": "Perfect. Okay, change management - Tyler, where are we on that?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 164.2,
+      "end_time": 183.5,
+      "duration": 19.30000000000001,
+      "text": "So we've got the change advisory board process documented, and most production deploys are going through the proper approval workflow in Jira. The one gap I'm a little worried about is the hotfix process - we've had a few cases where engineers pushed directly to prod without a formal ticket and then backdated the documentation."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 184.3,
+      "end_time": 193.1,
+      "duration": 8.799999999999983,
+      "text": "Yeah, that's going to be a problem. Auditors will look at commit history and deployment logs and they'll see the timing doesn't line up."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 193.7,
+      "end_time": 201.9,
+      "duration": 8.200000000000017,
+      "text": "It happened, I think, twice in the past quarter. Both times it was legitimate emergencies but still - the process wasn't followed."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 202.3,
+      "end_time": 215.5,
+      "duration": 13.199999999999989,
+      "text": "We need to tighten that up going forward during the observation period. Can we add a gate in the CI/CD pipeline so that anything touching production requires a ticket reference? Like, a hard gate, not just a reminder."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 216.5,
+      "end_time": 227.2,
+      "duration": 10.699999999999989,
+      "text": "Yeah that's doable. I can build that out. It'll probably take me a day or two, I'd want to test it in staging first so we don't break the deployment pipeline."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 227.7,
+      "end_time": 243.3,
+      "duration": 15.600000000000023,
+      "text": "Good. Let's get that in before March first. Brian, I want to pull you in here - from a support perspective, do you have visibility into how incidents are being tracked and escalated? That's going to come up under the availability trust service criteria."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 244.4,
+      "end_time": 267.6,
+      "duration": 23.200000000000017,
+      "text": "Yeah so we use PagerDuty for alerting and Zendesk for the customer-facing ticket side. I'd say the process is reasonably well documented. The thing I want to flag is that we don't always have great linkage between a customer ticket and the underlying incident record. Like, if a customer reports something and we tie it to a system incident, that connection isn't always formally captured."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 268.6,
+      "end_time": 274.1,
+      "duration": 5.5,
+      "text": "Is that a manual process right now or is there supposed to be an integration?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 275.3,
+      "end_time": 285.9,
+      "duration": 10.599999999999966,
+      "text": "It's supposed to be integrated but honestly it's kind of broken. The Zendesk to PagerDuty link works maybe sixty percent of the time. My team has been working around it manually."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 287.2,
+      "end_time": 300.1,
+      "duration": 12.900000000000034,
+      "text": "Okay, that's a gap we need to address. Even if the auditors don't specifically flag the integration, if they pull a sample of incidents and can't trace them end to end, that's going to be a finding."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 300.9,
+      "end_time": 308.8,
+      "duration": 7.900000000000034,
+      "text": "I agree. I've been meaning to get someone to look at that integration for like two months, it just keeps getting deprioritized."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 309.4,
+      "end_time": 318.1,
+      "duration": 8.700000000000045,
+      "text": "Mike, can you take a look at the Zendesk PagerDuty integration and see what's going on? I don't want to put more on Ravi's plate."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 318.6,
+      "end_time": 331.2,
+      "duration": 12.599999999999966,
+      "text": "Yeah, I can take that. I'll coordinate with Brian to understand what's actually failing. My guess is it's probably an API auth token that expired or something like that, but I won't know until I look."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 332.4,
+      "end_time": 336.4,
+      "duration": 4.0,
+      "text": "That would actually make sense, we rotated some credentials in December."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 337.6,
+      "end_time": 342.3,
+      "duration": 4.699999999999989,
+      "text": "Yeah, I'll take a look. Should be fixable pretty quickly if that's the case."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 342.8,
+      "end_time": 354.0,
+      "duration": 11.199999999999989,
+      "text": "Okay good. Let me pivot to monitoring and threat detection. We use Aegis Detect for that internally - Ravi, what's the state of our alerting coverage? Are we logging the right events?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 354.5,
+      "end_time": 376.2,
+      "duration": 21.69999999999999,
+      "text": "So coverage is pretty good overall. We're monitoring login anomalies, privilege escalations, API rate limit breaches, network egress outliers - basically the standard playbook. One thing I've been meaning to raise is that we have some alert fatigue going on. The tuning hasn't been updated in a while and we're getting a lot of low-signal alerts that people are starting to ignore."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 377.1,
+      "end_time": 388.4,
+      "duration": 11.299999999999955,
+      "text": "That's actually a risk from an audit perspective too. If auditors see a bunch of unacknowledged alerts in the system that's going to raise questions about whether we're actually reviewing them."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 389.1,
+      "end_time": 400.4,
+      "duration": 11.299999999999955,
+      "text": "Exactly. I'd like to do a tuning pass before the observation period starts. Maybe a half-day exercise where we go through the alert configs and suppress or recategorize the noisy ones."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 401.2,
+      "end_time": 404.6,
+      "duration": 3.400000000000034,
+      "text": "Let's schedule that. Who needs to be in that session?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 405.8,
+      "end_time": 413.6,
+      "duration": 7.800000000000011,
+      "text": "Me, Tyler probably, and it might be worth having Brian there since some of the alerts feed into the support escalation queue."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 414.6,
+      "end_time": 419.4,
+      "duration": 4.7999999999999545,
+      "text": "Works for me. Let's try to do that Tuesday or Wednesday this week."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 420.8,
+      "end_time": 435.6,
+      "duration": 14.800000000000011,
+      "text": "Okay I'll send a calendar invite. Now - vendor management and third-party risk. This is one that I feel like we always underinvest in until an auditor asks about it. Do we have current SOC 2 reports for our critical vendors?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 436.1,
+      "end_time": 444.8,
+      "duration": 8.699999999999989,
+      "text": "Uh, I know we have CloudPrime's compliance reports and we have something for Zendesk but it might be out of date. I'd have to check."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 445.7,
+      "end_time": 458.9,
+      "duration": 13.199999999999989,
+      "text": "Yeah that's something we should inventory. I can take a first pass at it - I'll pull together a list of our critical third-party vendors and check what compliance documentation we have on file versus what's missing."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 459.6,
+      "end_time": 472.1,
+      "duration": 12.5,
+      "text": "That would be great. We also need to make sure we have BAAs in place for anything that touches customer data. I know that's more of a legal thing but someone needs to chase it down."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 473.0,
+      "end_time": 478.9,
+      "duration": 5.899999999999977,
+      "text": "I can loop in legal and make sure those are accounted for. That's probably a quick check."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 479.3,
+      "end_time": 507.2,
+      "duration": 27.899999999999977,
+      "text": "Good. Okay, let me just summarize what we've got so far in terms of action items. Ravi, you're doing the log retention inventory by Wednesday and the CI/CD gate for production deployments before March first. Mike, you're looking at the Zendesk PagerDuty integration and taking a pass at the vendor compliance documentation. Tyler, you're following up with legal on BAAs and keeping the access review records organized. Brian, you're participating in the alert tuning session. Does that all sound right?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 507.7,
+      "end_time": 509.3,
+      "duration": 1.6000000000000227,
+      "text": "That tracks for me."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 510.2,
+      "end_time": 511.7,
+      "duration": 1.5,
+      "text": "Yep."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 512.2,
+      "end_time": 513.7,
+      "duration": 1.5,
+      "text": "Good with me."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 514.1,
+      "end_time": 515.6,
+      "duration": 1.5,
+      "text": "Same."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 516.8,
+      "end_time": 528.0,
+      "duration": 11.200000000000045,
+      "text": "One more thing I want to raise before we wrap up - employee security training. Auditors consistently ask about this. Do we have completion records for security awareness training for all staff?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 529.3,
+      "end_time": 542.0,
+      "duration": 12.700000000000045,
+      "text": "We ran a training in November and I believe we got pretty close to a hundred percent completion but there were a handful of people who didn't finish it. I'm not sure if we ever followed up."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 543.0,
+      "end_time": 555.6,
+      "duration": 12.600000000000023,
+      "text": "That handful is going to matter to an auditor. If there are any outstanding completions we need to chase those down and document that we followed up, even if we can't get everyone to retroactively complete it."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 556.7,
+      "end_time": 571.1,
+      "duration": 14.399999999999977,
+      "text": "Agreed. Tyler, can you pull the completion report from our LMS and send it around? We can figure out who still needs to complete it and decide if we want to issue a new training cycle or just document the exceptions."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 571.4,
+      "end_time": 573.5,
+      "duration": 2.1000000000000227,
+      "text": "Yeah, I'll get that today."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 573.9,
+      "end_time": 589.1,
+      "duration": 15.200000000000045,
+      "text": "Alright. I think we're in reasonable shape but there's clearly work to do before March first. Let's plan to do a quick check-in next Friday to see where things stand. I'll set up a shared tracker so everyone can update their items."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 590.0,
+      "end_time": 593.4,
+      "duration": 3.3999999999999773,
+      "text": "That works. I'll keep an eye on the tracker."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 594.7,
+      "end_time": 599.4,
+      "duration": 4.699999999999932,
+      "text": "Okay, I think that's everything for today. Thanks everyone, let's get this stuff done."
+    }
+  ],
+  "transcript_text": "Raj Kapoor: Alright, I think we've got everyone on. Let me just do a quick roll call - Tyler, Raj, Ravi, Brian, Mike - okay yeah looks like we're all here.\nTyler Washington: Yep, I'm here.\nRavi Gupta: Here.\nBrian Cho: Yeah, good to go.\nMike Romano: Here, sorry I'm like thirty seconds late, had a thing.\nRaj Kapoor: No worries. Okay so, the reason I pulled everyone together today - as you all know we've got our SOC 2 Type II audit window coming up, and I want to make sure we're not scrambling at the last minute. The auditors are going to want evidence going back several months so we need to be organized now.\nTyler Washington: Do we have the audit window confirmed? Last I heard it was still tentative.\nRaj Kapoor: Yeah, it got confirmed last week. We're looking at a roughly ninety-day observation period, starting March first and running through end of May. Auditors will do their fieldwork in June.\nMike Romano: Okay, so we've got like three days before the observation period actually kicks off. That's not a ton of runway.\nRaj Kapoor: Right, which is why we're doing this now. I want to go through the key control areas and figure out who owns what. Tyler, I was going to start with you on the access control and change management side.\nTyler Washington: Sure. So for access control, I think we're in pretty decent shape. We've got access reviews running quarterly, last one was - uh, I want to say January fifteenth? I'd have to double-check the exact date. And we're logging provisioning and deprovisioning events through Aegis Identity.\nMike Romano: Are those logs being retained for the right duration? SOC 2 auditors are going to want to see at minimum a year of retention depending on the trust service criteria.\nTyler Washington: That's actually a good question. Ravi, you're closer to the logging infrastructure - what are we configured to right now?\nRavi Gupta: So right now I believe we're at thirteen months retention for the identity and access logs specifically. I set that up back in Q3. For the broader system logs it's a bit more varied - some are at ninety days, some at a year. I can pull together a full inventory this week if that's helpful.\nRaj Kapoor: Yeah, please do that. And flag anything that's under a year, we should probably normalize that before March first if we can.\nRavi Gupta: I can have something by Wednesday.\nRaj Kapoor: Perfect. Okay, change management - Tyler, where are we on that?\nTyler Washington: So we've got the change advisory board process documented, and most production deploys are going through the proper approval workflow in Jira. The one gap I'm a little worried about is the hotfix process - we've had a few cases where engineers pushed directly to prod without a formal ticket and then backdated the documentation.\nMike Romano: Yeah, that's going to be a problem. Auditors will look at commit history and deployment logs and they'll see the timing doesn't line up.\nTyler Washington: It happened, I think, twice in the past quarter. Both times it was legitimate emergencies but still - the process wasn't followed.\nRaj Kapoor: We need to tighten that up going forward during the observation period. Can we add a gate in the CI/CD pipeline so that anything touching production requires a ticket reference? Like, a hard gate, not just a reminder.\nRavi Gupta: Yeah that's doable. I can build that out. It'll probably take me a day or two, I'd want to test it in staging first so we don't break the deployment pipeline.\nRaj Kapoor: Good. Let's get that in before March first. Brian, I want to pull you in here - from a support perspective, do you have visibility into how incidents are being tracked and escalated? That's going to come up under the availability trust service criteria.\nBrian Cho: Yeah so we use PagerDuty for alerting and Zendesk for the customer-facing ticket side. I'd say the process is reasonably well documented. The thing I want to flag is that we don't always have great linkage between a customer ticket and the underlying incident record. Like, if a customer reports something and we tie it to a system incident, that connection isn't always formally captured.\nMike Romano: Is that a manual process right now or is there supposed to be an integration?\nBrian Cho: It's supposed to be integrated but honestly it's kind of broken. The Zendesk to PagerDuty link works maybe sixty percent of the time. My team has been working around it manually.\nRaj Kapoor: Okay, that's a gap we need to address. Even if the auditors don't specifically flag the integration, if they pull a sample of incidents and can't trace them end to end, that's going to be a finding.\nBrian Cho: I agree. I've been meaning to get someone to look at that integration for like two months, it just keeps getting deprioritized.\nRaj Kapoor: Mike, can you take a look at the Zendesk PagerDuty integration and see what's going on? I don't want to put more on Ravi's plate.\nMike Romano: Yeah, I can take that. I'll coordinate with Brian to understand what's actually failing. My guess is it's probably an API auth token that expired or something like that, but I won't know until I look.\nBrian Cho: That would actually make sense, we rotated some credentials in December.\nMike Romano: Yeah, I'll take a look. Should be fixable pretty quickly if that's the case.\nRaj Kapoor: Okay good. Let me pivot to monitoring and threat detection. We use Aegis Detect for that internally - Ravi, what's the state of our alerting coverage? Are we logging the right events?\nRavi Gupta: So coverage is pretty good overall. We're monitoring login anomalies, privilege escalations, API rate limit breaches, network egress outliers - basically the standard playbook. One thing I've been meaning to raise is that we have some alert fatigue going on. The tuning hasn't been updated in a while and we're getting a lot of low-signal alerts that people are starting to ignore.\nTyler Washington: That's actually a risk from an audit perspective too. If auditors see a bunch of unacknowledged alerts in the system that's going to raise questions about whether we're actually reviewing them.\nRavi Gupta: Exactly. I'd like to do a tuning pass before the observation period starts. Maybe a half-day exercise where we go through the alert configs and suppress or recategorize the noisy ones.\nRaj Kapoor: Let's schedule that. Who needs to be in that session?\nRavi Gupta: Me, Tyler probably, and it might be worth having Brian there since some of the alerts feed into the support escalation queue.\nBrian Cho: Works for me. Let's try to do that Tuesday or Wednesday this week.\nRaj Kapoor: Okay I'll send a calendar invite. Now - vendor management and third-party risk. This is one that I feel like we always underinvest in until an auditor asks about it. Do we have current SOC 2 reports for our critical vendors?\nTyler Washington: Uh, I know we have CloudPrime's compliance reports and we have something for Zendesk but it might be out of date. I'd have to check.\nMike Romano: Yeah that's something we should inventory. I can take a first pass at it - I'll pull together a list of our critical third-party vendors and check what compliance documentation we have on file versus what's missing.\nRaj Kapoor: That would be great. We also need to make sure we have BAAs in place for anything that touches customer data. I know that's more of a legal thing but someone needs to chase it down.\nTyler Washington: I can loop in legal and make sure those are accounted for. That's probably a quick check.\nRaj Kapoor: Good. Okay, let me just summarize what we've got so far in terms of action items. Ravi, you're doing the log retention inventory by Wednesday and the CI/CD gate for production deployments before March first. Mike, you're looking at the Zendesk PagerDuty integration and taking a pass at the vendor compliance documentation. Tyler, you're following up with legal on BAAs and keeping the access review records organized. Brian, you're participating in the alert tuning session. Does that all sound right?\nRavi Gupta: That tracks for me.\nMike Romano: Yep.\nTyler Washington: Good with me.\nBrian Cho: Same.\nRaj Kapoor: One more thing I want to raise before we wrap up - employee security training. Auditors consistently ask about this. Do we have completion records for security awareness training for all staff?\nTyler Washington: We ran a training in November and I believe we got pretty close to a hundred percent completion but there were a handful of people who didn't finish it. I'm not sure if we ever followed up.\nMike Romano: That handful is going to matter to an auditor. If there are any outstanding completions we need to chase those down and document that we followed up, even if we can't get everyone to retroactively complete it.\nRaj Kapoor: Agreed. Tyler, can you pull the completion report from our LMS and send it around? We can figure out who still needs to complete it and decide if we want to issue a new training cycle or just document the exceptions.\nTyler Washington: Yeah, I'll get that today.\nRaj Kapoor: Alright. I think we're in reasonable shape but there's clearly work to do before March first. Let's plan to do a quick check-in next Friday to see where things stand. I'll set up a shared tracker so everyone can update their items.\nBrian Cho: That works. I'll keep an eye on the tracker.\nRaj Kapoor: Okay, I think that's everything for today. Thanks everyone, let's get this stuff done.",
+  "summary": "Raj Kapoor convened a meeting with Tyler, Ravi, Brian, and Mike to prepare for an upcoming SOC 2 Type II audit with a 90-day observation period starting March 1st. The team reviewed key control areas including access control, change management, incident tracking, monitoring, vendor management, and employee security training. Several gaps were identified, including a broken Zendesk-PagerDuty integration, inconsistent hotfix documentation, alert fatigue in the monitoring system, and incomplete security training completions. Action items were assigned to each team member with tight deadlines before the observation window opens.",
+  "topics": [
+    "soc 2 audit",
+    "access control",
+    "change management",
+    "incident tracking",
+    "vendor management",
+    "security training"
+  ],
+  "action_items": [
+    "Ravi Gupta: Complete log retention inventory by Wednesday and build a CI/CD hard gate requiring ticket references for all production deployments before March 1st",
+    "Mike Romano: Investigate and fix the broken Zendesk-PagerDuty integration and compile a vendor compliance documentation inventory",
+    "Tyler Washington: Pull LMS security training completion report today, follow up with legal on BAAs for vendors touching customer data, and organize access review records",
+    "Raj Kapoor: Send calendar invite for alert tuning session (Tuesday or Wednesday) and set up a shared tracker for all action items with a check-in planned for next Friday"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.4,
+  "key_moments": [
+    {
+      "time": 180.0,
+      "text": "Tyler flags that the hotfix process has been bypassed, with engineers pushing directly to production and backdating documentation — a likely audit finding.",
+      "type": "concern",
+      "speaker": "Tyler Washington"
+    },
+    {
+      "time": 310.0,
+      "text": "Brian reveals the Zendesk to PagerDuty integration only works 60% of the time, creating a gap in end-to-end incident traceability for auditors.",
+      "type": "technical_issue",
+      "speaker": "Brian Cho"
+    },
+    {
+      "time": 430.0,
+      "text": "Ravi raises alert fatigue as a risk, noting that unacknowledged alerts could raise red flags with auditors about the effectiveness of threat monitoring.",
+      "type": "feature_gap",
+      "speaker": "Ravi Gupta"
+    },
+    {
+      "time": 620.0,
+      "text": "Raj summarizes all assigned action items with owners and deadlines, and proposes a Friday check-in with a shared tracker to maintain accountability.",
+      "type": "action_item",
+      "speaker": "Raj Kapoor"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Join",
+      "time_seconds": 5.0,
+      "timestamp_ms": 1772100905000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Join",
+      "time_seconds": 24.0,
+      "timestamp_ms": 1772100924000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Join",
+      "time_seconds": 43.0,
+      "timestamp_ms": 1772100943000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 48.0,
+      "timestamp_ms": 1772100948000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Join",
+      "time_seconds": 55.0,
+      "timestamp_ms": 1772100955000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 2210.0,
+      "timestamp_ms": 1772103110000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Leave",
+      "time_seconds": 2214.0,
+      "timestamp_ms": 1772103114000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Leave",
+      "time_seconds": 2204.0,
+      "timestamp_ms": 1772103104000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Leave",
+      "time_seconds": 2184.0,
+      "timestamp_ms": 1772103084000
+    },
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Leave",
+      "time_seconds": 2185.0,
+      "timestamp_ms": 1772103085000
+    }
+  ],
+  "stats": {
+    "turn_count": 57,
+    "participant_count": 5,
+    "speaker_turn_counts": {
+      "Raj Kapoor": 19,
+      "Tyler Washington": 12,
+      "Ravi Gupta": 8,
+      "Brian Cho": 8,
+      "Mike Romano": 10
+    },
+    "speaker_total_seconds": {
+      "Raj Kapoor": 232.3,
+      "Tyler Washington": 99.3,
+      "Ravi Gupta": 76.4,
+      "Brian Cho": 57.0,
+      "Mike Romano": 80.2
+    }
+  }
+}

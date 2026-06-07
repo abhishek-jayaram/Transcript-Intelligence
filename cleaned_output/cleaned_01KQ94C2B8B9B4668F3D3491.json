@@ -1,0 +1,442 @@
+{
+  "meeting_id": "01KQ94C2B8B9B4668F3D3491",
+  "title": "Support Case #6573 - Ridgeline Logistics Detect Data Gaps",
+  "organizer_email": "elena.vasquez@aegiscloud.com",
+  "host_email": "elena.vasquez@aegiscloud.com",
+  "start_time": "2026-03-13T10:30:00.000Z",
+  "end_time": "2026-03-13T10:47:36.000Z",
+  "duration_minutes": 17.6,
+  "participants": [
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "m.ellison@ridgelinelogistics.com",
+      "domain": "ridgelinelogistics.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "m.ellison@ridgelinelogistics.com",
+      "domain": "ridgelinelogistics.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Elena Vasquez",
+    "1": "Sarah Chen",
+    "2": "Mark Ellison"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 4.0,
+      "end_time": 13.7,
+      "duration": 9.7,
+      "text": "Hi, thanks for joining - this is Elena Vasquez from Aegis Cloud Security support, and I also have my colleague Sarah Chen on the line with me today."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 14.9,
+      "end_time": 24.8,
+      "duration": 9.9,
+      "text": "Hi there, yeah, Sarah Chen here as well - I specialize in the Detect module so Elena looped me in given what we're seeing in your ticket."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 25.5,
+      "end_time": 36.8,
+      "duration": 11.299999999999997,
+      "text": "Yeah, hi, Mark Ellison here - Infrastructure Lead at Ridgeline Logistics. Thanks for, uh, getting on a call quickly I guess, though honestly I'm pretty frustrated that we're even here right now."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 38.2,
+      "end_time": 49.8,
+      "duration": 11.599999999999994,
+      "text": "Totally understandable Mark, and we appreciate you taking the time. Can you walk us through what you're seeing - just in your own words, even if it overlaps with what's in the ticket?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 50.6,
+      "end_time": 68.8,
+      "duration": 18.199999999999996,
+      "text": "Sure, yeah. So we started noticing - I want to say it was sometime yesterday morning, March 12th - that our Detect dashboard was just... not updating. Like the last event we could see was from around 11 PM the night before, March 11th, and then there's just nothing after that."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 69.9,
+      "end_time": 76.2,
+      "duration": 6.299999999999997,
+      "text": "And this is across all your monitored environments or is it specific to certain agents or regions?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 76.9,
+      "end_time": 94.6,
+      "duration": 17.69999999999999,
+      "text": "That's - okay so that's actually a good question. It looks like it's everything. We have agents deployed across our three main data centers - two in the midwest, one on the east coast - and none of them are showing any event data. Zero. Like the dashboard is just... frozen."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 95.0,
+      "end_time": 102.2,
+      "duration": 7.200000000000003,
+      "text": "Right, okay. And are the agents themselves still running? Like if you check the agent status locally, are they active?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 103.2,
+      "end_time": 119.6,
+      "duration": 16.39999999999999,
+      "text": "Yeah that's what makes this so confusing and frankly alarming. The agents are running fine. We can see them locally, they're processing, but none of that data is actually making it to the dashboard. It's like there's a black hole somewhere between our infrastructure and your platform."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 120.7,
+      "end_time": 137.5,
+      "duration": 16.799999999999997,
+      "text": "Okay, Mark, I want to be transparent with you - we are aware of an issue on our end right now with the event processing pipeline in Detect. We started seeing signals on our side around... Sarah, correct me if I'm wrong, but it was late March 11th?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 138.1,
+      "end_time": 146.5,
+      "duration": 8.400000000000006,
+      "text": "Yeah, that's right, late evening March 11th is when our internal monitoring started flagging it. We have engineers actively working on it right now."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 147.0,
+      "end_time": 153.0,
+      "duration": 6.0,
+      "text": "Wait - so this is a platform-level issue? Like this isn't something on my end at all?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 154.2,
+      "end_time": 163.6,
+      "duration": 9.400000000000006,
+      "text": "Based on what we're seeing, yes - this appears to be on our side. We're not asking you to do any configuration changes or anything like that."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 164.0,
+      "end_time": 187.1,
+      "duration": 23.099999999999994,
+      "text": "Okay well that's - I mean that's good to know I guess, but it doesn't make it any less of a serious problem. We're a manufacturing company. We have operational technology networks, we have SCADA systems, we have production floor infrastructure that your platform is supposed to be monitoring for threats. And right now we have literally zero visibility. Do you understand how unacceptable that is?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 188.3,
+      "end_time": 200.9,
+      "duration": 12.599999999999994,
+      "text": "We absolutely do, Mark, and I want to say we don't take that lightly at all. Especially given your environment - OT networks are exactly the kind of infrastructure where a monitoring gap is really critical."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 201.6,
+      "end_time": 214.7,
+      "duration": 13.099999999999994,
+      "text": "And we genuinely apologize for the impact here. Can I ask - do you have any secondary monitoring tools in place, even basic ones, that your team has been able to lean on in the meantime?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 215.5,
+      "end_time": 229.0,
+      "duration": 13.5,
+      "text": "We have some basic network monitoring but nothing close to what Detect provides for threat detection specifically. I mean, that's why we pay for your platform. My team has been manually reviewing logs all morning which is... not sustainable."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 229.4,
+      "end_time": 239.7,
+      "duration": 10.299999999999983,
+      "text": "That's a terrible position to be in and I hear you. Sarah, can you share any more detail on what we know about the root cause at this point?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 240.6,
+      "end_time": 263.1,
+      "duration": 22.50000000000003,
+      "text": "Yeah, so what I can share right now - and some of this is still being confirmed by the engineering team - is that it looks like there's a failure in the event ingestion layer. Essentially the pipeline that takes in events from the agents and processes them for the dashboard hit some kind of cascading issue. We're still diagnosing exactly where the breakdown is."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 264.1,
+      "end_time": 277.0,
+      "duration": 12.899999999999977,
+      "text": "A cascading issue. Okay. So how long has this been going on - and more importantly when is it going to be fixed? Because we're now going on almost 24 hours of no threat monitoring visibility."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 278.3,
+      "end_time": 294.8,
+      "duration": 16.5,
+      "text": "I don't want to give you a hard ETA right now that I'm not confident in, because I'd rather be honest with you than give you a time that slips. What I can tell you is this is the highest priority incident on our side right now."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 296.0,
+      "end_time": 307.0,
+      "duration": 11.0,
+      "text": "That's... I mean, that's not really an answer though, is it? I have to go back to my CISO and tell him something. I can't just say 'they're working on it.'"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 308.5,
+      "end_time": 325.8,
+      "duration": 17.30000000000001,
+      "text": "I completely understand that pressure, Mark. Let me see what I can do - I can escalate internally to get you a more concrete status update within the next two hours. I'll personally make sure that happens. Is email okay for that or would you prefer a direct call?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 326.9,
+      "end_time": 338.0,
+      "duration": 11.100000000000023,
+      "text": "Both. I want something in writing and I want someone to call me. And honestly I'd like this to be flagged as a Sev 1 on your end if it isn't already."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 338.7,
+      "end_time": 347.6,
+      "duration": 8.900000000000034,
+      "text": "Completely fair. We will make sure this support case is marked as Sev 1 - I'll do that right now actually while we're on the call."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 348.2,
+      "end_time": 363.3,
+      "duration": 15.100000000000023,
+      "text": "And Mark, just to make sure we have everything we need from your side - can you confirm the account ID and which specific Detect workspace you're working out of? I want to make sure engineering has eyes on your telemetry specifically."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 364.0,
+      "end_time": 375.8,
+      "duration": 11.800000000000011,
+      "text": "Yeah it's - hold on, let me pull it up. Okay, account ID is RLL-4482, and the workspace is ridgeline-prod-detect. There's also a secondary workspace, ridgeline-staging-detect, but I'm less concerned about that one."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 376.7,
+      "end_time": 392.5,
+      "duration": 15.800000000000011,
+      "text": "Got it, I'm noting both of those. And just to double check - you mentioned the last events visible were around 11 PM on March 11th. Is that the timestamp shown in the dashboard or are you also confirming that against your local agent logs?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 393.0,
+      "end_time": 410.2,
+      "duration": 17.19999999999999,
+      "text": "Both actually. Dashboard shows 11:04 PM as the last event, and when I looked at the agent logs on one of our nodes it was actively generating events well after that. So the agents are definitely sending, something is just not receiving it or processing it on your end."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 411.5,
+      "end_time": 420.3,
+      "duration": 8.800000000000011,
+      "text": "That's really helpful and consistent with what we're seeing across affected accounts. The agents are healthy, the issue is downstream in the ingestion pipeline."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 421.1,
+      "end_time": 436.8,
+      "duration": 15.699999999999989,
+      "text": "Great. And when this is fixed - are we going to get backfilled data? Because if I have a gap of 24 hours or more in my threat monitoring history, that's a compliance issue for us. We need that audit trail to be complete."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 437.9,
+      "end_time": 458.5,
+      "duration": 20.600000000000023,
+      "text": "That's a really important question and I want to be careful how I answer it. The agents are generating and queuing event data locally - so the raw data does exist. Whether backfill is feasible depends on how the engineering team resolves the pipeline issue. I'm going to make sure that question is explicitly raised in our internal escalation."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 459.5,
+      "end_time": 472.2,
+      "duration": 12.699999999999989,
+      "text": "It needs to be more than raised - it needs to be answered. I don't want a resolution that just fixes the live feed going forward and leaves me with a hole in my historical data."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 472.7,
+      "end_time": 480.4,
+      "duration": 7.699999999999989,
+      "text": "Noted, and I will make sure that's explicitly called out as a requirement in the escalation. You have my word on that."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 481.6,
+      "end_time": 500.6,
+      "duration": 19.0,
+      "text": "Okay. I also - look, I want to ask this because I have to - is there any indication of what caused this? Like was this a configuration error, was it something that could have been prevented? Because if this is a systemic reliability issue with your platform I need to know that."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 501.8,
+      "end_time": 522.4,
+      "duration": 20.599999999999966,
+      "text": "I understand why you're asking and I think it's the right question. I don't have a definitive root cause analysis to share right now - engineering is still actively diagnosing - but we will provide you with a full incident report once this is resolved. That will include root cause, remediation steps, and what we're doing to prevent recurrence."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 523.6,
+      "end_time": 539.1,
+      "duration": 15.5,
+      "text": "I'll hold you to that. I need that in writing. And frankly depending on how long this goes on and what that report says, we're going to have a conversation about SLA credits. This is a significant breach of what we're paying for."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 539.7,
+      "end_time": 554.6,
+      "duration": 14.899999999999977,
+      "text": "That's a completely reasonable thing to raise and your account team will be the right people to have that conversation with. I'm going to flag this case to your account manager as well so they're in the loop and can proactively reach out."
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 555.8,
+      "end_time": 564.5,
+      "duration": 8.700000000000045,
+      "text": "Fine. Yeah. Okay. Is there anything else you need from me right now or... I mean I need to get back to my team."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 565.9,
+      "end_time": 582.7,
+      "duration": 16.800000000000068,
+      "text": "No, I think we have everything we need. Just to recap - we're escalating this to Sev 1, I'll have an update to you within two hours via email and a direct callback, and we're specifically flagging the data backfill requirement to engineering. Does that cover everything?"
+    },
+    {
+      "speaker_name": "Mark Ellison",
+      "start_time": 584.0,
+      "end_time": 600.5,
+      "duration": 16.5,
+      "text": "Yeah, that covers it for now. I really hope the next call is with better news because this is - this is not a good situation. My team is stressed, my CISO is asking questions, and we're flying blind on threat monitoring. Just... please fix it."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 601.7,
+      "end_time": 612.7,
+      "duration": 11.0,
+      "text": "We hear you Mark, and we're going to do everything we can to get this resolved as quickly as possible. Thank you for your patience and we'll be in touch very soon."
+    }
+  ],
+  "transcript_text": "Elena Vasquez: Hi, thanks for joining - this is Elena Vasquez from Aegis Cloud Security support, and I also have my colleague Sarah Chen on the line with me today.\nSarah Chen: Hi there, yeah, Sarah Chen here as well - I specialize in the Detect module so Elena looped me in given what we're seeing in your ticket.\nMark Ellison: Yeah, hi, Mark Ellison here - Infrastructure Lead at Ridgeline Logistics. Thanks for, uh, getting on a call quickly I guess, though honestly I'm pretty frustrated that we're even here right now.\nElena Vasquez: Totally understandable Mark, and we appreciate you taking the time. Can you walk us through what you're seeing - just in your own words, even if it overlaps with what's in the ticket?\nMark Ellison: Sure, yeah. So we started noticing - I want to say it was sometime yesterday morning, March 12th - that our Detect dashboard was just... not updating. Like the last event we could see was from around 11 PM the night before, March 11th, and then there's just nothing after that.\nSarah Chen: And this is across all your monitored environments or is it specific to certain agents or regions?\nMark Ellison: That's - okay so that's actually a good question. It looks like it's everything. We have agents deployed across our three main data centers - two in the midwest, one on the east coast - and none of them are showing any event data. Zero. Like the dashboard is just... frozen.\nSarah Chen: Right, okay. And are the agents themselves still running? Like if you check the agent status locally, are they active?\nMark Ellison: Yeah that's what makes this so confusing and frankly alarming. The agents are running fine. We can see them locally, they're processing, but none of that data is actually making it to the dashboard. It's like there's a black hole somewhere between our infrastructure and your platform.\nElena Vasquez: Okay, Mark, I want to be transparent with you - we are aware of an issue on our end right now with the event processing pipeline in Detect. We started seeing signals on our side around... Sarah, correct me if I'm wrong, but it was late March 11th?\nSarah Chen: Yeah, that's right, late evening March 11th is when our internal monitoring started flagging it. We have engineers actively working on it right now.\nMark Ellison: Wait - so this is a platform-level issue? Like this isn't something on my end at all?\nElena Vasquez: Based on what we're seeing, yes - this appears to be on our side. We're not asking you to do any configuration changes or anything like that.\nMark Ellison: Okay well that's - I mean that's good to know I guess, but it doesn't make it any less of a serious problem. We're a manufacturing company. We have operational technology networks, we have SCADA systems, we have production floor infrastructure that your platform is supposed to be monitoring for threats. And right now we have literally zero visibility. Do you understand how unacceptable that is?\nSarah Chen: We absolutely do, Mark, and I want to say we don't take that lightly at all. Especially given your environment - OT networks are exactly the kind of infrastructure where a monitoring gap is really critical.\nElena Vasquez: And we genuinely apologize for the impact here. Can I ask - do you have any secondary monitoring tools in place, even basic ones, that your team has been able to lean on in the meantime?\nMark Ellison: We have some basic network monitoring but nothing close to what Detect provides for threat detection specifically. I mean, that's why we pay for your platform. My team has been manually reviewing logs all morning which is... not sustainable.\nElena Vasquez: That's a terrible position to be in and I hear you. Sarah, can you share any more detail on what we know about the root cause at this point?\nSarah Chen: Yeah, so what I can share right now - and some of this is still being confirmed by the engineering team - is that it looks like there's a failure in the event ingestion layer. Essentially the pipeline that takes in events from the agents and processes them for the dashboard hit some kind of cascading issue. We're still diagnosing exactly where the breakdown is.\nMark Ellison: A cascading issue. Okay. So how long has this been going on - and more importantly when is it going to be fixed? Because we're now going on almost 24 hours of no threat monitoring visibility.\nSarah Chen: I don't want to give you a hard ETA right now that I'm not confident in, because I'd rather be honest with you than give you a time that slips. What I can tell you is this is the highest priority incident on our side right now.\nMark Ellison: That's... I mean, that's not really an answer though, is it? I have to go back to my CISO and tell him something. I can't just say 'they're working on it.'\nElena Vasquez: I completely understand that pressure, Mark. Let me see what I can do - I can escalate internally to get you a more concrete status update within the next two hours. I'll personally make sure that happens. Is email okay for that or would you prefer a direct call?\nMark Ellison: Both. I want something in writing and I want someone to call me. And honestly I'd like this to be flagged as a Sev 1 on your end if it isn't already.\nElena Vasquez: Completely fair. We will make sure this support case is marked as Sev 1 - I'll do that right now actually while we're on the call.\nSarah Chen: And Mark, just to make sure we have everything we need from your side - can you confirm the account ID and which specific Detect workspace you're working out of? I want to make sure engineering has eyes on your telemetry specifically.\nMark Ellison: Yeah it's - hold on, let me pull it up. Okay, account ID is RLL-4482, and the workspace is ridgeline-prod-detect. There's also a secondary workspace, ridgeline-staging-detect, but I'm less concerned about that one.\nSarah Chen: Got it, I'm noting both of those. And just to double check - you mentioned the last events visible were around 11 PM on March 11th. Is that the timestamp shown in the dashboard or are you also confirming that against your local agent logs?\nMark Ellison: Both actually. Dashboard shows 11:04 PM as the last event, and when I looked at the agent logs on one of our nodes it was actively generating events well after that. So the agents are definitely sending, something is just not receiving it or processing it on your end.\nSarah Chen: That's really helpful and consistent with what we're seeing across affected accounts. The agents are healthy, the issue is downstream in the ingestion pipeline.\nMark Ellison: Great. And when this is fixed - are we going to get backfilled data? Because if I have a gap of 24 hours or more in my threat monitoring history, that's a compliance issue for us. We need that audit trail to be complete.\nSarah Chen: That's a really important question and I want to be careful how I answer it. The agents are generating and queuing event data locally - so the raw data does exist. Whether backfill is feasible depends on how the engineering team resolves the pipeline issue. I'm going to make sure that question is explicitly raised in our internal escalation.\nMark Ellison: It needs to be more than raised - it needs to be answered. I don't want a resolution that just fixes the live feed going forward and leaves me with a hole in my historical data.\nElena Vasquez: Noted, and I will make sure that's explicitly called out as a requirement in the escalation. You have my word on that.\nMark Ellison: Okay. I also - look, I want to ask this because I have to - is there any indication of what caused this? Like was this a configuration error, was it something that could have been prevented? Because if this is a systemic reliability issue with your platform I need to know that.\nSarah Chen: I understand why you're asking and I think it's the right question. I don't have a definitive root cause analysis to share right now - engineering is still actively diagnosing - but we will provide you with a full incident report once this is resolved. That will include root cause, remediation steps, and what we're doing to prevent recurrence.\nMark Ellison: I'll hold you to that. I need that in writing. And frankly depending on how long this goes on and what that report says, we're going to have a conversation about SLA credits. This is a significant breach of what we're paying for.\nElena Vasquez: That's a completely reasonable thing to raise and your account team will be the right people to have that conversation with. I'm going to flag this case to your account manager as well so they're in the loop and can proactively reach out.\nMark Ellison: Fine. Yeah. Okay. Is there anything else you need from me right now or... I mean I need to get back to my team.\nElena Vasquez: No, I think we have everything we need. Just to recap - we're escalating this to Sev 1, I'll have an update to you within two hours via email and a direct callback, and we're specifically flagging the data backfill requirement to engineering. Does that cover everything?\nMark Ellison: Yeah, that covers it for now. I really hope the next call is with better news because this is - this is not a good situation. My team is stressed, my CISO is asking questions, and we're flying blind on threat monitoring. Just... please fix it.\nElena Vasquez: We hear you Mark, and we're going to do everything we can to get this resolved as quickly as possible. Thank you for your patience and we'll be in touch very soon.",
+  "summary": "Mark Ellison, Infrastructure Lead at Ridgeline Logistics, contacted Aegis Cloud Security support regarding a complete outage of his Detect dashboard that began around 11 PM on March 11th. Elena Vasquez and Sarah Chen confirmed this is a platform-side issue caused by a failure in the event ingestion pipeline affecting multiple accounts. Mark expressed serious concern given that his company's OT networks, SCADA systems, and production floor infrastructure have had zero threat monitoring visibility for nearly 24 hours. The call concluded with commitments to escalate the case to Sev 1, provide a status update within two hours, investigate data backfill options, and loop in the account manager regarding potential SLA credits.",
+  "topics": [
+    "platform outage",
+    "event ingestion pipeline",
+    "ot/scada monitoring",
+    "data backfill",
+    "sla credits",
+    "compliance"
+  ],
+  "action_items": [
+    "Elena Vasquez: Escalate the case to Sev 1 and send a written status update to Mark within two hours, followed by a direct callback",
+    "Elena Vasquez: Flag the case to Mark's account manager to proactively discuss SLA credits",
+    "Sarah Chen: Ensure engineering has visibility into account RLL-4482 workspaces ridgeline-prod-detect and ridgeline-staging-detect, and explicitly raise the data backfill requirement in the internal escalation",
+    "Sarah Chen: Ensure a full written incident report with root cause, remediation steps, and recurrence prevention is delivered to Mark once the issue is resolved"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.1,
+  "key_moments": [
+    {
+      "time": 180.0,
+      "text": "Mark reveals that all three data centers across midwest and east coast are showing zero event data, describing it as a 'black hole' between his infrastructure and the platform.",
+      "type": "technical_issue",
+      "speaker": "Mark Ellison"
+    },
+    {
+      "time": 320.0,
+      "text": "Elena confirms the outage is a platform-level issue on Aegis's side, originating from late March 11th, absolving Mark of any configuration responsibility.",
+      "type": "positive_pivot",
+      "speaker": "Elena Vasquez"
+    },
+    {
+      "time": 490.0,
+      "text": "Mark stresses that his OT networks and SCADA systems have had zero threat monitoring visibility for nearly 24 hours and that his team has been manually reviewing logs all morning, calling it unacceptable.",
+      "type": "concern",
+      "speaker": "Mark Ellison"
+    },
+    {
+      "time": 820.0,
+      "text": "Mark explicitly raises the need for SLA credits and states that depending on the incident report, a broader conversation about platform reliability will be necessary.",
+      "type": "churn_signal",
+      "speaker": "Mark Ellison"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Join",
+      "time_seconds": 9.0,
+      "timestamp_ms": 1773397809000
+    },
+    {
+      "participant_name": "Mark Ellison",
+      "event_type": "Join",
+      "time_seconds": 27.0,
+      "timestamp_ms": 1773397827000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 45.0,
+      "timestamp_ms": 1773397845000
+    },
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Leave",
+      "time_seconds": 1031.0,
+      "timestamp_ms": 1773398831000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 1044.0,
+      "timestamp_ms": 1773398844000
+    },
+    {
+      "participant_name": "Mark Ellison",
+      "event_type": "Leave",
+      "time_seconds": 1054.0,
+      "timestamp_ms": 1773398854000
+    }
+  ],
+  "stats": {
+    "turn_count": 42,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Elena Vasquez": 12,
+      "Sarah Chen": 12,
+      "Mark Ellison": 18
+    },
+    "speaker_total_seconds": {
+      "Elena Vasquez": 147.5,
+      "Sarah Chen": 164.3,
+      "Mark Ellison": 258.3
+    }
+  }
+}

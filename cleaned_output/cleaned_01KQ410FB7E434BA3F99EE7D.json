@@ -1,0 +1,470 @@
+{
+  "meeting_id": "01KQ410FB7E434BA3F99EE7D",
+  "title": "Aegis / Axiom Labs - Multi-Year Renewal",
+  "organizer_email": "aisha.johnson@aegiscloud.com",
+  "host_email": "aisha.johnson@aegiscloud.com",
+  "start_time": "2026-04-17T09:45:00.000Z",
+  "end_time": "2026-04-17T10:33:48.000Z",
+  "duration_minutes": 48.8,
+  "participants": [
+    {
+      "email": "aisha.johnson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "r.caldwell@axiomlabs.dev",
+      "domain": "axiomlabs.dev",
+      "role_hint": "external"
+    },
+    {
+      "email": "m.joshi@axiomlabs.dev",
+      "domain": "axiomlabs.dev",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "aisha.johnson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "r.caldwell@axiomlabs.dev",
+      "domain": "axiomlabs.dev",
+      "role_hint": "external"
+    },
+    {
+      "email": "m.joshi@axiomlabs.dev",
+      "domain": "axiomlabs.dev",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Aisha Johnson",
+    "1": "Ryan Caldwell",
+    "2": "Mina Joshi"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 4.3,
+      "end_time": 11.4,
+      "duration": 7.1000000000000005,
+      "text": "Alright, I think we're all here - Ryan, Mina, good to see you both, well, hear you both I guess."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 12.1,
+      "end_time": 17.1,
+      "duration": 5.000000000000002,
+      "text": "Ha, yeah, good to hear you too Aisha, thanks for setting this up."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 17.7,
+      "end_time": 27.9,
+      "duration": 10.2,
+      "text": "Of course, of course. Mina, how are you doing? I feel like the last time we actually talked was, what, the Comply v2 early access sessions back in February?"
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 29.3,
+      "end_time": 39.5,
+      "duration": 10.2,
+      "text": "Yeah, exactly, that was a fun one. I'm good though, we've been heads down on a pretty big infrastructure push but things are starting to settle a little bit."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 39.9,
+      "end_time": 60.9,
+      "duration": 21.0,
+      "text": "Good to hear. Okay so, the reason we're all here - obviously the renewal is coming up, I think you're looking at end of May for the contract anniversary, so I wanted to make sure we had plenty of runway to actually have a real conversation about it rather than just firing off a DocuSign at the last minute."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 62.3,
+      "end_time": 72.6,
+      "duration": 10.299999999999997,
+      "text": "Yeah, no, we appreciate that, and honestly our intention is very much to continue - I don't think there's any ambiguity there. We've been really happy with the platform overall."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 73.7,
+      "end_time": 88.3,
+      "duration": 14.599999999999994,
+      "text": "That's great to hear, and I don't want to just take that for granted either, like I genuinely want to understand what's been working and where there are gaps, because a multi-year commitment is significant and we want to earn it."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 89.1,
+      "end_time": 102.8,
+      "duration": 13.700000000000003,
+      "text": "I appreciate that framing actually. Um, I think the honest answer is - the platform has matured a lot since we first came on board, and Detect and Identity especially have become kind of foundational for us at this point."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 103.6,
+      "end_time": 116.1,
+      "duration": 12.5,
+      "text": "Yeah I'd second that on the Identity side, the SSO rollout we did in Q4 went really smoothly and the MFA enforcement policies have been... I mean, they've saved us a couple of headaches for sure."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 116.5,
+      "end_time": 131.2,
+      "duration": 14.699999999999989,
+      "text": "That's great to hear on Identity, we've put a lot of engineering investment there in the past two quarters so that's really validating. And Detect - I do want to address the elephant in the room, which is the March outage."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 131.9,
+      "end_time": 162.3,
+      "duration": 30.400000000000006,
+      "text": "Yeah, I was going to bring that up at some point so I'm glad you're leading with it. Look, I'm not going to sugarcoat it - six hours of no threat monitoring visibility is not okay. And I think we said that very clearly at the time. But I do want to give credit where it's due, the communication from your team during that incident was actually really good. Like the status page was updating every 20-30 minutes, we got a direct call from support, that mattered."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 163.7,
+      "end_time": 182.5,
+      "duration": 18.80000000000001,
+      "text": "Yeah, the comms were solid. And the post-incident report that came out like five days later - super detailed, it walked through the root cause, the single point of failure in the ingestion pipeline, and then what you were doing to fix it. That's the kind of transparency that actually builds trust, you know?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 183.9,
+      "end_time": 205.0,
+      "duration": 21.099999999999994,
+      "text": "I'm really glad that landed well, and I can tell you - I've seen the engineering changes firsthand, the redundant processing nodes are live, the circuit breaker pattern is in production, I was actually on a call with our infrastructure team last week and they walked me through the current architecture and it is meaningfully more resilient than it was before."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 206.0,
+      "end_time": 215.9,
+      "duration": 9.900000000000006,
+      "text": "Yeah, we've been watching the uptime since then and it's been clean, so... we're not holding a grudge. These things happen, it's how you respond that matters."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 216.8,
+      "end_time": 233.0,
+      "duration": 16.19999999999999,
+      "text": "Totally agree. Okay so let me shift gears a little - I want to talk about Comply v2 because we just launched GA on April 7th and I know Mina you were in some of the early access stuff. What's your take now that it's fully out?"
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 233.7,
+      "end_time": 246.6,
+      "duration": 12.900000000000006,
+      "text": "Honestly? It's kind of a game changer for us. The on-demand SOC 2 reporting alone - like, do you know how many hours we used to spend just pulling evidence together for audits? It was painful."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 248.1,
+      "end_time": 249.6,
+      "duration": 1.5,
+      "text": "I can imagine, yeah."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 250.3,
+      "end_time": 266.6,
+      "duration": 16.30000000000001,
+      "text": "And now it's just... you click a button essentially. The multi-framework support is really what sold us because we're dealing with SOC 2 obviously but also we have some customers that require HIPAA alignment and having that in one place rather than three different tools is huge."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 267.7,
+      "end_time": 274.1,
+      "duration": 6.400000000000034,
+      "text": "Are you also using the ISO 27001 reporting or is that one you haven't gotten to yet?"
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 275.0,
+      "end_time": 291.7,
+      "duration": 16.69999999999999,
+      "text": "We're looking at it, we haven't started an ISO certification process yet but it's on our roadmap for 2027 and honestly knowing that it's already built into the platform means we don't have to scramble later. That's, um, that's actually a bigger deal than it might sound."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 292.1,
+      "end_time": 306.8,
+      "duration": 14.699999999999989,
+      "text": "Yeah that's a really good point, and I'd love to set up a dedicated session with our compliance team to kind of do a readiness walkthrough for ISO when you're getting closer to that timeline - just so there are no surprises."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 308.2,
+      "end_time": 311.9,
+      "duration": 3.6999999999999886,
+      "text": "That would be fantastic, yeah let's put that on the list."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 313.0,
+      "end_time": 328.9,
+      "duration": 15.899999999999977,
+      "text": "Okay, perfect. So let's talk about the actual renewal structure. Right now you're on Protect, Detect, Comply, and Identity - all four modules. We're looking at a three-year proposal, and the numbers I'm going to share reflect a significant improvement over your current per-seat rates."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 330.4,
+      "end_time": 347.7,
+      "duration": 17.30000000000001,
+      "text": "Yeah, I saw the preview you sent over before this call and the pricing looks competitive. I did want to ask - we're expecting to grow our headcount by probably 40% over the next 18 months, is that factored in or are we going to be renegotiating seat counts constantly?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 348.9,
+      "end_time": 370.5,
+      "duration": 21.600000000000023,
+      "text": "Great question, and that's actually something I wanted to address directly. We can structure this as an elastic seat model where you have a committed baseline but you can flex up without triggering a full contract renegotiation, and we true-up annually. So you're not paying for seats you don't have yet, but you also have the headroom to grow without friction."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 372.0,
+      "end_time": 382.3,
+      "duration": 10.300000000000011,
+      "text": "Okay that's much better than what we had before, because I think last year we had to do like two mid-year amendments and that was annoying for everybody."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 383.3,
+      "end_time": 394.8,
+      "duration": 11.5,
+      "text": "Yeah, I heard about that from the account team and that's exactly the kind of thing we want to fix. Operational friction in the contract itself is a problem we can solve."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 395.7,
+      "end_time": 408.9,
+      "duration": 13.199999999999989,
+      "text": "Appreciate that. The other thing I wanted to raise - and this is more Mina's territory but I'll let her speak to it - is around API access and integrations. We've been doing a lot more custom tooling."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 409.9,
+      "end_time": 425.1,
+      "duration": 15.200000000000045,
+      "text": "Yeah so we've built some internal dashboards that pull from the Detect API and it's been working well but we hit some rate limits last quarter that were kind of annoying. Is there a tier or an add-on that gives us higher throughput there?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 426.2,
+      "end_time": 444.3,
+      "duration": 18.100000000000023,
+      "text": "Yes, absolutely. The enterprise API tier - which honestly I should have already flagged for you, that's on me - gives you significantly higher rate limits and also access to the real-time event streaming endpoint which I think would actually be more elegant for what you're building than polling the REST API."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 445.8,
+      "end_time": 456.1,
+      "duration": 10.300000000000011,
+      "text": "Oh, the streaming endpoint - I didn't know that existed. That would actually solve a completely different problem we've been having with latency in our internal alerting pipeline."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 457.1,
+      "end_time": 465.9,
+      "duration": 8.799999999999955,
+      "text": "Okay yeah, let's definitely get you set up with a technical deep dive on that after this call. I'll loop in one of our solutions engineers."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 466.3,
+      "end_time": 469.0,
+      "duration": 2.6999999999999886,
+      "text": "Yes please. Ryan, we should definitely pursue that."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 470.3,
+      "end_time": 487.6,
+      "duration": 17.30000000000001,
+      "text": "Agreed. Aisha, one thing I do want to put on the table - and I want to be clear this isn't a threat, it's just due diligence - we did get outreach from SentinelShield and VaultEdge this quarter. We're not actively shopping but I want to be transparent."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 488.5,
+      "end_time": 496.0,
+      "duration": 7.5,
+      "text": "I respect that, and I'd rather know than not know. Can I ask what they led with? Like what was the pitch?"
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 496.7,
+      "end_time": 517.8,
+      "duration": 21.099999999999966,
+      "text": "SentinelShield was mostly on price, and VaultEdge was making some noise about their compliance module. But honestly neither of them has the breadth of what Aegis is doing - the fact that Identity, Detect, Comply, and Protect are all in one platform with a single pane of glass is something we've come to really value. Fragmented tools are a nightmare."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 518.5,
+      "end_time": 528.6,
+      "duration": 10.100000000000023,
+      "text": "Yeah, and integration overhead is real - like we had a point solution for compliance before and the engineering time just to keep connectors working was not trivial."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 529.5,
+      "end_time": 546.0,
+      "duration": 16.5,
+      "text": "That's exactly right, and I think the platform consolidation story is only going to get stronger - we have some announcements coming in Q3 that I can't get into detail on yet but I think they're going to further differentiate us, especially in the detection space."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 547.3,
+      "end_time": 550.8,
+      "duration": 3.5,
+      "text": "Okay, color me intrigued. I'll hold you to that."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 552.3,
+      "end_time": 575.1,
+      "duration": 22.800000000000068,
+      "text": "Please do! Alright, so to kind of land the plane here - I'll send over the formal three-year proposal by end of next week, it'll have the elastic seat model baked in, the enterprise API tier included, and the pricing we discussed. I'll also include a proposed roadmap check-in cadence because for a three-year commitment I want us to be doing formal QBRs at minimum."
+    },
+    {
+      "speaker_name": "Mina Joshi",
+      "start_time": 575.9,
+      "end_time": 584.6,
+      "duration": 8.700000000000045,
+      "text": "That works for us. And the technical session on the streaming API, can we try to get that on the calendar for early next week?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 585.7,
+      "end_time": 594.8,
+      "duration": 9.099999999999909,
+      "text": "Absolutely, I'll send a scheduling link today. And Ryan, is there anyone else on your side who should be looped into the renewal review? Legal, procurement?"
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 595.7,
+      "end_time": 609.3,
+      "duration": 13.599999999999909,
+      "text": "Yeah, I'll need to loop in our VP of Finance for the final sign-off on a multi-year, and our legal team will want a pass at the contract language, but that's pretty routine. I don't anticipate any major issues."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 609.7,
+      "end_time": 623.4,
+      "duration": 13.699999999999932,
+      "text": "Perfect, that's totally expected. Just let me know who to include on the proposal email and I'll make sure everyone's got what they need. This has been a really good conversation, I feel like we're in a great place."
+    },
+    {
+      "speaker_name": "Ryan Caldwell",
+      "start_time": 624.8,
+      "end_time": 630.5,
+      "duration": 5.7000000000000455,
+      "text": "Same. Appreciate you always being straight with us Aisha, it makes this whole process a lot easier."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 632.0,
+      "end_time": 637.9,
+      "duration": 5.899999999999977,
+      "text": "That means a lot, genuinely. Okay, I'll get those next steps moving today. Talk soon, everyone!"
+    }
+  ],
+  "transcript_text": "Aisha Johnson: Alright, I think we're all here - Ryan, Mina, good to see you both, well, hear you both I guess.\nRyan Caldwell: Ha, yeah, good to hear you too Aisha, thanks for setting this up.\nAisha Johnson: Of course, of course. Mina, how are you doing? I feel like the last time we actually talked was, what, the Comply v2 early access sessions back in February?\nMina Joshi: Yeah, exactly, that was a fun one. I'm good though, we've been heads down on a pretty big infrastructure push but things are starting to settle a little bit.\nAisha Johnson: Good to hear. Okay so, the reason we're all here - obviously the renewal is coming up, I think you're looking at end of May for the contract anniversary, so I wanted to make sure we had plenty of runway to actually have a real conversation about it rather than just firing off a DocuSign at the last minute.\nRyan Caldwell: Yeah, no, we appreciate that, and honestly our intention is very much to continue - I don't think there's any ambiguity there. We've been really happy with the platform overall.\nAisha Johnson: That's great to hear, and I don't want to just take that for granted either, like I genuinely want to understand what's been working and where there are gaps, because a multi-year commitment is significant and we want to earn it.\nRyan Caldwell: I appreciate that framing actually. Um, I think the honest answer is - the platform has matured a lot since we first came on board, and Detect and Identity especially have become kind of foundational for us at this point.\nMina Joshi: Yeah I'd second that on the Identity side, the SSO rollout we did in Q4 went really smoothly and the MFA enforcement policies have been... I mean, they've saved us a couple of headaches for sure.\nAisha Johnson: That's great to hear on Identity, we've put a lot of engineering investment there in the past two quarters so that's really validating. And Detect - I do want to address the elephant in the room, which is the March outage.\nRyan Caldwell: Yeah, I was going to bring that up at some point so I'm glad you're leading with it.\nRyan Caldwell: Look, I'm not going to sugarcoat it - six hours of no threat monitoring visibility is not okay. And I think we said that very clearly at the time. But I do want to give credit where it's due, the communication from your team during that incident was actually really good. Like the status page was updating every 20-30 minutes, we got a direct call from support, that mattered.\nMina Joshi: Yeah, the comms were solid. And the post-incident report that came out like five days later - super detailed, it walked through the root cause, the single point of failure in the ingestion pipeline, and then what you were doing to fix it. That's the kind of transparency that actually builds trust, you know?\nAisha Johnson: I'm really glad that landed well, and I can tell you - I've seen the engineering changes firsthand, the redundant processing nodes are live, the circuit breaker pattern is in production, I was actually on a call with our infrastructure team last week and they walked me through the current architecture and it is meaningfully more resilient than it was before.\nRyan Caldwell: Yeah, we've been watching the uptime since then and it's been clean, so... we're not holding a grudge. These things happen, it's how you respond that matters.\nAisha Johnson: Totally agree. Okay so let me shift gears a little - I want to talk about Comply v2 because we just launched GA on April 7th and I know Mina you were in some of the early access stuff. What's your take now that it's fully out?\nMina Joshi: Honestly? It's kind of a game changer for us. The on-demand SOC 2 reporting alone - like, do you know how many hours we used to spend just pulling evidence together for audits? It was painful.\nAisha Johnson: I can imagine, yeah.\nMina Joshi: And now it's just... you click a button essentially. The multi-framework support is really what sold us because we're dealing with SOC 2 obviously but also we have some customers that require HIPAA alignment and having that in one place rather than three different tools is huge.\nAisha Johnson: Are you also using the ISO 27001 reporting or is that one you haven't gotten to yet?\nRyan Caldwell: We're looking at it, we haven't started an ISO certification process yet but it's on our roadmap for 2027 and honestly knowing that it's already built into the platform means we don't have to scramble later. That's, um, that's actually a bigger deal than it might sound.\nAisha Johnson: Yeah that's a really good point, and I'd love to set up a dedicated session with our compliance team to kind of do a readiness walkthrough for ISO when you're getting closer to that timeline - just so there are no surprises.\nRyan Caldwell: That would be fantastic, yeah let's put that on the list.\nAisha Johnson: Okay, perfect. So let's talk about the actual renewal structure. Right now you're on Protect, Detect, Comply, and Identity - all four modules. We're looking at a three-year proposal, and the numbers I'm going to share reflect a significant improvement over your current per-seat rates.\nRyan Caldwell: Yeah, I saw the preview you sent over before this call and the pricing looks competitive. I did want to ask - we're expecting to grow our headcount by probably 40% over the next 18 months, is that factored in or are we going to be renegotiating seat counts constantly?\nAisha Johnson: Great question, and that's actually something I wanted to address directly. We can structure this as an elastic seat model where you have a committed baseline but you can flex up without triggering a full contract renegotiation, and we true-up annually. So you're not paying for seats you don't have yet, but you also have the headroom to grow without friction.\nMina Joshi: Okay that's much better than what we had before, because I think last year we had to do like two mid-year amendments and that was annoying for everybody.\nAisha Johnson: Yeah, I heard about that from the account team and that's exactly the kind of thing we want to fix. Operational friction in the contract itself is a problem we can solve.\nRyan Caldwell: Appreciate that. The other thing I wanted to raise - and this is more Mina's territory but I'll let her speak to it - is around API access and integrations. We've been doing a lot more custom tooling.\nMina Joshi: Yeah so we've built some internal dashboards that pull from the Detect API and it's been working well but we hit some rate limits last quarter that were kind of annoying. Is there a tier or an add-on that gives us higher throughput there?\nAisha Johnson: Yes, absolutely. The enterprise API tier - which honestly I should have already flagged for you, that's on me - gives you significantly higher rate limits and also access to the real-time event streaming endpoint which I think would actually be more elegant for what you're building than polling the REST API.\nMina Joshi: Oh, the streaming endpoint - I didn't know that existed. That would actually solve a completely different problem we've been having with latency in our internal alerting pipeline.\nAisha Johnson: Okay yeah, let's definitely get you set up with a technical deep dive on that after this call. I'll loop in one of our solutions engineers.\nMina Joshi: Yes please. Ryan, we should definitely pursue that.\nRyan Caldwell: Agreed. Aisha, one thing I do want to put on the table - and I want to be clear this isn't a threat, it's just due diligence - we did get outreach from SentinelShield and VaultEdge this quarter. We're not actively shopping but I want to be transparent.\nAisha Johnson: I respect that, and I'd rather know than not know. Can I ask what they led with? Like what was the pitch?\nRyan Caldwell: SentinelShield was mostly on price, and VaultEdge was making some noise about their compliance module. But honestly neither of them has the breadth of what Aegis is doing - the fact that Identity, Detect, Comply, and Protect are all in one platform with a single pane of glass is something we've come to really value. Fragmented tools are a nightmare.\nMina Joshi: Yeah, and integration overhead is real - like we had a point solution for compliance before and the engineering time just to keep connectors working was not trivial.\nAisha Johnson: That's exactly right, and I think the platform consolidation story is only going to get stronger - we have some announcements coming in Q3 that I can't get into detail on yet but I think they're going to further differentiate us, especially in the detection space.\nRyan Caldwell: Okay, color me intrigued. I'll hold you to that.\nAisha Johnson: Please do! Alright, so to kind of land the plane here - I'll send over the formal three-year proposal by end of next week, it'll have the elastic seat model baked in, the enterprise API tier included, and the pricing we discussed. I'll also include a proposed roadmap check-in cadence because for a three-year commitment I want us to be doing formal QBRs at minimum.\nMina Joshi: That works for us. And the technical session on the streaming API, can we try to get that on the calendar for early next week?\nAisha Johnson: Absolutely, I'll send a scheduling link today. And Ryan, is there anyone else on your side who should be looped into the renewal review? Legal, procurement?\nRyan Caldwell: Yeah, I'll need to loop in our VP of Finance for the final sign-off on a multi-year, and our legal team will want a pass at the contract language, but that's pretty routine. I don't anticipate any major issues.\nAisha Johnson: Perfect, that's totally expected. Just let me know who to include on the proposal email and I'll make sure everyone's got what they need. This has been a really good conversation, I feel like we're in a great place.\nRyan Caldwell: Same. Appreciate you always being straight with us Aisha, it makes this whole process a lot easier.\nAisha Johnson: That means a lot, genuinely. Okay, I'll get those next steps moving today. Talk soon, everyone!",
+  "summary": "Aisha Johnson (CSM) held a renewal planning call with Ryan Caldwell and Mina Joshi ahead of their end-of-May contract anniversary. The customer expressed strong overall satisfaction with the platform, particularly with the Identity and Comply v2 modules, while acknowledging the March Detect outage was serious but handled well. Aisha presented a three-year renewal proposal featuring an elastic seat model and enterprise API tier, and the conversation surfaced a previously unknown streaming endpoint that could solve a latency issue in the customer's internal alerting pipeline. The call concluded positively with clear next steps including a formal proposal, a technical deep dive, and looping in finance and legal for final approval.",
+  "topics": [
+    "renewal",
+    "contract negotiation",
+    "api rate limits",
+    "compliance reporting",
+    "platform outage",
+    "competitive displacement"
+  ],
+  "action_items": [
+    "Aisha Johnson: Send formal three-year proposal with elastic seat model, enterprise API tier, and QBR cadence by end of next week",
+    "Aisha Johnson: Send scheduling link today for technical deep dive on streaming API endpoint with a solutions engineer for early next week",
+    "Aisha Johnson: Set up a dedicated ISO 27001 readiness walkthrough session with the compliance team closer to the customer's 2027 certification timeline",
+    "Ryan Caldwell: Loop in VP of Finance and legal team on the renewal proposal for final sign-off and contract language review"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 4.2,
+  "key_moments": [
+    {
+      "time": 390.0,
+      "text": "Ryan acknowledges the March 6-hour Detect outage was unacceptable but praises the communication and transparency during and after the incident",
+      "type": "positive_pivot",
+      "speaker": "Ryan Caldwell"
+    },
+    {
+      "time": 780.0,
+      "text": "Mina describes Comply v2 on-demand SOC 2 reporting and multi-framework support as a game changer, replacing multiple tools",
+      "type": "praise",
+      "speaker": "Mina Joshi"
+    },
+    {
+      "time": 1110.0,
+      "text": "Mina flags API rate limit issues with the Detect integration, revealing a feature gap that has been causing friction in their internal alerting pipeline",
+      "type": "feature_gap",
+      "speaker": "Mina Joshi"
+    },
+    {
+      "time": 1260.0,
+      "text": "Ryan discloses inbound outreach from competitors SentinelShield and VaultEdge but affirms the platform consolidation value proposition keeps Aegis ahead",
+      "type": "churn_signal",
+      "speaker": "Ryan Caldwell"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Mina Joshi",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1776419106000
+    },
+    {
+      "participant_name": "Aisha Johnson",
+      "event_type": "Join",
+      "time_seconds": 9.0,
+      "timestamp_ms": 1776419109000
+    },
+    {
+      "participant_name": "Ryan Caldwell",
+      "event_type": "Join",
+      "time_seconds": 54.0,
+      "timestamp_ms": 1776419154000
+    },
+    {
+      "participant_name": "Aisha Johnson",
+      "event_type": "Leave",
+      "time_seconds": 2919.0,
+      "timestamp_ms": 1776422019000
+    },
+    {
+      "participant_name": "Ryan Caldwell",
+      "event_type": "Leave",
+      "time_seconds": 2916.0,
+      "timestamp_ms": 1776422016000
+    },
+    {
+      "participant_name": "Mina Joshi",
+      "event_type": "Leave",
+      "time_seconds": 2923.0,
+      "timestamp_ms": 1776422023000
+    }
+  ],
+  "stats": {
+    "turn_count": 47,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Aisha Johnson": 21,
+      "Ryan Caldwell": 15,
+      "Mina Joshi": 11
+    },
+    "speaker_total_seconds": {
+      "Aisha Johnson": 278.9,
+      "Ryan Caldwell": 180.9,
+      "Mina Joshi": 128.0
+    }
+  }
+}

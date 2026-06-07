@@ -1,0 +1,641 @@
+{
+  "meeting_id": "01KQ8D9A06510DD623EFB1A6",
+  "title": "Aegis / Pinnacle Insurance - Detect Roadmap Review",
+  "organizer_email": "rachel.torres@aegiscloud.com",
+  "host_email": "rachel.torres@aegiscloud.com",
+  "start_time": "2026-04-16T13:00:00.000Z",
+  "end_time": "2026-04-16T13:47:54.000Z",
+  "duration_minutes": 47.9,
+  "participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "s.keating@pinnacleins.com",
+      "domain": "pinnacleins.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "s.keating@pinnacleins.com",
+      "domain": "pinnacleins.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Rachel Torres",
+    "1": "Sandra Keating"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 3.7,
+      "end_time": 10.4,
+      "duration": 6.7,
+      "text": "Hi Sandra, thanks for making time this afternoon - I know Tuesdays tend to get a little chaotic."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 11.0,
+      "end_time": 17.5,
+      "duration": 6.5,
+      "text": "Yeah, no kidding, I had three back-to-backs before this so I appreciate you being flexible on the time."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 17.9,
+      "end_time": 32.1,
+      "duration": 14.200000000000003,
+      "text": "Of course, absolutely - okay so, I've got the agenda pulled up, we wanted to walk through some of the Detect roadmap items, and I know you had some specific feature requests you wanted to put on the table today."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 32.8,
+      "end_time": 36.3,
+      "duration": 3.5,
+      "text": "Right, yeah, that's the main thing I want to get into."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 37.4,
+      "end_time": 47.3,
+      "duration": 9.899999999999999,
+      "text": "Before we jump in - how are things going on your end generally, like from a security posture standpoint, anything major come up since we last spoke?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 48.3,
+      "end_time": 62.9,
+      "duration": 14.600000000000001,
+      "text": "I mean it's been a pretty busy quarter, we had an internal audit wrap up last week, and honestly the compliance side of things has been eating a lot of our bandwidth, but we can get to that in a sec."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 64.4,
+      "end_time": 74.7,
+      "duration": 10.299999999999997,
+      "text": "Sure, sure, yeah we can definitely touch on that - I know the Comply v2 launch just happened last week actually, so there might be some relevant stuff there."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 75.7,
+      "end_time": 86.3,
+      "duration": 10.599999999999994,
+      "text": "Yeah I saw that announcement, I want to circle back to that, but let's do Detect first because that's kind of the more pressing thing for my team right now."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 87.0,
+      "end_time": 101.2,
+      "duration": 14.200000000000003,
+      "text": "Totally, let's do it - so do you want to just kick us off with what you're seeing as the gaps, or would it be helpful if I first walked through what's on the roadmap for the next two quarters?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 102.5,
+      "end_time": 109.6,
+      "duration": 7.099999999999994,
+      "text": "Let me start with the gaps because I think it'll be useful context for whatever you're about to tell me."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 110.7,
+      "end_time": 112.2,
+      "duration": 1.5,
+      "text": "Perfect, go ahead."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 113.1,
+      "end_time": 123.3,
+      "duration": 10.200000000000003,
+      "text": "So the primary thing - and I've been saying this for a couple of quarters now - is that we really need more granular alerting thresholds by entity type."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 124.6,
+      "end_time": 130.4,
+      "duration": 5.800000000000011,
+      "text": "Right, can you walk me through specifically what you mean by entity type in your context?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 131.8,
+      "end_time": 147.1,
+      "duration": 15.299999999999983,
+      "text": "Sure, so - in the insurance world we're dealing with a lot of different categories of users and systems, right, so you've got your claims processing systems, your underwriting platforms, your customer-facing portals, and the risk profile for each of those is very different."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 147.8,
+      "end_time": 149.3,
+      "duration": 1.5,
+      "text": "Mm-hmm."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 150.4,
+      "end_time": 162.1,
+      "duration": 11.699999999999989,
+      "text": "But right now in Detect, when we're setting alert thresholds, it's basically a one-size-fits-all situation, and that creates a ton of noise on the low-risk endpoints and then potentially under-alerts on the high-value systems."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 163.0,
+      "end_time": 175.4,
+      "duration": 12.400000000000006,
+      "text": "Yeah that's - that's a fair point and actually that lines up with feedback we've been getting from a few other financial services customers as well, so it's definitely something that's been getting traction internally."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 176.2,
+      "end_time": 188.6,
+      "duration": 12.400000000000006,
+      "text": "Good, because it should be, honestly - the alert fatigue is real, my SOC team is dealing with a lot of false positives and it affects their ability to respond to the things that actually matter."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 189.8,
+      "end_time": 200.8,
+      "duration": 11.0,
+      "text": "Understood, and I don't want to get too far ahead without checking - are we talking about thresholds on the behavioral side, like anomaly detection thresholds, or also on the signature-based rules?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 201.6,
+      "end_time": 214.2,
+      "duration": 12.599999999999994,
+      "text": "Both, but honestly the behavioral side is where it's most painful because the baselines are being calculated across everything and they just don't reflect the actual behavior patterns of, say, a claims adjuster versus a network admin."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 215.5,
+      "end_time": 224.4,
+      "duration": 8.900000000000006,
+      "text": "Got it, okay - so what you'd really want is the ability to define entity groups and then have separate baseline models trained per group, essentially."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 225.6,
+      "end_time": 234.8,
+      "duration": 9.200000000000017,
+      "text": "Exactly, yes, that's exactly it - and ideally you'd be able to map those groups to your own org hierarchy, not just some generic taxonomy."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 235.9,
+      "end_time": 258.0,
+      "duration": 22.099999999999994,
+      "text": "Okay, I'm noting all of this down - and I do want to be upfront with you, Sandra, that the entity grouping with custom baselines is something our product team has been scoping, it's not GA yet, it was targeted for Q3 in the roadmap I have, but I want to get you connected with our product team directly so they have this context."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 259.2,
+      "end_time": 261.3,
+      "duration": 2.1000000000000227,
+      "text": "Q3, so like July-September timeframe?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 262.6,
+      "end_time": 270.5,
+      "duration": 7.899999999999977,
+      "text": "That's the current target, yeah - but I want to be careful not to commit to that because roadmaps shift, as you know."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 271.7,
+      "end_time": 278.0,
+      "duration": 6.300000000000011,
+      "text": "Yeah, I appreciate the honesty, I'd rather know the real situation than get a date that slips."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 278.7,
+      "end_time": 283.8,
+      "duration": 5.100000000000023,
+      "text": "Right, exactly - okay so that's the first item, what else is on your list?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 284.8,
+      "end_time": 294.7,
+      "duration": 9.899999999999977,
+      "text": "The second thing, um, this is a little more sensitive to bring up but I think it needs to be on the table - the outage in March."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 295.0,
+      "end_time": 307.1,
+      "duration": 12.100000000000023,
+      "text": "Yeah, I was going to bring that up too - I know we sent the incident report and the RCA but I wanted to make sure you had a chance to ask questions directly."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 307.5,
+      "end_time": 326.4,
+      "duration": 18.899999999999977,
+      "text": "So we were dark for, what, six hours - and look, I understand things happen, infrastructure fails, I've been in this industry long enough to know that, but for us specifically, that's six hours where we had no visibility into threats across our environment, and given our regulatory obligations that's not a small thing."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 326.7,
+      "end_time": 342.0,
+      "duration": 15.300000000000011,
+      "text": "No, absolutely not, and I want to acknowledge that directly - that outage was a significant failure on our part, it was a cascading failure in the event ingestion pipeline, single point of failure that we should have architected around, and we did not."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 342.8,
+      "end_time": 344.8,
+      "duration": 2.0,
+      "text": "Right, that's what the RCA said."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 346.2,
+      "end_time": 359.1,
+      "duration": 12.900000000000034,
+      "text": "And the fix - we've implemented redundant processing nodes and a circuit breaker pattern so that if one node in the pipeline degrades, it doesn't take everything down with it, and that's been live since mid-March."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 360.2,
+      "end_time": 375.0,
+      "duration": 14.800000000000011,
+      "text": "Okay, so my follow-up question on that is - and this goes to the feature request angle - is there any way for customers to have visibility into the health of the Detect pipeline itself, like a status indicator within the product?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 376.5,
+      "end_time": 390.3,
+      "duration": 13.800000000000011,
+      "text": "That's actually a really good one and it's something I've heard from a couple of other accounts too - right now the status page is external and it's sort of - it's not surfaced inside the product itself."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 390.9,
+      "end_time": 403.8,
+      "duration": 12.900000000000034,
+      "text": "Yeah because we only found out about the outage because someone on my team noticed the alert volume had dropped to zero and then went and checked the status page - that's not a great discovery mechanism."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 404.6,
+      "end_time": 418.7,
+      "duration": 14.099999999999966,
+      "text": "No, I completely agree, and that's - I'll be honest, that's a gap in the product experience, and I'm going to log that as a formal feature request, in-product pipeline health status with proactive alerting if ingestion drops below a threshold."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 419.0,
+      "end_time": 431.0,
+      "duration": 12.0,
+      "text": "Yeah, even just like a banner or an indicator in the UI that says hey, we're experiencing reduced capacity, something - anything - would have saved my team a lot of confusion that morning."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 431.7,
+      "end_time": 443.3,
+      "duration": 11.600000000000023,
+      "text": "Understood, and I think that's a very reasonable ask - I'm going to make sure that goes to the right product team with your name on it so they have the customer context."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 444.6,
+      "end_time": 446.1,
+      "duration": 1.5,
+      "text": "Appreciate that."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 446.8,
+      "end_time": 458.6,
+      "duration": 11.800000000000011,
+      "text": "Okay so let me also share a few things that are on the Detect roadmap that I think are relevant to what you're describing - there are two items I want to highlight specifically."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 459.5,
+      "end_time": 461.0,
+      "duration": 1.5,
+      "text": "Sure, go ahead."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 462.4,
+      "end_time": 477.1,
+      "duration": 14.700000000000045,
+      "text": "First one is expanded SIEM integration - we're adding native connectors for a couple of the major SIEM platforms in Q2, which I know you're running LogVault, so that should reduce the time from event to alert in your existing workflow."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 478.4,
+      "end_time": 488.2,
+      "duration": 9.800000000000011,
+      "text": "That would actually be helpful, yeah - right now the LogVault integration is a little manual, we're doing some custom scripting to get the data in there."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 488.7,
+      "end_time": 499.2,
+      "duration": 10.5,
+      "text": "Yeah so that should get a lot cleaner - I'll send you the details on that after this call, it's a Q2 item so should be coming up relatively soon."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 500.5,
+      "end_time": 502.6,
+      "duration": 2.1000000000000227,
+      "text": "Okay, and the second thing?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 503.0,
+      "end_time": 518.0,
+      "duration": 15.0,
+      "text": "Second one is - we're building out a threat intelligence correlation layer, so essentially Detect will be able to cross-reference events against external threat intel feeds in near real-time, which should improve the signal-to-noise ratio on the alerts that are actually meaningful."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 518.5,
+      "end_time": 521.4,
+      "duration": 2.8999999999999773,
+      "text": "That's interesting - what feeds are you pulling from?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 522.6,
+      "end_time": 536.7,
+      "duration": 14.100000000000023,
+      "text": "The initial launch is going to include a few of the major ones - I don't want to get into specifics that I haven't confirmed with the product team, so let me get you the accurate list rather than guess."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 537.6,
+      "end_time": 547.2,
+      "duration": 9.600000000000023,
+      "text": "Fair enough, yeah, please do send that over - the feeds matter a lot, some of them are better for financial services specific threat actors than others."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 548.3,
+      "end_time": 556.8,
+      "duration": 8.5,
+      "text": "Absolutely, I'll include that in the follow-up - and actually, is there a specific feed you're already using or want to see prioritized?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 558.2,
+      "end_time": 565.7,
+      "duration": 7.5,
+      "text": "We're subscribed to FS-ISAC feeds and I'd want to see that included, that's probably the most relevant for our threat landscape."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 566.6,
+      "end_time": 576.2,
+      "duration": 9.600000000000023,
+      "text": "FS-ISAC, got it, I'm writing that down - that's a very reasonable ask for a financial services customer and I'll flag that specifically to the product team."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 576.8,
+      "end_time": 583.4,
+      "duration": 6.600000000000023,
+      "text": "Yeah I mean that one feels like a no-brainer for any insurance or banking customer you're working with."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 584.3,
+      "end_time": 592.7,
+      "duration": 8.400000000000091,
+      "text": "Agreed - okay, you mentioned the compliance audit earlier, do you want to spend a few minutes on Comply before we wrap up?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 593.3,
+      "end_time": 604.1,
+      "duration": 10.800000000000068,
+      "text": "Yeah just quickly - we're coming up on a SOC 2 Type II renewal and honestly the reporting process last time was pretty painful, lots of manual exports and spreadsheet work."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 604.7,
+      "end_time": 621.1,
+      "duration": 16.399999999999977,
+      "text": "So this is actually really timely because Comply v2 launched last week - April 7 - and one of the headline features is on-demand SOC 2 reporting, so you can generate the report without the manual export process, it pulls directly from the data in the platform."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 622.0,
+      "end_time": 628.7,
+      "duration": 6.7000000000000455,
+      "text": "Okay, that's - yeah that could actually save us a lot of pain, when can we see that in action?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 630.1,
+      "end_time": 641.0,
+      "duration": 10.899999999999977,
+      "text": "I can set up a demo for your team, I'm thinking we loop in your compliance lead too - would that be the right person to have in the room?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 642.3,
+      "end_time": 649.7,
+      "duration": 7.400000000000091,
+      "text": "Yeah, definitely bring in Marcus, he's the one who's actually doing the evidence gathering so he'd want to see the workflow."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 651.0,
+      "end_time": 660.5,
+      "duration": 9.5,
+      "text": "Perfect, I'll reach out to coordinate schedules - okay let me just do a quick recap of the action items before we lose track of everything."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 661.3,
+      "end_time": 662.8,
+      "duration": 1.5,
+      "text": "Yeah please."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 664.0,
+      "end_time": 673.4,
+      "duration": 9.399999999999977,
+      "text": "So from my side - I'm logging two formal feature requests: entity grouping with custom behavioral baselines, and in-product pipeline health status with proactive degradation alerts."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 673.9,
+      "end_time": 675.4,
+      "duration": 1.5,
+      "text": "Correct, yes."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 676.2,
+      "end_time": 687.5,
+      "duration": 11.299999999999955,
+      "text": "I'm also going to send you the confirmed list of threat intel feeds for the correlation layer, including whether FS-ISAC is on the roadmap, and the details on the LogVault native connector timeline."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 688.5,
+      "end_time": 690.1,
+      "duration": 1.6000000000000227,
+      "text": "That all sounds right."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 690.6,
+      "end_time": 699.5,
+      "duration": 8.899999999999977,
+      "text": "And then I'll set up the Comply v2 demo with you and Marcus - I'm thinking we can probably do that within the next two weeks?"
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 700.1,
+      "end_time": 708.8,
+      "duration": 8.699999999999932,
+      "text": "Two weeks works, yeah - try to avoid the last week of April if you can, I think we've got some internal stuff happening."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 709.6,
+      "end_time": 715.3,
+      "duration": 5.699999999999932,
+      "text": "No problem, I'll aim for the week of the 20th - I'll send a calendar invite."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 715.8,
+      "end_time": 726.0,
+      "duration": 10.200000000000045,
+      "text": "Perfect, that works - and Rachel, I do appreciate you actually listening on the feature requests, sometimes these calls feel like they go into a black hole so."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 726.9,
+      "end_time": 739.9,
+      "duration": 13.0,
+      "text": "I hear you, and I want to make sure that doesn't happen here - I'll keep you posted on what traction these get with the product team, even if the answer is not yet, I'll tell you."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 741.0,
+      "end_time": 747.8,
+      "duration": 6.7999999999999545,
+      "text": "That's all I ask - okay I've got a hard stop in about two minutes so let's call it there."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 748.1,
+      "end_time": 753.6,
+      "duration": 5.5,
+      "text": "Sounds good - thanks Sandra, I'll have everything in your inbox by end of week."
+    },
+    {
+      "speaker_name": "Sandra Keating",
+      "start_time": 754.1,
+      "end_time": 755.6,
+      "duration": 1.5,
+      "text": "Great, talk soon."
+    }
+  ],
+  "transcript_text": "Rachel Torres: Hi Sandra, thanks for making time this afternoon - I know Tuesdays tend to get a little chaotic.\nSandra Keating: Yeah, no kidding, I had three back-to-backs before this so I appreciate you being flexible on the time.\nRachel Torres: Of course, absolutely - okay so, I've got the agenda pulled up, we wanted to walk through some of the Detect roadmap items, and I know you had some specific feature requests you wanted to put on the table today.\nSandra Keating: Right, yeah, that's the main thing I want to get into.\nRachel Torres: Before we jump in - how are things going on your end generally, like from a security posture standpoint, anything major come up since we last spoke?\nSandra Keating: I mean it's been a pretty busy quarter, we had an internal audit wrap up last week, and honestly the compliance side of things has been eating a lot of our bandwidth, but we can get to that in a sec.\nRachel Torres: Sure, sure, yeah we can definitely touch on that - I know the Comply v2 launch just happened last week actually, so there might be some relevant stuff there.\nSandra Keating: Yeah I saw that announcement, I want to circle back to that, but let's do Detect first because that's kind of the more pressing thing for my team right now.\nRachel Torres: Totally, let's do it - so do you want to just kick us off with what you're seeing as the gaps, or would it be helpful if I first walked through what's on the roadmap for the next two quarters?\nSandra Keating: Let me start with the gaps because I think it'll be useful context for whatever you're about to tell me.\nRachel Torres: Perfect, go ahead.\nSandra Keating: So the primary thing - and I've been saying this for a couple of quarters now - is that we really need more granular alerting thresholds by entity type.\nRachel Torres: Right, can you walk me through specifically what you mean by entity type in your context?\nSandra Keating: Sure, so - in the insurance world we're dealing with a lot of different categories of users and systems, right, so you've got your claims processing systems, your underwriting platforms, your customer-facing portals, and the risk profile for each of those is very different.\nRachel Torres: Mm-hmm.\nSandra Keating: But right now in Detect, when we're setting alert thresholds, it's basically a one-size-fits-all situation, and that creates a ton of noise on the low-risk endpoints and then potentially under-alerts on the high-value systems.\nRachel Torres: Yeah that's - that's a fair point and actually that lines up with feedback we've been getting from a few other financial services customers as well, so it's definitely something that's been getting traction internally.\nSandra Keating: Good, because it should be, honestly - the alert fatigue is real, my SOC team is dealing with a lot of false positives and it affects their ability to respond to the things that actually matter.\nRachel Torres: Understood, and I don't want to get too far ahead without checking - are we talking about thresholds on the behavioral side, like anomaly detection thresholds, or also on the signature-based rules?\nSandra Keating: Both, but honestly the behavioral side is where it's most painful because the baselines are being calculated across everything and they just don't reflect the actual behavior patterns of, say, a claims adjuster versus a network admin.\nRachel Torres: Got it, okay - so what you'd really want is the ability to define entity groups and then have separate baseline models trained per group, essentially.\nSandra Keating: Exactly, yes, that's exactly it - and ideally you'd be able to map those groups to your own org hierarchy, not just some generic taxonomy.\nRachel Torres: Okay, I'm noting all of this down - and I do want to be upfront with you, Sandra, that the entity grouping with custom baselines is something our product team has been scoping, it's not GA yet, it was targeted for Q3 in the roadmap I have, but I want to get you connected with our product team directly so they have this context.\nSandra Keating: Q3, so like July-September timeframe?\nRachel Torres: That's the current target, yeah - but I want to be careful not to commit to that because roadmaps shift, as you know.\nSandra Keating: Yeah, I appreciate the honesty, I'd rather know the real situation than get a date that slips.\nRachel Torres: Right, exactly - okay so that's the first item, what else is on your list?\nSandra Keating: The second thing, um, this is a little more sensitive to bring up but I think it needs to be on the table - the outage in March.\nRachel Torres: Yeah, I was going to bring that up too - I know we sent the incident report and the RCA but I wanted to make sure you had a chance to ask questions directly.\nSandra Keating: So we were dark for, what, six hours - and look, I understand things happen, infrastructure fails, I've been in this industry long enough to know that, but for us specifically, that's six hours where we had no visibility into threats across our environment, and given our regulatory obligations that's not a small thing.\nRachel Torres: No, absolutely not, and I want to acknowledge that directly - that outage was a significant failure on our part, it was a cascading failure in the event ingestion pipeline, single point of failure that we should have architected around, and we did not.\nSandra Keating: Right, that's what the RCA said.\nRachel Torres: And the fix - we've implemented redundant processing nodes and a circuit breaker pattern so that if one node in the pipeline degrades, it doesn't take everything down with it, and that's been live since mid-March.\nSandra Keating: Okay, so my follow-up question on that is - and this goes to the feature request angle - is there any way for customers to have visibility into the health of the Detect pipeline itself, like a status indicator within the product?\nRachel Torres: That's actually a really good one and it's something I've heard from a couple of other accounts too - right now the status page is external and it's sort of - it's not surfaced inside the product itself.\nSandra Keating: Yeah because we only found out about the outage because someone on my team noticed the alert volume had dropped to zero and then went and checked the status page - that's not a great discovery mechanism.\nRachel Torres: No, I completely agree, and that's - I'll be honest, that's a gap in the product experience, and I'm going to log that as a formal feature request, in-product pipeline health status with proactive alerting if ingestion drops below a threshold.\nSandra Keating: Yeah, even just like a banner or an indicator in the UI that says hey, we're experiencing reduced capacity, something - anything - would have saved my team a lot of confusion that morning.\nRachel Torres: Understood, and I think that's a very reasonable ask - I'm going to make sure that goes to the right product team with your name on it so they have the customer context.\nSandra Keating: Appreciate that.\nRachel Torres: Okay so let me also share a few things that are on the Detect roadmap that I think are relevant to what you're describing - there are two items I want to highlight specifically.\nSandra Keating: Sure, go ahead.\nRachel Torres: First one is expanded SIEM integration - we're adding native connectors for a couple of the major SIEM platforms in Q2, which I know you're running LogVault, so that should reduce the time from event to alert in your existing workflow.\nSandra Keating: That would actually be helpful, yeah - right now the LogVault integration is a little manual, we're doing some custom scripting to get the data in there.\nRachel Torres: Yeah so that should get a lot cleaner - I'll send you the details on that after this call, it's a Q2 item so should be coming up relatively soon.\nSandra Keating: Okay, and the second thing?\nRachel Torres: Second one is - we're building out a threat intelligence correlation layer, so essentially Detect will be able to cross-reference events against external threat intel feeds in near real-time, which should improve the signal-to-noise ratio on the alerts that are actually meaningful.\nSandra Keating: That's interesting - what feeds are you pulling from?\nRachel Torres: The initial launch is going to include a few of the major ones - I don't want to get into specifics that I haven't confirmed with the product team, so let me get you the accurate list rather than guess.\nSandra Keating: Fair enough, yeah, please do send that over - the feeds matter a lot, some of them are better for financial services specific threat actors than others.\nRachel Torres: Absolutely, I'll include that in the follow-up - and actually, is there a specific feed you're already using or want to see prioritized?\nSandra Keating: We're subscribed to FS-ISAC feeds and I'd want to see that included, that's probably the most relevant for our threat landscape.\nRachel Torres: FS-ISAC, got it, I'm writing that down - that's a very reasonable ask for a financial services customer and I'll flag that specifically to the product team.\nSandra Keating: Yeah I mean that one feels like a no-brainer for any insurance or banking customer you're working with.\nRachel Torres: Agreed - okay, you mentioned the compliance audit earlier, do you want to spend a few minutes on Comply before we wrap up?\nSandra Keating: Yeah just quickly - we're coming up on a SOC 2 Type II renewal and honestly the reporting process last time was pretty painful, lots of manual exports and spreadsheet work.\nRachel Torres: So this is actually really timely because Comply v2 launched last week - April 7 - and one of the headline features is on-demand SOC 2 reporting, so you can generate the report without the manual export process, it pulls directly from the data in the platform.\nSandra Keating: Okay, that's - yeah that could actually save us a lot of pain, when can we see that in action?\nRachel Torres: I can set up a demo for your team, I'm thinking we loop in your compliance lead too - would that be the right person to have in the room?\nSandra Keating: Yeah, definitely bring in Marcus, he's the one who's actually doing the evidence gathering so he'd want to see the workflow.\nRachel Torres: Perfect, I'll reach out to coordinate schedules - okay let me just do a quick recap of the action items before we lose track of everything.\nSandra Keating: Yeah please.\nRachel Torres: So from my side - I'm logging two formal feature requests: entity grouping with custom behavioral baselines, and in-product pipeline health status with proactive degradation alerts.\nSandra Keating: Correct, yes.\nRachel Torres: I'm also going to send you the confirmed list of threat intel feeds for the correlation layer, including whether FS-ISAC is on the roadmap, and the details on the LogVault native connector timeline.\nSandra Keating: That all sounds right.\nRachel Torres: And then I'll set up the Comply v2 demo with you and Marcus - I'm thinking we can probably do that within the next two weeks?\nSandra Keating: Two weeks works, yeah - try to avoid the last week of April if you can, I think we've got some internal stuff happening.\nRachel Torres: No problem, I'll aim for the week of the 20th - I'll send a calendar invite.\nSandra Keating: Perfect, that works - and Rachel, I do appreciate you actually listening on the feature requests, sometimes these calls feel like they go into a black hole so.\nRachel Torres: I hear you, and I want to make sure that doesn't happen here - I'll keep you posted on what traction these get with the product team, even if the answer is not yet, I'll tell you.\nSandra Keating: That's all I ask - okay I've got a hard stop in about two minutes so let's call it there.\nRachel Torres: Sounds good - thanks Sandra, I'll have everything in your inbox by end of week.\nSandra Keating: Great, talk soon.",
+  "summary": "Rachel Torres (CSM) met with Sandra Keating (customer in insurance/financial services) to discuss Detect product roadmap and feature requests. Sandra raised two primary feature gaps: granular alerting thresholds by entity type with custom behavioral baselines, and in-product pipeline health visibility following a six-hour outage in March. Rachel shared upcoming roadmap items including native LogVault integration and a threat intelligence correlation layer, and the call closed with a discussion of Comply v2's new SOC 2 on-demand reporting feature, with a demo planned for Sandra and her compliance lead Marcus.",
+  "topics": [
+    "feature requests",
+    "alert fatigue",
+    "incident review",
+    "compliance reporting",
+    "product roadmap",
+    "siem integration"
+  ],
+  "action_items": [
+    "Rachel Torres: Log formal feature requests for entity grouping with custom behavioral baselines and in-product pipeline health status with proactive degradation alerts",
+    "Rachel Torres: Send Sandra confirmed threat intel feed list for correlation layer (including FS-ISAC status) and LogVault native connector timeline details",
+    "Rachel Torres: Schedule Comply v2 demo with Sandra and Marcus during the week of April 20th",
+    "Rachel Torres: Connect Sandra with product team to provide direct context on entity grouping and custom baseline requirements"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.6,
+  "key_moments": [
+    {
+      "time": 312.0,
+      "text": "Sandra describes alert fatigue caused by one-size-fits-all thresholds, noting SOC team is overwhelmed by false positives and unable to focus on real threats",
+      "type": "concern",
+      "speaker": "Sandra Keating"
+    },
+    {
+      "time": 598.0,
+      "text": "Sandra raises the March six-hour outage and its regulatory implications, noting her team only discovered the issue because alert volume dropped to zero",
+      "type": "churn_signal",
+      "speaker": "Sandra Keating"
+    },
+    {
+      "time": 782.0,
+      "text": "Rachel acknowledges the lack of in-product pipeline health visibility as a product gap and commits to logging it as a formal feature request",
+      "type": "feature_gap",
+      "speaker": "Rachel Torres"
+    },
+    {
+      "time": 1124.0,
+      "text": "Sandra reacts positively to Comply v2's on-demand SOC 2 reporting, noting it could save significant pain ahead of their upcoming renewal",
+      "type": "positive_pivot",
+      "speaker": "Sandra Keating"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Join",
+      "time_seconds": 29.0,
+      "timestamp_ms": 1776344429000
+    },
+    {
+      "participant_name": "Sandra Keating",
+      "event_type": "Join",
+      "time_seconds": 35.0,
+      "timestamp_ms": 1776344435000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Leave",
+      "time_seconds": 2852.0,
+      "timestamp_ms": 1776347252000
+    },
+    {
+      "participant_name": "Sandra Keating",
+      "event_type": "Leave",
+      "time_seconds": 2848.0,
+      "timestamp_ms": 1776347248000
+    }
+  ],
+  "stats": {
+    "turn_count": 74,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Rachel Torres": 37,
+      "Sandra Keating": 37
+    },
+    "speaker_total_seconds": {
+      "Rachel Torres": 394.5,
+      "Sandra Keating": 290.8
+    }
+  }
+}

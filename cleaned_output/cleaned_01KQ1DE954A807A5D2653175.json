@@ -1,0 +1,444 @@
+{
+  "meeting_id": "01KQ1DE954A807A5D2653175",
+  "title": "Comply v2 - Launch Readiness Review",
+  "organizer_email": "megan.lawson@aegiscloud.com",
+  "host_email": "megan.lawson@aegiscloud.com",
+  "start_time": "2026-03-24T14:45:00.000Z",
+  "end_time": "2026-03-24T15:24:18.000Z",
+  "duration_minutes": 39.3,
+  "participants": [
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Megan Lawson",
+    "1": "Chris Lee"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 7.7,
+      "end_time": 9.2,
+      "duration": 1.4999999999999991,
+      "text": "Hey Chris, you on?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 10.3,
+      "end_time": 14.7,
+      "duration": 4.399999999999999,
+      "text": "Yeah, yeah I'm here. Sorry, just closing out a Slack thread real quick."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 15.1,
+      "end_time": 23.7,
+      "duration": 8.6,
+      "text": "No worries. So, okay, let's just dive in. We've got about - I have a hard stop at two so maybe forty minutes or so."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 24.7,
+      "end_time": 26.9,
+      "duration": 2.1999999999999993,
+      "text": "Yeah same, that works for me."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 28.0,
+      "end_time": 43.0,
+      "duration": 15.0,
+      "text": "Okay. So the main thing I wanted to go through today is just the launch readiness checklist for Comply v2. April 7th is, you know, it's coming up fast and I want to make sure we're actually aligned on where things stand."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 44.4,
+      "end_time": 54.3,
+      "duration": 9.899999999999999,
+      "text": "Yeah, agreed. I think overall we're in decent shape but there are a few things I want to flag, um, before we get too deep into the checklist stuff."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 54.9,
+      "end_time": 56.4,
+      "duration": 1.5,
+      "text": "Sure, go ahead."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 57.3,
+      "end_time": 71.4,
+      "duration": 14.100000000000009,
+      "text": "So the Detect outage last week - and I know that's kind of a separate workstream - but it pulled two of my engineers off Comply work for almost four days. Priya and Damon were both on the incident response rotation."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 71.8,
+      "end_time": 78.2,
+      "duration": 6.400000000000006,
+      "text": "Right, I was aware of that. How much did that actually set you back? Like in real terms."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 79.5,
+      "end_time": 99.7,
+      "duration": 20.200000000000003,
+      "text": "It's, uh, it's probably a five to six day slip on the on-demand reporting engine specifically. The SOC 2 and PCI DSS templates are done, those were finished before the outage. But the HIPAA and ISO 27001 report generation - those are still being validated in staging and we've got some edge cases we're still working through."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 100.7,
+      "end_time": 108.6,
+      "duration": 7.8999999999999915,
+      "text": "Okay so the four frameworks are going to be ready, it's just - what exactly is the validation issue with HIPAA and ISO?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 109.6,
+      "end_time": 129.4,
+      "duration": 19.80000000000001,
+      "text": "It's less a code issue and more a data mapping issue. The way we're pulling control evidence from the customer's environment, for HIPAA specifically, there are like three or four controls where the evidence mapping isn't lining up correctly with the report template. So the output looks weird. It's not wrong necessarily but it's not clean."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 130.5,
+      "end_time": 135.7,
+      "duration": 5.199999999999989,
+      "text": "When you say not clean, are we talking cosmetic or are we talking inaccurate?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 136.8,
+      "end_time": 148.9,
+      "duration": 12.099999999999994,
+      "text": "Cosmetic, mostly. The data is correct, the control mapping is correct, it just, um, the way it renders in the PDF export has some formatting gaps and one section where the evidence summary is truncated."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 150.1,
+      "end_time": 155.2,
+      "duration": 5.099999999999994,
+      "text": "Okay, that's - that's manageable. Can we get that resolved by say March 31st?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 156.0,
+      "end_time": 172.9,
+      "duration": 16.900000000000006,
+      "text": "That's actually what I wanted to talk through because Priya thinks she can get it done by the 30th, but that's also assuming she doesn't get pulled back into the Detect remediation work. And honestly I don't know what the situation is going to look like next week."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 173.8,
+      "end_time": 188.9,
+      "duration": 15.099999999999994,
+      "text": "I talked to the Detect team lead on Friday and my understanding is the redundant node work and the circuit breaker implementation should be wrapped up by end of this week. So I don't anticipate any more pulls from your team after that."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 189.7,
+      "end_time": 198.0,
+      "duration": 8.300000000000011,
+      "text": "Okay, good. That's, uh, that's helpful to know. I'll confirm that with Priya and make sure she's fully back on Comply starting Monday."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 198.7,
+      "end_time": 211.0,
+      "duration": 12.300000000000011,
+      "text": "Yeah do that. And loop me in if anything changes because I need to know by the 1st at the latest whether we have a go or a no-go situation with any of the four frameworks."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 212.3,
+      "end_time": 214.9,
+      "duration": 2.5999999999999943,
+      "text": "Understood. Okay, what else is on the checklist?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 216.3,
+      "end_time": 232.2,
+      "duration": 15.899999999999977,
+      "text": "So the other big one is the customer-facing documentation. I checked in with the content team yesterday and the HIPAA and ISO 27001 user guides are still in first draft. SOC 2 and PCI DSS are done and reviewed. So there's a dependency there too."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 232.7,
+      "end_time": 239.8,
+      "duration": 7.100000000000023,
+      "text": "That's not on my team but yeah, that tracks with what I've been hearing. Is that a blocker for the launch?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 240.1,
+      "end_time": 257.6,
+      "duration": 17.50000000000003,
+      "text": "It depends. I mean technically we could launch with SOC 2 and PCI DSS fully documented and say HIPAA and ISO 27001 docs are coming within two weeks of GA. But I don't love that from a product narrative standpoint because we've been marketing all four frameworks as day-one capabilities."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 258.3,
+      "end_time": 268.5,
+      "duration": 10.199999999999989,
+      "text": "Right, and if a customer goes to generate a HIPAA report on day one and then there's no documentation to help them interpret it, that's a support headache."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 269.6,
+      "end_time": 287.9,
+      "duration": 18.299999999999955,
+      "text": "Exactly. So I'm going to push the content team hard this week. I think the ISO guide is actually closer than they're letting on, that one might just need a round of SME review. The HIPAA one is more complicated because compliance and legal both have to sign off on the language."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 289.2,
+      "end_time": 299.3,
+      "duration": 10.100000000000023,
+      "text": "Do you want me to have anyone on my team do a technical review pass on the HIPAA doc? Just to make sure the control descriptions are accurate?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 299.6,
+      "end_time": 307.4,
+      "duration": 7.7999999999999545,
+      "text": "Actually yeah, that would be helpful. Can you give me a name? I'll connect them directly with Aisha on the content team."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 307.9,
+      "end_time": 318.0,
+      "duration": 10.100000000000023,
+      "text": "Damon would be the right person for that. He did a lot of the control mapping work on the HIPAA side so he'd be best positioned to review it."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 319.2,
+      "end_time": 330.9,
+      "duration": 11.699999999999989,
+      "text": "Perfect. I'll send an intro today. Okay, um, what about the API? Where does the on-demand report generation API stand? Because we've got a couple of enterprise customers who want to integrate directly."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 331.9,
+      "end_time": 353.6,
+      "duration": 21.700000000000045,
+      "text": "The API is actually in pretty good shape. We finished the endpoint work two weeks ago, it's been in internal testing and we're doing beta access with two customers right now - NorthBridge Financial is one of them. Feedback has been fine, no major issues. There's a rate limiting question we're still finalizing but that's a configuration decision, not an engineering one."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 355.0,
+      "end_time": 357.8,
+      "duration": 2.8000000000000114,
+      "text": "Okay good. What's the rate limiting question specifically?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 359.1,
+      "end_time": 373.6,
+      "duration": 14.5,
+      "text": "It's basically how many on-demand report generations we allow per customer per day. Right now the default is set at ten but some customers during beta have been asking about higher limits. NorthBridge specifically asked about a hundred per day."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 374.3,
+      "end_time": 379.2,
+      "duration": 4.899999999999977,
+      "text": "A hundred per day? That's... I mean, what's the infrastructure cost implication on that?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 379.8,
+      "end_time": 400.1,
+      "duration": 20.30000000000001,
+      "text": "It's manageable at current scale but if we have, you know, twenty enterprise customers all hitting a hundred per day simultaneously that could be a compute cost issue. I'd want to think about it as a tiered limit - so like standard tier gets ten, enterprise gets fifty, and then anything above that is a custom contract discussion."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 400.6,
+      "end_time": 414.1,
+      "duration": 13.5,
+      "text": "That actually makes sense. I'll take that to the pricing conversation - we have a sync with the revenue team on Thursday so I'll raise it then. But yeah, don't change the default before I talk to them."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 414.7,
+      "end_time": 418.1,
+      "duration": 3.400000000000034,
+      "text": "Yep, no changes on that until you say so."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 419.2,
+      "end_time": 426.9,
+      "duration": 7.699999999999989,
+      "text": "Okay. What else - oh, the SSO integration for Comply. Is that still in scope for v2 or did we descope that?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 428.3,
+      "end_time": 444.8,
+      "duration": 16.5,
+      "text": "That got descoped in the February planning cycle. It's on the v2.1 roadmap. Comply v2 will use the standard Aegis Identity authentication, same as the other modules. So it's not SSO-native within Comply specifically but customers who have Identity set up get SSO passthrough through that."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 445.6,
+      "end_time": 468.0,
+      "duration": 22.399999999999977,
+      "text": "Right, okay, I remember now. I just wanted to make sure we hadn't quietly put it back in scope somewhere. Alright, so let me just summarize where I think we are. Engineering is tracking, HIPAA and ISO 27001 reporting has a formatting issue that Priya's resolving by the 30th, API is solid, documentation is the bigger risk. Does that sound right to you?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 468.8,
+      "end_time": 478.8,
+      "duration": 10.0,
+      "text": "Yeah that's accurate. I'd also add that we still need to do the final performance test on the report generation under load. We have that scheduled for March 28th."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 480.0,
+      "end_time": 491.3,
+      "duration": 11.300000000000011,
+      "text": "Good, make sure I get the results of that as soon as they're available. And if anything fails on that load test I want to know same day, don't wait for a report."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 492.4,
+      "end_time": 497.3,
+      "duration": 4.900000000000034,
+      "text": "Will do. I'll make sure you're on the distribution for the test results."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 497.7,
+      "end_time": 511.5,
+      "duration": 13.800000000000011,
+      "text": "Okay, I think we're good. Let's plan to do a quick check-in again next Tuesday, maybe thirty minutes, and by then we should know the state of the Priya work and I should have an update from the content team."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 511.9,
+      "end_time": 514.7,
+      "duration": 2.800000000000068,
+      "text": "Works for me. I'll send a hold."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 515.1,
+      "end_time": 516.6,
+      "duration": 1.5,
+      "text": "Great. Thanks Chris."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 517.8,
+      "end_time": 519.3,
+      "duration": 1.5,
+      "text": "Yeah, talk soon."
+    }
+  ],
+  "transcript_text": "Megan Lawson: Hey Chris, you on?\nChris Lee: Yeah, yeah I'm here. Sorry, just closing out a Slack thread real quick.\nMegan Lawson: No worries. So, okay, let's just dive in. We've got about - I have a hard stop at two so maybe forty minutes or so.\nChris Lee: Yeah same, that works for me.\nMegan Lawson: Okay. So the main thing I wanted to go through today is just the launch readiness checklist for Comply v2. April 7th is, you know, it's coming up fast and I want to make sure we're actually aligned on where things stand.\nChris Lee: Yeah, agreed. I think overall we're in decent shape but there are a few things I want to flag, um, before we get too deep into the checklist stuff.\nMegan Lawson: Sure, go ahead.\nChris Lee: So the Detect outage last week - and I know that's kind of a separate workstream - but it pulled two of my engineers off Comply work for almost four days. Priya and Damon were both on the incident response rotation.\nMegan Lawson: Right, I was aware of that. How much did that actually set you back? Like in real terms.\nChris Lee: It's, uh, it's probably a five to six day slip on the on-demand reporting engine specifically. The SOC 2 and PCI DSS templates are done, those were finished before the outage. But the HIPAA and ISO 27001 report generation - those are still being validated in staging and we've got some edge cases we're still working through.\nMegan Lawson: Okay so the four frameworks are going to be ready, it's just - what exactly is the validation issue with HIPAA and ISO?\nChris Lee: It's less a code issue and more a data mapping issue. The way we're pulling control evidence from the customer's environment, for HIPAA specifically, there are like three or four controls where the evidence mapping isn't lining up correctly with the report template. So the output looks weird. It's not wrong necessarily but it's not clean.\nMegan Lawson: When you say not clean, are we talking cosmetic or are we talking inaccurate?\nChris Lee: Cosmetic, mostly. The data is correct, the control mapping is correct, it just, um, the way it renders in the PDF export has some formatting gaps and one section where the evidence summary is truncated.\nMegan Lawson: Okay, that's - that's manageable. Can we get that resolved by say March 31st?\nChris Lee: That's actually what I wanted to talk through because Priya thinks she can get it done by the 30th, but that's also assuming she doesn't get pulled back into the Detect remediation work. And honestly I don't know what the situation is going to look like next week.\nMegan Lawson: I talked to the Detect team lead on Friday and my understanding is the redundant node work and the circuit breaker implementation should be wrapped up by end of this week. So I don't anticipate any more pulls from your team after that.\nChris Lee: Okay, good. That's, uh, that's helpful to know. I'll confirm that with Priya and make sure she's fully back on Comply starting Monday.\nMegan Lawson: Yeah do that. And loop me in if anything changes because I need to know by the 1st at the latest whether we have a go or a no-go situation with any of the four frameworks.\nChris Lee: Understood. Okay, what else is on the checklist?\nMegan Lawson: So the other big one is the customer-facing documentation. I checked in with the content team yesterday and the HIPAA and ISO 27001 user guides are still in first draft. SOC 2 and PCI DSS are done and reviewed. So there's a dependency there too.\nChris Lee: That's not on my team but yeah, that tracks with what I've been hearing. Is that a blocker for the launch?\nMegan Lawson: It depends. I mean technically we could launch with SOC 2 and PCI DSS fully documented and say HIPAA and ISO 27001 docs are coming within two weeks of GA. But I don't love that from a product narrative standpoint because we've been marketing all four frameworks as day-one capabilities.\nChris Lee: Right, and if a customer goes to generate a HIPAA report on day one and then there's no documentation to help them interpret it, that's a support headache.\nMegan Lawson: Exactly. So I'm going to push the content team hard this week. I think the ISO guide is actually closer than they're letting on, that one might just need a round of SME review. The HIPAA one is more complicated because compliance and legal both have to sign off on the language.\nChris Lee: Do you want me to have anyone on my team do a technical review pass on the HIPAA doc? Just to make sure the control descriptions are accurate?\nMegan Lawson: Actually yeah, that would be helpful. Can you give me a name? I'll connect them directly with Aisha on the content team.\nChris Lee: Damon would be the right person for that. He did a lot of the control mapping work on the HIPAA side so he'd be best positioned to review it.\nMegan Lawson: Perfect. I'll send an intro today. Okay, um, what about the API? Where does the on-demand report generation API stand? Because we've got a couple of enterprise customers who want to integrate directly.\nChris Lee: The API is actually in pretty good shape. We finished the endpoint work two weeks ago, it's been in internal testing and we're doing beta access with two customers right now - NorthBridge Financial is one of them. Feedback has been fine, no major issues. There's a rate limiting question we're still finalizing but that's a configuration decision, not an engineering one.\nMegan Lawson: Okay good. What's the rate limiting question specifically?\nChris Lee: It's basically how many on-demand report generations we allow per customer per day. Right now the default is set at ten but some customers during beta have been asking about higher limits. NorthBridge specifically asked about a hundred per day.\nMegan Lawson: A hundred per day? That's... I mean, what's the infrastructure cost implication on that?\nChris Lee: It's manageable at current scale but if we have, you know, twenty enterprise customers all hitting a hundred per day simultaneously that could be a compute cost issue. I'd want to think about it as a tiered limit - so like standard tier gets ten, enterprise gets fifty, and then anything above that is a custom contract discussion.\nMegan Lawson: That actually makes sense. I'll take that to the pricing conversation - we have a sync with the revenue team on Thursday so I'll raise it then. But yeah, don't change the default before I talk to them.\nChris Lee: Yep, no changes on that until you say so.\nMegan Lawson: Okay. What else - oh, the SSO integration for Comply. Is that still in scope for v2 or did we descope that?\nChris Lee: That got descoped in the February planning cycle. It's on the v2.1 roadmap. Comply v2 will use the standard Aegis Identity authentication, same as the other modules. So it's not SSO-native within Comply specifically but customers who have Identity set up get SSO passthrough through that.\nMegan Lawson: Right, okay, I remember now. I just wanted to make sure we hadn't quietly put it back in scope somewhere. Alright, so let me just summarize where I think we are. Engineering is tracking, HIPAA and ISO 27001 reporting has a formatting issue that Priya's resolving by the 30th, API is solid, documentation is the bigger risk. Does that sound right to you?\nChris Lee: Yeah that's accurate. I'd also add that we still need to do the final performance test on the report generation under load. We have that scheduled for March 28th.\nMegan Lawson: Good, make sure I get the results of that as soon as they're available. And if anything fails on that load test I want to know same day, don't wait for a report.\nChris Lee: Will do. I'll make sure you're on the distribution for the test results.\nMegan Lawson: Okay, I think we're good. Let's plan to do a quick check-in again next Tuesday, maybe thirty minutes, and by then we should know the state of the Priya work and I should have an update from the content team.\nChris Lee: Works for me. I'll send a hold.\nMegan Lawson: Great. Thanks Chris.\nChris Lee: Yeah, talk soon.",
+  "summary": "Megan and Chris conducted a launch readiness review for Comply v2, targeting an April 7th release. A recent Detect outage pulled two engineers off the project for four days, causing a 5-6 day slip on the HIPAA and ISO 27001 reporting engine, which has formatting issues in staging. The API is in good shape with beta customers, but customer-facing documentation for HIPAA and ISO 27001 is still in first draft and poses the biggest launch risk. They aligned on key deadlines, escalation paths, and a follow-up check-in for the following Tuesday.",
+  "topics": [
+    "launch readiness",
+    "compliance reporting",
+    "api rate limiting",
+    "documentation",
+    "incident impact",
+    "hipaa"
+  ],
+  "action_items": [
+    "Chris Lee: Confirm Priya is fully back on Comply work starting Monday and report go/no-go status on all four frameworks to Megan by the 1st",
+    "Megan Lawson: Send intro connecting Damon to Aisha on the content team for a technical review of the HIPAA documentation today",
+    "Megan Lawson: Raise tiered API rate limiting proposal with the revenue team in Thursday's pricing sync",
+    "Chris Lee: Ensure Megan is on the distribution list for March 28th load test results and notify her same-day of any failures"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.6,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Chris flags that the Detect outage pulled two engineers for four days, causing a 5-6 day slip on HIPAA and ISO 27001 report generation",
+      "type": "concern",
+      "speaker": "Chris Lee"
+    },
+    {
+      "time": 310.0,
+      "text": "Megan confirms Detect remediation should wrap up by end of week, relieving resource pressure on the Comply team",
+      "type": "positive_pivot",
+      "speaker": "Megan Lawson"
+    },
+    {
+      "time": 530.0,
+      "text": "Discussion of launching without HIPAA and ISO 27001 documentation on day one, which Megan flags as a support and product narrative risk",
+      "type": "feature_gap",
+      "speaker": "Megan Lawson"
+    },
+    {
+      "time": 780.0,
+      "text": "NorthBridge Financial requesting 100 API calls per day prompts a tiered rate limiting discussion with cost and pricing implications",
+      "type": "pricing_offer",
+      "speaker": "Chris Lee"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Join",
+      "time_seconds": 18.0,
+      "timestamp_ms": 1774363518000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Join",
+      "time_seconds": 18.0,
+      "timestamp_ms": 1774363518000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Leave",
+      "time_seconds": 2331.0,
+      "timestamp_ms": 1774365831000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Leave",
+      "time_seconds": 2340.0,
+      "timestamp_ms": 1774365840000
+    }
+  ],
+  "stats": {
+    "turn_count": 46,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Megan Lawson": 23,
+      "Chris Lee": 23
+    },
+    "speaker_total_seconds": {
+      "Megan Lawson": 227.7,
+      "Chris Lee": 243.6
+    }
+  }
+}

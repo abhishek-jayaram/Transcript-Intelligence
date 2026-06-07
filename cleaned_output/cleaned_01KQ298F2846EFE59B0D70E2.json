@@ -1,0 +1,526 @@
+{
+  "meeting_id": "01KQ298F2846EFE59B0D70E2",
+  "title": "Competitive Threat Assessment - Post Outage",
+  "organizer_email": "megan.lawson@aegiscloud.com",
+  "host_email": "megan.lawson@aegiscloud.com",
+  "start_time": "2026-03-20T15:30:00.000Z",
+  "end_time": "2026-03-20T15:56:12.000Z",
+  "duration_minutes": 26.2,
+  "participants": [
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "james.mitchell@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "james.mitchell@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Megan Lawson",
+    "1": "Tom Bradley",
+    "2": "James Mitchell",
+    "3": "Brian Cho",
+    "4": "Daniel Okafor"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 7.2,
+      "end_time": 12.3,
+      "duration": 5.1000000000000005,
+      "text": "Okay, I think we've got everyone now - can you all hear me okay?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 13.4,
+      "end_time": 15.2,
+      "duration": 1.799999999999999,
+      "text": "Yeah, loud and clear."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 16.4,
+      "end_time": 17.9,
+      "duration": 1.5,
+      "text": "Good here."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 19.2,
+      "end_time": 20.7,
+      "duration": 1.5,
+      "text": "Yep, I'm on."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 22.1,
+      "end_time": 46.9,
+      "duration": 24.799999999999997,
+      "text": "Alright, so - I want to just dive right in because honestly we don't have a lot of time and there's a lot to cover. The outage last week was bad. I don't think any of us are going to sugarcoat that. Six hours of zero threat monitoring visibility is not something our customers are just going to brush off, and our competitors are absolutely going to use this against us."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 47.6,
+      "end_time": 63.5,
+      "duration": 15.899999999999999,
+      "text": "Yeah, I've already seen it happening. I had two accounts reach out to me directly asking if we had a formal post-mortem they could share internally, and one of them - Hartfield Financial - mentioned that SentinelShield had already been in contact with their procurement team."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 64.9,
+      "end_time": 72.5,
+      "duration": 7.599999999999994,
+      "text": "Of course they have. That's - I mean, that's exactly what I'd do too if I were them, but still. It's frustrating."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 73.4,
+      "end_time": 91.4,
+      "duration": 18.0,
+      "text": "Same thing on my end. I've got a prospect, Clearvale Systems, mid-market, they were this close to signing - and now their CTO is asking pointed questions about our reliability track record. And I didn't have great answers for him, which is not a position I want to be in."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 92.6,
+      "end_time": 101.5,
+      "duration": 8.900000000000006,
+      "text": "And what are the competitors actually saying? Like are they sending specific messaging or is it more just, hey, we heard you had some trouble?"
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 102.1,
+      "end_time": 122.3,
+      "duration": 20.200000000000003,
+      "text": "From what I can gather, SentinelShield is going in with a pretty polished pitch around their multi-region redundancy story. They're positioning it as, um, you know, 'we were built for this, our architecture doesn't have single points of failure' - which, I mean, honestly Tom, that's landing because it's hitting on exactly what went wrong with us."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 123.4,
+      "end_time": 146.7,
+      "duration": 23.299999999999983,
+      "text": "Look, I'm not going to sit here and pretend the architecture wasn't a problem. It was. The event ingestion pipeline had a clear single point of failure and it cascaded. We know what happened. We've already deployed the redundant processing nodes and the circuit breaker pattern is in place. But yeah - the damage from a perception standpoint, that's real and it's going to take time."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 147.7,
+      "end_time": 155.8,
+      "duration": 8.100000000000023,
+      "text": "How long do you think before we can point to, like, meaningful uptime numbers post-fix? Because that's what customers are going to want."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 156.8,
+      "end_time": 170.3,
+      "duration": 13.5,
+      "text": "I mean, realistically - we need at least 30, 60 days of clean data before we can say anything with confidence. And even then, some customers are going to want third-party validation, not just us saying we're fine."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 171.2,
+      "end_time": 174.8,
+      "duration": 3.6000000000000227,
+      "text": "That's a long time in a competitive sales cycle."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 175.3,
+      "end_time": 183.2,
+      "duration": 7.899999999999977,
+      "text": "It is. And Brian, what's the support side looking like right now? How many tickets are still open related to the outage?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 183.5,
+      "end_time": 218.2,
+      "duration": 34.69999999999999,
+      "text": "So we had - ugh - we had a spike of about 340 tickets come in during and immediately after the outage. We've closed most of them, but there are still about 40 open, mostly from customers who want detailed impact reports, like specifically which alerts they missed during the window, what events weren't processed. And a handful of those customers are, uh, pretty heated. I had one escalation yesterday where the customer's security team is claiming they had an actual incident during the outage window and they're saying our lack of visibility may have delayed their response."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 218.7,
+      "end_time": 223.4,
+      "duration": 4.700000000000017,
+      "text": "Oh, that's - okay, that's a liability issue. Is legal aware of that one?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 224.5,
+      "end_time": 228.8,
+      "duration": 4.300000000000011,
+      "text": "Yes, I looped them in this morning. We're handling it carefully."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 230.0,
+      "end_time": 241.7,
+      "duration": 11.699999999999989,
+      "text": "Good. Okay. So, let's talk competitive positioning because that's really why we're on this call. James, Daniel - what are you hearing beyond SentinelShield? Are VaultEdge or CyberNova showing up in these conversations?"
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 242.8,
+      "end_time": 258.0,
+      "duration": 15.199999999999989,
+      "text": "VaultEdge has come up a couple of times but honestly more in the backup and recovery conversation than detect, which makes sense - that's their strength. The Hartfield situation is really squarely about Detect, so it's SentinelShield that's the immediate threat there."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 258.5,
+      "end_time": 278.3,
+      "duration": 19.80000000000001,
+      "text": "Yeah, and for Clearvale, the CTO actually mentioned CyberNova as well - which surprised me a little. They don't usually show up in the mid-market space at that price point. But apparently CyberNova reached out proactively with some kind of competitive displacement offer. I don't know the specifics but - the timing is not a coincidence."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 279.4,
+      "end_time": 291.4,
+      "duration": 12.0,
+      "text": "Of course it's not. They've been watching the news feeds. All of them have. And we would do the same thing - I'm just annoyed we're on the receiving end of it right now."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 292.8,
+      "end_time": 302.8,
+      "duration": 10.0,
+      "text": "Can we talk about what our counter-narrative actually is? Because right now I feel like we're reactive and I don't have a clean story to bring back to Clearvale."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 303.7,
+      "end_time": 311.7,
+      "duration": 8.0,
+      "text": "That's fair. Tom, can you give me something concrete that James and Daniel can take into customer conversations? Like what's actually different now?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 312.0,
+      "end_time": 335.0,
+      "duration": 23.0,
+      "text": "Yeah, so - here's what I can say with confidence. The root cause was identified within a couple of hours of the incident starting. We had the fix scoped within 24 hours. Redundant processing nodes are live, the circuit breaker pattern is deployed, and we've now got automated failover testing on a weekly cadence that we didn't have before. That's real. That's not just spin."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 335.8,
+      "end_time": 353.1,
+      "duration": 17.30000000000001,
+      "text": "Okay, that's good. That's something. But I think we also need to be honest with customers that this was a significant failure and we're taking it seriously, rather than just trying to gloss over it with technical jargon. Customers can smell a cover-up story from a mile away."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 354.1,
+      "end_time": 373.6,
+      "duration": 19.5,
+      "text": "Completely agree with Brian on that. The transparency piece is actually a differentiator if we do it right. Most vendors try to minimize, and if we lead with a really candid post-mortem - like genuinely owning what went wrong - that can actually build trust. It doesn't feel that way right now but it can."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 374.8,
+      "end_time": 392.8,
+      "duration": 18.0,
+      "text": "I hope you're right about that, Megan, but I've got to be honest - when I'm sitting across from a CTO who's already been called by two competitors, a transparency narrative is a tough sell in that moment. They want to know it won't happen again, and I can't guarantee that."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 394.0,
+      "end_time": 405.4,
+      "duration": 11.399999999999977,
+      "text": "Nobody can guarantee that. SentinelShield can't guarantee it either, they've had outages too - it was, what, eighteen months ago they had that authentication service issue? I think it was over four hours."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 406.5,
+      "end_time": 422.8,
+      "duration": 16.30000000000001,
+      "text": "Yeah, use that. That's a legitimate point - every platform has incidents, the question is how you respond and what you've built to prevent recurrence. I'll work with marketing to get some battlecard updates out this week. The current ones are obviously not reflecting any of this."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 423.2,
+      "end_time": 430.7,
+      "duration": 7.5,
+      "text": "The battlecards honestly haven't been updated in like, four months anyway. That's been a frustration for a while. No offense, Megan."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 432.1,
+      "end_time": 441.9,
+      "duration": 9.799999999999955,
+      "text": "No, you're - you're right, and I own that. That's on us. It's something we've deprioritized and this situation is kind of exposing why that was a mistake."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 443.1,
+      "end_time": 464.8,
+      "duration": 21.69999999999999,
+      "text": "For what it's worth, one thing that might actually help us in the near term - and this is sort of looking ahead - is the Comply v2 launch coming up. If we can position the Detect recovery story alongside something forward-looking like the compliance reporting upgrades, it at least shows customers we're shipping and investing, not just in damage control mode."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 465.2,
+      "end_time": 471.4,
+      "duration": 6.199999999999989,
+      "text": "That's actually a smart angle, James. When does Comply v2 go GA, is it still early April?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 472.7,
+      "end_time": 475.7,
+      "duration": 3.0,
+      "text": "April 7th is the date, assuming nothing slips. Tom?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 476.5,
+      "end_time": 486.1,
+      "duration": 9.600000000000023,
+      "text": "We're on track. I don't anticipate any delays on that one. The on-demand SOC 2 and HIPAA reporting features are basically done, we're in final QA."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 487.2,
+      "end_time": 508.5,
+      "duration": 21.30000000000001,
+      "text": "Okay, good. So let's make sure we're sequencing this right for the accounts that are at risk. We want to get in front of them with the post-mortem and remediation story now, and then have a follow-up touch in early April when Comply v2 drops. That gives us two meaningful reasons to engage rather than just one awkward apology call."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 509.4,
+      "end_time": 521.5,
+      "duration": 12.100000000000023,
+      "text": "That makes sense. I'll reach out to Hartfield early next week and see if I can get a call with their CISO. I think going above the procurement level is the right move there."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 523.0,
+      "end_time": 531.0,
+      "duration": 8.0,
+      "text": "Yeah, do that. And Daniel, for Clearvale - do you think the deal is still salvageable or are we in real trouble there?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 531.5,
+      "end_time": 553.3,
+      "duration": 21.799999999999955,
+      "text": "Honestly? I think it's 50-50 at this point. The CTO is open to hearing us out but he's clearly been spooked. If we come in with a really strong story and maybe some kind of SLA commitment that's better than what we've offered previously, I think we have a shot. But if we fumble the next conversation, I think we lose it."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 553.6,
+      "end_time": 568.4,
+      "duration": 14.799999999999955,
+      "text": "Alright. Let's not fumble it. Brian, can you make sure that anyone from sales who needs a detailed technical summary of the incident and the remediation has it by end of day Monday? Something they can actually share with customers, not just internal-facing."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 569.8,
+      "end_time": 575.8,
+      "duration": 6.0,
+      "text": "Yeah, I'll coordinate with Tom's team and have something ready. I'd say Monday EOD is doable."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 577.2,
+      "end_time": 596.3,
+      "duration": 19.09999999999991,
+      "text": "Good. Alright, I think we have a plan - it's not a great situation but we know what we're dealing with. Let's just make sure we're communicating internally as things develop. If anyone hears of more competitive activity from SentinelShield or CyberNova specifically, flag it in Slack immediately, don't wait for the next sync."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 596.8,
+      "end_time": 598.3,
+      "duration": 1.5,
+      "text": "Agreed. Thanks everyone."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 599.7,
+      "end_time": 601.2,
+      "duration": 1.5,
+      "text": "Thanks, talk soon."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 602.2,
+      "end_time": 603.7,
+      "duration": 1.5,
+      "text": "Yep, thanks."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 605.0,
+      "end_time": 606.5,
+      "duration": 1.5,
+      "text": "Thanks all."
+    }
+  ],
+  "transcript_text": "Megan Lawson: Okay, I think we've got everyone now - can you all hear me okay?\nTom Bradley: Yeah, loud and clear.\nJames Mitchell: Good here.\nBrian Cho: Yep, I'm on.\nMegan Lawson: Alright, so - I want to just dive right in because honestly we don't have a lot of time and there's a lot to cover. The outage last week was bad. I don't think any of us are going to sugarcoat that. Six hours of zero threat monitoring visibility is not something our customers are just going to brush off, and our competitors are absolutely going to use this against us.\nJames Mitchell: Yeah, I've already seen it happening. I had two accounts reach out to me directly asking if we had a formal post-mortem they could share internally, and one of them - Hartfield Financial - mentioned that SentinelShield had already been in contact with their procurement team.\nMegan Lawson: Of course they have. That's - I mean, that's exactly what I'd do too if I were them, but still. It's frustrating.\nDaniel Okafor: Same thing on my end. I've got a prospect, Clearvale Systems, mid-market, they were this close to signing - and now their CTO is asking pointed questions about our reliability track record. And I didn't have great answers for him, which is not a position I want to be in.\nTom Bradley: And what are the competitors actually saying? Like are they sending specific messaging or is it more just, hey, we heard you had some trouble?\nJames Mitchell: From what I can gather, SentinelShield is going in with a pretty polished pitch around their multi-region redundancy story. They're positioning it as, um, you know, 'we were built for this, our architecture doesn't have single points of failure' - which, I mean, honestly Tom, that's landing because it's hitting on exactly what went wrong with us.\nTom Bradley: Look, I'm not going to sit here and pretend the architecture wasn't a problem. It was. The event ingestion pipeline had a clear single point of failure and it cascaded. We know what happened. We've already deployed the redundant processing nodes and the circuit breaker pattern is in place. But yeah - the damage from a perception standpoint, that's real and it's going to take time.\nMegan Lawson: How long do you think before we can point to, like, meaningful uptime numbers post-fix? Because that's what customers are going to want.\nTom Bradley: I mean, realistically - we need at least 30, 60 days of clean data before we can say anything with confidence. And even then, some customers are going to want third-party validation, not just us saying we're fine.\nDaniel Okafor: That's a long time in a competitive sales cycle.\nMegan Lawson: It is. And Brian, what's the support side looking like right now? How many tickets are still open related to the outage?\nBrian Cho: So we had - ugh - we had a spike of about 340 tickets come in during and immediately after the outage. We've closed most of them, but there are still about 40 open, mostly from customers who want detailed impact reports, like specifically which alerts they missed during the window, what events weren't processed. And a handful of those customers are, uh, pretty heated. I had one escalation yesterday where the customer's security team is claiming they had an actual incident during the outage window and they're saying our lack of visibility may have delayed their response.\nMegan Lawson: Oh, that's - okay, that's a liability issue. Is legal aware of that one?\nBrian Cho: Yes, I looped them in this morning. We're handling it carefully.\nMegan Lawson: Good. Okay. So, let's talk competitive positioning because that's really why we're on this call. James, Daniel - what are you hearing beyond SentinelShield? Are VaultEdge or CyberNova showing up in these conversations?\nJames Mitchell: VaultEdge has come up a couple of times but honestly more in the backup and recovery conversation than detect, which makes sense - that's their strength. The Hartfield situation is really squarely about Detect, so it's SentinelShield that's the immediate threat there.\nDaniel Okafor: Yeah, and for Clearvale, the CTO actually mentioned CyberNova as well - which surprised me a little. They don't usually show up in the mid-market space at that price point. But apparently CyberNova reached out proactively with some kind of competitive displacement offer. I don't know the specifics but - the timing is not a coincidence.\nMegan Lawson: Of course it's not. They've been watching the news feeds. All of them have. And we would do the same thing - I'm just annoyed we're on the receiving end of it right now.\nDaniel Okafor: Can we talk about what our counter-narrative actually is? Because right now I feel like we're reactive and I don't have a clean story to bring back to Clearvale.\nMegan Lawson: That's fair. Tom, can you give me something concrete that James and Daniel can take into customer conversations? Like what's actually different now?\nTom Bradley: Yeah, so - here's what I can say with confidence. The root cause was identified within a couple of hours of the incident starting. We had the fix scoped within 24 hours. Redundant processing nodes are live, the circuit breaker pattern is deployed, and we've now got automated failover testing on a weekly cadence that we didn't have before. That's real. That's not just spin.\nBrian Cho: Okay, that's good. That's something. But I think we also need to be honest with customers that this was a significant failure and we're taking it seriously, rather than just trying to gloss over it with technical jargon. Customers can smell a cover-up story from a mile away.\nMegan Lawson: Completely agree with Brian on that. The transparency piece is actually a differentiator if we do it right. Most vendors try to minimize, and if we lead with a really candid post-mortem - like genuinely owning what went wrong - that can actually build trust. It doesn't feel that way right now but it can.\nDaniel Okafor: I hope you're right about that, Megan, but I've got to be honest - when I'm sitting across from a CTO who's already been called by two competitors, a transparency narrative is a tough sell in that moment. They want to know it won't happen again, and I can't guarantee that.\nJames Mitchell: Nobody can guarantee that. SentinelShield can't guarantee it either, they've had outages too - it was, what, eighteen months ago they had that authentication service issue? I think it was over four hours.\nMegan Lawson: Yeah, use that. That's a legitimate point - every platform has incidents, the question is how you respond and what you've built to prevent recurrence. I'll work with marketing to get some battlecard updates out this week. The current ones are obviously not reflecting any of this.\nDaniel Okafor: The battlecards honestly haven't been updated in like, four months anyway. That's been a frustration for a while. No offense, Megan.\nMegan Lawson: No, you're - you're right, and I own that. That's on us. It's something we've deprioritized and this situation is kind of exposing why that was a mistake.\nJames Mitchell: For what it's worth, one thing that might actually help us in the near term - and this is sort of looking ahead - is the Comply v2 launch coming up. If we can position the Detect recovery story alongside something forward-looking like the compliance reporting upgrades, it at least shows customers we're shipping and investing, not just in damage control mode.\nBrian Cho: That's actually a smart angle, James. When does Comply v2 go GA, is it still early April?\nMegan Lawson: April 7th is the date, assuming nothing slips. Tom?\nTom Bradley: We're on track. I don't anticipate any delays on that one. The on-demand SOC 2 and HIPAA reporting features are basically done, we're in final QA.\nMegan Lawson: Okay, good. So let's make sure we're sequencing this right for the accounts that are at risk. We want to get in front of them with the post-mortem and remediation story now, and then have a follow-up touch in early April when Comply v2 drops. That gives us two meaningful reasons to engage rather than just one awkward apology call.\nJames Mitchell: That makes sense. I'll reach out to Hartfield early next week and see if I can get a call with their CISO. I think going above the procurement level is the right move there.\nMegan Lawson: Yeah, do that. And Daniel, for Clearvale - do you think the deal is still salvageable or are we in real trouble there?\nDaniel Okafor: Honestly? I think it's 50-50 at this point. The CTO is open to hearing us out but he's clearly been spooked. If we come in with a really strong story and maybe some kind of SLA commitment that's better than what we've offered previously, I think we have a shot. But if we fumble the next conversation, I think we lose it.\nMegan Lawson: Alright. Let's not fumble it. Brian, can you make sure that anyone from sales who needs a detailed technical summary of the incident and the remediation has it by end of day Monday? Something they can actually share with customers, not just internal-facing.\nBrian Cho: Yeah, I'll coordinate with Tom's team and have something ready. I'd say Monday EOD is doable.\nMegan Lawson: Good. Alright, I think we have a plan - it's not a great situation but we know what we're dealing with. Let's just make sure we're communicating internally as things develop. If anyone hears of more competitive activity from SentinelShield or CyberNova specifically, flag it in Slack immediately, don't wait for the next sync.\nTom Bradley: Agreed. Thanks everyone.\nJames Mitchell: Thanks, talk soon.\nDaniel Okafor: Yep, thanks.\nBrian Cho: Thanks all.",
+  "summary": "The team convened to address fallout from a six-hour platform outage that caused a complete loss of threat monitoring visibility. Competitors SentinelShield and CyberNova are actively targeting at-risk accounts, including Hartfield Financial and prospect Clearvale Systems. The group aligned on a two-part response strategy: leading with a transparent post-mortem and remediation narrative now, followed by a Comply v2 launch touchpoint in early April to show forward momentum. Key concerns include a potential liability issue involving a customer who claims an actual security incident occurred during the outage window.",
+  "topics": [
+    "platform outage",
+    "competitive displacement",
+    "customer retention",
+    "post-mortem",
+    "product launch",
+    "compliance"
+  ],
+  "action_items": [
+    "Megan Lawson: Update competitive battlecards this week to reflect the outage response story and SentinelShield's own historical incident data",
+    "Brian Cho: Prepare a customer-facing technical summary of the incident and remediation steps by end of day Monday",
+    "James Mitchell: Reach out to Hartfield Financial early next week to schedule a call with their CISO above the procurement level",
+    "Daniel Okafor: Prepare a strong follow-up pitch for Clearvale Systems including potential enhanced SLA commitments to salvage the deal"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.3,
+  "key_moments": [
+    {
+      "time": 45.0,
+      "text": "James Mitchell reveals Hartfield Financial has already been contacted by competitor SentinelShield following the outage",
+      "type": "churn_signal",
+      "speaker": "James Mitchell"
+    },
+    {
+      "time": 390.0,
+      "text": "Brian Cho discloses a customer is claiming the outage may have delayed their response to an actual security incident, flagging a potential liability issue",
+      "type": "concern",
+      "speaker": "Brian Cho"
+    },
+    {
+      "time": 780.0,
+      "text": "Tom Bradley outlines concrete remediation steps including redundant processing nodes, circuit breaker pattern, and weekly automated failover testing",
+      "type": "positive_pivot",
+      "speaker": "Tom Bradley"
+    },
+    {
+      "time": 1140.0,
+      "text": "James Mitchell suggests pairing the outage recovery narrative with the upcoming Comply v2 launch to give at-risk accounts a forward-looking reason to stay",
+      "type": "action_item",
+      "speaker": "James Mitchell"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Join",
+      "time_seconds": 2.0,
+      "timestamp_ms": 1774020602000
+    },
+    {
+      "participant_name": "James Mitchell",
+      "event_type": "Join",
+      "time_seconds": 34.0,
+      "timestamp_ms": 1774020634000
+    },
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Join",
+      "time_seconds": 50.0,
+      "timestamp_ms": 1774020650000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Join",
+      "time_seconds": 56.0,
+      "timestamp_ms": 1774020656000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Join",
+      "time_seconds": 59.0,
+      "timestamp_ms": 1774020659000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Leave",
+      "time_seconds": 1542.0,
+      "timestamp_ms": 1774022142000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Leave",
+      "time_seconds": 1569.0,
+      "timestamp_ms": 1774022169000
+    },
+    {
+      "participant_name": "James Mitchell",
+      "event_type": "Leave",
+      "time_seconds": 1547.0,
+      "timestamp_ms": 1774022147000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Leave",
+      "time_seconds": 1543.0,
+      "timestamp_ms": 1774022143000
+    },
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Leave",
+      "time_seconds": 1563.0,
+      "timestamp_ms": 1774022163000
+    }
+  ],
+  "stats": {
+    "turn_count": 47,
+    "participant_count": 5,
+    "speaker_turn_counts": {
+      "Megan Lawson": 17,
+      "Tom Bradley": 7,
+      "James Mitchell": 8,
+      "Brian Cho": 7,
+      "Daniel Okafor": 8
+    },
+    "speaker_total_seconds": {
+      "Megan Lawson": 201.7,
+      "Tom Bradley": 81.6,
+      "James Mitchell": 99.5,
+      "Brian Cho": 71.5,
+      "Daniel Okafor": 100.2
+    }
+  }
+}

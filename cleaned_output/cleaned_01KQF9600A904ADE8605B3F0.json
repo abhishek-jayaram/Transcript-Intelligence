@@ -1,0 +1,420 @@
+{
+  "meeting_id": "01KQF9600A904ADE8605B3F0",
+  "title": "Detect Team - Reliability Sprint Retro",
+  "organizer_email": "tyler.washington@aegiscloud.com",
+  "host_email": "tyler.washington@aegiscloud.com",
+  "start_time": "2026-04-28T10:45:00.000Z",
+  "end_time": "2026-04-28T11:03:30.000Z",
+  "duration_minutes": 18.5,
+  "participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Chris Lee",
+    "1": "Tyler Washington",
+    "2": "Ravi Gupta"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 7.6,
+      "end_time": 11.5,
+      "duration": 3.9000000000000004,
+      "text": "Alright, I think we've got everyone - Tyler, Ravi, you both here?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 11.9,
+      "end_time": 15.6,
+      "duration": 3.6999999999999993,
+      "text": "Yeah I'm here, just grabbing my coffee real quick."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 16.0,
+      "end_time": 21.5,
+      "duration": 5.5,
+      "text": "Present, yeah, I've got the sprint board pulled up too so we can go through everything."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 22.5,
+      "end_time": 37.3,
+      "duration": 14.799999999999997,
+      "text": "Perfect, okay let's just - let's just dive in. So, uh, officially this is the retro for the reliability sprint we kicked off after the March outage, and honestly I want to start by just saying - I think you both crushed it."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 38.0,
+      "end_time": 44.4,
+      "duration": 6.399999999999999,
+      "text": "Yeah it feels good to finally be on the other side of that honestly, like March was... rough."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 45.9,
+      "end_time": 54.0,
+      "duration": 8.100000000000001,
+      "text": "It really was, man. Six hours of no threat visibility - I don't think I slept great the whole week after that."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 54.9,
+      "end_time": 70.1,
+      "duration": 15.199999999999996,
+      "text": "Right, and that's exactly why I wanted to make sure we took the time to actually celebrate what came out of this sprint, because the redundant processing nodes, the circuit breaker implementation - that's not trivial work, and you both shipped it clean."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 70.7,
+      "end_time": 81.8,
+      "duration": 11.099999999999994,
+      "text": "The circuit breaker pattern was honestly the piece I was most nervous about, like getting the threshold tuning right without introducing a bunch of false trips - that took a few iterations."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 82.4,
+      "end_time": 93.4,
+      "duration": 11.0,
+      "text": "Yeah Tyler and I went back and forth on that a lot, I think we went through like three different threshold configs before we landed on something that felt right."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 94.6,
+      "end_time": 100.0,
+      "duration": 5.400000000000006,
+      "text": "And how do you both feel about where it landed? Like are you confident in it?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 100.5,
+      "end_time": 111.8,
+      "duration": 11.299999999999997,
+      "text": "Yeah, honestly yeah. I ran the load simulation again last Thursday and it held up really well, the breaker tripped when it was supposed to and recovered cleanly. I'm feeling good about it."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 112.5,
+      "end_time": 124.0,
+      "duration": 11.5,
+      "text": "Same, and the redundant nodes are actually performing better than I expected in terms of failover time. We were targeting under thirty seconds and we're consistently hitting like twelve, fourteen seconds in testing."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 124.8,
+      "end_time": 130.8,
+      "duration": 6.000000000000014,
+      "text": "Wait, twelve seconds? That's - okay that's really good, that's way better than what we scoped out."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 131.9,
+      "end_time": 140.8,
+      "duration": 8.900000000000006,
+      "text": "Yeah, Ravi deserves credit for that honestly, he made some changes to how the node health checks are structured that I think made a big difference."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 141.9,
+      "end_time": 147.7,
+      "duration": 5.799999999999983,
+      "text": "Aw come on, Tyler helped debug the whole handoff logic, like that was a team thing."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 148.6,
+      "end_time": 164.3,
+      "duration": 15.700000000000017,
+      "text": "Okay you two are going to make me tear up over here - this is great, seriously. Let's talk about what we want to document out of this sprint because I think there are some really learnable patterns here for the rest of the org."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 165.3,
+      "end_time": 176.8,
+      "duration": 11.5,
+      "text": "For sure, I mean the single point of failure thing is not unique to Detect, right, like I was looking at some of the Protect team's architecture and I had some... thoughts."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 178.1,
+      "end_time": 185.8,
+      "duration": 7.700000000000017,
+      "text": "Ha, yeah I mean we don't want to step on anyone's toes but like - sharing what we learned is fair game."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 186.7,
+      "end_time": 199.4,
+      "duration": 12.700000000000017,
+      "text": "Yeah I'll set up a knowledge share with the broader engineering group, maybe in a couple weeks once we have our runbook polished up. Tyler, would you be willing to present the circuit breaker stuff?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 200.9,
+      "end_time": 211.5,
+      "duration": 10.599999999999994,
+      "text": "Yeah absolutely, I could put together a quick deck or - honestly it might be better as a live walkthrough of the implementation, just so people can ask questions."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 212.7,
+      "end_time": 216.8,
+      "duration": 4.100000000000023,
+      "text": "Live walkthrough is better, a hundred percent. People zone out on decks."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 218.3,
+      "end_time": 226.1,
+      "duration": 7.799999999999983,
+      "text": "Agreed, okay let's plan on that. Now - what about the monitoring gaps we identified? Ravi, I know you had some thoughts there."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 226.9,
+      "end_time": 243.3,
+      "duration": 16.400000000000006,
+      "text": "Yeah so, one of the things that made March so bad was that we didn't have great alerting on the event ingestion pipeline itself - like we were monitoring outputs but not really the pipeline health in between, and I think we need to close that gap."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 244.4,
+      "end_time": 256.0,
+      "duration": 11.599999999999994,
+      "text": "That's a hundred percent right, and actually I started sketching out what a pipeline health dashboard could look like, I can share my screen real quick if you want to see it."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 256.8,
+      "end_time": 258.9,
+      "duration": 2.099999999999966,
+      "text": "Yeah please, let's see it."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 260.1,
+      "end_time": 272.5,
+      "duration": 12.399999999999977,
+      "text": "Okay so, um, bear with me, I did this kind of quickly - but the idea is basically real-time visibility into queue depth, node throughput, and then circuit breaker state all in one view."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 273.7,
+      "end_time": 279.7,
+      "duration": 6.0,
+      "text": "Oh that's clean, I like that. Can we add latency percentiles there too? Like p95, p99?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 280.9,
+      "end_time": 286.9,
+      "duration": 6.0,
+      "text": "Yeah for sure, that's an easy add. I just didn't want to over-engineer the first draft."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 287.4,
+      "end_time": 299.9,
+      "duration": 12.5,
+      "text": "No this is great Tyler, this is exactly the kind of proactive stuff I want to see. Let's make this a formal item in the next sprint. Can you write it up as a ticket today?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 301.1,
+      "end_time": 304.2,
+      "duration": 3.099999999999966,
+      "text": "Yeah I'll have it in Jira before EOD."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 304.6,
+      "end_time": 316.0,
+      "duration": 11.399999999999977,
+      "text": "Perfect. Okay, last thing - and I want to get your honest takes on this - how did the sprint itself feel to run? Like the process, the planning, all of it."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 316.4,
+      "end_time": 332.2,
+      "duration": 15.800000000000011,
+      "text": "Honestly? One of the better sprints I've had in a while. Like yeah it was stressful because of why we were doing it, but the scope was really clear, we knew what we were trying to fix, and we weren't getting pulled in a million directions."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 332.9,
+      "end_time": 344.9,
+      "duration": 12.0,
+      "text": "Yeah I'd echo that. Having the explicit reliability focus and not having feature work mixed in - that made a huge difference for being able to just like, think deeply about the problem."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 345.6,
+      "end_time": 356.7,
+      "duration": 11.099999999999966,
+      "text": "That's really good to hear, and honestly it's something I want to push for more regularly - like maybe a reliability-focused sprint once a quarter even when we're not in crisis mode."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 357.9,
+      "end_time": 362.5,
+      "duration": 4.600000000000023,
+      "text": "Yes, please. I have been wanting to propose that for a while honestly."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 363.4,
+      "end_time": 372.6,
+      "duration": 9.200000000000045,
+      "text": "Let's make it official then, I'll loop in leadership. Alright, I think that's everything - great work you two, genuinely. March feels very far away right now."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 374.0,
+      "end_time": 382.6,
+      "duration": 8.600000000000023,
+      "text": "Agreed, and hey - the Comply v2 launch went great last week too so like, good vibes all around at Aegis right now."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 383.2,
+      "end_time": 389.9,
+      "duration": 6.699999999999989,
+      "text": "Ha, let's keep the momentum going. Thanks everyone, I'll send out the retro notes by end of week."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 390.7,
+      "end_time": 392.4,
+      "duration": 1.6999999999999886,
+      "text": "Sounds good, thanks Chris."
+    }
+  ],
+  "transcript_text": "Chris Lee: Alright, I think we've got everyone - Tyler, Ravi, you both here?\nTyler Washington: Yeah I'm here, just grabbing my coffee real quick.\nRavi Gupta: Present, yeah, I've got the sprint board pulled up too so we can go through everything.\nChris Lee: Perfect, okay let's just - let's just dive in. So, uh, officially this is the retro for the reliability sprint we kicked off after the March outage, and honestly I want to start by just saying - I think you both crushed it.\nTyler Washington: Yeah it feels good to finally be on the other side of that honestly, like March was... rough.\nRavi Gupta: It really was, man. Six hours of no threat visibility - I don't think I slept great the whole week after that.\nChris Lee: Right, and that's exactly why I wanted to make sure we took the time to actually celebrate what came out of this sprint, because the redundant processing nodes, the circuit breaker implementation - that's not trivial work, and you both shipped it clean.\nTyler Washington: The circuit breaker pattern was honestly the piece I was most nervous about, like getting the threshold tuning right without introducing a bunch of false trips - that took a few iterations.\nRavi Gupta: Yeah Tyler and I went back and forth on that a lot, I think we went through like three different threshold configs before we landed on something that felt right.\nChris Lee: And how do you both feel about where it landed? Like are you confident in it?\nTyler Washington: Yeah, honestly yeah. I ran the load simulation again last Thursday and it held up really well, the breaker tripped when it was supposed to and recovered cleanly. I'm feeling good about it.\nRavi Gupta: Same, and the redundant nodes are actually performing better than I expected in terms of failover time. We were targeting under thirty seconds and we're consistently hitting like twelve, fourteen seconds in testing.\nChris Lee: Wait, twelve seconds? That's - okay that's really good, that's way better than what we scoped out.\nTyler Washington: Yeah, Ravi deserves credit for that honestly, he made some changes to how the node health checks are structured that I think made a big difference.\nRavi Gupta: Aw come on, Tyler helped debug the whole handoff logic, like that was a team thing.\nChris Lee: Okay you two are going to make me tear up over here - this is great, seriously. Let's talk about what we want to document out of this sprint because I think there are some really learnable patterns here for the rest of the org.\nTyler Washington: For sure, I mean the single point of failure thing is not unique to Detect, right, like I was looking at some of the Protect team's architecture and I had some... thoughts.\nRavi Gupta: Ha, yeah I mean we don't want to step on anyone's toes but like - sharing what we learned is fair game.\nChris Lee: Yeah I'll set up a knowledge share with the broader engineering group, maybe in a couple weeks once we have our runbook polished up. Tyler, would you be willing to present the circuit breaker stuff?\nTyler Washington: Yeah absolutely, I could put together a quick deck or - honestly it might be better as a live walkthrough of the implementation, just so people can ask questions.\nRavi Gupta: Live walkthrough is better, a hundred percent. People zone out on decks.\nChris Lee: Agreed, okay let's plan on that. Now - what about the monitoring gaps we identified? Ravi, I know you had some thoughts there.\nRavi Gupta: Yeah so, one of the things that made March so bad was that we didn't have great alerting on the event ingestion pipeline itself - like we were monitoring outputs but not really the pipeline health in between, and I think we need to close that gap.\nTyler Washington: That's a hundred percent right, and actually I started sketching out what a pipeline health dashboard could look like, I can share my screen real quick if you want to see it.\nChris Lee: Yeah please, let's see it.\nTyler Washington: Okay so, um, bear with me, I did this kind of quickly - but the idea is basically real-time visibility into queue depth, node throughput, and then circuit breaker state all in one view.\nRavi Gupta: Oh that's clean, I like that. Can we add latency percentiles there too? Like p95, p99?\nTyler Washington: Yeah for sure, that's an easy add. I just didn't want to over-engineer the first draft.\nChris Lee: No this is great Tyler, this is exactly the kind of proactive stuff I want to see. Let's make this a formal item in the next sprint. Can you write it up as a ticket today?\nTyler Washington: Yeah I'll have it in Jira before EOD.\nChris Lee: Perfect. Okay, last thing - and I want to get your honest takes on this - how did the sprint itself feel to run? Like the process, the planning, all of it.\nRavi Gupta: Honestly? One of the better sprints I've had in a while. Like yeah it was stressful because of why we were doing it, but the scope was really clear, we knew what we were trying to fix, and we weren't getting pulled in a million directions.\nTyler Washington: Yeah I'd echo that. Having the explicit reliability focus and not having feature work mixed in - that made a huge difference for being able to just like, think deeply about the problem.\nChris Lee: That's really good to hear, and honestly it's something I want to push for more regularly - like maybe a reliability-focused sprint once a quarter even when we're not in crisis mode.\nRavi Gupta: Yes, please. I have been wanting to propose that for a while honestly.\nChris Lee: Let's make it official then, I'll loop in leadership. Alright, I think that's everything - great work you two, genuinely. March feels very far away right now.\nTyler Washington: Agreed, and hey - the Comply v2 launch went great last week too so like, good vibes all around at Aegis right now.\nChris Lee: Ha, let's keep the momentum going. Thanks everyone, I'll send out the retro notes by end of week.\nRavi Gupta: Sounds good, thanks Chris.",
+  "summary": "Chris Lee held a sprint retrospective with Tyler Washington and Ravi Gupta to review the reliability sprint initiated after a major March outage. The team celebrated key achievements including redundant processing nodes and a circuit breaker implementation, with failover times hitting 12-14 seconds against a 30-second target. The team identified monitoring gaps in the event ingestion pipeline and discussed plans for a pipeline health dashboard. Chris proposed formalizing quarterly reliability-focused sprints and organizing a knowledge share with the broader engineering organization.",
+  "topics": [
+    "sprint retrospective",
+    "reliability engineering",
+    "circuit breaker implementation",
+    "monitoring gaps",
+    "incident response",
+    "knowledge sharing"
+  ],
+  "action_items": [
+    "Tyler Washington: Write up the pipeline health dashboard as a formal Jira ticket before EOD",
+    "Chris Lee: Set up a knowledge share session with the broader engineering group in a couple weeks once the runbook is polished",
+    "Tyler Washington: Lead a live walkthrough of the circuit breaker implementation for the engineering knowledge share",
+    "Chris Lee: Loop in leadership to officially establish quarterly reliability-focused sprints"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 45.0,
+      "text": "Chris praises the team for shipping the redundant processing nodes and circuit breaker implementation cleanly following the March outage",
+      "type": "praise",
+      "speaker": "Chris Lee"
+    },
+    {
+      "time": 180.0,
+      "text": "Ravi reveals failover times are hitting 12-14 seconds in testing, significantly beating the 30-second target",
+      "type": "positive_pivot",
+      "speaker": "Ravi Gupta"
+    },
+    {
+      "time": 390.0,
+      "text": "Ravi flags that the event ingestion pipeline lacked proper health alerting, which contributed to the severity of the March outage",
+      "type": "feature_gap",
+      "speaker": "Ravi Gupta"
+    },
+    {
+      "time": 540.0,
+      "text": "Chris commits to formalizing quarterly reliability-focused sprints and looping in leadership to make it official",
+      "type": "action_item",
+      "speaker": "Chris Lee"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Join",
+      "time_seconds": 25.0,
+      "timestamp_ms": 1777373125000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 43.0,
+      "timestamp_ms": 1777373143000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Join",
+      "time_seconds": 54.0,
+      "timestamp_ms": 1777373154000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 1085.0,
+      "timestamp_ms": 1777374185000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Leave",
+      "time_seconds": 1093.0,
+      "timestamp_ms": 1777374193000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Leave",
+      "time_seconds": 1099.0,
+      "timestamp_ms": 1777374199000
+    }
+  ],
+  "stats": {
+    "turn_count": 39,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Chris Lee": 14,
+      "Tyler Washington": 13,
+      "Ravi Gupta": 12
+    },
+    "speaker_total_seconds": {
+      "Chris Lee": 134.5,
+      "Tyler Washington": 117.2,
+      "Ravi Gupta": 98.2
+    }
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "meeting_id": "01KQADF3D76E82BF8BA19AF2",
+  "title": "All Hands - February Wrap",
+  "organizer_email": "nina.kowalski@aegiscloud.com",
+  "host_email": "nina.kowalski@aegiscloud.com",
+  "start_time": "2026-02-28T11:00:00.000Z",
+  "end_time": "2026-02-28T11:20:30.000Z",
+  "duration_minutes": 20.5,
+  "participants": [
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Raj Kapoor",
+    "1": "Diana Reeves",
+    "2": "Megan Lawson",
+    "3": "Nina Kowalski"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 6.5,
+      "end_time": 14.5,
+      "duration": 8.0,
+      "text": "Alright, I think we've got everyone, let me just - yeah, okay, Diana's here, Megan's here, Nina just joined. Good. Let's get started."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 15.4,
+      "end_time": 20.7,
+      "duration": 5.299999999999999,
+      "text": "Sorry I'm a minute late, I was wrapping up something with the support team."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 21.5,
+      "end_time": 30.4,
+      "duration": 8.899999999999999,
+      "text": "No worries. So, February wrap - I want to keep this tight, maybe twenty minutes. Megan, you want to kick us off on the product side?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 31.7,
+      "end_time": 49.3,
+      "duration": 17.599999999999998,
+      "text": "Yeah, sure. So February was actually a pretty solid month for us on the product front. The big thing obviously is Comply v2 - we are tracking toward the April GA, the engineering team hit all their February milestones, which honestly I was a little worried about going into the month."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 50.3,
+      "end_time": 53.9,
+      "duration": 3.6000000000000014,
+      "text": "What were the milestones specifically? Just so we're all aligned."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 55.0,
+      "end_time": 72.5,
+      "duration": 17.5,
+      "text": "So the two big ones were - finishing the multi-framework reporting backend, so that's the SOC 2, PCI DSS, HIPAA, ISO 27001 support - all of that is done on the backend side. And then the second was the on-demand report generation pipeline, which went through its first full integration pass."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 73.2,
+      "end_time": 79.1,
+      "duration": 5.8999999999999915,
+      "text": "Okay, and Nina, from the QA side - where are we on testing coverage for Comply v2?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 80.0,
+      "end_time": 98.6,
+      "duration": 18.599999999999994,
+      "text": "So we're at about sixty-two percent coverage right now on the new modules. We had planned to be closer to seventy by end of February, so we're a little behind. The on-demand pipeline took longer to instrument than we expected - there were some async job handling edge cases that needed more test scaffolding."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 99.0,
+      "end_time": 104.4,
+      "duration": 5.400000000000006,
+      "text": "Eight points behind - is that recoverable by, what's the target before GA, eighty-five percent?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 105.2,
+      "end_time": 117.9,
+      "duration": 12.700000000000003,
+      "text": "Eighty percent is the target. And yeah, I think it's recoverable but it does depend on whether we get the two additional QA resources that were supposed to come over from the Detect team in March."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 118.4,
+      "end_time": 129.3,
+      "duration": 10.900000000000006,
+      "text": "That's still the plan. Marcus and - is it Priya? - they're finishing up their current sprint on Detect and then they're supposed to rotate over. I don't see that changing."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 130.7,
+      "end_time": 138.4,
+      "duration": 7.700000000000017,
+      "text": "Okay, good. I just wanted to flag it so it's on the record, not trying to raise a red flag or anything."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 139.5,
+      "end_time": 147.6,
+      "duration": 8.099999999999994,
+      "text": "No, it's good to flag. That's what these calls are for. Diana, what's the customer success angle on February - anything notable?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 149.0,
+      "end_time": 161.4,
+      "duration": 12.400000000000006,
+      "text": "Yeah, so a couple things. Renewals for the month came in at ninety-one percent, which is in line with our Q1 target. We did lose one account - Harrington Financial, they went with a competitor."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 161.8,
+      "end_time": 164.0,
+      "duration": 2.1999999999999886,
+      "text": "Do we know who they went with?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 165.0,
+      "end_time": 179.7,
+      "duration": 14.699999999999989,
+      "text": "VaultEdge. They were pretty upfront about it - their procurement team said VaultEdge came in lower on price and had a compliance module that was, quote, more mature. Which, I mean, that stings a little given what we're about to launch."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 180.1,
+      "end_time": 188.1,
+      "duration": 8.0,
+      "text": "Timing. That's just timing. If Harrington had waited another six weeks they'd have seen Comply v2 and that conversation might've gone differently."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 188.8,
+      "end_time": 204.1,
+      "duration": 15.299999999999983,
+      "text": "I know, I know. I'm not blaming anyone, it's just frustrating. The good news is we've already got two upsell conversations going - one with Brentwood Logistics on adding Identity to their Protect subscription, and another with TechCore on expanding their Detect seat count."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 204.9,
+      "end_time": 208.4,
+      "duration": 3.5,
+      "text": "What's the ARR on those two if they close?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 209.5,
+      "end_time": 218.4,
+      "duration": 8.900000000000006,
+      "text": "Combined, roughly two-forty ARR. Brentwood is the bigger one - they're a mid-market account but they've got a pretty complex identity environment so we're not underselling."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 219.8,
+      "end_time": 230.6,
+      "duration": 10.799999999999983,
+      "text": "Okay. Megan, on the Detect side - anything from the engineering team I should know about going into March? I know there's been some chatter about the event processing pipeline."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 231.6,
+      "end_time": 249.0,
+      "duration": 17.400000000000006,
+      "text": "Yeah, so - and this is something I was going to bring up separately but since we're here - the infrastructure team flagged a potential bottleneck in the ingestion layer. It's not critical right now but it's something they want to address in March before it becomes a problem."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 249.9,
+      "end_time": 253.0,
+      "duration": 3.0999999999999943,
+      "text": "How long has that been on the radar?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 253.3,
+      "end_time": 263.0,
+      "duration": 9.699999999999989,
+      "text": "Honestly, a few weeks. It got flagged during a load test in late January and it's been sitting in the backlog. I think it should probably get elevated."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 264.4,
+      "end_time": 274.5,
+      "duration": 10.100000000000023,
+      "text": "Yeah, let's - let's not let that sit. Can you get me a write-up by Tuesday? I want to understand the scope before we assign resources to it."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 275.0,
+      "end_time": 276.5,
+      "duration": 1.5,
+      "text": "Will do."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 277.3,
+      "end_time": 282.8,
+      "duration": 5.5,
+      "text": "Nina, anything from QA on the Detect side? Since you're embedded across both products right now."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 283.1,
+      "end_time": 305.5,
+      "duration": 22.399999999999977,
+      "text": "Nothing that rises to the level of a flag, really. Regression suite has been stable. The one thing I'd say is we've had a few intermittent test failures on the event processing tests specifically - like, they pass on rerun, which makes them hard to track down. Could be related to what Megan's describing, could be test environment flakiness, we're not sure yet."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 306.6,
+      "end_time": 313.6,
+      "duration": 7.0,
+      "text": "Okay, that's worth noting. Loop in the infrastructure team on those test failures - even if it's just for awareness."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 314.9,
+      "end_time": 317.8,
+      "duration": 2.900000000000034,
+      "text": "Already on it, I sent them the logs yesterday."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 318.4,
+      "end_time": 330.2,
+      "duration": 11.800000000000011,
+      "text": "Good. Alright, let's talk March priorities quickly. For product the focus is obviously Comply v2 - getting to code freeze by the third week of March so Nina's team has enough runway. Agreed, Megan?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 331.2,
+      "end_time": 344.7,
+      "duration": 13.5,
+      "text": "Agreed. I do want to have a conversation about whether we shift any Identity roadmap items to Q3 to free up eng bandwidth - I don't want to have that debate on this call, but I flagged it."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 345.5,
+      "end_time": 353.8,
+      "duration": 8.300000000000011,
+      "text": "Let's schedule that for next week - just you and me and maybe Lena from eng leadership. Diana, from your side, March priorities?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 354.7,
+      "end_time": 371.3,
+      "duration": 16.600000000000023,
+      "text": "Close Brentwood and TechCore, obviously. And I want to get a Comply v2 early access briefing set up for at least three or four of our strategic accounts before the April launch - let them know it's coming, manage expectations, get some pre-launch testimonials if we can."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 372.0,
+      "end_time": 382.5,
+      "duration": 10.5,
+      "text": "I like that. Megan, can you get Diana something she can use for those briefings - not a full deck, but talking points and maybe a draft feature summary?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 383.0,
+      "end_time": 387.0,
+      "duration": 4.0,
+      "text": "Yeah, I can get that done by end of next week."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 387.9,
+      "end_time": 393.5,
+      "duration": 5.600000000000023,
+      "text": "Perfect. Okay, I think that covers the main stuff. Anyone have anything else before we wrap?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 394.3,
+      "end_time": 395.8,
+      "duration": 1.5,
+      "text": "Nothing from me."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 396.2,
+      "end_time": 398.1,
+      "duration": 1.900000000000034,
+      "text": "I'm good. Thanks everyone."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 398.5,
+      "end_time": 405.2,
+      "duration": 6.699999999999989,
+      "text": "Alright, good call. Let's have a strong March - a lot riding on the next few weeks. Talk soon."
+    }
+  ],
+  "transcript_text": "Raj Kapoor: Alright, I think we've got everyone, let me just - yeah, okay, Diana's here, Megan's here, Nina just joined. Good. Let's get started.\nDiana Reeves: Sorry I'm a minute late, I was wrapping up something with the support team.\nRaj Kapoor: No worries. So, February wrap - I want to keep this tight, maybe twenty minutes. Megan, you want to kick us off on the product side?\nMegan Lawson: Yeah, sure. So February was actually a pretty solid month for us on the product front. The big thing obviously is Comply v2 - we are tracking toward the April GA, the engineering team hit all their February milestones, which honestly I was a little worried about going into the month.\nRaj Kapoor: What were the milestones specifically? Just so we're all aligned.\nMegan Lawson: So the two big ones were - finishing the multi-framework reporting backend, so that's the SOC 2, PCI DSS, HIPAA, ISO 27001 support - all of that is done on the backend side. And then the second was the on-demand report generation pipeline, which went through its first full integration pass.\nRaj Kapoor: Okay, and Nina, from the QA side - where are we on testing coverage for Comply v2?\nNina Kowalski: So we're at about sixty-two percent coverage right now on the new modules. We had planned to be closer to seventy by end of February, so we're a little behind. The on-demand pipeline took longer to instrument than we expected - there were some async job handling edge cases that needed more test scaffolding.\nRaj Kapoor: Eight points behind - is that recoverable by, what's the target before GA, eighty-five percent?\nNina Kowalski: Eighty percent is the target. And yeah, I think it's recoverable but it does depend on whether we get the two additional QA resources that were supposed to come over from the Detect team in March.\nRaj Kapoor: That's still the plan. Marcus and - is it Priya? - they're finishing up their current sprint on Detect and then they're supposed to rotate over. I don't see that changing.\nNina Kowalski: Okay, good. I just wanted to flag it so it's on the record, not trying to raise a red flag or anything.\nRaj Kapoor: No, it's good to flag. That's what these calls are for. Diana, what's the customer success angle on February - anything notable?\nDiana Reeves: Yeah, so a couple things. Renewals for the month came in at ninety-one percent, which is in line with our Q1 target. We did lose one account - Harrington Financial, they went with a competitor.\nMegan Lawson: Do we know who they went with?\nDiana Reeves: VaultEdge. They were pretty upfront about it - their procurement team said VaultEdge came in lower on price and had a compliance module that was, quote, more mature. Which, I mean, that stings a little given what we're about to launch.\nMegan Lawson: Timing. That's just timing. If Harrington had waited another six weeks they'd have seen Comply v2 and that conversation might've gone differently.\nDiana Reeves: I know, I know. I'm not blaming anyone, it's just frustrating. The good news is we've already got two upsell conversations going - one with Brentwood Logistics on adding Identity to their Protect subscription, and another with TechCore on expanding their Detect seat count.\nRaj Kapoor: What's the ARR on those two if they close?\nDiana Reeves: Combined, roughly two-forty ARR. Brentwood is the bigger one - they're a mid-market account but they've got a pretty complex identity environment so we're not underselling.\nRaj Kapoor: Okay. Megan, on the Detect side - anything from the engineering team I should know about going into March? I know there's been some chatter about the event processing pipeline.\nMegan Lawson: Yeah, so - and this is something I was going to bring up separately but since we're here - the infrastructure team flagged a potential bottleneck in the ingestion layer. It's not critical right now but it's something they want to address in March before it becomes a problem.\nRaj Kapoor: How long has that been on the radar?\nMegan Lawson: Honestly, a few weeks. It got flagged during a load test in late January and it's been sitting in the backlog. I think it should probably get elevated.\nRaj Kapoor: Yeah, let's - let's not let that sit. Can you get me a write-up by Tuesday? I want to understand the scope before we assign resources to it.\nMegan Lawson: Will do.\nRaj Kapoor: Nina, anything from QA on the Detect side? Since you're embedded across both products right now.\nNina Kowalski: Nothing that rises to the level of a flag, really. Regression suite has been stable. The one thing I'd say is we've had a few intermittent test failures on the event processing tests specifically - like, they pass on rerun, which makes them hard to track down. Could be related to what Megan's describing, could be test environment flakiness, we're not sure yet.\nRaj Kapoor: Okay, that's worth noting. Loop in the infrastructure team on those test failures - even if it's just for awareness.\nNina Kowalski: Already on it, I sent them the logs yesterday.\nRaj Kapoor: Good. Alright, let's talk March priorities quickly. For product the focus is obviously Comply v2 - getting to code freeze by the third week of March so Nina's team has enough runway. Agreed, Megan?\nMegan Lawson: Agreed. I do want to have a conversation about whether we shift any Identity roadmap items to Q3 to free up eng bandwidth - I don't want to have that debate on this call, but I flagged it.\nRaj Kapoor: Let's schedule that for next week - just you and me and maybe Lena from eng leadership. Diana, from your side, March priorities?\nDiana Reeves: Close Brentwood and TechCore, obviously. And I want to get a Comply v2 early access briefing set up for at least three or four of our strategic accounts before the April launch - let them know it's coming, manage expectations, get some pre-launch testimonials if we can.\nRaj Kapoor: I like that. Megan, can you get Diana something she can use for those briefings - not a full deck, but talking points and maybe a draft feature summary?\nMegan Lawson: Yeah, I can get that done by end of next week.\nRaj Kapoor: Perfect. Okay, I think that covers the main stuff. Anyone have anything else before we wrap?\nNina Kowalski: Nothing from me.\nDiana Reeves: I'm good. Thanks everyone.\nRaj Kapoor: Alright, good call. Let's have a strong March - a lot riding on the next few weeks. Talk soon.",
+  "summary": "The team held a February wrap-up call covering product, QA, and customer success updates. Comply v2 is tracking toward an April GA with backend milestones met, though QA coverage is slightly behind at 62% versus a 70% target, contingent on two QA resources rotating over from the Detect team in March. A customer loss to competitor VaultEdge and two upsell opportunities totaling ~$240K ARR were discussed on the customer success front. A potential bottleneck in the Detect event ingestion pipeline was elevated as an item needing immediate attention, and March priorities were set including code freeze for Comply v2 and early access briefings for strategic accounts.",
+  "topics": [
+    "product launch",
+    "qa coverage",
+    "customer churn",
+    "upsell opportunity",
+    "technical issue",
+    "roadmap planning"
+  ],
+  "action_items": [
+    "Megan Lawson: Prepare a write-up on the Detect ingestion layer bottleneck by Tuesday for Raj to assess scope and resource needs",
+    "Megan Lawson: Provide Diana with Comply v2 talking points and a draft feature summary by end of next week for strategic account briefings",
+    "Diana Reeves: Close upsell deals with Brentwood Logistics and TechCore, and set up Comply v2 early access briefings for 3-4 strategic accounts before April launch",
+    "Raj Kapoor: Schedule a meeting with Megan and Lena from engineering leadership to discuss potential Identity roadmap shifts to Q3"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.5,
+  "key_moments": [
+    {
+      "time": 90.0,
+      "text": "Megan confirms Comply v2 is on track for April GA with all February engineering milestones hit, including multi-framework reporting backend and on-demand report generation pipeline.",
+      "type": "positive_pivot",
+      "speaker": "Megan Lawson"
+    },
+    {
+      "time": 280.0,
+      "text": "Diana reports losing Harrington Financial to competitor VaultEdge, citing lower price and a more mature compliance module.",
+      "type": "churn_signal",
+      "speaker": "Diana Reeves"
+    },
+    {
+      "time": 430.0,
+      "text": "Megan discloses a potential bottleneck in the Detect event ingestion pipeline that has been sitting in the backlog since late January, prompting Raj to escalate it.",
+      "type": "technical_issue",
+      "speaker": "Megan Lawson"
+    },
+    {
+      "time": 560.0,
+      "text": "Diana proposes Comply v2 early access briefings for strategic accounts ahead of the April launch to manage expectations and gather pre-launch testimonials.",
+      "type": "action_item",
+      "speaker": "Diana Reeves"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Join",
+      "time_seconds": 1.0,
+      "timestamp_ms": 1772276401000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 28.0,
+      "timestamp_ms": 1772276428000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Join",
+      "time_seconds": 29.0,
+      "timestamp_ms": 1772276429000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Join",
+      "time_seconds": 43.0,
+      "timestamp_ms": 1772276443000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 1226.0,
+      "timestamp_ms": 1772277626000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Leave",
+      "time_seconds": 1211.0,
+      "timestamp_ms": 1772277611000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Leave",
+      "time_seconds": 1212.0,
+      "timestamp_ms": 1772277612000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Leave",
+      "time_seconds": 1225.0,
+      "timestamp_ms": 1772277625000
+    }
+  ],
+  "stats": {
+    "turn_count": 40,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Raj Kapoor": 18,
+      "Diana Reeves": 7,
+      "Megan Lawson": 9,
+      "Nina Kowalski": 6
+    },
+    "speaker_total_seconds": {
+      "Raj Kapoor": 133.7,
+      "Diana Reeves": 75.1,
+      "Megan Lawson": 91.4,
+      "Nina Kowalski": 65.8
+    }
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "meeting_id": "01KQ88B8EAEAA819C26CCBE7",
+  "title": "ESCALATION: Northstar Pharma - Detect Outage Impact on Compliance",
+  "organizer_email": "elena.vasquez@aegiscloud.com",
+  "host_email": "elena.vasquez@aegiscloud.com",
+  "start_time": "2026-03-15T14:30:00.000Z",
+  "end_time": "2026-03-15T14:43:18.000Z",
+  "duration_minutes": 13.3,
+  "participants": [
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "g.yoon@northstarpharma.com",
+      "domain": "northstarpharma.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "f.delaney@northstarpharma.com",
+      "domain": "northstarpharma.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "g.yoon@northstarpharma.com",
+      "domain": "northstarpharma.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "f.delaney@northstarpharma.com",
+      "domain": "northstarpharma.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Elena Vasquez",
+    "1": "Grace Yoon",
+    "2": "Frank Delaney"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 6.4,
+      "end_time": 15.8,
+      "duration": 9.4,
+      "text": "Thank you for holding, this is Elena Vasquez from Aegis Cloud Security senior support, I have your case pulled up here - am I speaking with Grace?"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 16.3,
+      "end_time": 23.7,
+      "duration": 7.399999999999999,
+      "text": "Yes, Grace Yoon, and I also have Frank Delaney on the line, he's our VP of IT - Frank, you there?"
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 24.2,
+      "end_time": 31.3,
+      "duration": 7.100000000000001,
+      "text": "Yeah I'm here. Elena, I'll be honest with you, I don't have a lot of patience left on this one."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 32.3,
+      "end_time": 46.4,
+      "duration": 14.100000000000001,
+      "text": "I completely understand, Frank, and I appreciate you both jumping on. I want to make sure we get to the bottom of this as quickly as possible. Can you walk me through what you're seeing on your end right now?"
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 47.4,
+      "end_time": 58.7,
+      "duration": 11.300000000000004,
+      "text": "What we're seeing? What we're seeing is nothing, Elena. That's the whole problem. Our Detect dashboard has been showing no events, no alerts, nothing since - Grace, when did it start?"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 59.2,
+      "end_time": 77.3,
+      "duration": 18.099999999999994,
+      "text": "We first noticed it around 6 AM this morning, March 15th. The event feed just... stopped. No incoming threat events, the monitoring panel looks completely dark. And we are a pharmaceutical company, we are subject to HIPAA, we have patient data, and we have zero visibility into our threat landscape right now."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 77.8,
+      "end_time": 95.9,
+      "duration": 18.10000000000001,
+      "text": "Right, so I do need to be upfront with you both - and I want to apologize because you absolutely should have received direct communication about this already. Aegis Detect is currently experiencing a platform-wide outage affecting the event processing pipeline. This is not isolated to Northstar, it's impacting multiple customers."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 97.2,
+      "end_time": 100.8,
+      "duration": 3.5999999999999943,
+      "text": "A platform-wide outage. So this isn't something on our end."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 101.3,
+      "end_time": 109.2,
+      "duration": 7.900000000000006,
+      "text": "No, it is not on your end at all. The root cause is on Aegis's infrastructure side, specifically the event ingestion pipeline."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 110.3,
+      "end_time": 128.6,
+      "duration": 18.299999999999997,
+      "text": "Okay so let me - let me just make sure I understand this correctly. We are paying for a security monitoring product. In healthcare. With HIPAA obligations. And your infrastructure just... fails? And nobody called us? Nobody sent an email? Grace found out because she happened to check the dashboard this morning?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 129.7,
+      "end_time": 148.1,
+      "duration": 18.400000000000006,
+      "text": "Frank, you are absolutely right to be angry about that. The communication failure on our part is inexcusable and I'm not going to try to defend it. I've already flagged your account as priority escalation and our incident communications team is aware that enterprise healthcare customers were not notified in a timely manner."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 149.1,
+      "end_time": 156.3,
+      "duration": 7.200000000000017,
+      "text": "How long has this been going on? Because if it started at 6 AM that's already - it's almost 10 now."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 156.6,
+      "end_time": 166.4,
+      "duration": 9.800000000000011,
+      "text": "The outage actually began earlier than that, around midnight Pacific. So we're looking at roughly... yes, approximately nine to ten hours at this point with no event processing."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 167.6,
+      "end_time": 187.5,
+      "duration": 19.900000000000006,
+      "text": "Nine hours. Nine hours of no threat monitoring. Elena, do you understand what that means for us? We are in the middle of a SOC 2 audit cycle. We have to demonstrate continuous monitoring. If there's a gap like this - a nine hour gap - that is a finding. That could affect our audit outcome."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 188.4,
+      "end_time": 207.1,
+      "duration": 18.69999999999999,
+      "text": "I hear you Grace and I want to address the audit concern directly because that's really important. Our engineering team is aware of the compliance implications and we will be providing detailed incident documentation that you can use as part of your audit record - timestamps, root cause, remediation steps, the whole thing."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 207.7,
+      "end_time": 213.8,
+      "duration": 6.100000000000023,
+      "text": "That's - okay that's something but it doesn't fix the nine hour gap in our logs."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 214.8,
+      "end_time": 218.2,
+      "duration": 3.3999999999999773,
+      "text": "What's the ETA on resolution? Give me a number."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 219.1,
+      "end_time": 237.7,
+      "duration": 18.599999999999994,
+      "text": "Our engineering team's current estimate is two to four hours for full event processing restoration. I want to be transparent that estimate has already slipped once this morning, so I don't want to give you a hard guarantee, but that is the latest from the incident team as of about thirty minutes ago."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 238.9,
+      "end_time": 247.5,
+      "duration": 8.599999999999994,
+      "text": "It's slipped once already. Fantastic. Frank, I told you this morning, I told you we should have had a redundancy conversation with them months ago."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 248.8,
+      "end_time": 273.3,
+      "duration": 24.5,
+      "text": "Yeah. Yeah you did. Elena, I'm going to be very direct with you. We have been with Aegis for two and a half years. We expanded our contract last fall to include Protect and Identity on top of Detect. We are not a small account. And I am sitting here right now looking at alternatives. SentinelShield, CyberNova - I've had calls with both of them in the last six months."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 274.6,
+      "end_time": 296.7,
+      "duration": 22.099999999999966,
+      "text": "Frank, I hear that, and I'm not going to try to talk you out of that evaluation during a live outage - that wouldn't be appropriate. What I can tell you is that I am personally committed to making sure your account gets the attention it needs starting right now. I'm going to stay on this with you until we have resolution."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 297.1,
+      "end_time": 301.9,
+      "duration": 4.7999999999999545,
+      "text": "What does that actually mean practically? What are you doing right now for us?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 303.1,
+      "end_time": 325.9,
+      "duration": 22.799999999999955,
+      "text": "Right now I have your ticket flagged as P1 executive escalation, I've looped in your account team so your CSM is aware, and I am actively in the incident bridge with our engineering team. I can provide you both a direct update every thirty minutes via email or I can keep you on a separate bridge line - whichever is more useful for you."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 326.9,
+      "end_time": 340.4,
+      "duration": 13.5,
+      "text": "Email updates every thirty minutes, fine. But Grace and I also need to know - is there any interim workaround? Any way to get even partial visibility into what's happening in our environment while the pipeline is down?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 341.6,
+      "end_time": 368.2,
+      "duration": 26.599999999999966,
+      "text": "So the event display in the dashboard is fully dependent on the processing pipeline, there's no way to surface raw events independently right now. What I can tell you is that the agents on your endpoints are still collecting data locally - none of that telemetry is being lost, it's queued. When the pipeline comes back online it will backfill. So you won't have a permanent gap in your data, just a delay in visibility."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 369.2,
+      "end_time": 376.4,
+      "duration": 7.199999999999989,
+      "text": "Okay that's - that's actually something I didn't know. So the data is there, it's just not being processed yet."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 376.9,
+      "end_time": 384.2,
+      "duration": 7.300000000000011,
+      "text": "Correct. The telemetry is queued and will be backfilled. I can confirm that in writing as part of the incident documentation."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 385.2,
+      "end_time": 394.7,
+      "duration": 9.5,
+      "text": "That helps for the audit log argument but it still doesn't help us right now if there's an active threat in our environment that nobody is catching."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 396.1,
+      "end_time": 412.4,
+      "duration": 16.299999999999955,
+      "text": "That's a fair point and I'm not going to pretend otherwise. The honest answer is that for the duration of this outage, real-time alerting is not functioning. If you have a separate SIEM or any other network monitoring in place those would be your fallback right now."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 413.6,
+      "end_time": 421.0,
+      "duration": 7.399999999999977,
+      "text": "We have a basic SIEM but we deprioritized tuning it because we were relying on Detect. Which now feels like a mistake."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 421.6,
+      "end_time": 435.9,
+      "duration": 14.299999999999955,
+      "text": "I understand. After this incident is resolved I want to make sure we schedule a proper architecture review with your team - redundancy, failover posture, how Detect fits into your broader stack. That conversation is overdue and that's on us."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 436.4,
+      "end_time": 451.4,
+      "duration": 15.0,
+      "text": "Elena, I want to ask you point blank - is this a systemic infrastructure problem with Aegis or is this a one-time incident? Because if your event ingestion has a single point of failure baked into the architecture, I need to know that."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 452.0,
+      "end_time": 477.9,
+      "duration": 25.899999999999977,
+      "text": "Frank, I'm going to be straight with you. The root cause does involve a single point of failure in the event ingestion layer. That is what engineering has identified. I am not going to tell you this is a one-time freak occurrence - the architecture had a vulnerability and it failed. The remediation plan includes redundant processing nodes and changes to the ingestion architecture, but I can't promise you that work is already done."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 478.4,
+      "end_time": 485.9,
+      "duration": 7.5,
+      "text": "I appreciate the honesty. I do. But Frank, you're hearing this right - single point of failure in a security product."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 486.7,
+      "end_time": 502.0,
+      "duration": 15.300000000000011,
+      "text": "Yeah. Elena, I want a call with your VP of Engineering and our CSM within 48 hours of this incident being resolved. Not a support ticket, not an email chain - a call. With someone who can speak to the architectural remediation roadmap."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 503.3,
+      "end_time": 515.8,
+      "duration": 12.499999999999943,
+      "text": "That is a completely reasonable request and I will personally make sure that is scheduled. I'm documenting that right now in your case. You'll have a confirmation from your CSM before end of business today."
+    },
+    {
+      "speaker_name": "Frank Delaney",
+      "start_time": 516.9,
+      "end_time": 531.0,
+      "duration": 14.100000000000023,
+      "text": "Alright. Thirty minute email updates, incident documentation for the audit, and that executive call within 48 hours of resolution. If we don't see movement on the pipeline in the next two hours we're going to have a much harder conversation."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 531.9,
+      "end_time": 542.8,
+      "duration": 10.899999999999977,
+      "text": "Understood. I have all of that noted and I'm on it. Grace, is there anything else you need from me right now before I get back into the incident bridge?"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 544.1,
+      "end_time": 556.8,
+      "duration": 12.699999999999932,
+      "text": "Just - please make sure the incident documentation explicitly covers the compliance gap. I need it to be detailed enough to present to an auditor. Timeline, what failed, what data was preserved. All of it."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 557.9,
+      "end_time": 576.8,
+      "duration": 18.899999999999977,
+      "text": "Absolutely. I'll make sure the documentation is audit-ready. You have my direct line - if anything changes on your end or you need to reach me before the next update, do not hesitate. I'm so sorry we're in this situation and I'm going to do everything I can to get you through it."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 578.1,
+      "end_time": 581.7,
+      "duration": 3.6000000000000227,
+      "text": "Okay. Thank you Elena. We'll be watching our inbox."
+    }
+  ],
+  "transcript_text": "Elena Vasquez: Thank you for holding, this is Elena Vasquez from Aegis Cloud Security senior support, I have your case pulled up here - am I speaking with Grace?\nGrace Yoon: Yes, Grace Yoon, and I also have Frank Delaney on the line, he's our VP of IT - Frank, you there?\nFrank Delaney: Yeah I'm here. Elena, I'll be honest with you, I don't have a lot of patience left on this one.\nElena Vasquez: I completely understand, Frank, and I appreciate you both jumping on. I want to make sure we get to the bottom of this as quickly as possible. Can you walk me through what you're seeing on your end right now?\nFrank Delaney: What we're seeing? What we're seeing is nothing, Elena. That's the whole problem. Our Detect dashboard has been showing no events, no alerts, nothing since - Grace, when did it start?\nGrace Yoon: We first noticed it around 6 AM this morning, March 15th. The event feed just... stopped. No incoming threat events, the monitoring panel looks completely dark. And we are a pharmaceutical company, we are subject to HIPAA, we have patient data, and we have zero visibility into our threat landscape right now.\nElena Vasquez: Right, so I do need to be upfront with you both - and I want to apologize because you absolutely should have received direct communication about this already. Aegis Detect is currently experiencing a platform-wide outage affecting the event processing pipeline. This is not isolated to Northstar, it's impacting multiple customers.\nGrace Yoon: A platform-wide outage. So this isn't something on our end.\nElena Vasquez: No, it is not on your end at all. The root cause is on Aegis's infrastructure side, specifically the event ingestion pipeline.\nFrank Delaney: Okay so let me - let me just make sure I understand this correctly. We are paying for a security monitoring product. In healthcare. With HIPAA obligations. And your infrastructure just... fails? And nobody called us? Nobody sent an email? Grace found out because she happened to check the dashboard this morning?\nElena Vasquez: Frank, you are absolutely right to be angry about that. The communication failure on our part is inexcusable and I'm not going to try to defend it. I've already flagged your account as priority escalation and our incident communications team is aware that enterprise healthcare customers were not notified in a timely manner.\nGrace Yoon: How long has this been going on? Because if it started at 6 AM that's already - it's almost 10 now.\nElena Vasquez: The outage actually began earlier than that, around midnight Pacific. So we're looking at roughly... yes, approximately nine to ten hours at this point with no event processing.\nGrace Yoon: Nine hours. Nine hours of no threat monitoring. Elena, do you understand what that means for us? We are in the middle of a SOC 2 audit cycle. We have to demonstrate continuous monitoring. If there's a gap like this - a nine hour gap - that is a finding. That could affect our audit outcome.\nElena Vasquez: I hear you Grace and I want to address the audit concern directly because that's really important. Our engineering team is aware of the compliance implications and we will be providing detailed incident documentation that you can use as part of your audit record - timestamps, root cause, remediation steps, the whole thing.\nGrace Yoon: That's - okay that's something but it doesn't fix the nine hour gap in our logs.\nFrank Delaney: What's the ETA on resolution? Give me a number.\nElena Vasquez: Our engineering team's current estimate is two to four hours for full event processing restoration. I want to be transparent that estimate has already slipped once this morning, so I don't want to give you a hard guarantee, but that is the latest from the incident team as of about thirty minutes ago.\nGrace Yoon: It's slipped once already. Fantastic. Frank, I told you this morning, I told you we should have had a redundancy conversation with them months ago.\nFrank Delaney: Yeah. Yeah you did. Elena, I'm going to be very direct with you. We have been with Aegis for two and a half years. We expanded our contract last fall to include Protect and Identity on top of Detect. We are not a small account. And I am sitting here right now looking at alternatives. SentinelShield, CyberNova - I've had calls with both of them in the last six months.\nElena Vasquez: Frank, I hear that, and I'm not going to try to talk you out of that evaluation during a live outage - that wouldn't be appropriate. What I can tell you is that I am personally committed to making sure your account gets the attention it needs starting right now. I'm going to stay on this with you until we have resolution.\nGrace Yoon: What does that actually mean practically? What are you doing right now for us?\nElena Vasquez: Right now I have your ticket flagged as P1 executive escalation, I've looped in your account team so your CSM is aware, and I am actively in the incident bridge with our engineering team. I can provide you both a direct update every thirty minutes via email or I can keep you on a separate bridge line - whichever is more useful for you.\nFrank Delaney: Email updates every thirty minutes, fine. But Grace and I also need to know - is there any interim workaround? Any way to get even partial visibility into what's happening in our environment while the pipeline is down?\nElena Vasquez: So the event display in the dashboard is fully dependent on the processing pipeline, there's no way to surface raw events independently right now. What I can tell you is that the agents on your endpoints are still collecting data locally - none of that telemetry is being lost, it's queued. When the pipeline comes back online it will backfill. So you won't have a permanent gap in your data, just a delay in visibility.\nGrace Yoon: Okay that's - that's actually something I didn't know. So the data is there, it's just not being processed yet.\nElena Vasquez: Correct. The telemetry is queued and will be backfilled. I can confirm that in writing as part of the incident documentation.\nGrace Yoon: That helps for the audit log argument but it still doesn't help us right now if there's an active threat in our environment that nobody is catching.\nElena Vasquez: That's a fair point and I'm not going to pretend otherwise. The honest answer is that for the duration of this outage, real-time alerting is not functioning. If you have a separate SIEM or any other network monitoring in place those would be your fallback right now.\nGrace Yoon: We have a basic SIEM but we deprioritized tuning it because we were relying on Detect. Which now feels like a mistake.\nElena Vasquez: I understand. After this incident is resolved I want to make sure we schedule a proper architecture review with your team - redundancy, failover posture, how Detect fits into your broader stack. That conversation is overdue and that's on us.\nFrank Delaney: Elena, I want to ask you point blank - is this a systemic infrastructure problem with Aegis or is this a one-time incident? Because if your event ingestion has a single point of failure baked into the architecture, I need to know that.\nElena Vasquez: Frank, I'm going to be straight with you. The root cause does involve a single point of failure in the event ingestion layer. That is what engineering has identified. I am not going to tell you this is a one-time freak occurrence - the architecture had a vulnerability and it failed. The remediation plan includes redundant processing nodes and changes to the ingestion architecture, but I can't promise you that work is already done.\nGrace Yoon: I appreciate the honesty. I do. But Frank, you're hearing this right - single point of failure in a security product.\nFrank Delaney: Yeah. Elena, I want a call with your VP of Engineering and our CSM within 48 hours of this incident being resolved. Not a support ticket, not an email chain - a call. With someone who can speak to the architectural remediation roadmap.\nElena Vasquez: That is a completely reasonable request and I will personally make sure that is scheduled. I'm documenting that right now in your case. You'll have a confirmation from your CSM before end of business today.\nFrank Delaney: Alright. Thirty minute email updates, incident documentation for the audit, and that executive call within 48 hours of resolution. If we don't see movement on the pipeline in the next two hours we're going to have a much harder conversation.\nElena Vasquez: Understood. I have all of that noted and I'm on it. Grace, is there anything else you need from me right now before I get back into the incident bridge?\nGrace Yoon: Just - please make sure the incident documentation explicitly covers the compliance gap. I need it to be detailed enough to present to an auditor. Timeline, what failed, what data was preserved. All of it.\nElena Vasquez: Absolutely. I'll make sure the documentation is audit-ready. You have my direct line - if anything changes on your end or you need to reach me before the next update, do not hesitate. I'm so sorry we're in this situation and I'm going to do everything I can to get you through it.\nGrace Yoon: Okay. Thank you Elena. We'll be watching our inbox.",
+  "summary": "Aegis Cloud Security support rep Elena Vasquez spoke with Grace Yoon and Frank Delaney (VP of IT) of Northstar, a pharmaceutical company, regarding a platform-wide outage of the Aegis Detect event processing pipeline that had been ongoing for approximately nine to ten hours. The customer was never proactively notified of the outage, which Elena acknowledged as a serious communication failure. The outage is particularly critical because Northstar handles HIPAA-regulated patient data and is currently in a SOC 2 audit cycle, creating potential compliance findings. Elena committed to 30-minute email updates, audit-ready incident documentation, and an executive call with Aegis VP of Engineering within 48 hours of resolution, while Frank made clear he is actively evaluating competitor platforms.",
+  "topics": [
+    "platform outage",
+    "hipaa compliance",
+    "soc 2 audit",
+    "churn risk",
+    "incident communication failure",
+    "infrastructure architecture"
+  ],
+  "action_items": [
+    "Elena Vasquez: Send 30-minute email updates to Grace and Frank until the event pipeline outage is fully resolved",
+    "Elena Vasquez: Produce detailed audit-ready incident documentation covering timeline, root cause, data preservation, and remediation steps for Northstar's SOC 2 auditors",
+    "Elena Vasquez: Confirm scheduling of VP of Engineering and CSM call within 48 hours of incident resolution before end of business today",
+    "Elena Vasquez: Arrange a post-incident architecture review with Northstar covering redundancy, failover posture, and Detect integration into their broader security stack"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.1,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Grace reveals Northstar is subject to HIPAA and has had zero threat visibility for hours, escalating the severity of the outage",
+      "type": "concern",
+      "speaker": "Grace Yoon"
+    },
+    {
+      "time": 285.0,
+      "text": "Grace discloses they are in an active SOC 2 audit cycle and a nine-hour monitoring gap could result in an audit finding",
+      "type": "concern",
+      "speaker": "Grace Yoon"
+    },
+    {
+      "time": 430.0,
+      "text": "Frank states he is actively evaluating competitors SentinelShield and CyberNova and has had calls with both in the last six months",
+      "type": "churn_signal",
+      "speaker": "Frank Delaney"
+    },
+    {
+      "time": 680.0,
+      "text": "Elena confirms the root cause is a single point of failure in the event ingestion architecture, acknowledging it is a systemic vulnerability rather than a one-time event",
+      "type": "technical_issue",
+      "speaker": "Elena Vasquez"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Frank Delaney",
+      "event_type": "Join",
+      "time_seconds": 18.0,
+      "timestamp_ms": 1773585018000
+    },
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Join",
+      "time_seconds": 20.0,
+      "timestamp_ms": 1773585020000
+    },
+    {
+      "participant_name": "Grace Yoon",
+      "event_type": "Join",
+      "time_seconds": 53.0,
+      "timestamp_ms": 1773585053000
+    },
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Leave",
+      "time_seconds": 788.0,
+      "timestamp_ms": 1773585788000
+    },
+    {
+      "participant_name": "Grace Yoon",
+      "event_type": "Leave",
+      "time_seconds": 781.0,
+      "timestamp_ms": 1773585781000
+    },
+    {
+      "participant_name": "Frank Delaney",
+      "event_type": "Leave",
+      "time_seconds": 780.0,
+      "timestamp_ms": 1773585780000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Elena Vasquez": 18,
+      "Grace Yoon": 14,
+      "Frank Delaney": 9
+    },
+    "speaker_total_seconds": {
+      "Elena Vasquez": 292.6,
+      "Grace Yoon": 123.6,
+      "Frank Delaney": 122.5
+    }
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "meeting_id": "01KQ85D10E82A26A8F754FB8",
+  "title": "Aegis / Bridgeport Health - Compliance Review",
+  "organizer_email": "maria.santos@aegiscloud.com",
+  "host_email": "maria.santos@aegiscloud.com",
+  "start_time": "2026-02-13T11:00:00.000Z",
+  "end_time": "2026-02-13T11:33:24.000Z",
+  "duration_minutes": 33.4,
+  "participants": [
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "e.park@bridgeporthealth.com",
+      "domain": "bridgeporthealth.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "e.park@bridgeporthealth.com",
+      "domain": "bridgeporthealth.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Maria Santos",
+    "1": "Evelyn Park",
+    "2": "Kevin O'Brien"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 3.0,
+      "end_time": 9.0,
+      "duration": 6.0,
+      "text": "Evelyn, hi! Thanks so much for making time today, I know your calendar's been absolutely packed."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 9.6,
+      "end_time": 16.4,
+      "duration": 6.799999999999999,
+      "text": "Maria, are you kidding? I've been looking forward to this one. We've got a lot to catch up on."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 17.1,
+      "end_time": 32.4,
+      "duration": 15.299999999999997,
+      "text": "That's great to hear. And I also have Kevin O'Brien on the line with me today - he's one of our Solutions Architects, and he's been deep in the weeds on everything Comply-related, so I wanted to bring him in for this one."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 33.0,
+      "end_time": 42.3,
+      "duration": 9.299999999999997,
+      "text": "Hey Evelyn, really glad to be here. I've been doing a lot of work with healthcare customers lately so hopefully I can add some useful context."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 43.2,
+      "end_time": 53.8,
+      "duration": 10.599999999999994,
+      "text": "Perfect, love that. Kevin, welcome. And yeah, compliance has just been - it's been front and center for us this quarter, so the timing of this call is actually really good."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 54.3,
+      "end_time": 62.4,
+      "duration": 8.100000000000001,
+      "text": "So maybe let's just start there - what's been driving the urgency on the compliance side? Is it an upcoming audit, internal pressure, or...?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 63.8,
+      "end_time": 82.0,
+      "duration": 18.200000000000003,
+      "text": "It's honestly a little bit of everything. We've got a HIPAA audit coming up in Q2, our board has been asking more pointed questions about our security posture, and um, we just onboarded two new hospital systems into our network so the scope of what we're responsible for has expanded significantly."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 82.6,
+      "end_time": 85.5,
+      "duration": 2.9000000000000057,
+      "text": "That's a lot of moving pieces all at once."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 86.3,
+      "end_time": 102.3,
+      "duration": 16.0,
+      "text": "Yeah, it really is. And the honest truth is, our current compliance reporting process is - it's painful. We're still pulling together spreadsheets, chasing down evidence from like six different teams, and by the time we have a report ready it's already out of date."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 103.3,
+      "end_time": 115.4,
+      "duration": 12.100000000000009,
+      "text": "Okay yeah, that's a really common pain point we hear, especially in healthcare orgs at your scale. Can I ask - are you currently using Aegis Comply at all, or is this more exploratory?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 116.7,
+      "end_time": 134.6,
+      "duration": 17.89999999999999,
+      "text": "We are using it, we've been on it for about eight months now. We're using it primarily for SOC 2 right now, and it's been - honestly it's been a night and day difference from what we were doing before. But HIPAA specifically, that's where we feel like there are gaps."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 135.6,
+      "end_time": 149.3,
+      "duration": 13.700000000000017,
+      "text": "That makes a lot of sense. So the SOC 2 workflow is working well for you - that's great to hear. And the HIPAA gap, is that more about the framework mapping itself, or is it the evidence collection, or...?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 150.0,
+      "end_time": 166.5,
+      "duration": 16.5,
+      "text": "It's kind of both, if I'm being honest. Like, I can see where controls overlap between SOC 2 and HIPAA in theory, but the platform right now makes me basically treat them as two completely separate workstreams. And that's just - that's not sustainable for my team."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 166.8,
+      "end_time": 176.4,
+      "duration": 9.599999999999994,
+      "text": "Right, right. And that's actually - Kevin, do you want to jump in here? Because I think what Evelyn's describing is exactly what we've been building toward."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 177.1,
+      "end_time": 201.5,
+      "duration": 24.400000000000006,
+      "text": "Yeah, absolutely. So Evelyn, this is something we've heard from a lot of customers in healthcare and financial services, and it's something the product team has been heads-down on. Without getting too far ahead of ourselves, what's coming in the Comply v2 roadmap is really designed to address exactly this - multi-framework support where a single piece of evidence can map across HIPAA, SOC 2, and other frameworks simultaneously."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 202.1,
+      "end_time": 214.5,
+      "duration": 12.400000000000006,
+      "text": "Oh that's - okay, tell me more about that. Because if I can collect evidence once and have it satisfy controls across multiple frameworks, that would be... I mean that would be huge for us."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 215.6,
+      "end_time": 227.0,
+      "duration": 11.400000000000006,
+      "text": "That's exactly the idea. So instead of your team going to three different places for three different audits, you'd have one unified evidence library and the platform handles the cross-framework mapping for you."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 228.1,
+      "end_time": 245.1,
+      "duration": 17.0,
+      "text": "And I know you mentioned the board asking more questions too - one thing that's really exciting about where Comply is going is the reporting side. Like, being able to generate an on-demand report for a board meeting rather than spending a week pulling it together manually."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 246.0,
+      "end_time": 257.6,
+      "duration": 11.600000000000023,
+      "text": "Oh gosh, yes. Our last board presentation, I kid you not, my team spent four days on the compliance section alone. Four days. That's time we're not spending on actual security work."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 259.1,
+      "end_time": 269.1,
+      "duration": 10.0,
+      "text": "Yeah that's - that's a real cost, right? And it's hard to quantify sometimes but when you think about your team's time and attention, it adds up fast."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 269.8,
+      "end_time": 287.0,
+      "duration": 17.19999999999999,
+      "text": "Totally. And honestly, one of the things I really appreciate about Aegis Comply versus what we looked at with some other vendors - I think VaultEdge was one - is that your framework actually integrates with our cloud environment natively. We're not just uploading PDFs and checking boxes."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 287.8,
+      "end_time": 302.3,
+      "duration": 14.5,
+      "text": "That's a really important distinction and I'm glad it's landing that way. The native integration piece is something we've invested in heavily, especially for healthcare customers where you've got such a complex environment - different EHR systems, cloud workloads, on-prem infrastructure..."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 303.2,
+      "end_time": 314.8,
+      "duration": 11.600000000000023,
+      "text": "Exactly, yeah. We've got Epic, we've got Azure, we've got a couple of legacy on-prem systems that we're slowly migrating, so getting all of that into one compliance view has been... a journey."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 315.4,
+      "end_time": 324.4,
+      "duration": 9.0,
+      "text": "A journey, I love that. Very diplomatic. So, in terms of the HIPAA audit prep - when is the actual audit, do you know yet?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 325.8,
+      "end_time": 334.7,
+      "duration": 8.899999999999977,
+      "text": "We're looking at late May, early June. So realistically we have about three months to get our evidence package together and make sure everything is airtight."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 335.7,
+      "end_time": 346.6,
+      "duration": 10.900000000000034,
+      "text": "Okay, that's a really workable timeline actually. Kevin, from a technical standpoint, what would you recommend as the near-term focus for Evelyn's team given where they are with Comply today?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 347.9,
+      "end_time": 377.3,
+      "duration": 29.400000000000034,
+      "text": "Yeah, so a few things come to mind. First, I'd want to do a quick audit of how your current evidence library is structured for SOC 2, because a lot of what you've already built there will translate directly to HIPAA controls - we just need to make sure the tagging and mapping is set up correctly. Second, there are some HIPAA-specific controls around PHI access logging and audit trails that I'd want to make sure are being captured properly through your Detect integration."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 378.0,
+      "end_time": 389.7,
+      "duration": 11.699999999999989,
+      "text": "The Detect integration - yeah, that's been working really well actually. We've got our access logs flowing in and it's been much easier to demonstrate who accessed what and when, which auditors love."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 390.1,
+      "end_time": 408.9,
+      "duration": 18.799999999999955,
+      "text": "That's great, that's a really strong foundation. And then honestly, the third thing I'd say is - let's get you a sandbox look at some of the Comply v2 features before they go GA, just so your team can start thinking about how to reorganize your workflows. Maria, is that something we could arrange?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 410.1,
+      "end_time": 422.8,
+      "duration": 12.699999999999989,
+      "text": "Absolutely, yeah. Evelyn, I think we could set up a preview session - we've been doing that with a handful of strategic customers and the feedback has been really positive. Would that be useful for you?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 423.5,
+      "end_time": 436.4,
+      "duration": 12.899999999999977,
+      "text": "Yes, please. That would be - yeah, that's exactly what I want. Even just to be able to show my team what's coming so they can see there's a light at the end of the tunnel."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 437.1,
+      "end_time": 455.8,
+      "duration": 18.69999999999999,
+      "text": "I love that framing. Okay, so let me think about next steps - I'll follow up with you on scheduling that Comply v2 preview, and Kevin, can you send over a framework mapping document that shows the SOC 2 to HIPAA control overlap? Something Evelyn's team can actually use as a working guide."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 456.2,
+      "end_time": 466.3,
+      "duration": 10.100000000000023,
+      "text": "Yeah, for sure. I'll put together a healthcare-specific version of that, pull in some of the PHI-related controls specifically. I'll have it to Maria by end of next week."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 467.0,
+      "end_time": 474.4,
+      "duration": 7.399999999999977,
+      "text": "That would be incredibly helpful. My compliance lead, she's going to be very happy when I forward that to her."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 475.7,
+      "end_time": 491.9,
+      "duration": 16.19999999999999,
+      "text": "And one more thing - Evelyn, you mentioned PCI earlier, or actually I think it was... wait, no, you didn't mention PCI. Sorry, I was thinking of another customer. Are PCI requirements on your radar at all or is it really just HIPAA and SOC 2?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 492.9,
+      "end_time": 506.0,
+      "duration": 13.100000000000023,
+      "text": "No, PCI isn't really relevant for us on the clinical side. We do have some billing systems but those go through a third-party processor so we're mostly scoped out. HIPAA and SOC 2 are the big two."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 506.7,
+      "end_time": 517.9,
+      "duration": 11.199999999999989,
+      "text": "Got it, good to know. Okay, I think we've covered a lot of ground today. Evelyn, any other questions or concerns you want to make sure we address before we wrap up?"
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 519.1,
+      "end_time": 535.9,
+      "duration": 16.799999999999955,
+      "text": "Honestly, no - I feel really good about where this is heading. I was a little nervous going into this call because Q2 feels like it's sneaking up on me, but talking through it, I think we've got a solid plan. I really appreciate you both making time."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 537.0,
+      "end_time": 550.8,
+      "duration": 13.799999999999955,
+      "text": "Of course! That's what we're here for. And Evelyn, seriously, your team has done great work getting to where you are with the platform in eight months. A lot of organizations take much longer to get to this point."
+    },
+    {
+      "speaker_name": "Evelyn Park",
+      "start_time": 551.4,
+      "end_time": 560.4,
+      "duration": 9.0,
+      "text": "Thank you, that means a lot. Alright, I'll keep an eye out for Kevin's framework doc and the preview session invite. Looking forward to it."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 561.8,
+      "end_time": 565.8,
+      "duration": 4.0,
+      "text": "Perfect. We'll be in touch soon. Thanks everyone, take care!"
+    }
+  ],
+  "transcript_text": "Maria Santos: Evelyn, hi! Thanks so much for making time today, I know your calendar's been absolutely packed.\nEvelyn Park: Maria, are you kidding? I've been looking forward to this one. We've got a lot to catch up on.\nMaria Santos: That's great to hear. And I also have Kevin O'Brien on the line with me today - he's one of our Solutions Architects, and he's been deep in the weeds on everything Comply-related, so I wanted to bring him in for this one.\nKevin O'Brien: Hey Evelyn, really glad to be here. I've been doing a lot of work with healthcare customers lately so hopefully I can add some useful context.\nEvelyn Park: Perfect, love that. Kevin, welcome. And yeah, compliance has just been - it's been front and center for us this quarter, so the timing of this call is actually really good.\nMaria Santos: So maybe let's just start there - what's been driving the urgency on the compliance side? Is it an upcoming audit, internal pressure, or...?\nEvelyn Park: It's honestly a little bit of everything. We've got a HIPAA audit coming up in Q2, our board has been asking more pointed questions about our security posture, and um, we just onboarded two new hospital systems into our network so the scope of what we're responsible for has expanded significantly.\nMaria Santos: That's a lot of moving pieces all at once.\nEvelyn Park: Yeah, it really is. And the honest truth is, our current compliance reporting process is - it's painful. We're still pulling together spreadsheets, chasing down evidence from like six different teams, and by the time we have a report ready it's already out of date.\nKevin O'Brien: Okay yeah, that's a really common pain point we hear, especially in healthcare orgs at your scale. Can I ask - are you currently using Aegis Comply at all, or is this more exploratory?\nEvelyn Park: We are using it, we've been on it for about eight months now. We're using it primarily for SOC 2 right now, and it's been - honestly it's been a night and day difference from what we were doing before. But HIPAA specifically, that's where we feel like there are gaps.\nKevin O'Brien: That makes a lot of sense. So the SOC 2 workflow is working well for you - that's great to hear. And the HIPAA gap, is that more about the framework mapping itself, or is it the evidence collection, or...?\nEvelyn Park: It's kind of both, if I'm being honest. Like, I can see where controls overlap between SOC 2 and HIPAA in theory, but the platform right now makes me basically treat them as two completely separate workstreams. And that's just - that's not sustainable for my team.\nMaria Santos: Right, right. And that's actually - Kevin, do you want to jump in here? Because I think what Evelyn's describing is exactly what we've been building toward.\nKevin O'Brien: Yeah, absolutely. So Evelyn, this is something we've heard from a lot of customers in healthcare and financial services, and it's something the product team has been heads-down on. Without getting too far ahead of ourselves, what's coming in the Comply v2 roadmap is really designed to address exactly this - multi-framework support where a single piece of evidence can map across HIPAA, SOC 2, and other frameworks simultaneously.\nEvelyn Park: Oh that's - okay, tell me more about that. Because if I can collect evidence once and have it satisfy controls across multiple frameworks, that would be... I mean that would be huge for us.\nKevin O'Brien: That's exactly the idea. So instead of your team going to three different places for three different audits, you'd have one unified evidence library and the platform handles the cross-framework mapping for you.\nMaria Santos: And I know you mentioned the board asking more questions too - one thing that's really exciting about where Comply is going is the reporting side. Like, being able to generate an on-demand report for a board meeting rather than spending a week pulling it together manually.\nEvelyn Park: Oh gosh, yes. Our last board presentation, I kid you not, my team spent four days on the compliance section alone. Four days. That's time we're not spending on actual security work.\nMaria Santos: Yeah that's - that's a real cost, right? And it's hard to quantify sometimes but when you think about your team's time and attention, it adds up fast.\nEvelyn Park: Totally. And honestly, one of the things I really appreciate about Aegis Comply versus what we looked at with some other vendors - I think VaultEdge was one - is that your framework actually integrates with our cloud environment natively. We're not just uploading PDFs and checking boxes.\nKevin O'Brien: That's a really important distinction and I'm glad it's landing that way. The native integration piece is something we've invested in heavily, especially for healthcare customers where you've got such a complex environment - different EHR systems, cloud workloads, on-prem infrastructure...\nEvelyn Park: Exactly, yeah. We've got Epic, we've got Azure, we've got a couple of legacy on-prem systems that we're slowly migrating, so getting all of that into one compliance view has been... a journey.\nMaria Santos: A journey, I love that. Very diplomatic. So, in terms of the HIPAA audit prep - when is the actual audit, do you know yet?\nEvelyn Park: We're looking at late May, early June. So realistically we have about three months to get our evidence package together and make sure everything is airtight.\nMaria Santos: Okay, that's a really workable timeline actually. Kevin, from a technical standpoint, what would you recommend as the near-term focus for Evelyn's team given where they are with Comply today?\nKevin O'Brien: Yeah, so a few things come to mind. First, I'd want to do a quick audit of how your current evidence library is structured for SOC 2, because a lot of what you've already built there will translate directly to HIPAA controls - we just need to make sure the tagging and mapping is set up correctly. Second, there are some HIPAA-specific controls around PHI access logging and audit trails that I'd want to make sure are being captured properly through your Detect integration.\nEvelyn Park: The Detect integration - yeah, that's been working really well actually. We've got our access logs flowing in and it's been much easier to demonstrate who accessed what and when, which auditors love.\nKevin O'Brien: That's great, that's a really strong foundation. And then honestly, the third thing I'd say is - let's get you a sandbox look at some of the Comply v2 features before they go GA, just so your team can start thinking about how to reorganize your workflows. Maria, is that something we could arrange?\nMaria Santos: Absolutely, yeah. Evelyn, I think we could set up a preview session - we've been doing that with a handful of strategic customers and the feedback has been really positive. Would that be useful for you?\nEvelyn Park: Yes, please. That would be - yeah, that's exactly what I want. Even just to be able to show my team what's coming so they can see there's a light at the end of the tunnel.\nMaria Santos: I love that framing. Okay, so let me think about next steps - I'll follow up with you on scheduling that Comply v2 preview, and Kevin, can you send over a framework mapping document that shows the SOC 2 to HIPAA control overlap? Something Evelyn's team can actually use as a working guide.\nKevin O'Brien: Yeah, for sure. I'll put together a healthcare-specific version of that, pull in some of the PHI-related controls specifically. I'll have it to Maria by end of next week.\nEvelyn Park: That would be incredibly helpful. My compliance lead, she's going to be very happy when I forward that to her.\nMaria Santos: And one more thing - Evelyn, you mentioned PCI earlier, or actually I think it was... wait, no, you didn't mention PCI. Sorry, I was thinking of another customer. Are PCI requirements on your radar at all or is it really just HIPAA and SOC 2?\nEvelyn Park: No, PCI isn't really relevant for us on the clinical side. We do have some billing systems but those go through a third-party processor so we're mostly scoped out. HIPAA and SOC 2 are the big two.\nMaria Santos: Got it, good to know. Okay, I think we've covered a lot of ground today. Evelyn, any other questions or concerns you want to make sure we address before we wrap up?\nEvelyn Park: Honestly, no - I feel really good about where this is heading. I was a little nervous going into this call because Q2 feels like it's sneaking up on me, but talking through it, I think we've got a solid plan. I really appreciate you both making time.\nMaria Santos: Of course! That's what we're here for. And Evelyn, seriously, your team has done great work getting to where you are with the platform in eight months. A lot of organizations take much longer to get to this point.\nEvelyn Park: Thank you, that means a lot. Alright, I'll keep an eye out for Kevin's framework doc and the preview session invite. Looking forward to it.\nMaria Santos: Perfect. We'll be in touch soon. Thanks everyone, take care!",
+  "summary": "Maria Santos and Solutions Architect Kevin O'Brien met with Evelyn Park to discuss her organization's compliance challenges ahead of a HIPAA audit in late May/early June. Evelyn's team has been using Aegis Comply for eight months primarily for SOC 2, but identified gaps in HIPAA support and frustration with treating multiple frameworks as separate workstreams. Kevin outlined near-term technical recommendations including evidence library restructuring and PHI access logging, while previewing the upcoming Comply v2 multi-framework feature that would allow single evidence items to map across HIPAA, SOC 2, and other frameworks simultaneously. The call concluded with plans to schedule a Comply v2 preview session and for Kevin to deliver a SOC 2 to HIPAA control mapping document.",
+  "topics": [
+    "hipaa audit prep",
+    "multi-framework compliance",
+    "evidence management",
+    "product roadmap",
+    "healthcare",
+    "reporting"
+  ],
+  "action_items": [
+    "Maria Santos: Schedule a Comply v2 preview session for Evelyn's team",
+    "Kevin O'Brien: Prepare and send a healthcare-specific SOC 2 to HIPAA framework mapping document by end of next week",
+    "Kevin O'Brien: Audit Evelyn's current evidence library structure to identify SOC 2 controls that translate to HIPAA and verify PHI access logging setup"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 4.1,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Evelyn describes painful manual compliance reporting process involving spreadsheets and multiple teams, with reports already outdated by the time they are ready",
+      "type": "concern",
+      "speaker": "Evelyn Park"
+    },
+    {
+      "time": 210.0,
+      "text": "Evelyn identifies a feature gap: HIPAA and SOC 2 are treated as completely separate workstreams in the current platform, which is not sustainable for her team",
+      "type": "feature_gap",
+      "speaker": "Evelyn Park"
+    },
+    {
+      "time": 310.0,
+      "text": "Kevin reveals Comply v2 roadmap will support multi-framework evidence mapping, allowing a single piece of evidence to satisfy controls across HIPAA, SOC 2, and other frameworks simultaneously",
+      "type": "positive_pivot",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 530.0,
+      "text": "Kevin recommends a sandbox preview of Comply v2 features for Evelyn's team ahead of general availability, which Maria confirms can be arranged as a strategic customer benefit",
+      "type": "action_item",
+      "speaker": "Kevin O'Brien"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Join",
+      "time_seconds": 24.0,
+      "timestamp_ms": 1770980424000
+    },
+    {
+      "participant_name": "Evelyn Park",
+      "event_type": "Join",
+      "time_seconds": 34.0,
+      "timestamp_ms": 1770980434000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Join",
+      "time_seconds": 40.0,
+      "timestamp_ms": 1770980440000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Leave",
+      "time_seconds": 1978.0,
+      "timestamp_ms": 1770982378000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Leave",
+      "time_seconds": 1999.0,
+      "timestamp_ms": 1770982399000
+    },
+    {
+      "participant_name": "Evelyn Park",
+      "event_type": "Leave",
+      "time_seconds": 1986.0,
+      "timestamp_ms": 1770982386000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Maria Santos": 15,
+      "Evelyn Park": 17,
+      "Kevin O'Brien": 9
+    },
+    "speaker_total_seconds": {
+      "Maria Santos": 165.4,
+      "Evelyn Park": 218.6,
+      "Kevin O'Brien": 143.7
+    }
+  }
+}

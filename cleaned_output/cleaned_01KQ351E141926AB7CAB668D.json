@@ -1,0 +1,459 @@
+{
+  "meeting_id": "01KQ351E141926AB7CAB668D",
+  "title": "Aegis / Northstar Pharma - Urgent: Detect Outage Impact",
+  "organizer_email": "maria.santos@aegiscloud.com",
+  "host_email": "maria.santos@aegiscloud.com",
+  "start_time": "2026-03-12T12:15:00.000Z",
+  "end_time": "2026-03-12T13:03:06.000Z",
+  "duration_minutes": 48.1,
+  "participants": [
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "g.yoon@northstarpharma.com",
+      "domain": "northstarpharma.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "g.yoon@northstarpharma.com",
+      "domain": "northstarpharma.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Maria Santos",
+    "1": "Grace Yoon"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 7.8,
+      "end_time": 15.6,
+      "duration": 7.8,
+      "text": "Grace, hi, thank you so much for jumping on this call with me today, I know your schedule is absolutely packed right now."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 16.3,
+      "end_time": 21.1,
+      "duration": 4.800000000000001,
+      "text": "Maria, I'm going to be honest with you, I almost didn't pick up."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 22.5,
+      "end_time": 28.3,
+      "duration": 5.800000000000001,
+      "text": "I - okay, I understand that, and I want you to know I take that seriously."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 29.1,
+      "end_time": 42.0,
+      "duration": 12.899999999999999,
+      "text": "Do you have any idea what the last thirty-six hours have looked like for my team? We've had zero visibility into our threat monitoring since yesterday morning and I - I don't even know where to start."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 42.5,
+      "end_time": 60.4,
+      "duration": 17.9,
+      "text": "I know, Grace, and I am so sorry. I've been following the incident updates internally and I wanted to get on a call with you specifically because Northstar is one of our most important customers and I didn't want you to feel like you were just getting a status page update."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 61.0,
+      "end_time": 73.1,
+      "duration": 12.099999999999994,
+      "text": "A status page update. Yeah, that's... that's exactly what we've been getting. Little green and yellow dots that don't tell me anything useful while my security team is flying blind in a healthcare environment, Maria."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 73.9,
+      "end_time": 83.9,
+      "duration": 10.0,
+      "text": "You're right, that's not acceptable, and I'm not here to defend the communication, I'm here to - to actually talk through what happened and what we're doing about it."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 84.9,
+      "end_time": 97.3,
+      "duration": 12.399999999999991,
+      "text": "Okay. So what did happen? Because from where I'm sitting, Aegis Detect just... stopped. Six hours of nothing. No alerts, no event processing, nothing. And we didn't even get a proactive notification from you guys."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 98.7,
+      "end_time": 118.9,
+      "duration": 20.200000000000003,
+      "text": "So, the engineering team has identified the root cause - there was a cascading failure in our event processing pipeline, um, essentially a single point of failure in the event ingestion layer that propagated across the system. It was not a breach, it was not a data loss event, but it did take down the monitoring pipeline."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 120.1,
+      "end_time": 130.7,
+      "duration": 10.599999999999994,
+      "text": "A single point of failure. In a security platform. That we are paying - Grace paused - that we are paying quite a lot of money for, I might add."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 131.8,
+      "end_time": 139.2,
+      "duration": 7.399999999999977,
+      "text": "I understand how that sounds, and frankly it should not have been architected that way. I'm not going to sugarcoat it."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 139.6,
+      "end_time": 163.0,
+      "duration": 23.400000000000006,
+      "text": "Do you understand the regulatory exposure we have? We're a pharma company, we operate under HIPAA, we have audit obligations, and for six hours - six hours - I had no way to tell you whether something was happening on our network or not. If there had been an incident during that window, I would have no logs, no alerts, no evidence trail from your platform. None."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 164.5,
+      "end_time": 179.4,
+      "duration": 14.900000000000006,
+      "text": "Grace, yes, and I want to be clear - our engineering team has confirmed that the event data itself was not lost, it was queued, and is being backfilled now. So your audit trail should be intact going back through the outage window."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 180.0,
+      "end_time": 182.6,
+      "duration": 2.5999999999999943,
+      "text": "Should be. That's a very comforting phrase."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 183.6,
+      "end_time": 193.2,
+      "duration": 9.599999999999994,
+      "text": "I hear the sarcasm and I - I deserved that. Let me get you a written confirmation of that from our engineering team today, not tomorrow, today."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 194.1,
+      "end_time": 209.9,
+      "duration": 15.800000000000011,
+      "text": "I'm going to need a lot more than that, Maria. I had my CISO on the phone with me this morning asking me why we're still on Aegis Detect when this is the second time in eight months we've had a reliability issue. Second time."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 211.1,
+      "end_time": 220.5,
+      "duration": 9.400000000000006,
+      "text": "I - wait, can you tell me more about what you're referring to as the first incident? I want to make sure I have the full picture."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 221.5,
+      "end_time": 231.0,
+      "duration": 9.5,
+      "text": "August, last year. The alert latency issue where our threat alerts were delayed by up to forty minutes. You remember that? We had a whole call about it."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 232.2,
+      "end_time": 239.5,
+      "duration": 7.300000000000011,
+      "text": "Yes, yes I do remember that. And at the time, the team made changes to the alert routing configuration -"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 240.8,
+      "end_time": 252.4,
+      "duration": 11.599999999999994,
+      "text": "And apparently didn't fix the underlying architecture, because here we are. My CISO is now asking me to put together a competitive evaluation. Those were her words. Competitive evaluation. She specifically mentioned SentinelShield."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 253.6,
+      "end_time": 270.7,
+      "duration": 17.099999999999994,
+      "text": "Okay. Grace, I - I appreciate you being direct with me about that, and I'm not going to panic and just throw discounts at you right now because I don't think that's what you need. What I'm hearing is that you need confidence that this won't happen again."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 271.9,
+      "end_time": 289.0,
+      "duration": 17.100000000000023,
+      "text": "Confidence would be a start, yes. But honestly? I'm past the point of just needing reassurance. I need to see a concrete remediation plan, I need an SLA commitment that actually has teeth, and I need to understand why I should tell my CISO to cancel that evaluation."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 289.7,
+      "end_time": 300.2,
+      "duration": 10.5,
+      "text": "Those are completely fair asks and I'm going to commit to each of them. Can I walk you through what I know the engineering team is putting in place?"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 300.8,
+      "end_time": 302.3,
+      "duration": 1.5,
+      "text": "Please. Go ahead."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 302.9,
+      "end_time": 324.0,
+      "duration": 21.100000000000023,
+      "text": "So the immediate fix that's already been deployed - and this went in last night - is redundant processing nodes in the event ingestion layer, so there's no longer a single point of failure there. And they're also implementing what's called a circuit breaker pattern, which basically means if one component starts degrading, it gets isolated before it can cascade."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 324.3,
+      "end_time": 337.3,
+      "duration": 13.0,
+      "text": "Okay. And why wasn't that in place before? I mean - I'm sorry, I don't mean to be harsh, but that sounds like table stakes for a platform that's supposed to be monitoring security threats in real time."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 338.4,
+      "end_time": 360.8,
+      "duration": 22.400000000000034,
+      "text": "You're not wrong. And I - I genuinely don't have a good answer for why that architecture decision was made the way it was. What I can tell you is that it's being corrected, and I want to get you on a call with our VP of Engineering directly so you can ask that question yourself and hear it from the person who's accountable."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 361.9,
+      "end_time": 370.2,
+      "duration": 8.300000000000011,
+      "text": "Hmm. That's - actually, yeah, I would want that. I want to hear it from someone technical, not just from a relationship layer."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 370.9,
+      "end_time": 378.4,
+      "duration": 7.5,
+      "text": "Absolutely, I'll make that happen. I'm thinking early next week - does Monday or Tuesday work for you and your CISO?"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 379.6,
+      "end_time": 384.7,
+      "duration": 5.099999999999966,
+      "text": "I'll have to check with her, but... tentatively, yes. I'll say yes for now."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 386.0,
+      "end_time": 406.8,
+      "duration": 20.80000000000001,
+      "text": "Okay, good, I'm putting that in my notes right now. And Grace, on the SLA question - I want to revisit your current agreement with us because I believe you're on our standard tier, and frankly for an organization of Northstar's size and your compliance requirements, I think we should be looking at what our enterprise SLA commitments look like."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 407.3,
+      "end_time": 420.9,
+      "duration": 13.599999999999966,
+      "text": "Our renewal is in June, Maria. I'll be very blunt with you - if I don't have something substantially better to bring to my CISO before that renewal conversation, I don't know that we're going to be renewing."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 421.4,
+      "end_time": 434.4,
+      "duration": 13.0,
+      "text": "I hear you. And I'm not going to pretend June isn't close. It's close. That's why I want to move fast on the engineering call, on the SLA review, and on getting you that written incident report."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 434.9,
+      "end_time": 446.1,
+      "duration": 11.200000000000045,
+      "text": "What does the incident report look like? Is this going to be a two-paragraph email or are we talking something I can actually hand to a regulator if I need to?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 447.5,
+      "end_time": 456.0,
+      "duration": 8.5,
+      "text": "It'll be a full post-mortem document - timeline, root cause analysis, impact scope, remediation steps taken, and forward-looking prevention measures. Something you can actually use."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 457.2,
+      "end_time": 463.9,
+      "duration": 6.699999999999989,
+      "text": "Okay. That's... that's what I need. And I need it by end of week, not end of next week."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 464.3,
+      "end_time": 471.6,
+      "duration": 7.300000000000011,
+      "text": "End of week, I'll make it happen. I'll personally follow up with engineering today to make sure that's on track."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 472.4,
+      "end_time": 489.3,
+      "duration": 16.900000000000034,
+      "text": "I'm also going to need to understand - and this is something my CISO is going to want to know - what is your monitoring capability for the platform itself? Like, how did it take six hours for this to be resolved? Were you not watching your own system?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 490.2,
+      "end_time": 503.4,
+      "duration": 13.199999999999989,
+      "text": "That is a fair and frankly really important question, and I want to make sure I give you an accurate answer rather than guessing. I'll get that specifically addressed in the post-mortem, the internal detection and response timeline."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 504.7,
+      "end_time": 511.3,
+      "duration": 6.600000000000023,
+      "text": "Because six hours is a long time. A long time. Something should have been paging someone well before that."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 511.7,
+      "end_time": 533.8,
+      "duration": 22.099999999999966,
+      "text": "You're absolutely right, and I share that frustration honestly. Okay - so let me recap what I'm committing to so we're both clear. Written confirmation of event data integrity today, full post-mortem document by end of this week, executive and engineering call with you and your CISO early next week, and a review of your SLA tier. Does that cover the immediate priorities?"
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 534.6,
+      "end_time": 555.1,
+      "duration": 20.5,
+      "text": "Those are the immediate priorities, yes. But Maria - I want you to understand where I'm sitting. This isn't just about the outage anymore. It's about whether Aegis Detect is the right platform for us long term. And I'm going to be doing my own due diligence on that regardless of what you put in front of me."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 556.3,
+      "end_time": 576.3,
+      "duration": 20.0,
+      "text": "I would expect nothing less from someone in your role. And I'm not afraid of that evaluation - I think when you look at total capability, especially when you factor in how Detect integrates with Comply and Identity for your HIPAA obligations, that story is still very strong. But I have to earn that back. I know that."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 577.1,
+      "end_time": 591.3,
+      "duration": 14.199999999999932,
+      "text": "Yeah. You do. Alright. I need to get back to my team, they're still dealing with the backfill validation and I want to make sure we're not missing anything. Send me that data integrity confirmation as soon as you can."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 592.8,
+      "end_time": 604.7,
+      "duration": 11.900000000000091,
+      "text": "You'll have it within the hour. Grace, thank you for staying on the call with me. I know this wasn't easy and I'm going to do everything I can to make this right."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 605.3,
+      "end_time": 612.7,
+      "duration": 7.400000000000091,
+      "text": "I appreciate that. I really do. Just... don't let me down on the follow-through, okay? That's the part that's going to matter."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 613.7,
+      "end_time": 615.4,
+      "duration": 1.6999999999999318,
+      "text": "I won't. Talk soon, Grace."
+    },
+    {
+      "speaker_name": "Grace Yoon",
+      "start_time": 616.4,
+      "end_time": 617.9,
+      "duration": 1.5,
+      "text": "Okay. Bye."
+    }
+  ],
+  "transcript_text": "Maria Santos: Grace, hi, thank you so much for jumping on this call with me today, I know your schedule is absolutely packed right now.\nGrace Yoon: Maria, I'm going to be honest with you, I almost didn't pick up.\nMaria Santos: I - okay, I understand that, and I want you to know I take that seriously.\nGrace Yoon: Do you have any idea what the last thirty-six hours have looked like for my team? We've had zero visibility into our threat monitoring since yesterday morning and I - I don't even know where to start.\nMaria Santos: I know, Grace, and I am so sorry. I've been following the incident updates internally and I wanted to get on a call with you specifically because Northstar is one of our most important customers and I didn't want you to feel like you were just getting a status page update.\nGrace Yoon: A status page update. Yeah, that's... that's exactly what we've been getting. Little green and yellow dots that don't tell me anything useful while my security team is flying blind in a healthcare environment, Maria.\nMaria Santos: You're right, that's not acceptable, and I'm not here to defend the communication, I'm here to - to actually talk through what happened and what we're doing about it.\nGrace Yoon: Okay. So what did happen? Because from where I'm sitting, Aegis Detect just... stopped. Six hours of nothing. No alerts, no event processing, nothing. And we didn't even get a proactive notification from you guys.\nMaria Santos: So, the engineering team has identified the root cause - there was a cascading failure in our event processing pipeline, um, essentially a single point of failure in the event ingestion layer that propagated across the system. It was not a breach, it was not a data loss event, but it did take down the monitoring pipeline.\nGrace Yoon: A single point of failure. In a security platform. That we are paying - Grace paused - that we are paying quite a lot of money for, I might add.\nMaria Santos: I understand how that sounds, and frankly it should not have been architected that way. I'm not going to sugarcoat it.\nGrace Yoon: Do you understand the regulatory exposure we have? We're a pharma company, we operate under HIPAA, we have audit obligations, and for six hours - six hours - I had no way to tell you whether something was happening on our network or not. If there had been an incident during that window, I would have no logs, no alerts, no evidence trail from your platform. None.\nMaria Santos: Grace, yes, and I want to be clear - our engineering team has confirmed that the event data itself was not lost, it was queued, and is being backfilled now. So your audit trail should be intact going back through the outage window.\nGrace Yoon: Should be. That's a very comforting phrase.\nMaria Santos: I hear the sarcasm and I - I deserved that. Let me get you a written confirmation of that from our engineering team today, not tomorrow, today.\nGrace Yoon: I'm going to need a lot more than that, Maria. I had my CISO on the phone with me this morning asking me why we're still on Aegis Detect when this is the second time in eight months we've had a reliability issue. Second time.\nMaria Santos: I - wait, can you tell me more about what you're referring to as the first incident? I want to make sure I have the full picture.\nGrace Yoon: August, last year. The alert latency issue where our threat alerts were delayed by up to forty minutes. You remember that? We had a whole call about it.\nMaria Santos: Yes, yes I do remember that. And at the time, the team made changes to the alert routing configuration -\nGrace Yoon: And apparently didn't fix the underlying architecture, because here we are. My CISO is now asking me to put together a competitive evaluation. Those were her words. Competitive evaluation. She specifically mentioned SentinelShield.\nMaria Santos: Okay. Grace, I - I appreciate you being direct with me about that, and I'm not going to panic and just throw discounts at you right now because I don't think that's what you need. What I'm hearing is that you need confidence that this won't happen again.\nGrace Yoon: Confidence would be a start, yes. But honestly? I'm past the point of just needing reassurance. I need to see a concrete remediation plan, I need an SLA commitment that actually has teeth, and I need to understand why I should tell my CISO to cancel that evaluation.\nMaria Santos: Those are completely fair asks and I'm going to commit to each of them. Can I walk you through what I know the engineering team is putting in place?\nGrace Yoon: Please. Go ahead.\nMaria Santos: So the immediate fix that's already been deployed - and this went in last night - is redundant processing nodes in the event ingestion layer, so there's no longer a single point of failure there. And they're also implementing what's called a circuit breaker pattern, which basically means if one component starts degrading, it gets isolated before it can cascade.\nGrace Yoon: Okay. And why wasn't that in place before? I mean - I'm sorry, I don't mean to be harsh, but that sounds like table stakes for a platform that's supposed to be monitoring security threats in real time.\nMaria Santos: You're not wrong. And I - I genuinely don't have a good answer for why that architecture decision was made the way it was. What I can tell you is that it's being corrected, and I want to get you on a call with our VP of Engineering directly so you can ask that question yourself and hear it from the person who's accountable.\nGrace Yoon: Hmm. That's - actually, yeah, I would want that. I want to hear it from someone technical, not just from a relationship layer.\nMaria Santos: Absolutely, I'll make that happen. I'm thinking early next week - does Monday or Tuesday work for you and your CISO?\nGrace Yoon: I'll have to check with her, but... tentatively, yes. I'll say yes for now.\nMaria Santos: Okay, good, I'm putting that in my notes right now. And Grace, on the SLA question - I want to revisit your current agreement with us because I believe you're on our standard tier, and frankly for an organization of Northstar's size and your compliance requirements, I think we should be looking at what our enterprise SLA commitments look like.\nGrace Yoon: Our renewal is in June, Maria. I'll be very blunt with you - if I don't have something substantially better to bring to my CISO before that renewal conversation, I don't know that we're going to be renewing.\nMaria Santos: I hear you. And I'm not going to pretend June isn't close. It's close. That's why I want to move fast on the engineering call, on the SLA review, and on getting you that written incident report.\nGrace Yoon: What does the incident report look like? Is this going to be a two-paragraph email or are we talking something I can actually hand to a regulator if I need to?\nMaria Santos: It'll be a full post-mortem document - timeline, root cause analysis, impact scope, remediation steps taken, and forward-looking prevention measures. Something you can actually use.\nGrace Yoon: Okay. That's... that's what I need. And I need it by end of week, not end of next week.\nMaria Santos: End of week, I'll make it happen. I'll personally follow up with engineering today to make sure that's on track.\nGrace Yoon: I'm also going to need to understand - and this is something my CISO is going to want to know - what is your monitoring capability for the platform itself? Like, how did it take six hours for this to be resolved? Were you not watching your own system?\nMaria Santos: That is a fair and frankly really important question, and I want to make sure I give you an accurate answer rather than guessing. I'll get that specifically addressed in the post-mortem, the internal detection and response timeline.\nGrace Yoon: Because six hours is a long time. A long time. Something should have been paging someone well before that.\nMaria Santos: You're absolutely right, and I share that frustration honestly. Okay - so let me recap what I'm committing to so we're both clear. Written confirmation of event data integrity today, full post-mortem document by end of this week, executive and engineering call with you and your CISO early next week, and a review of your SLA tier. Does that cover the immediate priorities?\nGrace Yoon: Those are the immediate priorities, yes. But Maria - I want you to understand where I'm sitting. This isn't just about the outage anymore. It's about whether Aegis Detect is the right platform for us long term. And I'm going to be doing my own due diligence on that regardless of what you put in front of me.\nMaria Santos: I would expect nothing less from someone in your role. And I'm not afraid of that evaluation - I think when you look at total capability, especially when you factor in how Detect integrates with Comply and Identity for your HIPAA obligations, that story is still very strong. But I have to earn that back. I know that.\nGrace Yoon: Yeah. You do. Alright. I need to get back to my team, they're still dealing with the backfill validation and I want to make sure we're not missing anything. Send me that data integrity confirmation as soon as you can.\nMaria Santos: You'll have it within the hour. Grace, thank you for staying on the call with me. I know this wasn't easy and I'm going to do everything I can to make this right.\nGrace Yoon: I appreciate that. I really do. Just... don't let me down on the follow-through, okay? That's the part that's going to matter.\nMaria Santos: I won't. Talk soon, Grace.\nGrace Yoon: Okay. Bye.",
+  "summary": "Grace Yoon (Northstar) called with serious concerns after a six-hour outage of Aegis Detect left her security team with zero threat monitoring visibility in a HIPAA-regulated pharma environment. This was the second reliability incident in eight months, prompting her CISO to request a competitive evaluation against SentinelShield. Maria Santos acknowledged the failures, explained the root cause as a cascading single point of failure in the event ingestion pipeline, and committed to multiple remediation steps. The call ended with Grace conditionally willing to continue but emphasizing the renewal in June is at risk without significant improvement.",
+  "topics": [
+    "outage",
+    "compliance",
+    "churn risk",
+    "sla review",
+    "incident response",
+    "renewal"
+  ],
+  "action_items": [
+    "Maria Santos: Send written confirmation of event data integrity to Grace within the hour",
+    "Maria Santos: Deliver a full post-mortem document (timeline, root cause, remediation, prevention) by end of this week",
+    "Maria Santos: Schedule an executive and VP of Engineering call with Grace and her CISO for early next week (Monday or Tuesday)",
+    "Maria Santos: Initiate a review of Northstar's SLA tier to propose enterprise-level commitments ahead of the June renewal"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.1,
+  "key_moments": [
+    {
+      "time": 45.0,
+      "text": "Grace describes 36 hours of zero threat monitoring visibility for her security team in a healthcare environment, expressing deep frustration.",
+      "type": "concern",
+      "speaker": "Grace Yoon"
+    },
+    {
+      "time": 310.0,
+      "text": "Grace reveals her CISO has requested a competitive evaluation and specifically mentioned SentinelShield as an alternative.",
+      "type": "churn_signal",
+      "speaker": "Grace Yoon"
+    },
+    {
+      "time": 530.0,
+      "text": "Grace states the renewal is in June and she does not know if they will renew without substantially better assurances for her CISO.",
+      "type": "churn_signal",
+      "speaker": "Grace Yoon"
+    },
+    {
+      "time": 680.0,
+      "text": "Maria commits to four concrete deliverables: data integrity confirmation today, post-mortem by end of week, engineering call next week, and SLA tier review.",
+      "type": "action_item",
+      "speaker": "Maria Santos"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Join",
+      "time_seconds": 28.0,
+      "timestamp_ms": 1773317728000
+    },
+    {
+      "participant_name": "Grace Yoon",
+      "event_type": "Join",
+      "time_seconds": 44.0,
+      "timestamp_ms": 1773317744000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Leave",
+      "time_seconds": 2873.0,
+      "timestamp_ms": 1773320573000
+    },
+    {
+      "participant_name": "Grace Yoon",
+      "event_type": "Leave",
+      "time_seconds": 2886.0,
+      "timestamp_ms": 1773320586000
+    }
+  ],
+  "stats": {
+    "turn_count": 48,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Maria Santos": 24,
+      "Grace Yoon": 24
+    },
+    "speaker_total_seconds": {
+      "Maria Santos": 307.4,
+      "Grace Yoon": 259.3
+    }
+  }
+}

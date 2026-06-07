@@ -1,0 +1,480 @@
+{
+  "meeting_id": "01KQFEEFFF8E80B0DFD10880",
+  "title": "SOC 2 Type II - Final Review",
+  "organizer_email": "ravi.gupta@aegiscloud.com",
+  "host_email": "ravi.gupta@aegiscloud.com",
+  "start_time": "2026-04-20T09:30:00.000Z",
+  "end_time": "2026-04-20T10:10:24.000Z",
+  "duration_minutes": 40.4,
+  "participants": [
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Ravi Gupta",
+    "1": "Nina Kowalski",
+    "2": "Tyler Washington",
+    "3": "Diana Reeves"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 6.9,
+      "end_time": 12.6,
+      "duration": 5.699999999999999,
+      "text": "Alright, I think everyone's on - Diana, Nina, Tyler, you guys can hear me okay?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 13.7,
+      "end_time": 15.5,
+      "duration": 1.8000000000000007,
+      "text": "Yep, loud and clear."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 16.5,
+      "end_time": 18.0,
+      "duration": 1.5,
+      "text": "Good here."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 19.1,
+      "end_time": 23.3,
+      "duration": 4.199999999999999,
+      "text": "I'm on, just grabbing my coffee real quick - okay, go ahead."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 23.9,
+      "end_time": 40.9,
+      "duration": 17.0,
+      "text": "Ha, same. Okay so, uh, really the reason I pulled everyone together today is we need to do a final walk-through of the SOC 2 Type II materials before we hand them off to the auditors, and honestly I'm - I'm feeling pretty good about where we landed."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 41.5,
+      "end_time": 54.1,
+      "duration": 12.600000000000001,
+      "text": "Yeah, I was looking at the Comply v2 exports this morning and I have to say, like, the on-demand reporting is just - it's night and day compared to what we were doing manually before."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 54.6,
+      "end_time": 61.5,
+      "duration": 6.899999999999999,
+      "text": "Right? I remember we used to spend like two weeks pulling evidence packages together and now it's just... click, done."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 62.1,
+      "end_time": 73.0,
+      "duration": 10.899999999999999,
+      "text": "I mean, that's genuinely what I'm going to tell customers when they ask about the April launch - like, this is the thing that changes the audit prep conversation completely."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 73.5,
+      "end_time": 82.0,
+      "duration": 8.5,
+      "text": "Totally agree. Okay so let me share my screen - give me one sec - alright, can everyone see the evidence package summary?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 82.4,
+      "end_time": 84.0,
+      "duration": 1.5999999999999943,
+      "text": "Yep, got it."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 84.6,
+      "end_time": 86.1,
+      "duration": 1.5,
+      "text": "Mhm, I can see it."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 87.4,
+      "end_time": 102.2,
+      "duration": 14.799999999999997,
+      "text": "So, the big sections are - availability controls, change management, logical access, and then incident response. And I want to walk through each one but I also, um, I want to flag the incident response section specifically because of the March outage."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 102.7,
+      "end_time": 110.3,
+      "duration": 7.599999999999994,
+      "text": "Yeah, I was going to ask about that. How are we - how are we framing the Detect outage in the documentation?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 110.7,
+      "end_time": 129.9,
+      "duration": 19.200000000000003,
+      "text": "So that's actually something Tyler and I worked through last week, and I think we landed in a really good place - like, we're being fully transparent about the six hours of monitoring visibility loss, but we're also showing the complete remediation arc. Redundant nodes, the circuit breaker implementation, post-incident review docs, all of it."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 130.9,
+      "end_time": 143.8,
+      "duration": 12.900000000000006,
+      "text": "Yeah and honestly, from a controls narrative standpoint, auditors typically respond well when you can show a clear before-and-after. Like here's the gap, here's what we did, here's the evidence that it's fixed. That's a mature posture."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 144.4,
+      "end_time": 159.9,
+      "duration": 15.5,
+      "text": "I completely agree with that framing. And Diana, from a customer-facing perspective, if this comes up in any account conversations, that's exactly the story - we identified a single point of failure, we fixed it comprehensively, and we have the audit trail to prove it."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 161.1,
+      "end_time": 172.9,
+      "duration": 11.800000000000011,
+      "text": "Good, yeah. I'll be honest, I was a little nervous about how the auditors would receive that section but hearing you frame it that way, Tyler, that makes me feel a lot better."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 173.7,
+      "end_time": 190.1,
+      "duration": 16.400000000000006,
+      "text": "Yeah, I think we're in good shape. Okay, so let me jump to the logical access section - this is where Aegis Identity really shines in our own dogfooding. We've got full MFA enforcement documented, SSO logs going back the full audit window, access review records quarterly."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 191.1,
+      "end_time": 200.2,
+      "duration": 9.099999999999994,
+      "text": "Oh, and the deprovisioning logs - I want to make sure those are in there. That was a gap finding from our last Type I."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 201.1,
+      "end_time": 208.9,
+      "duration": 7.800000000000011,
+      "text": "Yep, already in there. I specifically made sure of that. You can see it - section 4.3, employee offboarding workflow with timestamps."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 209.6,
+      "end_time": 214.7,
+      "duration": 5.099999999999994,
+      "text": "Oh nice, okay. Yeah that's - that's going to close out that finding cleanly."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 216.0,
+      "end_time": 229.0,
+      "duration": 13.0,
+      "text": "Good catch on that, Nina. Okay, change management - this one I'm most proud of honestly. We have full CI/CD pipeline logs, peer review approvals, the deployment freeze records from the March incident window. It's very complete."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 230.1,
+      "end_time": 242.6,
+      "duration": 12.5,
+      "text": "Can I ask a quick question about the Comply v2 export format? Because I want to understand - when the auditor pulls this, is it like a static PDF or is it a live link?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 243.4,
+      "end_time": 257.6,
+      "duration": 14.200000000000017,
+      "text": "So it's - great question. The export is a point-in-time PDF with a hash for verification, but you can also generate a new one on demand if they want a refreshed snapshot. So it's not like a stale document sitting there."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 258.3,
+      "end_time": 270.1,
+      "duration": 11.800000000000011,
+      "text": "Oh that's actually really elegant. Because the last audit we did, the auditor kept coming back with 'oh can I get an updated version of this' and it was just - it was painful."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 270.7,
+      "end_time": 279.7,
+      "duration": 9.0,
+      "text": "Ha, yes - that's exactly the problem Comply v2 was designed to solve. Like, that pain point is the whole origin story of that feature."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 280.5,
+      "end_time": 297.8,
+      "duration": 17.30000000000001,
+      "text": "Okay, I want to flag one thing on availability - and this is minor, but I want to make sure we address it before submission. The uptime SLA documentation references 99.9% availability, but during the March window we were technically below that for Detect. Are we annotating that?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 298.4,
+      "end_time": 317.0,
+      "duration": 18.600000000000023,
+      "text": "Yeah, so - I'm glad you brought that up. We have a separate exception note with the incident report attached. Auditors expect exceptions to be documented, not hidden. And we actually came in above 99.9 for the full audit period across all other services, so the overall availability story is still very strong."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 318.2,
+      "end_time": 325.2,
+      "duration": 7.0,
+      "text": "Got it, okay. I just wanted to make sure it wasn't buried. As long as it's clearly cross-referenced I'm happy."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 326.0,
+      "end_time": 332.2,
+      "duration": 6.199999999999989,
+      "text": "It is, yeah. I'll send you the specific page reference after this call so you can verify."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 333.6,
+      "end_time": 339.1,
+      "duration": 5.5,
+      "text": "Perfect. And can we talk about timeline? When are we actually submitting this to the auditors?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 339.7,
+      "end_time": 354.5,
+      "duration": 14.800000000000011,
+      "text": "So the plan is to get Nina's final QA sign-off by Wednesday, I'll do one last pass on the evidence package Thursday morning, and then we submit Thursday afternoon. Auditors have us in their queue for the week of April 27th."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 355.4,
+      "end_time": 367.3,
+      "duration": 11.900000000000034,
+      "text": "Wednesday is tight for me but doable. I just need to make sure I have access to the final Comply export - Tyler, can you make sure I'm provisioned on the reporting module?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 368.4,
+      "end_time": 373.6,
+      "duration": 5.2000000000000455,
+      "text": "Already done, actually. I added you this morning. You should have gotten an email."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 375.0,
+      "end_time": 379.5,
+      "duration": 4.5,
+      "text": "Oh! Yeah, I see it now. Okay great, that's super helpful, thank you."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 380.7,
+      "end_time": 391.6,
+      "duration": 10.900000000000034,
+      "text": "Awesome. Diana, from your side, is there anything the CS team needs from this package? Like, are there customer-facing commitments that are dependent on us getting the Type II cert?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 392.0,
+      "end_time": 407.2,
+      "duration": 15.199999999999989,
+      "text": "Yes, actually - we have three enterprise prospects who've asked for SOC 2 Type II as a procurement requirement, and two existing customers who have it in their renewal terms. So getting the report by end of May is pretty critical for us commercially."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 407.6,
+      "end_time": 421.6,
+      "duration": 14.0,
+      "text": "Okay, that's helpful context. I don't think we're at risk on that timeline at all - if we submit Thursday and the audit window is the week of the 27th, we should have the report well before end of May."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 422.3,
+      "end_time": 434.1,
+      "duration": 11.800000000000011,
+      "text": "That's a relief. I'll let those accounts know we're on track. Honestly, this whole process has been so much smoother than I expected - like, last year's audit was just a nightmare in comparison."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 435.5,
+      "end_time": 452.3,
+      "duration": 16.80000000000001,
+      "text": "Well, and that's honestly a credit to everyone on this call. Ravi, you've been driving this thing relentlessly, Tyler the technical documentation is rock solid, Nina your QA process caught things we would have been embarrassed to submit. It's just - yeah, it's been a good team effort."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 453.2,
+      "end_time": 469.4,
+      "duration": 16.19999999999999,
+      "text": "Aw, thanks Nina. Okay, I think we've covered everything - let me just recap the actions real quick: Nina signs off by Wednesday, I finalize Thursday morning, Tyler you're on standby for any last-minute evidence questions, and Diana you'll hold comms with the auditor contact. Everyone good?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 469.8,
+      "end_time": 471.3,
+      "duration": 1.5,
+      "text": "Good with me."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 472.7,
+      "end_time": 476.4,
+      "duration": 3.6999999999999886,
+      "text": "Yep, sounds great. Excited to get this across the finish line."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 477.4,
+      "end_time": 480.6,
+      "duration": 3.2000000000000455,
+      "text": "Same. Thanks everyone, this was a great call."
+    }
+  ],
+  "transcript_text": "Ravi Gupta: Alright, I think everyone's on - Diana, Nina, Tyler, you guys can hear me okay?\nNina Kowalski: Yep, loud and clear.\nTyler Washington: Good here.\nDiana Reeves: I'm on, just grabbing my coffee real quick - okay, go ahead.\nRavi Gupta: Ha, same. Okay so, uh, really the reason I pulled everyone together today is we need to do a final walk-through of the SOC 2 Type II materials before we hand them off to the auditors, and honestly I'm - I'm feeling pretty good about where we landed.\nNina Kowalski: Yeah, I was looking at the Comply v2 exports this morning and I have to say, like, the on-demand reporting is just - it's night and day compared to what we were doing manually before.\nTyler Washington: Right? I remember we used to spend like two weeks pulling evidence packages together and now it's just... click, done.\nDiana Reeves: I mean, that's genuinely what I'm going to tell customers when they ask about the April launch - like, this is the thing that changes the audit prep conversation completely.\nRavi Gupta: Totally agree. Okay so let me share my screen - give me one sec - alright, can everyone see the evidence package summary?\nNina Kowalski: Yep, got it.\nTyler Washington: Mhm, I can see it.\nRavi Gupta: So, the big sections are - availability controls, change management, logical access, and then incident response. And I want to walk through each one but I also, um, I want to flag the incident response section specifically because of the March outage.\nDiana Reeves: Yeah, I was going to ask about that. How are we - how are we framing the Detect outage in the documentation?\nRavi Gupta: So that's actually something Tyler and I worked through last week, and I think we landed in a really good place - like, we're being fully transparent about the six hours of monitoring visibility loss, but we're also showing the complete remediation arc. Redundant nodes, the circuit breaker implementation, post-incident review docs, all of it.\nTyler Washington: Yeah and honestly, from a controls narrative standpoint, auditors typically respond well when you can show a clear before-and-after. Like here's the gap, here's what we did, here's the evidence that it's fixed. That's a mature posture.\nNina Kowalski: I completely agree with that framing. And Diana, from a customer-facing perspective, if this comes up in any account conversations, that's exactly the story - we identified a single point of failure, we fixed it comprehensively, and we have the audit trail to prove it.\nDiana Reeves: Good, yeah. I'll be honest, I was a little nervous about how the auditors would receive that section but hearing you frame it that way, Tyler, that makes me feel a lot better.\nRavi Gupta: Yeah, I think we're in good shape. Okay, so let me jump to the logical access section - this is where Aegis Identity really shines in our own dogfooding. We've got full MFA enforcement documented, SSO logs going back the full audit window, access review records quarterly.\nNina Kowalski: Oh, and the deprovisioning logs - I want to make sure those are in there. That was a gap finding from our last Type I.\nTyler Washington: Yep, already in there. I specifically made sure of that. You can see it - section 4.3, employee offboarding workflow with timestamps.\nNina Kowalski: Oh nice, okay. Yeah that's - that's going to close out that finding cleanly.\nRavi Gupta: Good catch on that, Nina. Okay, change management - this one I'm most proud of honestly. We have full CI/CD pipeline logs, peer review approvals, the deployment freeze records from the March incident window. It's very complete.\nDiana Reeves: Can I ask a quick question about the Comply v2 export format? Because I want to understand - when the auditor pulls this, is it like a static PDF or is it a live link?\nRavi Gupta: So it's - great question. The export is a point-in-time PDF with a hash for verification, but you can also generate a new one on demand if they want a refreshed snapshot. So it's not like a stale document sitting there.\nDiana Reeves: Oh that's actually really elegant. Because the last audit we did, the auditor kept coming back with 'oh can I get an updated version of this' and it was just - it was painful.\nTyler Washington: Ha, yes - that's exactly the problem Comply v2 was designed to solve. Like, that pain point is the whole origin story of that feature.\nNina Kowalski: Okay, I want to flag one thing on availability - and this is minor, but I want to make sure we address it before submission. The uptime SLA documentation references 99.9% availability, but during the March window we were technically below that for Detect. Are we annotating that?\nRavi Gupta: Yeah, so - I'm glad you brought that up. We have a separate exception note with the incident report attached. Auditors expect exceptions to be documented, not hidden. And we actually came in above 99.9 for the full audit period across all other services, so the overall availability story is still very strong.\nNina Kowalski: Got it, okay. I just wanted to make sure it wasn't buried. As long as it's clearly cross-referenced I'm happy.\nRavi Gupta: It is, yeah. I'll send you the specific page reference after this call so you can verify.\nDiana Reeves: Perfect. And can we talk about timeline? When are we actually submitting this to the auditors?\nRavi Gupta: So the plan is to get Nina's final QA sign-off by Wednesday, I'll do one last pass on the evidence package Thursday morning, and then we submit Thursday afternoon. Auditors have us in their queue for the week of April 27th.\nNina Kowalski: Wednesday is tight for me but doable. I just need to make sure I have access to the final Comply export - Tyler, can you make sure I'm provisioned on the reporting module?\nTyler Washington: Already done, actually. I added you this morning. You should have gotten an email.\nNina Kowalski: Oh! Yeah, I see it now. Okay great, that's super helpful, thank you.\nRavi Gupta: Awesome. Diana, from your side, is there anything the CS team needs from this package? Like, are there customer-facing commitments that are dependent on us getting the Type II cert?\nDiana Reeves: Yes, actually - we have three enterprise prospects who've asked for SOC 2 Type II as a procurement requirement, and two existing customers who have it in their renewal terms. So getting the report by end of May is pretty critical for us commercially.\nRavi Gupta: Okay, that's helpful context. I don't think we're at risk on that timeline at all - if we submit Thursday and the audit window is the week of the 27th, we should have the report well before end of May.\nDiana Reeves: That's a relief. I'll let those accounts know we're on track. Honestly, this whole process has been so much smoother than I expected - like, last year's audit was just a nightmare in comparison.\nNina Kowalski: Well, and that's honestly a credit to everyone on this call. Ravi, you've been driving this thing relentlessly, Tyler the technical documentation is rock solid, Nina your QA process caught things we would have been embarrassed to submit. It's just - yeah, it's been a good team effort.\nRavi Gupta: Aw, thanks Nina. Okay, I think we've covered everything - let me just recap the actions real quick: Nina signs off by Wednesday, I finalize Thursday morning, Tyler you're on standby for any last-minute evidence questions, and Diana you'll hold comms with the auditor contact. Everyone good?\nTyler Washington: Good with me.\nNina Kowalski: Yep, sounds great. Excited to get this across the finish line.\nDiana Reeves: Same. Thanks everyone, this was a great call.",
+  "summary": "The team held a final walk-through of their SOC 2 Type II audit materials before submission to auditors. Key sections reviewed included availability controls, change management, logical access, and incident response, with particular attention given to the March Detect outage and how it is framed transparently in the documentation. The Comply v2 platform was praised for dramatically reducing the manual effort of evidence packaging. The submission is planned for Thursday, with an audit window scheduled for the week of April 27th, which is critical for five commercial accounts dependent on the Type II certification.",
+  "topics": [
+    "soc 2 type ii audit",
+    "compliance",
+    "incident response",
+    "audit evidence packaging",
+    "product dogfooding",
+    "customer renewals"
+  ],
+  "action_items": [
+    "Nina Kowalski: Complete final QA sign-off on the evidence package by Wednesday",
+    "Ravi Gupta: Do a final pass on the evidence package Thursday morning and submit to auditors Thursday afternoon; send Nina the specific page reference for the availability exception note",
+    "Tyler Washington: Remain on standby for any last-minute evidence questions during final review",
+    "Diana Reeves: Hold communications with the auditor contact and update the five dependent enterprise accounts that the submission is on track"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.7,
+  "key_moments": [
+    {
+      "time": 45.0,
+      "text": "Nina highlights that Comply v2's on-demand reporting is night and day compared to manual evidence collection, with Tyler noting it reduced a two-week process to a single click.",
+      "type": "praise",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 210.0,
+      "text": "Ravi and Tyler explain how the March Detect outage and six-hour monitoring visibility loss are being framed transparently in the incident response section, with full remediation documentation included.",
+      "type": "concern",
+      "speaker": "Ravi Gupta"
+    },
+    {
+      "time": 480.0,
+      "text": "Nina flags that the uptime SLA documentation references 99.9% availability but Detect fell below that during the March window, requesting it be clearly annotated rather than buried.",
+      "type": "technical_issue",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 620.0,
+      "text": "Diana confirms three enterprise prospects and two existing customers have SOC 2 Type II as a procurement or renewal requirement, making the end-of-May report deadline commercially critical.",
+      "type": "action_item",
+      "speaker": "Diana Reeves"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 4.0,
+      "timestamp_ms": 1776677404000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Join",
+      "time_seconds": 12.0,
+      "timestamp_ms": 1776677412000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 38.0,
+      "timestamp_ms": 1776677438000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Join",
+      "time_seconds": 45.0,
+      "timestamp_ms": 1776677445000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Leave",
+      "time_seconds": 2422.0,
+      "timestamp_ms": 1776679822000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 2400.0,
+      "timestamp_ms": 1776679800000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Leave",
+      "time_seconds": 2421.0,
+      "timestamp_ms": 1776679821000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 2416.0,
+      "timestamp_ms": 1776679816000
+    }
+  ],
+  "stats": {
+    "turn_count": 44,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Ravi Gupta": 14,
+      "Nina Kowalski": 12,
+      "Tyler Washington": 8,
+      "Diana Reeves": 10
+    },
+    "speaker_total_seconds": {
+      "Ravi Gupta": 189.5,
+      "Nina Kowalski": 106.9,
+      "Tyler Washington": 46.3,
+      "Diana Reeves": 94.5
+    }
+  }
+}

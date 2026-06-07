@@ -1,0 +1,428 @@
+{
+  "meeting_id": "01KQB632F1ADC378C42F2C03",
+  "title": "Support Case #7570 - Silverline Brands Comply v2 License Upgrade",
+  "organizer_email": "david.kim@aegiscloud.com",
+  "host_email": "david.kim@aegiscloud.com",
+  "start_time": "2026-04-18T09:15:00.000Z",
+  "end_time": "2026-04-18T09:31:18.000Z",
+  "duration_minutes": 16.3,
+  "participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "m.tan@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "d.flores@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "m.tan@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "d.flores@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "David Kim",
+    "1": "Michelle Tan",
+    "2": "Dominic Flores"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "David Kim",
+      "start_time": 3.0,
+      "end_time": 11.7,
+      "duration": 8.7,
+      "text": "Hi, thanks for calling Aegis Cloud Security support, this is David Kim. Can I get the name of the account holder I'm speaking with today?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 12.8,
+      "end_time": 22.4,
+      "duration": 9.599999999999998,
+      "text": "Hi David, yeah, this is Michelle Tan, I'm the Security Manager over at Silverline Brands. I've got our IT Director Dominic Flores on with me as well."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 23.1,
+      "end_time": 25.0,
+      "duration": 1.8999999999999986,
+      "text": "Hey David, Dominic here."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 25.9,
+      "end_time": 37.0,
+      "duration": 11.100000000000001,
+      "text": "Great, hey Michelle, hey Dominic. So I'm pulling up the account now - this is in reference to support case number 7570, is that right? The Comply v2 license upgrade question?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 37.8,
+      "end_time": 52.3,
+      "duration": 14.5,
+      "text": "Yeah, that's the one. So we submitted the case on, uh, I think Wednesday? And basically the issue is we upgraded to Comply v2 when it launched on the seventh and we're seeing a billing discrepancy that we can't quite figure out."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 52.8,
+      "end_time": 63.2,
+      "duration": 10.400000000000006,
+      "text": "Okay, got it. And just to make sure I have the full picture - you're saying the charge you're seeing doesn't match what you expected from the v2 upgrade pricing?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 64.4,
+      "end_time": 82.6,
+      "duration": 18.19999999999999,
+      "text": "Exactly. So, we were on the standard Comply tier, and when the v2 upgrade was announced, the pricing documentation we received said the upgrade would be prorated for the remainder of the billing cycle. But what hit our invoice on, I think it was April 14th, looks like a full month charge."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 83.8,
+      "end_time": 98.4,
+      "duration": 14.600000000000009,
+      "text": "Yeah, and I'll just add - this isn't, like, a massive dollar amount difference, but from an accounting standpoint we need the invoices to match what was agreed, so it's kind of a compliance thing internally for us. No pun intended."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 99.5,
+      "end_time": 109.4,
+      "duration": 9.900000000000006,
+      "text": "Ha, right, no pun intended. No, that makes total sense, I understand. Okay so let me pull up the billing records here. Give me just a second."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 110.2,
+      "end_time": 111.7,
+      "duration": 1.5,
+      "text": "Sure, take your time."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 113.2,
+      "end_time": 131.3,
+      "duration": 18.10000000000001,
+      "text": "Alright so I'm looking at your account. Silverline Brands, you're on an annual contract, billing cycle runs the first of each month. And I can see the Comply v2 upgrade was activated on April 7th. And then there's an invoice generated on April 14th... okay yeah, I see what you're describing."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 132.3,
+      "end_time": 135.9,
+      "duration": 3.5999999999999943,
+      "text": "So it does look like a full month was charged?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 137.3,
+      "end_time": 156.3,
+      "duration": 19.0,
+      "text": "It does appear that way on the invoice, yeah. So what I'm seeing is the system generated the differential charge - so the difference between your standard Comply tier and the v2 tier - but it looks like it didn't apply the proration correctly. It calculated from April 1st instead of April 7th."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 157.5,
+      "end_time": 162.7,
+      "duration": 5.199999999999989,
+      "text": "Right, so we're being charged for six days we hadn't even activated v2 yet."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 163.1,
+      "end_time": 175.6,
+      "duration": 12.5,
+      "text": "That's correct, yeah. So the proration should have started on the 7th, which would be... 24 days out of 30, so the charge should be 80 percent of the monthly differential, not the full amount."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 176.2,
+      "end_time": 185.0,
+      "duration": 8.800000000000011,
+      "text": "Yeah, that's what we calculated too. The difference comes out to - I have it written down here - it's about $340 that was overbilled."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 186.1,
+      "end_time": 204.5,
+      "duration": 18.400000000000006,
+      "text": "Okay, let me verify that against what I'm seeing on my end. So the monthly differential for Comply v2 versus the standard tier on your contract is... $1,275 per month. 80 percent of that would be $1,020, and it looks like you were charged $1,275. So yeah, the overbilled amount would be $255."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 205.3,
+      "end_time": 210.1,
+      "duration": 4.799999999999983,
+      "text": "Hmm, we had $340. Let me - Dominic, do you have the spreadsheet handy?"
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 211.4,
+      "end_time": 226.6,
+      "duration": 15.199999999999989,
+      "text": "Yeah, give me a sec. I'm looking at it... okay so we were calculating 6 days out of 28 days because April has 30 days, so we did... wait, no. Yeah we might have used the wrong number of days. We put 28."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 228.0,
+      "end_time": 243.4,
+      "duration": 15.400000000000006,
+      "text": "Yeah that'll do it. Our billing system uses 30 days as the standard month for proration purposes regardless of the actual calendar month, so the correct figure should be $255. I can show you the calculation breakdown if that helps for your records."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 244.4,
+      "end_time": 254.8,
+      "duration": 10.400000000000006,
+      "text": "Yeah that would actually be great, if you can send that over via the case that would be helpful for us when we go back to our finance team."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 255.8,
+      "end_time": 272.1,
+      "duration": 16.30000000000001,
+      "text": "Absolutely, I'll attach that to case 7570. So the next step here - I'm going to flag this for our billing team to issue a credit of $255 to your account. That would be applied to your next invoice, which I believe would go out May 1st."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 273.2,
+      "end_time": 283.1,
+      "duration": 9.900000000000034,
+      "text": "Okay. And is there any kind of confirmation we'll get on the credit, like a separate notification or will it just show up on the May invoice?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 283.6,
+      "end_time": 300.9,
+      "duration": 17.299999999999955,
+      "text": "So typically what happens is you'll get an email confirmation from our billing team within one to two business days acknowledging the credit, and then yes it'll also appear as a line item on your May invoice as a credit applied. You should be able to see both."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 301.4,
+      "end_time": 312.4,
+      "duration": 11.0,
+      "text": "Okay good, that works for us. And just out of curiosity, is this a known issue with the v2 upgrade billing? Like should we expect this to self-correct going forward or...?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 313.6,
+      "end_time": 331.6,
+      "duration": 18.0,
+      "text": "That's a fair question. I'm actually going to make a note in the case to escalate to our billing systems team because if this proration miscalculation happened on your account, it's possible other customers who upgraded on April 7th may have the same issue. So it's worth them taking a look."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 332.6,
+      "end_time": 338.1,
+      "duration": 5.5,
+      "text": "Yeah, that makes sense. We're definitely not the only ones who upgraded on launch day."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 339.2,
+      "end_time": 350.9,
+      "duration": 11.699999999999989,
+      "text": "Right, exactly. So I'll flag that internally. And for your account specifically, from May 1st onward you should be on the correct recurring rate for v2, so this should be a one-time correction."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 352.3,
+      "end_time": 368.4,
+      "duration": 16.099999999999966,
+      "text": "Okay. And while I have you - this is a little separate from the billing thing - but we've been using Comply v2 for a couple of weeks now and the on-demand SOC 2 reporting is working well for us. We ran our first report last week."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 368.8,
+      "end_time": 377.0,
+      "duration": 8.199999999999989,
+      "text": "Oh good, glad to hear that. That's one of the bigger additions in v2, so it's good to know it's working well for you."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 377.4,
+      "end_time": 392.7,
+      "duration": 15.300000000000011,
+      "text": "Yeah we're a retail company so PCI DSS is obviously important for us and we're going to be running that report soon too. Just wanted to make sure the license covers all four frameworks - SOC 2, PCI DSS, HIPAA, and ISO 27001."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 394.2,
+      "end_time": 406.6,
+      "duration": 12.400000000000034,
+      "text": "Yes, correct - all four are included under the Comply v2 license. There's no additional charge per framework. So your PCI DSS reports, HIPAA, and ISO 27001 are all available to you at no extra cost."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 407.0,
+      "end_time": 412.5,
+      "duration": 5.5,
+      "text": "Perfect, that's what we thought but good to confirm. Dominic, you wanted to ask something else?"
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 413.4,
+      "end_time": 421.2,
+      "duration": 7.800000000000011,
+      "text": "Yeah, just - is there a limit on how many reports we can run per month? Or is it truly unlimited on-demand?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 422.2,
+      "end_time": 441.6,
+      "duration": 19.400000000000034,
+      "text": "It is unlimited on-demand reporting under the v2 license. There's no cap on report generation. The only thing to be aware of is that very large report exports - like if you're pulling a full year of audit data - those can take a few minutes to process, but there's no hard limit on frequency."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 442.2,
+      "end_time": 445.0,
+      "duration": 2.8000000000000114,
+      "text": "Good to know, thanks. That's all I had."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 445.9,
+      "end_time": 467.2,
+      "duration": 21.30000000000001,
+      "text": "Alright, so just to summarize what we're doing - I'm logging the billing discrepancy, issuing a credit of $255 to your account to be applied on the May 1st invoice, sending a breakdown of the proration calculation to the case for your finance team, and flagging this to the billing systems team for a broader review. Does that cover everything?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 468.3,
+      "end_time": 472.9,
+      "duration": 4.599999999999966,
+      "text": "Yes, that covers it. Thanks David, appreciate you walking through it with us."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 473.7,
+      "end_time": 483.0,
+      "duration": 9.300000000000011,
+      "text": "Of course, happy to help. You'll get an email summary from me through the case portal within the hour. Have a good rest of your day."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 484.5,
+      "end_time": 486.0,
+      "duration": 1.5,
+      "text": "You too, thanks."
+    }
+  ],
+  "transcript_text": "David Kim: Hi, thanks for calling Aegis Cloud Security support, this is David Kim. Can I get the name of the account holder I'm speaking with today?\nMichelle Tan: Hi David, yeah, this is Michelle Tan, I'm the Security Manager over at Silverline Brands. I've got our IT Director Dominic Flores on with me as well.\nDominic Flores: Hey David, Dominic here.\nDavid Kim: Great, hey Michelle, hey Dominic. So I'm pulling up the account now - this is in reference to support case number 7570, is that right? The Comply v2 license upgrade question?\nMichelle Tan: Yeah, that's the one. So we submitted the case on, uh, I think Wednesday? And basically the issue is we upgraded to Comply v2 when it launched on the seventh and we're seeing a billing discrepancy that we can't quite figure out.\nDavid Kim: Okay, got it. And just to make sure I have the full picture - you're saying the charge you're seeing doesn't match what you expected from the v2 upgrade pricing?\nMichelle Tan: Exactly. So, we were on the standard Comply tier, and when the v2 upgrade was announced, the pricing documentation we received said the upgrade would be prorated for the remainder of the billing cycle. But what hit our invoice on, I think it was April 14th, looks like a full month charge.\nDominic Flores: Yeah, and I'll just add - this isn't, like, a massive dollar amount difference, but from an accounting standpoint we need the invoices to match what was agreed, so it's kind of a compliance thing internally for us. No pun intended.\nDavid Kim: Ha, right, no pun intended. No, that makes total sense, I understand. Okay so let me pull up the billing records here. Give me just a second.\nMichelle Tan: Sure, take your time.\nDavid Kim: Alright so I'm looking at your account. Silverline Brands, you're on an annual contract, billing cycle runs the first of each month. And I can see the Comply v2 upgrade was activated on April 7th. And then there's an invoice generated on April 14th... okay yeah, I see what you're describing.\nMichelle Tan: So it does look like a full month was charged?\nDavid Kim: It does appear that way on the invoice, yeah. So what I'm seeing is the system generated the differential charge - so the difference between your standard Comply tier and the v2 tier - but it looks like it didn't apply the proration correctly. It calculated from April 1st instead of April 7th.\nDominic Flores: Right, so we're being charged for six days we hadn't even activated v2 yet.\nDavid Kim: That's correct, yeah. So the proration should have started on the 7th, which would be... 24 days out of 30, so the charge should be 80 percent of the monthly differential, not the full amount.\nMichelle Tan: Yeah, that's what we calculated too. The difference comes out to - I have it written down here - it's about $340 that was overbilled.\nDavid Kim: Okay, let me verify that against what I'm seeing on my end. So the monthly differential for Comply v2 versus the standard tier on your contract is... $1,275 per month. 80 percent of that would be $1,020, and it looks like you were charged $1,275. So yeah, the overbilled amount would be $255.\nMichelle Tan: Hmm, we had $340. Let me - Dominic, do you have the spreadsheet handy?\nDominic Flores: Yeah, give me a sec. I'm looking at it... okay so we were calculating 6 days out of 28 days because April has 30 days, so we did... wait, no. Yeah we might have used the wrong number of days. We put 28.\nDavid Kim: Yeah that'll do it. Our billing system uses 30 days as the standard month for proration purposes regardless of the actual calendar month, so the correct figure should be $255. I can show you the calculation breakdown if that helps for your records.\nMichelle Tan: Yeah that would actually be great, if you can send that over via the case that would be helpful for us when we go back to our finance team.\nDavid Kim: Absolutely, I'll attach that to case 7570. So the next step here - I'm going to flag this for our billing team to issue a credit of $255 to your account. That would be applied to your next invoice, which I believe would go out May 1st.\nDominic Flores: Okay. And is there any kind of confirmation we'll get on the credit, like a separate notification or will it just show up on the May invoice?\nDavid Kim: So typically what happens is you'll get an email confirmation from our billing team within one to two business days acknowledging the credit, and then yes it'll also appear as a line item on your May invoice as a credit applied. You should be able to see both.\nMichelle Tan: Okay good, that works for us. And just out of curiosity, is this a known issue with the v2 upgrade billing? Like should we expect this to self-correct going forward or...?\nDavid Kim: That's a fair question. I'm actually going to make a note in the case to escalate to our billing systems team because if this proration miscalculation happened on your account, it's possible other customers who upgraded on April 7th may have the same issue. So it's worth them taking a look.\nDominic Flores: Yeah, that makes sense. We're definitely not the only ones who upgraded on launch day.\nDavid Kim: Right, exactly. So I'll flag that internally. And for your account specifically, from May 1st onward you should be on the correct recurring rate for v2, so this should be a one-time correction.\nMichelle Tan: Okay. And while I have you - this is a little separate from the billing thing - but we've been using Comply v2 for a couple of weeks now and the on-demand SOC 2 reporting is working well for us. We ran our first report last week.\nDavid Kim: Oh good, glad to hear that. That's one of the bigger additions in v2, so it's good to know it's working well for you.\nMichelle Tan: Yeah we're a retail company so PCI DSS is obviously important for us and we're going to be running that report soon too. Just wanted to make sure the license covers all four frameworks - SOC 2, PCI DSS, HIPAA, and ISO 27001.\nDavid Kim: Yes, correct - all four are included under the Comply v2 license. There's no additional charge per framework. So your PCI DSS reports, HIPAA, and ISO 27001 are all available to you at no extra cost.\nMichelle Tan: Perfect, that's what we thought but good to confirm. Dominic, you wanted to ask something else?\nDominic Flores: Yeah, just - is there a limit on how many reports we can run per month? Or is it truly unlimited on-demand?\nDavid Kim: It is unlimited on-demand reporting under the v2 license. There's no cap on report generation. The only thing to be aware of is that very large report exports - like if you're pulling a full year of audit data - those can take a few minutes to process, but there's no hard limit on frequency.\nDominic Flores: Good to know, thanks. That's all I had.\nDavid Kim: Alright, so just to summarize what we're doing - I'm logging the billing discrepancy, issuing a credit of $255 to your account to be applied on the May 1st invoice, sending a breakdown of the proration calculation to the case for your finance team, and flagging this to the billing systems team for a broader review. Does that cover everything?\nMichelle Tan: Yes, that covers it. Thanks David, appreciate you walking through it with us.\nDavid Kim: Of course, happy to help. You'll get an email summary from me through the case portal within the hour. Have a good rest of your day.\nDominic Flores: You too, thanks.",
+  "summary": "Michelle Tan and Dominic Flores from Silverline Brands contacted Aegis Cloud Security support regarding a billing discrepancy on their Comply v2 upgrade. They were overbilled $255 because the proration calculation started from April 1st instead of the upgrade activation date of April 7th. David Kim confirmed the error, arranged a $255 credit to be applied on the May 1st invoice, and agreed to escalate the issue to the billing systems team as it may affect other customers who upgraded on launch day. The call also covered confirmation that all four compliance frameworks and unlimited on-demand reporting are included under the v2 license.",
+  "topics": [
+    "billing discrepancy",
+    "proration error",
+    "license upgrade",
+    "compliance reporting",
+    "credit request",
+    "product features"
+  ],
+  "action_items": [
+    "David Kim: Issue a $255 billing credit to Silverline Brands account to be applied on the May 1st invoice",
+    "David Kim: Attach proration calculation breakdown to support case 7570 for the customer's finance team",
+    "David Kim: Escalate proration miscalculation to billing systems team for a broader review of all April 7th v2 upgrades",
+    "David Kim: Send email summary through the case portal to the customer within the hour"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.9,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Michelle explains the billing discrepancy: they were charged a full month instead of a prorated amount after upgrading to Comply v2 on April 7th.",
+      "type": "concern",
+      "speaker": "Michelle Tan"
+    },
+    {
+      "time": 285.0,
+      "text": "David confirms the proration error, identifying the system calculated from April 1st instead of April 7th, and agrees the overbilled amount is $255.",
+      "type": "technical_issue",
+      "speaker": "David Kim"
+    },
+    {
+      "time": 480.0,
+      "text": "David proactively flags the issue for escalation to the billing systems team, noting other customers who upgraded on launch day may be affected.",
+      "type": "action_item",
+      "speaker": "David Kim"
+    },
+    {
+      "time": 590.0,
+      "text": "Michelle shares positive feedback on the on-demand SOC 2 reporting feature in Comply v2, noting it is working well after their first report run.",
+      "type": "praise",
+      "speaker": "Michelle Tan"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Dominic Flores",
+      "event_type": "Join",
+      "time_seconds": 28.0,
+      "timestamp_ms": 1776503728000
+    },
+    {
+      "participant_name": "David Kim",
+      "event_type": "Join",
+      "time_seconds": 55.0,
+      "timestamp_ms": 1776503755000
+    },
+    {
+      "participant_name": "Michelle Tan",
+      "event_type": "Join",
+      "time_seconds": 55.0,
+      "timestamp_ms": 1776503755000
+    },
+    {
+      "participant_name": "David Kim",
+      "event_type": "Leave",
+      "time_seconds": 952.0,
+      "timestamp_ms": 1776504652000
+    },
+    {
+      "participant_name": "Michelle Tan",
+      "event_type": "Leave",
+      "time_seconds": 971.0,
+      "timestamp_ms": 1776504671000
+    },
+    {
+      "participant_name": "Dominic Flores",
+      "event_type": "Leave",
+      "time_seconds": 949.0,
+      "timestamp_ms": 1776504649000
+    }
+  ],
+  "stats": {
+    "turn_count": 40,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "David Kim": 18,
+      "Michelle Tan": 13,
+      "Dominic Flores": 9
+    },
+    "speaker_total_seconds": {
+      "David Kim": 257.4,
+      "Michelle Tan": 123.9,
+      "Dominic Flores": 64.4
+    }
+  }
+}

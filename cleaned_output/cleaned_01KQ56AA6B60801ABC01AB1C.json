@@ -1,0 +1,446 @@
+{
+  "meeting_id": "01KQ56AA6B60801ABC01AB1C",
+  "title": "Support Case #8179 - Clearwater Medical Overage Charges Dispute",
+  "organizer_email": "sarah.chen@aegiscloud.com",
+  "host_email": "sarah.chen@aegiscloud.com",
+  "start_time": "2026-04-10T17:30:00.000Z",
+  "end_time": "2026-04-10T17:51:30.000Z",
+  "duration_minutes": 21.5,
+  "participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "a.mehta@clearwatermed.com",
+      "domain": "clearwatermed.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "n.simmons@clearwatermed.com",
+      "domain": "clearwatermed.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "a.mehta@clearwatermed.com",
+      "domain": "clearwatermed.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "n.simmons@clearwatermed.com",
+      "domain": "clearwatermed.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Sarah Chen",
+    "1": "Ajay Mehta",
+    "2": "Natalie Simmons",
+    "3": "Marcus Williams"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 6.2,
+      "end_time": 19.7,
+      "duration": 13.5,
+      "text": "Hi, thanks for joining - this is Sarah Chen from Aegis Cloud Security support, I have Marcus Williams here with me as well. Can I confirm I have Ajay Mehta and Natalie Simmons from Clearwater Medical on the line?"
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 21.0,
+      "end_time": 26.8,
+      "duration": 5.800000000000001,
+      "text": "Yes, Ajay here. Thanks for getting us on the calendar quickly, I appreciate that at least."
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 27.7,
+      "end_time": 30.9,
+      "duration": 3.1999999999999993,
+      "text": "Natalie Simmons, IT Director. Yeah, we're both here."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 31.7,
+      "end_time": 51.1,
+      "duration": 19.400000000000002,
+      "text": "Great, great. And Marcus is going to be helping me pull up the billing details on our end as we go through this. So, um, I pulled up support case 8179 - it looks like this is about some overage charges on your April invoice. Do you want to walk us through what you're seeing?"
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 51.6,
+      "end_time": 64.2,
+      "duration": 12.600000000000001,
+      "text": "Yeah, so - look, I'll be direct. We got our April invoice and there are overage charges totaling just over four thousand dollars that I do not understand and frankly did not expect. At all."
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 64.9,
+      "end_time": 80.5,
+      "duration": 15.599999999999994,
+      "text": "And from my side as Compliance Manager, a big chunk of those overages seem to be tied to the Comply module, which - I mean, we literally just got the v2 upgrade notification like three days ago. So I'm not sure what's happening there."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 81.8,
+      "end_time": 90.0,
+      "duration": 8.200000000000003,
+      "text": "Okay, yeah, that's helpful context. Marcus, can you pull up the Clearwater Medical account and get into the billing breakdown for the April cycle?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 90.6,
+      "end_time": 93.0,
+      "duration": 2.4000000000000057,
+      "text": "Already on it, pulling it up now."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 93.6,
+      "end_time": 105.0,
+      "duration": 11.400000000000006,
+      "text": "While he's doing that - Natalie, Ajay, can you tell me roughly which line items stood out the most? Was it just the Comply module or are you seeing things across multiple modules?"
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 105.9,
+      "end_time": 119.9,
+      "duration": 14.0,
+      "text": "It's primarily Comply, but there's also something under Detect that I - I flagged that too because honestly after what happened in March with that outage, I'm not exactly inclined to give Aegis the benefit of the doubt right now."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 120.9,
+      "end_time": 134.6,
+      "duration": 13.699999999999989,
+      "text": "That's totally fair, and I hear you on the March incident - we're not going to brush past that. Let's get into the specifics first and then we can talk through everything. What does the Detect line item say?"
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 135.1,
+      "end_time": 144.8,
+      "duration": 9.700000000000017,
+      "text": "It's showing an overage for - let me get my invoice up - okay, it says excess event ingestion volume, something like eight hundred and forty dollars."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 145.9,
+      "end_time": 164.4,
+      "duration": 18.5,
+      "text": "Okay, Sarah, I've got the account open. So looking at the billing detail - the Comply overage is three thousand two hundred and change, and it's flagged as on-demand report generation exceeding the plan tier limit. Looks like a significant number of compliance reports were run between April 7th and April 9th."
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 164.8,
+      "end_time": 185.2,
+      "duration": 20.399999999999977,
+      "text": "April 7th - that's the day of the Comply v2 launch. So we're being charged for reports that - I mean, were we even notified that running those reports would trigger overage billing? Because I went in and explored the new features and ran a few reports, I had no idea that was going to cost us extra money."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 185.6,
+      "end_time": 197.3,
+      "duration": 11.700000000000017,
+      "text": "That is a really important question and I want to make sure I understand exactly what happened. Marcus, what's the plan tier for Clearwater's Comply module, and what's the included report generation limit?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 197.6,
+      "end_time": 208.1,
+      "duration": 10.5,
+      "text": "They're on the Professional tier for Comply, which includes up to twenty on-demand reports per billing cycle. The account shows forty-seven reports generated between April 7th and April 9th."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 208.5,
+      "end_time": 215.3,
+      "duration": 6.800000000000011,
+      "text": "Forty-seven - okay, so Ajay, does that number make sense to you? Like, do you recall running that many reports?"
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 216.4,
+      "end_time": 242.6,
+      "duration": 26.19999999999999,
+      "text": "I mean - yes and no. When the v2 launched, it was the first time we had access to multi-framework reporting. We're a healthcare organization, we need to demonstrate compliance across HIPAA, SOC 2, we're also starting a PCI DSS review. So yeah, I ran reports. I was exploring the feature set. But I had absolutely no warning that I was going to blow past some threshold and rack up thousands of dollars in charges."
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 243.2,
+      "end_time": 253.9,
+      "duration": 10.700000000000017,
+      "text": "Was there any in-app notification, any banner, anything that said hey you're approaching your limit? Because if there was and he missed it that's one thing, but if there wasn't-"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 254.3,
+      "end_time": 263.1,
+      "duration": 8.800000000000011,
+      "text": "That's - yeah, I want to look into that. Marcus, do we have any record of in-app threshold alerts being triggered or sent for this account?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 264.2,
+      "end_time": 281.0,
+      "duration": 16.80000000000001,
+      "text": "I'm checking the notification logs now... I'm not seeing any threshold alert sent for this account. There's a flag here actually - it looks like the overage alert configuration for Comply on-demand reports may not have been enabled by default on existing accounts that were migrated to v2."
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 281.9,
+      "end_time": 292.8,
+      "duration": 10.900000000000034,
+      "text": "Wait - so you're saying existing customers were upgraded to v2 and the overage alerts weren't even turned on? So we had no way of knowing we were racking up charges?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 293.5,
+      "end_time": 311.8,
+      "duration": 18.30000000000001,
+      "text": "It - it appears that way for your account, and I want to be transparent with you rather than dance around it. If the alerts weren't configured and you weren't warned, that's a problem on our end and I'm going to escalate this internally to our billing and product teams today."
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 312.9,
+      "end_time": 329.6,
+      "duration": 16.700000000000045,
+      "text": "I appreciate you saying that Sarah, I do. But I also want to flag - this is not a small number. Four thousand dollars is not something we can just absorb, especially when we're a medical organization with tight budget controls. We're not a Fortune 500 company."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 330.6,
+      "end_time": 342.0,
+      "duration": 11.399999999999977,
+      "text": "Understood, completely understood. Can we also loop back to the Detect overage real quick before I forget - Marcus, the eight hundred and forty dollars in event ingestion overage, what's driving that?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 342.9,
+      "end_time": 354.4,
+      "duration": 11.5,
+      "text": "So for Detect, looking at the event volume data - there was a spike in ingestion on March 10th through March 16th, which is... okay that's actually during the outage window. That's interesting."
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 355.1,
+      "end_time": 366.7,
+      "duration": 11.599999999999966,
+      "text": "During the outage? How are we being charged for events during a period when your system wasn't even processing them properly? We had six hours of no visibility. We were flying blind."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 367.5,
+      "end_time": 385.9,
+      "duration": 18.399999999999977,
+      "text": "Yeah, that - I need to look more closely at this because if events were queued and then replayed through the pipeline after the fix was applied, it's possible the billing system counted them against the current cycle even though a chunk of that volume was essentially backfill. That would not be right."
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 386.6,
+      "end_time": 395.7,
+      "duration": 9.099999999999966,
+      "text": "So we might be getting charged for the retry traffic that your system generated because of your own outage. Is that what you're telling me?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 397.0,
+      "end_time": 418.9,
+      "duration": 21.899999999999977,
+      "text": "I don't want to confirm that definitively until Marcus can verify the timestamps, but it is a plausible explanation and if that's what happened, that charge should absolutely not stand. Marcus, can you get into the event ingestion logs for that period and flag the volume breakdown - specifically anything that looks like queued replay events from after March 16th?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 419.7,
+      "end_time": 431.0,
+      "duration": 11.300000000000011,
+      "text": "Yeah, I'll need to pull that from the backend pipeline logs, that's going to take me a bit longer than this call, but I can have something documented by end of day."
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 431.6,
+      "end_time": 441.5,
+      "duration": 9.899999999999977,
+      "text": "Okay, so where does this leave us right now? I have a four thousand dollar invoice due and honestly I'm not comfortable paying it given everything we've just discussed."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 442.2,
+      "end_time": 473.2,
+      "duration": 31.0,
+      "text": "That's a completely reasonable position. Here's what I can commit to right now - I'm going to flag both of these disputes internally as high priority today. The Comply overage, given the missing alert configuration on migrated accounts, has a very strong basis for a credit or reversal. The Detect overage I need Marcus to verify, but if the billing reflects replay traffic from the outage, that's also something we'd need to reverse. I'd ask that you hold off on payment on the disputed portions while we investigate."
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 474.0,
+      "end_time": 479.5,
+      "duration": 5.5,
+      "text": "What's the timeline on that? Because our AP department is going to start asking questions."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 480.3,
+      "end_time": 490.7,
+      "duration": 10.399999999999977,
+      "text": "I'd like to give you a full written response on the Comply dispute within forty-eight hours, and the Detect analysis from Marcus by end of day today. Is that workable?"
+    },
+    {
+      "speaker_name": "Natalie Simmons",
+      "start_time": 491.5,
+      "end_time": 514.2,
+      "duration": 22.700000000000045,
+      "text": "I mean - it'll have to be. I just want to say for the record, we've been an Aegis customer for three years. We went through the March outage, we didn't make a huge fuss, we understood that things happen. But this invoice situation feels like we're being penalized for engaging with a product launch that wasn't properly set up for us. That's frustrating."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 515.6,
+      "end_time": 531.9,
+      "duration": 16.299999999999955,
+      "text": "I hear you, Natalie, and that frustration is warranted. We value the relationship and I want to make sure we get this resolved correctly, not just quickly. I'll send you both a written summary of this call and the next steps before end of business today."
+    },
+    {
+      "speaker_name": "Ajay Mehta",
+      "start_time": 532.6,
+      "end_time": 538.2,
+      "duration": 5.600000000000023,
+      "text": "Alright. We'll look for that. Thank you both for at least being straight with us."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 539.0,
+      "end_time": 543.0,
+      "duration": 4.0,
+      "text": "Of course. We'll be in touch shortly - thanks Ajay, thanks Natalie."
+    }
+  ],
+  "transcript_text": "Sarah Chen: Hi, thanks for joining - this is Sarah Chen from Aegis Cloud Security support, I have Marcus Williams here with me as well. Can I confirm I have Ajay Mehta and Natalie Simmons from Clearwater Medical on the line?\nAjay Mehta: Yes, Ajay here. Thanks for getting us on the calendar quickly, I appreciate that at least.\nNatalie Simmons: Natalie Simmons, IT Director. Yeah, we're both here.\nSarah Chen: Great, great. And Marcus is going to be helping me pull up the billing details on our end as we go through this. So, um, I pulled up support case 8179 - it looks like this is about some overage charges on your April invoice. Do you want to walk us through what you're seeing?\nNatalie Simmons: Yeah, so - look, I'll be direct. We got our April invoice and there are overage charges totaling just over four thousand dollars that I do not understand and frankly did not expect. At all.\nAjay Mehta: And from my side as Compliance Manager, a big chunk of those overages seem to be tied to the Comply module, which - I mean, we literally just got the v2 upgrade notification like three days ago. So I'm not sure what's happening there.\nSarah Chen: Okay, yeah, that's helpful context. Marcus, can you pull up the Clearwater Medical account and get into the billing breakdown for the April cycle?\nMarcus Williams: Already on it, pulling it up now.\nSarah Chen: While he's doing that - Natalie, Ajay, can you tell me roughly which line items stood out the most? Was it just the Comply module or are you seeing things across multiple modules?\nNatalie Simmons: It's primarily Comply, but there's also something under Detect that I - I flagged that too because honestly after what happened in March with that outage, I'm not exactly inclined to give Aegis the benefit of the doubt right now.\nSarah Chen: That's totally fair, and I hear you on the March incident - we're not going to brush past that. Let's get into the specifics first and then we can talk through everything. What does the Detect line item say?\nAjay Mehta: It's showing an overage for - let me get my invoice up - okay, it says excess event ingestion volume, something like eight hundred and forty dollars.\nMarcus Williams: Okay, Sarah, I've got the account open. So looking at the billing detail - the Comply overage is three thousand two hundred and change, and it's flagged as on-demand report generation exceeding the plan tier limit. Looks like a significant number of compliance reports were run between April 7th and April 9th.\nAjay Mehta: April 7th - that's the day of the Comply v2 launch. So we're being charged for reports that - I mean, were we even notified that running those reports would trigger overage billing? Because I went in and explored the new features and ran a few reports, I had no idea that was going to cost us extra money.\nSarah Chen: That is a really important question and I want to make sure I understand exactly what happened. Marcus, what's the plan tier for Clearwater's Comply module, and what's the included report generation limit?\nMarcus Williams: They're on the Professional tier for Comply, which includes up to twenty on-demand reports per billing cycle. The account shows forty-seven reports generated between April 7th and April 9th.\nSarah Chen: Forty-seven - okay, so Ajay, does that number make sense to you? Like, do you recall running that many reports?\nAjay Mehta: I mean - yes and no. When the v2 launched, it was the first time we had access to multi-framework reporting. We're a healthcare organization, we need to demonstrate compliance across HIPAA, SOC 2, we're also starting a PCI DSS review. So yeah, I ran reports. I was exploring the feature set. But I had absolutely no warning that I was going to blow past some threshold and rack up thousands of dollars in charges.\nNatalie Simmons: Was there any in-app notification, any banner, anything that said hey you're approaching your limit? Because if there was and he missed it that's one thing, but if there wasn't-\nSarah Chen: That's - yeah, I want to look into that. Marcus, do we have any record of in-app threshold alerts being triggered or sent for this account?\nMarcus Williams: I'm checking the notification logs now... I'm not seeing any threshold alert sent for this account. There's a flag here actually - it looks like the overage alert configuration for Comply on-demand reports may not have been enabled by default on existing accounts that were migrated to v2.\nNatalie Simmons: Wait - so you're saying existing customers were upgraded to v2 and the overage alerts weren't even turned on? So we had no way of knowing we were racking up charges?\nSarah Chen: It - it appears that way for your account, and I want to be transparent with you rather than dance around it. If the alerts weren't configured and you weren't warned, that's a problem on our end and I'm going to escalate this internally to our billing and product teams today.\nAjay Mehta: I appreciate you saying that Sarah, I do. But I also want to flag - this is not a small number. Four thousand dollars is not something we can just absorb, especially when we're a medical organization with tight budget controls. We're not a Fortune 500 company.\nSarah Chen: Understood, completely understood. Can we also loop back to the Detect overage real quick before I forget - Marcus, the eight hundred and forty dollars in event ingestion overage, what's driving that?\nMarcus Williams: So for Detect, looking at the event volume data - there was a spike in ingestion on March 10th through March 16th, which is... okay that's actually during the outage window. That's interesting.\nNatalie Simmons: During the outage? How are we being charged for events during a period when your system wasn't even processing them properly? We had six hours of no visibility. We were flying blind.\nSarah Chen: Yeah, that - I need to look more closely at this because if events were queued and then replayed through the pipeline after the fix was applied, it's possible the billing system counted them against the current cycle even though a chunk of that volume was essentially backfill. That would not be right.\nNatalie Simmons: So we might be getting charged for the retry traffic that your system generated because of your own outage. Is that what you're telling me?\nSarah Chen: I don't want to confirm that definitively until Marcus can verify the timestamps, but it is a plausible explanation and if that's what happened, that charge should absolutely not stand.\nSarah Chen: Marcus, can you get into the event ingestion logs for that period and flag the volume breakdown - specifically anything that looks like queued replay events from after March 16th?\nMarcus Williams: Yeah, I'll need to pull that from the backend pipeline logs, that's going to take me a bit longer than this call, but I can have something documented by end of day.\nNatalie Simmons: Okay, so where does this leave us right now? I have a four thousand dollar invoice due and honestly I'm not comfortable paying it given everything we've just discussed.\nSarah Chen: That's a completely reasonable position. Here's what I can commit to right now - I'm going to flag both of these disputes internally as high priority today. The Comply overage, given the missing alert configuration on migrated accounts, has a very strong basis for a credit or reversal. The Detect overage I need Marcus to verify, but if the billing reflects replay traffic from the outage, that's also something we'd need to reverse. I'd ask that you hold off on payment on the disputed portions while we investigate.\nAjay Mehta: What's the timeline on that? Because our AP department is going to start asking questions.\nSarah Chen: I'd like to give you a full written response on the Comply dispute within forty-eight hours, and the Detect analysis from Marcus by end of day today. Is that workable?\nNatalie Simmons: I mean - it'll have to be. I just want to say for the record, we've been an Aegis customer for three years. We went through the March outage, we didn't make a huge fuss, we understood that things happen. But this invoice situation feels like we're being penalized for engaging with a product launch that wasn't properly set up for us. That's frustrating.\nSarah Chen: I hear you, Natalie, and that frustration is warranted. We value the relationship and I want to make sure we get this resolved correctly, not just quickly. I'll send you both a written summary of this call and the next steps before end of business today.\nAjay Mehta: Alright. We'll look for that. Thank you both for at least being straight with us.\nSarah Chen: Of course. We'll be in touch shortly - thanks Ajay, thanks Natalie.",
+  "summary": "Clearwater Medical's Ajay Mehta (Compliance Manager) and Natalie Simmons (IT Director) contacted Aegis Cloud Security to dispute a $4,000+ April invoice. The primary dispute involves $3,200 in Comply module overages tied to report generation during the v2 launch on April 7th, where Ajay explored multi-framework reporting features with no knowledge of plan limits and no in-app alerts - which turned out to be a misconfiguration affecting migrated accounts. An additional $840 Detect module overage appears potentially linked to replay traffic generated by Aegis's own March outage, which is being investigated. Sarah Chen committed to escalating both disputes as high priority, with a written Comply dispute response within 48 hours and a Detect log analysis by end of day.",
+  "topics": [
+    "billing dispute",
+    "overage charges",
+    "product migration",
+    "outage impact",
+    "compliance reporting",
+    "alert misconfiguration"
+  ],
+  "action_items": [
+    "Sarah Chen: Escalate Comply overage dispute internally as high priority and send written response with credit/reversal determination within 48 hours",
+    "Marcus Williams: Pull backend pipeline event ingestion logs for March 10-16 to identify queued replay traffic and document findings by end of day",
+    "Sarah Chen: Send written call summary and next steps to Ajay Mehta and Natalie Simmons before end of business today",
+    "Sarah Chen: Escalate missing overage alert configuration on v2-migrated accounts to billing and product teams"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 145.0,
+      "text": "Natalie reveals the $4,000+ overage charges were completely unexpected and references lingering frustration from the March outage",
+      "type": "concern",
+      "speaker": "Natalie Simmons"
+    },
+    {
+      "time": 430.0,
+      "text": "Marcus discovers that overage threshold alerts were not enabled by default for accounts migrated to Comply v2, meaning Clearwater had no warning they were accumulating charges",
+      "type": "technical_issue",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 560.0,
+      "text": "Natalie raises that the Detect overage may stem from event replay traffic generated by Aegis's own March outage, potentially meaning the customer is being billed for the vendor's failure",
+      "type": "churn_signal",
+      "speaker": "Natalie Simmons"
+    },
+    {
+      "time": 760.0,
+      "text": "Sarah commits to holding the disputed invoice, delivering a Comply dispute response within 48 hours, and escalating both issues as high priority",
+      "type": "action_item",
+      "speaker": "Sarah Chen"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Ajay Mehta",
+      "event_type": "Join",
+      "time_seconds": 17.0,
+      "timestamp_ms": 1775842217000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 28.0,
+      "timestamp_ms": 1775842228000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 39.0,
+      "timestamp_ms": 1775842239000
+    },
+    {
+      "participant_name": "Natalie Simmons",
+      "event_type": "Join",
+      "time_seconds": 44.0,
+      "timestamp_ms": 1775842244000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 1271.0,
+      "timestamp_ms": 1775843471000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 1275.0,
+      "timestamp_ms": 1775843475000
+    },
+    {
+      "participant_name": "Ajay Mehta",
+      "event_type": "Leave",
+      "time_seconds": 1284.0,
+      "timestamp_ms": 1775843484000
+    },
+    {
+      "participant_name": "Natalie Simmons",
+      "event_type": "Leave",
+      "time_seconds": 1280.0,
+      "timestamp_ms": 1775843480000
+    }
+  ],
+  "stats": {
+    "turn_count": 40,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Sarah Chen": 17,
+      "Ajay Mehta": 8,
+      "Natalie Simmons": 9,
+      "Marcus Williams": 6
+    },
+    "speaker_total_seconds": {
+      "Sarah Chen": 224.9,
+      "Ajay Mehta": 105.5,
+      "Natalie Simmons": 104.7,
+      "Marcus Williams": 71.0
+    }
+  }
+}

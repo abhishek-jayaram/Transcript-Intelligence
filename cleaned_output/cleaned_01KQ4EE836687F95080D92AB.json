@@ -1,0 +1,459 @@
+{
+  "meeting_id": "01KQ4EE836687F95080D92AB",
+  "title": "Detect Team - Sprint Planning",
+  "organizer_email": "mike.romano@aegiscloud.com",
+  "host_email": "mike.romano@aegiscloud.com",
+  "start_time": "2026-02-05T14:15:00.000Z",
+  "end_time": "2026-02-05T14:40:36.000Z",
+  "duration_minutes": 25.6,
+  "participants": [
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Chris Lee",
+    "1": "Ananya Sharma",
+    "2": "Mike Romano",
+    "3": "Nina Kowalski"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 6.6,
+      "end_time": 12.2,
+      "duration": 5.6,
+      "text": "Alright, I think we've got everyone. Let me just pull up the board real quick."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 12.8,
+      "end_time": 17.4,
+      "duration": 4.599999999999998,
+      "text": "Yeah I'm here, just give me one sec, I'm closing out some tabs."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 18.9,
+      "end_time": 20.4,
+      "duration": 1.5,
+      "text": "Mike, you on?"
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 21.0,
+      "end_time": 23.0,
+      "duration": 2.0,
+      "text": "Yep, I'm here. Good to go."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 24.5,
+      "end_time": 32.9,
+      "duration": 8.399999999999999,
+      "text": "Nina, looks like you just joined too, cool. Okay so let's get started, we've got a lot to get through today for sprint twelve."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 33.9,
+      "end_time": 36.9,
+      "duration": 3.0,
+      "text": "Yeah sorry, my previous call ran over a bit."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 37.6,
+      "end_time": 51.8,
+      "duration": 14.199999999999996,
+      "text": "No worries, we just started. So, um, first thing - I want to do a quick retro on sprint eleven before we get into planning. Just high level, shouldn't take more than five minutes. Anyone want to kick that off?"
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 53.0,
+      "end_time": 72.2,
+      "duration": 19.200000000000003,
+      "text": "I can. So sprint eleven, I think we got through about, what, seven of the nine tickets we committed to? The two that slipped were the alert deduplication work and the pipeline latency investigation. The dedup one slipped because the spec changed midway through, and the pipeline thing just... it's bigger than we scoped it."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 73.3,
+      "end_time": 91.5,
+      "duration": 18.200000000000003,
+      "text": "Yeah the pipeline latency investigation has been sitting in my queue and honestly the more I dig into it the more I think we have a deeper architectural issue with the event ingestion layer. Like it's not just latency, there are some single point of failure concerns I want to flag."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 92.4,
+      "end_time": 102.6,
+      "duration": 10.199999999999989,
+      "text": "Okay yeah, let's put a pin on that, that's actually on the agenda for today. We'll get to it. What about from a QA perspective, Nina, anything notable from eleven?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 102.9,
+      "end_time": 121.0,
+      "duration": 18.099999999999994,
+      "text": "Uh, a couple things. The test coverage on the new correlation rules was thin, we flagged that but it didn't get addressed before the sprint ended. And there was a regression in the alert severity scoring that we caught late - like day nine of the sprint, which is not great."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 121.9,
+      "end_time": 129.1,
+      "duration": 7.199999999999989,
+      "text": "Yeah that regression was on me, I merged a config change without running the full suite. That won't happen again."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 129.5,
+      "end_time": 138.4,
+      "duration": 8.900000000000006,
+      "text": "I mean, it happens, but we should probably look at whether we can gate that in CI. Like that shouldn't be a manual discipline thing."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 139.8,
+      "end_time": 149.2,
+      "duration": 9.399999999999977,
+      "text": "Agreed, let's add that as a chore ticket for this sprint. Okay, moving on - let's talk about sprint twelve priorities. Chris, what's coming down from product?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 150.4,
+      "end_time": 168.7,
+      "duration": 18.299999999999983,
+      "text": "So the big ones from product this sprint are: finishing the alert deduplication feature, continuing the pipeline latency work, and there's a new ask around improving detection rule versioning so customers can roll back rule changes. That last one is, uh, medium priority but product wants it in the next two sprints."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 169.3,
+      "end_time": 176.0,
+      "duration": 6.699999999999989,
+      "text": "The rule versioning thing, do we have a spec for that yet or are we starting from scratch?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 177.1,
+      "end_time": 184.0,
+      "duration": 6.900000000000006,
+      "text": "There's a rough doc, I'll share it after this call. It's not fully baked but enough to start scoping."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 184.5,
+      "end_time": 198.2,
+      "duration": 13.699999999999989,
+      "text": "Okay. So my concern is capacity. If we're carrying over two tickets from eleven and adding rule versioning on top of the pipeline work, that's... I don't think we can realistically commit to all of that in one sprint."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 198.9,
+      "end_time": 212.0,
+      "duration": 13.099999999999994,
+      "text": "Yeah I was going to say the same thing. The pipeline work alone, if we're actually doing it right, is probably a twelve to fifteen point story. And that's if we don't find more stuff buried in there."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 213.5,
+      "end_time": 216.8,
+      "duration": 3.3000000000000114,
+      "text": "What's your current estimate on the deduplication carry-over?"
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 217.1,
+      "end_time": 222.4,
+      "duration": 5.300000000000011,
+      "text": "I'd say five points. The spec is stable now, it's just implementation and tests."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 223.3,
+      "end_time": 234.7,
+      "duration": 11.399999999999977,
+      "text": "Okay so if we're looking at roughly five for dedup, twelve to fifteen for pipeline, and then whatever rule versioning scopes out to - Nina, what does QA bandwidth look like this sprint?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 235.2,
+      "end_time": 253.2,
+      "duration": 18.0,
+      "text": "So I have the full two weeks but I'm also trying to finalize the regression suite improvements, which I'd really like to not push again. So I can support testing on the dedup work and probably the pipeline work, but if rule versioning lands mid-sprint I'm going to need a heads up."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 253.6,
+      "end_time": 267.7,
+      "duration": 14.099999999999994,
+      "text": "That's fair. I think the honest thing to do is scope rule versioning as a stretch goal this sprint and make it a primary commitment for sprint thirteen. Product might push back a little but I'd rather set realistic expectations."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 269.0,
+      "end_time": 279.6,
+      "duration": 10.600000000000023,
+      "text": "I agree with that. And honestly the pipeline work is more important right now. Like if the ingestion layer has the issues Ananya's describing, that's not something we want to defer."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 280.4,
+      "end_time": 288.6,
+      "duration": 8.200000000000045,
+      "text": "Can you walk us through what you're seeing there, Ananya? Like at least a summary so we can make sure we're scoping it right."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 289.6,
+      "end_time": 311.1,
+      "duration": 21.5,
+      "text": "Yeah, so basically the event ingestion pipeline right now has... it's all running through a single processing node with no fallback. If that node goes down or gets overwhelmed, we lose event visibility entirely. There's no circuit breaker, no redundancy. I think we need to add redundant processing nodes and probably implement a circuit breaker pattern to prevent cascading failures."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 312.4,
+      "end_time": 316.7,
+      "duration": 4.300000000000011,
+      "text": "Okay so that's significant. How long has this been the case?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 317.4,
+      "end_time": 326.5,
+      "duration": 9.100000000000023,
+      "text": "Honestly? Probably since the original implementation. It just wasn't a problem when we had lower event volumes but we're growing and it's becoming a real risk."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 327.1,
+      "end_time": 337.8,
+      "duration": 10.699999999999989,
+      "text": "Alright, yeah that needs to be a primary workstream this sprint. No question. Let's make sure we break that into sub-tasks so it doesn't become one giant blob of work."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 338.2,
+      "end_time": 348.3,
+      "duration": 10.100000000000023,
+      "text": "I was going to suggest that - I can draft the sub-tasks today and share them in the team channel so everyone can review before we finalize the board."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 349.5,
+      "end_time": 361.7,
+      "duration": 12.199999999999989,
+      "text": "That'd be great. Okay, so to recap: primary commitments are dedup carry-over, pipeline architecture work, and the CI gate improvement Nina flagged. Stretch goal is starting rule versioning. Does that feel right to everyone?"
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 362.9,
+      "end_time": 364.4,
+      "duration": 1.5,
+      "text": "Works for me."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 365.4,
+      "end_time": 367.0,
+      "duration": 1.6000000000000227,
+      "text": "Yeah, that's a reasonable scope."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 368.2,
+      "end_time": 371.8,
+      "duration": 3.6000000000000227,
+      "text": "Fine by me. I'll get those sub-tasks written up."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 373.2,
+      "end_time": 377.9,
+      "duration": 4.699999999999989,
+      "text": "Perfect. Okay, anything else before we wrap? We've got about five minutes left."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 379.4,
+      "end_time": 388.8,
+      "duration": 9.400000000000034,
+      "text": "Just a quick heads up - I'm out Thursday afternoon for a dentist appointment, so if there's anything blocking me I'd want to know by Wednesday."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 389.8,
+      "end_time": 399.3,
+      "duration": 9.5,
+      "text": "Noted. Anyone else? Okay, I think we're good then. I'll update the board and send a summary to the channel. Standup as usual tomorrow at ten."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 400.5,
+      "end_time": 402.2,
+      "duration": 1.6999999999999886,
+      "text": "Sounds good, thanks everyone."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 403.1,
+      "end_time": 404.6,
+      "duration": 1.5,
+      "text": "Thanks."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 405.6,
+      "end_time": 407.1,
+      "duration": 1.5,
+      "text": "Yep, talk tomorrow."
+    }
+  ],
+  "transcript_text": "Chris Lee: Alright, I think we've got everyone. Let me just pull up the board real quick.\nAnanya Sharma: Yeah I'm here, just give me one sec, I'm closing out some tabs.\nChris Lee: Mike, you on?\nMike Romano: Yep, I'm here. Good to go.\nChris Lee: Nina, looks like you just joined too, cool. Okay so let's get started, we've got a lot to get through today for sprint twelve.\nNina Kowalski: Yeah sorry, my previous call ran over a bit.\nChris Lee: No worries, we just started. So, um, first thing - I want to do a quick retro on sprint eleven before we get into planning. Just high level, shouldn't take more than five minutes. Anyone want to kick that off?\nMike Romano: I can. So sprint eleven, I think we got through about, what, seven of the nine tickets we committed to? The two that slipped were the alert deduplication work and the pipeline latency investigation. The dedup one slipped because the spec changed midway through, and the pipeline thing just... it's bigger than we scoped it.\nAnanya Sharma: Yeah the pipeline latency investigation has been sitting in my queue and honestly the more I dig into it the more I think we have a deeper architectural issue with the event ingestion layer. Like it's not just latency, there are some single point of failure concerns I want to flag.\nChris Lee: Okay yeah, let's put a pin on that, that's actually on the agenda for today. We'll get to it. What about from a QA perspective, Nina, anything notable from eleven?\nNina Kowalski: Uh, a couple things. The test coverage on the new correlation rules was thin, we flagged that but it didn't get addressed before the sprint ended. And there was a regression in the alert severity scoring that we caught late - like day nine of the sprint, which is not great.\nMike Romano: Yeah that regression was on me, I merged a config change without running the full suite. That won't happen again.\nNina Kowalski: I mean, it happens, but we should probably look at whether we can gate that in CI. Like that shouldn't be a manual discipline thing.\nAnanya Sharma: Agreed, let's add that as a chore ticket for this sprint. Okay, moving on - let's talk about sprint twelve priorities. Chris, what's coming down from product?\nChris Lee: So the big ones from product this sprint are: finishing the alert deduplication feature, continuing the pipeline latency work, and there's a new ask around improving detection rule versioning so customers can roll back rule changes. That last one is, uh, medium priority but product wants it in the next two sprints.\nMike Romano: The rule versioning thing, do we have a spec for that yet or are we starting from scratch?\nChris Lee: There's a rough doc, I'll share it after this call. It's not fully baked but enough to start scoping.\nAnanya Sharma: Okay. So my concern is capacity. If we're carrying over two tickets from eleven and adding rule versioning on top of the pipeline work, that's... I don't think we can realistically commit to all of that in one sprint.\nMike Romano: Yeah I was going to say the same thing. The pipeline work alone, if we're actually doing it right, is probably a twelve to fifteen point story. And that's if we don't find more stuff buried in there.\nChris Lee: What's your current estimate on the deduplication carry-over?\nMike Romano: I'd say five points. The spec is stable now, it's just implementation and tests.\nChris Lee: Okay so if we're looking at roughly five for dedup, twelve to fifteen for pipeline, and then whatever rule versioning scopes out to - Nina, what does QA bandwidth look like this sprint?\nNina Kowalski: So I have the full two weeks but I'm also trying to finalize the regression suite improvements, which I'd really like to not push again. So I can support testing on the dedup work and probably the pipeline work, but if rule versioning lands mid-sprint I'm going to need a heads up.\nChris Lee: That's fair. I think the honest thing to do is scope rule versioning as a stretch goal this sprint and make it a primary commitment for sprint thirteen. Product might push back a little but I'd rather set realistic expectations.\nMike Romano: I agree with that. And honestly the pipeline work is more important right now. Like if the ingestion layer has the issues Ananya's describing, that's not something we want to defer.\nChris Lee: Can you walk us through what you're seeing there, Ananya? Like at least a summary so we can make sure we're scoping it right.\nAnanya Sharma: Yeah, so basically the event ingestion pipeline right now has... it's all running through a single processing node with no fallback. If that node goes down or gets overwhelmed, we lose event visibility entirely. There's no circuit breaker, no redundancy. I think we need to add redundant processing nodes and probably implement a circuit breaker pattern to prevent cascading failures.\nChris Lee: Okay so that's significant. How long has this been the case?\nAnanya Sharma: Honestly? Probably since the original implementation. It just wasn't a problem when we had lower event volumes but we're growing and it's becoming a real risk.\nChris Lee: Alright, yeah that needs to be a primary workstream this sprint. No question. Let's make sure we break that into sub-tasks so it doesn't become one giant blob of work.\nAnanya Sharma: I was going to suggest that - I can draft the sub-tasks today and share them in the team channel so everyone can review before we finalize the board.\nChris Lee: That'd be great. Okay, so to recap: primary commitments are dedup carry-over, pipeline architecture work, and the CI gate improvement Nina flagged. Stretch goal is starting rule versioning. Does that feel right to everyone?\nMike Romano: Works for me.\nNina Kowalski: Yeah, that's a reasonable scope.\nAnanya Sharma: Fine by me. I'll get those sub-tasks written up.\nChris Lee: Perfect. Okay, anything else before we wrap? We've got about five minutes left.\nMike Romano: Just a quick heads up - I'm out Thursday afternoon for a dentist appointment, so if there's anything blocking me I'd want to know by Wednesday.\nChris Lee: Noted. Anyone else? Okay, I think we're good then. I'll update the board and send a summary to the channel. Standup as usual tomorrow at ten.\nNina Kowalski: Sounds good, thanks everyone.\nAnanya Sharma: Thanks.\nMike Romano: Yep, talk tomorrow.",
+  "summary": "The team held a sprint twelve planning meeting that began with a quick retrospective on sprint eleven, where seven of nine tickets were completed. Key carry-overs include alert deduplication and a pipeline latency investigation that revealed a significant single point of failure in the event ingestion layer. The team agreed on primary sprint twelve commitments: deduplication carry-over, pipeline architecture remediation, and a CI gate improvement, with detection rule versioning pushed to a stretch goal or sprint thirteen. Capacity constraints and QA bandwidth were key factors in scoping decisions.",
+  "topics": [
+    "sprint planning",
+    "pipeline architecture",
+    "single point of failure",
+    "ci/cd improvement",
+    "capacity planning",
+    "sprint retrospective"
+  ],
+  "action_items": [
+    "Chris Lee: Share the rough detection rule versioning spec doc with the team after the call",
+    "Ananya Sharma: Draft pipeline architecture sub-tasks today and share in the team channel for review before the board is finalized",
+    "Chris Lee: Update the sprint board and send a summary to the team channel",
+    "Nina Kowalski: Create a chore ticket for CI gating to prevent unvalidated config merges"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.6,
+  "key_moments": [
+    {
+      "time": 148.0,
+      "text": "Ananya flags a deeper architectural issue in the event ingestion layer, identifying a single point of failure with no redundancy or circuit breaker.",
+      "type": "technical_issue",
+      "speaker": "Ananya Sharma"
+    },
+    {
+      "time": 95.0,
+      "text": "Nina raises that a regression in alert severity scoring was caught on day nine of the sprint, noting that CI gating should replace manual discipline for config changes.",
+      "type": "feature_gap",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 312.0,
+      "text": "Chris proposes scoping rule versioning as a stretch goal to set realistic expectations with product, a practical prioritization decision endorsed by the team.",
+      "type": "positive_pivot",
+      "speaker": "Chris Lee"
+    },
+    {
+      "time": 420.0,
+      "text": "Team reaches alignment on sprint twelve commitments: dedup carry-over, pipeline architecture work, and CI gate improvement, with rule versioning deferred.",
+      "type": "action_item",
+      "speaker": "Chris Lee"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Join",
+      "time_seconds": 14.0,
+      "timestamp_ms": 1770300914000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Join",
+      "time_seconds": 20.0,
+      "timestamp_ms": 1770300920000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 29.0,
+      "timestamp_ms": 1770300929000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 47.0,
+      "timestamp_ms": 1770300947000
+    },
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Leave",
+      "time_seconds": 1533.0,
+      "timestamp_ms": 1770302433000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 1514.0,
+      "timestamp_ms": 1770302414000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Leave",
+      "time_seconds": 1529.0,
+      "timestamp_ms": 1770302429000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 1522.0,
+      "timestamp_ms": 1770302422000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Chris Lee": 16,
+      "Ananya Sharma": 9,
+      "Mike Romano": 10,
+      "Nina Kowalski": 6
+    },
+    "speaker_total_seconds": {
+      "Chris Lee": 143.5,
+      "Ananya Sharma": 91.7,
+      "Mike Romano": 76.5,
+      "Nina Kowalski": 51.3
+    }
+  }
+}

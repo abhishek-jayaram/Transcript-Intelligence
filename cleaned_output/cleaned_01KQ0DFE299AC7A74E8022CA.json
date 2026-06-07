@@ -1,0 +1,421 @@
+{
+  "meeting_id": "01KQ0DFE299AC7A74E8022CA",
+  "title": "Aegis / Redwood Clinical - ISO 27001 Preparation",
+  "organizer_email": "kevin.obrien@aegiscloud.com",
+  "host_email": "kevin.obrien@aegiscloud.com",
+  "start_time": "2026-04-26T13:30:00.000Z",
+  "end_time": "2026-04-26T13:58:48.000Z",
+  "duration_minutes": 28.8,
+  "participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "t.hargrove@redwoodclinical.com",
+      "domain": "redwoodclinical.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "t.hargrove@redwoodclinical.com",
+      "domain": "redwoodclinical.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Daniel Okafor",
+    "1": "Thomas Hargrove",
+    "2": "Kevin O'Brien"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 3.2,
+      "end_time": 6.1,
+      "duration": 2.8999999999999995,
+      "text": "Hey Thomas, can you hear us okay?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 6.5,
+      "end_time": 11.9,
+      "duration": 5.4,
+      "text": "Yeah, loud and clear - good to hear from you guys, it's been a couple weeks."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 13.4,
+      "end_time": 24.5,
+      "duration": 11.1,
+      "text": "Good, good - yeah sorry it took us a bit to get this on the calendar, things have been moving fast on our end with the Comply v2 launch and everything."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 26.0,
+      "end_time": 38.9,
+      "duration": 12.899999999999999,
+      "text": "Actually that's kind of why we're here today, right, so - Thomas, I also want to introduce Kevin, he's our solutions architect and he's going to be the technical lead on your ISO 27001 prep work."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 39.5,
+      "end_time": 49.1,
+      "duration": 9.600000000000001,
+      "text": "Hey Thomas, great to meet you - I've been looking forward to this one, Daniel's told me a lot about what Redwood is trying to accomplish this year."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 50.5,
+      "end_time": 65.2,
+      "duration": 14.700000000000003,
+      "text": "Likewise, yeah, and honestly the timing could not be better because our CISO has been breathing down my neck about ISO 27001 since like January, so - any help getting a clearer picture of where we stand is going to be huge."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 65.6,
+      "end_time": 86.7,
+      "duration": 21.10000000000001,
+      "text": "Yeah, absolutely, and I think that's exactly where Comply v2 is going to change the game for you - um, before we dive in though, Thomas, can you just give Kevin a quick sense of where you are in the ISO journey? Like, have you done a formal gap assessment yet or are you still kind of in the early stages?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 88.0,
+      "end_time": 111.8,
+      "duration": 23.799999999999997,
+      "text": "Yeah so we're - we're pretty early if I'm being honest. We had an external consultant come in back in February, they did a high-level gap assessment, and the short version is we have a lot of work to do on the information security management side, particularly around evidence collection and demonstrating continuous monitoring, which as a healthcare organization is like, that's a big deal for us."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 112.8,
+      "end_time": 125.9,
+      "duration": 13.100000000000009,
+      "text": "Right, and that's such a common pain point, especially in healthcare - the auditors want to see a continuous thread of evidence, not just a snapshot, and that's historically been really painful to pull together manually."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 126.6,
+      "end_time": 136.7,
+      "duration": 10.099999999999994,
+      "text": "Oh god, yeah, the last time we went through a HIPAA audit my team spent like three weeks just pulling logs and documentation together - it was a nightmare."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 138.2,
+      "end_time": 150.7,
+      "duration": 12.5,
+      "text": "Three weeks, yeah - that's - I mean that's not unusual but it's also exactly the kind of thing we built Comply v2 to eliminate, so let's talk about what that actually looks like in practice."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 151.3,
+      "end_time": 153.3,
+      "duration": 2.0,
+      "text": "Please, yeah, walk me through it."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 153.8,
+      "end_time": 178.0,
+      "duration": 24.19999999999999,
+      "text": "So - okay so the big thing with v2, and this just went GA on April 7th so it's very fresh, is the on-demand reporting engine. You can now generate a full ISO 27001 readiness report at any point, and it maps your current control posture directly to the Annex A controls - so you're not having to manually cross-reference anything, the platform does that work for you."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 179.2,
+      "end_time": 190.3,
+      "duration": 11.100000000000023,
+      "text": "Wait, so it's actually mapping to the specific Annex A controls? Like, is that - is it just a template thing or is it actually pulling live data from our environment?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 191.3,
+      "end_time": 210.1,
+      "duration": 18.799999999999983,
+      "text": "Live data - so it's pulling from your Detect telemetry, your Identity configurations, your Protect backup logs, and then surfacing all of that against the control framework. So when an auditor asks you to demonstrate, say, A.12.4 on event logging and monitoring, you can literally generate that section of the report on the spot."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 211.4,
+      "end_time": 216.9,
+      "duration": 5.5,
+      "text": "Okay that is - yeah that is genuinely impressive, I wasn't expecting that level of granularity."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 217.7,
+      "end_time": 233.2,
+      "duration": 15.5,
+      "text": "And it's not just ISO either - you mentioned HIPAA a second ago - the same report engine covers HIPAA, SOC 2, and PCI DSS as well, so if you ever need to spin up a HIPAA evidence package, it's the same workflow, same interface."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 233.8,
+      "end_time": 244.3,
+      "duration": 10.5,
+      "text": "Yeah that multi-framework piece is something we specifically asked for in our renewal discussions, so it's great to see that actually shipped - Daniel you might remember that conversation."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 245.4,
+      "end_time": 255.9,
+      "duration": 10.5,
+      "text": "I do, yeah, I have the notes from that call - it was definitely on the roadmap and I'm glad we could deliver on it before your audit cycle."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 256.9,
+      "end_time": 271.6,
+      "duration": 14.700000000000045,
+      "text": "So Thomas, one thing I want to make sure we cover - in terms of your timeline, do you have a target date for the ISO 27001 certification audit? Because that's going to shape how we structure the onboarding to Comply v2."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 272.6,
+      "end_time": 286.1,
+      "duration": 13.5,
+      "text": "Our CISO is targeting Q1 2027 for the formal audit, so we have - you know, roughly eight or nine months, which sounds like a lot but when you factor in the remediation work it's going to go fast."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 286.5,
+      "end_time": 306.4,
+      "duration": 19.899999999999977,
+      "text": "Eight months is actually a really solid runway for this - um, what I'd typically recommend for organizations at your stage is we start with a baseline report run in the first two weeks, just to get a concrete picture of where you are against the framework, and then we build a remediation roadmap from those gaps."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 306.8,
+      "end_time": 314.8,
+      "duration": 8.0,
+      "text": "Yeah and that baseline report - is that something Kevin can help us interpret, or is it pretty self-explanatory on the platform?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 315.5,
+      "end_time": 329.7,
+      "duration": 14.199999999999989,
+      "text": "Both, honestly - the report is designed to be readable by a non-specialist, we have like a traffic light system for control status, but Kevin and I will absolutely walk through it with you line by line on a follow-up call."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 330.7,
+      "end_time": 349.5,
+      "duration": 18.80000000000001,
+      "text": "Yeah I was going to say - I'd actually love to do a working session with you and maybe whoever on your team is going to be the compliance lead, we can go through the report together and I can explain what each gap actually means in practical terms, not just the framework language."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 351.0,
+      "end_time": 364.5,
+      "duration": 13.5,
+      "text": "That would be - yeah that would be incredibly helpful, I have a security analyst, her name is Priya, she's been leading the internal ISO prep work and she would get a lot out of that kind of session."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 365.7,
+      "end_time": 379.7,
+      "duration": 14.0,
+      "text": "Perfect, let's make sure Priya is on the next call - I'll send a calendar invite for a technical working session, maybe two weeks out, that gives you time to get Comply v2 activated and run that first report."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 381.2,
+      "end_time": 394.6,
+      "duration": 13.400000000000034,
+      "text": "That works - and just so I understand the activation piece, is that something I need to loop in my IT team for, or is it more of a - like a configuration thing on the Aegis side?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 395.9,
+      "end_time": 416.7,
+      "duration": 20.80000000000001,
+      "text": "It's pretty lightweight on your end - since you're already running Detect and Identity, the data connectors are mostly already in place, we just need to enable the Comply v2 module on your tenant and do a quick configuration review to make sure all your data sources are mapped correctly, should take maybe an hour of your team's time."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 417.5,
+      "end_time": 426.5,
+      "duration": 9.0,
+      "text": "Oh wow, okay, yeah that's much less overhead than I was anticipating - I was kind of bracing myself for like a big implementation project."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 426.9,
+      "end_time": 436.4,
+      "duration": 9.5,
+      "text": "Yeah that's the benefit of being on the full platform - you're not starting from scratch, we're just unlocking capabilities that the underlying data already supports."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 437.1,
+      "end_time": 453.5,
+      "duration": 16.399999999999977,
+      "text": "You know, I'll be honest - when we were evaluating platforms last year, one of the things that tipped us toward Aegis was exactly that, the idea that everything would be integrated rather than bolted together, and it's good to see that actually playing out in practice."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 454.1,
+      "end_time": 468.8,
+      "duration": 14.699999999999989,
+      "text": "That means a lot to hear, Thomas - and we want to make sure it keeps playing out that way through the audit, so Kevin's going to be your dedicated point of contact for all things Comply through this ISO process."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 469.2,
+      "end_time": 482.1,
+      "duration": 12.900000000000034,
+      "text": "Yeah, consider me on speed dial - seriously, if you or Priya hit questions on the platform or you're not sure how to interpret something in the report, just reach out, that's what I'm here for."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 483.5,
+      "end_time": 506.3,
+      "duration": 22.80000000000001,
+      "text": "Really appreciate that - okay so just to make sure I've got the next steps straight: Kevin sends a calendar invite for the technical working session in two weeks, Daniel gets Comply v2 activated on our tenant, and in the meantime we - or I guess Kevin's team handles the module enablement, and then we run the first baseline report before that working session."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 506.9,
+      "end_time": 517.5,
+      "duration": 10.600000000000023,
+      "text": "That's exactly it - I'll also send you a short prep document that explains what to expect from the baseline report so you and Priya aren't going in cold."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 518.9,
+      "end_time": 528.3,
+      "duration": 9.399999999999977,
+      "text": "Perfect - honestly this call was really reassuring, I feel like we actually have a path forward now, which is not how I felt last week."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 528.7,
+      "end_time": 535.8,
+      "duration": 7.099999999999909,
+      "text": "That's exactly what we want to hear - alright Thomas, we'll let you get back to it, talk soon."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 536.8,
+      "end_time": 540.0,
+      "duration": 3.2000000000000455,
+      "text": "Sounds great, thanks guys - really looking forward to it."
+    }
+  ],
+  "transcript_text": "Daniel Okafor: Hey Thomas, can you hear us okay?\nThomas Hargrove: Yeah, loud and clear - good to hear from you guys, it's been a couple weeks.\nDaniel Okafor: Good, good - yeah sorry it took us a bit to get this on the calendar, things have been moving fast on our end with the Comply v2 launch and everything.\nDaniel Okafor: Actually that's kind of why we're here today, right, so - Thomas, I also want to introduce Kevin, he's our solutions architect and he's going to be the technical lead on your ISO 27001 prep work.\nKevin O'Brien: Hey Thomas, great to meet you - I've been looking forward to this one, Daniel's told me a lot about what Redwood is trying to accomplish this year.\nThomas Hargrove: Likewise, yeah, and honestly the timing could not be better because our CISO has been breathing down my neck about ISO 27001 since like January, so - any help getting a clearer picture of where we stand is going to be huge.\nDaniel Okafor: Yeah, absolutely, and I think that's exactly where Comply v2 is going to change the game for you - um, before we dive in though, Thomas, can you just give Kevin a quick sense of where you are in the ISO journey? Like, have you done a formal gap assessment yet or are you still kind of in the early stages?\nThomas Hargrove: Yeah so we're - we're pretty early if I'm being honest. We had an external consultant come in back in February, they did a high-level gap assessment, and the short version is we have a lot of work to do on the information security management side, particularly around evidence collection and demonstrating continuous monitoring, which as a healthcare organization is like, that's a big deal for us.\nKevin O'Brien: Right, and that's such a common pain point, especially in healthcare - the auditors want to see a continuous thread of evidence, not just a snapshot, and that's historically been really painful to pull together manually.\nThomas Hargrove: Oh god, yeah, the last time we went through a HIPAA audit my team spent like three weeks just pulling logs and documentation together - it was a nightmare.\nKevin O'Brien: Three weeks, yeah - that's - I mean that's not unusual but it's also exactly the kind of thing we built Comply v2 to eliminate, so let's talk about what that actually looks like in practice.\nThomas Hargrove: Please, yeah, walk me through it.\nKevin O'Brien: So - okay so the big thing with v2, and this just went GA on April 7th so it's very fresh, is the on-demand reporting engine. You can now generate a full ISO 27001 readiness report at any point, and it maps your current control posture directly to the Annex A controls - so you're not having to manually cross-reference anything, the platform does that work for you.\nThomas Hargrove: Wait, so it's actually mapping to the specific Annex A controls? Like, is that - is it just a template thing or is it actually pulling live data from our environment?\nKevin O'Brien: Live data - so it's pulling from your Detect telemetry, your Identity configurations, your Protect backup logs, and then surfacing all of that against the control framework. So when an auditor asks you to demonstrate, say, A.12.4 on event logging and monitoring, you can literally generate that section of the report on the spot.\nThomas Hargrove: Okay that is - yeah that is genuinely impressive, I wasn't expecting that level of granularity.\nKevin O'Brien: And it's not just ISO either - you mentioned HIPAA a second ago - the same report engine covers HIPAA, SOC 2, and PCI DSS as well, so if you ever need to spin up a HIPAA evidence package, it's the same workflow, same interface.\nThomas Hargrove: Yeah that multi-framework piece is something we specifically asked for in our renewal discussions, so it's great to see that actually shipped - Daniel you might remember that conversation.\nDaniel Okafor: I do, yeah, I have the notes from that call - it was definitely on the roadmap and I'm glad we could deliver on it before your audit cycle.\nKevin O'Brien: So Thomas, one thing I want to make sure we cover - in terms of your timeline, do you have a target date for the ISO 27001 certification audit? Because that's going to shape how we structure the onboarding to Comply v2.\nThomas Hargrove: Our CISO is targeting Q1 2027 for the formal audit, so we have - you know, roughly eight or nine months, which sounds like a lot but when you factor in the remediation work it's going to go fast.\nKevin O'Brien: Eight months is actually a really solid runway for this - um, what I'd typically recommend for organizations at your stage is we start with a baseline report run in the first two weeks, just to get a concrete picture of where you are against the framework, and then we build a remediation roadmap from those gaps.\nThomas Hargrove: Yeah and that baseline report - is that something Kevin can help us interpret, or is it pretty self-explanatory on the platform?\nDaniel Okafor: Both, honestly - the report is designed to be readable by a non-specialist, we have like a traffic light system for control status, but Kevin and I will absolutely walk through it with you line by line on a follow-up call.\nKevin O'Brien: Yeah I was going to say - I'd actually love to do a working session with you and maybe whoever on your team is going to be the compliance lead, we can go through the report together and I can explain what each gap actually means in practical terms, not just the framework language.\nThomas Hargrove: That would be - yeah that would be incredibly helpful, I have a security analyst, her name is Priya, she's been leading the internal ISO prep work and she would get a lot out of that kind of session.\nKevin O'Brien: Perfect, let's make sure Priya is on the next call - I'll send a calendar invite for a technical working session, maybe two weeks out, that gives you time to get Comply v2 activated and run that first report.\nThomas Hargrove: That works - and just so I understand the activation piece, is that something I need to loop in my IT team for, or is it more of a - like a configuration thing on the Aegis side?\nKevin O'Brien: It's pretty lightweight on your end - since you're already running Detect and Identity, the data connectors are mostly already in place, we just need to enable the Comply v2 module on your tenant and do a quick configuration review to make sure all your data sources are mapped correctly, should take maybe an hour of your team's time.\nThomas Hargrove: Oh wow, okay, yeah that's much less overhead than I was anticipating - I was kind of bracing myself for like a big implementation project.\nKevin O'Brien: Yeah that's the benefit of being on the full platform - you're not starting from scratch, we're just unlocking capabilities that the underlying data already supports.\nThomas Hargrove: You know, I'll be honest - when we were evaluating platforms last year, one of the things that tipped us toward Aegis was exactly that, the idea that everything would be integrated rather than bolted together, and it's good to see that actually playing out in practice.\nDaniel Okafor: That means a lot to hear, Thomas - and we want to make sure it keeps playing out that way through the audit, so Kevin's going to be your dedicated point of contact for all things Comply through this ISO process.\nKevin O'Brien: Yeah, consider me on speed dial - seriously, if you or Priya hit questions on the platform or you're not sure how to interpret something in the report, just reach out, that's what I'm here for.\nThomas Hargrove: Really appreciate that - okay so just to make sure I've got the next steps straight: Kevin sends a calendar invite for the technical working session in two weeks, Daniel gets Comply v2 activated on our tenant, and in the meantime we - or I guess Kevin's team handles the module enablement, and then we run the first baseline report before that working session.\nKevin O'Brien: That's exactly it - I'll also send you a short prep document that explains what to expect from the baseline report so you and Priya aren't going in cold.\nThomas Hargrove: Perfect - honestly this call was really reassuring, I feel like we actually have a path forward now, which is not how I felt last week.\nDaniel Okafor: That's exactly what we want to hear - alright Thomas, we'll let you get back to it, talk soon.\nThomas Hargrove: Sounds great, thanks guys - really looking forward to it.",
+  "summary": "Daniel Okafor and solutions architect Kevin O'Brien met with Thomas Hargrove of Redwood to introduce Comply v2 and discuss support for their ISO 27001 certification journey. Thomas shared that Redwood is in early stages of ISO prep, with a formal audit targeted for Q1 2027, and highlighted pain points around evidence collection and continuous monitoring. Kevin walked through Comply v2's on-demand reporting engine, which maps live environment data to Annex A controls and supports multi-framework coverage including HIPAA and SOC 2. The team agreed on a clear set of next steps: activating Comply v2 on Redwood's tenant, running a baseline report, and scheduling a technical working session with Thomas and his security analyst Priya.",
+  "topics": [
+    "iso 27001",
+    "compliance reporting",
+    "onboarding",
+    "healthcare",
+    "multi-framework coverage",
+    "audit preparation"
+  ],
+  "action_items": [
+    "Kevin O'Brien: Send calendar invite for technical working session in two weeks, including Thomas and Priya",
+    "Daniel Okafor: Activate Comply v2 module on Redwood's tenant and complete configuration review",
+    "Kevin O'Brien: Send prep document explaining what to expect from the baseline ISO 27001 readiness report",
+    "Thomas Hargrove: Have Priya prepared to join the technical working session after baseline report is run"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 38.0,
+      "text": "Thomas reveals his CISO has been pressuring him about ISO 27001 since January, establishing urgency for the engagement",
+      "type": "concern",
+      "speaker": "Thomas Hargrove"
+    },
+    {
+      "time": 210.0,
+      "text": "Kevin demonstrates that Comply v2 maps live environment data to specific ISO 27001 Annex A controls, generating auditor-ready reports on demand",
+      "type": "positive_pivot",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 310.0,
+      "text": "Thomas confirms the multi-framework coverage was a specific ask during renewal discussions, validating that the product delivered on a key promise",
+      "type": "praise",
+      "speaker": "Thomas Hargrove"
+    },
+    {
+      "time": 540.0,
+      "text": "Thomas reflects that Aegis's integrated platform approach was the deciding factor in their vendor selection and confirms it is playing out as expected",
+      "type": "praise",
+      "speaker": "Thomas Hargrove"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Thomas Hargrove",
+      "event_type": "Join",
+      "time_seconds": 2.0,
+      "timestamp_ms": 1777210202000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Join",
+      "time_seconds": 17.0,
+      "timestamp_ms": 1777210217000
+    },
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Join",
+      "time_seconds": 46.0,
+      "timestamp_ms": 1777210246000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Leave",
+      "time_seconds": 1725.0,
+      "timestamp_ms": 1777211925000
+    },
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Leave",
+      "time_seconds": 1727.0,
+      "timestamp_ms": 1777211927000
+    },
+    {
+      "participant_name": "Thomas Hargrove",
+      "event_type": "Leave",
+      "time_seconds": 1713.0,
+      "timestamp_ms": 1777211913000
+    }
+  ],
+  "stats": {
+    "turn_count": 39,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Daniel Okafor": 8,
+      "Thomas Hargrove": 17,
+      "Kevin O'Brien": 14
+    },
+    "speaker_total_seconds": {
+      "Daniel Okafor": 94.5,
+      "Thomas Hargrove": 192.3,
+      "Kevin O'Brien": 214.9
+    }
+  }
+}

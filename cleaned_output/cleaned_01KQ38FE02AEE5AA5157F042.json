@@ -1,0 +1,396 @@
+{
+  "meeting_id": "01KQ38FE02AEE5AA5157F042",
+  "title": "Support Case #3296 - Pinnacle Insurance Comply v2 Report Formatting Issue",
+  "organizer_email": "marcus.williams@aegiscloud.com",
+  "host_email": "marcus.williams@aegiscloud.com",
+  "start_time": "2026-04-08T15:15:00.000Z",
+  "end_time": "2026-04-08T15:29:06.000Z",
+  "duration_minutes": 14.1,
+  "participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "o.grant@pinnacleins.com",
+      "domain": "pinnacleins.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "o.grant@pinnacleins.com",
+      "domain": "pinnacleins.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Marcus Williams",
+    "1": "Oliver Grant"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 3.3,
+      "end_time": 9.1,
+      "duration": 5.8,
+      "text": "Hi, this is Marcus Williams from Aegis Cloud Security support, am I speaking with Oliver Grant?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 10.1,
+      "end_time": 14.7,
+      "duration": 4.6,
+      "text": "Yeah, that's me. Hi Marcus, thanks for getting back to me so quickly."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 15.2,
+      "end_time": 24.2,
+      "duration": 9.0,
+      "text": "Of course, happy to help. So I'm pulling up support case number 3296 here - you're reporting a formatting issue with Aegis Comply v2 reports?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 25.2,
+      "end_time": 38.5,
+      "duration": 13.3,
+      "text": "Yeah, exactly. So we just upgraded to - or I guess it launched yesterday, right, the v2 - and we ran our first on-demand SOC 2 report this morning and the output is just... it's not right."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 39.0,
+      "end_time": 45.6,
+      "duration": 6.600000000000001,
+      "text": "Okay, can you describe what you're seeing? Like is it a visual formatting thing, or is data missing, or...?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 47.1,
+      "end_time": 74.5,
+      "duration": 27.4,
+      "text": "It's - okay so a couple of things. First, the section headers in the PDF export are getting cut off. Like the text is truncating mid-word on some of the longer control category names. And then second, the control status table, the one that shows pass, fail, not applicable - it's rendering across two pages in a really awkward way. Like the header row is on one page and then all the data is on the next."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 75.0,
+      "end_time": 83.6,
+      "duration": 8.599999999999994,
+      "text": "Got it, okay. And just to confirm - is this happening on every report you generate, or is it specific to the SOC 2 framework?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 84.0,
+      "end_time": 92.9,
+      "duration": 8.900000000000006,
+      "text": "Uh, we only ran SOC 2 so far. We were planning to run a PCI DSS one later today but haven't done that yet."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 93.6,
+      "end_time": 103.1,
+      "duration": 9.5,
+      "text": "Okay, that's helpful. And when you say PDF export - are you using the direct download from the Comply dashboard, or are you going through the API?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 103.6,
+      "end_time": 106.6,
+      "duration": 3.0,
+      "text": "Dashboard. Just the download button in the UI."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 107.1,
+      "end_time": 112.3,
+      "duration": 5.200000000000003,
+      "text": "Alright. And what browser are you using, just so I can note that down?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 112.8,
+      "end_time": 115.3,
+      "duration": 2.5,
+      "text": "Chrome. Latest version, I keep it updated."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 116.1,
+      "end_time": 130.8,
+      "duration": 14.700000000000017,
+      "text": "Okay, Chrome, noted. And um - can you send me a copy of the report that's showing the issue? You can attach it to the case, or if there's any sensitivity around that I can also try to reproduce it on my end."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 131.8,
+      "end_time": 139.9,
+      "duration": 8.099999999999994,
+      "text": "Yeah, there's definitely sensitivity - it's a compliance report so I'd rather not send the whole thing externally. Can you reproduce it?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 141.3,
+      "end_time": 149.5,
+      "duration": 8.199999999999989,
+      "text": "Absolutely, totally understand. Let me just spin up a test environment here and generate a SOC 2 report... give me just a second."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 149.8,
+      "end_time": 151.5,
+      "duration": 1.6999999999999886,
+      "text": "Sure, take your time."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 152.0,
+      "end_time": 171.2,
+      "duration": 19.19999999999999,
+      "text": "Okay, so I'm generating it now... and yeah, I can actually see what you're describing. The header truncation is pretty noticeable on - looks like it's specifically the longer control category labels. Like the Availability and Confidentiality sections are fine but Processing Integrity is getting cut. And yeah the table pagination issue is there too."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 171.7,
+      "end_time": 176.9,
+      "duration": 5.200000000000017,
+      "text": "Right, yeah, that's exactly it. Processing Integrity was one of the ones I noticed too."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 177.2,
+      "end_time": 196.6,
+      "duration": 19.400000000000006,
+      "text": "Okay so this is definitely a bug on our end, I'm not going to ask you to clear your cache or anything like that - this is a rendering issue in the PDF generation service. Given that v2 just went GA yesterday this is almost certainly something that came in with the new release."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 197.5,
+      "end_time": 203.2,
+      "duration": 5.699999999999989,
+      "text": "Yeah, that was my assumption too. Is this affecting other customers or is it just us?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 204.0,
+      "end_time": 219.2,
+      "duration": 15.199999999999989,
+      "text": "I don't have visibility into other cases right now but I'm going to flag this to the engineering team immediately and check if there are other reports of the same thing. I'd expect this to be a known issue shortly if it isn't already."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 220.7,
+      "end_time": 231.5,
+      "duration": 10.800000000000011,
+      "text": "Okay. And what's the timeline looking like for a fix? Because we have an internal audit review next week and we were hoping to have clean reports ready before that."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 232.0,
+      "end_time": 256.8,
+      "duration": 24.80000000000001,
+      "text": "Yeah, I hear you, that's a real constraint. I can't give you a hard commitment on timeline right now without talking to engineering, but given that this is a rendering defect and not like a data integrity issue, these types of fixes tend to be relatively quick to patch. I'll escalate this as high priority and get back to you with an ETA today - is email okay for that?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 257.2,
+      "end_time": 266.1,
+      "duration": 8.900000000000034,
+      "text": "Email works. And look, I appreciate that - I just want to make sure we're not scrambling the day before the review, you know."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 266.6,
+      "end_time": 289.5,
+      "duration": 22.899999999999977,
+      "text": "Completely understand. I'll make sure the ticket reflects that timeline urgency. In the meantime - and this is just a workaround, not a solution - do you have access to the raw CSV export for the control status data? It won't have the same formatting obviously but at least the underlying data would be available if you need something to reference before the patch lands."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 289.9,
+      "end_time": 294.4,
+      "duration": 4.5,
+      "text": "Hmm, yeah, I can dig into that. Where would I find that?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 295.2,
+      "end_time": 313.4,
+      "duration": 18.19999999999999,
+      "text": "In the Comply dashboard, if you go to the report you generated, there should be an export dropdown - not just the PDF button - and there's a CSV option in there. It'll give you the full control list with statuses. It's not formatted for presentation but it has the data."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 314.4,
+      "end_time": 323.6,
+      "duration": 9.200000000000045,
+      "text": "Okay, let me - yeah, I see it. Export as CSV. Alright, I'll grab that as a backup. That could work for our internal reference at least."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 324.0,
+      "end_time": 343.4,
+      "duration": 19.399999999999977,
+      "text": "Good. And I'll also - let me just make sure I've got all this documented correctly in the case. So we've got: SOC 2 report, PDF export via the dashboard, section header text truncation on long control category names, and the control status table pagination breaking across pages. Anything else you noticed that I should add?"
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 343.8,
+      "end_time": 355.5,
+      "duration": 11.699999999999989,
+      "text": "Uh... actually, yeah, there was one more thing. The page numbers in the footer - they seem off. Like page one of twelve or something, but the document is clearly more than twelve pages."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 356.1,
+      "end_time": 368.9,
+      "duration": 12.799999999999955,
+      "text": "Oh interesting, okay. Let me check that on my end too... yeah, I see it - the page count in the footer isn't matching the actual document length. Okay, adding that to the bug report. Good catch."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 370.0,
+      "end_time": 374.6,
+      "duration": 4.600000000000023,
+      "text": "Yeah, I figured it was probably all related but wanted to mention it."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 375.0,
+      "end_time": 395.2,
+      "duration": 20.19999999999999,
+      "text": "Yep, likely all the same root cause in the PDF renderer. Okay, so next steps - I'm going to file this with engineering right after this call, flag the audit timeline urgency, and send you an email update today with whatever ETA they give me. Case number stays 3296, so you can reference that in any follow-up."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 396.3,
+      "end_time": 421.0,
+      "duration": 24.69999999999999,
+      "text": "Sounds good. And if the fix does come through before next week, will we get notified automatically or do we need to re-download the report manually? You'd need to regenerate the report - the system doesn't auto-regenerate existing ones. But once the patch is deployed I'll let you know via the case and you can just kick off a new on-demand report and it should render correctly."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 422.3,
+      "end_time": 428.8,
+      "duration": 6.5,
+      "text": "Wait, sorry, that was me answering my own question - I meant to direct that to you, Marcus."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 430.0,
+      "end_time": 441.7,
+      "duration": 11.699999999999989,
+      "text": "Ha, no worries - and actually you were right. Reports aren't stored and auto-updated, you'd generate a fresh one after the fix. It'll pull the latest data anyway so it'd be current."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 442.4,
+      "end_time": 448.2,
+      "duration": 5.800000000000011,
+      "text": "Perfect. Okay, I think that covers it from my end. I appreciate you jumping on this quickly."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 449.2,
+      "end_time": 460.6,
+      "duration": 11.400000000000034,
+      "text": "Of course. Sorry for the hassle on day two of the v2 launch - we'll get it sorted. You'll hear from me later today on the ETA. Have a good one, Oliver."
+    },
+    {
+      "speaker_name": "Oliver Grant",
+      "start_time": 461.5,
+      "end_time": 463.0,
+      "duration": 1.5,
+      "text": "Thanks Marcus, you too."
+    }
+  ],
+  "transcript_text": "Marcus Williams: Hi, this is Marcus Williams from Aegis Cloud Security support, am I speaking with Oliver Grant?\nOliver Grant: Yeah, that's me. Hi Marcus, thanks for getting back to me so quickly.\nMarcus Williams: Of course, happy to help. So I'm pulling up support case number 3296 here - you're reporting a formatting issue with Aegis Comply v2 reports?\nOliver Grant: Yeah, exactly. So we just upgraded to - or I guess it launched yesterday, right, the v2 - and we ran our first on-demand SOC 2 report this morning and the output is just... it's not right.\nMarcus Williams: Okay, can you describe what you're seeing? Like is it a visual formatting thing, or is data missing, or...?\nOliver Grant: It's - okay so a couple of things. First, the section headers in the PDF export are getting cut off. Like the text is truncating mid-word on some of the longer control category names. And then second, the control status table, the one that shows pass, fail, not applicable - it's rendering across two pages in a really awkward way. Like the header row is on one page and then all the data is on the next.\nMarcus Williams: Got it, okay. And just to confirm - is this happening on every report you generate, or is it specific to the SOC 2 framework?\nOliver Grant: Uh, we only ran SOC 2 so far. We were planning to run a PCI DSS one later today but haven't done that yet.\nMarcus Williams: Okay, that's helpful. And when you say PDF export - are you using the direct download from the Comply dashboard, or are you going through the API?\nOliver Grant: Dashboard. Just the download button in the UI.\nMarcus Williams: Alright. And what browser are you using, just so I can note that down?\nOliver Grant: Chrome. Latest version, I keep it updated.\nMarcus Williams: Okay, Chrome, noted. And um - can you send me a copy of the report that's showing the issue? You can attach it to the case, or if there's any sensitivity around that I can also try to reproduce it on my end.\nOliver Grant: Yeah, there's definitely sensitivity - it's a compliance report so I'd rather not send the whole thing externally. Can you reproduce it?\nMarcus Williams: Absolutely, totally understand. Let me just spin up a test environment here and generate a SOC 2 report... give me just a second.\nOliver Grant: Sure, take your time.\nMarcus Williams: Okay, so I'm generating it now... and yeah, I can actually see what you're describing. The header truncation is pretty noticeable on - looks like it's specifically the longer control category labels. Like the Availability and Confidentiality sections are fine but Processing Integrity is getting cut. And yeah the table pagination issue is there too.\nOliver Grant: Right, yeah, that's exactly it. Processing Integrity was one of the ones I noticed too.\nMarcus Williams: Okay so this is definitely a bug on our end, I'm not going to ask you to clear your cache or anything like that - this is a rendering issue in the PDF generation service. Given that v2 just went GA yesterday this is almost certainly something that came in with the new release.\nOliver Grant: Yeah, that was my assumption too. Is this affecting other customers or is it just us?\nMarcus Williams: I don't have visibility into other cases right now but I'm going to flag this to the engineering team immediately and check if there are other reports of the same thing. I'd expect this to be a known issue shortly if it isn't already.\nOliver Grant: Okay. And what's the timeline looking like for a fix? Because we have an internal audit review next week and we were hoping to have clean reports ready before that.\nMarcus Williams: Yeah, I hear you, that's a real constraint. I can't give you a hard commitment on timeline right now without talking to engineering, but given that this is a rendering defect and not like a data integrity issue, these types of fixes tend to be relatively quick to patch. I'll escalate this as high priority and get back to you with an ETA today - is email okay for that?\nOliver Grant: Email works. And look, I appreciate that - I just want to make sure we're not scrambling the day before the review, you know.\nMarcus Williams: Completely understand. I'll make sure the ticket reflects that timeline urgency. In the meantime - and this is just a workaround, not a solution - do you have access to the raw CSV export for the control status data? It won't have the same formatting obviously but at least the underlying data would be available if you need something to reference before the patch lands.\nOliver Grant: Hmm, yeah, I can dig into that. Where would I find that?\nMarcus Williams: In the Comply dashboard, if you go to the report you generated, there should be an export dropdown - not just the PDF button - and there's a CSV option in there. It'll give you the full control list with statuses. It's not formatted for presentation but it has the data.\nOliver Grant: Okay, let me - yeah, I see it. Export as CSV. Alright, I'll grab that as a backup. That could work for our internal reference at least.\nMarcus Williams: Good. And I'll also - let me just make sure I've got all this documented correctly in the case. So we've got: SOC 2 report, PDF export via the dashboard, section header text truncation on long control category names, and the control status table pagination breaking across pages. Anything else you noticed that I should add?\nOliver Grant: Uh... actually, yeah, there was one more thing. The page numbers in the footer - they seem off. Like page one of twelve or something, but the document is clearly more than twelve pages.\nMarcus Williams: Oh interesting, okay. Let me check that on my end too... yeah, I see it - the page count in the footer isn't matching the actual document length. Okay, adding that to the bug report. Good catch.\nOliver Grant: Yeah, I figured it was probably all related but wanted to mention it.\nMarcus Williams: Yep, likely all the same root cause in the PDF renderer. Okay, so next steps - I'm going to file this with engineering right after this call, flag the audit timeline urgency, and send you an email update today with whatever ETA they give me. Case number stays 3296, so you can reference that in any follow-up.\nOliver Grant: Sounds good. And if the fix does come through before next week, will we get notified automatically or do we need to re-download the report manually?\nOliver Grant: You'd need to regenerate the report - the system doesn't auto-regenerate existing ones. But once the patch is deployed I'll let you know via the case and you can just kick off a new on-demand report and it should render correctly.\nOliver Grant: Wait, sorry, that was me answering my own question - I meant to direct that to you, Marcus.\nMarcus Williams: Ha, no worries - and actually you were right. Reports aren't stored and auto-updated, you'd generate a fresh one after the fix. It'll pull the latest data anyway so it'd be current.\nOliver Grant: Perfect. Okay, I think that covers it from my end. I appreciate you jumping on this quickly.\nMarcus Williams: Of course. Sorry for the hassle on day two of the v2 launch - we'll get it sorted. You'll hear from me later today on the ETA. Have a good one, Oliver.\nOliver Grant: Thanks Marcus, you too.",
+  "summary": "Oliver Grant contacted Aegis Cloud Security support to report multiple formatting bugs in the newly launched Aegis Comply v2 PDF report export. The issues include section header text truncation on long control category names, a table pagination problem splitting the header row from its data, and incorrect page count in the footer. Marcus confirmed the bugs by reproducing them in a test environment and identified them as a rendering defect in the PDF generation service introduced with the v2 release. Marcus committed to escalating to engineering with high priority and providing an ETA via email the same day, given Oliver's internal audit review scheduled for the following week.",
+  "topics": [
+    "product bug",
+    "compliance reporting",
+    "pdf rendering",
+    "new release issue",
+    "audit deadline",
+    "workaround"
+  ],
+  "action_items": [
+    "Marcus Williams: File bug report with engineering team immediately, flagging audit timeline urgency, and send Oliver an email ETA update later today",
+    "Marcus Williams: Check with engineering and case queue to determine if other customers are reporting the same PDF rendering issues",
+    "Oliver Grant: Download the CSV export from the Comply dashboard as a backup reference for the internal audit review while the fix is pending",
+    "Oliver Grant: Regenerate the SOC 2 report after the patch is deployed and verify the formatting issues are resolved"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.4,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Oliver describes three distinct formatting bugs in the SOC 2 PDF export: header truncation, table pagination breaking, and incorrect page count in footer.",
+      "type": "technical_issue",
+      "speaker": "Oliver Grant"
+    },
+    {
+      "time": 290.0,
+      "text": "Marcus confirms the bug is reproducible on his end and acknowledges it is a rendering defect introduced with the v2 release, not a user-side issue.",
+      "type": "positive_pivot",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 385.0,
+      "text": "Oliver flags that he has an internal audit review next week and needs clean reports ready, creating urgency for a timely fix.",
+      "type": "concern",
+      "speaker": "Oliver Grant"
+    },
+    {
+      "time": 450.0,
+      "text": "Marcus offers a CSV export workaround so Oliver has access to the underlying compliance data while waiting for the patch.",
+      "type": "action_item",
+      "speaker": "Marcus Williams"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 36.0,
+      "timestamp_ms": 1775661336000
+    },
+    {
+      "participant_name": "Oliver Grant",
+      "event_type": "Join",
+      "time_seconds": 42.0,
+      "timestamp_ms": 1775661342000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 831.0,
+      "timestamp_ms": 1775662131000
+    },
+    {
+      "participant_name": "Oliver Grant",
+      "event_type": "Leave",
+      "time_seconds": 842.0,
+      "timestamp_ms": 1775662142000
+    }
+  ],
+  "stats": {
+    "turn_count": 40,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Marcus Williams": 19,
+      "Oliver Grant": 21
+    },
+    "speaker_total_seconds": {
+      "Marcus Williams": 262.8,
+      "Oliver Grant": 167.7
+    }
+  }
+}

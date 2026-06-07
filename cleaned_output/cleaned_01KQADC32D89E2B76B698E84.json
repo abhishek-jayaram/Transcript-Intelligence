@@ -1,0 +1,460 @@
+{
+  "meeting_id": "01KQADC32D89E2B76B698E84",
+  "title": "Support Case #6635 - Nova Retail Group SSO Login Failures",
+  "organizer_email": "sarah.chen@aegiscloud.com",
+  "host_email": "sarah.chen@aegiscloud.com",
+  "start_time": "2026-02-14T13:00:00.000Z",
+  "end_time": "2026-02-14T13:24:06.000Z",
+  "duration_minutes": 24.1,
+  "participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "s.blair@novaretail.com",
+      "domain": "novaretail.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "a.coleman@novaretail.com",
+      "domain": "novaretail.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "s.blair@novaretail.com",
+      "domain": "novaretail.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "a.coleman@novaretail.com",
+      "domain": "novaretail.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Sarah Chen",
+    "1": "Stephanie Blair",
+    "2": "Andre Coleman",
+    "3": "Elena Vasquez"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 3.2,
+      "end_time": 20.1,
+      "duration": 16.900000000000002,
+      "text": "Hi, thanks for joining - this is Sarah Chen from Aegis Cloud Security support, and I also have my colleague Elena Vasquez on the line with me today. Elena specializes in our Identity module so I wanted to bring her in given what you described in the case notes."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 21.5,
+      "end_time": 35.6,
+      "duration": 14.100000000000001,
+      "text": "Great, yeah. This is Stephanie Blair, VP of Technology at Nova Retail Group, and I have Andre Coleman on with me - he's one of our senior security engineers and he's been in the thick of this since it started."
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 36.6,
+      "end_time": 44.4,
+      "duration": 7.799999999999997,
+      "text": "Hi everyone, Andre here. Yeah, happy to be on - well, not happy about the situation, but you know what I mean."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 44.8,
+      "end_time": 57.4,
+      "duration": 12.600000000000001,
+      "text": "Totally understand, and hi Andre, hi Stephanie. We've reviewed the case notes you submitted but I'd love to just hear directly from you - can you walk us through what you're experiencing? When did this start?"
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 58.6,
+      "end_time": 63.5,
+      "duration": 4.899999999999999,
+      "text": "So it started - Andre, was it Tuesday morning? Around like 9 AM?"
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 64.9,
+      "end_time": 84.9,
+      "duration": 20.0,
+      "text": "Yeah, Tuesday February 10th, roughly 8:50, 8:55 AM central time. We started getting a flood of tickets from users saying they couldn't log in through SSO. They'd hit the login page, get redirected to our IdP, authenticate fine, and then come back and just get... a generic error. Something like 'authentication failed, please contact your administrator.'"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 85.5,
+      "end_time": 94.0,
+      "duration": 8.5,
+      "text": "And this is affecting - I want to make sure I understand the scope - is this all of your users or a subset?"
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 94.8,
+      "end_time": 102.5,
+      "duration": 7.700000000000003,
+      "text": "That's what's so frustrating about this, honestly. It's not all users. It's roughly - Andre, what are we at, like 40 percent?"
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 103.2,
+      "end_time": 125.7,
+      "duration": 22.5,
+      "text": "Yeah, we've been tracking it. About 38 to 42 percent of our user base is hitting the failure. We have around 1,200 users in Aegis Identity and somewhere between 450 and 500 of them are completely locked out. And there's no obvious pattern - it's not department-based, it's not role-based, it doesn't seem to correlate with when they were provisioned or anything like that."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 126.1,
+      "end_time": 134.6,
+      "duration": 8.5,
+      "text": "Okay, that's really helpful context. And just to confirm - you're using Okta as your identity provider, correct? That's what's in the case."
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 135.3,
+      "end_time": 144.1,
+      "duration": 8.799999999999983,
+      "text": "That's right, Okta. SAML 2.0. We've been running this configuration for, what, eight, nine months without any issues, and then Tuesday just - boom."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 145.3,
+      "end_time": 150.8,
+      "duration": 5.5,
+      "text": "And nothing changed on your Okta side? No config updates, no certificate renewals, anything like that?"
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 151.3,
+      "end_time": 164.6,
+      "duration": 13.299999999999983,
+      "text": "Nothing. I went through everything. Our Okta config is untouched. The SAML app settings are exactly what they've been. I even pulled the metadata and compared it to what we had exported three weeks ago - identical."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 165.6,
+      "end_time": 188.4,
+      "duration": 22.80000000000001,
+      "text": "Okay so, and I want to be transparent here - we do have some reports from a couple of other customers about SSO intermittency, and our engineering team is actively investigating. I don't want to say definitively this is a platform bug yet, but it's something we're taking seriously. Elena, do you want to talk about what we've been looking at on our end?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 189.3,
+      "end_time": 214.4,
+      "duration": 25.099999999999994,
+      "text": "Yeah, absolutely. So um, what we've identified so far is there may be an issue with how Aegis Identity is processing certain SAML assertion attributes - specifically around the NameID format. There was a minor update pushed to the Identity module on February 9th, which was the day before you started seeing issues, and we think it may have introduced a regression in how we're handling persistent versus transient NameID formats."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 215.3,
+      "end_time": 225.2,
+      "duration": 9.899999999999977,
+      "text": "Wait - there was an update pushed the day before this started and you're just telling us this now? We've had 500 users locked out for four days."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 226.3,
+      "end_time": 245.9,
+      "duration": 19.599999999999994,
+      "text": "You're absolutely right to be frustrated by that, Stephanie, and I'm sorry. The update was a minor patch - it wasn't expected to affect SSO behavior and it didn't trigger our standard pre-release SSO regression tests the way it should have. That's a gap in our process and I don't want to gloss over that."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 247.0,
+      "end_time": 267.0,
+      "duration": 20.0,
+      "text": "I mean, look - I get it, things happen. But four days is a long time. We've got retail operations staff who literally cannot access the security platform. We're a retail company, Valentine's Day is today, this is one of our biggest sales days of the year, and we have team leads who can't get into the system."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 267.8,
+      "end_time": 288.1,
+      "duration": 20.30000000000001,
+      "text": "Understood, and that context is really important - thank you for sharing that. Let me ask you this - in the interim, as a workaround, have your affected users tried using local username and password login instead of SSO? I know that's not ideal but it would at least get them access while we work on the fix."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 288.4,
+      "end_time": 302.0,
+      "duration": 13.600000000000023,
+      "text": "We did try that for a handful of users. The problem is we enforced SSO-only as a security requirement, so local auth is disabled for most of our user accounts. Andre, is that still the case across the board?"
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 302.9,
+      "end_time": 317.6,
+      "duration": 14.700000000000045,
+      "text": "Yeah, we have local auth disabled for about 90 percent of users. It's a security policy thing - we went SSO-only specifically because it was the recommended configuration in Aegis's own documentation. So the workaround kind of doesn't apply to us."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 318.0,
+      "end_time": 325.4,
+      "duration": 7.399999999999977,
+      "text": "Right, okay. So Elena, can we talk about the admin override option? Because I think that might be relevant here."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 326.4,
+      "end_time": 352.7,
+      "duration": 26.30000000000001,
+      "text": "Yes - so Stephanie, Andre, there is an option in the Aegis Identity admin console where a super admin can temporarily re-enable local authentication on a per-user basis without changing your global policy. It's under Identity Settings, User Management, and then you'd select the affected user, go to Authentication Override, and toggle on 'Allow local auth - temporary.' It sets a 72-hour window by default. That would let your affected users in today at least."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 353.7,
+      "end_time": 359.4,
+      "duration": 5.699999999999989,
+      "text": "Okay, that's... actually useful. Andre, can you look at that while we're on the call?"
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 360.2,
+      "end_time": 370.9,
+      "duration": 10.699999999999989,
+      "text": "Yeah, pulling it up now. Identity Settings... User Management... okay I see it. Authentication Override, yeah. So I'd have to do this for each of the 450 affected users individually?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 371.6,
+      "end_time": 383.3,
+      "duration": 11.699999999999989,
+      "text": "There is a bulk selection option - if you filter your user list and select multiple users, the bulk actions dropdown should have the Authentication Override option. It's a little buried, I'll be honest."
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 383.7,
+      "end_time": 389.7,
+      "duration": 6.0,
+      "text": "Okay, yeah, I see the bulk action. That's... manageable. Not great, but manageable. I'll take it."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 390.4,
+      "end_time": 412.6,
+      "duration": 22.200000000000045,
+      "text": "Good. And I want to be clear that this is a stopgap - we are working on a proper fix. Our engineering team has identified the regression in the NameID handling and a patch is being tested right now. I can't give you a hard commit time, but the current estimate from engineering is that we're targeting a fix deployment within 48 hours."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 413.1,
+      "end_time": 422.2,
+      "duration": 9.099999999999966,
+      "text": "48 hours. So that's... Sunday at the earliest. We will have had users locked out for almost a week by then. That's really not acceptable, Elena."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 423.1,
+      "end_time": 441.8,
+      "duration": 18.69999999999999,
+      "text": "I hear you. I'm going to escalate the priority on this case when we get off this call and push engineering to see if there's any path to accelerating that timeline. I can't promise a different date but I will personally follow up with you by end of day today with an updated ETA."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 442.5,
+      "end_time": 455.9,
+      "duration": 13.399999999999977,
+      "text": "I'd also like to understand - are there any other customers affected by this? Because if this is a widespread issue I'd expect a status page update or some kind of proactive communication, and I haven't seen anything."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 456.6,
+      "end_time": 480.0,
+      "duration": 23.399999999999977,
+      "text": "That's a fair point. We have seen reports from a small number of other customers - I don't have exact numbers in front of me - and you're right that a status page update should have gone out sooner. I'm going to flag that internally as well. You shouldn't have to check in with support to find out if there's a known issue affecting your platform."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 481.1,
+      "end_time": 497.3,
+      "duration": 16.19999999999999,
+      "text": "Yeah. Yeah, exactly. Look, I want to be clear - we're not going anywhere, we're committed to Aegis, but this has been a rough week and I need to see some responsiveness here. Our CISO is asking me questions I don't have great answers to right now."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 498.4,
+      "end_time": 515.2,
+      "duration": 16.800000000000068,
+      "text": "Completely understood. I want to make sure you have everything you need to communicate internally. Would it help if we drafted a brief incident summary email that you could share with your CISO? Something that lays out the root cause, what we know, and the remediation plan?"
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 516.2,
+      "end_time": 524.0,
+      "duration": 7.7999999999999545,
+      "text": "Actually, yeah. That would be helpful. Something I can forward that doesn't come from me trying to paraphrase a support call."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 524.7,
+      "end_time": 542.0,
+      "duration": 17.299999999999955,
+      "text": "We'll put that together and send it over within the hour. And Andre - as you go through the bulk override process, if you run into any issues or it doesn't behave the way I described, please ping us directly in the case thread and we'll jump back on immediately."
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 542.7,
+      "end_time": 558.0,
+      "duration": 15.299999999999955,
+      "text": "Will do. And just to confirm the next steps I'm hearing - you'll escalate the patch timeline, you'll send an incident summary we can share internally, and you'll follow up by end of day today with an updated fix ETA. Is that right?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 558.8,
+      "end_time": 568.0,
+      "duration": 9.200000000000045,
+      "text": "That's exactly right. And we'll keep the case thread updated in real time as we get information from engineering. You won't have to chase us."
+    },
+    {
+      "speaker_name": "Stephanie Blair",
+      "start_time": 568.7,
+      "end_time": 579.2,
+      "duration": 10.5,
+      "text": "Okay. I appreciate that. I'm still frustrated, I'm not going to pretend otherwise, but at least we have a path forward. Let's see how the next 24 hours go."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 580.4,
+      "end_time": 591.3,
+      "duration": 10.899999999999977,
+      "text": "That's completely fair, Stephanie. We'll earn back your confidence here. Thank you both for your time today and I'm sorry again for the disruption, especially on a day like today."
+    },
+    {
+      "speaker_name": "Andre Coleman",
+      "start_time": 592.5,
+      "end_time": 594.0,
+      "duration": 1.5,
+      "text": "Thanks. Talk soon."
+    }
+  ],
+  "transcript_text": "Sarah Chen: Hi, thanks for joining - this is Sarah Chen from Aegis Cloud Security support, and I also have my colleague Elena Vasquez on the line with me today. Elena specializes in our Identity module so I wanted to bring her in given what you described in the case notes.\nStephanie Blair: Great, yeah. This is Stephanie Blair, VP of Technology at Nova Retail Group, and I have Andre Coleman on with me - he's one of our senior security engineers and he's been in the thick of this since it started.\nAndre Coleman: Hi everyone, Andre here. Yeah, happy to be on - well, not happy about the situation, but you know what I mean.\nElena Vasquez: Totally understand, and hi Andre, hi Stephanie. We've reviewed the case notes you submitted but I'd love to just hear directly from you - can you walk us through what you're experiencing? When did this start?\nStephanie Blair: So it started - Andre, was it Tuesday morning? Around like 9 AM?\nAndre Coleman: Yeah, Tuesday February 10th, roughly 8:50, 8:55 AM central time. We started getting a flood of tickets from users saying they couldn't log in through SSO. They'd hit the login page, get redirected to our IdP, authenticate fine, and then come back and just get... a generic error. Something like 'authentication failed, please contact your administrator.'\nSarah Chen: And this is affecting - I want to make sure I understand the scope - is this all of your users or a subset?\nStephanie Blair: That's what's so frustrating about this, honestly. It's not all users. It's roughly - Andre, what are we at, like 40 percent?\nAndre Coleman: Yeah, we've been tracking it. About 38 to 42 percent of our user base is hitting the failure. We have around 1,200 users in Aegis Identity and somewhere between 450 and 500 of them are completely locked out. And there's no obvious pattern - it's not department-based, it's not role-based, it doesn't seem to correlate with when they were provisioned or anything like that.\nElena Vasquez: Okay, that's really helpful context. And just to confirm - you're using Okta as your identity provider, correct? That's what's in the case.\nAndre Coleman: That's right, Okta. SAML 2.0. We've been running this configuration for, what, eight, nine months without any issues, and then Tuesday just - boom.\nElena Vasquez: And nothing changed on your Okta side? No config updates, no certificate renewals, anything like that?\nAndre Coleman: Nothing. I went through everything. Our Okta config is untouched. The SAML app settings are exactly what they've been. I even pulled the metadata and compared it to what we had exported three weeks ago - identical.\nSarah Chen: Okay so, and I want to be transparent here - we do have some reports from a couple of other customers about SSO intermittency, and our engineering team is actively investigating. I don't want to say definitively this is a platform bug yet, but it's something we're taking seriously. Elena, do you want to talk about what we've been looking at on our end?\nElena Vasquez: Yeah, absolutely. So um, what we've identified so far is there may be an issue with how Aegis Identity is processing certain SAML assertion attributes - specifically around the NameID format. There was a minor update pushed to the Identity module on February 9th, which was the day before you started seeing issues, and we think it may have introduced a regression in how we're handling persistent versus transient NameID formats.\nStephanie Blair: Wait - there was an update pushed the day before this started and you're just telling us this now? We've had 500 users locked out for four days.\nSarah Chen: You're absolutely right to be frustrated by that, Stephanie, and I'm sorry. The update was a minor patch - it wasn't expected to affect SSO behavior and it didn't trigger our standard pre-release SSO regression tests the way it should have. That's a gap in our process and I don't want to gloss over that.\nStephanie Blair: I mean, look - I get it, things happen. But four days is a long time. We've got retail operations staff who literally cannot access the security platform. We're a retail company, Valentine's Day is today, this is one of our biggest sales days of the year, and we have team leads who can't get into the system.\nElena Vasquez: Understood, and that context is really important - thank you for sharing that. Let me ask you this - in the interim, as a workaround, have your affected users tried using local username and password login instead of SSO? I know that's not ideal but it would at least get them access while we work on the fix.\nStephanie Blair: We did try that for a handful of users. The problem is we enforced SSO-only as a security requirement, so local auth is disabled for most of our user accounts. Andre, is that still the case across the board?\nAndre Coleman: Yeah, we have local auth disabled for about 90 percent of users. It's a security policy thing - we went SSO-only specifically because it was the recommended configuration in Aegis's own documentation. So the workaround kind of doesn't apply to us.\nSarah Chen: Right, okay. So Elena, can we talk about the admin override option? Because I think that might be relevant here.\nElena Vasquez: Yes - so Stephanie, Andre, there is an option in the Aegis Identity admin console where a super admin can temporarily re-enable local authentication on a per-user basis without changing your global policy. It's under Identity Settings, User Management, and then you'd select the affected user, go to Authentication Override, and toggle on 'Allow local auth - temporary.' It sets a 72-hour window by default. That would let your affected users in today at least.\nStephanie Blair: Okay, that's... actually useful. Andre, can you look at that while we're on the call?\nAndre Coleman: Yeah, pulling it up now. Identity Settings... User Management... okay I see it. Authentication Override, yeah. So I'd have to do this for each of the 450 affected users individually?\nElena Vasquez: There is a bulk selection option - if you filter your user list and select multiple users, the bulk actions dropdown should have the Authentication Override option. It's a little buried, I'll be honest.\nAndre Coleman: Okay, yeah, I see the bulk action. That's... manageable. Not great, but manageable. I'll take it.\nElena Vasquez: Good. And I want to be clear that this is a stopgap - we are working on a proper fix. Our engineering team has identified the regression in the NameID handling and a patch is being tested right now. I can't give you a hard commit time, but the current estimate from engineering is that we're targeting a fix deployment within 48 hours.\nStephanie Blair: 48 hours. So that's... Sunday at the earliest. We will have had users locked out for almost a week by then. That's really not acceptable, Elena.\nSarah Chen: I hear you. I'm going to escalate the priority on this case when we get off this call and push engineering to see if there's any path to accelerating that timeline. I can't promise a different date but I will personally follow up with you by end of day today with an updated ETA.\nStephanie Blair: I'd also like to understand - are there any other customers affected by this? Because if this is a widespread issue I'd expect a status page update or some kind of proactive communication, and I haven't seen anything.\nSarah Chen: That's a fair point. We have seen reports from a small number of other customers - I don't have exact numbers in front of me - and you're right that a status page update should have gone out sooner. I'm going to flag that internally as well. You shouldn't have to check in with support to find out if there's a known issue affecting your platform.\nStephanie Blair: Yeah. Yeah, exactly. Look, I want to be clear - we're not going anywhere, we're committed to Aegis, but this has been a rough week and I need to see some responsiveness here. Our CISO is asking me questions I don't have great answers to right now.\nElena Vasquez: Completely understood. I want to make sure you have everything you need to communicate internally. Would it help if we drafted a brief incident summary email that you could share with your CISO? Something that lays out the root cause, what we know, and the remediation plan?\nStephanie Blair: Actually, yeah. That would be helpful. Something I can forward that doesn't come from me trying to paraphrase a support call.\nSarah Chen: We'll put that together and send it over within the hour. And Andre - as you go through the bulk override process, if you run into any issues or it doesn't behave the way I described, please ping us directly in the case thread and we'll jump back on immediately.\nAndre Coleman: Will do. And just to confirm the next steps I'm hearing - you'll escalate the patch timeline, you'll send an incident summary we can share internally, and you'll follow up by end of day today with an updated fix ETA. Is that right?\nSarah Chen: That's exactly right. And we'll keep the case thread updated in real time as we get information from engineering. You won't have to chase us.\nStephanie Blair: Okay. I appreciate that. I'm still frustrated, I'm not going to pretend otherwise, but at least we have a path forward. Let's see how the next 24 hours go.\nElena Vasquez: That's completely fair, Stephanie. We'll earn back your confidence here. Thank you both for your time today and I'm sorry again for the disruption, especially on a day like today.\nAndre Coleman: Thanks. Talk soon.",
+  "summary": "Nova Retail Group VP Stephanie Blair and senior security engineer Andre Coleman contacted Aegis Cloud Security support regarding an SSO outage affecting approximately 38-42% of their 1,200 users since February 10th. Aegis support identified a likely regression introduced by a patch deployed on February 9th affecting SAML NameID format handling in the Identity module. A temporary workaround was provided via bulk per-user local auth override in the admin console, while a permanent fix is estimated within 48 hours. Stephanie expressed significant frustration over the four-day outage coinciding with Valentine's Day, one of Nova Retail's busiest sales days, and the lack of proactive communication from Aegis.",
+  "topics": [
+    "sso outage",
+    "identity module regression",
+    "saml configuration",
+    "incident communication",
+    "workaround",
+    "patch deployment"
+  ],
+  "action_items": [
+    "Sarah Chen: Escalate patch priority with engineering and follow up with updated fix ETA by end of day today",
+    "Sarah Chen: Flag status page communication gap internally and ensure a status update is published for affected customers",
+    "Elena Vasquez: Draft and send an incident summary email within the hour for Stephanie to share with her CISO",
+    "Andre Coleman: Apply bulk Authentication Override workaround to approximately 450 affected users in the Aegis Identity admin console"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.3,
+  "key_moments": [
+    {
+      "time": 210.0,
+      "text": "Stephanie expresses frustration that a patch was deployed the day before the outage began and they are only hearing about it now after four days of users being locked out.",
+      "type": "churn_signal",
+      "speaker": "Stephanie Blair"
+    },
+    {
+      "time": 310.0,
+      "text": "Andre confirms that the local auth workaround is largely inapplicable because Nova Retail enforced SSO-only per Aegis's own recommended documentation, eliminating the primary suggested workaround.",
+      "type": "concern",
+      "speaker": "Andre Coleman"
+    },
+    {
+      "time": 420.0,
+      "text": "Elena walks Andre through the bulk Authentication Override option in the admin console, providing a viable stopgap for the affected users on the same day as the call.",
+      "type": "positive_pivot",
+      "speaker": "Elena Vasquez"
+    },
+    {
+      "time": 570.0,
+      "text": "Stephanie acknowledges the team is not leaving Aegis but states she needs to see responsiveness, and accepts the offer of a drafted incident summary email to share with her CISO.",
+      "type": "action_item",
+      "speaker": "Stephanie Blair"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Join",
+      "time_seconds": 1.0,
+      "timestamp_ms": 1771074001000
+    },
+    {
+      "participant_name": "Andre Coleman",
+      "event_type": "Join",
+      "time_seconds": 19.0,
+      "timestamp_ms": 1771074019000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 23.0,
+      "timestamp_ms": 1771074023000
+    },
+    {
+      "participant_name": "Stephanie Blair",
+      "event_type": "Join",
+      "time_seconds": 23.0,
+      "timestamp_ms": 1771074023000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 1441.0,
+      "timestamp_ms": 1771075441000
+    },
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Leave",
+      "time_seconds": 1416.0,
+      "timestamp_ms": 1771075416000
+    },
+    {
+      "participant_name": "Stephanie Blair",
+      "event_type": "Leave",
+      "time_seconds": 1440.0,
+      "timestamp_ms": 1771075440000
+    },
+    {
+      "participant_name": "Andre Coleman",
+      "event_type": "Leave",
+      "time_seconds": 1436.0,
+      "timestamp_ms": 1771075436000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Sarah Chen": 9,
+      "Stephanie Blair": 12,
+      "Andre Coleman": 10,
+      "Elena Vasquez": 10
+    },
+    "speaker_total_seconds": {
+      "Sarah Chen": 143.8,
+      "Stephanie Blair": 132.9,
+      "Andre Coleman": 120.6,
+      "Elena Vasquez": 159.9
+    }
+  }
+}

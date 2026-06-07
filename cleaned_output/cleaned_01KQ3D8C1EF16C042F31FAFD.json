@@ -1,0 +1,491 @@
+{
+  "meeting_id": "01KQ3D8C1EF16C042F31FAFD",
+  "title": "Aegis / Trailhead Marketplace - Renewal Confirmation",
+  "organizer_email": "rachel.torres@aegiscloud.com",
+  "host_email": "rachel.torres@aegiscloud.com",
+  "start_time": "2026-04-05T14:30:00.000Z",
+  "end_time": "2026-04-05T15:16:36.000Z",
+  "duration_minutes": 46.6,
+  "participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "i.brennan@trailheadmkt.com",
+      "domain": "trailheadmkt.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "chris.lee@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "i.brennan@trailheadmkt.com",
+      "domain": "trailheadmkt.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Rachel Torres",
+    "1": "Isaac Brennan",
+    "2": "Chris Lee"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 7.7,
+      "end_time": 11.8,
+      "duration": 4.1000000000000005,
+      "text": "Hey Isaac, can you hear us okay? We just hopped on."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 12.5,
+      "end_time": 16.7,
+      "duration": 4.199999999999999,
+      "text": "Yeah, loud and clear. Hey Rachel, hey - is Chris on too?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 17.4,
+      "end_time": 21.3,
+      "duration": 3.900000000000002,
+      "text": "I'm here, yeah. Hey Isaac, good to finally catch up again."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 22.5,
+      "end_time": 29.2,
+      "duration": 6.699999999999999,
+      "text": "Good to hear from you both. It's been, what, like two months since we've had a proper call?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 29.7,
+      "end_time": 37.0,
+      "duration": 7.300000000000001,
+      "text": "Something like that, yeah. Q1 flew by honestly. But hey, big day - we're officially talking renewal, which is exciting."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 37.7,
+      "end_time": 47.8,
+      "duration": 10.099999999999994,
+      "text": "It really is. And honestly I'll say upfront - we're in a good place. Like, I don't think this is going to be a contentious conversation at all."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 48.6,
+      "end_time": 55.5,
+      "duration": 6.899999999999999,
+      "text": "That's always great to hear. I mean, we do try to earn that, so - appreciate you saying it."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 56.3,
+      "end_time": 70.5,
+      "duration": 14.200000000000003,
+      "text": "Before we get into the numbers and the terms, Isaac, do you mind if we just do a quick - like, a quick check-in on how things have been running on your end? Just so we're all on the same page."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 72.0,
+      "end_time": 89.5,
+      "duration": 17.5,
+      "text": "Yeah, totally. That's actually a good place to start. So, um, we've been running Protect and Detect for about fourteen months now, and overall - I mean overall the experience has been solid. Recovery drills have been going smoothly, the backup cadence is working well for our inventory systems."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 89.8,
+      "end_time": 94.1,
+      "duration": 4.299999999999997,
+      "text": "That's great to hear on Protect. And how about Detect day to day?"
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 95.4,
+      "end_time": 105.9,
+      "duration": 10.5,
+      "text": "Detect has been - yeah, mostly really good. I do want to bring up the March situation though, just because, you know, I'd be leaving something out if I didn't."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 107.0,
+      "end_time": 111.4,
+      "duration": 4.400000000000006,
+      "text": "Please, yeah, go ahead. We want to hear your perspective on it."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 111.8,
+      "end_time": 128.3,
+      "duration": 16.500000000000014,
+      "text": "So the outage - mid-March, we lost visibility for, what, six hours? That was... not a great day for my team. We were heading into a promotional weekend, you know retail, and we were essentially flying blind on threat monitoring for a chunk of that Friday."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 129.7,
+      "end_time": 145.9,
+      "duration": 16.200000000000017,
+      "text": "Yeah, and I completely understand that, Isaac. That was a bad one on our end and I'm not going to sugarcoat it. The root cause was a single point of failure in the event ingestion pipeline - it cascaded in a way we didn't anticipate."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 147.2,
+      "end_time": 153.5,
+      "duration": 6.300000000000011,
+      "text": "Right, yeah, you sent over the post-mortem and I appreciated the transparency there, actually. That doc was thorough."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 154.0,
+      "end_time": 172.3,
+      "duration": 18.30000000000001,
+      "text": "We wanted to be really clear about what happened and what we did to fix it. So we've since rolled out redundant processing nodes and we put in a circuit breaker pattern so that if one part of the ingestion layer starts degrading, it fails over gracefully rather than taking everything down."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 173.3,
+      "end_time": 185.7,
+      "duration": 12.399999999999977,
+      "text": "Yeah, and we've actually - my team noticed the improvement. Like since those changes went in, um, we've been keeping a closer eye on the dashboards and it's been rock solid. So the follow-through mattered."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 186.1,
+      "end_time": 197.3,
+      "duration": 11.200000000000017,
+      "text": "That's exactly what we were hoping to hear. And look, we'll never be happy about an outage but the way you handle it - that's what builds trust long term, I think."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 198.4,
+      "end_time": 207.2,
+      "duration": 8.799999999999983,
+      "text": "A hundred percent. And honestly that's part of why we're sitting here talking renewal instead of, you know, shopping around. You guys owned it."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 207.7,
+      "end_time": 221.8,
+      "duration": 14.100000000000023,
+      "text": "We really appreciate that, Isaac. Okay, so let me - let me pivot a little bit and talk about what we're looking at for the renewal package because I think there's some stuff in here you're going to be excited about."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 222.9,
+      "end_time": 224.4,
+      "duration": 1.5,
+      "text": "Yeah, let's do it."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 225.6,
+      "end_time": 243.9,
+      "duration": 18.30000000000001,
+      "text": "So you're currently on Protect and Detect. We're proposing a renewal of both of those, same tier, with a three percent uplift which is honestly below our standard rate increase - and I'll explain why in a second. But the bigger thing is, we want to talk to you about adding Aegis Comply."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 244.8,
+      "end_time": 250.9,
+      "duration": 6.099999999999994,
+      "text": "Oh interesting. We've looked at Comply before and kind of put it on the back burner. What's changed?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 252.3,
+      "end_time": 267.3,
+      "duration": 15.0,
+      "text": "So Comply v2 is launching in literally two days - April seventh - and it's a pretty significant upgrade. On-demand reporting for SOC 2, PCI DSS, HIPAA, ISO 27001. All from a single dashboard. And for retail, PCI DSS in particular, that's-"
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 267.9,
+      "end_time": 278.1,
+      "duration": 10.200000000000045,
+      "text": "That's actually huge. Yeah. We go through PCI audits every year and honestly it's - it's a lift. Our compliance team basically lives in spreadsheets for like six weeks."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 279.5,
+      "end_time": 294.7,
+      "duration": 15.199999999999989,
+      "text": "That's exactly the problem it's designed to solve. You can pull a PCI DSS report on demand, it maps your controls automatically from what we're already seeing across your environment, and it generates the audit-ready documentation. So you're not starting from scratch every time."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 295.6,
+      "end_time": 305.2,
+      "duration": 9.599999999999966,
+      "text": "Okay, yeah, that - I mean that sounds genuinely useful. Is this, uh, is this GA on the seventh or is it still like a limited release thing?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 306.3,
+      "end_time": 318.7,
+      "duration": 12.399999999999977,
+      "text": "Full GA. All customers. And because you're renewing right around the launch, we can actually get you in on a promotional add-on rate. Chris, do you want to touch on the technical onboarding side?"
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 319.9,
+      "end_time": 339.7,
+      "duration": 19.80000000000001,
+      "text": "Yeah, so from an infrastructure standpoint, Isaac, since we already have Detect running in your environment, the Comply module actually hooks in through the same agent. There's no new software to deploy - it's basically a config change on our end and you flip on the Comply features from the dashboard. Onboarding should be pretty lightweight."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 340.5,
+      "end_time": 352.0,
+      "duration": 11.5,
+      "text": "Oh, that's - that's a relief actually. Because every time I hear 'new module' I'm thinking new agents, new firewall rules, new tickets to my security team. So that's good to know."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 352.7,
+      "end_time": 358.5,
+      "duration": 5.800000000000011,
+      "text": "Yeah, we designed it that way intentionally. The integration lift for existing Detect customers is minimal."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 359.8,
+      "end_time": 376.8,
+      "duration": 17.0,
+      "text": "Okay so - and I'm just thinking out loud here - our next PCI audit cycle starts in, I want to say, late July. So if we're up and running on Comply by May, we'd have a couple months to actually get familiar with it before the audit crunch."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 377.3,
+      "end_time": 391.4,
+      "duration": 14.099999999999966,
+      "text": "That's a great timeline actually. And we could do a guided walkthrough with your compliance team in the first couple of weeks - just to make sure they know how to pull the reports, configure the frameworks, that kind of thing."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 392.6,
+      "end_time": 402.7,
+      "duration": 10.099999999999966,
+      "text": "Yeah, they would love that. Honestly my compliance team lead, she's been asking about automated reporting tools for a while. This is going to make her very happy."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 403.1,
+      "end_time": 407.3,
+      "duration": 4.199999999999989,
+      "text": "Ha, always good when you get to bring good news internally."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 408.8,
+      "end_time": 415.8,
+      "duration": 7.0,
+      "text": "No kidding. Okay so let me ask about pricing. You said promotional rate for Comply - what are we looking at?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 416.2,
+      "end_time": 430.6,
+      "duration": 14.400000000000034,
+      "text": "So the standard Comply add-on at your environment size is, um, I want to say it's around twenty-two thousand annually. For renewing customers at launch we're doing eighteen five. And that's locked in for the full two-year term we're proposing."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 432.1,
+      "end_time": 437.7,
+      "duration": 5.599999999999966,
+      "text": "Two year term. Okay. And the Protect and Detect renewal - that's also a two year?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 438.8,
+      "end_time": 451.5,
+      "duration": 12.699999999999989,
+      "text": "Yes, and that's actually where the three percent uplift becomes a better deal than it sounds - because we're locking your rate for two years, so even if we adjust pricing next year you're not affected."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 452.5,
+      "end_time": 467.6,
+      "duration": 15.100000000000023,
+      "text": "That's worth something. Yeah. I mean I'd have to run it through our procurement process formally but - and I'll be honest with you Rachel - I don't see any blockers. The numbers feel reasonable and I'm going to advocate for this internally."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 468.5,
+      "end_time": 479.9,
+      "duration": 11.399999999999977,
+      "text": "That's great to hear. And if it helps, I can put together a one-pager that you can use with procurement - business case, ROI framing around the compliance time savings, all of that."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 481.3,
+      "end_time": 488.1,
+      "duration": 6.800000000000011,
+      "text": "Yeah, please do. That's actually really helpful. My CFO likes to see that kind of thing laid out clearly."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 488.9,
+      "end_time": 502.4,
+      "duration": 13.5,
+      "text": "Consider it done. I'll have something over to you by end of week. And Isaac, we're really glad you're staying with us. Like genuinely - Trailhead has been a great partner and we want to keep building on this."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 503.5,
+      "end_time": 510.7,
+      "duration": 7.199999999999989,
+      "text": "Likewise. Okay so next steps - you'll send the one-pager, formal renewal doc I assume comes from your contracts team?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 511.8,
+      "end_time": 522.7,
+      "duration": 10.900000000000034,
+      "text": "Yep, I'll get contracts looped in this week. Target to have everything signed before the end of April so we can get Comply activated right at launch or shortly after."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 523.2,
+      "end_time": 533.3,
+      "duration": 10.099999999999909,
+      "text": "Works for me. And Chris - let's plan a technical call maybe the week after we sign? Just to walk through the Comply onboarding with my infrastructure team."
+    },
+    {
+      "speaker_name": "Chris Lee",
+      "start_time": 534.1,
+      "end_time": 539.8,
+      "duration": 5.699999999999932,
+      "text": "Absolutely, I'll make myself available. Just shoot me a calendar invite and we'll make it happen."
+    },
+    {
+      "speaker_name": "Isaac Brennan",
+      "start_time": 541.0,
+      "end_time": 547.1,
+      "duration": 6.100000000000023,
+      "text": "Perfect. Alright, I think we're in good shape. Really appreciate the time today, both of you."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 547.8,
+      "end_time": 552.9,
+      "duration": 5.100000000000023,
+      "text": "Thanks Isaac. Really appreciate the trust, and we're going to keep earning it. Talk soon."
+    }
+  ],
+  "transcript_text": "Rachel Torres: Hey Isaac, can you hear us okay? We just hopped on.\nIsaac Brennan: Yeah, loud and clear. Hey Rachel, hey - is Chris on too?\nChris Lee: I'm here, yeah. Hey Isaac, good to finally catch up again.\nIsaac Brennan: Good to hear from you both. It's been, what, like two months since we've had a proper call?\nRachel Torres: Something like that, yeah. Q1 flew by honestly. But hey, big day - we're officially talking renewal, which is exciting.\nIsaac Brennan: It really is. And honestly I'll say upfront - we're in a good place. Like, I don't think this is going to be a contentious conversation at all.\nRachel Torres: That's always great to hear. I mean, we do try to earn that, so - appreciate you saying it.\nChris Lee: Before we get into the numbers and the terms, Isaac, do you mind if we just do a quick - like, a quick check-in on how things have been running on your end? Just so we're all on the same page.\nIsaac Brennan: Yeah, totally. That's actually a good place to start. So, um, we've been running Protect and Detect for about fourteen months now, and overall - I mean overall the experience has been solid. Recovery drills have been going smoothly, the backup cadence is working well for our inventory systems.\nChris Lee: That's great to hear on Protect. And how about Detect day to day?\nIsaac Brennan: Detect has been - yeah, mostly really good. I do want to bring up the March situation though, just because, you know, I'd be leaving something out if I didn't.\nRachel Torres: Please, yeah, go ahead. We want to hear your perspective on it.\nIsaac Brennan: So the outage - mid-March, we lost visibility for, what, six hours? That was... not a great day for my team. We were heading into a promotional weekend, you know retail, and we were essentially flying blind on threat monitoring for a chunk of that Friday.\nChris Lee: Yeah, and I completely understand that, Isaac. That was a bad one on our end and I'm not going to sugarcoat it. The root cause was a single point of failure in the event ingestion pipeline - it cascaded in a way we didn't anticipate.\nIsaac Brennan: Right, yeah, you sent over the post-mortem and I appreciated the transparency there, actually. That doc was thorough.\nChris Lee: We wanted to be really clear about what happened and what we did to fix it. So we've since rolled out redundant processing nodes and we put in a circuit breaker pattern so that if one part of the ingestion layer starts degrading, it fails over gracefully rather than taking everything down.\nIsaac Brennan: Yeah, and we've actually - my team noticed the improvement. Like since those changes went in, um, we've been keeping a closer eye on the dashboards and it's been rock solid. So the follow-through mattered.\nRachel Torres: That's exactly what we were hoping to hear. And look, we'll never be happy about an outage but the way you handle it - that's what builds trust long term, I think.\nIsaac Brennan: A hundred percent. And honestly that's part of why we're sitting here talking renewal instead of, you know, shopping around. You guys owned it.\nRachel Torres: We really appreciate that, Isaac. Okay, so let me - let me pivot a little bit and talk about what we're looking at for the renewal package because I think there's some stuff in here you're going to be excited about.\nIsaac Brennan: Yeah, let's do it.\nRachel Torres: So you're currently on Protect and Detect. We're proposing a renewal of both of those, same tier, with a three percent uplift which is honestly below our standard rate increase - and I'll explain why in a second. But the bigger thing is, we want to talk to you about adding Aegis Comply.\nIsaac Brennan: Oh interesting. We've looked at Comply before and kind of put it on the back burner. What's changed?\nRachel Torres: So Comply v2 is launching in literally two days - April seventh - and it's a pretty significant upgrade. On-demand reporting for SOC 2, PCI DSS, HIPAA, ISO 27001. All from a single dashboard. And for retail, PCI DSS in particular, that's-\nIsaac Brennan: That's actually huge. Yeah. We go through PCI audits every year and honestly it's - it's a lift. Our compliance team basically lives in spreadsheets for like six weeks.\nChris Lee: That's exactly the problem it's designed to solve. You can pull a PCI DSS report on demand, it maps your controls automatically from what we're already seeing across your environment, and it generates the audit-ready documentation. So you're not starting from scratch every time.\nIsaac Brennan: Okay, yeah, that - I mean that sounds genuinely useful. Is this, uh, is this GA on the seventh or is it still like a limited release thing?\nRachel Torres: Full GA. All customers. And because you're renewing right around the launch, we can actually get you in on a promotional add-on rate. Chris, do you want to touch on the technical onboarding side?\nChris Lee: Yeah, so from an infrastructure standpoint, Isaac, since we already have Detect running in your environment, the Comply module actually hooks in through the same agent. There's no new software to deploy - it's basically a config change on our end and you flip on the Comply features from the dashboard. Onboarding should be pretty lightweight.\nIsaac Brennan: Oh, that's - that's a relief actually. Because every time I hear 'new module' I'm thinking new agents, new firewall rules, new tickets to my security team. So that's good to know.\nChris Lee: Yeah, we designed it that way intentionally. The integration lift for existing Detect customers is minimal.\nIsaac Brennan: Okay so - and I'm just thinking out loud here - our next PCI audit cycle starts in, I want to say, late July. So if we're up and running on Comply by May, we'd have a couple months to actually get familiar with it before the audit crunch.\nRachel Torres: That's a great timeline actually. And we could do a guided walkthrough with your compliance team in the first couple of weeks - just to make sure they know how to pull the reports, configure the frameworks, that kind of thing.\nIsaac Brennan: Yeah, they would love that. Honestly my compliance team lead, she's been asking about automated reporting tools for a while. This is going to make her very happy.\nRachel Torres: Ha, always good when you get to bring good news internally.\nIsaac Brennan: No kidding. Okay so let me ask about pricing. You said promotional rate for Comply - what are we looking at?\nRachel Torres: So the standard Comply add-on at your environment size is, um, I want to say it's around twenty-two thousand annually. For renewing customers at launch we're doing eighteen five. And that's locked in for the full two-year term we're proposing.\nIsaac Brennan: Two year term. Okay. And the Protect and Detect renewal - that's also a two year?\nRachel Torres: Yes, and that's actually where the three percent uplift becomes a better deal than it sounds - because we're locking your rate for two years, so even if we adjust pricing next year you're not affected.\nIsaac Brennan: That's worth something. Yeah. I mean I'd have to run it through our procurement process formally but - and I'll be honest with you Rachel - I don't see any blockers. The numbers feel reasonable and I'm going to advocate for this internally.\nRachel Torres: That's great to hear. And if it helps, I can put together a one-pager that you can use with procurement - business case, ROI framing around the compliance time savings, all of that.\nIsaac Brennan: Yeah, please do. That's actually really helpful. My CFO likes to see that kind of thing laid out clearly.\nRachel Torres: Consider it done. I'll have something over to you by end of week. And Isaac, we're really glad you're staying with us. Like genuinely - Trailhead has been a great partner and we want to keep building on this.\nIsaac Brennan: Likewise. Okay so next steps - you'll send the one-pager, formal renewal doc I assume comes from your contracts team?\nRachel Torres: Yep, I'll get contracts looped in this week. Target to have everything signed before the end of April so we can get Comply activated right at launch or shortly after.\nIsaac Brennan: Works for me. And Chris - let's plan a technical call maybe the week after we sign? Just to walk through the Comply onboarding with my infrastructure team.\nChris Lee: Absolutely, I'll make myself available. Just shoot me a calendar invite and we'll make it happen.\nIsaac Brennan: Perfect. Alright, I think we're in good shape. Really appreciate the time today, both of you.\nRachel Torres: Thanks Isaac. Really appreciate the trust, and we're going to keep earning it. Talk soon.",
+  "summary": "Rachel Torres and Chris Lee held a renewal call with Isaac Brennan of Trailhead, covering fourteen months of experience with Protect and Detect. Isaac acknowledged a mid-March six-hour outage as a concern but praised the thorough post-mortem and the subsequent technical fixes. The team discussed adding Aegis Comply v2 at a promotional rate of $18,500 annually (locked for two years), which Isaac found compelling given upcoming PCI audit cycles. Isaac indicated strong internal support for the renewal and agreed on next steps including a procurement one-pager, contract execution by end of April, and a technical onboarding call post-signing.",
+  "topics": [
+    "renewal",
+    "compliance",
+    "outage follow-up",
+    "product upsell",
+    "pricing",
+    "pci dss"
+  ],
+  "action_items": [
+    "Rachel Torres: Send Isaac a one-pager with business case and ROI framing around compliance time savings for CFO/procurement by end of week",
+    "Rachel Torres: Loop in contracts team to issue formal renewal documents with target signing before end of April",
+    "Chris Lee: Schedule and lead a technical onboarding call with Isaac's infrastructure team after contract is signed",
+    "Isaac Brennan: Run the renewal proposal through internal procurement and advocate for approval"
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 4.5,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Isaac raises the mid-March six-hour Detect outage that left his team blind during a promotional weekend",
+      "type": "concern",
+      "speaker": "Isaac Brennan"
+    },
+    {
+      "time": 310.0,
+      "text": "Isaac confirms his team noticed improvements since the redundancy fixes and calls the platform 'rock solid', crediting follow-through for why they're renewing instead of shopping around",
+      "type": "positive_pivot",
+      "speaker": "Isaac Brennan"
+    },
+    {
+      "time": 520.0,
+      "text": "Isaac reacts positively to Aegis Comply v2's on-demand PCI DSS reporting, noting his compliance team spends six weeks in spreadsheets for audits annually",
+      "type": "feature_gap",
+      "speaker": "Isaac Brennan"
+    },
+    {
+      "time": 720.0,
+      "text": "Rachel presents the promotional Comply add-on rate of $18,500 (vs. $22,000 standard) locked for a two-year term; Isaac signals no blockers and commits to advocating internally",
+      "type": "pricing_offer",
+      "speaker": "Rachel Torres"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Isaac Brennan",
+      "event_type": "Join",
+      "time_seconds": 3.0,
+      "timestamp_ms": 1775399403000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Join",
+      "time_seconds": 44.0,
+      "timestamp_ms": 1775399444000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Join",
+      "time_seconds": 47.0,
+      "timestamp_ms": 1775399447000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Leave",
+      "time_seconds": 2767.0,
+      "timestamp_ms": 1775402167000
+    },
+    {
+      "participant_name": "Chris Lee",
+      "event_type": "Leave",
+      "time_seconds": 2769.0,
+      "timestamp_ms": 1775402169000
+    },
+    {
+      "participant_name": "Isaac Brennan",
+      "event_type": "Leave",
+      "time_seconds": 2772.0,
+      "timestamp_ms": 1775402172000
+    }
+  ],
+  "stats": {
+    "turn_count": 49,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Rachel Torres": 17,
+      "Isaac Brennan": 23,
+      "Chris Lee": 9
+    },
+    "speaker_total_seconds": {
+      "Rachel Torres": 180.0,
+      "Isaac Brennan": 216.9,
+      "Chris Lee": 103.4
+    }
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "meeting_id": "01KQE110900B8A65D80AE694",
+  "title": "Detect Outage - Root Cause Analysis",
+  "organizer_email": "sofia.petrov@aegiscloud.com",
+  "host_email": "sofia.petrov@aegiscloud.com",
+  "start_time": "2026-03-14T14:30:00.000Z",
+  "end_time": "2026-03-14T14:45:54.000Z",
+  "duration_minutes": 15.9,
+  "participants": [
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Sofia Petrov",
+    "1": "Tyler Washington",
+    "2": "Ananya Sharma",
+    "3": "Mike Romano",
+    "4": "Nina Kowalski"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 7.1,
+      "end_time": 11.7,
+      "duration": 4.6,
+      "text": "Okay, I think everyone's on now - Tyler, can you hear us okay?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 12.2,
+      "end_time": 18.3,
+      "duration": 6.100000000000001,
+      "text": "Yeah, yeah I'm here, sorry I was - had to grab the right headset, my other one died."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 19.6,
+      "end_time": 29.0,
+      "duration": 9.399999999999999,
+      "text": "Alright, let's just get into it because honestly we've been in firefighting mode for the past four days and I want to actually understand what happened here."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 30.5,
+      "end_time": 38.9,
+      "duration": 8.399999999999999,
+      "text": "Yeah, agreed. So, Mike, do you want to walk us through what you found? You were the one digging into the pipeline logs last night."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 39.5,
+      "end_time": 55.9,
+      "duration": 16.4,
+      "text": "Sure, yeah. So, um, the short version is - we had a cascading failure in the event ingestion layer. There's essentially a single point of failure in how we're routing events through the processing pipeline, and once that node went down on Monday morning, everything backed up."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 57.2,
+      "end_time": 65.7,
+      "duration": 8.5,
+      "text": "Wait, a single point of failure? Like, we've known about that risk for how long? I feel like that was flagged in Q3 last year."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 66.0,
+      "end_time": 72.4,
+      "duration": 6.400000000000006,
+      "text": "It was flagged, yeah. It was in the backlog. It just... never got prioritized above the feature work."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 73.6,
+      "end_time": 87.6,
+      "duration": 14.0,
+      "text": "That is honestly really frustrating to hear, Mike, because we had six hours - six hours - where customers had zero threat monitoring visibility. Like, Detect is supposed to be the thing that tells you when something bad is happening."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 88.6,
+      "end_time": 99.3,
+      "duration": 10.700000000000003,
+      "text": "I know. I know, and I'm not trying to make excuses. The prioritization call was made above our level and at the time there were reasons, but obviously in hindsight-"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 99.9,
+      "end_time": 102.6,
+      "duration": 2.6999999999999886,
+      "text": "In hindsight it was the wrong call, yeah."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 103.2,
+      "end_time": 114.1,
+      "duration": 10.899999999999991,
+      "text": "Can we talk about the actual failure sequence though? Like I want to understand technically what cascaded. Was it a memory issue, was it network, what actually triggered the initial node failure?"
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 115.6,
+      "end_time": 135.6,
+      "duration": 20.0,
+      "text": "So from what I can tell in the logs, the primary ingestion node started throwing out-of-memory errors around 6:47 AM. And instead of failing gracefully, it just - it locked up. And then the queue started building, and because there was no circuit breaker, the downstream processors kept trying to pull from a source that wasn't responding."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 137.0,
+      "end_time": 142.3,
+      "duration": 5.300000000000011,
+      "text": "Right, and that's what caused the cascading part. The downstream processors themselves started degrading."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 143.5,
+      "end_time": 152.0,
+      "duration": 8.5,
+      "text": "Exactly. And by the time our alerting caught it - which was, ugh, almost 40 minutes later - the whole pipeline was basically dead."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 153.4,
+      "end_time": 160.0,
+      "duration": 6.599999999999994,
+      "text": "Forty minutes before alerting kicked in? Why did it take that long? We have health checks on those services."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 160.9,
+      "end_time": 172.4,
+      "duration": 11.5,
+      "text": "The health checks were pinging the node endpoint, which was still technically responding - it just wasn't processing anything. So the check was returning healthy even though the service was completely stuck."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 172.8,
+      "end_time": 178.1,
+      "duration": 5.299999999999983,
+      "text": "Oh, that's - okay, so the health check was essentially useless in this scenario."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 179.0,
+      "end_time": 186.5,
+      "duration": 7.5,
+      "text": "Pretty much, yeah. It was a liveness check, not a readiness check. Which is a gap we clearly need to fix."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 187.8,
+      "end_time": 199.2,
+      "duration": 11.399999999999977,
+      "text": "Okay so we've got at least three things here - the single point of failure in ingestion, no circuit breaker pattern, and inadequate health checking. Is that a fair summary so far?"
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 200.4,
+      "end_time": 210.8,
+      "duration": 10.400000000000006,
+      "text": "Yeah, that's how I'd characterize it. And I think the fix for the ingestion layer specifically is redundant processing nodes - at minimum two, probably three, with active load balancing."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 211.9,
+      "end_time": 224.4,
+      "duration": 12.5,
+      "text": "And the circuit breaker - like, how complicated is that to implement? I don't want us to say 'we'll implement a circuit breaker' and then that also ends up sitting in the backlog for a year."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 225.5,
+      "end_time": 237.4,
+      "duration": 11.900000000000006,
+      "text": "It's not trivial but it's also not like a three-month project. I think we could have a working implementation in two, maybe two and a half weeks if we actually focus on it."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 238.2,
+      "end_time": 244.6,
+      "duration": 6.400000000000006,
+      "text": "I want that estimate in writing honestly, because I've heard 'two weeks' before and then it becomes six."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 246.1,
+      "end_time": 251.1,
+      "duration": 5.0,
+      "text": "That's fair, Nina, that's fair. I'll put together a proper scope doc today."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 251.8,
+      "end_time": 259.3,
+      "duration": 7.5,
+      "text": "What about the communication side of this? Like, customers were in the dark for hours. Do we know how that was handled?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 260.5,
+      "end_time": 270.6,
+      "duration": 10.100000000000023,
+      "text": "That's - yeah, that's a whole other conversation, but I will say the status page update was way too slow. That's something that needs to be escalated separately."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 271.8,
+      "end_time": 285.1,
+      "duration": 13.300000000000011,
+      "text": "Agreed. And from a QA perspective, I'm also really bothered by the fact that we didn't have a test scenario for this kind of failure. Like, do we even have chaos engineering coverage on the ingestion pipeline?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 286.6,
+      "end_time": 293.1,
+      "duration": 6.5,
+      "text": "We don't. Not really. We have some basic load testing but nothing that simulates a node going unresponsive."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 294.4,
+      "end_time": 303.2,
+      "duration": 8.800000000000011,
+      "text": "Yeah, that needs to change. Like, we should be deliberately killing nodes in staging on a regular basis to validate that the system handles it."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 303.5,
+      "end_time": 315.1,
+      "duration": 11.600000000000023,
+      "text": "One hundred percent. I'm going to push for that as part of the remediation plan. It won't just be 'fix the code' - it needs to be 'build the testing practice too.'"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 315.6,
+      "end_time": 327.6,
+      "duration": 12.0,
+      "text": "Good. And honestly, uh, I think we need to be really transparent in the post-mortem doc about the fact that this risk was known and deprioritized. I don't think we should soften that."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 328.4,
+      "end_time": 338.6,
+      "duration": 10.200000000000045,
+      "text": "I agree with that. If we're going to learn from this, we have to be honest about the decision-making chain that got us here, not just the technical failure."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 339.2,
+      "end_time": 342.3,
+      "duration": 3.1000000000000227,
+      "text": "Yeah. It's uncomfortable but it's the right call."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 343.4,
+      "end_time": 359.5,
+      "duration": 16.100000000000023,
+      "text": "Okay, so action items - Mike is doing the scope doc for the circuit breaker and redundant nodes, Ananya and Tyler are looking at the health check improvements, and Nina, can you start scoping out what a chaos testing framework would look like for the pipeline?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 361.0,
+      "end_time": 366.6,
+      "duration": 5.600000000000023,
+      "text": "Yeah, I can do that. I'll probably want to pull in Tyler for part of it."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 367.9,
+      "end_time": 369.4,
+      "duration": 1.5,
+      "text": "Works for me."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 369.8,
+      "end_time": 383.4,
+      "duration": 13.599999999999966,
+      "text": "Alright. This has been a really rough week and I don't think anyone feels great about where we're at, but - let's make sure this doesn't happen again. I'll circulate the post-mortem draft by end of day tomorrow."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 384.0,
+      "end_time": 385.5,
+      "duration": 1.5,
+      "text": "Thanks everyone."
+    }
+  ],
+  "transcript_text": "Sofia Petrov: Okay, I think everyone's on now - Tyler, can you hear us okay?\nTyler Washington: Yeah, yeah I'm here, sorry I was - had to grab the right headset, my other one died.\nSofia Petrov: Alright, let's just get into it because honestly we've been in firefighting mode for the past four days and I want to actually understand what happened here.\nAnanya Sharma: Yeah, agreed. So, Mike, do you want to walk us through what you found? You were the one digging into the pipeline logs last night.\nMike Romano: Sure, yeah. So, um, the short version is - we had a cascading failure in the event ingestion layer. There's essentially a single point of failure in how we're routing events through the processing pipeline, and once that node went down on Monday morning, everything backed up.\nNina Kowalski: Wait, a single point of failure? Like, we've known about that risk for how long? I feel like that was flagged in Q3 last year.\nMike Romano: It was flagged, yeah. It was in the backlog. It just... never got prioritized above the feature work.\nSofia Petrov: That is honestly really frustrating to hear, Mike, because we had six hours - six hours - where customers had zero threat monitoring visibility. Like, Detect is supposed to be the thing that tells you when something bad is happening.\nMike Romano: I know. I know, and I'm not trying to make excuses. The prioritization call was made above our level and at the time there were reasons, but obviously in hindsight-\nAnanya Sharma: In hindsight it was the wrong call, yeah.\nTyler Washington: Can we talk about the actual failure sequence though? Like I want to understand technically what cascaded. Was it a memory issue, was it network, what actually triggered the initial node failure?\nMike Romano: So from what I can tell in the logs, the primary ingestion node started throwing out-of-memory errors around 6:47 AM. And instead of failing gracefully, it just - it locked up. And then the queue started building, and because there was no circuit breaker, the downstream processors kept trying to pull from a source that wasn't responding.\nAnanya Sharma: Right, and that's what caused the cascading part. The downstream processors themselves started degrading.\nMike Romano: Exactly. And by the time our alerting caught it - which was, ugh, almost 40 minutes later - the whole pipeline was basically dead.\nNina Kowalski: Forty minutes before alerting kicked in? Why did it take that long? We have health checks on those services.\nTyler Washington: The health checks were pinging the node endpoint, which was still technically responding - it just wasn't processing anything. So the check was returning healthy even though the service was completely stuck.\nNina Kowalski: Oh, that's - okay, so the health check was essentially useless in this scenario.\nTyler Washington: Pretty much, yeah. It was a liveness check, not a readiness check. Which is a gap we clearly need to fix.\nSofia Petrov: Okay so we've got at least three things here - the single point of failure in ingestion, no circuit breaker pattern, and inadequate health checking. Is that a fair summary so far?\nMike Romano: Yeah, that's how I'd characterize it. And I think the fix for the ingestion layer specifically is redundant processing nodes - at minimum two, probably three, with active load balancing.\nAnanya Sharma: And the circuit breaker - like, how complicated is that to implement? I don't want us to say 'we'll implement a circuit breaker' and then that also ends up sitting in the backlog for a year.\nMike Romano: It's not trivial but it's also not like a three-month project. I think we could have a working implementation in two, maybe two and a half weeks if we actually focus on it.\nNina Kowalski: I want that estimate in writing honestly, because I've heard 'two weeks' before and then it becomes six.\nMike Romano: That's fair, Nina, that's fair. I'll put together a proper scope doc today.\nTyler Washington: What about the communication side of this? Like, customers were in the dark for hours. Do we know how that was handled?\nSofia Petrov: That's - yeah, that's a whole other conversation, but I will say the status page update was way too slow. That's something that needs to be escalated separately.\nNina Kowalski: Agreed. And from a QA perspective, I'm also really bothered by the fact that we didn't have a test scenario for this kind of failure. Like, do we even have chaos engineering coverage on the ingestion pipeline?\nAnanya Sharma: We don't. Not really. We have some basic load testing but nothing that simulates a node going unresponsive.\nTyler Washington: Yeah, that needs to change. Like, we should be deliberately killing nodes in staging on a regular basis to validate that the system handles it.\nSofia Petrov: One hundred percent. I'm going to push for that as part of the remediation plan. It won't just be 'fix the code' - it needs to be 'build the testing practice too.'\nAnanya Sharma: Good. And honestly, uh, I think we need to be really transparent in the post-mortem doc about the fact that this risk was known and deprioritized. I don't think we should soften that.\nSofia Petrov: I agree with that. If we're going to learn from this, we have to be honest about the decision-making chain that got us here, not just the technical failure.\nMike Romano: Yeah. It's uncomfortable but it's the right call.\nSofia Petrov: Okay, so action items - Mike is doing the scope doc for the circuit breaker and redundant nodes, Ananya and Tyler are looking at the health check improvements, and Nina, can you start scoping out what a chaos testing framework would look like for the pipeline?\nNina Kowalski: Yeah, I can do that. I'll probably want to pull in Tyler for part of it.\nTyler Washington: Works for me.\nSofia Petrov: Alright. This has been a really rough week and I don't think anyone feels great about where we're at, but - let's make sure this doesn't happen again. I'll circulate the post-mortem draft by end of day tomorrow.\nAnanya Sharma: Thanks everyone.",
+  "summary": "The team conducted a post-incident review of a cascading failure in their event ingestion pipeline that caused six hours of zero threat monitoring visibility for customers. Mike Romano explained that an out-of-memory error on a primary ingestion node triggered a cascade due to the absence of a circuit breaker and inadequate health checks that couldn't distinguish between liveness and readiness. The group identified three root technical causes: a single point of failure in ingestion, no circuit breaker pattern, and insufficient health checking. The team also acknowledged that the underlying single-point-of-failure risk had been flagged in Q3 of the prior year but was deprioritized in favor of feature work, and agreed the post-mortem should reflect that honestly.",
+  "topics": [
+    "incident review",
+    "pipeline failure",
+    "infrastructure reliability",
+    "health checks",
+    "chaos engineering",
+    "post-mortem"
+  ],
+  "action_items": [
+    "Mike Romano: Write a proper scope document today for circuit breaker implementation and redundant ingestion node architecture",
+    "Ananya Sharma and Tyler Washington: Investigate and implement health check improvements, specifically adding readiness checks",
+    "Nina Kowalski: Scope out a chaos testing framework for the ingestion pipeline, coordinating with Tyler Washington",
+    "Sofia Petrov: Circulate the post-mortem draft by end of day tomorrow, including transparent account of known-risk deprioritization"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 95,
+      "text": "Sofia expresses frustration that a known single point of failure was never prioritized, resulting in six hours of zero customer threat monitoring visibility",
+      "type": "concern",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 280,
+      "text": "Tyler identifies that the health check was a liveness check rather than a readiness check, making it effectively useless in detecting the stuck node",
+      "type": "technical_issue",
+      "speaker": "Tyler Washington"
+    },
+    {
+      "time": 490,
+      "text": "Nina requests the two-week circuit breaker estimate in writing, and Mike agrees to produce a formal scope document",
+      "type": "action_item",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 620,
+      "text": "Ananya pushes for full transparency in the post-mortem about the known risk being deprioritized, and Sofia agrees the decision-making chain must be documented honestly",
+      "type": "positive_pivot",
+      "speaker": "Ananya Sharma"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1773498606000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 7.0,
+      "timestamp_ms": 1773498607000
+    },
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Join",
+      "time_seconds": 14.0,
+      "timestamp_ms": 1773498614000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 29.0,
+      "timestamp_ms": 1773498629000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 53.0,
+      "timestamp_ms": 1773498653000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 951.0,
+      "timestamp_ms": 1773499551000
+    },
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Leave",
+      "time_seconds": 937.0,
+      "timestamp_ms": 1773499537000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 932.0,
+      "timestamp_ms": 1773499532000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 945.0,
+      "timestamp_ms": 1773499545000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 950.0,
+      "timestamp_ms": 1773499550000
+    }
+  ],
+  "stats": {
+    "turn_count": 38,
+    "participant_count": 5,
+    "speaker_turn_counts": {
+      "Sofia Petrov": 9,
+      "Tyler Washington": 7,
+      "Ananya Sharma": 7,
+      "Mike Romano": 9,
+      "Nina Kowalski": 6
+    },
+    "speaker_total_seconds": {
+      "Sofia Petrov": 101.0,
+      "Tyler Washington": 53.8,
+      "Ananya Sharma": 48.9,
+      "Mike Romano": 92.4,
+      "Nina Kowalski": 45.7
+    }
+  }
+}

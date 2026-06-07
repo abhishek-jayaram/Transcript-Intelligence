@@ -1,0 +1,400 @@
+{
+  "meeting_id": "01KQ5EC1665DCFD7A6B62A59",
+  "title": "Support Case #8749 - Coastal Living Co SAML Certificate Rotation Bug",
+  "organizer_email": "marcus.williams@aegiscloud.com",
+  "host_email": "marcus.williams@aegiscloud.com",
+  "start_time": "2026-03-29T15:15:00.000Z",
+  "end_time": "2026-03-29T15:25:06.000Z",
+  "duration_minutes": 10.1,
+  "participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "v.cruz@coastalliving.com",
+      "domain": "coastalliving.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "elena.vasquez@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "v.cruz@coastalliving.com",
+      "domain": "coastalliving.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Marcus Williams",
+    "1": "Elena Vasquez",
+    "2": "Vanessa Cruz"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 7.1,
+      "end_time": 22.0,
+      "duration": 14.9,
+      "text": "Hi, this is Marcus Williams calling from Aegis Cloud Security support, I have Vanessa Cruz on the line for case number 8749, and I'm also going to bring in my colleague Elena Vasquez who specializes in Identity - Elena are you there?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 22.9,
+      "end_time": 27.0,
+      "duration": 4.100000000000001,
+      "text": "Yeah I'm here, hi Vanessa, thanks for your patience on this one."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 28.0,
+      "end_time": 43.5,
+      "duration": 15.5,
+      "text": "Hi, yeah, okay - look I appreciate you guys getting on a call but I want to be upfront, this has been a really frustrating morning for us, so I'm hoping we can just cut to the chase and figure out what's going on."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 43.9,
+      "end_time": 56.3,
+      "duration": 12.399999999999999,
+      "text": "Absolutely, totally understand, let's dive right in - so from the case notes it looks like you're seeing an issue with SAML certificate rotation in Aegis Identity, can you walk us through what you're experiencing?"
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 57.6,
+      "end_time": 72.2,
+      "duration": 14.600000000000001,
+      "text": "Sure, so - we rotated our SAML signing certificate yesterday, standard procedure, we do this every six months, and after the rotation a significant portion of our users are getting authentication failures when they try to SSO into our internal tools."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 73.0,
+      "end_time": 80.3,
+      "duration": 7.299999999999997,
+      "text": "Okay and when you say a significant portion, are we talking like a handful of users or is this more widespread?"
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 80.9,
+      "end_time": 99.1,
+      "duration": 18.19999999999999,
+      "text": "We're talking roughly sixty to seventy percent of our workforce right now, Elena, so - yeah, it's pretty bad, people can't get into Salesforce, they can't get into our inventory management system, it's basically grinding our retail ops team to a halt on a Sunday which is one of our busiest days."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 99.7,
+      "end_time": 106.5,
+      "duration": 6.799999999999997,
+      "text": "Okay that's - yeah that's definitely a critical impact situation, I'm sorry you're dealing with that on a Sunday."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 107.0,
+      "end_time": 118.3,
+      "duration": 11.299999999999997,
+      "text": "I mean, it shouldn't matter what day it is, this shouldn't be happening at all, right? We followed the documentation for certificate rotation step by step and now our people can't log in."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 119.4,
+      "end_time": 136.6,
+      "duration": 17.19999999999999,
+      "text": "You're right, you're absolutely right, and I want to dig into this because I actually have a hypothesis about what might be happening here - Vanessa, when you did the rotation, did you use the in-platform certificate wizard or did you upload the certificate manually through the admin console?"
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 137.8,
+      "end_time": 146.0,
+      "duration": 8.199999999999989,
+      "text": "We used the wizard, the one that's supposed to handle the, uh, the propagation automatically, that's kind of the whole point of using it."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 146.7,
+      "end_time": 160.2,
+      "duration": 13.5,
+      "text": "Right, okay, so - I need to be transparent with you here Vanessa, we are aware of a bug that was introduced in the 3.4.1 release of Aegis Identity, and it specifically affects the certificate rotation wizard."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 161.3,
+      "end_time": 162.8,
+      "duration": 1.5,
+      "text": "There's a bug."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 163.4,
+      "end_time": 186.5,
+      "duration": 23.099999999999994,
+      "text": "Yes, and - I want to explain what it's doing because it helps with the workaround - so essentially what's happening is the wizard is completing the cert rotation on the identity provider side but it's not properly propagating the new certificate metadata to all of the service provider connections, so some of your SP integrations are still trying to validate assertions against the old certificate."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 187.8,
+      "end_time": 194.3,
+      "duration": 6.5,
+      "text": "So the wizard is broken. The tool that's supposed to make this safe and easy - is broken."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 195.2,
+      "end_time": 205.8,
+      "duration": 10.600000000000023,
+      "text": "I - yes, there's a defect in it, I'm not going to sugarcoat that, and I understand why that's incredibly frustrating especially given the impact you're seeing right now."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 206.3,
+      "end_time": 222.8,
+      "duration": 16.5,
+      "text": "And this is - okay, sorry Marcus, I'm just - I'm really struggling here because we've been on this platform for two and a half years and we've had a rough few weeks, you guys had that Detect outage earlier this month and now this, it's like-"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 224.2,
+      "end_time": 236.7,
+      "duration": 12.5,
+      "text": "I hear you, I hear you completely and those are both legitimate concerns, but right now let's focus on getting your people back in, can we do that? Because I do have a path to resolution."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 237.2,
+      "end_time": 240.9,
+      "duration": 3.700000000000017,
+      "text": "Yes, okay, yes please - what do we need to do."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 242.0,
+      "end_time": 262.3,
+      "duration": 20.30000000000001,
+      "text": "Okay so the fix is - it's a bit manual but it works, what you'll need to do is go into each service provider connection in the admin console and manually re-import the new certificate metadata for each integration, it won't be automatic through the wizard but once you do it per-SP the authentication will work correctly."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 262.8,
+      "end_time": 269.0,
+      "duration": 6.199999999999989,
+      "text": "How many SP connections are we talking about, like, do you know how many integrations we have configured?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 270.2,
+      "end_time": 276.3,
+      "duration": 6.100000000000023,
+      "text": "I'm pulling up your account right now - it looks like you have fourteen service provider connections active."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 277.2,
+      "end_time": 285.0,
+      "duration": 7.800000000000011,
+      "text": "Fourteen. Okay so we have to manually touch fourteen integrations to fix something that your wizard was supposed to handle automatically."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 285.9,
+      "end_time": 297.5,
+      "duration": 11.600000000000023,
+      "text": "Yes, and - I can stay on this call with you the entire time and walk you through each one if that's helpful, I don't want you to have to figure this out alone."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 298.6,
+      "end_time": 307.4,
+      "duration": 8.799999999999955,
+      "text": "I'm going to need to pull in one of my engineers to actually do the clicking around in the console, give me two minutes."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 307.8,
+      "end_time": 309.7,
+      "duration": 1.8999999999999773,
+      "text": "Of course, take your time."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 310.7,
+      "end_time": 319.2,
+      "duration": 8.5,
+      "text": "While we wait - Elena, do you know when a proper fix is going to be released for this? Like when is the patch coming?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 319.7,
+      "end_time": 331.9,
+      "duration": 12.199999999999989,
+      "text": "So our engineering team has the fix built, it's going through QA validation right now, current target is a patch release in the 3.4.2 update which is scheduled for the week of April 6th."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 333.2,
+      "end_time": 340.3,
+      "duration": 7.100000000000023,
+      "text": "April 6th. So for anyone who does a cert rotation before then they're going to hit this same problem."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 340.9,
+      "end_time": 355.8,
+      "duration": 14.900000000000034,
+      "text": "That's correct, and we are - we have a customer advisory going out today actually, warning admins not to use the wizard until 3.4.2, I know that doesn't help you retroactively but we are trying to prevent other customers from hitting this."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 356.6,
+      "end_time": 361.5,
+      "duration": 4.899999999999977,
+      "text": "Would have been nice to have that warning before I ran the wizard yesterday."
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 362.6,
+      "end_time": 373.1,
+      "duration": 10.5,
+      "text": "You're right, the advisory should have gone out sooner, I - I don't have a good answer for why it didn't and I'm not going to make excuses for that."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 373.9,
+      "end_time": 381.8,
+      "duration": 7.900000000000034,
+      "text": "Okay, I have my engineer Priya on - she can go into the console, Elena can you walk us through the steps?"
+    },
+    {
+      "speaker_name": "Elena Vasquez",
+      "start_time": 382.2,
+      "end_time": 416.4,
+      "duration": 34.19999999999999,
+      "text": "Yes absolutely - Priya, if you go to the Aegis Identity admin console and navigate to Identity Federation, then Service Providers, you should see the list of all your SP connections there. And Vanessa, just so you know, Marcus and I are going to document everything from this call and I'm going to personally escalate this to our customer success team to make sure you get a proper follow-up on the overall reliability concerns you raised, the Detect outage, this bug - I want to make sure someone is having that bigger conversation with you."
+    },
+    {
+      "speaker_name": "Vanessa Cruz",
+      "start_time": 417.1,
+      "end_time": 429.4,
+      "duration": 12.299999999999955,
+      "text": "I appreciate that, I do - I just, I need things to actually work, you know, we chose Aegis because we thought it was going to reduce our operational headaches not add to them."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 430.5,
+      "end_time": 438.1,
+      "duration": 7.600000000000023,
+      "text": "That's fair, and that feedback is going to be heard, I promise you that - now let's get your team back online."
+    }
+  ],
+  "transcript_text": "Marcus Williams: Hi, this is Marcus Williams calling from Aegis Cloud Security support, I have Vanessa Cruz on the line for case number 8749, and I'm also going to bring in my colleague Elena Vasquez who specializes in Identity - Elena are you there?\nElena Vasquez: Yeah I'm here, hi Vanessa, thanks for your patience on this one.\nVanessa Cruz: Hi, yeah, okay - look I appreciate you guys getting on a call but I want to be upfront, this has been a really frustrating morning for us, so I'm hoping we can just cut to the chase and figure out what's going on.\nMarcus Williams: Absolutely, totally understand, let's dive right in - so from the case notes it looks like you're seeing an issue with SAML certificate rotation in Aegis Identity, can you walk us through what you're experiencing?\nVanessa Cruz: Sure, so - we rotated our SAML signing certificate yesterday, standard procedure, we do this every six months, and after the rotation a significant portion of our users are getting authentication failures when they try to SSO into our internal tools.\nElena Vasquez: Okay and when you say a significant portion, are we talking like a handful of users or is this more widespread?\nVanessa Cruz: We're talking roughly sixty to seventy percent of our workforce right now, Elena, so - yeah, it's pretty bad, people can't get into Salesforce, they can't get into our inventory management system, it's basically grinding our retail ops team to a halt on a Sunday which is one of our busiest days.\nMarcus Williams: Okay that's - yeah that's definitely a critical impact situation, I'm sorry you're dealing with that on a Sunday.\nVanessa Cruz: I mean, it shouldn't matter what day it is, this shouldn't be happening at all, right? We followed the documentation for certificate rotation step by step and now our people can't log in.\nElena Vasquez: You're right, you're absolutely right, and I want to dig into this because I actually have a hypothesis about what might be happening here - Vanessa, when you did the rotation, did you use the in-platform certificate wizard or did you upload the certificate manually through the admin console?\nVanessa Cruz: We used the wizard, the one that's supposed to handle the, uh, the propagation automatically, that's kind of the whole point of using it.\nElena Vasquez: Right, okay, so - I need to be transparent with you here Vanessa, we are aware of a bug that was introduced in the 3.4.1 release of Aegis Identity, and it specifically affects the certificate rotation wizard.\nVanessa Cruz: There's a bug.\nElena Vasquez: Yes, and - I want to explain what it's doing because it helps with the workaround - so essentially what's happening is the wizard is completing the cert rotation on the identity provider side but it's not properly propagating the new certificate metadata to all of the service provider connections, so some of your SP integrations are still trying to validate assertions against the old certificate.\nVanessa Cruz: So the wizard is broken. The tool that's supposed to make this safe and easy - is broken.\nElena Vasquez: I - yes, there's a defect in it, I'm not going to sugarcoat that, and I understand why that's incredibly frustrating especially given the impact you're seeing right now.\nVanessa Cruz: And this is - okay, sorry Marcus, I'm just - I'm really struggling here because we've been on this platform for two and a half years and we've had a rough few weeks, you guys had that Detect outage earlier this month and now this, it's like-\nMarcus Williams: I hear you, I hear you completely and those are both legitimate concerns, but right now let's focus on getting your people back in, can we do that? Because I do have a path to resolution.\nVanessa Cruz: Yes, okay, yes please - what do we need to do.\nElena Vasquez: Okay so the fix is - it's a bit manual but it works, what you'll need to do is go into each service provider connection in the admin console and manually re-import the new certificate metadata for each integration, it won't be automatic through the wizard but once you do it per-SP the authentication will work correctly.\nVanessa Cruz: How many SP connections are we talking about, like, do you know how many integrations we have configured?\nMarcus Williams: I'm pulling up your account right now - it looks like you have fourteen service provider connections active.\nVanessa Cruz: Fourteen. Okay so we have to manually touch fourteen integrations to fix something that your wizard was supposed to handle automatically.\nElena Vasquez: Yes, and - I can stay on this call with you the entire time and walk you through each one if that's helpful, I don't want you to have to figure this out alone.\nVanessa Cruz: I'm going to need to pull in one of my engineers to actually do the clicking around in the console, give me two minutes.\nMarcus Williams: Of course, take your time.\nVanessa Cruz: While we wait - Elena, do you know when a proper fix is going to be released for this? Like when is the patch coming?\nElena Vasquez: So our engineering team has the fix built, it's going through QA validation right now, current target is a patch release in the 3.4.2 update which is scheduled for the week of April 6th.\nVanessa Cruz: April 6th. So for anyone who does a cert rotation before then they're going to hit this same problem.\nElena Vasquez: That's correct, and we are - we have a customer advisory going out today actually, warning admins not to use the wizard until 3.4.2, I know that doesn't help you retroactively but we are trying to prevent other customers from hitting this.\nVanessa Cruz: Would have been nice to have that warning before I ran the wizard yesterday.\nElena Vasquez: You're right, the advisory should have gone out sooner, I - I don't have a good answer for why it didn't and I'm not going to make excuses for that.\nVanessa Cruz: Okay, I have my engineer Priya on - she can go into the console, Elena can you walk us through the steps?\nElena Vasquez: Yes absolutely - Priya, if you go to the Aegis Identity admin console and navigate to Identity Federation, then Service Providers, you should see the list of all your SP connections there.\nElena Vasquez: And Vanessa, just so you know, Marcus and I are going to document everything from this call and I'm going to personally escalate this to our customer success team to make sure you get a proper follow-up on the overall reliability concerns you raised, the Detect outage, this bug - I want to make sure someone is having that bigger conversation with you.\nVanessa Cruz: I appreciate that, I do - I just, I need things to actually work, you know, we chose Aegis because we thought it was going to reduce our operational headaches not add to them.\nMarcus Williams: That's fair, and that feedback is going to be heard, I promise you that - now let's get your team back online.",
+  "summary": "Vanessa Cruz from a retail company contacted Aegis Cloud Security support regarding a critical SAML certificate rotation issue affecting 60-70% of her workforce on a Sunday. Support engineer Elena Vasquez identified the root cause as a known bug in Aegis Identity version 3.4.1, where the certificate rotation wizard fails to propagate new certificate metadata to all service provider connections. The team worked on a manual workaround requiring Vanessa's engineer Priya to re-import the new certificate metadata across all 14 SP connections. Vanessa expressed broader frustration with platform reliability, citing this bug alongside a recent Detect outage, and Marcus committed to escalating her concerns to customer success.",
+  "topics": [
+    "saml certificate rotation",
+    "product bug",
+    "authentication failure",
+    "service outage",
+    "customer reliability concerns",
+    "identity federation"
+  ],
+  "action_items": [
+    "Elena Vasquez: Walk Priya through manually re-importing new certificate metadata for all 14 service provider connections in the admin console",
+    "Marcus Williams: Document the call and escalate reliability concerns (Detect outage and SAML wizard bug) to the customer success team for a follow-up conversation with Vanessa",
+    "Elena Vasquez: Ensure the customer advisory warning admins not to use the certificate rotation wizard until patch 3.4.2 is distributed today",
+    "Aegis Engineering: Release patch 3.4.2 with the certificate rotation wizard fix by the week of April 6th"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.2,
+  "key_moments": [
+    {
+      "time": 75.0,
+      "text": "Vanessa reveals that 60-70% of her workforce cannot authenticate into critical business tools on one of the busiest days of the week, characterizing it as a critical operational impact.",
+      "type": "concern",
+      "speaker": "Vanessa Cruz"
+    },
+    {
+      "time": 285.0,
+      "text": "Elena discloses a known bug in the 3.4.1 release where the certificate rotation wizard fails to propagate new certificate metadata to all service provider connections.",
+      "type": "technical_issue",
+      "speaker": "Elena Vasquez"
+    },
+    {
+      "time": 390.0,
+      "text": "Vanessa references the earlier Detect outage combined with this new bug, signaling growing dissatisfaction with overall platform reliability after two and a half years as a customer.",
+      "type": "churn_signal",
+      "speaker": "Vanessa Cruz"
+    },
+    {
+      "time": 620.0,
+      "text": "Elena commits to personally escalating the reliability concerns to the customer success team and documenting the broader issues raised during the call.",
+      "type": "action_item",
+      "speaker": "Elena Vasquez"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Vanessa Cruz",
+      "event_type": "Join",
+      "time_seconds": 20.0,
+      "timestamp_ms": 1774797320000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 49.0,
+      "timestamp_ms": 1774797349000
+    },
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Join",
+      "time_seconds": 52.0,
+      "timestamp_ms": 1774797352000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 598.0,
+      "timestamp_ms": 1774797898000
+    },
+    {
+      "participant_name": "Elena Vasquez",
+      "event_type": "Leave",
+      "time_seconds": 583.0,
+      "timestamp_ms": 1774797883000
+    },
+    {
+      "participant_name": "Vanessa Cruz",
+      "event_type": "Leave",
+      "time_seconds": 593.0,
+      "timestamp_ms": 1774797893000
+    }
+  ],
+  "stats": {
+    "turn_count": 37,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Marcus Williams": 7,
+      "Elena Vasquez": 13,
+      "Vanessa Cruz": 17
+    },
+    "speaker_total_seconds": {
+      "Marcus Williams": 62.2,
+      "Elena Vasquez": 178.7,
+      "Vanessa Cruz": 159.5
+    }
+  }
+}

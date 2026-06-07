@@ -1,0 +1,410 @@
+{
+  "meeting_id": "01KQ2D93184912F0147315E7",
+  "title": "URGENT: Blackridge Investments - Complete Loss of Threat Visibility",
+  "organizer_email": "marcus.williams@aegiscloud.com",
+  "host_email": "marcus.williams@aegiscloud.com",
+  "start_time": "2026-03-12T15:45:00.000Z",
+  "end_time": "2026-03-12T16:06:06.000Z",
+  "duration_minutes": 21.1,
+  "participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "j.tran@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "j.tran@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Marcus Williams",
+    "1": "Julia Tran"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 7.5,
+      "end_time": 13.7,
+      "duration": 6.199999999999999,
+      "text": "Thank you for calling Aegis Cloud Security support, this is Marcus Williams, how can I help you today?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 14.2,
+      "end_time": 28.9,
+      "duration": 14.7,
+      "text": "Marcus, hi, this is Julia Tran from Blackridge Investments and I need you to understand right now that this is a critical, critical situation - we have zero threat visibility, zero, and it has been that way for over three hours."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 30.1,
+      "end_time": 41.2,
+      "duration": 11.100000000000001,
+      "text": "Okay, Julia, I hear you, I'm pulling up your account right now - can you give me your account ID or the email on file so I can get in faster?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 42.3,
+      "end_time": 51.0,
+      "duration": 8.700000000000003,
+      "text": "It's Blackridge Investments, B-L-A-C-K-R-I-D-G-E, account number BRI-04471, and I also already submitted a ticket, ticket number... uh, I have it here somewhere - it's AGS-229183."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 51.7,
+      "end_time": 65.4,
+      "duration": 13.700000000000003,
+      "text": "Got it, pulling up AGS-229183 right now, okay I see the ticket came in about... forty minutes ago, and I can see you've flagged it P1 which is absolutely appropriate, let me just get into your Detect dashboard here."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 66.5,
+      "end_time": 84.3,
+      "duration": 17.799999999999997,
+      "text": "Forty minutes ago - Marcus, I have been trying to get someone on the phone for forty minutes, do you understand what it means for a financial services firm to have no threat monitoring? We are a target, we are constantly a target, and right now we are essentially flying blind."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 85.7,
+      "end_time": 106.3,
+      "duration": 20.599999999999994,
+      "text": "You're absolutely right and I sincerely apologize for the wait time, that is not acceptable and I'm going to flag that separately, but right now my full focus is on getting your visibility restored - can you describe exactly what you're seeing on your end? Like, are you getting any events at all or is it completely flat?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 107.5,
+      "end_time": 125.3,
+      "duration": 17.799999999999997,
+      "text": "Completely flat. The event feed in Aegis Detect, it just... stopped. No alerts, no events, nothing. The last event we see in the dashboard is timestamped at 7:14 AM this morning and it is now almost 10:30 and I have a team of analysts sitting here staring at a dead screen."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 125.8,
+      "end_time": 136.1,
+      "duration": 10.299999999999997,
+      "text": "Okay, 7:14 AM, so that's roughly three hours and fifteen minutes of no event ingestion, and this is across all your event sources or is it specific to certain integrations?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 137.4,
+      "end_time": 150.1,
+      "duration": 12.699999999999989,
+      "text": "Everything. CloudPrime CloudTrail, our on-prem SIEM feed, our endpoint agents - all of it. It's not an integration issue, everything on our side is green, logs are generating, I can confirm that, it's something on your end."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 151.0,
+      "end_time": 167.1,
+      "duration": 16.099999999999994,
+      "text": "Understood, and uh - I want to be transparent with you, Julia. I'm looking at our internal monitoring right now and I am seeing... okay, yeah, there is a known issue with the Detect event processing pipeline that our engineering team is actively working on."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 167.7,
+      "end_time": 183.7,
+      "duration": 16.0,
+      "text": "A known issue? A KNOWN issue? Why was I not notified? Why did I have to call in and wait forty minutes to find out there is a known issue? This is - I'm sorry, I'm trying to stay calm here but this is completely unacceptable."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 184.7,
+      "end_time": 197.8,
+      "duration": 13.100000000000023,
+      "text": "That is a completely fair and valid point and I - I don't have a good answer for why proactive communication didn't go out sooner and I own that on behalf of Aegis, that should have happened."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 199.2,
+      "end_time": 211.1,
+      "duration": 11.900000000000006,
+      "text": "So what is the issue exactly? What is wrong with the pipeline? And more importantly when is it going to be fixed because I need a number, I need an ETA right now."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 211.9,
+      "end_time": 230.1,
+      "duration": 18.19999999999999,
+      "text": "So what I can see from our internal status is that there was a cascading failure in the event ingestion layer - it looks like a single component went down and it took the rest of the processing queue with it, engineering is working on isolating and restarting the affected nodes."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 230.9,
+      "end_time": 244.2,
+      "duration": 13.299999999999983,
+      "text": "A single component took down the whole thing? There's no redundancy? I mean - are you serious? We are paying for an enterprise security platform and there is a single point of failure in the core monitoring pipeline?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 244.7,
+      "end_time": 257.8,
+      "duration": 13.100000000000023,
+      "text": "I - yeah, I understand why that is alarming and frankly it is a legitimate architectural concern that I know our engineering leadership is going to have to answer for, I'm not going to try to spin that."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 259.2,
+      "end_time": 264.9,
+      "duration": 5.699999999999989,
+      "text": "How long has this been affecting customers? Is it just us or is this broader?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 265.9,
+      "end_time": 279.3,
+      "duration": 13.400000000000034,
+      "text": "It appears to be affecting multiple customers on the same processing cluster, so no, it's not just Blackridge, but I want to be clear that doesn't make it better - it actually makes it worse from an impact standpoint."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 280.5,
+      "end_time": 297.7,
+      "duration": 17.19999999999999,
+      "text": "Multiple customers. Multiple customers with no threat visibility. In financial services. Marcus, I need you to get me an ETA and I need you to escalate this to your highest level right now, like I want to talk to a manager, I want to talk to whoever owns this incident."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 298.2,
+      "end_time": 313.7,
+      "duration": 15.5,
+      "text": "Yes, absolutely, I am escalating this to our P1 incident team right now as we speak and I will get you a direct line to our senior incident manager - I'm also going to stay on this call with you so you're not bounced around."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 314.2,
+      "end_time": 331.8,
+      "duration": 17.600000000000023,
+      "text": "Okay, and while we're waiting - I have to be honest with you, Marcus, and I want you to pass this up the chain - we have been evaluating SentinelShield for the past couple months as a potential alternative and right now, today, this is making that decision very easy."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 332.1,
+      "end_time": 348.7,
+      "duration": 16.599999999999966,
+      "text": "I hear you, and I'm not going to try to do a sales pitch right now because that would be tone deaf - what I will say is that I want us to earn your trust back and that starts with fixing this, right now, today."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 350.1,
+      "end_time": 369.7,
+      "duration": 19.599999999999966,
+      "text": "We have a board meeting next week where I have to present on our security posture and I was planning to highlight our Aegis deployment as a strength - now I'm going to have to explain why we had a multi-hour blind spot in our threat monitoring and that is not a conversation I want to have."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 370.7,
+      "end_time": 387.2,
+      "duration": 16.5,
+      "text": "And that is - look, I'm really sorry you're in that position, and something I can help with is making sure you have a full incident report with timeline, root cause, and remediation steps that you can bring to that board meeting, that's something we can absolutely provide."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 388.4,
+      "end_time": 399.1,
+      "duration": 10.700000000000045,
+      "text": "That would be helpful, yes, I'll need that in writing, and I want our account executive looped in too because there are going to be SLA conversations that need to happen."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 400.0,
+      "end_time": 409.5,
+      "duration": 9.5,
+      "text": "Completely understood, I'm noting all of that - formal incident report, AE looped in, SLA review - all of that is going on the ticket right now."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 411.0,
+      "end_time": 421.2,
+      "duration": 10.199999999999989,
+      "text": "And Marcus, in the meantime, what are we supposed to do? Like, what is your recommendation for us right now? Do we have any interim visibility at all?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 422.1,
+      "end_time": 442.3,
+      "duration": 20.19999999999999,
+      "text": "So in terms of interim steps - your raw logs are still being generated on your sources, which you mentioned, so your team can monitor those directly as a stopgap, I know that's painful and manual but it's something, and I'd also recommend pulling your last 24-hour threat summary from before the outage to have a baseline."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 442.9,
+      "end_time": 454.4,
+      "duration": 11.5,
+      "text": "Yeah, we're already doing that, we've had two analysts manually reviewing CloudTrail for the last two hours - that's two people pulled off other work to compensate for your platform being down."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 454.8,
+      "end_time": 460.5,
+      "duration": 5.699999999999989,
+      "text": "And that operational impact is going to be part of the SLA conversation, I'm documenting it."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 461.1,
+      "end_time": 465.9,
+      "duration": 4.7999999999999545,
+      "text": "Okay - do you have any update from engineering yet? Any ETA at all?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 467.2,
+      "end_time": 485.5,
+      "duration": 18.30000000000001,
+      "text": "I'm checking the internal incident channel right now and... okay, engineering is saying they've isolated the failed node and are in the process of restarting the processing queue, they're estimating restoration within the next two hours, but I want to be careful about that number because they're still in active remediation."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 486.6,
+      "end_time": 500.3,
+      "duration": 13.699999999999989,
+      "text": "Two more hours. So potentially five-plus hours total of no threat monitoring. I just - I want to make sure that is in writing somewhere because that is five hours of SLA breach and I will be referencing that."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 501.1,
+      "end_time": 510.4,
+      "duration": 9.299999999999955,
+      "text": "It is documented, I'm timestamping everything in the ticket and I'll make sure the incident report captures the full outage window from 7:14 AM through restoration."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 511.5,
+      "end_time": 520.6,
+      "duration": 9.100000000000023,
+      "text": "And what happens to events that were supposed to be ingested during the outage window - are those just lost? Or will they be backfilled?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 521.7,
+      "end_time": 540.0,
+      "duration": 18.299999999999955,
+      "text": "That is a really important question and I want to get you a definitive answer from engineering rather than guess - my understanding is that events queued during the outage should be recoverable and backfilled once the pipeline is restored, but I will confirm that explicitly and follow up in writing."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 541.5,
+      "end_time": 550.0,
+      "duration": 8.5,
+      "text": "Okay. Please do that. And Marcus, I need you to call me the moment visibility is restored, not an email, a phone call."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 550.6,
+      "end_time": 564.1,
+      "duration": 13.5,
+      "text": "You have my word, I will call you directly the moment we confirm restoration on your account, and I'm going to be monitoring your account specifically - I'll have your number pulled up and I will call you."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 565.1,
+      "end_time": 583.4,
+      "duration": 18.299999999999955,
+      "text": "Alright. I'm going to hold you to that. And Marcus - just so you know, I genuinely hope Aegis can turn this around because switching vendors is a nightmare and I don't want to do it, but right now I need to see accountability and I need to see real action."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 584.5,
+      "end_time": 602.8,
+      "duration": 18.299999999999955,
+      "text": "I hear you, Julia, and I promise you that accountability starts right now with this call - I've got everything documented, escalation is in progress, and you will hear from me the moment there is any update. Thank you for your patience even though I know you're in an incredibly difficult position."
+    }
+  ],
+  "transcript_text": "Marcus Williams: Thank you for calling Aegis Cloud Security support, this is Marcus Williams, how can I help you today?\nJulia Tran: Marcus, hi, this is Julia Tran from Blackridge Investments and I need you to understand right now that this is a critical, critical situation - we have zero threat visibility, zero, and it has been that way for over three hours.\nMarcus Williams: Okay, Julia, I hear you, I'm pulling up your account right now - can you give me your account ID or the email on file so I can get in faster?\nJulia Tran: It's Blackridge Investments, B-L-A-C-K-R-I-D-G-E, account number BRI-04471, and I also already submitted a ticket, ticket number... uh, I have it here somewhere - it's AGS-229183.\nMarcus Williams: Got it, pulling up AGS-229183 right now, okay I see the ticket came in about... forty minutes ago, and I can see you've flagged it P1 which is absolutely appropriate, let me just get into your Detect dashboard here.\nJulia Tran: Forty minutes ago - Marcus, I have been trying to get someone on the phone for forty minutes, do you understand what it means for a financial services firm to have no threat monitoring? We are a target, we are constantly a target, and right now we are essentially flying blind.\nMarcus Williams: You're absolutely right and I sincerely apologize for the wait time, that is not acceptable and I'm going to flag that separately, but right now my full focus is on getting your visibility restored - can you describe exactly what you're seeing on your end? Like, are you getting any events at all or is it completely flat?\nJulia Tran: Completely flat. The event feed in Aegis Detect, it just... stopped. No alerts, no events, nothing. The last event we see in the dashboard is timestamped at 7:14 AM this morning and it is now almost 10:30 and I have a team of analysts sitting here staring at a dead screen.\nMarcus Williams: Okay, 7:14 AM, so that's roughly three hours and fifteen minutes of no event ingestion, and this is across all your event sources or is it specific to certain integrations?\nJulia Tran: Everything. CloudPrime CloudTrail, our on-prem SIEM feed, our endpoint agents - all of it. It's not an integration issue, everything on our side is green, logs are generating, I can confirm that, it's something on your end.\nMarcus Williams: Understood, and uh - I want to be transparent with you, Julia. I'm looking at our internal monitoring right now and I am seeing... okay, yeah, there is a known issue with the Detect event processing pipeline that our engineering team is actively working on.\nJulia Tran: A known issue? A KNOWN issue? Why was I not notified? Why did I have to call in and wait forty minutes to find out there is a known issue? This is - I'm sorry, I'm trying to stay calm here but this is completely unacceptable.\nMarcus Williams: That is a completely fair and valid point and I - I don't have a good answer for why proactive communication didn't go out sooner and I own that on behalf of Aegis, that should have happened.\nJulia Tran: So what is the issue exactly? What is wrong with the pipeline? And more importantly when is it going to be fixed because I need a number, I need an ETA right now.\nMarcus Williams: So what I can see from our internal status is that there was a cascading failure in the event ingestion layer - it looks like a single component went down and it took the rest of the processing queue with it, engineering is working on isolating and restarting the affected nodes.\nJulia Tran: A single component took down the whole thing? There's no redundancy? I mean - are you serious? We are paying for an enterprise security platform and there is a single point of failure in the core monitoring pipeline?\nMarcus Williams: I - yeah, I understand why that is alarming and frankly it is a legitimate architectural concern that I know our engineering leadership is going to have to answer for, I'm not going to try to spin that.\nJulia Tran: How long has this been affecting customers? Is it just us or is this broader?\nMarcus Williams: It appears to be affecting multiple customers on the same processing cluster, so no, it's not just Blackridge, but I want to be clear that doesn't make it better - it actually makes it worse from an impact standpoint.\nJulia Tran: Multiple customers. Multiple customers with no threat visibility. In financial services. Marcus, I need you to get me an ETA and I need you to escalate this to your highest level right now, like I want to talk to a manager, I want to talk to whoever owns this incident.\nMarcus Williams: Yes, absolutely, I am escalating this to our P1 incident team right now as we speak and I will get you a direct line to our senior incident manager - I'm also going to stay on this call with you so you're not bounced around.\nJulia Tran: Okay, and while we're waiting - I have to be honest with you, Marcus, and I want you to pass this up the chain - we have been evaluating SentinelShield for the past couple months as a potential alternative and right now, today, this is making that decision very easy.\nMarcus Williams: I hear you, and I'm not going to try to do a sales pitch right now because that would be tone deaf - what I will say is that I want us to earn your trust back and that starts with fixing this, right now, today.\nJulia Tran: We have a board meeting next week where I have to present on our security posture and I was planning to highlight our Aegis deployment as a strength - now I'm going to have to explain why we had a multi-hour blind spot in our threat monitoring and that is not a conversation I want to have.\nMarcus Williams: And that is - look, I'm really sorry you're in that position, and something I can help with is making sure you have a full incident report with timeline, root cause, and remediation steps that you can bring to that board meeting, that's something we can absolutely provide.\nJulia Tran: That would be helpful, yes, I'll need that in writing, and I want our account executive looped in too because there are going to be SLA conversations that need to happen.\nMarcus Williams: Completely understood, I'm noting all of that - formal incident report, AE looped in, SLA review - all of that is going on the ticket right now.\nJulia Tran: And Marcus, in the meantime, what are we supposed to do? Like, what is your recommendation for us right now? Do we have any interim visibility at all?\nMarcus Williams: So in terms of interim steps - your raw logs are still being generated on your sources, which you mentioned, so your team can monitor those directly as a stopgap, I know that's painful and manual but it's something, and I'd also recommend pulling your last 24-hour threat summary from before the outage to have a baseline.\nJulia Tran: Yeah, we're already doing that, we've had two analysts manually reviewing CloudTrail for the last two hours - that's two people pulled off other work to compensate for your platform being down.\nMarcus Williams: And that operational impact is going to be part of the SLA conversation, I'm documenting it.\nJulia Tran: Okay - do you have any update from engineering yet? Any ETA at all?\nMarcus Williams: I'm checking the internal incident channel right now and... okay, engineering is saying they've isolated the failed node and are in the process of restarting the processing queue, they're estimating restoration within the next two hours, but I want to be careful about that number because they're still in active remediation.\nJulia Tran: Two more hours. So potentially five-plus hours total of no threat monitoring. I just - I want to make sure that is in writing somewhere because that is five hours of SLA breach and I will be referencing that.\nMarcus Williams: It is documented, I'm timestamping everything in the ticket and I'll make sure the incident report captures the full outage window from 7:14 AM through restoration.\nJulia Tran: And what happens to events that were supposed to be ingested during the outage window - are those just lost? Or will they be backfilled?\nMarcus Williams: That is a really important question and I want to get you a definitive answer from engineering rather than guess - my understanding is that events queued during the outage should be recoverable and backfilled once the pipeline is restored, but I will confirm that explicitly and follow up in writing.\nJulia Tran: Okay. Please do that. And Marcus, I need you to call me the moment visibility is restored, not an email, a phone call.\nMarcus Williams: You have my word, I will call you directly the moment we confirm restoration on your account, and I'm going to be monitoring your account specifically - I'll have your number pulled up and I will call you.\nJulia Tran: Alright. I'm going to hold you to that. And Marcus - just so you know, I genuinely hope Aegis can turn this around because switching vendors is a nightmare and I don't want to do it, but right now I need to see accountability and I need to see real action.\nMarcus Williams: I hear you, Julia, and I promise you that accountability starts right now with this call - I've got everything documented, escalation is in progress, and you will hear from me the moment there is any update. Thank you for your patience even though I know you're in an incredibly difficult position.",
+  "summary": "Julia Tran from Blackridge Investments called Aegis Cloud Security support in a critical situation where her firm has had zero threat visibility for over three hours due to a known event processing pipeline failure. Marcus Williams confirmed the outage is a cascading failure affecting multiple customers on the same processing cluster, with engineering estimating restoration within two more hours. Julia expressed serious frustration over the lack of proactive communication, a single point of failure in the architecture, and the operational impact of having analysts manually reviewing logs. She disclosed they have been evaluating a competitor (SentinelShield) and has a board meeting next week where she must explain the security blind spot. Marcus committed to a formal incident report, SLA review, AE loop-in, and a direct phone call upon service restoration.",
+  "topics": [
+    "service outage",
+    "threat monitoring failure",
+    "sla breach",
+    "churn risk",
+    "incident escalation",
+    "proactive communication failure"
+  ],
+  "action_items": [
+    "Marcus Williams: Call Julia Tran directly the moment threat visibility is restored on Blackridge's account",
+    "Marcus Williams: Provide a formal written incident report including full timeline, root cause, and remediation steps for Julia's board meeting",
+    "Marcus Williams: Loop in Blackridge's account executive for SLA breach review and compensation conversation",
+    "Marcus Williams: Confirm in writing from engineering whether events during the outage window will be backfilled or are lost"
+  ],
+  "overall_sentiment": "very-negative",
+  "sentiment_score": 1.6,
+  "key_moments": [
+    {
+      "time": 42.0,
+      "text": "Julia reveals Blackridge has had zero threat visibility for over three hours, with a team of analysts staring at a dead screen — a critical situation for a financial services firm that is a constant target.",
+      "type": "concern",
+      "speaker": "Julia Tran"
+    },
+    {
+      "time": 390.0,
+      "text": "Marcus confirms there is a known issue with the Detect event processing pipeline, revealing Aegis was aware of the problem but had not proactively notified affected customers.",
+      "type": "technical_issue",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 540.0,
+      "text": "Julia discloses Blackridge has been evaluating SentinelShield as an alternative vendor for months and states that today's incident is making that decision very easy — a clear churn signal.",
+      "type": "churn_signal",
+      "speaker": "Julia Tran"
+    },
+    {
+      "time": 462.0,
+      "text": "Julia challenges the platform's architecture, pointing out that a single component failure took down the entire monitoring pipeline with no redundancy for an enterprise security product.",
+      "type": "feature_gap",
+      "speaker": "Julia Tran"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Julia Tran",
+      "event_type": "Join",
+      "time_seconds": 20.0,
+      "timestamp_ms": 1773330320000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 54.0,
+      "timestamp_ms": 1773330354000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 1266.0,
+      "timestamp_ms": 1773331566000
+    },
+    {
+      "participant_name": "Julia Tran",
+      "event_type": "Leave",
+      "time_seconds": 1236.0,
+      "timestamp_ms": 1773331536000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Marcus Williams": 21,
+      "Julia Tran": 20
+    },
+    "speaker_total_seconds": {
+      "Marcus Williams": 297.5,
+      "Julia Tran": 259.8
+    }
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "meeting_id": "01KQ325BDEDEE927D2970775",
+  "title": "Support Case #5889 - Ridgeline Logistics Detect Latency Issues",
+  "organizer_email": "priya.patel@aegiscloud.com",
+  "host_email": "priya.patel@aegiscloud.com",
+  "start_time": "2026-03-14T17:15:00.000Z",
+  "end_time": "2026-03-14T17:26:24.000Z",
+  "duration_minutes": 11.4,
+  "participants": [
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "p.schneider@ridgelinelogistics.com",
+      "domain": "ridgelinelogistics.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "p.schneider@ridgelinelogistics.com",
+      "domain": "ridgelinelogistics.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Priya Patel",
+    "1": "Paula Schneider"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 5.2,
+      "end_time": 14.5,
+      "duration": 9.3,
+      "text": "Hi Paula, thanks for jumping on the call, this is Priya Patel from Aegis support - I'm the team lead on your case, case number 5889."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 15.5,
+      "end_time": 26.8,
+      "duration": 11.3,
+      "text": "Yeah, hi Priya. Thanks for getting back to me. I've been waiting on this for - honestly it's been a couple of days now and we're not in a great spot."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 28.2,
+      "end_time": 41.9,
+      "duration": 13.7,
+      "text": "I completely understand, and I apologize for the delay on our end. I've been reviewing the case notes and I want to make sure I fully understand what you're seeing. Can you walk me through the issue from your perspective?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 43.3,
+      "end_time": 58.0,
+      "duration": 14.700000000000003,
+      "text": "Sure. So, we're in manufacturing, right, we've got a lot of OT systems, warehouse management, fleet tracking - a pretty broad attack surface. And we rely heavily on Aegis Detect to give us real-time visibility into what's happening across those environments."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 59.1,
+      "end_time": 60.6,
+      "duration": 1.5,
+      "text": "Right, right."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 61.2,
+      "end_time": 76.0,
+      "duration": 14.799999999999997,
+      "text": "And starting - I want to say Monday, maybe Sunday night - we started noticing that alerts are coming in with a significant lag. Like we're talking 45 minutes, an hour behind real-time. For threat monitoring that's... that's not acceptable. That's basically useless."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 77.1,
+      "end_time": 85.3,
+      "duration": 8.200000000000003,
+      "text": "Yeah, I hear you, an hour of latency on threat alerts is - that's a serious problem. I'm not going to sugarcoat that."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 86.4,
+      "end_time": 100.7,
+      "duration": 14.299999999999997,
+      "text": "And what's frustrating is we didn't get any notification from Aegis about a known issue or anything. I had my team spending two days thinking it was something on our side, misconfiguration, network issue - we went through all of it."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 102.0,
+      "end_time": 114.0,
+      "duration": 12.0,
+      "text": "That is - yeah, I'm really sorry about that. And that's actually directly relevant to what I want to talk to you about today. So, I do need to be transparent with you about something."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 114.6,
+      "end_time": 116.1,
+      "duration": 1.5,
+      "text": "Okay..."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 117.2,
+      "end_time": 133.7,
+      "duration": 16.499999999999986,
+      "text": "We have been dealing with an incident on our end - specifically in the Detect event processing pipeline. There was a cascading failure that started affecting event ingestion, and it resulted in significant delays across, um, a subset of our customer environments. Ridgeline is one of them."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 134.5,
+      "end_time": 139.0,
+      "duration": 4.5,
+      "text": "So this is - this is an Aegis-side issue. It's not us."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 139.4,
+      "end_time": 152.1,
+      "duration": 12.699999999999989,
+      "text": "Correct. This is on our side. And I want to be clear - you should have received proactive communication about this and you didn't, and that's a failure on our part. I'm genuinely sorry for that."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 152.8,
+      "end_time": 169.4,
+      "duration": 16.599999999999994,
+      "text": "I mean, Priya, I - okay. I appreciate you being straight with me but this is pretty bad. We're a logistics and manufacturing company, we've got operational technology on the floor, we've got systems that if something gets through undetected because our monitoring is delayed by an hour-"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 170.7,
+      "end_time": 182.2,
+      "duration": 11.5,
+      "text": "Absolutely, I understand the stakes. Can I ask - during this window, do you have any secondary monitoring in place, like a SIEM or anything that's been catching events that Detect was missing?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 182.9,
+      "end_time": 193.9,
+      "duration": 11.0,
+      "text": "We have a LogVault instance but it doesn't have the same coverage, especially not on the endpoint side. So no, we don't have full coverage. That's why we pay for Detect."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 194.6,
+      "end_time": 216.6,
+      "duration": 22.0,
+      "text": "Understood. Okay. So let me tell you where we are from a resolution standpoint. The root cause has been identified - it was essentially a single point of failure in the event ingestion layer. Our engineering team is actively deploying a fix, which includes redundant processing nodes and a circuit breaker pattern to prevent this kind of cascading failure from happening again."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 217.4,
+      "end_time": 219.9,
+      "duration": 2.5,
+      "text": "Okay. And when is that fix going out?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 221.1,
+      "end_time": 236.1,
+      "duration": 15.0,
+      "text": "The fix is being rolled out now. I don't have a precise ETA to give you right this minute but we're talking hours, not days. I can commit to getting you a status update within the next two hours with a hard timeline."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 236.5,
+      "end_time": 246.1,
+      "duration": 9.599999999999994,
+      "text": "Hours. Okay. I mean - and what about the events that were delayed? Are we going to get backfill on those or are those just gone?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 247.3,
+      "end_time": 271.9,
+      "duration": 24.599999999999966,
+      "text": "That's a really important question and I want to give you an accurate answer rather than guess. The events are queued - they're not lost - but some of the time-sensitive context on those alerts may be degraded. I need to confirm with our engineering team exactly what the backfill situation looks like for your tenant specifically. Can I get back to you on that in the same two-hour update?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 272.6,
+      "end_time": 286.7,
+      "duration": 14.099999999999966,
+      "text": "Yeah, I need that answer. Because if we've had a gap in coverage for four days and we don't know what was missed - that's something I'm going to have to report internally and potentially to our cyber insurance carrier."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 287.9,
+      "end_time": 309.1,
+      "duration": 21.200000000000045,
+      "text": "Completely valid. And I'll make sure we give you the full picture so you have what you need for any internal reporting. On that note, would it be helpful if I also looped in your account manager to discuss - you know, once this is resolved - what remediation looks like from a business standpoint? Service credits, that kind of conversation."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 310.2,
+      "end_time": 324.9,
+      "duration": 14.699999999999989,
+      "text": "Yes. I mean, yes, that conversation needs to happen. We're - look, I'm not trying to be difficult, I actually like the Detect product when it works. But this is a significant breach of the SLA as far as I'm concerned."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 326.2,
+      "end_time": 350.1,
+      "duration": 23.900000000000034,
+      "text": "I think that's a fair characterization and I'm not going to push back on that. We'll get your account manager involved and make sure that conversation happens. In the meantime, is there anything else I can do right now - additional logging access, a direct line to our on-call engineer - anything that would help you feel more in control of the situation while we're in this window?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 350.4,
+      "end_time": 363.6,
+      "duration": 13.200000000000045,
+      "text": "Actually yeah - can you set me up with a direct escalation path? Like if something happens in the next few hours and I need to reach someone, I don't want to go through the general support queue."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 364.7,
+      "end_time": 378.6,
+      "duration": 13.900000000000034,
+      "text": "Absolutely. I'm going to give you my direct line right now, and I'll also send you the on-call bridge number for our Detect engineering team. You call either of those and you'll get a response in under ten minutes."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 379.8,
+      "end_time": 382.3,
+      "duration": 2.5,
+      "text": "Okay. That's - that's helpful, thank you."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 382.8,
+      "end_time": 400.5,
+      "duration": 17.69999999999999,
+      "text": "And Paula, I want to reiterate - this situation is not okay, and I'm not treating it as business as usual. You'll have a written update from me in two hours with the fix timeline, the backfill status, and a summary of the incident for your records. Does that work?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 401.4,
+      "end_time": 414.0,
+      "duration": 12.600000000000023,
+      "text": "Yeah, that works. I'll be watching for it. And Priya - I do appreciate you being upfront about it being on your end. I've dealt with vendors who will dance around that for a week, so."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 414.7,
+      "end_time": 423.6,
+      "duration": 8.900000000000034,
+      "text": "Of course. Transparency is the least we owe you right now. I'll get that email out and we'll talk again soon. Thanks for your time, Paula."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 424.4,
+      "end_time": 425.9,
+      "duration": 1.5,
+      "text": "Thanks Priya. Talk soon."
+    }
+  ],
+  "transcript_text": "Priya Patel: Hi Paula, thanks for jumping on the call, this is Priya Patel from Aegis support - I'm the team lead on your case, case number 5889.\nPaula Schneider: Yeah, hi Priya. Thanks for getting back to me. I've been waiting on this for - honestly it's been a couple of days now and we're not in a great spot.\nPriya Patel: I completely understand, and I apologize for the delay on our end. I've been reviewing the case notes and I want to make sure I fully understand what you're seeing. Can you walk me through the issue from your perspective?\nPaula Schneider: Sure. So, we're in manufacturing, right, we've got a lot of OT systems, warehouse management, fleet tracking - a pretty broad attack surface. And we rely heavily on Aegis Detect to give us real-time visibility into what's happening across those environments.\nPriya Patel: Right, right.\nPaula Schneider: And starting - I want to say Monday, maybe Sunday night - we started noticing that alerts are coming in with a significant lag. Like we're talking 45 minutes, an hour behind real-time. For threat monitoring that's... that's not acceptable. That's basically useless.\nPriya Patel: Yeah, I hear you, an hour of latency on threat alerts is - that's a serious problem. I'm not going to sugarcoat that.\nPaula Schneider: And what's frustrating is we didn't get any notification from Aegis about a known issue or anything. I had my team spending two days thinking it was something on our side, misconfiguration, network issue - we went through all of it.\nPriya Patel: That is - yeah, I'm really sorry about that. And that's actually directly relevant to what I want to talk to you about today. So, I do need to be transparent with you about something.\nPaula Schneider: Okay...\nPriya Patel: We have been dealing with an incident on our end - specifically in the Detect event processing pipeline. There was a cascading failure that started affecting event ingestion, and it resulted in significant delays across, um, a subset of our customer environments. Ridgeline is one of them.\nPaula Schneider: So this is - this is an Aegis-side issue. It's not us.\nPriya Patel: Correct. This is on our side. And I want to be clear - you should have received proactive communication about this and you didn't, and that's a failure on our part. I'm genuinely sorry for that.\nPaula Schneider: I mean, Priya, I - okay. I appreciate you being straight with me but this is pretty bad. We're a logistics and manufacturing company, we've got operational technology on the floor, we've got systems that if something gets through undetected because our monitoring is delayed by an hour-\nPriya Patel: Absolutely, I understand the stakes. Can I ask - during this window, do you have any secondary monitoring in place, like a SIEM or anything that's been catching events that Detect was missing?\nPaula Schneider: We have a LogVault instance but it doesn't have the same coverage, especially not on the endpoint side. So no, we don't have full coverage. That's why we pay for Detect.\nPriya Patel: Understood. Okay. So let me tell you where we are from a resolution standpoint. The root cause has been identified - it was essentially a single point of failure in the event ingestion layer. Our engineering team is actively deploying a fix, which includes redundant processing nodes and a circuit breaker pattern to prevent this kind of cascading failure from happening again.\nPaula Schneider: Okay. And when is that fix going out?\nPriya Patel: The fix is being rolled out now. I don't have a precise ETA to give you right this minute but we're talking hours, not days. I can commit to getting you a status update within the next two hours with a hard timeline.\nPaula Schneider: Hours. Okay. I mean - and what about the events that were delayed? Are we going to get backfill on those or are those just gone?\nPriya Patel: That's a really important question and I want to give you an accurate answer rather than guess. The events are queued - they're not lost - but some of the time-sensitive context on those alerts may be degraded. I need to confirm with our engineering team exactly what the backfill situation looks like for your tenant specifically. Can I get back to you on that in the same two-hour update?\nPaula Schneider: Yeah, I need that answer. Because if we've had a gap in coverage for four days and we don't know what was missed - that's something I'm going to have to report internally and potentially to our cyber insurance carrier.\nPriya Patel: Completely valid. And I'll make sure we give you the full picture so you have what you need for any internal reporting. On that note, would it be helpful if I also looped in your account manager to discuss - you know, once this is resolved - what remediation looks like from a business standpoint? Service credits, that kind of conversation.\nPaula Schneider: Yes. I mean, yes, that conversation needs to happen. We're - look, I'm not trying to be difficult, I actually like the Detect product when it works. But this is a significant breach of the SLA as far as I'm concerned.\nPriya Patel: I think that's a fair characterization and I'm not going to push back on that. We'll get your account manager involved and make sure that conversation happens. In the meantime, is there anything else I can do right now - additional logging access, a direct line to our on-call engineer - anything that would help you feel more in control of the situation while we're in this window?\nPaula Schneider: Actually yeah - can you set me up with a direct escalation path? Like if something happens in the next few hours and I need to reach someone, I don't want to go through the general support queue.\nPriya Patel: Absolutely. I'm going to give you my direct line right now, and I'll also send you the on-call bridge number for our Detect engineering team. You call either of those and you'll get a response in under ten minutes.\nPaula Schneider: Okay. That's - that's helpful, thank you.\nPriya Patel: And Paula, I want to reiterate - this situation is not okay, and I'm not treating it as business as usual. You'll have a written update from me in two hours with the fix timeline, the backfill status, and a summary of the incident for your records. Does that work?\nPaula Schneider: Yeah, that works. I'll be watching for it. And Priya - I do appreciate you being upfront about it being on your end. I've dealt with vendors who will dance around that for a week, so.\nPriya Patel: Of course. Transparency is the least we owe you right now. I'll get that email out and we'll talk again soon. Thanks for your time, Paula.\nPaula Schneider: Thanks Priya. Talk soon.",
+  "summary": "Priya Patel from Aegis support contacted Paula Schneider of Ridgeline (a manufacturing/logistics company) regarding a multi-day alert latency issue with the Aegis Detect product. Priya confirmed the problem was caused by a cascading failure in Aegis's event processing pipeline, not anything on the customer's side, and apologized for the lack of proactive communication. Paula expressed concern about the security gap created by hour-long alert delays across their OT and manufacturing environments, and noted potential SLA violations and cyber insurance reporting requirements. Priya committed to a two-hour written update with fix timeline and backfill status, and offered to involve the account manager for remediation and service credit discussions.",
+  "topics": [
+    "product outage",
+    "alert latency",
+    "sla breach",
+    "incident communication",
+    "ot security",
+    "service credits"
+  ],
+  "action_items": [
+    "Priya Patel: Send Paula a written update within two hours covering the fix timeline, event backfill status, and a full incident summary",
+    "Priya Patel: Provide Paula with a direct escalation path including her personal line and the on-call Detect engineering bridge number",
+    "Priya Patel: Loop in Paula's account manager to discuss SLA remediation and service credits once the incident is resolved",
+    "Priya Patel: Confirm with engineering the exact backfill situation for Ridgeline's tenant and report back"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Paula reveals alerts have been delayed by 45 minutes to an hour since Sunday/Monday, making threat monitoring effectively useless for their OT environment",
+      "type": "concern",
+      "speaker": "Paula Schneider"
+    },
+    {
+      "time": 210.0,
+      "text": "Priya confirms the issue is a cascading failure on Aegis's side and acknowledges the failure to send proactive customer communication",
+      "type": "technical_issue",
+      "speaker": "Priya Patel"
+    },
+    {
+      "time": 370.0,
+      "text": "Paula raises that a four-day coverage gap may need to be reported internally and to their cyber insurance carrier, signaling serious business impact",
+      "type": "churn_signal",
+      "speaker": "Paula Schneider"
+    },
+    {
+      "time": 480.0,
+      "text": "Paula acknowledges she likes the Detect product when it works and appreciates Priya's transparency, providing a slight positive pivot in tone",
+      "type": "positive_pivot",
+      "speaker": "Paula Schneider"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Paula Schneider",
+      "event_type": "Join",
+      "time_seconds": 39.0,
+      "timestamp_ms": 1773508539000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Join",
+      "time_seconds": 58.0,
+      "timestamp_ms": 1773508558000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Leave",
+      "time_seconds": 666.0,
+      "timestamp_ms": 1773509166000
+    },
+    {
+      "participant_name": "Paula Schneider",
+      "event_type": "Leave",
+      "time_seconds": 682.0,
+      "timestamp_ms": 1773509182000
+    }
+  ],
+  "stats": {
+    "turn_count": 32,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Priya Patel": 16,
+      "Paula Schneider": 16
+    },
+    "speaker_total_seconds": {
+      "Priya Patel": 232.6,
+      "Paula Schneider": 159.4
+    }
+  }
+}

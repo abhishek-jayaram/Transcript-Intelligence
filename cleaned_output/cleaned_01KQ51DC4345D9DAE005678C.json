@@ -1,0 +1,435 @@
+{
+  "meeting_id": "01KQ51DC4345D9DAE005678C",
+  "title": "Aegis / Redwood Clinical - Product Feedback Session",
+  "organizer_email": "daniel.okafor@aegiscloud.com",
+  "host_email": "daniel.okafor@aegiscloud.com",
+  "start_time": "2026-02-22T13:15:00.000Z",
+  "end_time": "2026-02-22T13:55:18.000Z",
+  "duration_minutes": 40.3,
+  "participants": [
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "t.hargrove@redwoodclinical.com",
+      "domain": "redwoodclinical.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "t.hargrove@redwoodclinical.com",
+      "domain": "redwoodclinical.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Daniel Okafor",
+    "1": "Thomas Hargrove",
+    "2": "Lisa Park"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 4.3,
+      "end_time": 9.4,
+      "duration": 5.1000000000000005,
+      "text": "Alright, I think we're all on now - Thomas, can you hear us okay?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 10.0,
+      "end_time": 12.7,
+      "duration": 2.6999999999999993,
+      "text": "Yeah, loud and clear. Good to go."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 13.8,
+      "end_time": 24.5,
+      "duration": 10.7,
+      "text": "Great, great. So, Thomas, thanks for making time today - I know February is always kind of a weird month for healthcare IT, end of quarter planning and all that."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 25.6,
+      "end_time": 35.3,
+      "duration": 9.699999999999996,
+      "text": "Ha, yeah, you could say that. We've got our annual risk assessment coming up in March so the timing is actually... it's fine, this is relevant for us."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 36.5,
+      "end_time": 50.4,
+      "duration": 13.899999999999999,
+      "text": "Oh good, I'm glad to hear that. And I'll just introduce Lisa here - she's been on your account for a few months now and she's really the one who flagged that we should get this session on the calendar."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 51.3,
+      "end_time": 59.8,
+      "duration": 8.5,
+      "text": "Hi Thomas, yeah we've exchanged a few emails but I don't think we've actually spoken live before so it's nice to properly connect."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 61.3,
+      "end_time": 65.1,
+      "duration": 3.799999999999997,
+      "text": "Same, yeah. Good to put a voice to the name."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 66.5,
+      "end_time": 87.8,
+      "duration": 21.299999999999997,
+      "text": "So Thomas, the reason we wanted to set this up - and feel free to just, you know, kind of take it wherever you want - is we've been collecting feature feedback from customers in the healthcare vertical specifically around Aegis Comply, and your name actually came up a couple times when our team was going through support tickets and conversations."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 88.6,
+      "end_time": 97.6,
+      "duration": 9.0,
+      "text": "Yeah, no, that makes sense. Our team has been using Comply for, I want to say, about eight months now? And we have some thoughts."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 98.1,
+      "end_time": 106.9,
+      "duration": 8.800000000000011,
+      "text": "That's exactly what we want to hear - good, bad, in between. We're not here to pitch anything, this is genuinely a feedback session."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 107.3,
+      "end_time": 129.3,
+      "duration": 22.000000000000014,
+      "text": "Okay, well - so the main thing, and this has been a recurring pain point for us, is around HIPAA reporting specifically. The current reporting in Comply is... it's okay, but it's pretty static. Like we can pull the report but there's no real way to drill down into specific control areas without basically exporting everything and doing it manually in Excel."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 129.7,
+      "end_time": 137.1,
+      "duration": 7.400000000000006,
+      "text": "Right, okay. Can you walk me through what that looks like in practice? Like what's the actual workflow that's breaking down?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 138.0,
+      "end_time": 168.2,
+      "duration": 30.19999999999999,
+      "text": "Sure. So, when our compliance officer - her name's Priya - when she needs to prep for an audit, she's going into Comply, pulling the HIPAA report, and it gives her this flat document basically. But if the auditor comes back and says hey, we want to look specifically at, um, access controls or encryption standards, she has to go back through the whole thing and find those sections manually. There's no way to filter or generate a focused view on a specific control family."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 168.8,
+      "end_time": 176.8,
+      "duration": 8.0,
+      "text": "Got it, yeah. So it's more of a navigation and filtering issue within the report output rather than the data itself being wrong."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 177.4,
+      "end_time": 192.2,
+      "duration": 14.799999999999983,
+      "text": "Correct. The data is - I mean, mostly accurate, we've had a couple discrepancies but nothing major. It's more that the format isn't practical for how audits actually work. Auditors don't look at everything at once, they come in with specific questions."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 192.8,
+      "end_time": 206.1,
+      "duration": 13.299999999999983,
+      "text": "That's a really useful distinction, thank you. And I want to make sure I'm capturing this right - is this specific to HIPAA or are you seeing the same issue with any other frameworks you're running reports against?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 206.8,
+      "end_time": 218.8,
+      "duration": 12.0,
+      "text": "Honestly we're primarily on HIPAA and SOC 2. SOC 2 has the same problem but HIPAA is where it hurts more because the audits are more frequent and the stakes are higher, obviously."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 219.2,
+      "end_time": 239.2,
+      "duration": 20.0,
+      "text": "Makes sense. And I should mention - and I don't want to get too far ahead of myself here - but we do have a Comply update in the pipeline and on-demand reporting with more granular control filtering is something that's been discussed internally. I can't give you a hard date today but it's on the roadmap."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 240.5,
+      "end_time": 248.8,
+      "duration": 8.300000000000011,
+      "text": "Okay. I mean, I've heard 'on the roadmap' before so I'll believe it when I see it, but - that's good to know."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 249.4,
+      "end_time": 255.0,
+      "duration": 5.599999999999994,
+      "text": "Fair enough, totally fair. We'll follow up with something more concrete once we have it."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 255.6,
+      "end_time": 276.6,
+      "duration": 21.00000000000003,
+      "text": "The other thing I wanted to flag - and this is maybe more of a workflow request than a feature request - is around how the reports are shared internally. Right now whoever pulls the report kind of has to manually distribute it. Is there any plan for scheduled report delivery? Like email distribution to specific stakeholders on a cadence?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 277.8,
+      "end_time": 288.1,
+      "duration": 10.300000000000011,
+      "text": "Scheduled delivery, like automated sends - yeah, that's something I've actually heard from a few other customers too. Lisa, do you know if that's been formally submitted to product?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 289.4,
+      "end_time": 299.1,
+      "duration": 9.700000000000045,
+      "text": "I believe it has been submitted, yeah. I'll double-check after this call and I can send you what I find, Thomas. It may already be tracking somewhere."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 300.6,
+      "end_time": 316.4,
+      "duration": 15.799999999999955,
+      "text": "That'd be helpful. Priya has been asking about that specifically - she wants to be able to set it and forget it basically, have the monthly compliance summary go to our CISO and our legal team without her having to remember to pull and send it."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 316.7,
+      "end_time": 324.4,
+      "duration": 7.699999999999989,
+      "text": "Yeah, that's a completely reasonable ask. The manual overhead on something like that adds up fast especially when you're already stretched thin."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 325.3,
+      "end_time": 347.7,
+      "duration": 22.399999999999977,
+      "text": "Exactly. And one more thing - and this is kind of related - when we generate a HIPAA report right now, there's no executive summary section. Like, the CISO doesn't want to read thirty pages of controls, she wants a one-page summary of where we stand, what the gaps are, and whether anything has changed since last month. Is that something that's been considered?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 348.9,
+      "end_time": 359.8,
+      "duration": 10.900000000000034,
+      "text": "An executive summary layer, yeah. That's - honestly that's a really specific and useful piece of feedback. Is the gap tracking piece important too, like showing delta from a previous report period?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 360.9,
+      "end_time": 377.1,
+      "duration": 16.200000000000045,
+      "text": "Yes, absolutely. That's actually more important than the summary itself in some ways. Right now we have no way to tell from within the tool whether our posture has improved or degraded month over month. We're tracking that manually in a spreadsheet which is... not ideal."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 378.5,
+      "end_time": 392.3,
+      "duration": 13.800000000000011,
+      "text": "Yeah, I can imagine. Okay - so to kind of recap what I'm hearing: granular filtering by control family within reports, scheduled automated delivery to stakeholders, an executive summary layer, and period-over-period delta tracking. Did I get that right?"
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 392.8,
+      "end_time": 398.1,
+      "duration": 5.300000000000011,
+      "text": "Yeah, that's the list. I'd rank them in that order of priority too if that helps."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 399.2,
+      "end_time": 405.4,
+      "duration": 6.199999999999989,
+      "text": "Super helpful, yes. Priority ranking is actually really useful for our product team when they're scoping things."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 406.5,
+      "end_time": 415.1,
+      "duration": 8.600000000000023,
+      "text": "I do want to ask - are you evaluating any other compliance tools? Just so we have a sense of the landscape from your perspective."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 415.5,
+      "end_time": 434.4,
+      "duration": 18.899999999999977,
+      "text": "We've looked at a couple things. VaultEdge came up in a conversation internally but nothing serious - we're pretty invested in the Aegis platform at this point and we're not looking to rip and replace. But, you know, if the gaps in Comply don't get addressed, it's a conversation we'd have to have eventually."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 435.5,
+      "end_time": 443.9,
+      "duration": 8.399999999999977,
+      "text": "Understood, and I appreciate you being direct about that. That's exactly the kind of context that helps us make the case internally for prioritization."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 445.4,
+      "end_time": 459.0,
+      "duration": 13.600000000000023,
+      "text": "I'll also just say - our experience with the platform overall has been solid. Protect has been reliable for us, Identity is working well. Comply is really the one area where we feel like it's a little behind."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 460.1,
+      "end_time": 467.3,
+      "duration": 7.199999999999989,
+      "text": "Good to hear on Protect and Identity, and noted on Comply. We'll make sure this feedback gets into the right hands."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 468.6,
+      "end_time": 478.1,
+      "duration": 9.5,
+      "text": "So in terms of next steps - Lisa, can you send Thomas a summary of what we captured today and also follow up on the scheduled delivery question?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 478.9,
+      "end_time": 496.6,
+      "duration": 17.700000000000045,
+      "text": "Yep, I'll send that over by end of this week. Thomas, I'll also loop in our product liaison - her name is Ren - who handles the healthcare vertical. She may want to do a brief follow-up call to get a bit more detail on the control filtering use case specifically."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 497.9,
+      "end_time": 506.4,
+      "duration": 8.5,
+      "text": "That's fine. Happy to talk to her. As long as it doesn't turn into a sales call - I've had enough of those this quarter."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 507.9,
+      "end_time": 514.2,
+      "duration": 6.300000000000068,
+      "text": "Ha - no, I promise, strictly product. Alright Thomas, really appreciate your time today. This was genuinely useful."
+    },
+    {
+      "speaker_name": "Thomas Hargrove",
+      "start_time": 515.3,
+      "end_time": 517.5,
+      "duration": 2.2000000000000455,
+      "text": "Yeah, same. Good conversation. Talk soon."
+    }
+  ],
+  "transcript_text": "Daniel Okafor: Alright, I think we're all on now - Thomas, can you hear us okay?\nThomas Hargrove: Yeah, loud and clear. Good to go.\nDaniel Okafor: Great, great. So, Thomas, thanks for making time today - I know February is always kind of a weird month for healthcare IT, end of quarter planning and all that.\nThomas Hargrove: Ha, yeah, you could say that. We've got our annual risk assessment coming up in March so the timing is actually... it's fine, this is relevant for us.\nDaniel Okafor: Oh good, I'm glad to hear that. And I'll just introduce Lisa here - she's been on your account for a few months now and she's really the one who flagged that we should get this session on the calendar.\nLisa Park: Hi Thomas, yeah we've exchanged a few emails but I don't think we've actually spoken live before so it's nice to properly connect.\nThomas Hargrove: Same, yeah. Good to put a voice to the name.\nDaniel Okafor: So Thomas, the reason we wanted to set this up - and feel free to just, you know, kind of take it wherever you want - is we've been collecting feature feedback from customers in the healthcare vertical specifically around Aegis Comply, and your name actually came up a couple times when our team was going through support tickets and conversations.\nThomas Hargrove: Yeah, no, that makes sense. Our team has been using Comply for, I want to say, about eight months now? And we have some thoughts.\nLisa Park: That's exactly what we want to hear - good, bad, in between. We're not here to pitch anything, this is genuinely a feedback session.\nThomas Hargrove: Okay, well - so the main thing, and this has been a recurring pain point for us, is around HIPAA reporting specifically. The current reporting in Comply is... it's okay, but it's pretty static. Like we can pull the report but there's no real way to drill down into specific control areas without basically exporting everything and doing it manually in Excel.\nLisa Park: Right, okay. Can you walk me through what that looks like in practice? Like what's the actual workflow that's breaking down?\nThomas Hargrove: Sure. So, when our compliance officer - her name's Priya - when she needs to prep for an audit, she's going into Comply, pulling the HIPAA report, and it gives her this flat document basically. But if the auditor comes back and says hey, we want to look specifically at, um, access controls or encryption standards, she has to go back through the whole thing and find those sections manually. There's no way to filter or generate a focused view on a specific control family.\nDaniel Okafor: Got it, yeah. So it's more of a navigation and filtering issue within the report output rather than the data itself being wrong.\nThomas Hargrove: Correct. The data is - I mean, mostly accurate, we've had a couple discrepancies but nothing major. It's more that the format isn't practical for how audits actually work. Auditors don't look at everything at once, they come in with specific questions.\nLisa Park: That's a really useful distinction, thank you. And I want to make sure I'm capturing this right - is this specific to HIPAA or are you seeing the same issue with any other frameworks you're running reports against?\nThomas Hargrove: Honestly we're primarily on HIPAA and SOC 2. SOC 2 has the same problem but HIPAA is where it hurts more because the audits are more frequent and the stakes are higher, obviously.\nDaniel Okafor: Makes sense. And I should mention - and I don't want to get too far ahead of myself here - but we do have a Comply update in the pipeline and on-demand reporting with more granular control filtering is something that's been discussed internally. I can't give you a hard date today but it's on the roadmap.\nThomas Hargrove: Okay. I mean, I've heard 'on the roadmap' before so I'll believe it when I see it, but - that's good to know.\nDaniel Okafor: Fair enough, totally fair. We'll follow up with something more concrete once we have it.\nThomas Hargrove: The other thing I wanted to flag - and this is maybe more of a workflow request than a feature request - is around how the reports are shared internally. Right now whoever pulls the report kind of has to manually distribute it. Is there any plan for scheduled report delivery? Like email distribution to specific stakeholders on a cadence?\nDaniel Okafor: Scheduled delivery, like automated sends - yeah, that's something I've actually heard from a few other customers too. Lisa, do you know if that's been formally submitted to product?\nLisa Park: I believe it has been submitted, yeah. I'll double-check after this call and I can send you what I find, Thomas. It may already be tracking somewhere.\nThomas Hargrove: That'd be helpful. Priya has been asking about that specifically - she wants to be able to set it and forget it basically, have the monthly compliance summary go to our CISO and our legal team without her having to remember to pull and send it.\nLisa Park: Yeah, that's a completely reasonable ask. The manual overhead on something like that adds up fast especially when you're already stretched thin.\nThomas Hargrove: Exactly. And one more thing - and this is kind of related - when we generate a HIPAA report right now, there's no executive summary section. Like, the CISO doesn't want to read thirty pages of controls, she wants a one-page summary of where we stand, what the gaps are, and whether anything has changed since last month. Is that something that's been considered?\nDaniel Okafor: An executive summary layer, yeah. That's - honestly that's a really specific and useful piece of feedback. Is the gap tracking piece important too, like showing delta from a previous report period?\nThomas Hargrove: Yes, absolutely. That's actually more important than the summary itself in some ways. Right now we have no way to tell from within the tool whether our posture has improved or degraded month over month. We're tracking that manually in a spreadsheet which is... not ideal.\nLisa Park: Yeah, I can imagine. Okay - so to kind of recap what I'm hearing: granular filtering by control family within reports, scheduled automated delivery to stakeholders, an executive summary layer, and period-over-period delta tracking. Did I get that right?\nThomas Hargrove: Yeah, that's the list. I'd rank them in that order of priority too if that helps.\nLisa Park: Super helpful, yes. Priority ranking is actually really useful for our product team when they're scoping things.\nDaniel Okafor: I do want to ask - are you evaluating any other compliance tools? Just so we have a sense of the landscape from your perspective.\nThomas Hargrove: We've looked at a couple things. VaultEdge came up in a conversation internally but nothing serious - we're pretty invested in the Aegis platform at this point and we're not looking to rip and replace. But, you know, if the gaps in Comply don't get addressed, it's a conversation we'd have to have eventually.\nDaniel Okafor: Understood, and I appreciate you being direct about that. That's exactly the kind of context that helps us make the case internally for prioritization.\nThomas Hargrove: I'll also just say - our experience with the platform overall has been solid. Protect has been reliable for us, Identity is working well. Comply is really the one area where we feel like it's a little behind.\nLisa Park: Good to hear on Protect and Identity, and noted on Comply. We'll make sure this feedback gets into the right hands.\nDaniel Okafor: So in terms of next steps - Lisa, can you send Thomas a summary of what we captured today and also follow up on the scheduled delivery question?\nLisa Park: Yep, I'll send that over by end of this week. Thomas, I'll also loop in our product liaison - her name is Ren - who handles the healthcare vertical. She may want to do a brief follow-up call to get a bit more detail on the control filtering use case specifically.\nThomas Hargrove: That's fine. Happy to talk to her. As long as it doesn't turn into a sales call - I've had enough of those this quarter.\nDaniel Okafor: Ha - no, I promise, strictly product. Alright Thomas, really appreciate your time today. This was genuinely useful.\nThomas Hargrove: Yeah, same. Good conversation. Talk soon.",
+  "summary": "Daniel Okafor and Lisa Park held a structured feedback session with Thomas Hargrove from the healthcare vertical to discuss pain points with Aegis Comply after eight months of use. Thomas outlined four prioritized feature gaps: granular control-family filtering in HIPAA reports, scheduled automated report delivery to stakeholders, an executive summary layer, and period-over-period delta tracking for compliance posture. Thomas noted that while Protect and Identity modules are performing well, Comply feels behind and could eventually prompt evaluation of competing tools like VaultEdge if gaps persist. The call concluded with agreed next steps including a written summary, follow-up on scheduled delivery roadmap status, and an introduction to the healthcare vertical product liaison.",
+  "topics": [
+    "hipaa reporting",
+    "compliance tooling",
+    "feature gaps",
+    "product feedback",
+    "audit workflow",
+    "roadmap"
+  ],
+  "action_items": [
+    "Lisa Park: Send Thomas a written summary of all captured feedback and priority rankings by end of week",
+    "Lisa Park: Confirm and share current roadmap status for scheduled automated report delivery feature",
+    "Lisa Park: Introduce Thomas to product liaison Ren for a follow-up call focused on control filtering use case",
+    "Daniel Okafor: Provide more concrete timeline on granular control filtering roadmap item once internal details are available"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.2,
+  "key_moments": [
+    {
+      "time": 142.0,
+      "text": "Thomas describes the core pain point: HIPAA reports are static and cannot be filtered by control family, forcing manual work in Excel during audits.",
+      "type": "feature_gap",
+      "speaker": "Thomas Hargrove"
+    },
+    {
+      "time": 380.0,
+      "text": "Thomas responds skeptically to the roadmap mention, saying 'I've heard on the roadmap before so I'll believe it when I see it.'",
+      "type": "concern",
+      "speaker": "Thomas Hargrove"
+    },
+    {
+      "time": 620.0,
+      "text": "Thomas reveals VaultEdge has come up internally and warns that unaddressed gaps in Comply could eventually prompt a formal evaluation.",
+      "type": "churn_signal",
+      "speaker": "Thomas Hargrove"
+    },
+    {
+      "time": 670.0,
+      "text": "Thomas affirms that Protect and Identity modules are solid, clarifying Comply is the only area where the platform feels behind.",
+      "type": "positive_pivot",
+      "speaker": "Thomas Hargrove"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1771766106000
+    },
+    {
+      "participant_name": "Thomas Hargrove",
+      "event_type": "Join",
+      "time_seconds": 28.0,
+      "timestamp_ms": 1771766128000
+    },
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Join",
+      "time_seconds": 58.0,
+      "timestamp_ms": 1771766158000
+    },
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Leave",
+      "time_seconds": 2396.0,
+      "timestamp_ms": 1771768496000
+    },
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Leave",
+      "time_seconds": 2410.0,
+      "timestamp_ms": 1771768510000
+    },
+    {
+      "participant_name": "Thomas Hargrove",
+      "event_type": "Leave",
+      "time_seconds": 2415.0,
+      "timestamp_ms": 1771768515000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Daniel Okafor": 13,
+      "Thomas Hargrove": 18,
+      "Lisa Park": 10
+    },
+    "speaker_total_seconds": {
+      "Daniel Okafor": 138.6,
+      "Thomas Hargrove": 236.4,
+      "Lisa Park": 100.3
+    }
+  }
+}

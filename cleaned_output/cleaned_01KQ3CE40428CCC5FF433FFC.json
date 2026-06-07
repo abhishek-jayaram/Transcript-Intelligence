@@ -1,0 +1,434 @@
+{
+  "meeting_id": "01KQ3CE40428CCC5FF433FFC",
+  "title": "Detect Outage - Post-Incident Review",
+  "organizer_email": "tom.bradley@aegiscloud.com",
+  "host_email": "tom.bradley@aegiscloud.com",
+  "start_time": "2026-03-18T16:30:00.000Z",
+  "end_time": "2026-03-18T16:51:24.000Z",
+  "duration_minutes": 21.4,
+  "participants": [
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Tom Bradley",
+    "1": "Diana Reeves",
+    "2": "Megan Lawson"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 5.4,
+      "end_time": 11.2,
+      "duration": 5.799999999999999,
+      "text": "Alright, I think we're all here - let me just pull up my notes real quick."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 12.2,
+      "end_time": 14.3,
+      "duration": 2.1000000000000014,
+      "text": "Yeah I'm here, go ahead."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 15.5,
+      "end_time": 20.8,
+      "duration": 5.300000000000001,
+      "text": "Same, I've got about twenty minutes before my next thing so let's try to be efficient."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 22.1,
+      "end_time": 32.4,
+      "duration": 10.299999999999997,
+      "text": "Okay so - this is the post-incident review for the Detect outage, March 10th through the 18th, well, the outage itself was March 10th, we're just closing it out today."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 32.8,
+      "end_time": 43.6,
+      "duration": 10.800000000000004,
+      "text": "Right, and just to frame this - I had a lot of customer conversations this week, so I want to make sure we're aligned on what we're telling them going forward."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 44.6,
+      "end_time": 54.9,
+      "duration": 10.299999999999997,
+      "text": "Totally fair, we'll get there. So let me just walk through the timeline and root cause first, and then we can talk about the fix and the comms piece."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 56.2,
+      "end_time": 57.7,
+      "duration": 1.5,
+      "text": "Sounds good."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 58.8,
+      "end_time": 80.5,
+      "duration": 21.700000000000003,
+      "text": "So the incident started around 2:14 AM Pacific on March 10th. The event ingestion pipeline - this is the core processing layer that pulls in telemetry from customer environments - it had a cascading failure. Basically one node went down, and because we had a single point of failure in that ingestion layer, the whole pipeline backed up and eventually stopped processing."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 81.9,
+      "end_time": 85.4,
+      "duration": 3.5,
+      "text": "And that's what caused the six-hour window with no visibility?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 86.7,
+      "end_time": 97.9,
+      "duration": 11.200000000000003,
+      "text": "Correct. For approximately six hours, customers were not getting threat monitoring alerts. Events were being generated on their end, but we weren't processing them, so nothing was surfacing in the Detect dashboard."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 99.3,
+      "end_time": 106.8,
+      "duration": 7.5,
+      "text": "Six hours is - I mean, that's a long time for a security product. Some of my customers were pretty upset, understandably."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 107.9,
+      "end_time": 119.0,
+      "duration": 11.099999999999994,
+      "text": "I know, and I'm not going to sugarcoat it - this was a significant failure. The good news is we've done a full root cause analysis and the fix is already deployed."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 119.8,
+      "end_time": 129.0,
+      "duration": 9.200000000000003,
+      "text": "Can you explain the fix at a level I can actually relay to customers? Like, not super deep in the weeds but enough that it's credible."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 130.3,
+      "end_time": 155.1,
+      "duration": 24.799999999999983,
+      "text": "Yeah, so there are two main things. First, we've added redundant processing nodes to the event ingestion layer. So if one node fails, traffic automatically routes to backup nodes - no more single point of failure. Second, we've implemented what's called a circuit breaker pattern, which basically means if one part of the pipeline starts to degrade, it isolates that failure instead of letting it cascade through the whole system."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 155.8,
+      "end_time": 161.0,
+      "duration": 5.199999999999989,
+      "text": "Okay, that's actually pretty explainable. Redundancy and failure isolation - I can work with that."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 162.2,
+      "end_time": 178.2,
+      "duration": 16.0,
+      "text": "And just to add to that - from a product standpoint, we're also looking at adding a visible status indicator in the Detect UI so customers can see in real-time whether the pipeline is healthy. That's not shipped yet but it's on the near-term roadmap."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 179.3,
+      "end_time": 180.8,
+      "duration": 1.5,
+      "text": "When's that realistically landing?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 181.8,
+      "end_time": 189.7,
+      "duration": 7.899999999999977,
+      "text": "Uh, we're targeting end of April, but I don't want to over-promise. It depends on a few other things in the queue."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 190.9,
+      "end_time": 201.7,
+      "duration": 10.799999999999983,
+      "text": "Can we at least tell customers it's in progress? Because right now they're asking 'how do I even know if Detect is working' and I don't have a great answer."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 202.2,
+      "end_time": 207.9,
+      "duration": 5.700000000000017,
+      "text": "Yeah, absolutely tell them it's in progress. That's a real commitment, end of April is the target."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 208.7,
+      "end_time": 223.3,
+      "duration": 14.600000000000023,
+      "text": "I do want to flag one thing - and this is a bit of a sore spot for me - our alerting on the pipeline health itself was inadequate. We didn't catch this until customers started reaching out. That's not acceptable."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 224.8,
+      "end_time": 228.6,
+      "duration": 3.799999999999983,
+      "text": "Yeah, how did we find out? Was it a customer ticket?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 230.0,
+      "end_time": 238.8,
+      "duration": 8.800000000000011,
+      "text": "It was - one of Diana's team's accounts, actually. Flagged that they hadn't seen any alerts in a few hours and opened a support ticket."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 239.8,
+      "end_time": 244.7,
+      "duration": 4.899999999999977,
+      "text": "Yeah, that was Thornfield Financial. They've got a pretty attentive security team, fortunately."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 245.2,
+      "end_time": 255.5,
+      "duration": 10.300000000000011,
+      "text": "So we are adding internal monitoring on the ingestion pipeline itself - not just the output but the pipeline health metrics. That's already in place as of this week."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 256.2,
+      "end_time": 271.2,
+      "duration": 15.0,
+      "text": "Good. I think one of the things I keep hearing from customers is - they feel like they're flying blind sometimes with Detect. And this incident kind of reinforced that. I don't say that to be harsh, I just think it's worth naming."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 271.7,
+      "end_time": 286.5,
+      "duration": 14.800000000000011,
+      "text": "No, I - yeah. I hear that. And honestly some of it is a product maturity issue, some of it is infrastructure. Megan, is there anything we can prioritize in the short term to help with that visibility gap beyond the status indicator?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 287.0,
+      "end_time": 301.1,
+      "duration": 14.100000000000023,
+      "text": "We've been talking about a heartbeat alert feature - basically Detect would proactively notify customers if it stops receiving telemetry from their environment for more than, say, fifteen minutes. That would at least give them a signal on their end."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 302.2,
+      "end_time": 306.2,
+      "duration": 4.0,
+      "text": "Oh, that would be huge actually. Can we pull that forward?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 306.7,
+      "end_time": 319.4,
+      "duration": 12.699999999999989,
+      "text": "Let me take a look at the roadmap this week. I think there's room to move it up, but I need to see what it bumps. I'll come back to both of you by end of week."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 319.8,
+      "end_time": 327.9,
+      "duration": 8.099999999999966,
+      "text": "Okay. And on the customer communication side - Diana, what's the current state? Did we send a post-incident report to affected accounts?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 329.0,
+      "end_time": 340.4,
+      "duration": 11.399999999999977,
+      "text": "We sent an initial communication on March 10th when the incident was resolved, but we have not sent a formal PIR document yet. I've been waiting on the root cause writeup from engineering."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 341.1,
+      "end_time": 349.3,
+      "duration": 8.199999999999989,
+      "text": "Yeah that's on me, I'll have that to you by tomorrow morning. Full technical summary, the fix, and what we're doing to prevent recurrence."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 350.1,
+      "end_time": 364.0,
+      "duration": 13.899999999999977,
+      "text": "Okay, and then I'll adapt it into customer-facing language and get it out by end of week. Some of our enterprise accounts are going to want a call, not just an email - particularly the ones who are mid-renewal."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 365.4,
+      "end_time": 372.2,
+      "duration": 6.800000000000011,
+      "text": "Do you want me or Tom on any of those calls, or are you handling them with your CSMs?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 373.7,
+      "end_time": 383.3,
+      "duration": 9.600000000000023,
+      "text": "Probably Tom for anyone who wants a technical deep-dive. I'll flag the specific accounts and we can coordinate. I don't think it'll be more than three or four."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 384.6,
+      "end_time": 390.8,
+      "duration": 6.199999999999989,
+      "text": "Yeah, I'm available for that. Just loop me in with at least a day's notice if you can."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 392.2,
+      "end_time": 401.9,
+      "duration": 9.699999999999989,
+      "text": "Will do. Alright, I think I have what I need. Tom - PIR doc tomorrow, and Megan - roadmap check by end of week on the heartbeat feature?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 403.1,
+      "end_time": 404.6,
+      "duration": 1.5,
+      "text": "Correct."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 405.4,
+      "end_time": 406.9,
+      "duration": 1.5,
+      "text": "Yep, I've got it."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 407.5,
+      "end_time": 411.4,
+      "duration": 3.8999999999999773,
+      "text": "Okay, good. Thanks both - let's close this one out."
+    }
+  ],
+  "transcript_text": "Tom Bradley: Alright, I think we're all here - let me just pull up my notes real quick.\nDiana Reeves: Yeah I'm here, go ahead.\nMegan Lawson: Same, I've got about twenty minutes before my next thing so let's try to be efficient.\nTom Bradley: Okay so - this is the post-incident review for the Detect outage, March 10th through the 18th, well, the outage itself was March 10th, we're just closing it out today.\nDiana Reeves: Right, and just to frame this - I had a lot of customer conversations this week, so I want to make sure we're aligned on what we're telling them going forward.\nTom Bradley: Totally fair, we'll get there. So let me just walk through the timeline and root cause first, and then we can talk about the fix and the comms piece.\nMegan Lawson: Sounds good.\nTom Bradley: So the incident started around 2:14 AM Pacific on March 10th. The event ingestion pipeline - this is the core processing layer that pulls in telemetry from customer environments - it had a cascading failure. Basically one node went down, and because we had a single point of failure in that ingestion layer, the whole pipeline backed up and eventually stopped processing.\nMegan Lawson: And that's what caused the six-hour window with no visibility?\nTom Bradley: Correct. For approximately six hours, customers were not getting threat monitoring alerts. Events were being generated on their end, but we weren't processing them, so nothing was surfacing in the Detect dashboard.\nDiana Reeves: Six hours is - I mean, that's a long time for a security product. Some of my customers were pretty upset, understandably.\nTom Bradley: I know, and I'm not going to sugarcoat it - this was a significant failure. The good news is we've done a full root cause analysis and the fix is already deployed.\nDiana Reeves: Can you explain the fix at a level I can actually relay to customers? Like, not super deep in the weeds but enough that it's credible.\nTom Bradley: Yeah, so there are two main things. First, we've added redundant processing nodes to the event ingestion layer. So if one node fails, traffic automatically routes to backup nodes - no more single point of failure. Second, we've implemented what's called a circuit breaker pattern, which basically means if one part of the pipeline starts to degrade, it isolates that failure instead of letting it cascade through the whole system.\nDiana Reeves: Okay, that's actually pretty explainable. Redundancy and failure isolation - I can work with that.\nMegan Lawson: And just to add to that - from a product standpoint, we're also looking at adding a visible status indicator in the Detect UI so customers can see in real-time whether the pipeline is healthy. That's not shipped yet but it's on the near-term roadmap.\nDiana Reeves: When's that realistically landing?\nMegan Lawson: Uh, we're targeting end of April, but I don't want to over-promise. It depends on a few other things in the queue.\nDiana Reeves: Can we at least tell customers it's in progress? Because right now they're asking 'how do I even know if Detect is working' and I don't have a great answer.\nMegan Lawson: Yeah, absolutely tell them it's in progress. That's a real commitment, end of April is the target.\nTom Bradley: I do want to flag one thing - and this is a bit of a sore spot for me - our alerting on the pipeline health itself was inadequate. We didn't catch this until customers started reaching out. That's not acceptable.\nMegan Lawson: Yeah, how did we find out? Was it a customer ticket?\nTom Bradley: It was - one of Diana's team's accounts, actually. Flagged that they hadn't seen any alerts in a few hours and opened a support ticket.\nDiana Reeves: Yeah, that was Thornfield Financial. They've got a pretty attentive security team, fortunately.\nTom Bradley: So we are adding internal monitoring on the ingestion pipeline itself - not just the output but the pipeline health metrics. That's already in place as of this week.\nDiana Reeves: Good. I think one of the things I keep hearing from customers is - they feel like they're flying blind sometimes with Detect. And this incident kind of reinforced that. I don't say that to be harsh, I just think it's worth naming.\nTom Bradley: No, I - yeah. I hear that. And honestly some of it is a product maturity issue, some of it is infrastructure. Megan, is there anything we can prioritize in the short term to help with that visibility gap beyond the status indicator?\nMegan Lawson: We've been talking about a heartbeat alert feature - basically Detect would proactively notify customers if it stops receiving telemetry from their environment for more than, say, fifteen minutes. That would at least give them a signal on their end.\nDiana Reeves: Oh, that would be huge actually. Can we pull that forward?\nMegan Lawson: Let me take a look at the roadmap this week. I think there's room to move it up, but I need to see what it bumps. I'll come back to both of you by end of week.\nTom Bradley: Okay. And on the customer communication side - Diana, what's the current state? Did we send a post-incident report to affected accounts?\nDiana Reeves: We sent an initial communication on March 10th when the incident was resolved, but we have not sent a formal PIR document yet. I've been waiting on the root cause writeup from engineering.\nTom Bradley: Yeah that's on me, I'll have that to you by tomorrow morning. Full technical summary, the fix, and what we're doing to prevent recurrence.\nDiana Reeves: Okay, and then I'll adapt it into customer-facing language and get it out by end of week. Some of our enterprise accounts are going to want a call, not just an email - particularly the ones who are mid-renewal.\nMegan Lawson: Do you want me or Tom on any of those calls, or are you handling them with your CSMs?\nDiana Reeves: Probably Tom for anyone who wants a technical deep-dive. I'll flag the specific accounts and we can coordinate. I don't think it'll be more than three or four.\nTom Bradley: Yeah, I'm available for that. Just loop me in with at least a day's notice if you can.\nDiana Reeves: Will do. Alright, I think I have what I need. Tom - PIR doc tomorrow, and Megan - roadmap check by end of week on the heartbeat feature?\nTom Bradley: Correct.\nMegan Lawson: Yep, I've got it.\nDiana Reeves: Okay, good. Thanks both - let's close this one out.",
+  "summary": "Tom Bradley led a post-incident review of the Detect outage from March 10th, which caused approximately six hours of no threat monitoring for customers due to a cascading failure in the event ingestion pipeline caused by a single point of failure. Tom explained the deployed fixes including redundant processing nodes and a circuit breaker pattern, while Megan noted upcoming product improvements including a status indicator and a potential heartbeat alert feature. Diana highlighted customer concerns about lack of visibility, particularly among enterprise and mid-renewal accounts, and the team aligned on next steps for customer communications. Key action items include Tom delivering a formal post-incident report, Megan evaluating roadmap prioritization, and Diana coordinating customer calls.",
+  "topics": [
+    "outage post-mortem",
+    "infrastructure reliability",
+    "customer communication",
+    "product visibility",
+    "roadmap prioritization",
+    "renewal risk"
+  ],
+  "action_items": [
+    "Tom Bradley: Deliver the full technical PIR document (root cause, fix, and prevention measures) to Diana by tomorrow morning",
+    "Diana Reeves: Adapt PIR into customer-facing language and send to affected accounts by end of week, coordinating calls with enterprise and mid-renewal accounts",
+    "Megan Lawson: Review roadmap by end of week to assess feasibility of pulling forward the heartbeat alert feature",
+    "Tom Bradley: Make himself available for technical deep-dive calls with up to three or four enterprise customers flagged by Diana"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.8,
+  "key_moments": [
+    {
+      "time": 180.0,
+      "text": "Tom confirms customers had six hours of no threat monitoring alerts due to a single point of failure in the ingestion pipeline",
+      "type": "technical_issue",
+      "speaker": "Tom Bradley"
+    },
+    {
+      "time": 260.0,
+      "text": "Diana flags that customers feel like they're flying blind with Detect and that this incident reinforced that concern",
+      "type": "churn_signal",
+      "speaker": "Diana Reeves"
+    },
+    {
+      "time": 390.0,
+      "text": "Megan introduces the heartbeat alert feature concept, which would proactively notify customers if telemetry stops being received — Diana responds it would be huge",
+      "type": "feature_gap",
+      "speaker": "Megan Lawson"
+    },
+    {
+      "time": 480.0,
+      "text": "Diana notes that several enterprise accounts mid-renewal will want calls, not just an email, raising renewal risk",
+      "type": "concern",
+      "speaker": "Diana Reeves"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Join",
+      "time_seconds": 35.0,
+      "timestamp_ms": 1773851435000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Join",
+      "time_seconds": 35.0,
+      "timestamp_ms": 1773851435000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Join",
+      "time_seconds": 36.0,
+      "timestamp_ms": 1773851436000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Leave",
+      "time_seconds": 1278.0,
+      "timestamp_ms": 1773852678000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Leave",
+      "time_seconds": 1271.0,
+      "timestamp_ms": 1773852671000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Leave",
+      "time_seconds": 1279.0,
+      "timestamp_ms": 1773852679000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Tom Bradley": 15,
+      "Diana Reeves": 15,
+      "Megan Lawson": 11
+    },
+    "speaker_total_seconds": {
+      "Tom Bradley": 167.7,
+      "Diana Reeves": 119.5,
+      "Megan Lawson": 78.8
+    }
+  }
+}

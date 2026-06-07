@@ -1,0 +1,712 @@
+{
+  "meeting_id": "01KQ41FB5CCFD9EA583FB020",
+  "title": "Aegis / Harborview Banking - Threat Detection Tuning",
+  "organizer_email": "kevin.obrien@aegiscloud.com",
+  "host_email": "kevin.obrien@aegiscloud.com",
+  "start_time": "2026-03-05T15:30:00.000Z",
+  "end_time": "2026-03-05T16:06:18.000Z",
+  "duration_minutes": 36.3,
+  "participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "m.russo@harborviewbank.com",
+      "domain": "harborviewbank.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "p.dunn@harborviewbank.com",
+      "domain": "harborviewbank.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "m.russo@harborviewbank.com",
+      "domain": "harborviewbank.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "p.dunn@harborviewbank.com",
+      "domain": "harborviewbank.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Lisa Park",
+    "1": "Patricia Dunn",
+    "2": "Michael Russo",
+    "3": "Kevin O'Brien"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 6.4,
+      "end_time": 12.9,
+      "duration": 6.5,
+      "text": "Alright, I think we've got everyone on now - Patricia, Michael, can you both hear us okay?"
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 14.2,
+      "end_time": 16.9,
+      "duration": 2.6999999999999993,
+      "text": "Yep, coming through fine on my end."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 18.2,
+      "end_time": 20.0,
+      "duration": 1.8000000000000007,
+      "text": "Good here as well."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 20.4,
+      "end_time": 39.0,
+      "duration": 18.6,
+      "text": "Perfect, great. So, um, welcome everyone - this is our threat detection tuning session for Harborview Banking. I'm Lisa Park, account manager on the Aegis side, and I've got Kevin O'Brien with me today, he's our solutions architect who's going to be doing most of the heavy lifting on the technical side of things."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 39.8,
+      "end_time": 46.2,
+      "duration": 6.400000000000006,
+      "text": "Hey everyone, Kevin here. Looking forward to getting into the weeds on the Detect configuration with you all today."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 47.0,
+      "end_time": 65.4,
+      "duration": 18.400000000000006,
+      "text": "Thanks for having us. I'm Patricia Dunn, VP of Security here at Harborview. And I've got Michael Russo on with me, he's our compliance officer - we brought him in because a lot of what we're trying to tune around has some compliance implications that we want to make sure we're capturing."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 66.8,
+      "end_time": 77.6,
+      "duration": 10.799999999999997,
+      "text": "That makes a lot of sense, actually. Good thinking bringing Michael in. We find that the compliance angle and the detection angle overlap more than people expect, especially in financial services."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 78.8,
+      "end_time": 86.3,
+      "duration": 7.5,
+      "text": "Yeah, exactly. That's kind of been our experience too over the years. You get siloed and then you're doing double the work."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 87.5,
+      "end_time": 97.5,
+      "duration": 10.0,
+      "text": "Totally. So, um, before we jump in - Kevin, do you want to just set the agenda for today real quick so Patricia and Michael know what to expect?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 98.1,
+      "end_time": 125.8,
+      "duration": 27.700000000000003,
+      "text": "Sure, yeah. So the plan for today is - we want to walk through your current Aegis Detect configuration, understand what alert thresholds you have set, talk about any false positive pain points you're running into, and then start mapping out what a tuned detection profile looks like for a financial services environment like yours. We'll also touch on your event source integrations, because that's usually where a lot of the noise comes from in the early onboarding phase."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 127.0,
+      "end_time": 142.5,
+      "duration": 15.5,
+      "text": "That sounds right to us. The false positive issue is honestly top of mind right now. Our SOC team is getting fatigued - they're seeing a ton of alerts that aren't actionable and it's starting to affect response times on the stuff that actually matters."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 143.4,
+      "end_time": 163.2,
+      "duration": 19.799999999999983,
+      "text": "Yeah, that's a really common pattern we see, especially in the first sixty to ninety days of a Detect deployment. The out-of-the-box sensitivity settings are intentionally broad - we'd rather you see too much than miss something - but you're right that it creates alert fatigue if we don't tune it down based on your specific environment."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 163.5,
+      "end_time": 171.7,
+      "duration": 8.199999999999989,
+      "text": "How long have you been live on Detect at this point, Patricia? I want to make sure I'm thinking about the right baseline."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 172.6,
+      "end_time": 176.2,
+      "duration": 3.5999999999999943,
+      "text": "We went live, uh, about seven weeks ago. So mid-January, roughly."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 176.8,
+      "end_time": 190.3,
+      "duration": 13.5,
+      "text": "Okay, seven weeks, got it. So you're past the initial noise spike but still well within the range where tuning is going to make a big difference. Kevin, does that track with what you're seeing in the tenant config?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 190.7,
+      "end_time": 211.2,
+      "duration": 20.5,
+      "text": "Yeah, let me - I'm pulling up the Harborview tenant right now. Give me one second. Okay, so I can see your event sources - looks like you've got your CloudPrime CloudTrail integrated, Azure AD sign-in logs, and your on-prem SIEM feed coming in. Is that the full picture or are there other sources we haven't connected yet?"
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 211.7,
+      "end_time": 223.7,
+      "duration": 12.0,
+      "text": "That's the primary set, yes. We do have a Irongate firewall log feed that we were hoping to get in there as well, but we haven't prioritized it yet. It's been on the list."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 224.2,
+      "end_time": 252.1,
+      "duration": 27.900000000000006,
+      "text": "Okay, noted. The firewall logs will actually help a lot with context enrichment, so that's worth getting on the roadmap sooner rather than later. But let's not get sidetracked - we can come back to that. Agreed. So on the false positives - can you give me some examples of the alert types that are generating the most noise? Like, is it lateral movement rules, authentication anomalies, data exfil detections - what's hitting your team hardest?"
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 253.3,
+      "end_time": 276.2,
+      "duration": 22.899999999999977,
+      "text": "It's predominantly the authentication anomaly rules. We have a large number of staff who work across multiple time zones - we've got teams in New York, Chicago, and then we have some offshore ops in Manila - and Detect keeps flagging logins from different geographic locations as suspicious. Which, you know, it's technically doing its job, but it's not... it's not calibrated to our reality."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 276.5,
+      "end_time": 291.9,
+      "duration": 15.399999999999977,
+      "text": "Right, and from a compliance standpoint, every one of those false positive alerts has to be reviewed and documented. So it's not just a SOC fatigue issue, it's actually creating a paper trail of noise that we have to manage through as well."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 292.8,
+      "end_time": 306.3,
+      "duration": 13.5,
+      "text": "Yeah, that's a really good point, Michael. We don't always hear that framing but it makes total sense in a regulated environment. Okay, so on the geo-anomaly detection - Kevin, walk them through how we'd handle that."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 306.8,
+      "end_time": 336.6,
+      "duration": 29.80000000000001,
+      "text": "Sure. So within Detect, there are a couple of levers here. The first is what we call trusted location profiles - you can define named network zones or geographic regions that are considered baseline for your organization. So if you tag New York, Chicago, and Manila as your standard operating locations, any authentication from those areas will be weighted differently in the risk scoring engine. It won't suppress the alert entirely, but it drops the severity from high to low or informational depending on the context."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 337.7,
+      "end_time": 343.4,
+      "duration": 5.699999999999989,
+      "text": "And how granular can you get with that? Like, is it country-level, city-level, IP range?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 344.7,
+      "end_time": 362.5,
+      "duration": 17.80000000000001,
+      "text": "You can do all three, actually. Country and region is the coarser option, but you can also define IP ranges or CIDR blocks if you want to be more precise. For something like your Manila ops center where you probably have a known IP range, that's usually the cleanest approach."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 363.0,
+      "end_time": 369.1,
+      "duration": 6.100000000000023,
+      "text": "That's good to know. We do have static IPs for that office so we can definitely provide those."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 370.4,
+      "end_time": 398.5,
+      "duration": 28.100000000000023,
+      "text": "Perfect. I'll note that down - we'll want to get those into the configuration as part of the tuning work. Now, the second lever is user behavior baselines. Detect builds a behavioral model for each user over time, and the longer you're on the platform, the smarter those baselines get. At seven weeks you're starting to accumulate meaningful data, but some of your frequent travelers or remote workers might need manual anchoring to suppress the noise while the model matures."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 399.4,
+      "end_time": 408.4,
+      "duration": 9.0,
+      "text": "Manual anchoring - what does that look like operationally? Is that something my team does in the UI or does it require a support ticket?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 409.1,
+      "end_time": 427.8,
+      "duration": 18.69999999999999,
+      "text": "It's self-service in the UI, which is nice. There's a user profile section in the Detect console where you can flag a user as, essentially, a high-mobility user, and you can also manually mark specific past events as expected behavior. That feeds back into the model and accelerates the learning for that individual."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 428.7,
+      "end_time": 435.9,
+      "duration": 7.199999999999989,
+      "text": "Okay, that's manageable. We probably have, I don't know, twenty-five to thirty users that would fit that profile across the organization."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 437.1,
+      "end_time": 449.1,
+      "duration": 12.0,
+      "text": "That's a very doable number. We can actually help you with a bulk update approach if you want - rather than going one by one. I can put together a template after this call."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 449.9,
+      "end_time": 451.9,
+      "duration": 2.0,
+      "text": "That would be helpful, yeah."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 453.0,
+      "end_time": 465.9,
+      "duration": 12.899999999999977,
+      "text": "Kevin, while we're on this topic - can we also talk a little bit about the detection rules themselves? Michael, I know you had some specific rule categories you wanted to make sure we had coverage on."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 466.7,
+      "end_time": 490.8,
+      "duration": 24.100000000000023,
+      "text": "Right, yeah. So from a compliance perspective - we're subject to FFIEC guidelines, we have SOX obligations, and we're working toward a GLBA compliance review later this year. There are specific threat patterns that our auditors want to see monitoring controls for - things like privileged account misuse, unauthorized data access, and after-hours activity on sensitive systems. I want to make sure those aren't getting buried in the noise."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 492.2,
+      "end_time": 506.2,
+      "duration": 14.0,
+      "text": "All of those are covered in the Detect rule library, and actually a few of them have pre-built financial services rule packs that are designed specifically for FFIEC and similar frameworks. Kevin, are those enabled in the Harborview tenant?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 507.6,
+      "end_time": 526.9,
+      "duration": 19.299999999999955,
+      "text": "Let me check. So I'm looking at the active rule sets... it looks like the standard financial services pack is enabled, but the privileged access monitoring rules are set to monitor-only mode, not alert mode. That might be why your SOC hasn't been seeing them as prominently - they're collecting data but not generating actionable alerts."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 528.0,
+      "end_time": 536.1,
+      "duration": 8.100000000000023,
+      "text": "That should probably be flipped, right? For our auditors, we need to demonstrate that there's an active alerting control, not just passive monitoring."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 537.0,
+      "end_time": 547.3,
+      "duration": 10.299999999999955,
+      "text": "Agreed. Yeah, we can flip that to alert mode today if you want - I can walk you through it or just do it on my end with your sign-off."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 548.1,
+      "end_time": 554.2,
+      "duration": 6.100000000000023,
+      "text": "Let's do it on your end during this call, that's fine with me. Patricia, any objection?"
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 555.3,
+      "end_time": 560.8,
+      "duration": 5.5,
+      "text": "No, go ahead. Just make sure we document what changed and when for the audit trail."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 561.5,
+      "end_time": 580.3,
+      "duration": 18.799999999999955,
+      "text": "Already noted. I'll include that in the session summary I send over. So I'm enabling alert mode on the privileged access monitoring ruleset now. You'll start seeing those come through in your alert queue - I'd expect an initial burst over the next twenty-four hours as it catches up, and then it should normalize."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 581.6,
+      "end_time": 587.1,
+      "duration": 5.5,
+      "text": "Okay, good to know. I'll give our SOC team a heads up so they're not blindsided."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 587.9,
+      "end_time": 599.0,
+      "duration": 11.100000000000023,
+      "text": "Smart. And on the after-hours activity monitoring - do you have a defined business hours window in the system? Because that's what the rule uses to determine what counts as after-hours."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 600.3,
+      "end_time": 607.6,
+      "duration": 7.300000000000068,
+      "text": "I actually don't know if we configured that. Is that something that would have been set during the initial onboarding?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 608.8,
+      "end_time": 625.3,
+      "duration": 16.5,
+      "text": "It should have been, but it's one of those things that sometimes gets skipped. Let me check. Yeah, I'm seeing the business hours window is currently set to default, which is nine to five Eastern. Is that accurate for you or do you need a wider window?"
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 626.4,
+      "end_time": 641.2,
+      "duration": 14.800000000000068,
+      "text": "It's more complicated than that because of the Manila team. Their working hours are, um, essentially our overnight hours. So if we use a static nine to five window we're going to be generating alerts on all of their normal activity."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 642.1,
+      "end_time": 661.8,
+      "duration": 19.699999999999932,
+      "text": "Right, okay. So the way to handle that is with what we call work schedule profiles - you can create multiple profiles tied to user groups, so the Manila users have a different expected hours window than your New York and Chicago staff. The rule engine applies the right profile per user when evaluating after-hours activity."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 662.2,
+      "end_time": 669.8,
+      "duration": 7.599999999999909,
+      "text": "Oh, that's - yeah, that's actually exactly what we'd need. I assumed it was going to be more of a global setting."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 671.2,
+      "end_time": 679.2,
+      "duration": 8.0,
+      "text": "It's a common assumption. The flexibility is there, it's just not always surfaced well during onboarding. That's something we're working on improving."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 680.5,
+      "end_time": 690.4,
+      "duration": 9.899999999999977,
+      "text": "From a compliance standpoint, will those profiles be documented in the configuration export? I need to be able to show auditors what the policy is and how it's applied."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 690.9,
+      "end_time": 707.7,
+      "duration": 16.800000000000068,
+      "text": "Yes, the configuration export includes work schedule profiles with user group mappings and all effective dates. It's exportable as a PDF or CSV. And that actually ties into Aegis Comply as well, when you get to that module - those configurations feed directly into the compliance reporting layer."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 708.3,
+      "end_time": 717.1,
+      "duration": 8.800000000000068,
+      "text": "We're not on Comply yet - that's something we're evaluating for later in the year. But it's good to know those things are connected."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 718.1,
+      "end_time": 728.4,
+      "duration": 10.299999999999955,
+      "text": "Yeah, Lisa can speak to that more when the time comes, but the integration is pretty seamless. It's one of the reasons the modules are designed to work together."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 729.3,
+      "end_time": 744.0,
+      "duration": 14.700000000000045,
+      "text": "We'll definitely circle back on Comply when the time is right. Okay, let's keep moving - Kevin, do you want to touch on the alert routing and escalation configuration? Patricia, I know that was another area you flagged in your pre-call notes."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 745.0,
+      "end_time": 760.7,
+      "duration": 15.700000000000045,
+      "text": "Yeah, that's on our list. Right now everything is routing to a single shared SOC inbox and it's becoming unmanageable. We need to be able to tier the alerts - critical things need to go directly to specific individuals, not just the shared queue."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 761.7,
+      "end_time": 784.4,
+      "duration": 22.699999999999932,
+      "text": "Okay, so alert routing in Detect is handled through notification policies. You can create severity-based routing rules - so critical alerts go to a specific email or PagerDuty integration, high alerts go somewhere else, and medium and low stay in the shared queue. You can also route by alert category - so data exfil alerts might go to one person, authentication alerts to another."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 785.9,
+      "end_time": 789.5,
+      "duration": 3.6000000000000227,
+      "text": "We do have PagerDuty. Is that integration straightforward to set up?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 790.3,
+      "end_time": 804.0,
+      "duration": 13.700000000000045,
+      "text": "Very straightforward. It's a native integration - you just drop in your PagerDuty API key and map your Detect severity levels to your PagerDuty service and escalation policy. Takes about fifteen minutes if you have the API key handy."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 804.4,
+      "end_time": 817.6,
+      "duration": 13.200000000000045,
+      "text": "I can get that from our team. That would make a big difference - right now our on-call engineer doesn't find out about critical events until someone spots it in the shared inbox, which is... not ideal."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 818.8,
+      "end_time": 826.3,
+      "duration": 7.5,
+      "text": "Yeah, that's definitely a gap we want to close quickly. Kevin, can you add that to the action items for this session?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 827.1,
+      "end_time": 848.9,
+      "duration": 21.799999999999955,
+      "text": "Already on it. So to summarize the action items so far - we're setting up trusted location profiles with the Manila IP range and the US office locations, enabling alert mode on privileged access monitoring which I've already done, setting up work schedule profiles for the Manila team, and getting the PagerDuty integration configured. Is there anything else on your list, Patricia?"
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 850.1,
+      "end_time": 862.8,
+      "duration": 12.699999999999932,
+      "text": "I think there was one more thing - the data retention settings. Our auditors require that we retain security event logs for at least twelve months. I want to make sure Detect is configured for that."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 863.7,
+      "end_time": 866.6,
+      "duration": 2.8999999999999773,
+      "text": "Good catch. What's your current retention setting, Kevin?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 867.6,
+      "end_time": 885.9,
+      "duration": 18.299999999999955,
+      "text": "Let me look. Current setting is ninety days. So yeah, that needs to be updated. For financial services accounts we typically recommend at least twelve months, and some organizations go to twenty-four. There may be a storage implication depending on your event volume - I can run a quick estimate after the call."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 886.5,
+      "end_time": 895.6,
+      "duration": 9.100000000000023,
+      "text": "Twelve months is our minimum requirement. If there's a cost implication I'd want to understand that before we change it, so yes please run that estimate."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 896.7,
+      "end_time": 905.0,
+      "duration": 8.299999999999955,
+      "text": "Will do. I'll include it in the follow-up email. It might be straightforward depending on your tier - you may already have it covered."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 905.4,
+      "end_time": 912.6,
+      "duration": 7.2000000000000455,
+      "text": "Okay. And from a compliance standpoint - same question as before - is that retention setting visible in the configuration export?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 913.3,
+      "end_time": 923.6,
+      "duration": 10.300000000000068,
+      "text": "Yes, it is. It's in the data management policy section of the export. And there's also an effective date stamp so auditors can see when the policy was set."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 924.8,
+      "end_time": 926.6,
+      "duration": 1.8000000000000682,
+      "text": "Good. That's important for us."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 927.4,
+      "end_time": 940.0,
+      "duration": 12.600000000000023,
+      "text": "Alright, I think we've covered a lot of ground today. I want to make sure we're aligned on next steps before we wrap. Kevin, do you want to walk through what you're going to send over?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 940.4,
+      "end_time": 971.4,
+      "duration": 31.0,
+      "text": "Sure. So I'll send a session summary with all the changes made today - which is just the privileged access monitoring ruleset flip - and all the pending action items. I'll include the storage estimate for the twelve-month retention setting, the template for the bulk high-mobility user update, and step-by-step instructions for the PagerDuty integration. For the trusted location profiles and work schedule profiles, we should probably schedule a follow-up working session to get those configured properly - I'd want your Manila IT contact on that call if possible."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 972.1,
+      "end_time": 980.8,
+      "duration": 8.699999999999932,
+      "text": "I can coordinate that. We'd probably need about a week to get the right people together. So maybe something the week of March sixteenth?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 982.1,
+      "end_time": 988.2,
+      "duration": 6.100000000000023,
+      "text": "That works for me. Lisa, can you send a calendar invite once we confirm times with Patricia's team?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 989.2,
+      "end_time": 1008.0,
+      "duration": 18.799999999999955,
+      "text": "Absolutely, I'll reach out to you directly, Patricia, to find a time that works. And in the meantime if anything comes up or your team runs into issues with any of the things we discussed today, please just reach out - you've got my email and Kevin is looped in on the account."
+    },
+    {
+      "speaker_name": "Patricia Dunn",
+      "start_time": 1008.8,
+      "end_time": 1019.3,
+      "duration": 10.5,
+      "text": "Will do. This was a productive session - we came in with a list of concerns and I feel like we've got a clear path forward on all of them."
+    },
+    {
+      "speaker_name": "Michael Russo",
+      "start_time": 1019.6,
+      "end_time": 1023.2,
+      "duration": 3.6000000000000227,
+      "text": "Agreed. Thanks for the time, Kevin, Lisa. We'll be in touch."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 1023.9,
+      "end_time": 1025.4,
+      "duration": 1.5000000000001137,
+      "text": "Thanks both. Talk soon."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 1025.8,
+      "end_time": 1029.2,
+      "duration": 3.400000000000091,
+      "text": "Thanks everyone, have a good rest of your day."
+    }
+  ],
+  "transcript_text": "Lisa Park: Alright, I think we've got everyone on now - Patricia, Michael, can you both hear us okay?\nPatricia Dunn: Yep, coming through fine on my end.\nMichael Russo: Good here as well.\nLisa Park: Perfect, great. So, um, welcome everyone - this is our threat detection tuning session for Harborview Banking. I'm Lisa Park, account manager on the Aegis side, and I've got Kevin O'Brien with me today, he's our solutions architect who's going to be doing most of the heavy lifting on the technical side of things.\nKevin O'Brien: Hey everyone, Kevin here. Looking forward to getting into the weeds on the Detect configuration with you all today.\nPatricia Dunn: Thanks for having us. I'm Patricia Dunn, VP of Security here at Harborview. And I've got Michael Russo on with me, he's our compliance officer - we brought him in because a lot of what we're trying to tune around has some compliance implications that we want to make sure we're capturing.\nKevin O'Brien: That makes a lot of sense, actually. Good thinking bringing Michael in. We find that the compliance angle and the detection angle overlap more than people expect, especially in financial services.\nMichael Russo: Yeah, exactly. That's kind of been our experience too over the years. You get siloed and then you're doing double the work.\nLisa Park: Totally. So, um, before we jump in - Kevin, do you want to just set the agenda for today real quick so Patricia and Michael know what to expect?\nKevin O'Brien: Sure, yeah. So the plan for today is - we want to walk through your current Aegis Detect configuration, understand what alert thresholds you have set, talk about any false positive pain points you're running into, and then start mapping out what a tuned detection profile looks like for a financial services environment like yours. We'll also touch on your event source integrations, because that's usually where a lot of the noise comes from in the early onboarding phase.\nPatricia Dunn: That sounds right to us. The false positive issue is honestly top of mind right now. Our SOC team is getting fatigued - they're seeing a ton of alerts that aren't actionable and it's starting to affect response times on the stuff that actually matters.\nKevin O'Brien: Yeah, that's a really common pattern we see, especially in the first sixty to ninety days of a Detect deployment. The out-of-the-box sensitivity settings are intentionally broad - we'd rather you see too much than miss something - but you're right that it creates alert fatigue if we don't tune it down based on your specific environment.\nLisa Park: How long have you been live on Detect at this point, Patricia? I want to make sure I'm thinking about the right baseline.\nPatricia Dunn: We went live, uh, about seven weeks ago. So mid-January, roughly.\nLisa Park: Okay, seven weeks, got it. So you're past the initial noise spike but still well within the range where tuning is going to make a big difference. Kevin, does that track with what you're seeing in the tenant config?\nKevin O'Brien: Yeah, let me - I'm pulling up the Harborview tenant right now. Give me one second. Okay, so I can see your event sources - looks like you've got your CloudPrime CloudTrail integrated, Azure AD sign-in logs, and your on-prem SIEM feed coming in. Is that the full picture or are there other sources we haven't connected yet?\nPatricia Dunn: That's the primary set, yes. We do have a Irongate firewall log feed that we were hoping to get in there as well, but we haven't prioritized it yet. It's been on the list.\nKevin O'Brien: Okay, noted. The firewall logs will actually help a lot with context enrichment, so that's worth getting on the roadmap sooner rather than later. But let's not get sidetracked - we can come back to that.\nKevin O'Brien: Agreed. So on the false positives - can you give me some examples of the alert types that are generating the most noise? Like, is it lateral movement rules, authentication anomalies, data exfil detections - what's hitting your team hardest?\nPatricia Dunn: It's predominantly the authentication anomaly rules. We have a large number of staff who work across multiple time zones - we've got teams in New York, Chicago, and then we have some offshore ops in Manila - and Detect keeps flagging logins from different geographic locations as suspicious. Which, you know, it's technically doing its job, but it's not... it's not calibrated to our reality.\nMichael Russo: Right, and from a compliance standpoint, every one of those false positive alerts has to be reviewed and documented. So it's not just a SOC fatigue issue, it's actually creating a paper trail of noise that we have to manage through as well.\nLisa Park: Yeah, that's a really good point, Michael. We don't always hear that framing but it makes total sense in a regulated environment. Okay, so on the geo-anomaly detection - Kevin, walk them through how we'd handle that.\nKevin O'Brien: Sure. So within Detect, there are a couple of levers here. The first is what we call trusted location profiles - you can define named network zones or geographic regions that are considered baseline for your organization. So if you tag New York, Chicago, and Manila as your standard operating locations, any authentication from those areas will be weighted differently in the risk scoring engine. It won't suppress the alert entirely, but it drops the severity from high to low or informational depending on the context.\nPatricia Dunn: And how granular can you get with that? Like, is it country-level, city-level, IP range?\nKevin O'Brien: You can do all three, actually. Country and region is the coarser option, but you can also define IP ranges or CIDR blocks if you want to be more precise. For something like your Manila ops center where you probably have a known IP range, that's usually the cleanest approach.\nPatricia Dunn: That's good to know. We do have static IPs for that office so we can definitely provide those.\nKevin O'Brien: Perfect. I'll note that down - we'll want to get those into the configuration as part of the tuning work. Now, the second lever is user behavior baselines. Detect builds a behavioral model for each user over time, and the longer you're on the platform, the smarter those baselines get. At seven weeks you're starting to accumulate meaningful data, but some of your frequent travelers or remote workers might need manual anchoring to suppress the noise while the model matures.\nPatricia Dunn: Manual anchoring - what does that look like operationally? Is that something my team does in the UI or does it require a support ticket?\nKevin O'Brien: It's self-service in the UI, which is nice. There's a user profile section in the Detect console where you can flag a user as, essentially, a high-mobility user, and you can also manually mark specific past events as expected behavior. That feeds back into the model and accelerates the learning for that individual.\nPatricia Dunn: Okay, that's manageable. We probably have, I don't know, twenty-five to thirty users that would fit that profile across the organization.\nKevin O'Brien: That's a very doable number. We can actually help you with a bulk update approach if you want - rather than going one by one. I can put together a template after this call.\nPatricia Dunn: That would be helpful, yeah.\nLisa Park: Kevin, while we're on this topic - can we also talk a little bit about the detection rules themselves? Michael, I know you had some specific rule categories you wanted to make sure we had coverage on.\nMichael Russo: Right, yeah. So from a compliance perspective - we're subject to FFIEC guidelines, we have SOX obligations, and we're working toward a GLBA compliance review later this year. There are specific threat patterns that our auditors want to see monitoring controls for - things like privileged account misuse, unauthorized data access, and after-hours activity on sensitive systems. I want to make sure those aren't getting buried in the noise.\nLisa Park: All of those are covered in the Detect rule library, and actually a few of them have pre-built financial services rule packs that are designed specifically for FFIEC and similar frameworks. Kevin, are those enabled in the Harborview tenant?\nKevin O'Brien: Let me check. So I'm looking at the active rule sets... it looks like the standard financial services pack is enabled, but the privileged access monitoring rules are set to monitor-only mode, not alert mode. That might be why your SOC hasn't been seeing them as prominently - they're collecting data but not generating actionable alerts.\nMichael Russo: That should probably be flipped, right? For our auditors, we need to demonstrate that there's an active alerting control, not just passive monitoring.\nKevin O'Brien: Agreed. Yeah, we can flip that to alert mode today if you want - I can walk you through it or just do it on my end with your sign-off.\nMichael Russo: Let's do it on your end during this call, that's fine with me. Patricia, any objection?\nPatricia Dunn: No, go ahead. Just make sure we document what changed and when for the audit trail.\nKevin O'Brien: Already noted. I'll include that in the session summary I send over. So I'm enabling alert mode on the privileged access monitoring ruleset now. You'll start seeing those come through in your alert queue - I'd expect an initial burst over the next twenty-four hours as it catches up, and then it should normalize.\nPatricia Dunn: Okay, good to know. I'll give our SOC team a heads up so they're not blindsided.\nKevin O'Brien: Smart. And on the after-hours activity monitoring - do you have a defined business hours window in the system? Because that's what the rule uses to determine what counts as after-hours.\nPatricia Dunn: I actually don't know if we configured that. Is that something that would have been set during the initial onboarding?\nKevin O'Brien: It should have been, but it's one of those things that sometimes gets skipped. Let me check. Yeah, I'm seeing the business hours window is currently set to default, which is nine to five Eastern. Is that accurate for you or do you need a wider window?\nPatricia Dunn: It's more complicated than that because of the Manila team. Their working hours are, um, essentially our overnight hours. So if we use a static nine to five window we're going to be generating alerts on all of their normal activity.\nKevin O'Brien: Right, okay. So the way to handle that is with what we call work schedule profiles - you can create multiple profiles tied to user groups, so the Manila users have a different expected hours window than your New York and Chicago staff. The rule engine applies the right profile per user when evaluating after-hours activity.\nPatricia Dunn: Oh, that's - yeah, that's actually exactly what we'd need. I assumed it was going to be more of a global setting.\nKevin O'Brien: It's a common assumption. The flexibility is there, it's just not always surfaced well during onboarding. That's something we're working on improving.\nMichael Russo: From a compliance standpoint, will those profiles be documented in the configuration export? I need to be able to show auditors what the policy is and how it's applied.\nKevin O'Brien: Yes, the configuration export includes work schedule profiles with user group mappings and all effective dates. It's exportable as a PDF or CSV. And that actually ties into Aegis Comply as well, when you get to that module - those configurations feed directly into the compliance reporting layer.\nMichael Russo: We're not on Comply yet - that's something we're evaluating for later in the year. But it's good to know those things are connected.\nKevin O'Brien: Yeah, Lisa can speak to that more when the time comes, but the integration is pretty seamless. It's one of the reasons the modules are designed to work together.\nLisa Park: We'll definitely circle back on Comply when the time is right. Okay, let's keep moving - Kevin, do you want to touch on the alert routing and escalation configuration? Patricia, I know that was another area you flagged in your pre-call notes.\nPatricia Dunn: Yeah, that's on our list. Right now everything is routing to a single shared SOC inbox and it's becoming unmanageable. We need to be able to tier the alerts - critical things need to go directly to specific individuals, not just the shared queue.\nKevin O'Brien: Okay, so alert routing in Detect is handled through notification policies. You can create severity-based routing rules - so critical alerts go to a specific email or PagerDuty integration, high alerts go somewhere else, and medium and low stay in the shared queue. You can also route by alert category - so data exfil alerts might go to one person, authentication alerts to another.\nPatricia Dunn: We do have PagerDuty. Is that integration straightforward to set up?\nKevin O'Brien: Very straightforward. It's a native integration - you just drop in your PagerDuty API key and map your Detect severity levels to your PagerDuty service and escalation policy. Takes about fifteen minutes if you have the API key handy.\nPatricia Dunn: I can get that from our team. That would make a big difference - right now our on-call engineer doesn't find out about critical events until someone spots it in the shared inbox, which is... not ideal.\nLisa Park: Yeah, that's definitely a gap we want to close quickly. Kevin, can you add that to the action items for this session?\nKevin O'Brien: Already on it. So to summarize the action items so far - we're setting up trusted location profiles with the Manila IP range and the US office locations, enabling alert mode on privileged access monitoring which I've already done, setting up work schedule profiles for the Manila team, and getting the PagerDuty integration configured. Is there anything else on your list, Patricia?\nPatricia Dunn: I think there was one more thing - the data retention settings. Our auditors require that we retain security event logs for at least twelve months. I want to make sure Detect is configured for that.\nLisa Park: Good catch. What's your current retention setting, Kevin?\nKevin O'Brien: Let me look. Current setting is ninety days. So yeah, that needs to be updated. For financial services accounts we typically recommend at least twelve months, and some organizations go to twenty-four. There may be a storage implication depending on your event volume - I can run a quick estimate after the call.\nPatricia Dunn: Twelve months is our minimum requirement. If there's a cost implication I'd want to understand that before we change it, so yes please run that estimate.\nKevin O'Brien: Will do. I'll include it in the follow-up email. It might be straightforward depending on your tier - you may already have it covered.\nMichael Russo: Okay. And from a compliance standpoint - same question as before - is that retention setting visible in the configuration export?\nKevin O'Brien: Yes, it is. It's in the data management policy section of the export. And there's also an effective date stamp so auditors can see when the policy was set.\nMichael Russo: Good. That's important for us.\nLisa Park: Alright, I think we've covered a lot of ground today. I want to make sure we're aligned on next steps before we wrap. Kevin, do you want to walk through what you're going to send over?\nKevin O'Brien: Sure. So I'll send a session summary with all the changes made today - which is just the privileged access monitoring ruleset flip - and all the pending action items. I'll include the storage estimate for the twelve-month retention setting, the template for the bulk high-mobility user update, and step-by-step instructions for the PagerDuty integration. For the trusted location profiles and work schedule profiles, we should probably schedule a follow-up working session to get those configured properly - I'd want your Manila IT contact on that call if possible.\nPatricia Dunn: I can coordinate that. We'd probably need about a week to get the right people together. So maybe something the week of March sixteenth?\nKevin O'Brien: That works for me. Lisa, can you send a calendar invite once we confirm times with Patricia's team?\nLisa Park: Absolutely, I'll reach out to you directly, Patricia, to find a time that works. And in the meantime if anything comes up or your team runs into issues with any of the things we discussed today, please just reach out - you've got my email and Kevin is looped in on the account.\nPatricia Dunn: Will do. This was a productive session - we came in with a list of concerns and I feel like we've got a clear path forward on all of them.\nMichael Russo: Agreed. Thanks for the time, Kevin, Lisa. We'll be in touch.\nKevin O'Brien: Thanks both. Talk soon.\nLisa Park: Thanks everyone, have a good rest of your day.",
+  "summary": "Lisa Park and Kevin O'Brien from Aegis held a threat detection tuning session with Patricia Dunn (VP of Security) and Michael Russo (Compliance Officer) from Harborview Banking, who went live on Aegis Detect seven weeks ago. The primary concerns discussed were alert fatigue from false positives driven by geo-anomaly detection for multi-timezone staff, compliance coverage gaps for FFIEC/SOX/GLBA requirements, and inefficient alert routing to a single shared SOC inbox. Kevin enabled alert mode on the privileged access monitoring ruleset during the call and identified that the data retention setting needs to be updated from 90 days to at least 12 months. A follow-up working session was planned for the week of March 16th to configure trusted location profiles and work schedule profiles for the Manila team.",
+  "topics": [
+    "alert tuning",
+    "false positives",
+    "compliance",
+    "alert routing",
+    "data retention",
+    "financial services"
+  ],
+  "action_items": [
+    "Kevin O'Brien: Send session summary with storage estimate for 12-month retention, bulk high-mobility user update template, and PagerDuty integration instructions",
+    "Patricia Dunn: Provide Manila office static IP ranges and coordinate availability for follow-up configuration session the week of March 16th",
+    "Lisa Park: Send calendar invite for follow-up working session once Patricia's team confirms availability",
+    "Patricia Dunn: Alert SOC team about expected initial burst of privileged access monitoring alerts over the next 24 hours and obtain PagerDuty API key for integration setup"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.9,
+  "key_moments": [
+    {
+      "time": 210.0,
+      "text": "Patricia raises SOC alert fatigue as a top concern, with false positives degrading response times on real threats",
+      "type": "concern",
+      "speaker": "Patricia Dunn"
+    },
+    {
+      "time": 680.0,
+      "text": "Kevin discovers privileged access monitoring rules are in monitor-only mode instead of alert mode, a misconfiguration with direct compliance implications",
+      "type": "technical_issue",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 820.0,
+      "text": "Kevin enables alert mode on privileged access monitoring ruleset live during the call with Michael and Patricia's sign-off",
+      "type": "action_item",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 1380.0,
+      "text": "Kevin discovers data retention is set to 90 days, well below the 12-month minimum required by Harborview's auditors",
+      "type": "concern",
+      "speaker": "Kevin O'Brien"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Patricia Dunn",
+      "event_type": "Join",
+      "time_seconds": 21.0,
+      "timestamp_ms": 1772724621000
+    },
+    {
+      "participant_name": "Michael Russo",
+      "event_type": "Join",
+      "time_seconds": 42.0,
+      "timestamp_ms": 1772724642000
+    },
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Join",
+      "time_seconds": 48.0,
+      "timestamp_ms": 1772724648000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Join",
+      "time_seconds": 51.0,
+      "timestamp_ms": 1772724651000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Leave",
+      "time_seconds": 2173.0,
+      "timestamp_ms": 1772726773000
+    },
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Leave",
+      "time_seconds": 2159.0,
+      "timestamp_ms": 1772726759000
+    },
+    {
+      "participant_name": "Michael Russo",
+      "event_type": "Leave",
+      "time_seconds": 2169.0,
+      "timestamp_ms": 1772726769000
+    },
+    {
+      "participant_name": "Patricia Dunn",
+      "event_type": "Leave",
+      "time_seconds": 2167.0,
+      "timestamp_ms": 1772726767000
+    }
+  ],
+  "stats": {
+    "turn_count": 78,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Lisa Park": 14,
+      "Patricia Dunn": 23,
+      "Michael Russo": 11,
+      "Kevin O'Brien": 30
+    },
+    "speaker_total_seconds": {
+      "Lisa Park": 157.1,
+      "Patricia Dunn": 219.3,
+      "Michael Russo": 94.3,
+      "Kevin O'Brien": 483.0
+    }
+  }
+}

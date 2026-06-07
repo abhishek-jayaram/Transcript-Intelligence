@@ -1,0 +1,448 @@
+{
+  "meeting_id": "01KQ03B0303900521BB089CA",
+  "title": "Detect Outage - Remediation Plan Review",
+  "organizer_email": "megan.lawson@aegiscloud.com",
+  "host_email": "megan.lawson@aegiscloud.com",
+  "start_time": "2026-03-16T09:30:00.000Z",
+  "end_time": "2026-03-16T10:05:12.000Z",
+  "duration_minutes": 35.2,
+  "participants": [
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "megan.lawson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Megan Lawson",
+    "1": "Raj Kapoor",
+    "2": "Brian Cho"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 7.4,
+      "end_time": 12.6,
+      "duration": 5.199999999999999,
+      "text": "Alright, I think we're all on - Raj, Brian, can you both hear me okay?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 13.4,
+      "end_time": 14.9,
+      "duration": 1.5,
+      "text": "Yeah, I'm here. Audio's good."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 16.2,
+      "end_time": 21.2,
+      "duration": 5.0,
+      "text": "Yep, I'm on. Give me one sec, I'm just pulling up the incident doc."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 22.6,
+      "end_time": 41.0,
+      "duration": 18.4,
+      "text": "Sure, take your time. So, uh, the reason I wanted to get us together today - obviously we're still in the middle of this, day three of the outage window - I want to make sure we have a clear remediation plan and that we're all aligned before we send anything else externally."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 42.3,
+      "end_time": 54.6,
+      "duration": 12.300000000000004,
+      "text": "Yeah, agreed. I've been heads-down with the engineering team since Saturday and I think we have a pretty solid picture of the root cause at this point. Do you want me to just walk through it?"
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 55.8,
+      "end_time": 57.4,
+      "duration": 1.6000000000000014,
+      "text": "Please, yeah. Go ahead."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 57.9,
+      "end_time": 87.0,
+      "duration": 29.1,
+      "text": "Okay so - and Brian, let me know if the technical depth here is useful for you or if you want me to translate as I go - basically what we're looking at is a cascading failure in the event processing pipeline. The short version is we had a single point of failure in the event ingestion layer, and when that node went down, there was no fallback. So events just started backing up and then the whole downstream monitoring stack lost visibility."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 88.3,
+      "end_time": 99.4,
+      "duration": 11.100000000000009,
+      "text": "Yeah no that's - that's helpful context actually. My team has been getting hammered with tickets since Saturday morning and I want to make sure I understand what I'm telling customers, so."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 100.8,
+      "end_time": 103.6,
+      "duration": 2.799999999999997,
+      "text": "How many tickets are we at now, roughly?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 104.0,
+      "end_time": 118.6,
+      "duration": 14.599999999999994,
+      "text": "As of this morning we're at a hundred and twelve open cases specifically tied to the Detect outage. About thirty of those are priority one or two accounts. We've got a handful of customers that are, uh, pretty vocal about it."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 119.6,
+      "end_time": 129.4,
+      "duration": 9.800000000000011,
+      "text": "Okay. That's - yeah, that tracks with what I've been seeing from the account side. Raj, continuing on the root cause - what's the fix look like?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 129.9,
+      "end_time": 148.6,
+      "duration": 18.69999999999999,
+      "text": "So the fix is two-pronged. The immediate thing we're doing - and this is already in progress, the team started on it yesterday - is deploying redundant processing nodes. So instead of relying on a single ingestion point, we're moving to an active-active configuration. That should eliminate the single point of failure entirely."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 149.9,
+      "end_time": 151.8,
+      "duration": 1.9000000000000057,
+      "text": "And the second piece?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 153.2,
+      "end_time": 170.8,
+      "duration": 17.600000000000023,
+      "text": "The second piece is implementing a circuit breaker pattern on the pipeline. So essentially, if one component starts degrading, the circuit breaker trips before it can take down the whole chain. It's a more resilient architecture overall. We should have had this from the start, honestly, but - yeah."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 172.3,
+      "end_time": 191.6,
+      "duration": 19.299999999999983,
+      "text": "I appreciate you saying that. I think - and I want to be candid here - I think there's going to be a postmortem conversation about how this got built the way it did, but I want to table that for now and focus on the remediation. What's the timeline looking like for full restoration?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 192.1,
+      "end_time": 210.0,
+      "duration": 17.900000000000006,
+      "text": "Current estimate is we'll have the redundant nodes live by end of day today. The circuit breaker implementation is a little more involved - that's probably forty-eight hours from now, so, Wednesday evening at the earliest. But the monitoring visibility issue, the core thing customers are experiencing, that should be resolved today."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 210.6,
+      "end_time": 217.9,
+      "duration": 7.300000000000011,
+      "text": "Okay so when you say resolved today - are we talking full visibility restored across all tenants, or is it phased?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 219.3,
+      "end_time": 230.6,
+      "duration": 11.299999999999983,
+      "text": "It'll be phased. We're going to roll it out starting with, uh, our larger enterprise tenants first and then work down. Realistically all tenants should have visibility restored by tomorrow morning."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 231.0,
+      "end_time": 242.0,
+      "duration": 11.0,
+      "text": "Okay. That's a little frustrating because I've been telling customers we're targeting end of today. Can we - is there any way to compress that timeline or is tomorrow morning pretty firm?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 243.3,
+      "end_time": 253.8,
+      "duration": 10.5,
+      "text": "Brian, I get it, but I'd rather give customers a conservative timeline and hit it than promise end of day and miss. We've already got a credibility issue here."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 255.2,
+      "end_time": 266.4,
+      "duration": 11.199999999999989,
+      "text": "Yeah, no, that's fair. That's fair. I just - I need to go back and update a lot of those tickets and some of these customers are going to push back."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 267.5,
+      "end_time": 281.3,
+      "duration": 13.800000000000011,
+      "text": "I can help draft the updated customer communication if that's useful, Brian. I think we should have something that acknowledges the delay, explains the phased rollout without getting too deep in the weeds technically, and gives them the concrete timeline."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 282.6,
+      "end_time": 288.3,
+      "duration": 5.699999999999989,
+      "text": "Yeah, that would actually be really helpful. My team is stretched pretty thin right now."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 289.0,
+      "end_time": 300.0,
+      "duration": 11.0,
+      "text": "Raj, on the six hours of no visibility - I want to make sure I understand this correctly. During that window, customers had zero threat monitoring data? Like nothing was coming through?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 301.1,
+      "end_time": 315.0,
+      "duration": 13.899999999999977,
+      "text": "Correct. Events were being ingested at the edge but they were just... queuing up and not processing. So from a customer-facing dashboard perspective, it looked like nothing was happening. No alerts, no detections, nothing. Which is - yeah, that's bad."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 315.8,
+      "end_time": 324.5,
+      "duration": 8.699999999999989,
+      "text": "And we're confident that there were no actual threats during that window that went undetected? Or is that - can we even say that?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 324.8,
+      "end_time": 342.6,
+      "duration": 17.80000000000001,
+      "text": "That's a really important question and the honest answer is we've been doing retroactive processing of the queued events and so far we haven't identified any threats that were active during that window, but I want to be careful about saying definitively that nothing happened. We're still working through the backlog."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 343.0,
+      "end_time": 358.5,
+      "duration": 15.5,
+      "text": "Okay so we cannot make any affirmative statements to customers about security posture during that window. Got it. Brian, make sure your team is not - if anyone's asking that question, the answer is we're doing a full retroactive analysis and we'll communicate findings."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 359.6,
+      "end_time": 371.0,
+      "duration": 11.399999999999977,
+      "text": "Understood. Yeah, I'll make sure that's clear in the team briefing. We've had a few customers ask exactly that and I've been kind of hedging, so it's good to have a cleaner answer."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 372.2,
+      "end_time": 379.3,
+      "duration": 7.100000000000023,
+      "text": "Raj, what's the ETA on completing that retroactive processing? I want to know when we can close the loop on that."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 380.7,
+      "end_time": 394.4,
+      "duration": 13.699999999999989,
+      "text": "We're probably looking at another twenty-four hours to fully process and review the backlog. I'll have a summary report by Wednesday that we can share internally, and then we can figure out what we communicate to customers from there."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 395.0,
+      "end_time": 409.3,
+      "duration": 14.300000000000011,
+      "text": "Alright. Let's talk about the postmortem briefly - not to get into the full discussion, but I want to align on the process. Are we thinking internal postmortem first and then a customer-facing summary, or are we doing those in parallel?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 410.7,
+      "end_time": 426.9,
+      "duration": 16.19999999999999,
+      "text": "I'd want to do the internal one first. We need to have our story straight before we put anything external out. I'm thinking we do a full engineering postmortem by end of this week, and then next week we can work on a customer-facing incident report."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 427.9,
+      "end_time": 438.3,
+      "duration": 10.400000000000034,
+      "text": "That timeline works for me. Brian, from a support perspective, is there anything you need for the postmortem process? Like data from the ticket queue or customer impact analysis?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 439.5,
+      "end_time": 451.7,
+      "duration": 12.199999999999989,
+      "text": "Yeah, I can pull together a breakdown of affected accounts, priority tiers, how long each was impacted - that kind of thing. That should be useful for the postmortem. I'll have that ready by Thursday."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 452.1,
+      "end_time": 469.1,
+      "duration": 17.0,
+      "text": "Perfect. Okay, so just to summarize where we are - redundant nodes going live today, circuit breaker implementation by Wednesday, full tenant visibility restored by tomorrow morning, retroactive event analysis complete by Wednesday, internal postmortem end of this week, customer-facing incident report next week. Does that capture it?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 470.1,
+      "end_time": 472.2,
+      "duration": 2.099999999999966,
+      "text": "That's accurate from my end."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 473.3,
+      "end_time": 480.1,
+      "duration": 6.800000000000011,
+      "text": "Yeah, that matches what I've got. I'll start updating tickets this afternoon once Megan sends over draft language."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 480.9,
+      "end_time": 491.1,
+      "duration": 10.200000000000045,
+      "text": "Great. I'll get that to you within the hour, Brian. Raj - anything else you need from me or from the product side to unblock the engineering work?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 491.7,
+      "end_time": 501.1,
+      "duration": 9.400000000000034,
+      "text": "Not right now. The team knows what they're doing. I'll send you both a status update this evening once the first phase of the rollout is done."
+    },
+    {
+      "speaker_name": "Megan Lawson",
+      "start_time": 501.7,
+      "end_time": 510.5,
+      "duration": 8.800000000000011,
+      "text": "Sounds good. Thanks both. Let's talk again Wednesday to review where we are on the circuit breaker and the retroactive analysis. I'll send a hold."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 511.8,
+      "end_time": 513.3,
+      "duration": 1.4999999999999432,
+      "text": "Works for me."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 513.7,
+      "end_time": 515.4,
+      "duration": 1.6999999999999318,
+      "text": "Yeah, talk Wednesday. Thanks everyone."
+    }
+  ],
+  "transcript_text": "Megan Lawson: Alright, I think we're all on - Raj, Brian, can you both hear me okay?\nRaj Kapoor: Yeah, I'm here. Audio's good.\nBrian Cho: Yep, I'm on. Give me one sec, I'm just pulling up the incident doc.\nMegan Lawson: Sure, take your time. So, uh, the reason I wanted to get us together today - obviously we're still in the middle of this, day three of the outage window - I want to make sure we have a clear remediation plan and that we're all aligned before we send anything else externally.\nRaj Kapoor: Yeah, agreed. I've been heads-down with the engineering team since Saturday and I think we have a pretty solid picture of the root cause at this point. Do you want me to just walk through it?\nMegan Lawson: Please, yeah. Go ahead.\nRaj Kapoor: Okay so - and Brian, let me know if the technical depth here is useful for you or if you want me to translate as I go - basically what we're looking at is a cascading failure in the event processing pipeline. The short version is we had a single point of failure in the event ingestion layer, and when that node went down, there was no fallback. So events just started backing up and then the whole downstream monitoring stack lost visibility.\nBrian Cho: Yeah no that's - that's helpful context actually. My team has been getting hammered with tickets since Saturday morning and I want to make sure I understand what I'm telling customers, so.\nMegan Lawson: How many tickets are we at now, roughly?\nBrian Cho: As of this morning we're at a hundred and twelve open cases specifically tied to the Detect outage. About thirty of those are priority one or two accounts. We've got a handful of customers that are, uh, pretty vocal about it.\nMegan Lawson: Okay. That's - yeah, that tracks with what I've been seeing from the account side. Raj, continuing on the root cause - what's the fix look like?\nRaj Kapoor: So the fix is two-pronged. The immediate thing we're doing - and this is already in progress, the team started on it yesterday - is deploying redundant processing nodes. So instead of relying on a single ingestion point, we're moving to an active-active configuration. That should eliminate the single point of failure entirely.\nMegan Lawson: And the second piece?\nRaj Kapoor: The second piece is implementing a circuit breaker pattern on the pipeline. So essentially, if one component starts degrading, the circuit breaker trips before it can take down the whole chain. It's a more resilient architecture overall. We should have had this from the start, honestly, but - yeah.\nMegan Lawson: I appreciate you saying that. I think - and I want to be candid here - I think there's going to be a postmortem conversation about how this got built the way it did, but I want to table that for now and focus on the remediation. What's the timeline looking like for full restoration?\nRaj Kapoor: Current estimate is we'll have the redundant nodes live by end of day today. The circuit breaker implementation is a little more involved - that's probably forty-eight hours from now, so, Wednesday evening at the earliest. But the monitoring visibility issue, the core thing customers are experiencing, that should be resolved today.\nBrian Cho: Okay so when you say resolved today - are we talking full visibility restored across all tenants, or is it phased?\nRaj Kapoor: It'll be phased. We're going to roll it out starting with, uh, our larger enterprise tenants first and then work down. Realistically all tenants should have visibility restored by tomorrow morning.\nBrian Cho: Okay. That's a little frustrating because I've been telling customers we're targeting end of today. Can we - is there any way to compress that timeline or is tomorrow morning pretty firm?\nRaj Kapoor: Brian, I get it, but I'd rather give customers a conservative timeline and hit it than promise end of day and miss. We've already got a credibility issue here.\nBrian Cho: Yeah, no, that's fair. That's fair. I just - I need to go back and update a lot of those tickets and some of these customers are going to push back.\nMegan Lawson: I can help draft the updated customer communication if that's useful, Brian. I think we should have something that acknowledges the delay, explains the phased rollout without getting too deep in the weeds technically, and gives them the concrete timeline.\nBrian Cho: Yeah, that would actually be really helpful. My team is stretched pretty thin right now.\nMegan Lawson: Raj, on the six hours of no visibility - I want to make sure I understand this correctly. During that window, customers had zero threat monitoring data? Like nothing was coming through?\nRaj Kapoor: Correct. Events were being ingested at the edge but they were just... queuing up and not processing. So from a customer-facing dashboard perspective, it looked like nothing was happening. No alerts, no detections, nothing. Which is - yeah, that's bad.\nMegan Lawson: And we're confident that there were no actual threats during that window that went undetected? Or is that - can we even say that?\nRaj Kapoor: That's a really important question and the honest answer is we've been doing retroactive processing of the queued events and so far we haven't identified any threats that were active during that window, but I want to be careful about saying definitively that nothing happened. We're still working through the backlog.\nMegan Lawson: Okay so we cannot make any affirmative statements to customers about security posture during that window. Got it. Brian, make sure your team is not - if anyone's asking that question, the answer is we're doing a full retroactive analysis and we'll communicate findings.\nBrian Cho: Understood. Yeah, I'll make sure that's clear in the team briefing. We've had a few customers ask exactly that and I've been kind of hedging, so it's good to have a cleaner answer.\nMegan Lawson: Raj, what's the ETA on completing that retroactive processing? I want to know when we can close the loop on that.\nRaj Kapoor: We're probably looking at another twenty-four hours to fully process and review the backlog. I'll have a summary report by Wednesday that we can share internally, and then we can figure out what we communicate to customers from there.\nMegan Lawson: Alright. Let's talk about the postmortem briefly - not to get into the full discussion, but I want to align on the process. Are we thinking internal postmortem first and then a customer-facing summary, or are we doing those in parallel?\nRaj Kapoor: I'd want to do the internal one first. We need to have our story straight before we put anything external out. I'm thinking we do a full engineering postmortem by end of this week, and then next week we can work on a customer-facing incident report.\nMegan Lawson: That timeline works for me. Brian, from a support perspective, is there anything you need for the postmortem process? Like data from the ticket queue or customer impact analysis?\nBrian Cho: Yeah, I can pull together a breakdown of affected accounts, priority tiers, how long each was impacted - that kind of thing. That should be useful for the postmortem. I'll have that ready by Thursday.\nMegan Lawson: Perfect. Okay, so just to summarize where we are - redundant nodes going live today, circuit breaker implementation by Wednesday, full tenant visibility restored by tomorrow morning, retroactive event analysis complete by Wednesday, internal postmortem end of this week, customer-facing incident report next week. Does that capture it?\nRaj Kapoor: That's accurate from my end.\nBrian Cho: Yeah, that matches what I've got. I'll start updating tickets this afternoon once Megan sends over draft language.\nMegan Lawson: Great. I'll get that to you within the hour, Brian. Raj - anything else you need from me or from the product side to unblock the engineering work?\nRaj Kapoor: Not right now. The team knows what they're doing. I'll send you both a status update this evening once the first phase of the rollout is done.\nMegan Lawson: Sounds good. Thanks both. Let's talk again Wednesday to review where we are on the circuit breaker and the retroactive analysis. I'll send a hold.\nRaj Kapoor: Works for me.\nBrian Cho: Yeah, talk Wednesday. Thanks everyone.",
+  "summary": "Megan, Raj, and Brian convened on day three of an ongoing outage affecting the Detect product's event processing pipeline. Raj explained that a single point of failure in the event ingestion layer caused a cascading failure, leaving customers with zero threat monitoring visibility for approximately six hours. The remediation plan includes deploying redundant active-active processing nodes (live by end of day) and implementing a circuit breaker pattern (by Wednesday evening), with full tenant visibility restored in a phased rollout by tomorrow morning. The team aligned on communication protocols, retroactive security analysis, and a postmortem timeline.",
+  "topics": [
+    "outage remediation",
+    "incident response",
+    "customer communication",
+    "security monitoring",
+    "postmortem planning",
+    "infrastructure reliability"
+  ],
+  "action_items": [
+    "Megan Lawson: Draft updated customer communication explaining the phased rollout and revised timeline within the hour",
+    "Raj Kapoor: Send evening status update to Megan and Brian once the first phase of the redundant node rollout is complete",
+    "Raj Kapoor: Deliver internal retroactive event analysis summary report by Wednesday",
+    "Brian Cho: Prepare affected account breakdown with priority tiers and impact durations for the postmortem by Thursday"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Brian reveals 112 open support tickets tied to the outage, with ~30 from priority 1 or 2 accounts and several vocal customers",
+      "type": "churn_signal",
+      "speaker": "Brian Cho"
+    },
+    {
+      "time": 310.0,
+      "text": "Raj confirms customers had zero threat monitoring data for six hours, with events queuing but not processing",
+      "type": "technical_issue",
+      "speaker": "Raj Kapoor"
+    },
+    {
+      "time": 370.0,
+      "text": "Megan raises the critical concern that no affirmative statements can be made to customers about security posture during the outage window",
+      "type": "concern",
+      "speaker": "Megan Lawson"
+    },
+    {
+      "time": 225.0,
+      "text": "Raj pushes back on compressing the timeline, stating he would rather give a conservative estimate and hit it given the existing credibility issue",
+      "type": "positive_pivot",
+      "speaker": "Raj Kapoor"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1773653406000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Join",
+      "time_seconds": 17.0,
+      "timestamp_ms": 1773653417000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Join",
+      "time_seconds": 42.0,
+      "timestamp_ms": 1773653442000
+    },
+    {
+      "participant_name": "Megan Lawson",
+      "event_type": "Leave",
+      "time_seconds": 2088.0,
+      "timestamp_ms": 1773655488000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Leave",
+      "time_seconds": 2086.0,
+      "timestamp_ms": 1773655486000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Leave",
+      "time_seconds": 2090.0,
+      "timestamp_ms": 1773655490000
+    }
+  ],
+  "stats": {
+    "turn_count": 43,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Megan Lawson": 17,
+      "Raj Kapoor": 15,
+      "Brian Cho": 11
+    },
+    "speaker_total_seconds": {
+      "Megan Lawson": 175.8,
+      "Raj Kapoor": 193.5,
+      "Brian Cho": 98.0
+    }
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "meeting_id": "01KQ0C1280EDA4E70AAD7C35",
+  "title": "Support Case #9279 - Summit Trust Billing Inquiry",
+  "organizer_email": "sarah.chen@aegiscloud.com",
+  "host_email": "sarah.chen@aegiscloud.com",
+  "start_time": "2026-02-06T09:15:00.000Z",
+  "end_time": "2026-02-06T09:38:48.000Z",
+  "duration_minutes": 23.8,
+  "participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "g.fisk@summittrust.com",
+      "domain": "summittrust.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "g.fisk@summittrust.com",
+      "domain": "summittrust.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Sarah Chen",
+    "1": "Gregory Fisk"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 7.0,
+      "end_time": 13.3,
+      "duration": 6.300000000000001,
+      "text": "Thank you for calling Aegis Cloud Security support, this is Sarah Chen, how can I help you today?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 14.6,
+      "end_time": 25.2,
+      "duration": 10.6,
+      "text": "Hi Sarah, yeah this is Gregory Fisk, I'm the IT Director over at Summit Trust, I have a support case open - case number 9279 - regarding a billing question."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 26.0,
+      "end_time": 33.3,
+      "duration": 7.299999999999997,
+      "text": "Great, let me pull that up right now, Gregory - and thanks for the case number, that helps a lot."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 34.3,
+      "end_time": 35.8,
+      "duration": 1.5,
+      "text": "Sure, no problem."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 36.2,
+      "end_time": 45.4,
+      "duration": 9.199999999999996,
+      "text": "Okay, I'm seeing case 9279 here, Summit Trust, billing inquiry submitted... looks like February 4th. So can you walk me through what you're seeing on your end?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 46.7,
+      "end_time": 67.5,
+      "duration": 20.799999999999997,
+      "text": "Yeah so, uh, we received our January invoice last week and there's a line item on there that doesn't quite match what we expected based on our contract. It's showing a charge for - let me pull this up - okay, it's showing a charge for 1,400 seats under Aegis Identity, but we only have 1,200 licensed users."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 68.0,
+      "end_time": 81.0,
+      "duration": 13.0,
+      "text": "Okay, so a discrepancy of 200 seats on the Aegis Identity module. Got it. And just to confirm - was this your January invoice, so the billing period would have been January 1st through January 31st?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 82.4,
+      "end_time": 84.5,
+      "duration": 2.0999999999999943,
+      "text": "That's correct, yeah, January billing period."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 85.0,
+      "end_time": 90.9,
+      "duration": 5.900000000000006,
+      "text": "Alright. And do you have the invoice number handy, or should I just work from the account?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 91.8,
+      "end_time": 95.3,
+      "duration": 3.5,
+      "text": "Um, give me just a second... yeah, it's INV-2026-00847."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 95.8,
+      "end_time": 111.1,
+      "duration": 15.299999999999997,
+      "text": "Perfect, INV-2026-00847, let me bring that up... okay, I can see the invoice. And yeah, I can see the Identity module line item - 1,400 seats at the per-seat rate. Let me cross-reference this against your contract terms and your provisioned seat count."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 112.3,
+      "end_time": 124.2,
+      "duration": 11.900000000000006,
+      "text": "Right, and I mean, our contract was renewed in October, I believe, and at that time we explicitly set the seat count at 1,200. So I'm not sure where the 1,400 is coming from."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 125.4,
+      "end_time": 139.1,
+      "duration": 13.699999999999989,
+      "text": "Yeah, that's a fair question. Let me look at the contract record... okay so I'm seeing the renewal executed October 14th, 2025, and the contracted seat count for Aegis Identity is listed as 1,200 seats. So you're correct there."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 139.5,
+      "end_time": 146.9,
+      "duration": 7.400000000000006,
+      "text": "Right, so where's the 1,400 coming from? Is there some kind of overage charge? Because we weren't notified of any overage."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 148.3,
+      "end_time": 167.2,
+      "duration": 18.899999999999977,
+      "text": "That's actually a good point and let me dig into the usage data for January. Our billing system will sometimes pick up peak concurrent provisioned users during the billing cycle, and if that number exceeded your contracted seat count at any point, it can trigger overage billing depending on how your contract is structured."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 168.0,
+      "end_time": 177.2,
+      "duration": 9.199999999999989,
+      "text": "Hmm. I wasn't aware that was how it worked. We haven't had 1,400 active users - I mean our headcount isn't even close to that."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 177.6,
+      "end_time": 200.8,
+      "duration": 23.200000000000017,
+      "text": "Understood, and that's worth looking at more closely. So I'm pulling up the provisioning logs for your account for January... okay so what I'm seeing here is interesting - there were 1,400 user accounts in a provisioned state within the Aegis Identity system during January, but let me look at whether those were all active or if some were in, like, a pending or deprovisioned queue."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 202.3,
+      "end_time": 214.9,
+      "duration": 12.599999999999994,
+      "text": "Yeah, we did do a migration in December where we were onboarding users from a legacy system, and I know there were some test accounts created during that process. Could those still be showing as provisioned?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 215.5,
+      "end_time": 229.8,
+      "duration": 14.300000000000011,
+      "text": "That could very well explain it. If test accounts or staging accounts were created and not explicitly deprovisioned, the system would count those against your seat total. Do you know approximately how many test accounts were created during that migration?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 230.7,
+      "end_time": 243.5,
+      "duration": 12.800000000000011,
+      "text": "I'd have to check with my team but, uh, off the top of my head I'm thinking maybe 150 to 200 accounts, something in that range. We were testing SSO integrations with a few internal apps."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 244.5,
+      "end_time": 263.4,
+      "duration": 18.899999999999977,
+      "text": "Okay, so that does line up with the discrepancy - 1,200 contracted plus roughly 200 test accounts would get you to the 1,400 that was billed. The system doesn't differentiate between test and production users unless they're tagged and excluded explicitly, which is something we'd typically walk customers through during a migration engagement."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 264.0,
+      "end_time": 279.5,
+      "duration": 15.5,
+      "text": "Right, well, that's - I mean, that's a process thing we probably should have caught on our end too, so I'm not going to sit here and say it's entirely on Aegis. But the question now is what do we do about the invoice."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 279.9,
+      "end_time": 299.7,
+      "duration": 19.80000000000001,
+      "text": "Absolutely, and that's a reasonable question. So what I can do from a support side is document the root cause here - essentially the overage was driven by non-production test accounts that weren't deprovisioned post-migration - and submit a billing adjustment request to our finance team. That goes to them with my notes and they review it."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 300.3,
+      "end_time": 303.7,
+      "duration": 3.3999999999999773,
+      "text": "Okay. And what's the typical turnaround on something like that?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 304.2,
+      "end_time": 324.2,
+      "duration": 20.0,
+      "text": "Usually 5 to 7 business days for the review, and then if a credit or adjustment is approved it would appear on your next billing cycle. I can't guarantee the outcome of the review, but given that the overage appears to be tied to test accounts from a migration, it's a scenario our billing team has handled before."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 325.6,
+      "end_time": 341.5,
+      "duration": 15.899999999999977,
+      "text": "That's fine. I'd appreciate you submitting that. And - sorry, one more thing - those test accounts, I need to get those cleaned up regardless. Is there a way to bulk deprovision them, or does someone have to go in and do it one by one?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 342.1,
+      "end_time": 362.2,
+      "duration": 20.099999999999966,
+      "text": "Yeah, there's a bulk deprovision option in the Aegis Identity admin console - if you go to User Management and then Provisioning, you can filter by account status, creation date, and there's also a tag-based filter if any of those test accounts were tagged during setup. You can select multiple accounts and deprovision them in one action."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 362.6,
+      "end_time": 372.4,
+      "duration": 9.799999999999955,
+      "text": "Okay good, that's helpful. I'll have my team take care of that this week. We definitely don't want to have the same issue on the February invoice."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 372.9,
+      "end_time": 392.0,
+      "duration": 19.100000000000023,
+      "text": "That makes sense, and I'd actually recommend doing it sooner rather than later so that the February billing period doesn't pick up the elevated seat count again. If you want, I can send you a quick knowledge base article that walks through the bulk deprovision steps - sometimes it's easier to have that written out."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 392.4,
+      "end_time": 399.2,
+      "duration": 6.800000000000011,
+      "text": "Yeah, that would be useful, if you could send that to the email on the case that'd be great."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 400.4,
+      "end_time": 412.9,
+      "duration": 12.5,
+      "text": "Will do. I'll send that along with a summary of what we discussed today and the billing adjustment request reference number once I've submitted it. Should all come through within the next hour or so."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 413.8,
+      "end_time": 429.0,
+      "duration": 15.199999999999989,
+      "text": "Perfect. And just - out of curiosity - going forward, is there a way to get some kind of alert or notification if our seat count gets close to the contracted limit? Because I'd rather know proactively than find out on an invoice."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 430.4,
+      "end_time": 449.0,
+      "duration": 18.600000000000023,
+      "text": "That's actually a really good question. There are usage threshold alerts you can configure in the admin console - under Account Settings, Billing and Usage, you can set a threshold, say 90% of your contracted seat count, and you'll get an email notification when you hit it. That's probably worth setting up."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 450.3,
+      "end_time": 455.6,
+      "duration": 5.300000000000011,
+      "text": "Yeah, I'll definitely look into that. I don't think we have that configured right now."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 457.1,
+      "end_time": 468.0,
+      "duration": 10.899999999999977,
+      "text": "I'll include a note about that in the follow-up email as well, just so you have the steps. Is there anything else I can help you with on this call today?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 468.8,
+      "end_time": 481.1,
+      "duration": 12.300000000000011,
+      "text": "No, I think that covers it. I appreciate you walking through all of this - it's helpful to understand what actually happened rather than just having a number on a bill that doesn't make sense."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 482.5,
+      "end_time": 500.8,
+      "duration": 18.30000000000001,
+      "text": "Of course, that's what we're here for. I'll get everything documented and submitted, and you should hear back from the billing team within that 5 to 7 business day window. If you have any other questions in the meantime, feel free to reply to the case email and it'll come back to me."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 501.9,
+      "end_time": 503.4,
+      "duration": 1.5,
+      "text": "Sounds good. Thanks Sarah."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 504.4,
+      "end_time": 507.9,
+      "duration": 3.5,
+      "text": "Thank you Gregory, have a good rest of your day."
+    }
+  ],
+  "transcript_text": "Sarah Chen: Thank you for calling Aegis Cloud Security support, this is Sarah Chen, how can I help you today?\nGregory Fisk: Hi Sarah, yeah this is Gregory Fisk, I'm the IT Director over at Summit Trust, I have a support case open - case number 9279 - regarding a billing question.\nSarah Chen: Great, let me pull that up right now, Gregory - and thanks for the case number, that helps a lot.\nGregory Fisk: Sure, no problem.\nSarah Chen: Okay, I'm seeing case 9279 here, Summit Trust, billing inquiry submitted... looks like February 4th. So can you walk me through what you're seeing on your end?\nGregory Fisk: Yeah so, uh, we received our January invoice last week and there's a line item on there that doesn't quite match what we expected based on our contract. It's showing a charge for - let me pull this up - okay, it's showing a charge for 1,400 seats under Aegis Identity, but we only have 1,200 licensed users.\nSarah Chen: Okay, so a discrepancy of 200 seats on the Aegis Identity module. Got it. And just to confirm - was this your January invoice, so the billing period would have been January 1st through January 31st?\nGregory Fisk: That's correct, yeah, January billing period.\nSarah Chen: Alright. And do you have the invoice number handy, or should I just work from the account?\nGregory Fisk: Um, give me just a second... yeah, it's INV-2026-00847.\nSarah Chen: Perfect, INV-2026-00847, let me bring that up... okay, I can see the invoice. And yeah, I can see the Identity module line item - 1,400 seats at the per-seat rate. Let me cross-reference this against your contract terms and your provisioned seat count.\nGregory Fisk: Right, and I mean, our contract was renewed in October, I believe, and at that time we explicitly set the seat count at 1,200. So I'm not sure where the 1,400 is coming from.\nSarah Chen: Yeah, that's a fair question. Let me look at the contract record... okay so I'm seeing the renewal executed October 14th, 2025, and the contracted seat count for Aegis Identity is listed as 1,200 seats. So you're correct there.\nGregory Fisk: Right, so where's the 1,400 coming from? Is there some kind of overage charge? Because we weren't notified of any overage.\nSarah Chen: That's actually a good point and let me dig into the usage data for January. Our billing system will sometimes pick up peak concurrent provisioned users during the billing cycle, and if that number exceeded your contracted seat count at any point, it can trigger overage billing depending on how your contract is structured.\nGregory Fisk: Hmm. I wasn't aware that was how it worked. We haven't had 1,400 active users - I mean our headcount isn't even close to that.\nSarah Chen: Understood, and that's worth looking at more closely. So I'm pulling up the provisioning logs for your account for January... okay so what I'm seeing here is interesting - there were 1,400 user accounts in a provisioned state within the Aegis Identity system during January, but let me look at whether those were all active or if some were in, like, a pending or deprovisioned queue.\nGregory Fisk: Yeah, we did do a migration in December where we were onboarding users from a legacy system, and I know there were some test accounts created during that process. Could those still be showing as provisioned?\nSarah Chen: That could very well explain it. If test accounts or staging accounts were created and not explicitly deprovisioned, the system would count those against your seat total. Do you know approximately how many test accounts were created during that migration?\nGregory Fisk: I'd have to check with my team but, uh, off the top of my head I'm thinking maybe 150 to 200 accounts, something in that range. We were testing SSO integrations with a few internal apps.\nSarah Chen: Okay, so that does line up with the discrepancy - 1,200 contracted plus roughly 200 test accounts would get you to the 1,400 that was billed. The system doesn't differentiate between test and production users unless they're tagged and excluded explicitly, which is something we'd typically walk customers through during a migration engagement.\nGregory Fisk: Right, well, that's - I mean, that's a process thing we probably should have caught on our end too, so I'm not going to sit here and say it's entirely on Aegis. But the question now is what do we do about the invoice.\nSarah Chen: Absolutely, and that's a reasonable question. So what I can do from a support side is document the root cause here - essentially the overage was driven by non-production test accounts that weren't deprovisioned post-migration - and submit a billing adjustment request to our finance team. That goes to them with my notes and they review it.\nGregory Fisk: Okay. And what's the typical turnaround on something like that?\nSarah Chen: Usually 5 to 7 business days for the review, and then if a credit or adjustment is approved it would appear on your next billing cycle. I can't guarantee the outcome of the review, but given that the overage appears to be tied to test accounts from a migration, it's a scenario our billing team has handled before.\nGregory Fisk: That's fine. I'd appreciate you submitting that. And - sorry, one more thing - those test accounts, I need to get those cleaned up regardless. Is there a way to bulk deprovision them, or does someone have to go in and do it one by one?\nSarah Chen: Yeah, there's a bulk deprovision option in the Aegis Identity admin console - if you go to User Management and then Provisioning, you can filter by account status, creation date, and there's also a tag-based filter if any of those test accounts were tagged during setup. You can select multiple accounts and deprovision them in one action.\nGregory Fisk: Okay good, that's helpful. I'll have my team take care of that this week. We definitely don't want to have the same issue on the February invoice.\nSarah Chen: That makes sense, and I'd actually recommend doing it sooner rather than later so that the February billing period doesn't pick up the elevated seat count again. If you want, I can send you a quick knowledge base article that walks through the bulk deprovision steps - sometimes it's easier to have that written out.\nGregory Fisk: Yeah, that would be useful, if you could send that to the email on the case that'd be great.\nSarah Chen: Will do. I'll send that along with a summary of what we discussed today and the billing adjustment request reference number once I've submitted it. Should all come through within the next hour or so.\nGregory Fisk: Perfect. And just - out of curiosity - going forward, is there a way to get some kind of alert or notification if our seat count gets close to the contracted limit? Because I'd rather know proactively than find out on an invoice.\nSarah Chen: That's actually a really good question. There are usage threshold alerts you can configure in the admin console - under Account Settings, Billing and Usage, you can set a threshold, say 90% of your contracted seat count, and you'll get an email notification when you hit it. That's probably worth setting up.\nGregory Fisk: Yeah, I'll definitely look into that. I don't think we have that configured right now.\nSarah Chen: I'll include a note about that in the follow-up email as well, just so you have the steps. Is there anything else I can help you with on this call today?\nGregory Fisk: No, I think that covers it. I appreciate you walking through all of this - it's helpful to understand what actually happened rather than just having a number on a bill that doesn't make sense.\nSarah Chen: Of course, that's what we're here for. I'll get everything documented and submitted, and you should hear back from the billing team within that 5 to 7 business day window. If you have any other questions in the meantime, feel free to reply to the case email and it'll come back to me.\nGregory Fisk: Sounds good. Thanks Sarah.\nSarah Chen: Thank you Gregory, have a good rest of your day.",
+  "summary": "Gregory Fisk, IT Director at Summit Trust, called regarding a billing discrepancy on his January invoice showing 1,400 seats for Aegis Identity when their contract specifies 1,200 seats. Sarah Chen investigated and traced the overage to approximately 200 test accounts created during a December migration that were never deprovisioned. Sarah agreed to submit a billing adjustment request to the finance team, which will take 5-7 business days to review. Gregory also received guidance on bulk deprovisioning test accounts and setting up usage threshold alerts to prevent recurrence.",
+  "topics": [
+    "billing dispute",
+    "seat overage",
+    "migration cleanup",
+    "identity management",
+    "billing adjustment",
+    "provisioning"
+  ],
+  "action_items": [
+    "Sarah Chen: Submit billing adjustment request to finance team for the 200-seat overage on invoice INV-2026-00847 and send reference number to Gregory",
+    "Sarah Chen: Email Gregory the knowledge base article on bulk deprovisioning and include steps for configuring usage threshold alerts",
+    "Gregory Fisk: Have IT team bulk deprovision the ~200 test accounts created during the December migration before the February billing period closes",
+    "Gregory Fisk: Configure usage threshold alerts in the admin console under Account Settings > Billing and Usage"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.8,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Gregory identifies a 200-seat discrepancy on his January invoice versus his contracted 1,200-seat count",
+      "type": "concern",
+      "speaker": "Gregory Fisk"
+    },
+    {
+      "time": 390.0,
+      "text": "Root cause identified: ~200 undeprovisioned test accounts from December migration are inflating the billed seat count",
+      "type": "technical_issue",
+      "speaker": "Sarah Chen"
+    },
+    {
+      "time": 530.0,
+      "text": "Gregory acknowledges partial responsibility for the oversight and shifts focus constructively to resolving the invoice",
+      "type": "positive_pivot",
+      "speaker": "Gregory Fisk"
+    },
+    {
+      "time": 760.0,
+      "text": "Gregory requests proactive seat-count threshold alerts to avoid discovering overages on future invoices",
+      "type": "feature_gap",
+      "speaker": "Gregory Fisk"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 29.0,
+      "timestamp_ms": 1770369329000
+    },
+    {
+      "participant_name": "Gregory Fisk",
+      "event_type": "Join",
+      "time_seconds": 32.0,
+      "timestamp_ms": 1770369332000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 1409.0,
+      "timestamp_ms": 1770370709000
+    },
+    {
+      "participant_name": "Gregory Fisk",
+      "event_type": "Leave",
+      "time_seconds": 1415.0,
+      "timestamp_ms": 1770370715000
+    }
+  ],
+  "stats": {
+    "turn_count": 39,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Sarah Chen": 20,
+      "Gregory Fisk": 19
+    },
+    "speaker_total_seconds": {
+      "Sarah Chen": 288.8,
+      "Gregory Fisk": 178.1
+    }
+  }
+}

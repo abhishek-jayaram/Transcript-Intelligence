@@ -1,0 +1,483 @@
+{
+  "meeting_id": "01KQ445B1B5B890316C9E300",
+  "title": "Weekly Engineering Standup",
+  "organizer_email": "ravi.gupta@aegiscloud.com",
+  "host_email": "ravi.gupta@aegiscloud.com",
+  "start_time": "2026-04-17T17:15:00.000Z",
+  "end_time": "2026-04-17T18:00:12.000Z",
+  "duration_minutes": 45.2,
+  "participants": [
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Raj Kapoor",
+    "1": "Ravi Gupta",
+    "2": "Sofia Petrov"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 5.4,
+      "end_time": 9.7,
+      "duration": 4.299999999999999,
+      "text": "Alright, I think we've got everyone now - Ravi, Sofia, good morning."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 10.1,
+      "end_time": 11.6,
+      "duration": 1.5,
+      "text": "Morning, Raj."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 12.5,
+      "end_time": 17.6,
+      "duration": 5.100000000000001,
+      "text": "Hey, good morning. Sorry, I was just finishing up a Slack thread - I'm here."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 18.0,
+      "end_time": 35.2,
+      "duration": 17.200000000000003,
+      "text": "No worries. Okay so, usual format - let's do quick status updates, then I want to spend the bulk of the time on the post-mortem follow-ups from the Detect outage and also figure out where we are with the Comply v2 rollout now that we're ten days post-launch."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 35.6,
+      "end_time": 39.3,
+      "duration": 3.6999999999999957,
+      "text": "Works for me. You want me to go first?"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 40.2,
+      "end_time": 41.9,
+      "duration": 1.6999999999999957,
+      "text": "Yeah, go ahead Ravi."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 43.2,
+      "end_time": 59.6,
+      "duration": 16.4,
+      "text": "Okay, so on my end this week - I finished deploying the second set of redundant processing nodes for Detect. That's been merged and it's running in production as of, uh, Tuesday morning. The circuit breaker pattern implementation is still in review, Sofia has eyes on it."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 60.2,
+      "end_time": 73.2,
+      "duration": 13.0,
+      "text": "Yeah I was going through that PR yesterday. I have a couple of comments, nothing blocking, but I do want to talk through one part of the failover logic before we merge it. I'll get to that."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 74.5,
+      "end_time": 76.0,
+      "duration": 1.5,
+      "text": "Sure, yeah, let's do that."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 77.1,
+      "end_time": 83.4,
+      "duration": 6.300000000000011,
+      "text": "Good. And the nodes themselves, Ravi - any issues in production so far? Any anomalies in the monitoring?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 84.5,
+      "end_time": 103.3,
+      "duration": 18.799999999999997,
+      "text": "Nothing significant. There was a brief latency spike Wednesday evening, like a 200ms uptick on the ingestion side, but it self-resolved within about four minutes. I don't think it's related to the new nodes, looked more like a downstream dependency thing. I've got it in the log if you want to review it."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 103.8,
+      "end_time": 109.4,
+      "duration": 5.6000000000000085,
+      "text": "Okay, let's keep an eye on it but yeah doesn't sound alarming. Sofia, your update?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 110.7,
+      "end_time": 133.8,
+      "duration": 23.10000000000001,
+      "text": "Sure. So I've been split this week between the circuit breaker review and the Comply v2 stuff. On Comply - we had three customers hit errors with the on-demand SOC 2 report generation, specifically around large tenant datasets. Like, if you've got a tenant with over, um, I think it was around 50,000 audit log entries in the window, the report generation was timing out."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 134.3,
+      "end_time": 137.7,
+      "duration": 3.3999999999999773,
+      "text": "How many customers is that affecting? Like, is this widespread?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 138.9,
+      "end_time": 152.0,
+      "duration": 13.099999999999994,
+      "text": "So far it's three confirmed, but honestly I'd expect more to surface as more customers actually try to generate reports. It's not a niche edge case - any mid-to-large enterprise customer is going to be in that range."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 152.3,
+      "end_time": 156.9,
+      "duration": 4.599999999999994,
+      "text": "Yeah that's... that's not great. Do we have a fix in progress?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 157.4,
+      "end_time": 177.4,
+      "duration": 20.0,
+      "text": "I have a fix drafted. Basically we need to paginate the audit log query and process it in chunks rather than pulling the full dataset at once. It's not a complicated change but I want to make sure we test it properly across all four frameworks - SOC 2, PCI, HIPAA, ISO - before we push it."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 178.1,
+      "end_time": 181.6,
+      "duration": 3.5,
+      "text": "How long are we talking to get that out?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 183.0,
+      "end_time": 195.8,
+      "duration": 12.800000000000011,
+      "text": "Realistically? If I get uninterrupted time today and tomorrow, I can have a PR up by end of day tomorrow, and then assuming review and QA goes smoothly we're looking at early next week for production."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 196.5,
+      "end_time": 199.7,
+      "duration": 3.1999999999999886,
+      "text": "Okay. Can Ravi help with QA on that?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 200.6,
+      "end_time": 211.2,
+      "duration": 10.599999999999994,
+      "text": "Uh, yeah, I can do that. I'd just need - Sofia, can you set up a test tenant with a large dataset so I'm not generating fake data manually?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 212.3,
+      "end_time": 217.3,
+      "duration": 5.0,
+      "text": "Yeah I already have one in staging, I'll share the credentials with you."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 218.3,
+      "end_time": 219.8,
+      "duration": 1.5,
+      "text": "Perfect."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 220.7,
+      "end_time": 237.2,
+      "duration": 16.5,
+      "text": "Alright, good. I want that prioritized. Now, let's go back to the Detect post-mortem follow-ups because I know we've been chipping away at those for a month now and I want to make sure we're not letting things slip. Ravi, where are we on the full list?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 237.9,
+      "end_time": 256.0,
+      "duration": 18.099999999999994,
+      "text": "So from the original post-mortem action items - the redundant nodes are done, as I mentioned. The alerting threshold adjustments are done, we pushed those in week one. The runbook update is... mostly done, I think there are two sections Sofia was supposed to fill in on the detection pipeline side."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 256.6,
+      "end_time": 261.4,
+      "duration": 4.7999999999999545,
+      "text": "Yeah, that's on me. I haven't gotten to it. I'll do it this week."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 262.1,
+      "end_time": 264.8,
+      "duration": 2.6999999999999886,
+      "text": "Okay, that's the runbook. What else is outstanding?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 266.2,
+      "end_time": 280.0,
+      "duration": 13.800000000000011,
+      "text": "The load testing suite. We said we were going to build out a proper synthetic load test to simulate cascading failure scenarios so we can catch this kind of thing before it hits production. That one hasn't been started."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 280.7,
+      "end_time": 286.3,
+      "duration": 5.600000000000023,
+      "text": "Yeah, that's a bigger lift. I mean, it's important but it's not a one-day thing."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 287.2,
+      "end_time": 299.8,
+      "duration": 12.600000000000023,
+      "text": "I know it's not, but we committed to it in the post-mortem document and I don't want it to become one of those things that just... never happens. Can we put a realistic timeline on it?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 300.6,
+      "end_time": 313.1,
+      "duration": 12.5,
+      "text": "I mean, if we're being honest, with the Comply bug work and the circuit breaker PR, I don't think either of us has bandwidth to start that before, um, end of April at the earliest."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 314.5,
+      "end_time": 318.7,
+      "duration": 4.199999999999989,
+      "text": "End of April to start, or end of April to finish?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 319.3,
+      "end_time": 329.8,
+      "duration": 10.5,
+      "text": "To start. A full load testing suite for the event ingestion pipeline - even a basic one - I'd estimate two weeks of actual work once we get into it."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 330.8,
+      "end_time": 348.2,
+      "duration": 17.399999999999977,
+      "text": "Okay. Let's say we target starting that the week of April 28th, and we plan for a two-week sprint on it. That puts us at mid-May, which I think is acceptable given the other priorities. But I want it on the roadmap formally, not just as a verbal commitment."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 349.2,
+      "end_time": 351.6,
+      "duration": 2.400000000000034,
+      "text": "I'll add it to Jira today."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 353.0,
+      "end_time": 361.6,
+      "duration": 8.600000000000023,
+      "text": "Good. Now - Sofia, you mentioned wanting to talk through something about the circuit breaker PR. Let's do that before we run out of time."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 362.8,
+      "end_time": 381.6,
+      "duration": 18.80000000000001,
+      "text": "Right, yeah. So the way Ravi has the failover logic set up, when the circuit breaker opens it routes traffic to the secondary node immediately. My concern is there's no health check before the reroute - so if the secondary node happens to also be degraded, we're just... blindly routing to a bad node."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 382.7,
+      "end_time": 394.8,
+      "duration": 12.100000000000023,
+      "text": "I mean, the assumption was the secondary is always healthy because it's not under load, but yeah, I can see the issue. You're saying we should run a quick health probe before committing the reroute?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 395.7,
+      "end_time": 405.3,
+      "duration": 9.600000000000023,
+      "text": "Exactly. Even just a lightweight ping with a 500ms timeout - if it fails, we surface the alert and don't silently fail over to a bad node."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 406.2,
+      "end_time": 410.6,
+      "duration": 4.400000000000034,
+      "text": "That's a reasonable concern. Ravi, how much work is that to add?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 411.2,
+      "end_time": 421.0,
+      "duration": 9.800000000000011,
+      "text": "Honestly not a lot. Maybe a few hours. I don't want to hold up the whole PR for it, could I add it as a follow-up ticket?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 422.5,
+      "end_time": 433.6,
+      "duration": 11.100000000000023,
+      "text": "I'd rather have it in the same PR, to be honest. It's a safety thing and it's directly part of the circuit breaker behavior. I don't love shipping the pattern without it."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 435.0,
+      "end_time": 444.5,
+      "duration": 9.5,
+      "text": "I agree with Sofia on this one. It's a few hours of work, let's just do it right. Update the PR and ping Sofia when it's ready."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 446.0,
+      "end_time": 449.8,
+      "duration": 3.8000000000000114,
+      "text": "Yeah, fair enough. I'll have it updated by end of day."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 450.7,
+      "end_time": 455.4,
+      "duration": 4.699999999999989,
+      "text": "Perfect. Okay, I think we're at about time. Any other blockers before we wrap?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 456.2,
+      "end_time": 457.7,
+      "duration": 1.5,
+      "text": "Nothing from me."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 458.6,
+      "end_time": 460.1,
+      "duration": 1.5,
+      "text": "Same. I'm good."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 460.6,
+      "end_time": 481.2,
+      "duration": 20.599999999999966,
+      "text": "Alright. To summarize - Comply timeout fix is Sofia's priority, Ravi assists with QA. Circuit breaker PR gets the health check added today, then Sofia reviews and we merge. Runbook gets finished this week. And load testing goes on the roadmap for April 28th start. I'll send a recap in Slack. Good work, everyone - talk next week."
+    }
+  ],
+  "transcript_text": "Raj Kapoor: Alright, I think we've got everyone now - Ravi, Sofia, good morning.\nRavi Gupta: Morning, Raj.\nSofia Petrov: Hey, good morning. Sorry, I was just finishing up a Slack thread - I'm here.\nRaj Kapoor: No worries. Okay so, usual format - let's do quick status updates, then I want to spend the bulk of the time on the post-mortem follow-ups from the Detect outage and also figure out where we are with the Comply v2 rollout now that we're ten days post-launch.\nRavi Gupta: Works for me. You want me to go first?\nRaj Kapoor: Yeah, go ahead Ravi.\nRavi Gupta: Okay, so on my end this week - I finished deploying the second set of redundant processing nodes for Detect. That's been merged and it's running in production as of, uh, Tuesday morning. The circuit breaker pattern implementation is still in review, Sofia has eyes on it.\nSofia Petrov: Yeah I was going through that PR yesterday. I have a couple of comments, nothing blocking, but I do want to talk through one part of the failover logic before we merge it. I'll get to that.\nRavi Gupta: Sure, yeah, let's do that.\nRaj Kapoor: Good. And the nodes themselves, Ravi - any issues in production so far? Any anomalies in the monitoring?\nRavi Gupta: Nothing significant. There was a brief latency spike Wednesday evening, like a 200ms uptick on the ingestion side, but it self-resolved within about four minutes. I don't think it's related to the new nodes, looked more like a downstream dependency thing. I've got it in the log if you want to review it.\nRaj Kapoor: Okay, let's keep an eye on it but yeah doesn't sound alarming. Sofia, your update?\nSofia Petrov: Sure. So I've been split this week between the circuit breaker review and the Comply v2 stuff. On Comply - we had three customers hit errors with the on-demand SOC 2 report generation, specifically around large tenant datasets. Like, if you've got a tenant with over, um, I think it was around 50,000 audit log entries in the window, the report generation was timing out.\nRaj Kapoor: How many customers is that affecting? Like, is this widespread?\nSofia Petrov: So far it's three confirmed, but honestly I'd expect more to surface as more customers actually try to generate reports. It's not a niche edge case - any mid-to-large enterprise customer is going to be in that range.\nRaj Kapoor: Yeah that's... that's not great. Do we have a fix in progress?\nSofia Petrov: I have a fix drafted. Basically we need to paginate the audit log query and process it in chunks rather than pulling the full dataset at once. It's not a complicated change but I want to make sure we test it properly across all four frameworks - SOC 2, PCI, HIPAA, ISO - before we push it.\nRaj Kapoor: How long are we talking to get that out?\nSofia Petrov: Realistically? If I get uninterrupted time today and tomorrow, I can have a PR up by end of day tomorrow, and then assuming review and QA goes smoothly we're looking at early next week for production.\nRaj Kapoor: Okay. Can Ravi help with QA on that?\nRavi Gupta: Uh, yeah, I can do that. I'd just need - Sofia, can you set up a test tenant with a large dataset so I'm not generating fake data manually?\nSofia Petrov: Yeah I already have one in staging, I'll share the credentials with you.\nRavi Gupta: Perfect.\nRaj Kapoor: Alright, good. I want that prioritized. Now, let's go back to the Detect post-mortem follow-ups because I know we've been chipping away at those for a month now and I want to make sure we're not letting things slip. Ravi, where are we on the full list?\nRavi Gupta: So from the original post-mortem action items - the redundant nodes are done, as I mentioned. The alerting threshold adjustments are done, we pushed those in week one. The runbook update is... mostly done, I think there are two sections Sofia was supposed to fill in on the detection pipeline side.\nSofia Petrov: Yeah, that's on me. I haven't gotten to it. I'll do it this week.\nRaj Kapoor: Okay, that's the runbook. What else is outstanding?\nRavi Gupta: The load testing suite. We said we were going to build out a proper synthetic load test to simulate cascading failure scenarios so we can catch this kind of thing before it hits production. That one hasn't been started.\nSofia Petrov: Yeah, that's a bigger lift. I mean, it's important but it's not a one-day thing.\nRaj Kapoor: I know it's not, but we committed to it in the post-mortem document and I don't want it to become one of those things that just... never happens. Can we put a realistic timeline on it?\nSofia Petrov: I mean, if we're being honest, with the Comply bug work and the circuit breaker PR, I don't think either of us has bandwidth to start that before, um, end of April at the earliest.\nRaj Kapoor: End of April to start, or end of April to finish?\nSofia Petrov: To start. A full load testing suite for the event ingestion pipeline - even a basic one - I'd estimate two weeks of actual work once we get into it.\nRaj Kapoor: Okay. Let's say we target starting that the week of April 28th, and we plan for a two-week sprint on it. That puts us at mid-May, which I think is acceptable given the other priorities. But I want it on the roadmap formally, not just as a verbal commitment.\nRavi Gupta: I'll add it to Jira today.\nRaj Kapoor: Good. Now - Sofia, you mentioned wanting to talk through something about the circuit breaker PR. Let's do that before we run out of time.\nSofia Petrov: Right, yeah. So the way Ravi has the failover logic set up, when the circuit breaker opens it routes traffic to the secondary node immediately. My concern is there's no health check before the reroute - so if the secondary node happens to also be degraded, we're just... blindly routing to a bad node.\nRavi Gupta: I mean, the assumption was the secondary is always healthy because it's not under load, but yeah, I can see the issue. You're saying we should run a quick health probe before committing the reroute?\nSofia Petrov: Exactly. Even just a lightweight ping with a 500ms timeout - if it fails, we surface the alert and don't silently fail over to a bad node.\nRaj Kapoor: That's a reasonable concern. Ravi, how much work is that to add?\nRavi Gupta: Honestly not a lot. Maybe a few hours. I don't want to hold up the whole PR for it, could I add it as a follow-up ticket?\nSofia Petrov: I'd rather have it in the same PR, to be honest. It's a safety thing and it's directly part of the circuit breaker behavior. I don't love shipping the pattern without it.\nRaj Kapoor: I agree with Sofia on this one. It's a few hours of work, let's just do it right. Update the PR and ping Sofia when it's ready.\nRavi Gupta: Yeah, fair enough. I'll have it updated by end of day.\nRaj Kapoor: Perfect. Okay, I think we're at about time. Any other blockers before we wrap?\nSofia Petrov: Nothing from me.\nRavi Gupta: Same. I'm good.\nRaj Kapoor: Alright. To summarize - Comply timeout fix is Sofia's priority, Ravi assists with QA. Circuit breaker PR gets the health check added today, then Sofia reviews and we merge. Runbook gets finished this week. And load testing goes on the roadmap for April 28th start. I'll send a recap in Slack. Good work, everyone - talk next week.",
+  "summary": "Raj facilitated a team standup with Ravi and Sofia covering post-mortem follow-ups from the Detect outage and the Comply v2 rollout status. Sofia identified a critical bug in Comply v2 causing SOC 2 report generation timeouts for enterprise customers with large tenant datasets, with a fix targeting early next week. The team reviewed outstanding Detect post-mortem action items, including a circuit breaker PR that needs a health check added before merging and a load testing suite formally scheduled to begin April 28th. The runbook update was also flagged as incomplete and assigned to Sofia to finish this week.",
+  "topics": [
+    "post-mortem follow-up",
+    "compliance bug",
+    "circuit breaker",
+    "load testing",
+    "incident response",
+    "runbook"
+  ],
+  "action_items": [
+    "Sofia Petrov: Develop and submit PR for Comply v2 audit log pagination fix by end of day tomorrow, targeting production deployment early next week",
+    "Ravi Gupta: Add health check probe to circuit breaker PR and ping Sofia for review by end of day",
+    "Sofia Petrov: Complete the two outstanding detection pipeline sections of the post-mortem runbook this week",
+    "Ravi Gupta: Add load testing suite to Jira roadmap with April 28th start date and two-week sprint plan"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.5,
+  "key_moments": [
+    {
+      "time": 182.0,
+      "text": "Sofia identifies a timeout bug in Comply v2 affecting enterprise customers with large tenant datasets across all compliance frameworks, noting it is not an edge case",
+      "type": "technical_issue",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 420.0,
+      "text": "Load testing suite identified as not yet started despite being a post-mortem commitment; Raj pushes back on letting it slip and formalizes it on the roadmap",
+      "type": "concern",
+      "speaker": "Raj Kapoor"
+    },
+    {
+      "time": 580.0,
+      "text": "Sofia raises a safety concern about the circuit breaker failover logic routing blindly to potentially degraded secondary nodes without a health check",
+      "type": "feature_gap",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 648.0,
+      "text": "Raj sides with Sofia to include the health check in the current PR rather than deferring it, ensuring the circuit breaker pattern ships correctly",
+      "type": "action_item",
+      "speaker": "Raj Kapoor"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1776446106000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Join",
+      "time_seconds": 17.0,
+      "timestamp_ms": 1776446117000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Join",
+      "time_seconds": 35.0,
+      "timestamp_ms": 1776446135000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Leave",
+      "time_seconds": 2695.0,
+      "timestamp_ms": 1776448795000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 2704.0,
+      "timestamp_ms": 1776448804000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Leave",
+      "time_seconds": 2708.0,
+      "timestamp_ms": 1776448808000
+    }
+  ],
+  "stats": {
+    "turn_count": 48,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Raj Kapoor": 19,
+      "Ravi Gupta": 14,
+      "Sofia Petrov": 15
+    },
+    "speaker_total_seconds": {
+      "Raj Kapoor": 151.0,
+      "Ravi Gupta": 115.5,
+      "Sofia Petrov": 166.5
+    }
+  }
+}

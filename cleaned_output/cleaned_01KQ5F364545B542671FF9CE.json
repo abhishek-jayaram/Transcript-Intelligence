@@ -1,0 +1,460 @@
+{
+  "meeting_id": "01KQ5F364545B542671FF9CE",
+  "title": "Support Case #3546 - Meridian Capital SCIM Provisioning Request",
+  "organizer_email": "sarah.chen@aegiscloud.com",
+  "host_email": "sarah.chen@aegiscloud.com",
+  "start_time": "2026-03-07T13:30:00.000Z",
+  "end_time": "2026-03-07T13:51:18.000Z",
+  "duration_minutes": 21.3,
+  "participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "j.hoffman@meridiancapital.com",
+      "domain": "meridiancapital.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "s.nakamura@meridiancapital.com",
+      "domain": "meridiancapital.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "j.hoffman@meridiancapital.com",
+      "domain": "meridiancapital.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "s.nakamura@meridiancapital.com",
+      "domain": "meridiancapital.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Sarah Chen",
+    "1": "Jason Hoffman",
+    "2": "Suki Nakamura",
+    "3": "Marcus Williams"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 3.1,
+      "end_time": 14.0,
+      "duration": 10.9,
+      "text": "Good morning, you've reached Aegis Cloud Security support, this is Sarah Chen, I have Marcus Williams joining me as well on this call - we're both pulling up support case number 3546."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 15.0,
+      "end_time": 25.6,
+      "duration": 10.600000000000001,
+      "text": "Morning Sarah, morning Marcus - yeah, this is Jason Hoffman, I'm the CISO over at Meridian Capital, and I've got Suki Nakamura on the line with me, she's our Compliance Director."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 26.2,
+      "end_time": 29.3,
+      "duration": 3.1000000000000014,
+      "text": "Hi everyone, thanks for making time for this."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 29.9,
+      "end_time": 39.8,
+      "duration": 9.899999999999999,
+      "text": "Of course, good to have you both on - Marcus, do you want to go ahead and confirm the case details while I pull up the Meridian account?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 40.5,
+      "end_time": 54.1,
+      "duration": 13.600000000000001,
+      "text": "Yeah sure, so case 3546 came in, looks like Tuesday - the subject line is SCIM provisioning request for Aegis Identity, and the initial description mentions wanting to automate user provisioning and deprovisioning from an external identity provider."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 55.6,
+      "end_time": 73.5,
+      "duration": 17.9,
+      "text": "That's correct, yeah - so, the short version is we're in the middle of a fairly significant identity infrastructure overhaul, we've been on Okta for a while now and we're looking to tighten up our provisioning workflows, and, uh, right now everything is pretty manual on the Aegis Identity side."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 74.2,
+      "end_time": 88.3,
+      "duration": 14.099999999999994,
+      "text": "And I can jump in here - from a compliance standpoint we're getting audited more frequently, and the auditors are specifically asking about automated deprovisioning controls, so the manual process is starting to become a real gap for us."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 88.6,
+      "end_time": 98.2,
+      "duration": 9.600000000000009,
+      "text": "Right, yeah, that makes a lot of sense - so the ask is essentially SCIM 2.0 integration between Okta and Aegis Identity, is that the direction you're heading?"
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 99.1,
+      "end_time": 111.0,
+      "duration": 11.900000000000006,
+      "text": "Exactly, SCIM 2.0, yeah - we want Okta to be the source of truth, so when someone is offboarded in Okta it automatically propagates through to Aegis Identity and their access is revoked."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 112.3,
+      "end_time": 124.0,
+      "duration": 11.700000000000003,
+      "text": "And ideally provisioning too, not just deprovisioning - when a new hire gets set up in Okta we'd want them to automatically get the right role assignments in Aegis Identity based on group membership."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 125.2,
+      "end_time": 132.2,
+      "duration": 6.999999999999986,
+      "text": "Okay, understood - so Marcus, can you give them the current state picture on SCIM support in Aegis Identity?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 133.0,
+      "end_time": 151.3,
+      "duration": 18.30000000000001,
+      "text": "Sure - so, right now Aegis Identity supports SAML and OIDC for SSO, and we do have some provisioning capabilities, but, uh, native SCIM 2.0 as a full protocol endpoint is not something that's currently in GA - it's on the roadmap but I don't want to get ahead of ourselves on timeline."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 152.1,
+      "end_time": 163.1,
+      "duration": 11.0,
+      "text": "Yeah, I figured that might be the case, honestly - do you have any sense of where it sits on the roadmap? Like are we talking Q2, Q3, end of year?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 164.6,
+      "end_time": 189.3,
+      "duration": 24.700000000000017,
+      "text": "So I want to be transparent with you - we don't give out committed roadmap timelines on support calls, that's really something your account team should loop in on because they can actually have that conversation with product, but what I can say is that SCIM support is something we're actively fielding requests on and this case will definitely be logged as a feature request to contribute to that prioritization."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 190.0,
+      "end_time": 196.5,
+      "duration": 6.5,
+      "text": "Fair enough, I appreciate the honesty - I'd rather hear that than get a date that doesn't hold."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 196.8,
+      "end_time": 210.3,
+      "duration": 13.5,
+      "text": "Yeah, exactly - so, in the meantime, let's talk about what options you do have, because there are a couple of things we can look at to close some of that gap while you're waiting on native SCIM."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 210.9,
+      "end_time": 213.5,
+      "duration": 2.5999999999999943,
+      "text": "Yeah that'd be useful, what are you thinking?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 214.9,
+      "end_time": 232.6,
+      "duration": 17.69999999999999,
+      "text": "So the first option is using our REST API for provisioning - it's documented in the developer portal and Okta actually has a generic API connector that you can configure to hit our user management endpoints, it's not as turnkey as native SCIM but it can handle create, update, deactivate operations."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 233.0,
+      "end_time": 237.2,
+      "duration": 4.199999999999989,
+      "text": "Okay, so that would require some custom configuration on the Okta side?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 237.7,
+      "end_time": 252.5,
+      "duration": 14.800000000000011,
+      "text": "Yeah, some - Okta's Workflows product actually makes it pretty manageable, you'd be defining the API calls and the attribute mappings, it's not trivial but it's also not like a full development project, we've seen customers get something working in a few days."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 253.8,
+      "end_time": 259.8,
+      "duration": 6.0,
+      "text": "That's actually... worth considering, we do have someone on the IAM team who's pretty comfortable with Okta Workflows."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 261.1,
+      "end_time": 273.5,
+      "duration": 12.399999999999977,
+      "text": "And what about the deprovisioning piece specifically - because that's really the one that's keeping me up at night from a compliance standpoint, we've had instances where access wasn't revoked within our required 24-hour window."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 274.2,
+      "end_time": 295.8,
+      "duration": 21.600000000000023,
+      "text": "Yeah, so deprovisioning via the API is actually pretty reliable - when Okta triggers a user deactivation event you can configure the workflow to call our deactivate endpoint and it'll suspend the account in Aegis Identity, so they lose access to the platform, lose SSO session, and it gets logged with a timestamp that you'd be able to reference for audit purposes."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 296.2,
+      "end_time": 307.1,
+      "duration": 10.900000000000034,
+      "text": "And are those logs available in Aegis Comply? Because that's another thing our auditors have been asking about - they want to see access termination evidence in a reportable format."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 308.6,
+      "end_time": 318.9,
+      "duration": 10.299999999999955,
+      "text": "Yeah, identity events including deprovisioning and access changes do flow into the audit log that's accessible through Aegis Comply - you can export those or build report views around them."
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 319.9,
+      "end_time": 330.4,
+      "duration": 10.5,
+      "text": "Okay, that's good to know - we've actually been meaning to dig deeper into Comply, we're using it but I don't think we're using it to its full potential."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 330.9,
+      "end_time": 340.1,
+      "duration": 9.200000000000045,
+      "text": "We can definitely set up a separate session on that if it would help - but let's stay focused on the provisioning piece for now."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 341.4,
+      "end_time": 347.3,
+      "duration": 5.900000000000034,
+      "text": "Yeah agreed - Marcus, you mentioned there were a couple of options, what's the second one?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 348.1,
+      "end_time": 371.1,
+      "duration": 23.0,
+      "text": "So the second is a bit more manual but simpler to set up - we have a CSV-based bulk import and export for user management in Aegis Identity, so you could generate a sync file from Okta on a scheduled basis and push it through, but honestly given your 24-hour deprovisioning requirement that's probably not sufficient, the API route is going to be more appropriate."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 371.9,
+      "end_time": 378.2,
+      "duration": 6.300000000000011,
+      "text": "Yeah, no, the CSV thing isn't going to work for us - we're past that point operationally."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 379.1,
+      "end_time": 396.9,
+      "duration": 17.799999999999955,
+      "text": "Totally fair - so let's document the API approach as the recommended interim path, and I'll make sure the feature request for native SCIM 2.0 is properly logged with your use case details attached, that way when product is looking at prioritization they have the full context from Meridian Capital specifically."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 398.0,
+      "end_time": 411.5,
+      "duration": 13.5,
+      "text": "Appreciate that - and I do want to flag, we're not the only financial services firm that's going to be running into this, SCIM is kind of table stakes at this point for anyone running a serious IAM program."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 412.2,
+      "end_time": 422.3,
+      "duration": 10.100000000000023,
+      "text": "You're absolutely right and that context is useful, I'll note that in the case as well - the financial services regulatory pressure around automated deprovisioning is a real driver."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 423.6,
+      "end_time": 431.8,
+      "duration": 8.199999999999989,
+      "text": "So next steps - Marcus, can you send over the API documentation links and maybe a sample workflow configuration if we have one?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 432.2,
+      "end_time": 451.0,
+      "duration": 18.80000000000001,
+      "text": "Yeah, I'll pull together the user management API docs, there's also a community post from another customer who did a similar Okta Workflows integration, I'll see if I can dig that up and include it - no promises on the community post but the official docs I can definitely get over to you today."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 451.6,
+      "end_time": 465.3,
+      "duration": 13.699999999999989,
+      "text": "That would be great - and Sarah, can you make sure our account manager knows to follow up on the roadmap question? I know you said you can't commit to timelines but I'd like to at least have that conversation."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 466.4,
+      "end_time": 478.5,
+      "duration": 12.100000000000023,
+      "text": "Absolutely, I'll flag it in the case notes and send a note to your account team directly so they're aware it's a priority discussion - they should be reaching out within a day or two."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 478.8,
+      "end_time": 486.2,
+      "duration": 7.399999999999977,
+      "text": "Perfect - I think that covers what we needed from this call, anything else Suki before we let them go?"
+    },
+    {
+      "speaker_name": "Suki Nakamura",
+      "start_time": 486.7,
+      "end_time": 493.6,
+      "duration": 6.900000000000034,
+      "text": "No I think we're good, this was helpful - thank you both for the clear explanation of the options."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 494.6,
+      "end_time": 504.5,
+      "duration": 9.899999999999977,
+      "text": "Of course, thanks for your time Jason, Suki - we'll get those docs over and update the case, and reach out if anything comes up in the meantime."
+    },
+    {
+      "speaker_name": "Jason Hoffman",
+      "start_time": 505.4,
+      "end_time": 507.0,
+      "duration": 1.6000000000000227,
+      "text": "Will do, thanks everyone."
+    }
+  ],
+  "transcript_text": "Sarah Chen: Good morning, you've reached Aegis Cloud Security support, this is Sarah Chen, I have Marcus Williams joining me as well on this call - we're both pulling up support case number 3546.\nJason Hoffman: Morning Sarah, morning Marcus - yeah, this is Jason Hoffman, I'm the CISO over at Meridian Capital, and I've got Suki Nakamura on the line with me, she's our Compliance Director.\nSuki Nakamura: Hi everyone, thanks for making time for this.\nSarah Chen: Of course, good to have you both on - Marcus, do you want to go ahead and confirm the case details while I pull up the Meridian account?\nMarcus Williams: Yeah sure, so case 3546 came in, looks like Tuesday - the subject line is SCIM provisioning request for Aegis Identity, and the initial description mentions wanting to automate user provisioning and deprovisioning from an external identity provider.\nJason Hoffman: That's correct, yeah - so, the short version is we're in the middle of a fairly significant identity infrastructure overhaul, we've been on Okta for a while now and we're looking to tighten up our provisioning workflows, and, uh, right now everything is pretty manual on the Aegis Identity side.\nSuki Nakamura: And I can jump in here - from a compliance standpoint we're getting audited more frequently, and the auditors are specifically asking about automated deprovisioning controls, so the manual process is starting to become a real gap for us.\nSarah Chen: Right, yeah, that makes a lot of sense - so the ask is essentially SCIM 2.0 integration between Okta and Aegis Identity, is that the direction you're heading?\nJason Hoffman: Exactly, SCIM 2.0, yeah - we want Okta to be the source of truth, so when someone is offboarded in Okta it automatically propagates through to Aegis Identity and their access is revoked.\nSuki Nakamura: And ideally provisioning too, not just deprovisioning - when a new hire gets set up in Okta we'd want them to automatically get the right role assignments in Aegis Identity based on group membership.\nSarah Chen: Okay, understood - so Marcus, can you give them the current state picture on SCIM support in Aegis Identity?\nMarcus Williams: Sure - so, right now Aegis Identity supports SAML and OIDC for SSO, and we do have some provisioning capabilities, but, uh, native SCIM 2.0 as a full protocol endpoint is not something that's currently in GA - it's on the roadmap but I don't want to get ahead of ourselves on timeline.\nJason Hoffman: Yeah, I figured that might be the case, honestly - do you have any sense of where it sits on the roadmap? Like are we talking Q2, Q3, end of year?\nSarah Chen: So I want to be transparent with you - we don't give out committed roadmap timelines on support calls, that's really something your account team should loop in on because they can actually have that conversation with product, but what I can say is that SCIM support is something we're actively fielding requests on and this case will definitely be logged as a feature request to contribute to that prioritization.\nJason Hoffman: Fair enough, I appreciate the honesty - I'd rather hear that than get a date that doesn't hold.\nSarah Chen: Yeah, exactly - so, in the meantime, let's talk about what options you do have, because there are a couple of things we can look at to close some of that gap while you're waiting on native SCIM.\nJason Hoffman: Yeah that'd be useful, what are you thinking?\nMarcus Williams: So the first option is using our REST API for provisioning - it's documented in the developer portal and Okta actually has a generic API connector that you can configure to hit our user management endpoints, it's not as turnkey as native SCIM but it can handle create, update, deactivate operations.\nSuki Nakamura: Okay, so that would require some custom configuration on the Okta side?\nMarcus Williams: Yeah, some - Okta's Workflows product actually makes it pretty manageable, you'd be defining the API calls and the attribute mappings, it's not trivial but it's also not like a full development project, we've seen customers get something working in a few days.\nJason Hoffman: That's actually... worth considering, we do have someone on the IAM team who's pretty comfortable with Okta Workflows.\nSuki Nakamura: And what about the deprovisioning piece specifically - because that's really the one that's keeping me up at night from a compliance standpoint, we've had instances where access wasn't revoked within our required 24-hour window.\nSarah Chen: Yeah, so deprovisioning via the API is actually pretty reliable - when Okta triggers a user deactivation event you can configure the workflow to call our deactivate endpoint and it'll suspend the account in Aegis Identity, so they lose access to the platform, lose SSO session, and it gets logged with a timestamp that you'd be able to reference for audit purposes.\nSuki Nakamura: And are those logs available in Aegis Comply? Because that's another thing our auditors have been asking about - they want to see access termination evidence in a reportable format.\nSarah Chen: Yeah, identity events including deprovisioning and access changes do flow into the audit log that's accessible through Aegis Comply - you can export those or build report views around them.\nSuki Nakamura: Okay, that's good to know - we've actually been meaning to dig deeper into Comply, we're using it but I don't think we're using it to its full potential.\nSarah Chen: We can definitely set up a separate session on that if it would help - but let's stay focused on the provisioning piece for now.\nJason Hoffman: Yeah agreed - Marcus, you mentioned there were a couple of options, what's the second one?\nMarcus Williams: So the second is a bit more manual but simpler to set up - we have a CSV-based bulk import and export for user management in Aegis Identity, so you could generate a sync file from Okta on a scheduled basis and push it through, but honestly given your 24-hour deprovisioning requirement that's probably not sufficient, the API route is going to be more appropriate.\nJason Hoffman: Yeah, no, the CSV thing isn't going to work for us - we're past that point operationally.\nSarah Chen: Totally fair - so let's document the API approach as the recommended interim path, and I'll make sure the feature request for native SCIM 2.0 is properly logged with your use case details attached, that way when product is looking at prioritization they have the full context from Meridian Capital specifically.\nJason Hoffman: Appreciate that - and I do want to flag, we're not the only financial services firm that's going to be running into this, SCIM is kind of table stakes at this point for anyone running a serious IAM program.\nSarah Chen: You're absolutely right and that context is useful, I'll note that in the case as well - the financial services regulatory pressure around automated deprovisioning is a real driver.\nJason Hoffman: So next steps - Marcus, can you send over the API documentation links and maybe a sample workflow configuration if we have one?\nMarcus Williams: Yeah, I'll pull together the user management API docs, there's also a community post from another customer who did a similar Okta Workflows integration, I'll see if I can dig that up and include it - no promises on the community post but the official docs I can definitely get over to you today.\nJason Hoffman: That would be great - and Sarah, can you make sure our account manager knows to follow up on the roadmap question? I know you said you can't commit to timelines but I'd like to at least have that conversation.\nSarah Chen: Absolutely, I'll flag it in the case notes and send a note to your account team directly so they're aware it's a priority discussion - they should be reaching out within a day or two.\nJason Hoffman: Perfect - I think that covers what we needed from this call, anything else Suki before we let them go?\nSuki Nakamura: No I think we're good, this was helpful - thank you both for the clear explanation of the options.\nSarah Chen: Of course, thanks for your time Jason, Suki - we'll get those docs over and update the case, and reach out if anything comes up in the meantime.\nJason Hoffman: Will do, thanks everyone.",
+  "summary": "Jason Hoffman (CISO) and Suki Nakamura (Compliance Director) from Meridian Capital contacted Aegis Cloud Security support to discuss SCIM 2.0 integration between Okta and Aegis Identity for automated user provisioning and deprovisioning. Sarah Chen and Marcus Williams confirmed that native SCIM 2.0 is on the roadmap but not yet generally available, and recommended using Aegis's REST API with Okta Workflows as an interim solution. The team agreed this API approach could meet Meridian's 24-hour deprovisioning compliance requirement, with audit logs accessible through Aegis Comply. Next steps include sending API documentation, logging the SCIM feature request with Meridian's specific use case, and looping in the account manager for a roadmap discussion.",
+  "topics": [
+    "scim provisioning",
+    "identity management",
+    "compliance",
+    "okta integration",
+    "deprovisioning",
+    "feature request"
+  ],
+  "action_items": [
+    "Marcus Williams: Send user management API documentation and, if available, a sample Okta Workflows integration community post to Jason and Suki today",
+    "Sarah Chen: Log native SCIM 2.0 as a formal feature request with Meridian Capital's financial services compliance use case details attached",
+    "Sarah Chen: Notify Meridian Capital's account manager to follow up on SCIM roadmap timeline within one to two business days",
+    "Suki Nakamura: Schedule a separate session with Aegis to explore fuller usage of Aegis Comply for compliance reporting"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.7,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Suki flags that manual deprovisioning is becoming a compliance gap as auditors specifically ask about automated deprovisioning controls",
+      "type": "concern",
+      "speaker": "Suki Nakamura"
+    },
+    {
+      "time": 210.0,
+      "text": "Marcus confirms native SCIM 2.0 is not currently in GA, only on the roadmap, without committed timelines",
+      "type": "feature_gap",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 430.0,
+      "text": "Suki reveals there have been instances where access was not revoked within their required 24-hour compliance window, underscoring urgency",
+      "type": "churn_signal",
+      "speaker": "Suki Nakamura"
+    },
+    {
+      "time": 560.0,
+      "text": "Sarah confirms that deprovisioning via the API is reliable and that termination events are logged with timestamps in Aegis Comply for audit purposes, satisfying a key compliance need",
+      "type": "positive_pivot",
+      "speaker": "Sarah Chen"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1772890206000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 7.0,
+      "timestamp_ms": 1772890207000
+    },
+    {
+      "participant_name": "Jason Hoffman",
+      "event_type": "Join",
+      "time_seconds": 33.0,
+      "timestamp_ms": 1772890233000
+    },
+    {
+      "participant_name": "Suki Nakamura",
+      "event_type": "Join",
+      "time_seconds": 42.0,
+      "timestamp_ms": 1772890242000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 1276.0,
+      "timestamp_ms": 1772891476000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 1277.0,
+      "timestamp_ms": 1772891477000
+    },
+    {
+      "participant_name": "Jason Hoffman",
+      "event_type": "Leave",
+      "time_seconds": 1252.0,
+      "timestamp_ms": 1772891452000
+    },
+    {
+      "participant_name": "Suki Nakamura",
+      "event_type": "Leave",
+      "time_seconds": 1248.0,
+      "timestamp_ms": 1772891448000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Sarah Chen": 13,
+      "Jason Hoffman": 14,
+      "Suki Nakamura": 8,
+      "Marcus Williams": 6
+    },
+    "speaker_total_seconds": {
+      "Sarah Chen": 166.6,
+      "Jason Hoffman": 123.1,
+      "Suki Nakamura": 73.8,
+      "Marcus Williams": 106.2
+    }
+  }
+}

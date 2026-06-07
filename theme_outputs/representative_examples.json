@@ -1,0 +1,136 @@
+{
+  "competitive_review": [
+    {
+      "meeting_id": "01KQ7F58A2E07B857C24624D",
+      "title": "Competitive Landscape Review",
+      "reason": "Matched 10 seed signal(s): competitive, competitor, market, sentinel, vaultedge, cybernova",
+      "matched_keywords": "competitive; competitor; market; sentinel; vaultedge; cybernova; fortiguard; compare"
+    },
+    {
+      "meeting_id": "01KQ4529010F423FD9DB40BD",
+      "title": "Win/Loss Analysis - Q1",
+      "reason": "Matched 5 seed signal(s): competitive, competitor, vaultedge, cybernova",
+      "matched_keywords": "competitive; competitor; vaultedge; cybernova"
+    }
+  ],
+  "compliance_audit": [
+    {
+      "meeting_id": "01KQ3BD8DEEBC7FECD107F0F",
+      "title": "Aegis / Blackridge Investments - HIPAA Compliance Review",
+      "reason": "Matched 13 seed signal(s): audit, compliance, soc 2, hipaa, iso 27001, pci dss",
+      "matched_keywords": "audit; compliance; soc 2; hipaa; iso 27001; pci dss; evidence; controls; security rule; reporting; remediation"
+    },
+    {
+      "meeting_id": "01KQFFC0F889AE8CFEE7A00D",
+      "title": "Aegis / Blackridge Investments - Renewal Discussion",
+      "reason": "Matched 10 seed signal(s): audit, compliance, soc 2, hipaa, iso 27001, pci dss",
+      "matched_keywords": "audit; compliance; soc 2; hipaa; iso 27001; pci dss; controls; reporting; remediation"
+    },
+    {
+      "meeting_id": "01KQ85D10E82A26A8F754FB8",
+      "title": "Aegis / Bridgeport Health - Compliance Review",
+      "reason": "Matched 10 seed signal(s): audit, compliance, soc 2, hipaa, evidence, controls",
+      "matched_keywords": "audit; compliance; soc 2; hipaa; evidence; controls; audit prep; reporting"
+    }
+  ],
+  "customer_support_escalation": [
+    {
+      "meeting_id": "01KQ45F6F7349D0A620571F1",
+      "title": "Aegis / Brightpath Commerce - Competitive Evaluation",
+      "reason": "Matched 9 seed signal(s): incident, outage, issue, root cause, failure, alert fatigue",
+      "matched_keywords": "incident; outage; issue; root cause; failure; alert fatigue; false positive; false positives"
+    },
+    {
+      "meeting_id": "01KQ77F2867FC54E13A8C495",
+      "title": "Aegis / Brightpath Commerce - Detect Module Deployment",
+      "reason": "Matched 10 seed signal(s): incident, outage, issue, escalation, root cause, failure",
+      "matched_keywords": "incident; outage; issue; escalation; root cause; failure; alert fatigue; false positive; false positives"
+    },
+    {
+      "meeting_id": "01KQ8C5A044F54EE1774D53C",
+      "title": "Aegis / Helix Data - Post-Incident Review",
+      "reason": "Matched 10 seed signal(s): incident, outage, root cause, not working, failure, false positive",
+      "matched_keywords": "incident; outage; root cause; not working; failure; false positive; false positives; urgent"
+    }
+  ],
+  "internal_planning_roadmap": [
+    {
+      "meeting_id": "01KQ8D9A06510DD623EFB1A6",
+      "title": "Aegis / Pinnacle Insurance - Detect Roadmap Review",
+      "reason": "Matched 8 seed signal(s): roadmap, q2, q3, launch, capacity, timeline",
+      "matched_keywords": "roadmap; q2; q3; launch; capacity; timeline"
+    },
+    {
+      "meeting_id": "01KQCA6EA8B603EBB6C9FE34",
+      "title": "Aegis / Ridgeline Logistics - Identity Roadmap Discussion",
+      "reason": "Matched 8 seed signal(s): roadmap, planning, q3, release, spec, timeline",
+      "matched_keywords": "roadmap; planning; q3; release; spec; timeline"
+    },
+    {
+      "meeting_id": "01KQADF3D76E82BF8BA19AF2",
+      "title": "All Hands - February Wrap",
+      "reason": "Matched 7 seed signal(s): roadmap, planning, q1, q3, sprint, launch",
+      "matched_keywords": "roadmap; planning; q1; q3; sprint; launch; backlog"
+    }
+  ],
+  "onboarding_implementation": [
+    {
+      "meeting_id": "01KQ9BB82FD97C9607D57E90",
+      "title": "Aegis / Coastal Living Co - Onboarding Kickoff",
+      "reason": "Matched 8 seed signal(s): onboarding, implementation, kickoff, setup, configuration, configure",
+      "matched_keywords": "onboarding; implementation; kickoff; setup; configuration; configure"
+    },
+    {
+      "meeting_id": "01KQ560FF1570C5E7F71D752",
+      "title": "Aegis / Coastal Living Co - Protect Module Expansion",
+      "reason": "Matched 9 seed signal(s): onboarding, implementation, kickoff, setup, deployment, migration",
+      "matched_keywords": "onboarding; implementation; kickoff; setup; deployment; migration; configuration; implementation plan"
+    },
+    {
+      "meeting_id": "01KQC3A2EBC501837E973B16",
+      "title": "Aegis / Frostbyte AI - Identity Module Setup",
+      "reason": "Matched 11 seed signal(s): onboarding, implementation, kickoff, setup, migration, configuration",
+      "matched_keywords": "onboarding; implementation; kickoff; setup; migration; configuration; configure; rollout; working session"
+    }
+  ],
+  "product_feedback_feature_gap": [
+    {
+      "meeting_id": "01KQ65D43540846FA994B6C4",
+      "title": "Aegis / Frostbyte AI - Product Feedback",
+      "reason": "Matched 10 seed signal(s): feedback, feature gap, gap, pain point, pain points, request",
+      "matched_keywords": "feedback; feature gap; gap; pain point; pain points; request; feature request; manual"
+    },
+    {
+      "meeting_id": "01KQ51DC4345D9DAE005678C",
+      "title": "Aegis / Redwood Clinical - Product Feedback Session",
+      "reason": "Matched 11 seed signal(s): feedback, feature gap, gap, pain point, pain points, request",
+      "matched_keywords": "feedback; feature gap; gap; pain point; pain points; request; feature request; could eventually; manual"
+    },
+    {
+      "meeting_id": "01KQ25D8AED944B5D2A9FF60",
+      "title": "Support Case #1514 - Meridian Capital Granular Restore Request",
+      "reason": "Matched 6 seed signal(s): feedback, request, feature request, manual",
+      "matched_keywords": "feedback; request; feature request; manual"
+    }
+  ],
+  "renewal_expansion": [
+    {
+      "meeting_id": "01KQD199788883B6F18C81E8",
+      "title": "Aegis / Atlas Precision - Annual Review & Renewal",
+      "reason": "Matched 8 seed signal(s): renewal, add-on, pricing, term, proposal, annual",
+      "matched_keywords": "renewal; add-on; pricing; term; proposal; annual"
+    },
+    {
+      "meeting_id": "01KQ1DC6CA536DE1B31ED8F5",
+      "title": "Aegis / Atlas Precision - Contract Discussion",
+      "reason": "Matched 11 seed signal(s): renewal, add-on, pricing, contract, billing, term",
+      "matched_keywords": "renewal; add-on; pricing; contract; billing; term; proposal; annual; multi-year"
+    },
+    {
+      "meeting_id": "01KQ410FB7E434BA3F99EE7D",
+      "title": "Aegis / Axiom Labs - Multi-Year Renewal",
+      "reason": "Matched 8 seed signal(s): renewal, add-on, pricing, contract, proposal, multi-year",
+      "matched_keywords": "renewal; add-on; pricing; contract; proposal; multi-year"
+    }
+  ]
+}

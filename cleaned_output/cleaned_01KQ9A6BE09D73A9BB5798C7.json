@@ -1,0 +1,375 @@
+{
+  "meeting_id": "01KQ9A6BE09D73A9BB5798C7",
+  "title": "Support Case #3615 - Nimbus Platform Custom Report Request",
+  "organizer_email": "david.kim@aegiscloud.com",
+  "host_email": "david.kim@aegiscloud.com",
+  "start_time": "2026-02-10T15:30:00.000Z",
+  "end_time": "2026-02-10T15:44:06.000Z",
+  "duration_minutes": 14.1,
+  "participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "k.donovan@nimbusplatform.com",
+      "domain": "nimbusplatform.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "k.donovan@nimbusplatform.com",
+      "domain": "nimbusplatform.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "David Kim",
+    "1": "Keith Donovan"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "David Kim",
+      "start_time": 3.5,
+      "end_time": 9.7,
+      "duration": 6.199999999999999,
+      "text": "Hi, this is David Kim calling from Aegis Cloud Security support. Am I speaking with Keith Donovan?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 11.0,
+      "end_time": 14.5,
+      "duration": 3.5,
+      "text": "Yeah, that's me. Hi David, thanks for calling back."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 15.7,
+      "end_time": 25.9,
+      "duration": 10.2,
+      "text": "Of course, absolutely. So I'm calling in reference to support case number 3615. Looks like you submitted a request around custom reporting in Aegis Comply - is that right?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 26.4,
+      "end_time": 41.9,
+      "duration": 15.5,
+      "text": "Yeah, exactly. So we've been using Comply for a few months now and overall it's been fine, but we've run into a pretty specific need that I don't think the platform currently supports, and I wanted to get some clarity on where things stand."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 42.7,
+      "end_time": 51.8,
+      "duration": 9.099999999999994,
+      "text": "Sure, yeah, let's dig into it. Can you walk me through what you're trying to accomplish? Like what does the ideal output look like for you?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 52.9,
+      "end_time": 79.7,
+      "duration": 26.800000000000004,
+      "text": "So right now the reports we're pulling out of Comply are pretty much the standard framework reports, right - you get your SOC 2 summary, your control status, all that. Which is fine. But what we need is the ability to kind of cross-reference controls across multiple frameworks in a single report. So for example, I want to see a control that maps to both SOC 2 and ISO 27001 in the same view, side by side."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 81.1,
+      "end_time": 84.6,
+      "duration": 3.5,
+      "text": "Okay, so a unified cross-framework control mapping report essentially."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 85.1,
+      "end_time": 94.8,
+      "duration": 9.700000000000003,
+      "text": "Exactly. And ideally exportable, you know, to PDF or CSV or something we can hand off to our auditors without them having to reconcile two separate documents."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 96.1,
+      "end_time": 108.8,
+      "duration": 12.700000000000003,
+      "text": "Got it, that makes sense. So currently in Comply you can run reports per framework, but you're right that there's no native cross-framework report builder in the current version. That's - yeah, that's a known gap."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 109.8,
+      "end_time": 122.2,
+      "duration": 12.400000000000006,
+      "text": "Right, yeah, I kind of figured that was the case. So I guess my question is, is this something that's on the roadmap? And if not, is there a workaround we can use in the meantime?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 122.9,
+      "end_time": 136.2,
+      "duration": 13.299999999999983,
+      "text": "Yeah, good question. So let me address the workaround first because that's something I can actually speak to concretely right now. Have you looked at the report export functionality at all? Like the CSV export in particular?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 137.5,
+      "end_time": 143.3,
+      "duration": 5.800000000000011,
+      "text": "I've used it a little bit, yeah. I mean we've exported the individual framework reports."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 144.3,
+      "end_time": 170.7,
+      "duration": 26.399999999999977,
+      "text": "Okay so, um, when you export the control data as CSV, each row does include a control ID field and the framework it belongs to. So technically if you export your SOC 2 data and your ISO 27001 data separately and then join them on the control ID in Excel or whatever tool you're using, you can build a cross-reference that way. It's not elegant, I'll be honest, but it does give you the data."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 171.2,
+      "end_time": 187.6,
+      "duration": 16.400000000000006,
+      "text": "Yeah, I mean, we've actually been doing something like that already. It's just... it's manual, it's error-prone, and frankly for the volume of controls we're managing it takes one of my team members a few hours every quarter. That's the part I'm trying to get rid of."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 188.0,
+      "end_time": 210.7,
+      "duration": 22.69999999999999,
+      "text": "Totally understandable, yeah. That's not a scalable process. So on the roadmap question - I want to be careful not to overpromise here because I'm not on the product side - but I can tell you that custom report building and cross-framework mapping is something that's been flagged as a feature request by multiple customers. I don't have a timeline I can give you officially."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 212.0,
+      "end_time": 220.7,
+      "duration": 8.699999999999989,
+      "text": "Okay. Do you have any sense of like, is this something that's being actively worked on, or is it more in the backlog category?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 222.0,
+      "end_time": 244.1,
+      "duration": 22.099999999999994,
+      "text": "Honestly I don't have visibility into the specific prioritization, and I wouldn't want to guess on that. What I can do is make sure this case gets properly escalated to our product team with the specific use case you've described - the cross-framework mapping, the export requirement, the auditor workflow. That kind of detailed context actually does help when they're doing prioritization."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 245.1,
+      "end_time": 260.6,
+      "duration": 15.500000000000028,
+      "text": "Sure, yeah, that'd be helpful. I'd also say, I mean, if there's a beta program or any kind of early access thing for new Comply features, we'd be interested in participating. We have a pretty well-defined compliance program here so we can give solid feedback."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 262.0,
+      "end_time": 276.6,
+      "duration": 14.600000000000023,
+      "text": "Yeah, that's worth noting. I'll include that in the escalation as well - that Nimbus Platform is interested in early access for Comply feature development. We do have beta programs from time to time so it's definitely worth having that on file."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 277.1,
+      "end_time": 290.4,
+      "duration": 13.299999999999955,
+      "text": "Great. And just so I understand the process - when you escalate this, what happens from there? Like will I hear back from someone on the product team directly, or does it just go into a queue somewhere?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 291.1,
+      "end_time": 315.3,
+      "duration": 24.19999999999999,
+      "text": "So the way it typically works is I'll document the feature request in our internal system and it gets routed to the product management team. They don't usually reach out directly to customers unless they're doing discovery interviews or beta testing, but your account manager - I think that's Sarah Chen on your account - she should be able to give you periodic updates on where things land."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 316.3,
+      "end_time": 319.9,
+      "duration": 3.599999999999966,
+      "text": "Okay, yeah, I know Sarah. I'll follow up with her too."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 321.0,
+      "end_time": 338.8,
+      "duration": 17.80000000000001,
+      "text": "Good, yeah, that's probably the best channel for that kind of visibility. Um, let me also just confirm - are there other frameworks besides SOC 2 and ISO 27001 that you'd want included in this cross-framework report? Just want to make sure I'm capturing the full scope of the request."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 339.3,
+      "end_time": 352.3,
+      "duration": 13.0,
+      "text": "Yeah, good question. We're also doing PCI DSS assessments, so ideally PCI would be in there too. Those three - SOC 2, ISO 27001, PCI DSS - those are the ones we're actively reporting against right now."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 353.0,
+      "end_time": 362.8,
+      "duration": 9.800000000000011,
+      "text": "Got it. SOC 2, ISO 27001, PCI DSS, cross-framework mapping in a single exportable report. I'll make sure all of that is in the feature request documentation."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 363.8,
+      "end_time": 386.6,
+      "duration": 22.80000000000001,
+      "text": "Yeah, and I guess the other thing I'd add is just - the format matters a lot. Like if it's just a flat list of controls, that's okay, but what we really want is something that shows the relationship. Like here's a control, here's how it maps in SOC 2, here's the equivalent in ISO, here's the PCI control it relates to. A matrix format basically."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 387.1,
+      "end_time": 391.9,
+      "duration": 4.7999999999999545,
+      "text": "A control mapping matrix, yeah. That's a useful distinction, I'll note that specifically."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 392.5,
+      "end_time": 400.6,
+      "duration": 8.100000000000023,
+      "text": "Right. Because I've seen some tools that do cross-framework exports but it's just... three separate lists concatenated, which doesn't really solve the problem."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 401.5,
+      "end_time": 428.0,
+      "duration": 26.5,
+      "text": "Yeah, fair point. Okay so I think I have a pretty complete picture of what you're looking for. Let me just recap to make sure I've got it right - you need a custom report in Aegis Comply that provides a cross-framework control mapping matrix across SOC 2, ISO 27001, and PCI DSS, showing the relationships between equivalent controls, and exportable in PDF or CSV format for use in auditor handoffs. Does that capture it?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 428.5,
+      "end_time": 430.8,
+      "duration": 2.3000000000000114,
+      "text": "Yeah, that's it exactly. You got it."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 432.0,
+      "end_time": 457.0,
+      "duration": 25.0,
+      "text": "Perfect. So here's what I'll do - I'll update the case notes with all of this, escalate it as a formal feature request to the product team with the business context and the specific formatting requirements you described, and I'll flag Nimbus Platform as a candidate for early access. Is there anything else related to this case or anything else in Comply that I can help with while I have you?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 457.4,
+      "end_time": 468.4,
+      "duration": 11.0,
+      "text": "Um, not on this particular issue, no. I think that covers it. I guess just... is there a case number I should reference if I want to follow up on this?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 468.7,
+      "end_time": 480.8,
+      "duration": 12.100000000000023,
+      "text": "Yeah, it's the same case number - 3615. That'll be the reference for this entire request. And you'll get an email confirmation with the updated case notes once I close out the call documentation today."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 481.3,
+      "end_time": 483.4,
+      "duration": 2.099999999999966,
+      "text": "Perfect. Alright, appreciate the help David."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 483.7,
+      "end_time": 494.4,
+      "duration": 10.699999999999989,
+      "text": "Of course, happy to help. Good luck with the audit cycles, and hopefully we'll have something more concrete for you on the product side before too long. Have a good one."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 495.1,
+      "end_time": 496.6,
+      "duration": 1.5,
+      "text": "You too, thanks. Bye."
+    }
+  ],
+  "transcript_text": "David Kim: Hi, this is David Kim calling from Aegis Cloud Security support. Am I speaking with Keith Donovan?\nKeith Donovan: Yeah, that's me. Hi David, thanks for calling back.\nDavid Kim: Of course, absolutely. So I'm calling in reference to support case number 3615. Looks like you submitted a request around custom reporting in Aegis Comply - is that right?\nKeith Donovan: Yeah, exactly. So we've been using Comply for a few months now and overall it's been fine, but we've run into a pretty specific need that I don't think the platform currently supports, and I wanted to get some clarity on where things stand.\nDavid Kim: Sure, yeah, let's dig into it. Can you walk me through what you're trying to accomplish? Like what does the ideal output look like for you?\nKeith Donovan: So right now the reports we're pulling out of Comply are pretty much the standard framework reports, right - you get your SOC 2 summary, your control status, all that. Which is fine. But what we need is the ability to kind of cross-reference controls across multiple frameworks in a single report. So for example, I want to see a control that maps to both SOC 2 and ISO 27001 in the same view, side by side.\nDavid Kim: Okay, so a unified cross-framework control mapping report essentially.\nKeith Donovan: Exactly. And ideally exportable, you know, to PDF or CSV or something we can hand off to our auditors without them having to reconcile two separate documents.\nDavid Kim: Got it, that makes sense. So currently in Comply you can run reports per framework, but you're right that there's no native cross-framework report builder in the current version. That's - yeah, that's a known gap.\nKeith Donovan: Right, yeah, I kind of figured that was the case. So I guess my question is, is this something that's on the roadmap? And if not, is there a workaround we can use in the meantime?\nDavid Kim: Yeah, good question. So let me address the workaround first because that's something I can actually speak to concretely right now. Have you looked at the report export functionality at all? Like the CSV export in particular?\nKeith Donovan: I've used it a little bit, yeah. I mean we've exported the individual framework reports.\nDavid Kim: Okay so, um, when you export the control data as CSV, each row does include a control ID field and the framework it belongs to. So technically if you export your SOC 2 data and your ISO 27001 data separately and then join them on the control ID in Excel or whatever tool you're using, you can build a cross-reference that way. It's not elegant, I'll be honest, but it does give you the data.\nKeith Donovan: Yeah, I mean, we've actually been doing something like that already. It's just... it's manual, it's error-prone, and frankly for the volume of controls we're managing it takes one of my team members a few hours every quarter. That's the part I'm trying to get rid of.\nDavid Kim: Totally understandable, yeah. That's not a scalable process. So on the roadmap question - I want to be careful not to overpromise here because I'm not on the product side - but I can tell you that custom report building and cross-framework mapping is something that's been flagged as a feature request by multiple customers. I don't have a timeline I can give you officially.\nKeith Donovan: Okay. Do you have any sense of like, is this something that's being actively worked on, or is it more in the backlog category?\nDavid Kim: Honestly I don't have visibility into the specific prioritization, and I wouldn't want to guess on that. What I can do is make sure this case gets properly escalated to our product team with the specific use case you've described - the cross-framework mapping, the export requirement, the auditor workflow. That kind of detailed context actually does help when they're doing prioritization.\nKeith Donovan: Sure, yeah, that'd be helpful. I'd also say, I mean, if there's a beta program or any kind of early access thing for new Comply features, we'd be interested in participating. We have a pretty well-defined compliance program here so we can give solid feedback.\nDavid Kim: Yeah, that's worth noting. I'll include that in the escalation as well - that Nimbus Platform is interested in early access for Comply feature development. We do have beta programs from time to time so it's definitely worth having that on file.\nKeith Donovan: Great. And just so I understand the process - when you escalate this, what happens from there? Like will I hear back from someone on the product team directly, or does it just go into a queue somewhere?\nDavid Kim: So the way it typically works is I'll document the feature request in our internal system and it gets routed to the product management team. They don't usually reach out directly to customers unless they're doing discovery interviews or beta testing, but your account manager - I think that's Sarah Chen on your account - she should be able to give you periodic updates on where things land.\nKeith Donovan: Okay, yeah, I know Sarah. I'll follow up with her too.\nDavid Kim: Good, yeah, that's probably the best channel for that kind of visibility. Um, let me also just confirm - are there other frameworks besides SOC 2 and ISO 27001 that you'd want included in this cross-framework report? Just want to make sure I'm capturing the full scope of the request.\nKeith Donovan: Yeah, good question. We're also doing PCI DSS assessments, so ideally PCI would be in there too. Those three - SOC 2, ISO 27001, PCI DSS - those are the ones we're actively reporting against right now.\nDavid Kim: Got it. SOC 2, ISO 27001, PCI DSS, cross-framework mapping in a single exportable report. I'll make sure all of that is in the feature request documentation.\nKeith Donovan: Yeah, and I guess the other thing I'd add is just - the format matters a lot. Like if it's just a flat list of controls, that's okay, but what we really want is something that shows the relationship. Like here's a control, here's how it maps in SOC 2, here's the equivalent in ISO, here's the PCI control it relates to. A matrix format basically.\nDavid Kim: A control mapping matrix, yeah. That's a useful distinction, I'll note that specifically.\nKeith Donovan: Right. Because I've seen some tools that do cross-framework exports but it's just... three separate lists concatenated, which doesn't really solve the problem.\nDavid Kim: Yeah, fair point. Okay so I think I have a pretty complete picture of what you're looking for. Let me just recap to make sure I've got it right - you need a custom report in Aegis Comply that provides a cross-framework control mapping matrix across SOC 2, ISO 27001, and PCI DSS, showing the relationships between equivalent controls, and exportable in PDF or CSV format for use in auditor handoffs. Does that capture it?\nKeith Donovan: Yeah, that's it exactly. You got it.\nDavid Kim: Perfect. So here's what I'll do - I'll update the case notes with all of this, escalate it as a formal feature request to the product team with the business context and the specific formatting requirements you described, and I'll flag Nimbus Platform as a candidate for early access. Is there anything else related to this case or anything else in Comply that I can help with while I have you?\nKeith Donovan: Um, not on this particular issue, no. I think that covers it. I guess just... is there a case number I should reference if I want to follow up on this?\nDavid Kim: Yeah, it's the same case number - 3615. That'll be the reference for this entire request. And you'll get an email confirmation with the updated case notes once I close out the call documentation today.\nKeith Donovan: Perfect. Alright, appreciate the help David.\nDavid Kim: Of course, happy to help. Good luck with the audit cycles, and hopefully we'll have something more concrete for you on the product side before too long. Have a good one.\nKeith Donovan: You too, thanks. Bye.",
+  "summary": "David Kim from Aegis Cloud Security support called Keith Donovan of Nimbus Platform regarding support case 3615, which involves a feature gap in Aegis Comply around custom cross-framework reporting. Keith needs a control mapping matrix that spans SOC 2, ISO 27001, and PCI DSS in a single exportable report for auditor handoffs, which the platform does not currently support natively. David confirmed the gap, explained a manual CSV workaround that Keith's team is already using but finds unsustainable, and committed to escalating a formal feature request to the product team. David also flagged Nimbus Platform as a candidate for early access/beta programs and directed Keith to his account manager Sarah Chen for future roadmap visibility.",
+  "topics": [
+    "feature gap",
+    "custom reporting",
+    "compliance frameworks",
+    "product roadmap",
+    "audit workflow",
+    "early access program"
+  ],
+  "action_items": [
+    "David Kim: Escalate formal feature request (case 3615) to product team with full business context, cross-framework matrix format requirements, and SOC 2/ISO 27001/PCI DSS scope",
+    "David Kim: Flag Nimbus Platform as a candidate for early access and beta programs in the escalation documentation",
+    "David Kim: Send email confirmation with updated case notes to Keith Donovan after closing call documentation",
+    "Keith Donovan: Follow up with account manager Sarah Chen for periodic roadmap and feature request status updates"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.5,
+  "key_moments": [
+    {
+      "time": 90.0,
+      "text": "Keith describes the core feature gap: no native cross-framework control mapping report exists in Aegis Comply",
+      "type": "feature_gap",
+      "speaker": "Keith Donovan"
+    },
+    {
+      "time": 285.0,
+      "text": "Keith reveals his team already uses the manual CSV workaround but it takes hours each quarter and is error-prone, signaling process pain and scalability concern",
+      "type": "concern",
+      "speaker": "Keith Donovan"
+    },
+    {
+      "time": 420.0,
+      "text": "Keith expresses interest in participating in a beta or early access program, indicating engagement and willingness to invest in the platform",
+      "type": "positive_pivot",
+      "speaker": "Keith Donovan"
+    },
+    {
+      "time": 660.0,
+      "text": "Keith specifies the need for a true control mapping matrix format showing relationships across SOC 2, ISO 27001, and PCI DSS, not just concatenated lists",
+      "type": "feature_gap",
+      "speaker": "Keith Donovan"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "David Kim",
+      "event_type": "Join",
+      "time_seconds": 4.0,
+      "timestamp_ms": 1770737404000
+    },
+    {
+      "participant_name": "Keith Donovan",
+      "event_type": "Join",
+      "time_seconds": 25.0,
+      "timestamp_ms": 1770737425000
+    },
+    {
+      "participant_name": "David Kim",
+      "event_type": "Leave",
+      "time_seconds": 819.0,
+      "timestamp_ms": 1770738219000
+    },
+    {
+      "participant_name": "Keith Donovan",
+      "event_type": "Leave",
+      "time_seconds": 823.0,
+      "timestamp_ms": 1770738223000
+    }
+  ],
+  "stats": {
+    "turn_count": 36,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "David Kim": 18,
+      "Keith Donovan": 18
+    },
+    "speaker_total_seconds": {
+      "David Kim": 271.7,
+      "Keith Donovan": 192.0
+    }
+  }
+}

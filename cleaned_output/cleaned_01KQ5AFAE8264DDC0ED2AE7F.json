@@ -1,0 +1,449 @@
+{
+  "meeting_id": "01KQ5AFAE8264DDC0ED2AE7F",
+  "title": "Aegis / Crestline Wealth - Identity Module Deployment",
+  "organizer_email": "rachel.torres@aegiscloud.com",
+  "host_email": "rachel.torres@aegiscloud.com",
+  "start_time": "2026-04-24T16:45:00.000Z",
+  "end_time": "2026-04-24T17:20:42.000Z",
+  "duration_minutes": 35.7,
+  "participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "d.owens@crestlinewealth.com",
+      "domain": "crestlinewealth.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "d.owens@crestlinewealth.com",
+      "domain": "crestlinewealth.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Rachel Torres",
+    "1": "Derek Owens",
+    "2": "Sofia Petrov"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 3.7,
+      "end_time": 8.4,
+      "duration": 4.7,
+      "text": "Alright, I think we've got everyone on - Derek, can you hear us okay?"
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 9.1,
+      "end_time": 11.6,
+      "duration": 2.5,
+      "text": "Yeah, loud and clear. Good to go."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 12.8,
+      "end_time": 27.4,
+      "duration": 14.599999999999998,
+      "text": "Perfect. Okay so, welcome everyone - I'm Rachel Torres, Senior Account Manager here at Aegis, and I have Sofia Petrov with me today, she's one of our Senior Engineers on the Identity side of things. Sofia, you wanna say a quick hi?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 28.3,
+      "end_time": 40.9,
+      "duration": 12.599999999999998,
+      "text": "Hey Derek, great to meet you. Really excited to be working with Crestline on this - Identity deployments in financial services are kind of my favorite thing to dig into, so, yeah, looking forward to the conversation."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 41.6,
+      "end_time": 53.6,
+      "duration": 12.0,
+      "text": "Likewise, honestly. I've been looking forward to this one. We've had Protect and Detect running for a while now and the team's been happy, so adding Identity feels like a natural next step."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 54.8,
+      "end_time": 74.2,
+      "duration": 19.400000000000006,
+      "text": "That's great to hear, and yeah, that's - that's kind of the pattern we see with a lot of our financial services customers. They start with backup and threat monitoring and then once Identity is on the roadmap it sort of becomes a priority real fast, especially given the regulatory environment you're dealing with."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 75.2,
+      "end_time": 89.4,
+      "duration": 14.200000000000003,
+      "text": "Exactly, yeah. We had our annual audit in February and the auditors flagged some gaps around privileged access management and MFA coverage across our admin accounts specifically. So that sort of lit a fire under us to get this moving."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 90.6,
+      "end_time": 99.5,
+      "duration": 8.900000000000006,
+      "text": "Okay, that's - that's actually super helpful context, Derek, thank you. So Sofia, that kind of shapes where we should probably start today, right?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 100.8,
+      "end_time": 113.6,
+      "duration": 12.799999999999997,
+      "text": "Yeah, absolutely. So Derek, before I get into the actual deployment steps, can you give me a quick picture of your current identity landscape? Like, what are you using today for SSO or directory services, if anything?"
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 114.5,
+      "end_time": 140.0,
+      "duration": 25.5,
+      "text": "Sure, so we're running Azure AD - or I guess it's Entra ID now, still getting used to that name - for our primary directory. We've got about 340 users total, around 40 of those are in elevated or admin roles. MFA right now is a mix of, uh, Nextera Authenticator and some legacy SMS-based auth that we've been meaning to deprecate for a while but just haven't gotten around to it."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 141.4,
+      "end_time": 150.5,
+      "duration": 9.099999999999994,
+      "text": "Okay, great. And the SMS-based stuff - is that mostly for a specific group of users or is it kind of scattered across different departments?"
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 151.0,
+      "end_time": 165.2,
+      "duration": 14.199999999999989,
+      "text": "Honestly it's a bit scattered. I think it's probably 20, maybe 25 users, a lot of them are in our wealth advisory group. Some of the senior advisors have been resistant to changing their auth flow, if I'm being honest."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 166.7,
+      "end_time": 187.6,
+      "duration": 20.900000000000006,
+      "text": "Ha, yeah, that's - that's a very common story. We hear that a lot. The good news is Aegis Identity has some tooling around phased MFA policy rollout that makes that transition a lot smoother. You can essentially grandfather users into a migration window rather than doing a hard cutover, which tends to reduce the, uh, the pushback significantly."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 188.9,
+      "end_time": 202.4,
+      "duration": 13.5,
+      "text": "Oh that's actually really good to know. My manager was asking about that specifically - like whether we'd have to do a big bang cutover. I was not looking forward to that conversation with the advisory team."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 203.3,
+      "end_time": 209.5,
+      "duration": 6.199999999999989,
+      "text": "You can tell your manager that's a hard no on the big bang approach. We've got you."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 210.9,
+      "end_time": 221.4,
+      "duration": 10.5,
+      "text": "I love it. Okay so Sofia, do you want to walk Derek through sort of the high level deployment phases? I think that'll help frame the rest of the conversation."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 222.9,
+      "end_time": 254.8,
+      "duration": 31.900000000000006,
+      "text": "Yeah, definitely. So, at a high level we're looking at three phases for a deployment like yours. Phase one is directory sync and SSO configuration - basically getting Aegis Identity talking to your Entra ID environment, setting up the SAML or OIDC connectors, depending on what your apps support. Phase two is MFA policy configuration and enrollment, which is where we'd handle that phased migration you mentioned. And then phase three is privileged access management, which sounds like it's actually going to be really important for you given what the auditors flagged."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 255.7,
+      "end_time": 268.2,
+      "duration": 12.5,
+      "text": "Yeah, the PAM piece is huge for us. Can you tell me a bit more about what that looks like in practice? Like, are we talking just session recording, or is there more to it?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 269.0,
+      "end_time": 297.5,
+      "duration": 28.5,
+      "text": "So it's quite a bit more than just session recording, which I think you'll find pretty compelling. Aegis Identity gives you just-in-time access provisioning for admin roles, so instead of users having standing admin privileges 24/7, they request elevated access for a specific window, it gets approved through a workflow, and then it auto-expires. You still get full session recording and audit logs, but the just-in-time piece is really what closes that standing privilege gap that auditors love to flag."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 298.7,
+      "end_time": 318.1,
+      "duration": 19.400000000000034,
+      "text": "Okay, that's - yeah, that's exactly what we need. That's honestly the thing that's going to make my auditors happiest. We've had a few instances where terminated employees still had admin access longer than they should have because the offboarding process wasn't fully automated, and that's a conversation I don't want to have again."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 319.0,
+      "end_time": 338.7,
+      "duration": 19.69999999999999,
+      "text": "The automated deprovisioning is actually one of the things our financial services customers consistently call out as like a - a real pain point solved. We can tie it directly into your HR system or your ticketing system so the moment an offboarding ticket is triggered, access is revoked automatically. No manual steps, full audit trail."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 339.1,
+      "end_time": 342.1,
+      "duration": 3.0,
+      "text": "We're using ServiceNow for ITSM, would that work?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 343.2,
+      "end_time": 349.5,
+      "duration": 6.300000000000011,
+      "text": "ServiceNow is one of our, uh, supported integrations out of the box, yeah. We've got a native connector."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 350.7,
+      "end_time": 353.3,
+      "duration": 2.6000000000000227,
+      "text": "Perfect. Okay I'm taking notes furiously over here."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 353.9,
+      "end_time": 372.2,
+      "duration": 18.30000000000001,
+      "text": "Ha, I love to hear it. So Derek, just while we're talking timelines - you mentioned the audit flagged some gaps. Do you have a target date in mind for when you want to have the Identity module fully deployed? Like, is there a next audit or a compliance checkpoint you're working toward?"
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 372.9,
+      "end_time": 389.2,
+      "duration": 16.30000000000001,
+      "text": "Yeah, so our next internal compliance review is in August, and I'd really love to have everything buttoned up by end of July at the latest so we have time to generate some reports and actually show progress. Is that - is that a realistic window?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 389.5,
+      "end_time": 407.3,
+      "duration": 17.80000000000001,
+      "text": "End of July is very doable. If we can get the kickoff scheduled within the next week or two, we're looking at roughly ten to twelve weeks of deployment work depending on how complex the app integrations get, and that puts us comfortably in the early July range for full deployment."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 408.0,
+      "end_time": 415.9,
+      "duration": 7.899999999999977,
+      "text": "That's - yeah, that's better than I was expecting honestly. I had budgeted for like a four month process in my head."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 417.1,
+      "end_time": 440.7,
+      "duration": 23.599999999999966,
+      "text": "I mean, it can get longer if there are a lot of custom app integrations or if there's a lot of back and forth on MFA policy decisions, but for your environment as you've described it - 340 users, existing Entra ID foundation - we've got a really solid baseline to work from. Sofia's done probably a dozen of these in the financial services space at this point."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 441.3,
+      "end_time": 443.6,
+      "duration": 2.3000000000000114,
+      "text": "Closer to fifteen actually, but who's counting."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 444.6,
+      "end_time": 466.5,
+      "duration": 21.899999999999977,
+      "text": "Ha, even better. Oh, one thing I did want to mention while I have you both - I saw the announcement about Aegis Comply v2 that went out earlier this month. We're not currently on the Comply module but the on-demand SOC 2 and the multi-framework reporting - that caught my eye. Is that something we could potentially layer in down the road?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 467.4,
+      "end_time": 493.7,
+      "duration": 26.30000000000001,
+      "text": "Oh, absolutely. And honestly the timing is great because the Identity deployment is going to generate a ton of the underlying audit data that Comply v2 pulls into those reports. Like, all of the access logs, the privileged session records, the MFA enrollment status - that all feeds directly into the compliance reporting engine. So by the time you're ready to look at Comply, you'll already have months of clean data to work with."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 494.7,
+      "end_time": 505.0,
+      "duration": 10.300000000000011,
+      "text": "Oh that's a really good point, I hadn't thought about it that way. So it's not like starting from scratch with Comply, we'd already have a head start."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 505.4,
+      "end_time": 525.7,
+      "duration": 20.300000000000068,
+      "text": "Exactly. And just so you know, Comply v2 has SOC 2, PCI DSS, HIPAA, and ISO 27001 all supported now as of the April launch. I know financial services customers often need to juggle multiple frameworks, so having all of that in one place on demand - no more waiting for quarterly report runs - it's pretty compelling."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 526.3,
+      "end_time": 540.9,
+      "duration": 14.600000000000023,
+      "text": "Yeah, I'm going to bring that up with our Chief Compliance Officer. She's been asking about the SOC 2 reporting specifically. But let's - let's get Identity locked in first and then circle back on Comply. One thing at a time."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 541.6,
+      "end_time": 563.9,
+      "duration": 22.299999999999955,
+      "text": "Totally, that's the right approach. Okay so in terms of next steps - I'm going to send over a deployment plan document after this call that Sofia will put together, it'll have the three phases laid out with rough timelines, the integration checklist for the Entra ID connector and ServiceNow, and what we'll need from your side to get started. Does that work?"
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 564.5,
+      "end_time": 578.2,
+      "duration": 13.700000000000045,
+      "text": "Yeah, that's perfect. If you can also include the MFA migration framework stuff Sofia mentioned - the phased rollout approach - that would be great because I'm going to want to share that with my manager before the kickoff."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 578.9,
+      "end_time": 589.2,
+      "duration": 10.300000000000068,
+      "text": "I'll include a section on that specifically, and I'll flag the just-in-time PAM stuff too since that sounds like it'll be an important talking point for your audit preparation."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 590.3,
+      "end_time": 607.1,
+      "duration": 16.800000000000068,
+      "text": "Awesome. This has been - yeah, this has been really helpful. I feel a lot more confident about the timeline than I did going into this call. I'll loop my manager in on the doc once I get it and then let's get that kickoff on the calendar."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 608.4,
+      "end_time": 621.5,
+      "duration": 13.100000000000023,
+      "text": "Sounds great. We'll aim to get the document to you by end of day Monday, and then we can do a quick kickoff call early next week if that works. Rachel, does that align with what you're thinking?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 622.4,
+      "end_time": 641.0,
+      "duration": 18.600000000000023,
+      "text": "Yep, that works perfectly on our end. Derek, I'll send a calendar invite with a few options for early next week. And as always, if anything comes up before then, don't hesitate to reach out - you've got my direct line. We're really excited to get this moving with the Crestline team."
+    },
+    {
+      "speaker_name": "Derek Owens",
+      "start_time": 642.2,
+      "end_time": 645.4,
+      "duration": 3.199999999999932,
+      "text": "Likewise, thanks so much Rachel, thanks Sofia. Talk soon."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 646.2,
+      "end_time": 647.7,
+      "duration": 1.5,
+      "text": "Take care, Derek!"
+    }
+  ],
+  "transcript_text": "Rachel Torres: Alright, I think we've got everyone on - Derek, can you hear us okay?\nDerek Owens: Yeah, loud and clear. Good to go.\nRachel Torres: Perfect. Okay so, welcome everyone - I'm Rachel Torres, Senior Account Manager here at Aegis, and I have Sofia Petrov with me today, she's one of our Senior Engineers on the Identity side of things. Sofia, you wanna say a quick hi?\nSofia Petrov: Hey Derek, great to meet you. Really excited to be working with Crestline on this - Identity deployments in financial services are kind of my favorite thing to dig into, so, yeah, looking forward to the conversation.\nDerek Owens: Likewise, honestly. I've been looking forward to this one. We've had Protect and Detect running for a while now and the team's been happy, so adding Identity feels like a natural next step.\nRachel Torres: That's great to hear, and yeah, that's - that's kind of the pattern we see with a lot of our financial services customers. They start with backup and threat monitoring and then once Identity is on the roadmap it sort of becomes a priority real fast, especially given the regulatory environment you're dealing with.\nDerek Owens: Exactly, yeah. We had our annual audit in February and the auditors flagged some gaps around privileged access management and MFA coverage across our admin accounts specifically. So that sort of lit a fire under us to get this moving.\nRachel Torres: Okay, that's - that's actually super helpful context, Derek, thank you. So Sofia, that kind of shapes where we should probably start today, right?\nSofia Petrov: Yeah, absolutely. So Derek, before I get into the actual deployment steps, can you give me a quick picture of your current identity landscape? Like, what are you using today for SSO or directory services, if anything?\nDerek Owens: Sure, so we're running Azure AD - or I guess it's Entra ID now, still getting used to that name - for our primary directory. We've got about 340 users total, around 40 of those are in elevated or admin roles. MFA right now is a mix of, uh, Nextera Authenticator and some legacy SMS-based auth that we've been meaning to deprecate for a while but just haven't gotten around to it.\nSofia Petrov: Okay, great. And the SMS-based stuff - is that mostly for a specific group of users or is it kind of scattered across different departments?\nDerek Owens: Honestly it's a bit scattered. I think it's probably 20, maybe 25 users, a lot of them are in our wealth advisory group. Some of the senior advisors have been resistant to changing their auth flow, if I'm being honest.\nSofia Petrov: Ha, yeah, that's - that's a very common story. We hear that a lot. The good news is Aegis Identity has some tooling around phased MFA policy rollout that makes that transition a lot smoother. You can essentially grandfather users into a migration window rather than doing a hard cutover, which tends to reduce the, uh, the pushback significantly.\nDerek Owens: Oh that's actually really good to know. My manager was asking about that specifically - like whether we'd have to do a big bang cutover. I was not looking forward to that conversation with the advisory team.\nSofia Petrov: You can tell your manager that's a hard no on the big bang approach. We've got you.\nRachel Torres: I love it. Okay so Sofia, do you want to walk Derek through sort of the high level deployment phases? I think that'll help frame the rest of the conversation.\nSofia Petrov: Yeah, definitely. So, at a high level we're looking at three phases for a deployment like yours. Phase one is directory sync and SSO configuration - basically getting Aegis Identity talking to your Entra ID environment, setting up the SAML or OIDC connectors, depending on what your apps support. Phase two is MFA policy configuration and enrollment, which is where we'd handle that phased migration you mentioned. And then phase three is privileged access management, which sounds like it's actually going to be really important for you given what the auditors flagged.\nDerek Owens: Yeah, the PAM piece is huge for us. Can you tell me a bit more about what that looks like in practice? Like, are we talking just session recording, or is there more to it?\nSofia Petrov: So it's quite a bit more than just session recording, which I think you'll find pretty compelling. Aegis Identity gives you just-in-time access provisioning for admin roles, so instead of users having standing admin privileges 24/7, they request elevated access for a specific window, it gets approved through a workflow, and then it auto-expires. You still get full session recording and audit logs, but the just-in-time piece is really what closes that standing privilege gap that auditors love to flag.\nDerek Owens: Okay, that's - yeah, that's exactly what we need. That's honestly the thing that's going to make my auditors happiest. We've had a few instances where terminated employees still had admin access longer than they should have because the offboarding process wasn't fully automated, and that's a conversation I don't want to have again.\nSofia Petrov: The automated deprovisioning is actually one of the things our financial services customers consistently call out as like a - a real pain point solved. We can tie it directly into your HR system or your ticketing system so the moment an offboarding ticket is triggered, access is revoked automatically. No manual steps, full audit trail.\nDerek Owens: We're using ServiceNow for ITSM, would that work?\nSofia Petrov: ServiceNow is one of our, uh, supported integrations out of the box, yeah. We've got a native connector.\nDerek Owens: Perfect. Okay I'm taking notes furiously over here.\nRachel Torres: Ha, I love to hear it. So Derek, just while we're talking timelines - you mentioned the audit flagged some gaps. Do you have a target date in mind for when you want to have the Identity module fully deployed? Like, is there a next audit or a compliance checkpoint you're working toward?\nDerek Owens: Yeah, so our next internal compliance review is in August, and I'd really love to have everything buttoned up by end of July at the latest so we have time to generate some reports and actually show progress. Is that - is that a realistic window?\nSofia Petrov: End of July is very doable. If we can get the kickoff scheduled within the next week or two, we're looking at roughly ten to twelve weeks of deployment work depending on how complex the app integrations get, and that puts us comfortably in the early July range for full deployment.\nDerek Owens: That's - yeah, that's better than I was expecting honestly. I had budgeted for like a four month process in my head.\nRachel Torres: I mean, it can get longer if there are a lot of custom app integrations or if there's a lot of back and forth on MFA policy decisions, but for your environment as you've described it - 340 users, existing Entra ID foundation - we've got a really solid baseline to work from. Sofia's done probably a dozen of these in the financial services space at this point.\nSofia Petrov: Closer to fifteen actually, but who's counting.\nDerek Owens: Ha, even better. Oh, one thing I did want to mention while I have you both - I saw the announcement about Aegis Comply v2 that went out earlier this month. We're not currently on the Comply module but the on-demand SOC 2 and the multi-framework reporting - that caught my eye. Is that something we could potentially layer in down the road?\nRachel Torres: Oh, absolutely. And honestly the timing is great because the Identity deployment is going to generate a ton of the underlying audit data that Comply v2 pulls into those reports. Like, all of the access logs, the privileged session records, the MFA enrollment status - that all feeds directly into the compliance reporting engine. So by the time you're ready to look at Comply, you'll already have months of clean data to work with.\nDerek Owens: Oh that's a really good point, I hadn't thought about it that way. So it's not like starting from scratch with Comply, we'd already have a head start.\nRachel Torres: Exactly. And just so you know, Comply v2 has SOC 2, PCI DSS, HIPAA, and ISO 27001 all supported now as of the April launch. I know financial services customers often need to juggle multiple frameworks, so having all of that in one place on demand - no more waiting for quarterly report runs - it's pretty compelling.\nDerek Owens: Yeah, I'm going to bring that up with our Chief Compliance Officer. She's been asking about the SOC 2 reporting specifically. But let's - let's get Identity locked in first and then circle back on Comply. One thing at a time.\nRachel Torres: Totally, that's the right approach. Okay so in terms of next steps - I'm going to send over a deployment plan document after this call that Sofia will put together, it'll have the three phases laid out with rough timelines, the integration checklist for the Entra ID connector and ServiceNow, and what we'll need from your side to get started. Does that work?\nDerek Owens: Yeah, that's perfect. If you can also include the MFA migration framework stuff Sofia mentioned - the phased rollout approach - that would be great because I'm going to want to share that with my manager before the kickoff.\nSofia Petrov: I'll include a section on that specifically, and I'll flag the just-in-time PAM stuff too since that sounds like it'll be an important talking point for your audit preparation.\nDerek Owens: Awesome. This has been - yeah, this has been really helpful. I feel a lot more confident about the timeline than I did going into this call. I'll loop my manager in on the doc once I get it and then let's get that kickoff on the calendar.\nSofia Petrov: Sounds great. We'll aim to get the document to you by end of day Monday, and then we can do a quick kickoff call early next week if that works. Rachel, does that align with what you're thinking?\nRachel Torres: Yep, that works perfectly on our end. Derek, I'll send a calendar invite with a few options for early next week. And as always, if anything comes up before then, don't hesitate to reach out - you've got my direct line. We're really excited to get this moving with the Crestline team.\nDerek Owens: Likewise, thanks so much Rachel, thanks Sofia. Talk soon.\nSofia Petrov: Take care, Derek!",
+  "summary": "Rachel Torres (Senior Account Manager) and Sofia Petrov (Senior Engineer) at Aegis held a pre-deployment discovery call with Derek Owens at Crestline to discuss adding the Aegis Identity module to their existing Protect and Detect deployment. Derek's organization has ~340 users on Entra ID with a mixed MFA environment and needs to address privileged access management gaps flagged in a February audit. Sofia outlined a three-phase deployment approach covering directory sync, MFA policy migration, and PAM, with an end-of-July target that is feasible given Crestline's environment. Derek also expressed interest in Aegis Comply v2 as a future add-on, which Rachel noted would benefit from the audit data generated during the Identity deployment.",
+  "topics": [
+    "identity deployment",
+    "privileged access management",
+    "mfa migration",
+    "compliance audit",
+    "entra id integration",
+    "compliance reporting"
+  ],
+  "action_items": [
+    "Sofia Petrov: Prepare and send deployment plan document by end of day Monday, including three-phase timeline, Entra ID and ServiceNow integration checklist, MFA phased migration framework, and just-in-time PAM overview",
+    "Rachel Torres: Send calendar invite with options for a kickoff call early next week",
+    "Derek Owens: Share deployment plan document with manager for review before the kickoff call",
+    "Derek Owens: Bring Aegis Comply v2 SOC 2 reporting capabilities to the attention of the Chief Compliance Officer"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Derek reveals audit flagged gaps in privileged access management and MFA coverage, driving urgency for Identity deployment",
+      "type": "concern",
+      "speaker": "Derek Owens"
+    },
+    {
+      "time": 310.0,
+      "text": "Sofia confirms phased MFA rollout is supported, eliminating the need for a disruptive big-bang cutover and alleviating Derek's concern about advisor pushback",
+      "type": "positive_pivot",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 520.0,
+      "text": "Derek highlights terminated employees retaining admin access too long due to manual offboarding, reinforcing the PAM and automated deprovisioning need",
+      "type": "concern",
+      "speaker": "Derek Owens"
+    },
+    {
+      "time": 780.0,
+      "text": "Derek raises interest in Aegis Comply v2 after seeing the product announcement, opening a potential upsell opportunity",
+      "type": "feature_gap",
+      "speaker": "Derek Owens"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 5.0,
+      "timestamp_ms": 1777049105000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Join",
+      "time_seconds": 26.0,
+      "timestamp_ms": 1777049126000
+    },
+    {
+      "participant_name": "Derek Owens",
+      "event_type": "Join",
+      "time_seconds": 48.0,
+      "timestamp_ms": 1777049148000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Leave",
+      "time_seconds": 2138.0,
+      "timestamp_ms": 1777051238000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 2123.0,
+      "timestamp_ms": 1777051223000
+    },
+    {
+      "participant_name": "Derek Owens",
+      "event_type": "Leave",
+      "time_seconds": 2113.0,
+      "timestamp_ms": 1777051213000
+    }
+  ],
+  "stats": {
+    "turn_count": 43,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Rachel Torres": 11,
+      "Derek Owens": 18,
+      "Sofia Petrov": 14
+    },
+    "speaker_total_seconds": {
+      "Rachel Torres": 187.5,
+      "Derek Owens": 224.1,
+      "Sofia Petrov": 193.0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "topic_id": 0,
+    "label": "kevin / brien / kevin brien",
+    "top_terms": "kevin, brien, kevin brien, rachel, rachel torres, torres, park, thomas, daniel, lisa",
+    "count": 17,
+    "example_titles": "Aegis / Harborview Banking - Threat Detection Tuning | Aegis / Redwood Clinical - ISO 27001 Preparation | Competitive Response Strategy"
+  },
+  {
+    "topic_id": 1,
+    "label": "nina / ananya / mike",
+    "top_terms": "nina, ananya, mike, ravi, sofia, tyler, ananya sharma, sharma, romano, mike romano",
+    "count": 20,
+    "example_titles": "Detect Team - Sprint Planning | Detect Outage - Root Cause Analysis | Comply v2 - GA Deployment Plan"
+  },
+  {
+    "topic_id": 2,
+    "label": "sarah / chen / sarah chen",
+    "top_terms": "sarah, chen, sarah chen, marcus, marcus williams, williams, jason, jason hoffman, hoffman, derek",
+    "count": 14,
+    "example_titles": "Support Case #8179 - Clearwater Medical Overage Charges Dispute | Support Case #7615 - Crestline Wealth Group Policy Sync Delay | Support Case #3546 - Meridian Capital SCIM Provisioning Request"
+  },
+  {
+    "topic_id": 3,
+    "label": "megan / diana / megan lawson",
+    "top_terms": "megan, diana, megan lawson, lawson, tom, reeves, diana reeves, bradley, tom bradley, brian",
+    "count": 10,
+    "example_titles": "Comply v2 - Adoption Metrics Review | Detect Outage - Post-Incident Review | Detect Outage - Remediation Plan Review"
+  },
+  {
+    "topic_id": 4,
+    "label": "maria / maria santos / santos",
+    "top_terms": "maria, maria santos, santos, want, kevin, derek, grace, alicia, sla, ve",
+    "count": 12,
+    "example_titles": "Aegis / Quantum Edge - Renewal Concerns | Aegis / Ironworks Corp - Vendor Comparison Discussion | Aegis / Ironclad Financial - Account Recovery Check-in"
+  },
+  {
+    "topic_id": 5,
+    "label": "david / kim / david kim",
+    "top_terms": "david, kim, david kim, dominic, flores, dominic flores, kendra, lauren, kendra wallace, wallace",
+    "count": 8,
+    "example_titles": "Support Case #9856 - Silverline Brands Backup Window Exceeded | Support Case #7570 - Silverline Brands Comply v2 License Upgrade | Support Case #6977 - Brightpath Commerce Slow Backup Performance"
+  },
+  {
+    "topic_id": 6,
+    "label": "elena / elena vasquez / vasquez",
+    "top_terms": "elena, elena vasquez, vasquez, vanessa, vanessa cruz, cruz, dana, dana moretti, moretti, isaac",
+    "count": 9,
+    "example_titles": "Support Case #3677 - Coastal Living Co MFA Token Failures | Support Case #8749 - Coastal Living Co SAML Certificate Rotation Bug | Support Case #7537 - Forge Industries Detect Recovery Confirmation"
+  },
+  {
+    "topic_id": 7,
+    "label": "aisha / aisha johnson / johnson",
+    "top_terms": "aisha, aisha johnson, johnson, julia, kendra, stephanie, julia tran, tran, kendra wallace, wallace",
+    "count": 10,
+    "example_titles": "Aegis / Axiom Labs - Multi-Year Renewal | Aegis / Brightpath Commerce - Competitive Evaluation | Aegis / Nova Retail Group - Renewal Discussion"
+  }
+]

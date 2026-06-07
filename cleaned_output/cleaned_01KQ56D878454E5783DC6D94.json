@@ -1,0 +1,434 @@
+{
+  "meeting_id": "01KQ56D878454E5783DC6D94",
+  "title": "Support Case #3536 - Stratos Cloud LogVault Integration Timeout",
+  "organizer_email": "david.kim@aegiscloud.com",
+  "host_email": "david.kim@aegiscloud.com",
+  "start_time": "2026-04-22T12:30:00.000Z",
+  "end_time": "2026-04-22T12:42:48.000Z",
+  "duration_minutes": 12.8,
+  "participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "d.rowe@stratoscloud.io",
+      "domain": "stratoscloud.io",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "d.rowe@stratoscloud.io",
+      "domain": "stratoscloud.io",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "David Kim",
+    "1": "Damien Rowe",
+    "2": "Priya Patel"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "David Kim",
+      "start_time": 6.2,
+      "end_time": 15.5,
+      "duration": 9.3,
+      "text": "Hi, this is David Kim calling from Aegis Cloud Security support, I have case number 3536 here for Stratos Cloud - am I speaking with Damien?"
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 16.3,
+      "end_time": 28.1,
+      "duration": 11.8,
+      "text": "Yeah, yeah that's me. Damien Rowe. Thanks for calling back, I've been waiting on this for like - look, we submitted this ticket yesterday morning and this is kind of urgent for us."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 28.7,
+      "end_time": 40.4,
+      "duration": 11.7,
+      "text": "I completely understand, Damien, and I apologize for the wait. I also have my team lead Priya Patel joining us on the call today, she's been looped in given the priority of the case."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 41.2,
+      "end_time": 47.7,
+      "duration": 6.5,
+      "text": "Hi Damien, thanks for your patience. We definitely want to get to the bottom of this with you today."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 49.1,
+      "end_time": 72.7,
+      "duration": 23.6,
+      "text": "Okay, sure. I appreciate that. So - look, I'll just get into it. We've been running Aegis Detect integrated with our LogVault environment, right, and starting around - I want to say April 18th, maybe 19th - we started seeing consistent timeout errors when Detect tries to push event data to our LogVault HTTP Event Collector endpoint. It's not intermittent, it's basically every... every batch that goes through."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 73.1,
+      "end_time": 82.8,
+      "duration": 9.700000000000003,
+      "text": "Okay, so consistent timeouts hitting the HEC endpoint. And when you say every batch - are these on a scheduled interval or is this continuous streaming from Detect?"
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 83.3,
+      "end_time": 98.7,
+      "duration": 15.400000000000006,
+      "text": "We have it set to push every five minutes. And it was working fine, totally fine, for months before this. Nothing changed on our end - we didn't update LogVault, we didn't change the HEC token, nothing. So whatever broke, it broke on your side."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 99.6,
+      "end_time": 118.6,
+      "duration": 19.0,
+      "text": "I hear you, and I want to be careful not to make assumptions before we dig into the logs, but I do want to look at this thoroughly. Can I ask - are you seeing any error codes coming back, or is it just a straight connection timeout with no response from the HEC endpoint?"
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 120.0,
+      "end_time": 133.6,
+      "duration": 13.599999999999994,
+      "text": "It's a connection timeout. We're not even getting a response code. The connection just... hangs and then drops. Our LogVault team confirmed the HEC endpoint itself is healthy - they're receiving data from other sources without any issues."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 134.6,
+      "end_time": 148.2,
+      "duration": 13.599999999999994,
+      "text": "Okay so LogVault HEC is healthy, other sources pushing fine, only Aegis Detect is timing out. David, I'm wondering if this could be related to the event processing changes that were pushed in the pipeline update earlier this month."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 149.5,
+      "end_time": 161.5,
+      "duration": 12.0,
+      "text": "Yeah, I was thinking the same thing. Damien, I want to ask - do you happen to know your Aegis Detect tenant version? It should be visible in the platform under Settings and then About."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 162.6,
+      "end_time": 172.9,
+      "duration": 10.300000000000011,
+      "text": "Uh, hold on. Let me - yeah, give me a second, I'm pulling it up now. Okay it says... Detect pipeline version 4.1.2, event processor build April 8th."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 173.8,
+      "end_time": 179.6,
+      "duration": 5.799999999999983,
+      "text": "April 8th build. Okay. Priya, that would be the post-remediation build from after the March incident, right?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 180.6,
+      "end_time": 200.5,
+      "duration": 19.900000000000006,
+      "text": "Yes, that's correct. So Damien, I don't know if you were made aware - in mid-March we had a significant incident with the Aegis Detect event processing pipeline. There was a cascading failure that caused monitoring gaps, and we pushed a remediation update that included redundant processing nodes and a circuit breaker pattern in the ingestion layer."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 201.8,
+      "end_time": 220.4,
+      "duration": 18.599999999999994,
+      "text": "Oh, I am very aware of that outage. Yeah, we were one of the customers affected. Six hours of no visibility - that was a really bad week for us. We had to explain to our own leadership why we had blind spots in our threat monitoring. That was not a fun conversation."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 221.0,
+      "end_time": 244.0,
+      "duration": 23.0,
+      "text": "Yeah, we - we really do understand that, and I'm sorry again for the disruption that caused. What I'm wondering now though is whether the circuit breaker implementation in that fix might be contributing to what you're seeing with LogVault. If the outbound connector to your HEC endpoint is getting tripped by the circuit breaker under certain load conditions, that could explain the timeout pattern."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 244.8,
+      "end_time": 254.2,
+      "duration": 9.399999999999977,
+      "text": "So you're telling me the fix for one problem might have caused a new problem? That's - I mean, come on. That's not great to hear."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 255.3,
+      "end_time": 270.3,
+      "duration": 15.0,
+      "text": "I want to be clear that I'm not confirming that yet, we need to look at the logs before I say anything definitively. But it's a hypothesis worth investigating. David, can you pull the outbound connector logs for Stratos on the Detect side?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 270.9,
+      "end_time": 282.6,
+      "duration": 11.700000000000045,
+      "text": "Already on it. Damien, while I'm doing that - can you tell me roughly what volume of events Detect is processing in your environment? Like ballpark events per minute during peak hours?"
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 283.2,
+      "end_time": 295.1,
+      "duration": 11.900000000000034,
+      "text": "Uh, we're a pretty active environment. I'd say during peak - probably somewhere between eight and twelve thousand events per minute. We're a technology company, we've got a lot of infrastructure generating signal."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 295.9,
+      "end_time": 316.0,
+      "duration": 20.100000000000023,
+      "text": "Okay, yeah that's - that's actually useful context. So I'm looking at the connector logs now and... okay, yeah. I'm seeing the circuit breaker state flipping to open on the LogVault HEC connector. It looks like it's tripping because the payload size on the five-minute batch is exceeding the default threshold that was set in the 4.1.2 build."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 316.6,
+      "end_time": 319.4,
+      "duration": 2.7999999999999545,
+      "text": "So what does that mean exactly? In plain terms."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 320.4,
+      "end_time": 341.8,
+      "duration": 21.400000000000034,
+      "text": "So the circuit breaker that was added to protect the pipeline - it has a payload threshold, and at your event volume, the five-minute batch is generating a payload that's hitting that limit. When the circuit breaker trips, it stops the outbound push to LogVault and the connection just drops, which is why you're seeing the timeout with no response code."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 342.7,
+      "end_time": 357.7,
+      "duration": 15.0,
+      "text": "So it's stopping itself from sending data to our SIEM. That means we've had gaps in our LogVault data since the 18th? That's - that's four days of incomplete data. Do you understand what that means for us from a security monitoring standpoint?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 358.8,
+      "end_time": 375.7,
+      "duration": 16.899999999999977,
+      "text": "I do, and I want to be transparent with you - yes, the events during the tripped periods would not have been forwarded to LogVault. They are retained within Aegis Detect itself, so the data isn't lost, but it hasn't been pushed to your HEC endpoint during those windows."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 376.1,
+      "end_time": 384.5,
+      "duration": 8.399999999999977,
+      "text": "Okay so the data exists on your side. Can we backfill it? Can you push the missed events retroactively to our LogVault instance?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 385.4,
+      "end_time": 399.3,
+      "duration": 13.900000000000034,
+      "text": "That's actually something we can do, yes. We have a manual replay function for the outbound connector. What I'd want to do first though is fix the underlying threshold issue so we're not in the same situation after the backfill."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 400.4,
+      "end_time": 403.4,
+      "duration": 3.0,
+      "text": "Yes, absolutely do that first. What's the fix?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 404.7,
+      "end_time": 427.8,
+      "duration": 23.100000000000023,
+      "text": "So we have two options. One - we can adjust the circuit breaker payload threshold for your tenant specifically to accommodate your event volume. Two - we can switch your LogVault integration to use a streaming mode instead of batched pushes, which would distribute the load more evenly and avoid hitting the threshold altogether. Honestly for your volume, streaming is probably the better long-term configuration."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 429.2,
+      "end_time": 435.2,
+      "duration": 6.0,
+      "text": "How long does switching to streaming take to configure? And is there any disruption during the switchover?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 436.5,
+      "end_time": 453.5,
+      "duration": 17.0,
+      "text": "The configuration change itself is pretty quick on our end, maybe fifteen minutes to apply and validate. There'd be a brief pause in forwarding during the switch - we're talking under a minute typically. And then we'd do the backfill right after to make sure you have everything."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 453.8,
+      "end_time": 474.9,
+      "duration": 21.099999999999966,
+      "text": "Okay. Do the streaming mode. And I want a written summary of what happened here - the root cause, the timeline, what data was affected, and what was done to fix it. I need to take that to my leadership and frankly I'm going to need to share it with our security team so they can assess any gaps in coverage."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 475.3,
+      "end_time": 503.2,
+      "duration": 27.899999999999977,
+      "text": "Absolutely, Damien. I'll personally make sure a detailed incident summary is drafted and sent to you - I'd say end of business tomorrow at the latest. And I want to flag that given this is the second significant disruption to your Detect environment this year, I'd like to schedule a call with you and our customer success team to review your overall configuration and make sure we're set up in a way that's more resilient for your environment going forward."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 503.6,
+      "end_time": 521.9,
+      "duration": 18.299999999999955,
+      "text": "Yeah, that conversation needs to happen. I'll be honest with you - my team has been asking questions about whether Aegis Detect is the right platform for us. We're a fast-growing company, we can't be absorbing incidents like this. So that conversation with customer success, fine, but it better be substantive."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 522.7,
+      "end_time": 541.9,
+      "duration": 19.199999999999932,
+      "text": "Understood, and I appreciate you being direct with us about that. That feedback is important and I won't minimize it. Let's get the immediate fix applied today, get you the backfill, and then we'll make sure the follow-up conversation is meaningful. David, can you go ahead and initiate the streaming mode switch for Stratos now?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 542.6,
+      "end_time": 558.5,
+      "duration": 15.899999999999977,
+      "text": "Yeah, doing it now. Damien, you might see a very brief pause in the LogVault feed - like I said, under a minute - and then it should resume and you'll see the stream mode active. I'll confirm with you on the call when it's validated."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 558.8,
+      "end_time": 564.2,
+      "duration": 5.400000000000091,
+      "text": "Fine. And the backfill - how long will that take to actually show up in LogVault?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 565.4,
+      "end_time": 579.4,
+      "duration": 14.0,
+      "text": "Given the volume we're talking about, probably one to two hours for the full four-day backfill to complete. It runs as a background job. I'll send you a confirmation email when it kicks off and another when it completes."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 580.1,
+      "end_time": 593.3,
+      "duration": 13.199999999999932,
+      "text": "Alright. I'll take that. Look - I appreciate you both getting on the call and actually diagnosing this today. I'm still frustrated with the situation, I won't pretend I'm not. But at least we have a path forward."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 594.5,
+      "end_time": 607.7,
+      "duration": 13.200000000000045,
+      "text": "That's completely fair, Damien. We'll get everything wrapped up and make sure you have the documentation you need. Keep an eye out for my email and I'll be in touch as soon as the backfill is confirmed running."
+    },
+    {
+      "speaker_name": "Damien Rowe",
+      "start_time": 609.1,
+      "end_time": 610.6,
+      "duration": 1.5,
+      "text": "Sounds good. Thanks."
+    }
+  ],
+  "transcript_text": "David Kim: Hi, this is David Kim calling from Aegis Cloud Security support, I have case number 3536 here for Stratos Cloud - am I speaking with Damien?\nDamien Rowe: Yeah, yeah that's me. Damien Rowe. Thanks for calling back, I've been waiting on this for like - look, we submitted this ticket yesterday morning and this is kind of urgent for us.\nDavid Kim: I completely understand, Damien, and I apologize for the wait. I also have my team lead Priya Patel joining us on the call today, she's been looped in given the priority of the case.\nPriya Patel: Hi Damien, thanks for your patience. We definitely want to get to the bottom of this with you today.\nDamien Rowe: Okay, sure. I appreciate that. So - look, I'll just get into it. We've been running Aegis Detect integrated with our LogVault environment, right, and starting around - I want to say April 18th, maybe 19th - we started seeing consistent timeout errors when Detect tries to push event data to our LogVault HTTP Event Collector endpoint. It's not intermittent, it's basically every... every batch that goes through.\nDavid Kim: Okay, so consistent timeouts hitting the HEC endpoint. And when you say every batch - are these on a scheduled interval or is this continuous streaming from Detect?\nDamien Rowe: We have it set to push every five minutes. And it was working fine, totally fine, for months before this. Nothing changed on our end - we didn't update LogVault, we didn't change the HEC token, nothing. So whatever broke, it broke on your side.\nDavid Kim: I hear you, and I want to be careful not to make assumptions before we dig into the logs, but I do want to look at this thoroughly. Can I ask - are you seeing any error codes coming back, or is it just a straight connection timeout with no response from the HEC endpoint?\nDamien Rowe: It's a connection timeout. We're not even getting a response code. The connection just... hangs and then drops. Our LogVault team confirmed the HEC endpoint itself is healthy - they're receiving data from other sources without any issues.\nPriya Patel: Okay so LogVault HEC is healthy, other sources pushing fine, only Aegis Detect is timing out. David, I'm wondering if this could be related to the event processing changes that were pushed in the pipeline update earlier this month.\nDavid Kim: Yeah, I was thinking the same thing. Damien, I want to ask - do you happen to know your Aegis Detect tenant version? It should be visible in the platform under Settings and then About.\nDamien Rowe: Uh, hold on. Let me - yeah, give me a second, I'm pulling it up now. Okay it says... Detect pipeline version 4.1.2, event processor build April 8th.\nDavid Kim: April 8th build. Okay. Priya, that would be the post-remediation build from after the March incident, right?\nPriya Patel: Yes, that's correct. So Damien, I don't know if you were made aware - in mid-March we had a significant incident with the Aegis Detect event processing pipeline. There was a cascading failure that caused monitoring gaps, and we pushed a remediation update that included redundant processing nodes and a circuit breaker pattern in the ingestion layer.\nDamien Rowe: Oh, I am very aware of that outage. Yeah, we were one of the customers affected. Six hours of no visibility - that was a really bad week for us. We had to explain to our own leadership why we had blind spots in our threat monitoring. That was not a fun conversation.\nPriya Patel: Yeah, we - we really do understand that, and I'm sorry again for the disruption that caused. What I'm wondering now though is whether the circuit breaker implementation in that fix might be contributing to what you're seeing with LogVault. If the outbound connector to your HEC endpoint is getting tripped by the circuit breaker under certain load conditions, that could explain the timeout pattern.\nDamien Rowe: So you're telling me the fix for one problem might have caused a new problem? That's - I mean, come on. That's not great to hear.\nPriya Patel: I want to be clear that I'm not confirming that yet, we need to look at the logs before I say anything definitively. But it's a hypothesis worth investigating. David, can you pull the outbound connector logs for Stratos on the Detect side?\nDavid Kim: Already on it. Damien, while I'm doing that - can you tell me roughly what volume of events Detect is processing in your environment? Like ballpark events per minute during peak hours?\nDamien Rowe: Uh, we're a pretty active environment. I'd say during peak - probably somewhere between eight and twelve thousand events per minute. We're a technology company, we've got a lot of infrastructure generating signal.\nDavid Kim: Okay, yeah that's - that's actually useful context. So I'm looking at the connector logs now and... okay, yeah. I'm seeing the circuit breaker state flipping to open on the LogVault HEC connector. It looks like it's tripping because the payload size on the five-minute batch is exceeding the default threshold that was set in the 4.1.2 build.\nDamien Rowe: So what does that mean exactly? In plain terms.\nDavid Kim: So the circuit breaker that was added to protect the pipeline - it has a payload threshold, and at your event volume, the five-minute batch is generating a payload that's hitting that limit. When the circuit breaker trips, it stops the outbound push to LogVault and the connection just drops, which is why you're seeing the timeout with no response code.\nDamien Rowe: So it's stopping itself from sending data to our SIEM. That means we've had gaps in our LogVault data since the 18th? That's - that's four days of incomplete data. Do you understand what that means for us from a security monitoring standpoint?\nPriya Patel: I do, and I want to be transparent with you - yes, the events during the tripped periods would not have been forwarded to LogVault. They are retained within Aegis Detect itself, so the data isn't lost, but it hasn't been pushed to your HEC endpoint during those windows.\nDamien Rowe: Okay so the data exists on your side. Can we backfill it? Can you push the missed events retroactively to our LogVault instance?\nDavid Kim: That's actually something we can do, yes. We have a manual replay function for the outbound connector. What I'd want to do first though is fix the underlying threshold issue so we're not in the same situation after the backfill.\nDamien Rowe: Yes, absolutely do that first. What's the fix?\nDavid Kim: So we have two options. One - we can adjust the circuit breaker payload threshold for your tenant specifically to accommodate your event volume. Two - we can switch your LogVault integration to use a streaming mode instead of batched pushes, which would distribute the load more evenly and avoid hitting the threshold altogether. Honestly for your volume, streaming is probably the better long-term configuration.\nDamien Rowe: How long does switching to streaming take to configure? And is there any disruption during the switchover?\nDavid Kim: The configuration change itself is pretty quick on our end, maybe fifteen minutes to apply and validate. There'd be a brief pause in forwarding during the switch - we're talking under a minute typically. And then we'd do the backfill right after to make sure you have everything.\nDamien Rowe: Okay. Do the streaming mode. And I want a written summary of what happened here - the root cause, the timeline, what data was affected, and what was done to fix it. I need to take that to my leadership and frankly I'm going to need to share it with our security team so they can assess any gaps in coverage.\nPriya Patel: Absolutely, Damien. I'll personally make sure a detailed incident summary is drafted and sent to you - I'd say end of business tomorrow at the latest. And I want to flag that given this is the second significant disruption to your Detect environment this year, I'd like to schedule a call with you and our customer success team to review your overall configuration and make sure we're set up in a way that's more resilient for your environment going forward.\nDamien Rowe: Yeah, that conversation needs to happen. I'll be honest with you - my team has been asking questions about whether Aegis Detect is the right platform for us. We're a fast-growing company, we can't be absorbing incidents like this. So that conversation with customer success, fine, but it better be substantive.\nPriya Patel: Understood, and I appreciate you being direct with us about that. That feedback is important and I won't minimize it. Let's get the immediate fix applied today, get you the backfill, and then we'll make sure the follow-up conversation is meaningful. David, can you go ahead and initiate the streaming mode switch for Stratos now?\nDavid Kim: Yeah, doing it now. Damien, you might see a very brief pause in the LogVault feed - like I said, under a minute - and then it should resume and you'll see the stream mode active. I'll confirm with you on the call when it's validated.\nDamien Rowe: Fine. And the backfill - how long will that take to actually show up in LogVault?\nDavid Kim: Given the volume we're talking about, probably one to two hours for the full four-day backfill to complete. It runs as a background job. I'll send you a confirmation email when it kicks off and another when it completes.\nDamien Rowe: Alright. I'll take that. Look - I appreciate you both getting on the call and actually diagnosing this today. I'm still frustrated with the situation, I won't pretend I'm not. But at least we have a path forward.\nPriya Patel: That's completely fair, Damien. We'll get everything wrapped up and make sure you have the documentation you need. Keep an eye out for my email and I'll be in touch as soon as the backfill is confirmed running.\nDamien Rowe: Sounds good. Thanks.",
+  "summary": "Damien Rowe from Stratos Cloud contacted Aegis Cloud Security support regarding consistent timeout errors when Aegis Detect attempted to push event data to their LogVault HTTP Event Collector endpoint, an issue that had been ongoing since April 18th. David Kim and team lead Priya Patel diagnosed the root cause as a circuit breaker payload threshold introduced in the April 8th remediation build (v4.1.2) being triggered by Stratos's high event volume of 8,000-12,000 events per minute during peak hours. The fix involved switching the LogVault integration from batched to streaming mode to distribute load more evenly, followed by a retroactive backfill of four days of missed event data. Damien expressed serious frustration, noting this was the second major disruption this year and that his team was questioning whether to remain on the Aegis Detect platform.",
+  "topics": [
+    "technical issue",
+    "logvault integration",
+    "data backfill",
+    "circuit breaker",
+    "churn risk",
+    "incident follow-up"
+  ],
+  "action_items": [
+    "David Kim: Switch Stratos Cloud's LogVault integration to streaming mode and initiate the four-day event data backfill, sending confirmation emails when the job starts and completes",
+    "Priya Patel: Draft and send a detailed incident summary including root cause, timeline, affected data, and remediation steps by end of business tomorrow",
+    "Priya Patel: Schedule a substantive follow-up call with Damien Rowe and the customer success team to review Stratos Cloud's overall Aegis Detect configuration and address platform reliability concerns"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Damien states the timeout issue is consistent, not intermittent, and that nothing changed on his end, implying the fault lies with Aegis.",
+      "type": "concern",
+      "speaker": "Damien Rowe"
+    },
+    {
+      "time": 330.0,
+      "text": "Damien reveals his company was affected by the March pipeline outage and had to explain six hours of monitoring blind spots to leadership.",
+      "type": "concern",
+      "speaker": "Damien Rowe"
+    },
+    {
+      "time": 520.0,
+      "text": "David Kim confirms the circuit breaker introduced in the 4.1.2 remediation build is tripping on Stratos's payload volume, identifying the root cause of the timeout issue.",
+      "type": "technical_issue",
+      "speaker": "David Kim"
+    },
+    {
+      "time": 780.0,
+      "text": "Damien explicitly states his team has been questioning whether Aegis Detect is the right platform, signaling a serious churn risk.",
+      "type": "churn_signal",
+      "speaker": "Damien Rowe"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Join",
+      "time_seconds": 8.0,
+      "timestamp_ms": 1776861008000
+    },
+    {
+      "participant_name": "David Kim",
+      "event_type": "Join",
+      "time_seconds": 14.0,
+      "timestamp_ms": 1776861014000
+    },
+    {
+      "participant_name": "Damien Rowe",
+      "event_type": "Join",
+      "time_seconds": 47.0,
+      "timestamp_ms": 1776861047000
+    },
+    {
+      "participant_name": "David Kim",
+      "event_type": "Leave",
+      "time_seconds": 756.0,
+      "timestamp_ms": 1776861756000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Leave",
+      "time_seconds": 743.0,
+      "timestamp_ms": 1776861743000
+    },
+    {
+      "participant_name": "Damien Rowe",
+      "event_type": "Leave",
+      "time_seconds": 743.0,
+      "timestamp_ms": 1776861743000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "David Kim": 14,
+      "Damien Rowe": 18,
+      "Priya Patel": 9
+    },
+    "speaker_total_seconds": {
+      "David Kim": 204.6,
+      "Damien Rowe": 209.3,
+      "Priya Patel": 155.2
+    }
+  }
+}

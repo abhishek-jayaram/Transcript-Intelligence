@@ -1,0 +1,557 @@
+{
+  "meeting_id": "01KQ2331EFD78BF3B1CAB747",
+  "title": "Detect Outage - Customer Impact Assessment",
+  "organizer_email": "lisa.park@aegiscloud.com",
+  "host_email": "lisa.park@aegiscloud.com",
+  "start_time": "2026-03-12T13:45:00.000Z",
+  "end_time": "2026-03-12T14:33:00.000Z",
+  "duration_minutes": 48.0,
+  "participants": [
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "aisha.johnson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "diana.reeves@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "aisha.johnson@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Lisa Park",
+    "1": "Diana Reeves",
+    "2": "Aisha Johnson",
+    "3": "Priya Patel"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 5.2,
+      "end_time": 9.7,
+      "duration": 4.499999999999999,
+      "text": "Okay, I think everyone's on now - Diana, can you hear us okay?"
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 10.7,
+      "end_time": 17.1,
+      "duration": 6.400000000000002,
+      "text": "Yeah, I'm here. Sorry, I was just - I had another call running over. Let's get into it."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 18.4,
+      "end_time": 26.9,
+      "duration": 8.5,
+      "text": "No worries. So, um, I wanted to get us all together because the inbound volume from customers this morning has been... it's been a lot."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 28.2,
+      "end_time": 34.0,
+      "duration": 5.800000000000001,
+      "text": "Yeah, same on the support side. We've had - Priya, you want to give the numbers?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 35.2,
+      "end_time": 49.2,
+      "duration": 14.0,
+      "text": "Sure. So as of about thirty minutes ago we had logged forty-seven inbound tickets directly related to the Detect outage. That's just tickets - that doesn't count the calls, the Slack pings through shared channels, emails going directly to AMs."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 50.4,
+      "end_time": 56.6,
+      "duration": 6.200000000000003,
+      "text": "Forty-seven. Okay. And what's the breakdown in terms of severity? Like, are these mostly tier-one enterprise accounts or-"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 57.3,
+      "end_time": 70.2,
+      "duration": 12.900000000000006,
+      "text": "It's across the board honestly. We've got mid-market, we've got enterprise, we've got a couple of SMB accounts who honestly probably shouldn't even be running Detect as a primary monitoring layer but that's a whole other conversation."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 70.8,
+      "end_time": 75.9,
+      "duration": 5.1000000000000085,
+      "text": "Right, right. What about our top ten accounts? I need to know specifically about those."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 77.0,
+      "end_time": 95.0,
+      "duration": 18.0,
+      "text": "So I can speak to a few of those. I've already had calls this morning with Meridian Financial and Talcott Health. Meridian is... they're not happy. Their security team was essentially flying blind for six hours overnight and they're asking really hard questions about whether we have redundancy built into the pipeline."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 96.0,
+      "end_time": 98.5,
+      "duration": 2.5,
+      "text": "And what did you tell them?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 99.7,
+      "end_time": 112.4,
+      "duration": 12.700000000000003,
+      "text": "I told them I was getting answers and that I'd follow up by end of day. I didn't want to - I mean, I don't have the technical details yet, I didn't want to say something wrong."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 113.9,
+      "end_time": 125.3,
+      "duration": 11.399999999999991,
+      "text": "That was the right call, Lisa. Okay, so - does engineering have a root cause yet? Because I am not going to be able to go to these customers without something concrete."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 126.8,
+      "end_time": 141.9,
+      "duration": 15.100000000000009,
+      "text": "We got a preliminary RCA this morning. The short version is there was a single point of failure in the event ingestion pipeline - basically one component went down and it cascaded. No circuit breaker, no fallback. It just... everything fell over."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 142.6,
+      "end_time": 158.6,
+      "duration": 16.0,
+      "text": "Okay so - and I say this with all due respect to the engineering team - how does that happen? How do we ship something into production for a security monitoring product with a single point of failure in the ingestion layer? That's... that's not okay."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 159.3,
+      "end_time": 172.7,
+      "duration": 13.399999999999977,
+      "text": "I mean, I don't disagree, and I don't want to throw anyone under the bus on this call, but yeah, that's a question that needs to get answered. Apparently the redundancy was on the roadmap but hadn't been prioritized."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 173.1,
+      "end_time": 178.8,
+      "duration": 5.700000000000017,
+      "text": "It was on the roadmap. That's what we're going to tell customers? It was on the roadmap?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 179.3,
+      "end_time": 188.5,
+      "duration": 9.199999999999989,
+      "text": "No, obviously not. I'm just - I'm giving you the internal context. We need to separate what we're saying internally from what we're communicating externally."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 189.5,
+      "end_time": 197.4,
+      "duration": 7.900000000000006,
+      "text": "Agreed. Let's focus on what the customer-facing message is. Aisha, you handle Fortex and Brightline - have you talked to them yet?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 197.9,
+      "end_time": 211.8,
+      "duration": 13.900000000000006,
+      "text": "Fortex I spoke to about an hour ago. Their CISO was on the call and she was - I mean, she was professional but she made it very clear that they're evaluating their options. She mentioned SentinelShield by name."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 213.1,
+      "end_time": 214.9,
+      "duration": 1.8000000000000114,
+      "text": "Of course she did."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 216.4,
+      "end_time": 232.1,
+      "duration": 15.699999999999989,
+      "text": "Yeah. And honestly I didn't have a great answer for her because she asked specifically - she said, 'Was there any alerting to your team during those six hours?' And the answer is no, there wasn't. We didn't catch it ourselves, a customer flagged it."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 232.6,
+      "end_time": 236.9,
+      "duration": 4.300000000000011,
+      "text": "Wait - a customer flagged the outage to us? Is that confirmed?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 238.1,
+      "end_time": 249.4,
+      "duration": 11.300000000000011,
+      "text": "That's my understanding, yes. One of our customers noticed their dashboard wasn't updating and opened a ticket around, I think it was 2 AM? And that's what triggered the internal escalation."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 250.8,
+      "end_time": 266.5,
+      "duration": 15.699999999999989,
+      "text": "This is - okay. This is a significant problem beyond just the outage itself. We have a monitoring product and we didn't monitor ourselves. I need to understand how our internal alerting failed before I can get on a call with any of these customers."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 267.5,
+      "end_time": 281.2,
+      "duration": 13.699999999999989,
+      "text": "I've already raised that with the engineering lead. They're including it in the RCA. It sounds like the health checks were tied to the same pipeline that failed, so when the pipeline went down, the health checks stopped firing too."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 281.9,
+      "end_time": 290.0,
+      "duration": 8.100000000000023,
+      "text": "Okay so the thing that was supposed to tell us something was wrong... was the thing that broke. That's - yeah. Okay."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 291.0,
+      "end_time": 295.3,
+      "duration": 4.300000000000011,
+      "text": "It's bad. I'm not going to sugarcoat it. It's a bad look."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 296.4,
+      "end_time": 301.7,
+      "duration": 5.300000000000011,
+      "text": "What's the fix timeline? Like when can we tell customers this won't happen again?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 303.1,
+      "end_time": 316.7,
+      "duration": 13.599999999999966,
+      "text": "Engineering is talking about redundant processing nodes and implementing a circuit breaker pattern. The estimate right now is - and this is preliminary - somewhere around two to three weeks for the full fix to be in prod."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 317.7,
+      "end_time": 321.3,
+      "duration": 3.6000000000000227,
+      "text": "Two to three weeks. Okay. Are customers going to accept that?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 322.0,
+      "end_time": 333.0,
+      "duration": 11.0,
+      "text": "Some will, some won't. Meridian is already asking about SLAs. Their contract has a 99.9% uptime SLA and six hours down is - that's not compliant. We're probably looking at credits."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 334.4,
+      "end_time": 339.1,
+      "duration": 4.7000000000000455,
+      "text": "Yeah, I figured. Have you looped in legal and finance on the SLA exposure?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 339.8,
+      "end_time": 345.1,
+      "duration": 5.300000000000011,
+      "text": "Not yet. I wanted to do this call first but that's my next step."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 346.5,
+      "end_time": 360.0,
+      "duration": 13.5,
+      "text": "Do that today, please. And I want a full list of every customer who has a contractual uptime SLA on Detect - not just our top accounts, all of them - by end of business. Can someone own that?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 360.5,
+      "end_time": 364.6,
+      "duration": 4.100000000000023,
+      "text": "I can pull that from Salesforce. I'll have it by 4 PM."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 366.0,
+      "end_time": 371.4,
+      "duration": 5.399999999999977,
+      "text": "Thank you. Now - communication. We need to get something out. What's gone out so far?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 372.7,
+      "end_time": 385.5,
+      "duration": 12.800000000000011,
+      "text": "We sent a status page update when we detected the issue - well, when the customer flagged it - and then an 'all clear' when service was restored. That's it. No proactive outreach, no executive communication. Nothing."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 386.9,
+      "end_time": 401.3,
+      "duration": 14.400000000000034,
+      "text": "That's not good enough. We need a formal incident communication to go out today. Not from support, from leadership. I'll draft something but I need the technical details from Priya's team and I need it in the next two hours."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 402.6,
+      "end_time": 410.8,
+      "duration": 8.199999999999989,
+      "text": "I'll get you what we have. I'll flag that some of it is still being finalized but I can give you the confirmed facts."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 411.6,
+      "end_time": 419.9,
+      "duration": 8.299999999999955,
+      "text": "That works. Only confirmed facts go in the communication - I don't want us committing to timelines or causes we haven't fully validated."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 421.0,
+      "end_time": 435.1,
+      "duration": 14.100000000000023,
+      "text": "One thing I want to flag - a few customers have already started asking about Comply and whether this affects their audit readiness. Like, they're conflating the Detect outage with the broader platform. We should probably address that proactively."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 436.0,
+      "end_time": 441.3,
+      "duration": 5.300000000000011,
+      "text": "Good point. Comply was not affected, right? Detect and Comply are on completely separate infrastructure?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 441.8,
+      "end_time": 450.0,
+      "duration": 8.199999999999989,
+      "text": "Correct, they're fully separate. Comply v2 is still on track for the April launch. The Detect outage had zero impact on that."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 451.2,
+      "end_time": 459.7,
+      "duration": 8.5,
+      "text": "Okay good. Make sure your AMs are communicating that clearly. The last thing we need is customers thinking the whole platform is unstable."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 460.5,
+      "end_time": 466.6,
+      "duration": 6.100000000000023,
+      "text": "Agreed. I'll put together some talking points and get them to Lisa and Aisha before end of day."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 467.5,
+      "end_time": 477.1,
+      "duration": 9.600000000000023,
+      "text": "That'd be really helpful, thank you Priya. I have like - I have six customer calls this afternoon and I need something concrete I can actually say."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 478.5,
+      "end_time": 487.6,
+      "duration": 9.100000000000023,
+      "text": "Okay. Let's talk about escalation risk. Aisha, you mentioned Fortex is evaluating alternatives. Are there other accounts we should be worried about from a churn standpoint?"
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 488.4,
+      "end_time": 503.6,
+      "duration": 15.200000000000045,
+      "text": "I'd flag Brightline - they're up for renewal in May and the relationship has already been a little rocky. And there's a mid-market account, Kestrel Tech, their CEO is apparently very active on LinkedIn and I wouldn't be surprised if we see something public."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 504.3,
+      "end_time": 517.0,
+      "duration": 12.699999999999989,
+      "text": "Oh great. That's all we need. Okay - I'm going to personally reach out to the Fortex CISO and the Brightline account today. Lisa, I'll need the contact info for whoever you've been talking to at Meridian."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 518.5,
+      "end_time": 521.1,
+      "duration": 2.6000000000000227,
+      "text": "I'll send it over right after this call."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 522.3,
+      "end_time": 540.5,
+      "duration": 18.200000000000045,
+      "text": "Alright. Let's wrap up with action items. Priya - RCA details to Diana by noon. Aisha - SLA exposure list by 4 PM. Lisa - loop in legal and finance, send Diana the Meridian contact. Everyone - review and circulate talking points once Priya has them ready. Does that capture it?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 541.8,
+      "end_time": 544.8,
+      "duration": 3.0,
+      "text": "Yeah, that covers it on my end."
+    },
+    {
+      "speaker_name": "Aisha Johnson",
+      "start_time": 545.9,
+      "end_time": 549.9,
+      "duration": 4.0,
+      "text": "Same. I'll ping you all if anything escalates before end of day."
+    },
+    {
+      "speaker_name": "Diana Reeves",
+      "start_time": 551.2,
+      "end_time": 564.5,
+      "duration": 13.299999999999955,
+      "text": "Please do. And guys - I know this is a tough day. Let's just stay on top of it and make sure our customers feel like we're being straight with them. That's really all we can do right now."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 565.5,
+      "end_time": 567.0,
+      "duration": 1.5,
+      "text": "Agreed. Thanks everyone."
+    }
+  ],
+  "transcript_text": "Lisa Park: Okay, I think everyone's on now - Diana, can you hear us okay?\nDiana Reeves: Yeah, I'm here. Sorry, I was just - I had another call running over. Let's get into it.\nLisa Park: No worries. So, um, I wanted to get us all together because the inbound volume from customers this morning has been... it's been a lot.\nAisha Johnson: Yeah, same on the support side. We've had - Priya, you want to give the numbers?\nPriya Patel: Sure. So as of about thirty minutes ago we had logged forty-seven inbound tickets directly related to the Detect outage. That's just tickets - that doesn't count the calls, the Slack pings through shared channels, emails going directly to AMs.\nDiana Reeves: Forty-seven. Okay. And what's the breakdown in terms of severity? Like, are these mostly tier-one enterprise accounts or-\nPriya Patel: It's across the board honestly. We've got mid-market, we've got enterprise, we've got a couple of SMB accounts who honestly probably shouldn't even be running Detect as a primary monitoring layer but that's a whole other conversation.\nDiana Reeves: Right, right. What about our top ten accounts? I need to know specifically about those.\nLisa Park: So I can speak to a few of those. I've already had calls this morning with Meridian Financial and Talcott Health. Meridian is... they're not happy. Their security team was essentially flying blind for six hours overnight and they're asking really hard questions about whether we have redundancy built into the pipeline.\nDiana Reeves: And what did you tell them?\nLisa Park: I told them I was getting answers and that I'd follow up by end of day. I didn't want to - I mean, I don't have the technical details yet, I didn't want to say something wrong.\nDiana Reeves: That was the right call, Lisa. Okay, so - does engineering have a root cause yet? Because I am not going to be able to go to these customers without something concrete.\nPriya Patel: We got a preliminary RCA this morning. The short version is there was a single point of failure in the event ingestion pipeline - basically one component went down and it cascaded. No circuit breaker, no fallback. It just... everything fell over.\nDiana Reeves: Okay so - and I say this with all due respect to the engineering team - how does that happen? How do we ship something into production for a security monitoring product with a single point of failure in the ingestion layer? That's... that's not okay.\nPriya Patel: I mean, I don't disagree, and I don't want to throw anyone under the bus on this call, but yeah, that's a question that needs to get answered. Apparently the redundancy was on the roadmap but hadn't been prioritized.\nAisha Johnson: It was on the roadmap. That's what we're going to tell customers? It was on the roadmap?\nPriya Patel: No, obviously not. I'm just - I'm giving you the internal context. We need to separate what we're saying internally from what we're communicating externally.\nDiana Reeves: Agreed. Let's focus on what the customer-facing message is. Aisha, you handle Fortex and Brightline - have you talked to them yet?\nAisha Johnson: Fortex I spoke to about an hour ago. Their CISO was on the call and she was - I mean, she was professional but she made it very clear that they're evaluating their options. She mentioned SentinelShield by name.\nLisa Park: Of course she did.\nAisha Johnson: Yeah. And honestly I didn't have a great answer for her because she asked specifically - she said, 'Was there any alerting to your team during those six hours?' And the answer is no, there wasn't. We didn't catch it ourselves, a customer flagged it.\nDiana Reeves: Wait - a customer flagged the outage to us? Is that confirmed?\nPriya Patel: That's my understanding, yes. One of our customers noticed their dashboard wasn't updating and opened a ticket around, I think it was 2 AM? And that's what triggered the internal escalation.\nDiana Reeves: This is - okay. This is a significant problem beyond just the outage itself. We have a monitoring product and we didn't monitor ourselves. I need to understand how our internal alerting failed before I can get on a call with any of these customers.\nPriya Patel: I've already raised that with the engineering lead. They're including it in the RCA. It sounds like the health checks were tied to the same pipeline that failed, so when the pipeline went down, the health checks stopped firing too.\nDiana Reeves: Okay so the thing that was supposed to tell us something was wrong... was the thing that broke. That's - yeah. Okay.\nLisa Park: It's bad. I'm not going to sugarcoat it. It's a bad look.\nAisha Johnson: What's the fix timeline? Like when can we tell customers this won't happen again?\nPriya Patel: Engineering is talking about redundant processing nodes and implementing a circuit breaker pattern. The estimate right now is - and this is preliminary - somewhere around two to three weeks for the full fix to be in prod.\nAisha Johnson: Two to three weeks. Okay. Are customers going to accept that?\nLisa Park: Some will, some won't. Meridian is already asking about SLAs. Their contract has a 99.9% uptime SLA and six hours down is - that's not compliant. We're probably looking at credits.\nDiana Reeves: Yeah, I figured. Have you looped in legal and finance on the SLA exposure?\nLisa Park: Not yet. I wanted to do this call first but that's my next step.\nDiana Reeves: Do that today, please. And I want a full list of every customer who has a contractual uptime SLA on Detect - not just our top accounts, all of them - by end of business. Can someone own that?\nAisha Johnson: I can pull that from Salesforce. I'll have it by 4 PM.\nDiana Reeves: Thank you. Now - communication. We need to get something out. What's gone out so far?\nPriya Patel: We sent a status page update when we detected the issue - well, when the customer flagged it - and then an 'all clear' when service was restored. That's it. No proactive outreach, no executive communication. Nothing.\nDiana Reeves: That's not good enough. We need a formal incident communication to go out today. Not from support, from leadership. I'll draft something but I need the technical details from Priya's team and I need it in the next two hours.\nPriya Patel: I'll get you what we have. I'll flag that some of it is still being finalized but I can give you the confirmed facts.\nDiana Reeves: That works. Only confirmed facts go in the communication - I don't want us committing to timelines or causes we haven't fully validated.\nAisha Johnson: One thing I want to flag - a few customers have already started asking about Comply and whether this affects their audit readiness. Like, they're conflating the Detect outage with the broader platform. We should probably address that proactively.\nDiana Reeves: Good point. Comply was not affected, right? Detect and Comply are on completely separate infrastructure?\nPriya Patel: Correct, they're fully separate. Comply v2 is still on track for the April launch. The Detect outage had zero impact on that.\nDiana Reeves: Okay good. Make sure your AMs are communicating that clearly. The last thing we need is customers thinking the whole platform is unstable.\nPriya Patel: Agreed. I'll put together some talking points and get them to Lisa and Aisha before end of day.\nLisa Park: That'd be really helpful, thank you Priya. I have like - I have six customer calls this afternoon and I need something concrete I can actually say.\nDiana Reeves: Okay. Let's talk about escalation risk. Aisha, you mentioned Fortex is evaluating alternatives. Are there other accounts we should be worried about from a churn standpoint?\nAisha Johnson: I'd flag Brightline - they're up for renewal in May and the relationship has already been a little rocky. And there's a mid-market account, Kestrel Tech, their CEO is apparently very active on LinkedIn and I wouldn't be surprised if we see something public.\nDiana Reeves: Oh great. That's all we need. Okay - I'm going to personally reach out to the Fortex CISO and the Brightline account today. Lisa, I'll need the contact info for whoever you've been talking to at Meridian.\nLisa Park: I'll send it over right after this call.\nDiana Reeves: Alright. Let's wrap up with action items. Priya - RCA details to Diana by noon. Aisha - SLA exposure list by 4 PM. Lisa - loop in legal and finance, send Diana the Meridian contact. Everyone - review and circulate talking points once Priya has them ready. Does that capture it?\nPriya Patel: Yeah, that covers it on my end.\nAisha Johnson: Same. I'll ping you all if anything escalates before end of day.\nDiana Reeves: Please do. And guys - I know this is a tough day. Let's just stay on top of it and make sure our customers feel like we're being straight with them. That's really all we can do right now.\nLisa Park: Agreed. Thanks everyone.",
+  "summary": "The team convened an urgent internal call to address a significant outage of their Detect product that left customers without security monitoring for approximately six hours overnight. A single point of failure in the event ingestion pipeline caused a cascading failure, and critically, the company's own internal alerting also failed because the health checks were tied to the same broken pipeline - meaning a customer, not the team, flagged the outage. At least 47 support tickets have been logged, key enterprise accounts including Fortex and Meridian Financial are expressing dissatisfaction and referencing competitors, and SLA compliance issues are expected to result in credits. The team aligned on immediate action items including drafting a formal executive incident communication, pulling the full SLA exposure list, looping in legal and finance, and preparing customer-facing talking points to clarify that the Comply product was unaffected.",
+  "topics": [
+    "product outage",
+    "churn risk",
+    "sla compliance",
+    "incident communication",
+    "internal monitoring failure",
+    "customer escalation"
+  ],
+  "action_items": [
+    "Priya Patel: Send confirmed RCA technical details to Diana by noon today",
+    "Aisha Johnson: Pull full list of customers with contractual uptime SLAs on Detect from Salesforce and deliver by 4 PM",
+    "Lisa Park: Loop in legal and finance on SLA exposure and send Diana the Meridian Financial contact information",
+    "Diana Reeves: Draft formal executive incident communication using only confirmed facts and personally reach out to Fortex CISO and Brightline account today"
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": 1.8,
+  "key_moments": [
+    {
+      "time": 312,
+      "text": "Aisha reveals that a customer — not the internal team — flagged the outage at 2 AM, triggering the internal escalation",
+      "type": "churn_signal",
+      "speaker": "Aisha Johnson"
+    },
+    {
+      "time": 390,
+      "text": "Diana highlights the critical irony that the health checks used to detect failures were tied to the same pipeline that broke, meaning the monitoring product failed to monitor itself",
+      "type": "technical_issue",
+      "speaker": "Diana Reeves"
+    },
+    {
+      "time": 510,
+      "text": "Aisha flags that Fortex's CISO explicitly mentioned competitor SentinelShield and that they are evaluating their options, signaling serious churn risk",
+      "type": "churn_signal",
+      "speaker": "Aisha Johnson"
+    },
+    {
+      "time": 680,
+      "text": "Priya confirms Comply is on completely separate infrastructure and was unaffected, and will be on track for the April launch — providing a positive data point to communicate to worried customers",
+      "type": "positive_pivot",
+      "speaker": "Priya Patel"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Join",
+      "time_seconds": 13.0,
+      "timestamp_ms": 1773323113000
+    },
+    {
+      "participant_name": "Aisha Johnson",
+      "event_type": "Join",
+      "time_seconds": 42.0,
+      "timestamp_ms": 1773323142000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Join",
+      "time_seconds": 47.0,
+      "timestamp_ms": 1773323147000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Join",
+      "time_seconds": 55.0,
+      "timestamp_ms": 1773323155000
+    },
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Leave",
+      "time_seconds": 2871.0,
+      "timestamp_ms": 1773325971000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Leave",
+      "time_seconds": 2869.0,
+      "timestamp_ms": 1773325969000
+    },
+    {
+      "participant_name": "Diana Reeves",
+      "event_type": "Leave",
+      "time_seconds": 2861.0,
+      "timestamp_ms": 1773325961000
+    },
+    {
+      "participant_name": "Aisha Johnson",
+      "event_type": "Leave",
+      "time_seconds": 2867.0,
+      "timestamp_ms": 1773325967000
+    }
+  ],
+  "stats": {
+    "turn_count": 55,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Lisa Park": 11,
+      "Diana Reeves": 21,
+      "Aisha Johnson": 10,
+      "Priya Patel": 13
+    },
+    "speaker_total_seconds": {
+      "Lisa Park": 79.8,
+      "Diana Reeves": 197.0,
+      "Aisha Johnson": 87.4,
+      "Priya Patel": 141.5
+    }
+  }
+}

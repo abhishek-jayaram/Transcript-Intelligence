@@ -1,0 +1,484 @@
+{
+  "meeting_id": "01KQ5BB8521F99E55470206E",
+  "title": "Detect Team - Sprint Planning",
+  "organizer_email": "sofia.petrov@aegiscloud.com",
+  "host_email": "sofia.petrov@aegiscloud.com",
+  "start_time": "2026-03-02T09:15:00.000Z",
+  "end_time": "2026-03-02T09:40:06.000Z",
+  "duration_minutes": 25.1,
+  "participants": [
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tyler.washington@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Sofia Petrov",
+    "1": "Tyler Washington",
+    "2": "Ravi Gupta",
+    "3": "Nina Kowalski",
+    "4": "Ananya Sharma"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 6.1,
+      "end_time": 11.9,
+      "duration": 5.800000000000001,
+      "text": "Alright, I think we've got everyone - let me just pull up the board real quick."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 12.7,
+      "end_time": 18.2,
+      "duration": 5.5,
+      "text": "Yeah, I'm here. Sorry I was a couple minutes late, my previous meeting ran over."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 18.9,
+      "end_time": 22.9,
+      "duration": 4.0,
+      "text": "No worries, we were just getting started. Ravi, you on?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 23.6,
+      "end_time": 26.4,
+      "duration": 2.799999999999997,
+      "text": "Yep, I'm here. Can everyone hear me okay?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 27.8,
+      "end_time": 43.3,
+      "duration": 15.499999999999996,
+      "text": "Loud and clear. Okay so, uh, let's just do a quick run through of what we're carrying over from last sprint and then figure out what we're committing to for this one. Nina, do you have the QA status on the event filtering tickets?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 43.8,
+      "end_time": 56.0,
+      "duration": 12.200000000000003,
+      "text": "Yeah so, DETECT-214 is done, that's fully verified. DETECT-219 is still in progress - Tyler's fix came through but I found two edge cases that need to be addressed before I can close it out."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 57.3,
+      "end_time": 63.8,
+      "duration": 6.5,
+      "text": "Oh, the - is that the one with the regex matching issue on the custom rule engine?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 65.2,
+      "end_time": 77.5,
+      "duration": 12.299999999999997,
+      "text": "Yeah exactly. So when you pass in a rule with a wildcard at the start of the pattern, it's not matching correctly against certain log formats. I can send you the repro steps after this."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 78.0,
+      "end_time": 83.9,
+      "duration": 5.900000000000006,
+      "text": "Yeah please do, I thought I had that covered but... apparently not. I'll take a look today."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 85.1,
+      "end_time": 93.4,
+      "duration": 8.300000000000011,
+      "text": "How long do you think that fix will take, Tyler? Because I want to factor that into what we're pulling into this sprint."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 94.5,
+      "end_time": 103.9,
+      "duration": 9.400000000000006,
+      "text": "Uh, honestly if it's just the wildcard handling, maybe a couple hours? But I don't want to commit to that without actually seeing Nina's repro first."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 104.8,
+      "end_time": 115.8,
+      "duration": 11.0,
+      "text": "Fair enough. Let's call it a two-point carryover for now and adjust if needed. Ananya, what's the status on the ingestion pipeline work? I know you were heads-down on that last week."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 116.6,
+      "end_time": 136.2,
+      "duration": 19.599999999999994,
+      "text": "So, uh, the core refactor is done - I finished that Thursday. But I want to flag something, and I think this is actually worth a conversation for sprint planning. The current architecture has a single ingestion node that everything funnels through, and I'm a little uncomfortable with that given the load we're projecting for Q2."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 137.6,
+      "end_time": 143.9,
+      "duration": 6.300000000000011,
+      "text": "Yeah I've had the same thought honestly. What are you thinking, like introducing redundancy at that layer?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 144.7,
+      "end_time": 154.2,
+      "duration": 9.5,
+      "text": "Right, or at minimum some kind of failover mechanism. If that node goes down, we basically have a blind spot in event processing. That's not great."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 155.4,
+      "end_time": 164.4,
+      "duration": 9.0,
+      "text": "I mean, agreed in principle, but is that realistically something we can scope into this sprint? That feels like a pretty significant chunk of work."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 164.8,
+      "end_time": 176.4,
+      "duration": 11.599999999999994,
+      "text": "Probably not a full implementation, no. But maybe we scope it as a design spike this sprint and carry the build work into next sprint? At least we'd have the architecture figured out."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 177.2,
+      "end_time": 187.7,
+      "duration": 10.5,
+      "text": "That makes sense to me. Ravi, from an infra standpoint what would redundant nodes actually look like? Like are we talking a lot of new infrastructure or is it relatively contained?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 188.3,
+      "end_time": 210.5,
+      "duration": 22.19999999999999,
+      "text": "So it depends on how we want to handle state. If the nodes need to share state, then it gets complicated fast - we'd need some kind of coordination layer. If they're stateless and we just route around failures, it's simpler. I'd want to sit down with Ananya and look at what the node is actually doing before I give a real estimate."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 210.9,
+      "end_time": 223.8,
+      "duration": 12.900000000000006,
+      "text": "Okay, let's do this - Ananya and Ravi, can you two block some time this week, maybe Wednesday, to look at that together and come back with a rough scope? We don't need to solve it today."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 224.2,
+      "end_time": 225.7,
+      "duration": 1.5,
+      "text": "Works for me."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 226.7,
+      "end_time": 228.9,
+      "duration": 2.200000000000017,
+      "text": "Yeah, I'm free Wednesday afternoon."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 229.3,
+      "end_time": 244.3,
+      "duration": 15.0,
+      "text": "Great. Okay so for this sprint - carryover on 219, the ingestion refactor from Ananya landing and going through QA, the design spike on redundancy, and then what else were we planning to pull in? I had a few new tickets flagged."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 245.1,
+      "end_time": 253.0,
+      "duration": 7.900000000000006,
+      "text": "DETECT-231 is the alert deduplication improvement. That one's been sitting in the backlog for a while and product has been asking about it."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 254.4,
+      "end_time": 257.1,
+      "duration": 2.700000000000017,
+      "text": "Right, yeah. How are we estimating that?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 257.7,
+      "end_time": 274.7,
+      "duration": 17.0,
+      "text": "I put it at five points. It's not super complex but there's a fair amount of testing surface - like we need to make sure we're not accidentally suppressing legit alerts while we're deduplicating. Nina, you'd probably need to write a decent set of test cases for that."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 275.3,
+      "end_time": 288.0,
+      "duration": 12.699999999999989,
+      "text": "Yeah, that one's going to need a solid test matrix. I'd want to cover at least twenty or so distinct scenarios. Five points sounds right to me - maybe push it to eight if we're being conservative."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 288.3,
+      "end_time": 299.2,
+      "duration": 10.899999999999977,
+      "text": "Let's say five for now and flag it if we're running into issues mid-sprint. I don't want to over-inflate points just out of caution if the engineering side is relatively clean."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 300.4,
+      "end_time": 301.9,
+      "duration": 1.5,
+      "text": "Fine by me."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 302.4,
+      "end_time": 307.8,
+      "duration": 5.400000000000034,
+      "text": "What about DETECT-240, the latency metrics dashboard? I know Ravi had some thoughts on that."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 309.1,
+      "end_time": 327.7,
+      "duration": 18.599999999999966,
+      "text": "Yeah so I actually think that one should wait. We're in the middle of some infra changes and I don't want to build a dashboard off metrics that might shift once we've stabilized the environment. I'd rather do it after we've landed those infra changes so we're actually measuring the right thing."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 329.1,
+      "end_time": 340.2,
+      "duration": 11.099999999999966,
+      "text": "That's a reasonable point. Okay, we'll push 240 to next sprint. What's our total looking like then? Carryover 219 at two, ingestion refactor QA... Nina what are you estimating for that?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 340.6,
+      "end_time": 349.9,
+      "duration": 9.299999999999955,
+      "text": "Probably three points for QA, assuming the code is clean. If Ananya's refactor introduces anything unexpected I might need more time but let's start at three."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 350.7,
+      "end_time": 365.2,
+      "duration": 14.5,
+      "text": "Okay so two plus three plus the design spike - what are we calling that, three points? - and then 231 at five. That's thirteen, which is pretty comfortable. Do we want to pull in anything else or leave some buffer?"
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 365.9,
+      "end_time": 371.6,
+      "duration": 5.7000000000000455,
+      "text": "I'd vote for buffer honestly. Last sprint we overcommitted a little and it wasn't fun."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 373.0,
+      "end_time": 381.3,
+      "duration": 8.300000000000011,
+      "text": "Yeah I agree, let's not do that again. Thirteen is fine. If we're burning through it early, we can always pull something in."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 382.3,
+      "end_time": 388.6,
+      "duration": 6.300000000000011,
+      "text": "Sounds good. Are we doing the usual check-in cadence - async updates in Slack, then syncing Thursday?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 389.4,
+      "end_time": 402.1,
+      "duration": 12.700000000000045,
+      "text": "Yeah, same as always. Daily async, Thursday sync at two. Any blockers come up before then, just ping the channel and we'll sort it out. Alright, I think that's everything - any other questions before we wrap?"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 403.4,
+      "end_time": 404.9,
+      "duration": 1.5,
+      "text": "Nothing from me."
+    },
+    {
+      "speaker_name": "Tyler Washington",
+      "start_time": 405.2,
+      "end_time": 407.1,
+      "duration": 1.900000000000034,
+      "text": "Nope, good to go."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 408.1,
+      "end_time": 410.9,
+      "duration": 2.7999999999999545,
+      "text": "Alright, good. Okay everyone, talk Thursday. Thanks."
+    }
+  ],
+  "transcript_text": "Sofia Petrov: Alright, I think we've got everyone - let me just pull up the board real quick.\nTyler Washington: Yeah, I'm here. Sorry I was a couple minutes late, my previous meeting ran over.\nSofia Petrov: No worries, we were just getting started. Ravi, you on?\nRavi Gupta: Yep, I'm here. Can everyone hear me okay?\nSofia Petrov: Loud and clear. Okay so, uh, let's just do a quick run through of what we're carrying over from last sprint and then figure out what we're committing to for this one. Nina, do you have the QA status on the event filtering tickets?\nNina Kowalski: Yeah so, DETECT-214 is done, that's fully verified. DETECT-219 is still in progress - Tyler's fix came through but I found two edge cases that need to be addressed before I can close it out.\nTyler Washington: Oh, the - is that the one with the regex matching issue on the custom rule engine?\nNina Kowalski: Yeah exactly. So when you pass in a rule with a wildcard at the start of the pattern, it's not matching correctly against certain log formats. I can send you the repro steps after this.\nTyler Washington: Yeah please do, I thought I had that covered but... apparently not. I'll take a look today.\nSofia Petrov: How long do you think that fix will take, Tyler? Because I want to factor that into what we're pulling into this sprint.\nTyler Washington: Uh, honestly if it's just the wildcard handling, maybe a couple hours? But I don't want to commit to that without actually seeing Nina's repro first.\nSofia Petrov: Fair enough. Let's call it a two-point carryover for now and adjust if needed. Ananya, what's the status on the ingestion pipeline work? I know you were heads-down on that last week.\nAnanya Sharma: So, uh, the core refactor is done - I finished that Thursday. But I want to flag something, and I think this is actually worth a conversation for sprint planning. The current architecture has a single ingestion node that everything funnels through, and I'm a little uncomfortable with that given the load we're projecting for Q2.\nRavi Gupta: Yeah I've had the same thought honestly. What are you thinking, like introducing redundancy at that layer?\nAnanya Sharma: Right, or at minimum some kind of failover mechanism. If that node goes down, we basically have a blind spot in event processing. That's not great.\nSofia Petrov: I mean, agreed in principle, but is that realistically something we can scope into this sprint? That feels like a pretty significant chunk of work.\nAnanya Sharma: Probably not a full implementation, no. But maybe we scope it as a design spike this sprint and carry the build work into next sprint? At least we'd have the architecture figured out.\nSofia Petrov: That makes sense to me. Ravi, from an infra standpoint what would redundant nodes actually look like? Like are we talking a lot of new infrastructure or is it relatively contained?\nRavi Gupta: So it depends on how we want to handle state. If the nodes need to share state, then it gets complicated fast - we'd need some kind of coordination layer. If they're stateless and we just route around failures, it's simpler. I'd want to sit down with Ananya and look at what the node is actually doing before I give a real estimate.\nSofia Petrov: Okay, let's do this - Ananya and Ravi, can you two block some time this week, maybe Wednesday, to look at that together and come back with a rough scope? We don't need to solve it today.\nRavi Gupta: Works for me.\nAnanya Sharma: Yeah, I'm free Wednesday afternoon.\nSofia Petrov: Great. Okay so for this sprint - carryover on 219, the ingestion refactor from Ananya landing and going through QA, the design spike on redundancy, and then what else were we planning to pull in? I had a few new tickets flagged.\nTyler Washington: DETECT-231 is the alert deduplication improvement. That one's been sitting in the backlog for a while and product has been asking about it.\nSofia Petrov: Right, yeah. How are we estimating that?\nTyler Washington: I put it at five points. It's not super complex but there's a fair amount of testing surface - like we need to make sure we're not accidentally suppressing legit alerts while we're deduplicating. Nina, you'd probably need to write a decent set of test cases for that.\nNina Kowalski: Yeah, that one's going to need a solid test matrix. I'd want to cover at least twenty or so distinct scenarios. Five points sounds right to me - maybe push it to eight if we're being conservative.\nSofia Petrov: Let's say five for now and flag it if we're running into issues mid-sprint. I don't want to over-inflate points just out of caution if the engineering side is relatively clean.\nNina Kowalski: Fine by me.\nAnanya Sharma: What about DETECT-240, the latency metrics dashboard? I know Ravi had some thoughts on that.\nRavi Gupta: Yeah so I actually think that one should wait. We're in the middle of some infra changes and I don't want to build a dashboard off metrics that might shift once we've stabilized the environment. I'd rather do it after we've landed those infra changes so we're actually measuring the right thing.\nSofia Petrov: That's a reasonable point. Okay, we'll push 240 to next sprint. What's our total looking like then? Carryover 219 at two, ingestion refactor QA... Nina what are you estimating for that?\nNina Kowalski: Probably three points for QA, assuming the code is clean. If Ananya's refactor introduces anything unexpected I might need more time but let's start at three.\nSofia Petrov: Okay so two plus three plus the design spike - what are we calling that, three points? - and then 231 at five. That's thirteen, which is pretty comfortable. Do we want to pull in anything else or leave some buffer?\nTyler Washington: I'd vote for buffer honestly. Last sprint we overcommitted a little and it wasn't fun.\nSofia Petrov: Yeah I agree, let's not do that again. Thirteen is fine. If we're burning through it early, we can always pull something in.\nAnanya Sharma: Sounds good. Are we doing the usual check-in cadence - async updates in Slack, then syncing Thursday?\nSofia Petrov: Yeah, same as always. Daily async, Thursday sync at two. Any blockers come up before then, just ping the channel and we'll sort it out. Alright, I think that's everything - any other questions before we wrap?\nRavi Gupta: Nothing from me.\nTyler Washington: Nope, good to go.\nSofia Petrov: Alright, good. Okay everyone, talk Thursday. Thanks.",
+  "summary": "The team held a sprint planning meeting to review carryover items and commit to work for the upcoming sprint. Nina flagged two edge cases in DETECT-219 related to wildcard regex matching that Tyler needs to fix before the ticket can be closed. Ananya raised an architectural concern about a single-node ingestion pipeline and proposed a design spike to address redundancy and failover, which Ravi agreed to scope collaboratively. The team settled on 13 story points for the sprint, including carryover, QA work, the design spike, and the alert deduplication ticket DETECT-231, intentionally leaving buffer after overcommitting last sprint.",
+  "topics": [
+    "sprint planning",
+    "bug fix",
+    "architecture",
+    "ingestion pipeline",
+    "alert deduplication",
+    "qa"
+  ],
+  "action_items": [
+    "Tyler Washington: Review Nina's repro steps for the wildcard regex edge case in DETECT-219 and apply fix today",
+    "Nina Kowalski: Send Tyler the repro steps for the DETECT-219 wildcard matching issue after the call",
+    "Ananya Sharma and Ravi Gupta: Block time Wednesday afternoon to assess ingestion node redundancy and return with a rough scope estimate",
+    "Sofia Petrov: Track sprint commitments at 13 points and monitor for mid-sprint adjustments if DETECT-231 testing surface expands"
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 4.1,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Nina identifies two unresolved edge cases in DETECT-219 related to wildcard regex matching on the custom rule engine",
+      "type": "technical_issue",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 285.0,
+      "text": "Ananya raises a reliability concern about the single ingestion node becoming a blind spot under projected Q2 load",
+      "type": "concern",
+      "speaker": "Ananya Sharma"
+    },
+    {
+      "time": 420.0,
+      "text": "Team agrees to a design spike on ingestion redundancy with Ananya and Ravi meeting Wednesday to scope the work",
+      "type": "action_item",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 620.0,
+      "text": "Tyler advocates for leaving sprint buffer after the team overcommitted last sprint, and Sofia agrees to hold at 13 points",
+      "type": "positive_pivot",
+      "speaker": "Tyler Washington"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Join",
+      "time_seconds": 37.0,
+      "timestamp_ms": 1772442937000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 48.0,
+      "timestamp_ms": 1772442948000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Join",
+      "time_seconds": 48.0,
+      "timestamp_ms": 1772442948000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 50.0,
+      "timestamp_ms": 1772442950000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 52.0,
+      "timestamp_ms": 1772442952000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 1503.0,
+      "timestamp_ms": 1772444403000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 1483.0,
+      "timestamp_ms": 1772444383000
+    },
+    {
+      "participant_name": "Tyler Washington",
+      "event_type": "Leave",
+      "time_seconds": 1501.0,
+      "timestamp_ms": 1772444401000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Leave",
+      "time_seconds": 1495.0,
+      "timestamp_ms": 1772444395000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 1493.0,
+      "timestamp_ms": 1772444393000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 5,
+    "speaker_turn_counts": {
+      "Sofia Petrov": 16,
+      "Tyler Washington": 8,
+      "Ravi Gupta": 6,
+      "Nina Kowalski": 5,
+      "Ananya Sharma": 6
+    },
+    "speaker_total_seconds": {
+      "Sofia Petrov": 155.0,
+      "Tyler Washington": 59.8,
+      "Ravi Gupta": 52.9,
+      "Nina Kowalski": 48.0,
+      "Ananya Sharma": 54.6
+    }
+  }
+}

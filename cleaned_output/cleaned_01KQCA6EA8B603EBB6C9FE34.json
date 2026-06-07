@@ -1,0 +1,431 @@
+{
+  "meeting_id": "01KQCA6EA8B603EBB6C9FE34",
+  "title": "Aegis / Ridgeline Logistics - Identity Roadmap Discussion",
+  "organizer_email": "daniel.okafor@aegiscloud.com",
+  "host_email": "daniel.okafor@aegiscloud.com",
+  "start_time": "2026-03-07T09:00:00.000Z",
+  "end_time": "2026-03-07T09:28:36.000Z",
+  "duration_minutes": 28.6,
+  "participants": [
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "p.schneider@ridgelinelogistics.com",
+      "domain": "ridgelinelogistics.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "daniel.okafor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "p.schneider@ridgelinelogistics.com",
+      "domain": "ridgelinelogistics.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Daniel Okafor",
+    "1": "Paula Schneider"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 6.5,
+      "end_time": 11.9,
+      "duration": 5.4,
+      "text": "Paula, hey, thanks for making time today. I know Thursdays are usually pretty packed for you."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 12.8,
+      "end_time": 20.8,
+      "duration": 8.0,
+      "text": "Yeah, no, it's fine. We had a planning session move to next week so actually the morning opened up a bit. Good timing."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 21.4,
+      "end_time": 40.8,
+      "duration": 19.4,
+      "text": "Perfect. Well I appreciate it. So the agenda I had in mind - I wanted to walk through where we are on the Identity roadmap, get your input on some of the features we're scoping, and then just make sure we're aligned on what Ridgeline actually needs over the next couple of quarters. Does that work?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 41.7,
+      "end_time": 49.4,
+      "duration": 7.699999999999996,
+      "text": "Yeah that works. I've got a few things on my end I wanted to raise too, so we can weave those in."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 50.4,
+      "end_time": 62.4,
+      "duration": 12.0,
+      "text": "Absolutely, let's do it. So, starting with Aegis Identity - you've been on the platform, I think it's been about eight months now since you fully deployed the IAM module. How's day-to-day been with it?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 63.6,
+      "end_time": 79.8,
+      "duration": 16.199999999999996,
+      "text": "It's been okay. I mean, the core IAM stuff works fine, provisioning and deprovisioning is faster than what we had before. MFA rollout went smoother than expected honestly, given that we're dealing with, you know, warehouse floor workers who aren't exactly used to that kind of workflow."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 81.2,
+      "end_time": 88.1,
+      "duration": 6.8999999999999915,
+      "text": "Yeah that's actually a use case we hear a lot from manufacturing customers specifically. The non-desk worker angle is tricky."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 88.9,
+      "end_time": 111.5,
+      "duration": 22.599999999999994,
+      "text": "Right, and we made it work, but it required some customization on our end. Which brings me to one of the things I wanted to flag - we need better support for shared workstation scenarios. So like, on the floor we have terminals that multiple workers log into across shifts, and right now the session management is kind of clunky. There's no clean handoff."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 112.9,
+      "end_time": 120.0,
+      "duration": 7.099999999999994,
+      "text": "Okay, yeah. Can you describe what clunky looks like? Is it a timeout issue, is it a re-auth issue, or...?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 120.6,
+      "end_time": 149.4,
+      "duration": 28.80000000000001,
+      "text": "It's kind of both. So the session timeout is set globally right now, and we can't scope it by device group or location. So a desk employee in corporate gets the same timeout window as a warehouse terminal, which doesn't make sense. And then when worker A logs out and worker B logs in, sometimes the previous session data is still cached and that creates... it creates issues. We've had a couple of incidents where someone had residual access they shouldn't have had."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 150.8,
+      "end_time": 161.1,
+      "duration": 10.299999999999983,
+      "text": "Got it. So you're really asking for two things - granular session timeout policies by device or group, and then cleaner session termination on the shared workstation side."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 161.7,
+      "end_time": 173.9,
+      "duration": 12.200000000000017,
+      "text": "Exactly. And I've submitted a support ticket on this, I think it was back in January, but I haven't seen any movement. I don't know if it got escalated or just, uh, sat somewhere."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 174.6,
+      "end_time": 197.9,
+      "duration": 23.30000000000001,
+      "text": "I'll track that down after this call. I want to make sure it's actually in the right queue. And I'll be honest with you, the session policy granularity piece - that is something our product team has been scoping. It's not in the current release but it's been flagged as a near-term priority. I can't give you a hard date yet but it's actively being looked at."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 198.7,
+      "end_time": 212.0,
+      "duration": 13.300000000000011,
+      "text": "Okay. I mean, near-term is a bit vague but I understand you probably can't commit to a date. Is there any way to get visibility into where it sits on the roadmap? Even just a rough quarter?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 213.1,
+      "end_time": 228.0,
+      "duration": 14.900000000000006,
+      "text": "I can set up a call with our product manager for Identity, his name is Marcus. He can give you a more specific picture. I'd rather him speak to it directly than me guess and then you hold me to the wrong timeline."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 228.4,
+      "end_time": 233.1,
+      "duration": 4.699999999999989,
+      "text": "Yeah, that would be useful. I'd rather get it from the source anyway."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 234.2,
+      "end_time": 249.6,
+      "duration": 15.400000000000006,
+      "text": "Good, I'll set that up. Okay, the other thing I wanted to cover - on the SSO side. You're using our SSO integration with, I think it's primarily your ERP and your warehouse management system. Are there other apps you're looking to bring in?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 250.4,
+      "end_time": 264.6,
+      "duration": 14.200000000000017,
+      "text": "Yeah, we're evaluating a new fleet management platform right now. It's called Translog, I don't know if you've heard of it. And the question is whether Aegis Identity can support the SSO integration natively or if we'd have to go custom."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 265.0,
+      "end_time": 271.4,
+      "duration": 6.399999999999977,
+      "text": "Translog - I'm not immediately familiar with that one. Do you know if they support SAML 2.0 or OIDC?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 272.3,
+      "end_time": 285.0,
+      "duration": 12.699999999999989,
+      "text": "I believe they support SAML. I'd have to double-check with their team. We're still mid-evaluation so nothing's been decided but I want to make sure we're not creating an integration problem for ourselves down the road."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 285.7,
+      "end_time": 302.1,
+      "duration": 16.400000000000034,
+      "text": "That's the right time to ask the question, honestly. If they're SAML 2.0 compatible, we should be able to handle it natively. I can have our integration team do a quick compatibility check once you have the vendor's technical docs. Just send those over to me."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 303.2,
+      "end_time": 311.3,
+      "duration": 8.100000000000023,
+      "text": "Okay, I can do that once we get further along. Probably another few weeks before we have the full technical spec from them."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 312.3,
+      "end_time": 315.0,
+      "duration": 2.6999999999999886,
+      "text": "Perfect, no rush. Just keep me looped in."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 315.7,
+      "end_time": 337.5,
+      "duration": 21.80000000000001,
+      "text": "Will do. The other thing - and this is maybe more of a, uh, feature request in the traditional sense - we need more flexibility around MFA policy exceptions. Right now it's pretty binary, either MFA is required or it's not. But we have certain service accounts and automated processes where MFA enforcement breaks the workflow, and managing those exceptions is a pain."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 338.1,
+      "end_time": 347.5,
+      "duration": 9.399999999999977,
+      "text": "So you're looking for like a conditional exclusion model? Where you can carve out specific account types or identity classes without just turning MFA off globally?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 348.6,
+      "end_time": 359.3,
+      "duration": 10.699999999999989,
+      "text": "Yes. And with some kind of audit trail so I can demonstrate to our auditors that those exclusions are intentional and documented. Not just, you know, someone flipped a switch."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 360.1,
+      "end_time": 373.8,
+      "duration": 13.699999999999989,
+      "text": "That's actually a really good point and I think that ties into what we're building for the compliance side too. Um, have you looked at Aegis Comply at all? I know you're primarily on Identity and Protect right now."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 375.1,
+      "end_time": 382.7,
+      "duration": 7.599999999999966,
+      "text": "We've seen the overview but we haven't done anything with it. We handle compliance reporting separately through a third-party tool right now."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 383.7,
+      "end_time": 394.8,
+      "duration": 11.100000000000023,
+      "text": "Noted. I'll just say we have some things coming on that front that might be relevant to you, but that's probably a separate conversation. I don't want to sidetrack from Identity today."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 395.2,
+      "end_time": 404.7,
+      "duration": 9.5,
+      "text": "Sure, we can table that. Okay so back to the MFA exceptions - is that something that's on the roadmap or is this new information for you?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 405.4,
+      "end_time": 423.4,
+      "duration": 18.0,
+      "text": "Honestly it's something I've heard from a few customers but I want to make sure it's formally captured from Ridgeline specifically. The more customers who articulate the same need, the stronger the case for prioritization. So I'll make sure this is logged as a feature request with your name on it."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 423.7,
+      "end_time": 431.2,
+      "duration": 7.5,
+      "text": "Yeah, please do. I mean, it's not a blocker right now but it's adding operational overhead and that compounds over time."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 432.3,
+      "end_time": 441.8,
+      "duration": 9.5,
+      "text": "Understood. I want to make sure our product team understands the operational impact, not just the technical ask. So I'll frame it that way when I log it."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 442.7,
+      "end_time": 452.9,
+      "duration": 10.199999999999989,
+      "text": "Good. I think that covers the main things I had. Is there anything on your side - you mentioned you had things to cover from the roadmap perspective?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 453.2,
+      "end_time": 474.1,
+      "duration": 20.900000000000034,
+      "text": "Yeah, a couple of things. One is around role-based access control enhancements - we're planning to ship more granular RBAC controls in the next release, and I wanted to flag that because I think it touches on some of what you've described. Especially around those shared workstation scenarios, being able to scope roles more tightly at the device level."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 474.6,
+      "end_time": 478.9,
+      "duration": 4.2999999999999545,
+      "text": "Okay, that's good to know. Is there documentation on that I can review?"
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 479.9,
+      "end_time": 486.7,
+      "duration": 6.800000000000011,
+      "text": "Not public yet but I can share a preview doc under NDA. I'll send it over after the call."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 487.9,
+      "end_time": 492.8,
+      "duration": 4.900000000000034,
+      "text": "That works. We already have an NDA in place so no issue there."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 493.7,
+      "end_time": 511.8,
+      "duration": 18.100000000000023,
+      "text": "Great. And then the other thing I just wanted to touch on quickly - your renewal is coming up in, I think, Q3. I just want to make sure we're not getting to that conversation cold. If there are things we should be addressing between now and then, I'd rather know early."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 513.2,
+      "end_time": 532.0,
+      "duration": 18.799999999999955,
+      "text": "Honestly the things I've raised today are the main things. If those are moving in the right direction, I don't anticipate any issues at renewal. But I'll say - the shared workstation thing is probably the most pressing for us operationally. If that's still unresolved by summer, it's going to be a talking point."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 533.2,
+      "end_time": 553.6,
+      "duration": 20.399999999999977,
+      "text": "I hear you. I'll make sure that one has the right visibility internally. Okay - so to recap next steps: I'll track down that support ticket from January, I'll set up the call with Marcus on the product side, I'll log the MFA exception request formally, and I'll send over the RBAC preview doc. Does that cover it?"
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 554.1,
+      "end_time": 560.1,
+      "duration": 6.0,
+      "text": "Yeah, that covers it. And I'll send you the Translog technical specs once we have them."
+    },
+    {
+      "speaker_name": "Daniel Okafor",
+      "start_time": 561.3,
+      "end_time": 567.4,
+      "duration": 6.100000000000023,
+      "text": "Perfect. Thanks Paula, this was really useful. I'll get those follow-ups out to you by end of week."
+    },
+    {
+      "speaker_name": "Paula Schneider",
+      "start_time": 568.7,
+      "end_time": 570.5,
+      "duration": 1.7999999999999545,
+      "text": "Sounds good. Talk soon."
+    }
+  ],
+  "transcript_text": "Daniel Okafor: Paula, hey, thanks for making time today. I know Thursdays are usually pretty packed for you.\nPaula Schneider: Yeah, no, it's fine. We had a planning session move to next week so actually the morning opened up a bit. Good timing.\nDaniel Okafor: Perfect. Well I appreciate it. So the agenda I had in mind - I wanted to walk through where we are on the Identity roadmap, get your input on some of the features we're scoping, and then just make sure we're aligned on what Ridgeline actually needs over the next couple of quarters. Does that work?\nPaula Schneider: Yeah that works. I've got a few things on my end I wanted to raise too, so we can weave those in.\nDaniel Okafor: Absolutely, let's do it. So, starting with Aegis Identity - you've been on the platform, I think it's been about eight months now since you fully deployed the IAM module. How's day-to-day been with it?\nPaula Schneider: It's been okay. I mean, the core IAM stuff works fine, provisioning and deprovisioning is faster than what we had before. MFA rollout went smoother than expected honestly, given that we're dealing with, you know, warehouse floor workers who aren't exactly used to that kind of workflow.\nDaniel Okafor: Yeah that's actually a use case we hear a lot from manufacturing customers specifically. The non-desk worker angle is tricky.\nPaula Schneider: Right, and we made it work, but it required some customization on our end. Which brings me to one of the things I wanted to flag - we need better support for shared workstation scenarios. So like, on the floor we have terminals that multiple workers log into across shifts, and right now the session management is kind of clunky. There's no clean handoff.\nDaniel Okafor: Okay, yeah. Can you describe what clunky looks like? Is it a timeout issue, is it a re-auth issue, or...?\nPaula Schneider: It's kind of both. So the session timeout is set globally right now, and we can't scope it by device group or location. So a desk employee in corporate gets the same timeout window as a warehouse terminal, which doesn't make sense. And then when worker A logs out and worker B logs in, sometimes the previous session data is still cached and that creates... it creates issues. We've had a couple of incidents where someone had residual access they shouldn't have had.\nDaniel Okafor: Got it. So you're really asking for two things - granular session timeout policies by device or group, and then cleaner session termination on the shared workstation side.\nPaula Schneider: Exactly. And I've submitted a support ticket on this, I think it was back in January, but I haven't seen any movement. I don't know if it got escalated or just, uh, sat somewhere.\nDaniel Okafor: I'll track that down after this call. I want to make sure it's actually in the right queue. And I'll be honest with you, the session policy granularity piece - that is something our product team has been scoping. It's not in the current release but it's been flagged as a near-term priority. I can't give you a hard date yet but it's actively being looked at.\nPaula Schneider: Okay. I mean, near-term is a bit vague but I understand you probably can't commit to a date. Is there any way to get visibility into where it sits on the roadmap? Even just a rough quarter?\nDaniel Okafor: I can set up a call with our product manager for Identity, his name is Marcus. He can give you a more specific picture. I'd rather him speak to it directly than me guess and then you hold me to the wrong timeline.\nPaula Schneider: Yeah, that would be useful. I'd rather get it from the source anyway.\nDaniel Okafor: Good, I'll set that up. Okay, the other thing I wanted to cover - on the SSO side. You're using our SSO integration with, I think it's primarily your ERP and your warehouse management system. Are there other apps you're looking to bring in?\nPaula Schneider: Yeah, we're evaluating a new fleet management platform right now. It's called Translog, I don't know if you've heard of it. And the question is whether Aegis Identity can support the SSO integration natively or if we'd have to go custom.\nDaniel Okafor: Translog - I'm not immediately familiar with that one. Do you know if they support SAML 2.0 or OIDC?\nPaula Schneider: I believe they support SAML. I'd have to double-check with their team. We're still mid-evaluation so nothing's been decided but I want to make sure we're not creating an integration problem for ourselves down the road.\nDaniel Okafor: That's the right time to ask the question, honestly. If they're SAML 2.0 compatible, we should be able to handle it natively. I can have our integration team do a quick compatibility check once you have the vendor's technical docs. Just send those over to me.\nPaula Schneider: Okay, I can do that once we get further along. Probably another few weeks before we have the full technical spec from them.\nDaniel Okafor: Perfect, no rush. Just keep me looped in.\nPaula Schneider: Will do. The other thing - and this is maybe more of a, uh, feature request in the traditional sense - we need more flexibility around MFA policy exceptions. Right now it's pretty binary, either MFA is required or it's not. But we have certain service accounts and automated processes where MFA enforcement breaks the workflow, and managing those exceptions is a pain.\nDaniel Okafor: So you're looking for like a conditional exclusion model? Where you can carve out specific account types or identity classes without just turning MFA off globally?\nPaula Schneider: Yes. And with some kind of audit trail so I can demonstrate to our auditors that those exclusions are intentional and documented. Not just, you know, someone flipped a switch.\nDaniel Okafor: That's actually a really good point and I think that ties into what we're building for the compliance side too. Um, have you looked at Aegis Comply at all? I know you're primarily on Identity and Protect right now.\nPaula Schneider: We've seen the overview but we haven't done anything with it. We handle compliance reporting separately through a third-party tool right now.\nDaniel Okafor: Noted. I'll just say we have some things coming on that front that might be relevant to you, but that's probably a separate conversation. I don't want to sidetrack from Identity today.\nPaula Schneider: Sure, we can table that. Okay so back to the MFA exceptions - is that something that's on the roadmap or is this new information for you?\nDaniel Okafor: Honestly it's something I've heard from a few customers but I want to make sure it's formally captured from Ridgeline specifically. The more customers who articulate the same need, the stronger the case for prioritization. So I'll make sure this is logged as a feature request with your name on it.\nPaula Schneider: Yeah, please do. I mean, it's not a blocker right now but it's adding operational overhead and that compounds over time.\nDaniel Okafor: Understood. I want to make sure our product team understands the operational impact, not just the technical ask. So I'll frame it that way when I log it.\nPaula Schneider: Good. I think that covers the main things I had. Is there anything on your side - you mentioned you had things to cover from the roadmap perspective?\nDaniel Okafor: Yeah, a couple of things. One is around role-based access control enhancements - we're planning to ship more granular RBAC controls in the next release, and I wanted to flag that because I think it touches on some of what you've described. Especially around those shared workstation scenarios, being able to scope roles more tightly at the device level.\nPaula Schneider: Okay, that's good to know. Is there documentation on that I can review?\nDaniel Okafor: Not public yet but I can share a preview doc under NDA. I'll send it over after the call.\nPaula Schneider: That works. We already have an NDA in place so no issue there.\nDaniel Okafor: Great. And then the other thing I just wanted to touch on quickly - your renewal is coming up in, I think, Q3. I just want to make sure we're not getting to that conversation cold. If there are things we should be addressing between now and then, I'd rather know early.\nPaula Schneider: Honestly the things I've raised today are the main things. If those are moving in the right direction, I don't anticipate any issues at renewal. But I'll say - the shared workstation thing is probably the most pressing for us operationally. If that's still unresolved by summer, it's going to be a talking point.\nDaniel Okafor: I hear you. I'll make sure that one has the right visibility internally. Okay - so to recap next steps: I'll track down that support ticket from January, I'll set up the call with Marcus on the product side, I'll log the MFA exception request formally, and I'll send over the RBAC preview doc. Does that cover it?\nPaula Schneider: Yeah, that covers it. And I'll send you the Translog technical specs once we have them.\nDaniel Okafor: Perfect. Thanks Paula, this was really useful. I'll get those follow-ups out to you by end of week.\nPaula Schneider: Sounds good. Talk soon.",
+  "summary": "Daniel Okafor (CSM) met with Paula Schneider from Ridgeline to review their experience with Aegis Identity after eight months on the platform. Paula raised several operational pain points including clunky shared workstation session management, lack of granular session timeout policies by device group, and inflexible MFA policy exceptions for service accounts. Daniel confirmed these items would be escalated internally, including a January support ticket that had gone unanswered, and noted an upcoming RBAC enhancement that may address some of her concerns. The call also touched on a potential SSO integration with a new fleet management platform and a Q3 renewal on the horizon.",
+  "topics": [
+    "shared workstation session management",
+    "mfa policy exceptions",
+    "sso integration",
+    "rbac enhancements",
+    "renewal",
+    "feature request"
+  ],
+  "action_items": [
+    "Daniel Okafor: Track down and escalate the January support ticket regarding shared workstation session management",
+    "Daniel Okafor: Set up a call between Paula and product manager Marcus to discuss session policy granularity roadmap timeline",
+    "Daniel Okafor: Formally log MFA policy exception feature request with operational impact framing and send RBAC preview doc under NDA",
+    "Paula Schneider: Send Translog technical specifications to Daniel once available for SSO compatibility review"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.4,
+  "key_moments": [
+    {
+      "time": 182.0,
+      "text": "Paula flags that shared workstation session management is clunky, with unscoped timeouts and residual session data causing unauthorized access incidents",
+      "type": "technical_issue",
+      "speaker": "Paula Schneider"
+    },
+    {
+      "time": 310.0,
+      "text": "Paula notes a support ticket submitted in January has seen no movement, expressing frustration over lack of follow-through",
+      "type": "concern",
+      "speaker": "Paula Schneider"
+    },
+    {
+      "time": 620.0,
+      "text": "Paula requests conditional MFA exclusion model with audit trail for service accounts, citing compliance and operational overhead",
+      "type": "feature_gap",
+      "speaker": "Paula Schneider"
+    },
+    {
+      "time": 890.0,
+      "text": "Paula signals that unresolved shared workstation issues will be a talking point at Q3 renewal if not addressed by summer",
+      "type": "churn_signal",
+      "speaker": "Paula Schneider"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Join",
+      "time_seconds": 15.0,
+      "timestamp_ms": 1772874015000
+    },
+    {
+      "participant_name": "Paula Schneider",
+      "event_type": "Join",
+      "time_seconds": 23.0,
+      "timestamp_ms": 1772874023000
+    },
+    {
+      "participant_name": "Daniel Okafor",
+      "event_type": "Leave",
+      "time_seconds": 1698.0,
+      "timestamp_ms": 1772875698000
+    },
+    {
+      "participant_name": "Paula Schneider",
+      "event_type": "Leave",
+      "time_seconds": 1695.0,
+      "timestamp_ms": 1772875695000
+    }
+  ],
+  "stats": {
+    "turn_count": 44,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Daniel Okafor": 22,
+      "Paula Schneider": 22
+    },
+    "speaker_total_seconds": {
+      "Daniel Okafor": 274.2,
+      "Paula Schneider": 251.6
+    }
+  }
+}

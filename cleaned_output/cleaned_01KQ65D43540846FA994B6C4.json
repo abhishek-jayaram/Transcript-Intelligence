@@ -1,0 +1,435 @@
+{
+  "meeting_id": "01KQ65D43540846FA994B6C4",
+  "title": "Aegis / Frostbyte AI - Product Feedback",
+  "organizer_email": "rachel.torres@aegiscloud.com",
+  "host_email": "rachel.torres@aegiscloud.com",
+  "start_time": "2026-04-25T14:45:00.000Z",
+  "end_time": "2026-04-25T15:24:24.000Z",
+  "duration_minutes": 39.4,
+  "participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "v.zheng@frostbyte.ai",
+      "domain": "frostbyte.ai",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "v.zheng@frostbyte.ai",
+      "domain": "frostbyte.ai",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Rachel Torres",
+    "1": "Victor Zheng",
+    "2": "Sofia Petrov"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 4.5,
+      "end_time": 10.0,
+      "duration": 5.5,
+      "text": "Hey Victor, thanks for making time today - I know your calendar's been pretty packed lately."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 10.9,
+      "end_time": 19.1,
+      "duration": 8.200000000000001,
+      "text": "Yeah, no worries, it's been a busy quarter but this is - this is on my list, so happy to make it happen."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 20.1,
+      "end_time": 35.1,
+      "duration": 15.0,
+      "text": "Good, good. So I've also got Sofia Petrov on with me today, she's one of our senior engineers on the Identity side, and I figured having her here would be more useful than me trying to take notes and relay everything back."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 35.9,
+      "end_time": 41.2,
+      "duration": 5.300000000000004,
+      "text": "Hey Victor, thanks for having us. Really looking forward to hearing what you've been running into."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 42.4,
+      "end_time": 54.1,
+      "duration": 11.700000000000003,
+      "text": "Hey Sofia, yeah, appreciate you jumping on. Okay so - where do I start. So we've been on Aegis Identity now for, I want to say, about seven months? Maybe closer to eight."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 54.4,
+      "end_time": 59.3,
+      "duration": 4.899999999999999,
+      "text": "Yeah, that tracks, I think you all went live around mid-September last year."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 60.4,
+      "end_time": 71.7,
+      "duration": 11.300000000000004,
+      "text": "Right, yeah. So overall - look, it's been fine. The SSO integration was pretty smooth once we got through the initial SAML configuration, and the MFA rollout went better than I expected honestly."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 72.4,
+      "end_time": 79.4,
+      "duration": 7.0,
+      "text": "That's good to hear. That SAML piece can be... yeah, it can be a little finicky depending on the IdP."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 79.7,
+      "end_time": 98.5,
+      "duration": 18.799999999999997,
+      "text": "It was, yeah, we had a couple of back-and-forths with your support team on that, but it got resolved. So no complaints there. The reason I wanted to have this call is really around some gaps we're hitting on the IAM side - specifically around how Aegis Identity handles role management at scale."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 99.7,
+      "end_time": 106.9,
+      "duration": 7.200000000000003,
+      "text": "Okay, yeah, tell me more. What does scale look like for Frostbyte right now in terms of, like, users and roles?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 107.4,
+      "end_time": 124.3,
+      "duration": 16.89999999999999,
+      "text": "So we're sitting at roughly - and this has grown a lot this year - we're at about 1,400 users across the organization. And the role taxonomy is... it's gotten complicated. We've got engineering, ML infrastructure, data, product, and then all the corporate functions on top of that."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 124.9,
+      "end_time": 126.4,
+      "duration": 1.5,
+      "text": "Right."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 127.0,
+      "end_time": 146.1,
+      "duration": 19.099999999999994,
+      "text": "And the issue we keep running into is that there's no good way to do nested role inheritance within Aegis Identity. Like, I can define roles, I can assign permissions, but I can't say - this team lead role inherits everything from the senior engineer role, plus these additional permissions. It's all flat."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 146.4,
+      "end_time": 160.3,
+      "duration": 13.900000000000006,
+      "text": "Yeah, that's - that's a known limitation in the current version, I'll be straight with you. The role model right now is flat, there's no hierarchical inheritance baked in. It's something that's been on the roadmap for a while."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 160.7,
+      "end_time": 165.4,
+      "duration": 4.700000000000017,
+      "text": "So it is on the roadmap? Do you have any sense of timeline?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 165.9,
+      "end_time": 176.6,
+      "duration": 10.699999999999989,
+      "text": "I don't want to - I don't want to give you a number I can't stand behind, honestly. Rachel, do you have anything more concrete from the product side on that?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 177.5,
+      "end_time": 193.3,
+      "duration": 15.800000000000011,
+      "text": "Not a GA date, no. The last I heard from our product team, hierarchical roles is in active development, but I haven't seen a committed date for release. I can definitely follow up with our product management contact and get you something more specific, Victor."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 193.6,
+      "end_time": 204.5,
+      "duration": 10.900000000000006,
+      "text": "Yeah, that would be helpful. Because right now what we're doing is - we're basically duplicating permissions manually across roles, which is, uh, it's error-prone and it's a pain to audit."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 206.0,
+      "end_time": 221.1,
+      "duration": 15.099999999999994,
+      "text": "Yeah, I get that. That's exactly the kind of thing hierarchical inheritance would fix. Can I ask - when you say it's hard to audit, are you running into issues specifically around access reviews, or is it more the day-to-day management overhead?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 222.0,
+      "end_time": 238.4,
+      "duration": 16.400000000000006,
+      "text": "Honestly both, but the access review piece is becoming more urgent. We're going through a SOC 2 audit right now - we're actually using Aegis Comply for some of that, which, by the way, the v2 stuff that came out earlier this month is pretty solid."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 239.7,
+      "end_time": 246.7,
+      "duration": 7.0,
+      "text": "Oh good, yeah the on-demand reporting in Comply v2 - I was hoping that would land well for your team."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 247.8,
+      "end_time": 266.0,
+      "duration": 18.19999999999999,
+      "text": "Yeah the on-demand SOC 2 report generation is saving us real time. But - the issue is that when the auditors start pulling on the thread of who has access to what and why, the role structure in Identity doesn't tell a clean story because everything is kind of manually duplicated."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 267.1,
+      "end_time": 277.2,
+      "duration": 10.099999999999966,
+      "text": "That makes sense. So there's almost a compounding problem where the flat role structure creates noise in your compliance reporting even if the underlying access is technically correct."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 278.1,
+      "end_time": 281.2,
+      "duration": 3.099999999999966,
+      "text": "Exactly. Yeah, you said it better than I did."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 282.3,
+      "end_time": 294.3,
+      "duration": 12.0,
+      "text": "Okay, that's a really useful framing. Sofia, I want to make sure we capture that for the product feedback - the compliance audit angle specifically, because that might actually bump the priority on this."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 295.4,
+      "end_time": 303.4,
+      "duration": 8.0,
+      "text": "Agreed, yeah. Victor, is there anything else on the Identity side beyond the role hierarchy piece, or is that the main one?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 303.8,
+      "end_time": 319.9,
+      "duration": 16.099999999999966,
+      "text": "There's - yeah there's one other thing. It's maybe a smaller ask, but it's been bugging us. The session timeout policies - right now it seems like you can only set one global timeout, right? There's no way to do it per role or per resource."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 320.3,
+      "end_time": 323.9,
+      "duration": 3.599999999999966,
+      "text": "That's correct, yeah. One global session timeout config right now."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 324.2,
+      "end_time": 344.4,
+      "duration": 20.19999999999999,
+      "text": "So what we'd really want is to say - okay, for users accessing our ML training infrastructure, we want a shorter timeout, maybe 30 minutes, because those environments are sensitive. But for, like, someone just accessing our internal wiki through SSO, a four-hour timeout is totally fine. We shouldn't have to apply the most restrictive policy globally."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 345.8,
+      "end_time": 358.1,
+      "duration": 12.300000000000011,
+      "text": "Yeah, that's a reasonable ask. Role-based or resource-based session policies. I don't believe that's on the short-term roadmap but - honestly, Victor, I'm going to be honest, I'd have to check. I don't want to guess."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 359.5,
+      "end_time": 366.2,
+      "duration": 6.699999999999989,
+      "text": "No, that's fine, I appreciate the honesty. I'd rather you check than tell me something's coming and it doesn't."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 367.4,
+      "end_time": 382.9,
+      "duration": 15.5,
+      "text": "Yeah, and I'll make sure both of these - the hierarchical roles and the session policy granularity - are written up formally and submitted to product. And I'll loop in your CSM so there's visibility on our end into how this gets prioritized."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 383.7,
+      "end_time": 404.1,
+      "duration": 20.400000000000034,
+      "text": "Great. And - look, I want to be clear, I'm not raising this because I'm about to go evaluate alternatives or anything like that. It's more that - we're growing fast, and I want to make sure Aegis Identity can grow with us. If these things get addressed in the next couple of quarters, we're in good shape."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 404.8,
+      "end_time": 412.5,
+      "duration": 7.699999999999989,
+      "text": "That's helpful context, Victor, and I appreciate you saying that. It helps us frame the urgency appropriately when we're talking to product."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 412.9,
+      "end_time": 429.7,
+      "duration": 16.80000000000001,
+      "text": "Yeah, for sure. One thing I'd also find useful - and maybe Sofia you'd know this - is there a way for us to track these feature requests? Like, is there a customer portal or anything where I can see if something moves from 'requested' to 'in progress'?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 430.8,
+      "end_time": 442.6,
+      "duration": 11.800000000000011,
+      "text": "So right now that kind of visibility goes through your account manager - Rachel's your best touchpoint for that. We don't have a self-serve feature request tracker that's customer-facing, at least not yet."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 443.9,
+      "end_time": 450.5,
+      "duration": 6.600000000000023,
+      "text": "Okay, noted. Yeah, that's - that's another thing that would be nice to have someday, but I understand."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 451.2,
+      "end_time": 467.7,
+      "duration": 16.5,
+      "text": "It's fair feedback and I'll pass that along too. Okay, I think we've covered the main items - I'll send you a summary email after this with what we discussed, the two feature requests, and what our next steps are on our end. Does that work?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 468.8,
+      "end_time": 474.4,
+      "duration": 5.599999999999966,
+      "text": "Yeah, that works. Thanks both of you - this was a good call. Appreciate the time."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 475.5,
+      "end_time": 479.8,
+      "duration": 4.300000000000011,
+      "text": "Thanks Victor, really helpful to get this context directly from you."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 481.1,
+      "end_time": 483.3,
+      "duration": 2.1999999999999886,
+      "text": "Absolutely, we'll be in touch. Talk soon."
+    }
+  ],
+  "transcript_text": "Rachel Torres: Hey Victor, thanks for making time today - I know your calendar's been pretty packed lately.\nVictor Zheng: Yeah, no worries, it's been a busy quarter but this is - this is on my list, so happy to make it happen.\nRachel Torres: Good, good. So I've also got Sofia Petrov on with me today, she's one of our senior engineers on the Identity side, and I figured having her here would be more useful than me trying to take notes and relay everything back.\nSofia Petrov: Hey Victor, thanks for having us. Really looking forward to hearing what you've been running into.\nVictor Zheng: Hey Sofia, yeah, appreciate you jumping on. Okay so - where do I start. So we've been on Aegis Identity now for, I want to say, about seven months? Maybe closer to eight.\nRachel Torres: Yeah, that tracks, I think you all went live around mid-September last year.\nVictor Zheng: Right, yeah. So overall - look, it's been fine. The SSO integration was pretty smooth once we got through the initial SAML configuration, and the MFA rollout went better than I expected honestly.\nSofia Petrov: That's good to hear. That SAML piece can be... yeah, it can be a little finicky depending on the IdP.\nVictor Zheng: It was, yeah, we had a couple of back-and-forths with your support team on that, but it got resolved. So no complaints there. The reason I wanted to have this call is really around some gaps we're hitting on the IAM side - specifically around how Aegis Identity handles role management at scale.\nSofia Petrov: Okay, yeah, tell me more. What does scale look like for Frostbyte right now in terms of, like, users and roles?\nVictor Zheng: So we're sitting at roughly - and this has grown a lot this year - we're at about 1,400 users across the organization. And the role taxonomy is... it's gotten complicated. We've got engineering, ML infrastructure, data, product, and then all the corporate functions on top of that.\nSofia Petrov: Right.\nVictor Zheng: And the issue we keep running into is that there's no good way to do nested role inheritance within Aegis Identity. Like, I can define roles, I can assign permissions, but I can't say - this team lead role inherits everything from the senior engineer role, plus these additional permissions. It's all flat.\nSofia Petrov: Yeah, that's - that's a known limitation in the current version, I'll be straight with you. The role model right now is flat, there's no hierarchical inheritance baked in. It's something that's been on the roadmap for a while.\nVictor Zheng: So it is on the roadmap? Do you have any sense of timeline?\nSofia Petrov: I don't want to - I don't want to give you a number I can't stand behind, honestly. Rachel, do you have anything more concrete from the product side on that?\nRachel Torres: Not a GA date, no. The last I heard from our product team, hierarchical roles is in active development, but I haven't seen a committed date for release. I can definitely follow up with our product management contact and get you something more specific, Victor.\nVictor Zheng: Yeah, that would be helpful. Because right now what we're doing is - we're basically duplicating permissions manually across roles, which is, uh, it's error-prone and it's a pain to audit.\nSofia Petrov: Yeah, I get that. That's exactly the kind of thing hierarchical inheritance would fix. Can I ask - when you say it's hard to audit, are you running into issues specifically around access reviews, or is it more the day-to-day management overhead?\nVictor Zheng: Honestly both, but the access review piece is becoming more urgent. We're going through a SOC 2 audit right now - we're actually using Aegis Comply for some of that, which, by the way, the v2 stuff that came out earlier this month is pretty solid.\nRachel Torres: Oh good, yeah the on-demand reporting in Comply v2 - I was hoping that would land well for your team.\nVictor Zheng: Yeah the on-demand SOC 2 report generation is saving us real time. But - the issue is that when the auditors start pulling on the thread of who has access to what and why, the role structure in Identity doesn't tell a clean story because everything is kind of manually duplicated.\nSofia Petrov: That makes sense. So there's almost a compounding problem where the flat role structure creates noise in your compliance reporting even if the underlying access is technically correct.\nVictor Zheng: Exactly. Yeah, you said it better than I did.\nRachel Torres: Okay, that's a really useful framing. Sofia, I want to make sure we capture that for the product feedback - the compliance audit angle specifically, because that might actually bump the priority on this.\nSofia Petrov: Agreed, yeah. Victor, is there anything else on the Identity side beyond the role hierarchy piece, or is that the main one?\nVictor Zheng: There's - yeah there's one other thing. It's maybe a smaller ask, but it's been bugging us. The session timeout policies - right now it seems like you can only set one global timeout, right? There's no way to do it per role or per resource.\nSofia Petrov: That's correct, yeah. One global session timeout config right now.\nVictor Zheng: So what we'd really want is to say - okay, for users accessing our ML training infrastructure, we want a shorter timeout, maybe 30 minutes, because those environments are sensitive. But for, like, someone just accessing our internal wiki through SSO, a four-hour timeout is totally fine. We shouldn't have to apply the most restrictive policy globally.\nSofia Petrov: Yeah, that's a reasonable ask. Role-based or resource-based session policies. I don't believe that's on the short-term roadmap but - honestly, Victor, I'm going to be honest, I'd have to check. I don't want to guess.\nVictor Zheng: No, that's fine, I appreciate the honesty. I'd rather you check than tell me something's coming and it doesn't.\nRachel Torres: Yeah, and I'll make sure both of these - the hierarchical roles and the session policy granularity - are written up formally and submitted to product. And I'll loop in your CSM so there's visibility on our end into how this gets prioritized.\nVictor Zheng: Great. And - look, I want to be clear, I'm not raising this because I'm about to go evaluate alternatives or anything like that. It's more that - we're growing fast, and I want to make sure Aegis Identity can grow with us. If these things get addressed in the next couple of quarters, we're in good shape.\nRachel Torres: That's helpful context, Victor, and I appreciate you saying that. It helps us frame the urgency appropriately when we're talking to product.\nVictor Zheng: Yeah, for sure. One thing I'd also find useful - and maybe Sofia you'd know this - is there a way for us to track these feature requests? Like, is there a customer portal or anything where I can see if something moves from 'requested' to 'in progress'?\nSofia Petrov: So right now that kind of visibility goes through your account manager - Rachel's your best touchpoint for that. We don't have a self-serve feature request tracker that's customer-facing, at least not yet.\nVictor Zheng: Okay, noted. Yeah, that's - that's another thing that would be nice to have someday, but I understand.\nRachel Torres: It's fair feedback and I'll pass that along too. Okay, I think we've covered the main items - I'll send you a summary email after this with what we discussed, the two feature requests, and what our next steps are on our end. Does that work?\nVictor Zheng: Yeah, that works. Thanks both of you - this was a good call. Appreciate the time.\nSofia Petrov: Thanks Victor, really helpful to get this context directly from you.\nRachel Torres: Absolutely, we'll be in touch. Talk soon.",
+  "summary": "Rachel Torres and Sofia Petrov met with Victor Zheng of Frostbyte to discuss pain points after approximately eight months on Aegis Identity. Victor highlighted two key product gaps: the lack of hierarchical role inheritance in the flat role model, which causes manual permission duplication and complicates their ongoing SOC 2 audit, and the inability to configure session timeout policies per role or resource. Victor also praised Aegis Comply v2's on-demand SOC 2 reporting as a significant time-saver. He clarified he is not evaluating alternatives but wants assurance that Aegis Identity can scale with Frostbyte's rapid growth over the coming quarters.",
+  "topics": [
+    "role management",
+    "feature gap",
+    "soc 2 compliance",
+    "session timeout policy",
+    "product roadmap",
+    "identity access management"
+  ],
+  "action_items": [
+    "Rachel Torres: Follow up with product management to get a more concrete timeline on hierarchical role inheritance and share it with Victor",
+    "Rachel Torres: Formally submit both feature requests (hierarchical roles and granular session timeout policies) to the product team with the compliance audit context to support prioritization",
+    "Rachel Torres: Send a summary email to Victor recapping the discussion, feature requests, and next steps",
+    "Sofia Petrov: Verify current roadmap status of role-based or resource-based session timeout policies and relay findings to Rachel"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.7,
+  "key_moments": [
+    {
+      "time": 180.0,
+      "text": "Victor identifies the lack of nested role inheritance as the primary pain point, describing the current flat role model as error-prone and difficult to audit.",
+      "type": "feature_gap",
+      "speaker": "Victor Zheng"
+    },
+    {
+      "time": 390.0,
+      "text": "Victor praises Aegis Comply v2's on-demand SOC 2 report generation as saving his team real time during their active audit.",
+      "type": "praise",
+      "speaker": "Victor Zheng"
+    },
+    {
+      "time": 480.0,
+      "text": "Sofia and Rachel acknowledge that the flat role structure creates compounding noise in compliance reporting, agreeing to flag the audit angle to boost product priority.",
+      "type": "action_item",
+      "speaker": "Rachel Torres"
+    },
+    {
+      "time": 570.0,
+      "text": "Victor raises a second feature gap: the inability to set session timeout policies per role or resource, requiring the most restrictive global policy to apply across all environments.",
+      "type": "feature_gap",
+      "speaker": "Victor Zheng"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Join",
+      "time_seconds": 22.0,
+      "timestamp_ms": 1777128322000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 37.0,
+      "timestamp_ms": 1777128337000
+    },
+    {
+      "participant_name": "Victor Zheng",
+      "event_type": "Join",
+      "time_seconds": 39.0,
+      "timestamp_ms": 1777128339000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Leave",
+      "time_seconds": 2338.0,
+      "timestamp_ms": 1777130638000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 2352.0,
+      "timestamp_ms": 1777130652000
+    },
+    {
+      "participant_name": "Victor Zheng",
+      "event_type": "Leave",
+      "time_seconds": 2362.0,
+      "timestamp_ms": 1777130662000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Rachel Torres": 10,
+      "Victor Zheng": 18,
+      "Sofia Petrov": 13
+    },
+    "speaker_total_seconds": {
+      "Rachel Torres": 102.1,
+      "Victor Zheng": 231.7,
+      "Sofia Petrov": 110.8
+    }
+  }
+}

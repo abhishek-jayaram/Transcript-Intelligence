@@ -1,0 +1,448 @@
+{
+  "meeting_id": "01KQCF9872BF130D33B1B5EC",
+  "title": "Comply v2 - Launch Day Checklist",
+  "organizer_email": "alex.reyes@aegiscloud.com",
+  "host_email": "alex.reyes@aegiscloud.com",
+  "start_time": "2026-04-04T16:45:00.000Z",
+  "end_time": "2026-04-04T17:26:36.000Z",
+  "duration_minutes": 41.6,
+  "participants": [
+    {
+      "email": "alex.reyes@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "jordan.whitfield@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "alex.reyes@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "nina.kowalski@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "jordan.whitfield@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Alex Reyes",
+    "1": "Nina Kowalski",
+    "2": "Jordan Whitfield"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 6.3,
+      "end_time": 10.4,
+      "duration": 4.1000000000000005,
+      "text": "Okay, I think everyone's on - Nina, Jordan, you both there?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 11.1,
+      "end_time": 17.4,
+      "duration": 6.299999999999999,
+      "text": "Yeah, I'm here, just had to mute my Slack notifications, there's like a thousand messages this morning."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 18.8,
+      "end_time": 21.1,
+      "duration": 2.3000000000000007,
+      "text": "Same, I'm here. Good morning everyone."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 21.7,
+      "end_time": 30.2,
+      "duration": 8.5,
+      "text": "Good morning! Okay so, three days out from launch - I'm genuinely excited, I feel like we've been building toward this for so long."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 31.0,
+      "end_time": 33.4,
+      "duration": 2.3999999999999986,
+      "text": "April 7th cannot come fast enough honestly."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 34.1,
+      "end_time": 40.2,
+      "duration": 6.100000000000001,
+      "text": "Right? Like, I've been living in the Comply v2 ticket queue for what feels like six months."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 41.7,
+      "end_time": 56.3,
+      "duration": 14.599999999999994,
+      "text": "It basically has been six months, so you're not wrong. Okay, I want to run through the launch day checklist today - make sure we're all aligned, flag any blockers, and just kind of do a final gut check before Tuesday."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 56.7,
+      "end_time": 59.8,
+      "duration": 3.0999999999999943,
+      "text": "Sounds good, yeah. I have my checklist pulled up."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 60.3,
+      "end_time": 66.0,
+      "duration": 5.700000000000003,
+      "text": "Same here, I've got the design handoff doc open too in case we need to reference anything."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 66.9,
+      "end_time": 77.7,
+      "duration": 10.799999999999997,
+      "text": "Perfect. So let me just start from the top - QA sign-off. Nina, where are we on the final regression suite? Last I saw there were like three open items."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 79.1,
+      "end_time": 92.1,
+      "duration": 13.0,
+      "text": "Yeah so, two of those are already closed as of this morning actually - the SOC 2 report generation timeout issue and the, um, the framework toggle bug in the multi-report view. Both resolved and verified."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 92.5,
+      "end_time": 95.9,
+      "duration": 3.4000000000000057,
+      "text": "Oh that's great, I didn't see the update yet."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 96.5,
+      "end_time": 113.4,
+      "duration": 16.900000000000006,
+      "text": "Yeah Dev pushed fixes last night and I ran through the test cases first thing this morning. The third one - the edge case with PCI DSS report download on Safari - that one's still open but engineering flagged it as low severity, cosmetic only, doesn't affect report content."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 114.4,
+      "end_time": 119.8,
+      "duration": 5.3999999999999915,
+      "text": "Okay, so is the call there to ship with it or hold? What's your gut, Nina?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 120.2,
+      "end_time": 132.3,
+      "duration": 12.100000000000009,
+      "text": "I mean, honestly, ship it. It's a minor UI rendering thing, the PDF is correct, the data is correct. I'd document it as a known issue and patch it in the next minor release."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 133.1,
+      "end_time": 148.6,
+      "duration": 15.5,
+      "text": "Yeah I agree with that, and from the design side the Safari issue is - I actually know exactly what it is, it's just a flexbox rendering quirk in the download modal. I can drop a one-line CSS fix, it's not even worth delaying for."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 149.6,
+      "end_time": 155.6,
+      "duration": 6.0,
+      "text": "Can you do that before Tuesday though? Like I don't want to be merging stuff day-of."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 156.7,
+      "end_time": 162.9,
+      "duration": 6.200000000000017,
+      "text": "Oh totally, I'll have it in a PR by end of day today. It's literally one line."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 163.9,
+      "end_time": 167.6,
+      "duration": 3.6999999999999886,
+      "text": "Okay, perfect. Nina you good to verify that today or tomorrow?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 169.0,
+      "end_time": 175.8,
+      "duration": 6.800000000000011,
+      "text": "Absolutely, just ping me when it's merged and I'll run it through the test suite, should take maybe twenty minutes."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 177.0,
+      "end_time": 187.2,
+      "duration": 10.199999999999989,
+      "text": "Great, okay. That feels really clean. Moving on - Jordan, the on-demand reporting UI flow, are we good? The walkthrough I saw last week looked amazing by the way."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 188.3,
+      "end_time": 204.3,
+      "duration": 16.0,
+      "text": "Thank you! Yeah, I'm really happy with how that turned out. The framework selector, the report preview panel, the download options - it all feels cohesive. I incorporated the feedback from the internal beta users, the ones who said the framework descriptions were too jargon-heavy."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 205.1,
+      "end_time": 211.6,
+      "duration": 6.5,
+      "text": "Oh yeah, that was a big one. I remember that feedback, people were like 'what does this even mean.'"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 212.9,
+      "end_time": 230.5,
+      "duration": 17.599999999999994,
+      "text": "Exactly, so the copy is much more plain language now. Like instead of just saying 'ISO 27001 framework' we have a little tooltip that explains what it covers, who it's typically for. It makes the whole thing feel a lot more accessible, especially for folks who aren't compliance experts themselves."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 231.6,
+      "end_time": 240.7,
+      "duration": 9.099999999999994,
+      "text": "That's such a good call, I think that's going to make a real difference for our smaller customers who don't have a dedicated compliance team."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 241.7,
+      "end_time": 253.6,
+      "duration": 11.900000000000006,
+      "text": "That was kind of the whole point, right? Like the whole pitch of Comply v2 is that compliance shouldn't require a specialist to operate the tool. So the UX has to back that up."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 254.5,
+      "end_time": 265.5,
+      "duration": 11.0,
+      "text": "A hundred percent. Okay, let me - let me jump to something that I want to make sure we're thinking about given the, uh, the Detect outage earlier this month."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 266.1,
+      "end_time": 268.7,
+      "duration": 2.599999999999966,
+      "text": "Oh yeah, good call. What's the concern?"
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 269.3,
+      "end_time": 288.8,
+      "duration": 19.5,
+      "text": "So obviously Comply and Detect are separate modules, the outage shouldn't touch us at all. But I just want to make sure our comms are tight in case any customer asks on launch day whether the new Comply features are somehow connected to any recent stability issues. Like I don't want anyone conflating the two."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 289.3,
+      "end_time": 303.0,
+      "duration": 13.699999999999989,
+      "text": "That's a really smart thing to flag. I'd say from a QA perspective, Comply's infrastructure is totally independent - we don't share the event ingestion pipeline at all. The Comply report generation runs on its own processing layer."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 303.5,
+      "end_time": 317.9,
+      "duration": 14.399999999999977,
+      "text": "Right, and I think if we can get that in the launch announcement - even just a line that says something like 'Comply v2 operates on dedicated infrastructure' - that kind of proactively addresses any concerns without making it weird."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 318.6,
+      "end_time": 332.1,
+      "duration": 13.5,
+      "text": "Yeah I love that, I'll work that into the announcement copy. Okay, let me - what else. Oh, the HIPAA reporting module. Are we still confident that's fully validated? That's the one that was in flux the longest."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 332.6,
+      "end_time": 345.9,
+      "duration": 13.299999999999955,
+      "text": "Yes, fully validated. And honestly I'm most proud of that one from a QA standpoint. We ran it through like forty different customer data configurations to make sure the report output was accurate across edge cases. It's solid."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 346.5,
+      "end_time": 350.8,
+      "duration": 4.300000000000011,
+      "text": "Forty configurations, that's - yeah, okay. I feel good about that."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 351.9,
+      "end_time": 360.1,
+      "duration": 8.200000000000045,
+      "text": "We were not going to ship a HIPAA module that had any ambiguity in the output. Like, that's not the place to be hand-wavy."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 360.5,
+      "end_time": 372.1,
+      "duration": 11.600000000000023,
+      "text": "No, absolutely not. Okay - last big thing on my list, the in-app guidance. Jordan, the tooltips, the empty state copy, the onboarding flow for first-time Comply users. Where does that stand?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 372.5,
+      "end_time": 392.1,
+      "duration": 19.600000000000023,
+      "text": "All done and in production. The empty state for when you haven't run any reports yet - I'm actually really happy with it, it's got a clear call to action, explains the four frameworks, and has a 'run your first report' button that takes you right into the flow. It doesn't feel like a dead end."
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 393.2,
+      "end_time": 399.9,
+      "duration": 6.699999999999989,
+      "text": "Oh I saw that in staging, it looks great. The illustration too, it fits the overall aesthetic really well."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 401.4,
+      "end_time": 412.2,
+      "duration": 10.800000000000011,
+      "text": "Thank you! That one took a few iterations. The first version was way too busy. But I think where we landed is clean and it gives people a clear path forward."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 413.4,
+      "end_time": 431.2,
+      "duration": 17.80000000000001,
+      "text": "Alright, I think we're in genuinely great shape. Like, better than I expected three days out if I'm being honest. I'll update the launch checklist in Notion this afternoon, get sign-offs from all three of us, and then we should be good to go for Tuesday. Anyone have anything else?"
+    },
+    {
+      "speaker_name": "Nina Kowalski",
+      "start_time": 432.2,
+      "end_time": 435.2,
+      "duration": 3.0,
+      "text": "Nothing from me. I'm excited. Let's ship it."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 436.3,
+      "end_time": 441.2,
+      "duration": 4.899999999999977,
+      "text": "Same. Tuesday cannot come fast enough. This is going to be a good one."
+    },
+    {
+      "speaker_name": "Alex Reyes",
+      "start_time": 442.5,
+      "end_time": 445.2,
+      "duration": 2.6999999999999886,
+      "text": "Alright, let's do it. Thanks everyone, talk soon."
+    }
+  ],
+  "transcript_text": "Alex Reyes: Okay, I think everyone's on - Nina, Jordan, you both there?\nNina Kowalski: Yeah, I'm here, just had to mute my Slack notifications, there's like a thousand messages this morning.\nJordan Whitfield: Same, I'm here. Good morning everyone.\nAlex Reyes: Good morning! Okay so, three days out from launch - I'm genuinely excited, I feel like we've been building toward this for so long.\nJordan Whitfield: April 7th cannot come fast enough honestly.\nNina Kowalski: Right? Like, I've been living in the Comply v2 ticket queue for what feels like six months.\nAlex Reyes: It basically has been six months, so you're not wrong. Okay, I want to run through the launch day checklist today - make sure we're all aligned, flag any blockers, and just kind of do a final gut check before Tuesday.\nNina Kowalski: Sounds good, yeah. I have my checklist pulled up.\nJordan Whitfield: Same here, I've got the design handoff doc open too in case we need to reference anything.\nAlex Reyes: Perfect. So let me just start from the top - QA sign-off. Nina, where are we on the final regression suite? Last I saw there were like three open items.\nNina Kowalski: Yeah so, two of those are already closed as of this morning actually - the SOC 2 report generation timeout issue and the, um, the framework toggle bug in the multi-report view. Both resolved and verified.\nAlex Reyes: Oh that's great, I didn't see the update yet.\nNina Kowalski: Yeah Dev pushed fixes last night and I ran through the test cases first thing this morning. The third one - the edge case with PCI DSS report download on Safari - that one's still open but engineering flagged it as low severity, cosmetic only, doesn't affect report content.\nAlex Reyes: Okay, so is the call there to ship with it or hold? What's your gut, Nina?\nNina Kowalski: I mean, honestly, ship it. It's a minor UI rendering thing, the PDF is correct, the data is correct. I'd document it as a known issue and patch it in the next minor release.\nJordan Whitfield: Yeah I agree with that, and from the design side the Safari issue is - I actually know exactly what it is, it's just a flexbox rendering quirk in the download modal. I can drop a one-line CSS fix, it's not even worth delaying for.\nAlex Reyes: Can you do that before Tuesday though? Like I don't want to be merging stuff day-of.\nJordan Whitfield: Oh totally, I'll have it in a PR by end of day today. It's literally one line.\nAlex Reyes: Okay, perfect. Nina you good to verify that today or tomorrow?\nNina Kowalski: Absolutely, just ping me when it's merged and I'll run it through the test suite, should take maybe twenty minutes.\nAlex Reyes: Great, okay. That feels really clean. Moving on - Jordan, the on-demand reporting UI flow, are we good? The walkthrough I saw last week looked amazing by the way.\nJordan Whitfield: Thank you! Yeah, I'm really happy with how that turned out. The framework selector, the report preview panel, the download options - it all feels cohesive. I incorporated the feedback from the internal beta users, the ones who said the framework descriptions were too jargon-heavy.\nNina Kowalski: Oh yeah, that was a big one. I remember that feedback, people were like 'what does this even mean.'\nJordan Whitfield: Exactly, so the copy is much more plain language now. Like instead of just saying 'ISO 27001 framework' we have a little tooltip that explains what it covers, who it's typically for. It makes the whole thing feel a lot more accessible, especially for folks who aren't compliance experts themselves.\nAlex Reyes: That's such a good call, I think that's going to make a real difference for our smaller customers who don't have a dedicated compliance team.\nJordan Whitfield: That was kind of the whole point, right? Like the whole pitch of Comply v2 is that compliance shouldn't require a specialist to operate the tool. So the UX has to back that up.\nAlex Reyes: A hundred percent. Okay, let me - let me jump to something that I want to make sure we're thinking about given the, uh, the Detect outage earlier this month.\nNina Kowalski: Oh yeah, good call. What's the concern?\nAlex Reyes: So obviously Comply and Detect are separate modules, the outage shouldn't touch us at all. But I just want to make sure our comms are tight in case any customer asks on launch day whether the new Comply features are somehow connected to any recent stability issues. Like I don't want anyone conflating the two.\nNina Kowalski: That's a really smart thing to flag. I'd say from a QA perspective, Comply's infrastructure is totally independent - we don't share the event ingestion pipeline at all. The Comply report generation runs on its own processing layer.\nJordan Whitfield: Right, and I think if we can get that in the launch announcement - even just a line that says something like 'Comply v2 operates on dedicated infrastructure' - that kind of proactively addresses any concerns without making it weird.\nAlex Reyes: Yeah I love that, I'll work that into the announcement copy. Okay, let me - what else. Oh, the HIPAA reporting module. Are we still confident that's fully validated? That's the one that was in flux the longest.\nNina Kowalski: Yes, fully validated. And honestly I'm most proud of that one from a QA standpoint. We ran it through like forty different customer data configurations to make sure the report output was accurate across edge cases. It's solid.\nAlex Reyes: Forty configurations, that's - yeah, okay. I feel good about that.\nNina Kowalski: We were not going to ship a HIPAA module that had any ambiguity in the output. Like, that's not the place to be hand-wavy.\nAlex Reyes: No, absolutely not. Okay - last big thing on my list, the in-app guidance. Jordan, the tooltips, the empty state copy, the onboarding flow for first-time Comply users. Where does that stand?\nJordan Whitfield: All done and in production. The empty state for when you haven't run any reports yet - I'm actually really happy with it, it's got a clear call to action, explains the four frameworks, and has a 'run your first report' button that takes you right into the flow. It doesn't feel like a dead end.\nNina Kowalski: Oh I saw that in staging, it looks great. The illustration too, it fits the overall aesthetic really well.\nJordan Whitfield: Thank you! That one took a few iterations. The first version was way too busy. But I think where we landed is clean and it gives people a clear path forward.\nAlex Reyes: Alright, I think we're in genuinely great shape. Like, better than I expected three days out if I'm being honest. I'll update the launch checklist in Notion this afternoon, get sign-offs from all three of us, and then we should be good to go for Tuesday. Anyone have anything else?\nNina Kowalski: Nothing from me. I'm excited. Let's ship it.\nJordan Whitfield: Same. Tuesday cannot come fast enough. This is going to be a good one.\nAlex Reyes: Alright, let's do it. Thanks everyone, talk soon.",
+  "summary": "Alex Reyes led a pre-launch sync with Nina Kowalski and Jordan Whitfield three days before the Comply v2 launch on April 7th. The team reviewed the final QA checklist, confirming two of three open bugs are resolved, with the remaining Safari/PCI DSS cosmetic issue to be patched via a one-line CSS fix before launch. They discussed proactive messaging around infrastructure independence from the recent Detect outage, confirmed the HIPAA reporting module is fully validated across 40 configurations, and verified that in-app guidance and onboarding flows are complete and in production. Overall sentiment was highly positive, with the team expressing confidence in shipping on schedule.",
+  "topics": [
+    "launch readiness",
+    "qa sign-off",
+    "compliance reporting",
+    "safari bug",
+    "hipaa validation",
+    "incident communications"
+  ],
+  "action_items": [
+    "Jordan Whitfield: Submit a one-line CSS fix PR for the Safari flexbox rendering bug in the download modal by end of day",
+    "Nina Kowalski: Verify Jordan's Safari CSS fix once merged, estimated 20-minute test suite run",
+    "Alex Reyes: Incorporate 'dedicated infrastructure' language into the Comply v2 launch announcement copy to proactively address Detect outage concerns",
+    "Alex Reyes: Update the launch checklist in Notion this afternoon and collect sign-offs from all three team members"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 142.0,
+      "text": "Nina confirms two of three open QA bugs are resolved as of that morning, with the third being a minor Safari cosmetic issue recommended for shipping as a known issue",
+      "type": "positive_pivot",
+      "speaker": "Nina Kowalski"
+    },
+    {
+      "time": 198.0,
+      "text": "Jordan identifies the Safari bug as a one-line CSS fix and commits to submitting a PR by end of day, removing any blocker concern",
+      "type": "action_item",
+      "speaker": "Jordan Whitfield"
+    },
+    {
+      "time": 390.0,
+      "text": "Alex flags the risk of customers conflating Comply v2 with the recent Detect outage and proposes proactive infrastructure independence messaging in the launch announcement",
+      "type": "concern",
+      "speaker": "Alex Reyes"
+    },
+    {
+      "time": 490.0,
+      "text": "Nina highlights that the HIPAA reporting module was validated across 40 different customer data configurations, expressing strong confidence in its accuracy",
+      "type": "praise",
+      "speaker": "Nina Kowalski"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Join",
+      "time_seconds": 12.0,
+      "timestamp_ms": 1775321112000
+    },
+    {
+      "participant_name": "Jordan Whitfield",
+      "event_type": "Join",
+      "time_seconds": 14.0,
+      "timestamp_ms": 1775321114000
+    },
+    {
+      "participant_name": "Alex Reyes",
+      "event_type": "Join",
+      "time_seconds": 47.0,
+      "timestamp_ms": 1775321147000
+    },
+    {
+      "participant_name": "Alex Reyes",
+      "event_type": "Leave",
+      "time_seconds": 2478.0,
+      "timestamp_ms": 1775323578000
+    },
+    {
+      "participant_name": "Nina Kowalski",
+      "event_type": "Leave",
+      "time_seconds": 2491.0,
+      "timestamp_ms": 1775323591000
+    },
+    {
+      "participant_name": "Jordan Whitfield",
+      "event_type": "Leave",
+      "time_seconds": 2495.0,
+      "timestamp_ms": 1775323595000
+    }
+  ],
+  "stats": {
+    "turn_count": 43,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Alex Reyes": 17,
+      "Nina Kowalski": 14,
+      "Jordan Whitfield": 12
+    },
+    "speaker_total_seconds": {
+      "Alex Reyes": 156.2,
+      "Nina Kowalski": 118.3,
+      "Jordan Whitfield": 127.3
+    }
+  }
+}

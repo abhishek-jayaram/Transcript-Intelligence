@@ -1,0 +1,467 @@
+{
+  "meeting_id": "01KQC3A2EBC501837E973B16",
+  "title": "Aegis / Frostbyte AI - Identity Module Setup",
+  "organizer_email": "james.mitchell@aegiscloud.com",
+  "host_email": "james.mitchell@aegiscloud.com",
+  "start_time": "2026-02-19T10:30:00.000Z",
+  "end_time": "2026-02-19T11:02:18.000Z",
+  "duration_minutes": 32.3,
+  "participants": [
+    {
+      "email": "james.mitchell@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "v.zheng@frostbyte.ai",
+      "domain": "frostbyte.ai",
+      "role_hint": "external"
+    },
+    {
+      "email": "o.strand@frostbyte.ai",
+      "domain": "frostbyte.ai",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "james.mitchell@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "v.zheng@frostbyte.ai",
+      "domain": "frostbyte.ai",
+      "role_hint": "external"
+    },
+    {
+      "email": "o.strand@frostbyte.ai",
+      "domain": "frostbyte.ai",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "James Mitchell",
+    "1": "Victor Zheng",
+    "2": "Olivia Strand",
+    "3": "Ananya Sharma"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 4.6,
+      "end_time": 10.1,
+      "duration": 5.5,
+      "text": "Alright, I think everyone's joined now - Victor, Olivia, good to see you both again."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 10.5,
+      "end_time": 15.2,
+      "duration": 4.699999999999999,
+      "text": "Hey James, good to be here. Really excited to finally get this kicked off."
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 16.2,
+      "end_time": 24.6,
+      "duration": 8.400000000000002,
+      "text": "Same here, yeah. Thanks for making time on a Thursday afternoon, I know you all are heads down on a lot right now."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 25.8,
+      "end_time": 38.8,
+      "duration": 12.999999999999996,
+      "text": "Of course, of course. And I want to introduce Ananya Sharma - she's one of our senior engineers on the Identity side and she's going to be your main technical point of contact through the onboarding process."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 39.5,
+      "end_time": 52.5,
+      "duration": 13.0,
+      "text": "Hi everyone! Really happy to be working with you. I've actually looked through the notes from your sales calls and the infrastructure questionnaire you filled out, so I have a decent picture of where you're starting from."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 53.0,
+      "end_time": 59.2,
+      "duration": 6.200000000000003,
+      "text": "Oh that's great, yeah that saves us from having to re-explain everything from scratch. We really appreciate that."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 60.5,
+      "end_time": 75.6,
+      "duration": 15.099999999999994,
+      "text": "Absolutely, so - maybe just to set the stage for today, the goal is to walk through your Identity module setup, understand your current IAM landscape, and start mapping out the SSO and MFA configuration. Does that match what you were expecting?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 77.1,
+      "end_time": 92.5,
+      "duration": 15.400000000000006,
+      "text": "Yeah that's exactly right. And honestly, Olivia and I were talking before this call - the SSO piece is probably our biggest priority right now. We have users spread across like eight different tools and the login experience is just... it's a mess."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 94.0,
+      "end_time": 103.7,
+      "duration": 9.700000000000003,
+      "text": "Eight tools, yeah that's - okay, that's definitely something we can help consolidate. What's your current identity provider situation? Are you on Okta, Azure AD, something homegrown?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 104.6,
+      "end_time": 117.6,
+      "duration": 13.0,
+      "text": "We're on Okta right now but we've been pretty underwhelmed with it honestly. It does the basics but the MFA policy management is clunky and we've had some issues with our contractors not getting provisioned correctly."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 117.9,
+      "end_time": 132.8,
+      "duration": 14.900000000000006,
+      "text": "That contractor provisioning issue is something I hear a lot actually. And Aegis Identity handles that really well - you can set up conditional access policies that treat contractors differently from full-time staff, different MFA requirements, session timeouts, all of that."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 133.1,
+      "end_time": 141.9,
+      "duration": 8.800000000000011,
+      "text": "Oh that's - yeah, that's exactly the kind of granularity we've been missing. Olivia, that's the thing you mentioned in the board meeting right?"
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 142.4,
+      "end_time": 152.3,
+      "duration": 9.900000000000006,
+      "text": "Yeah exactly. We had a security review last quarter and one of the findings was that our contractor access controls weren't differentiated enough. So this is directly addressing that."
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 153.1,
+      "end_time": 165.5,
+      "duration": 12.400000000000006,
+      "text": "Perfect, and that's actually a really common driver for this kind of implementation in tech companies especially. You're scaling fast, you're bringing in contractors for specific projects, and the identity perimeter gets blurry really quickly."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 166.7,
+      "end_time": 178.3,
+      "duration": 11.600000000000023,
+      "text": "Exactly, yeah. Okay so - Ananya, walk me through what the actual setup process looks like. Like what are we looking at in terms of timeline and what do you need from us?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 178.8,
+      "end_time": 196.5,
+      "duration": 17.69999999999999,
+      "text": "Sure, so the first step is connecting Aegis Identity to your existing directory, and since you're on Okta that's actually a pretty smooth path - we have a native connector. We'd set that up, do a full user sync, and then you'd validate that the user attributes are coming across correctly."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 197.5,
+      "end_time": 206.5,
+      "duration": 9.0,
+      "text": "How long does that sync usually take? We have... I want to say around four hundred users, maybe a few dozen contractors on top of that."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 207.3,
+      "end_time": 223.8,
+      "duration": 16.5,
+      "text": "For that size, the initial sync is usually done in under an hour. It's really the validation step that takes time - you want to do spot checks, make sure groups are mapping correctly, that kind of thing. I'd budget maybe half a day for that."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 224.3,
+      "end_time": 227.0,
+      "duration": 2.6999999999999886,
+      "text": "That's much faster than I expected honestly."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 227.4,
+      "end_time": 244.8,
+      "duration": 17.400000000000006,
+      "text": "Yeah we've really streamlined it over the last few releases. And then from there we'd move into SSO configuration for your applications. Can you share what those eight tools are? That'll help me flag any that might need custom SAML work versus the ones we have prebuilt connectors for."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 246.3,
+      "end_time": 256.9,
+      "duration": 10.599999999999966,
+      "text": "Yeah let me just - I have a list somewhere. Okay so we've got Slack, GitHub, Jira, Confluence, Figma, MetricFlow, Snowflake, and then our internal admin portal which is custom built."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 258.2,
+      "end_time": 275.8,
+      "duration": 17.600000000000023,
+      "text": "Okay great, so the first seven - all of those have prebuilt connectors in Aegis Identity, so those are basically click-to-configure. The internal admin portal is where we'd need to do a bit more work, but as long as it supports SAML 2.0 or OIDC, we're in good shape."
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 276.9,
+      "end_time": 283.1,
+      "duration": 6.2000000000000455,
+      "text": "It does SAML, yeah. Victor built it so he can speak to that better than I can."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 283.9,
+      "end_time": 291.6,
+      "duration": 7.7000000000000455,
+      "text": "Yeah it's SAML 2.0, we actually built it with federation in mind so it should be pretty straightforward to hook up."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 292.4,
+      "end_time": 307.1,
+      "duration": 14.700000000000045,
+      "text": "Perfect, that's what I was hoping to hear. So realistically you're looking at getting SSO live across all eight apps within the first two weeks of active configuration. The third week we'd layer in the MFA policies and the conditional access rules."
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 307.4,
+      "end_time": 315.1,
+      "duration": 7.7000000000000455,
+      "text": "That timeline is honestly better than what we had penciled in. We were thinking it would be closer to six weeks."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 316.2,
+      "end_time": 331.7,
+      "duration": 15.5,
+      "text": "Ha, well I don't want to overpromise - some things do take longer than expected, especially if we hit any surprises in the user attribute mapping. But the two to three week mark for a baseline configuration at your scale is pretty typical."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 332.7,
+      "end_time": 340.5,
+      "duration": 7.800000000000011,
+      "text": "I appreciate the honesty. So what do you need from us to get started? Like what's the first action item on our side?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 341.3,
+      "end_time": 362.5,
+      "duration": 21.19999999999999,
+      "text": "A couple things - I'll send you an Okta API token request guide, it's basically step by step, shouldn't take more than twenty minutes. And then I'll also send you a user attribute mapping template so you can document which fields in Okta correspond to what we need on the Aegis side. Groups, roles, department codes, that kind of thing."
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 364.0,
+      "end_time": 367.4,
+      "duration": 3.3999999999999773,
+      "text": "Got it. Victor, can you own those two things?"
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 368.3,
+      "end_time": 374.2,
+      "duration": 5.899999999999977,
+      "text": "Yeah absolutely, I can have both done by end of next week. Does that work Ananya?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 374.9,
+      "end_time": 390.0,
+      "duration": 15.100000000000023,
+      "text": "That works great. And once I have those I'll schedule a working session - probably ninety minutes - where we actually do the Okta connector setup together. I find it's much easier when we're on a call versus trying to do it async."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 391.1,
+      "end_time": 396.9,
+      "duration": 5.7999999999999545,
+      "text": "Yeah agreed, I hate doing this kind of thing over email. Too much back and forth."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 398.0,
+      "end_time": 411.9,
+      "duration": 13.899999999999977,
+      "text": "One thing I wanted to ask about - um, the MFA side. Are there specific authentication methods you want to enforce? Like hardware keys, push notifications, TOTP? We have opinions but we also want to match your security posture."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 412.8,
+      "end_time": 419.7,
+      "duration": 6.899999999999977,
+      "text": "That's a great question. Olivia, do you want to speak to that? It came up in the security review."
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 421.0,
+      "end_time": 434.0,
+      "duration": 13.0,
+      "text": "Yeah so for full-time employees we want to enforce hardware keys for anything touching production systems, and push-based MFA for everything else. Contractors should have TOTP at minimum - we're not going to issue hardware keys to contractors."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 434.9,
+      "end_time": 452.6,
+      "duration": 17.700000000000045,
+      "text": "That's a really clean policy actually, and Aegis Identity supports exactly that setup. You can tie MFA method requirements to user groups and also to the specific application being accessed. So you could say - access to Snowflake requires hardware key, full stop, regardless of whether you're on-prem or remote."
+    },
+    {
+      "speaker_name": "Olivia Strand",
+      "start_time": 453.3,
+      "end_time": 459.0,
+      "duration": 5.699999999999989,
+      "text": "Oh that's - yeah that's powerful. We couldn't do anything close to that with Okta."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 459.6,
+      "end_time": 470.4,
+      "duration": 10.799999999999955,
+      "text": "Alright, I think we've covered a ton of ground today. Really feels like this is going to come together well. James, anything you wanted to add before we wrap up?"
+    },
+    {
+      "speaker_name": "James Mitchell",
+      "start_time": 471.4,
+      "end_time": 488.2,
+      "duration": 16.80000000000001,
+      "text": "Just that - yeah, I'm really glad we're at this point. You're in great hands with Ananya, she's done this implementation probably a hundred times and always gets customers live faster than they expect. And as always I'm here if anything comes up on the commercial side."
+    },
+    {
+      "speaker_name": "Victor Zheng",
+      "start_time": 488.8,
+      "end_time": 498.8,
+      "duration": 10.0,
+      "text": "Perfect. Okay, Ananya we'll get you those items by end of next week and then we'll get that working session on the calendar. Really looking forward to this."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 499.8,
+      "end_time": 510.5,
+      "duration": 10.699999999999989,
+      "text": "Same here! I'll send over those guides this afternoon and I'll also drop a shared project doc where we can track all the milestones. Thanks everyone, this was a great kickoff."
+    }
+  ],
+  "transcript_text": "James Mitchell: Alright, I think everyone's joined now - Victor, Olivia, good to see you both again.\nVictor Zheng: Hey James, good to be here. Really excited to finally get this kicked off.\nOlivia Strand: Same here, yeah. Thanks for making time on a Thursday afternoon, I know you all are heads down on a lot right now.\nJames Mitchell: Of course, of course. And I want to introduce Ananya Sharma - she's one of our senior engineers on the Identity side and she's going to be your main technical point of contact through the onboarding process.\nAnanya Sharma: Hi everyone! Really happy to be working with you. I've actually looked through the notes from your sales calls and the infrastructure questionnaire you filled out, so I have a decent picture of where you're starting from.\nVictor Zheng: Oh that's great, yeah that saves us from having to re-explain everything from scratch. We really appreciate that.\nAnanya Sharma: Absolutely, so - maybe just to set the stage for today, the goal is to walk through your Identity module setup, understand your current IAM landscape, and start mapping out the SSO and MFA configuration. Does that match what you were expecting?\nVictor Zheng: Yeah that's exactly right. And honestly, Olivia and I were talking before this call - the SSO piece is probably our biggest priority right now. We have users spread across like eight different tools and the login experience is just... it's a mess.\nAnanya Sharma: Eight tools, yeah that's - okay, that's definitely something we can help consolidate. What's your current identity provider situation? Are you on Okta, Azure AD, something homegrown?\nVictor Zheng: We're on Okta right now but we've been pretty underwhelmed with it honestly. It does the basics but the MFA policy management is clunky and we've had some issues with our contractors not getting provisioned correctly.\nAnanya Sharma: That contractor provisioning issue is something I hear a lot actually. And Aegis Identity handles that really well - you can set up conditional access policies that treat contractors differently from full-time staff, different MFA requirements, session timeouts, all of that.\nVictor Zheng: Oh that's - yeah, that's exactly the kind of granularity we've been missing. Olivia, that's the thing you mentioned in the board meeting right?\nOlivia Strand: Yeah exactly. We had a security review last quarter and one of the findings was that our contractor access controls weren't differentiated enough. So this is directly addressing that.\nJames Mitchell: Perfect, and that's actually a really common driver for this kind of implementation in tech companies especially. You're scaling fast, you're bringing in contractors for specific projects, and the identity perimeter gets blurry really quickly.\nVictor Zheng: Exactly, yeah. Okay so - Ananya, walk me through what the actual setup process looks like. Like what are we looking at in terms of timeline and what do you need from us?\nAnanya Sharma: Sure, so the first step is connecting Aegis Identity to your existing directory, and since you're on Okta that's actually a pretty smooth path - we have a native connector. We'd set that up, do a full user sync, and then you'd validate that the user attributes are coming across correctly.\nVictor Zheng: How long does that sync usually take? We have... I want to say around four hundred users, maybe a few dozen contractors on top of that.\nAnanya Sharma: For that size, the initial sync is usually done in under an hour. It's really the validation step that takes time - you want to do spot checks, make sure groups are mapping correctly, that kind of thing. I'd budget maybe half a day for that.\nVictor Zheng: That's much faster than I expected honestly.\nAnanya Sharma: Yeah we've really streamlined it over the last few releases. And then from there we'd move into SSO configuration for your applications. Can you share what those eight tools are? That'll help me flag any that might need custom SAML work versus the ones we have prebuilt connectors for.\nVictor Zheng: Yeah let me just - I have a list somewhere. Okay so we've got Slack, GitHub, Jira, Confluence, Figma, MetricFlow, Snowflake, and then our internal admin portal which is custom built.\nAnanya Sharma: Okay great, so the first seven - all of those have prebuilt connectors in Aegis Identity, so those are basically click-to-configure. The internal admin portal is where we'd need to do a bit more work, but as long as it supports SAML 2.0 or OIDC, we're in good shape.\nOlivia Strand: It does SAML, yeah. Victor built it so he can speak to that better than I can.\nVictor Zheng: Yeah it's SAML 2.0, we actually built it with federation in mind so it should be pretty straightforward to hook up.\nAnanya Sharma: Perfect, that's what I was hoping to hear. So realistically you're looking at getting SSO live across all eight apps within the first two weeks of active configuration. The third week we'd layer in the MFA policies and the conditional access rules.\nOlivia Strand: That timeline is honestly better than what we had penciled in. We were thinking it would be closer to six weeks.\nAnanya Sharma: Ha, well I don't want to overpromise - some things do take longer than expected, especially if we hit any surprises in the user attribute mapping. But the two to three week mark for a baseline configuration at your scale is pretty typical.\nVictor Zheng: I appreciate the honesty. So what do you need from us to get started? Like what's the first action item on our side?\nAnanya Sharma: A couple things - I'll send you an Okta API token request guide, it's basically step by step, shouldn't take more than twenty minutes. And then I'll also send you a user attribute mapping template so you can document which fields in Okta correspond to what we need on the Aegis side. Groups, roles, department codes, that kind of thing.\nOlivia Strand: Got it. Victor, can you own those two things?\nVictor Zheng: Yeah absolutely, I can have both done by end of next week. Does that work Ananya?\nAnanya Sharma: That works great. And once I have those I'll schedule a working session - probably ninety minutes - where we actually do the Okta connector setup together. I find it's much easier when we're on a call versus trying to do it async.\nVictor Zheng: Yeah agreed, I hate doing this kind of thing over email. Too much back and forth.\nAnanya Sharma: One thing I wanted to ask about - um, the MFA side. Are there specific authentication methods you want to enforce? Like hardware keys, push notifications, TOTP? We have opinions but we also want to match your security posture.\nVictor Zheng: That's a great question. Olivia, do you want to speak to that? It came up in the security review.\nOlivia Strand: Yeah so for full-time employees we want to enforce hardware keys for anything touching production systems, and push-based MFA for everything else. Contractors should have TOTP at minimum - we're not going to issue hardware keys to contractors.\nAnanya Sharma: That's a really clean policy actually, and Aegis Identity supports exactly that setup. You can tie MFA method requirements to user groups and also to the specific application being accessed. So you could say - access to Snowflake requires hardware key, full stop, regardless of whether you're on-prem or remote.\nOlivia Strand: Oh that's - yeah that's powerful. We couldn't do anything close to that with Okta.\nVictor Zheng: Alright, I think we've covered a ton of ground today. Really feels like this is going to come together well. James, anything you wanted to add before we wrap up?\nJames Mitchell: Just that - yeah, I'm really glad we're at this point. You're in great hands with Ananya, she's done this implementation probably a hundred times and always gets customers live faster than they expect. And as always I'm here if anything comes up on the commercial side.\nVictor Zheng: Perfect. Okay, Ananya we'll get you those items by end of next week and then we'll get that working session on the calendar. Really looking forward to this.\nAnanya Sharma: Same here! I'll send over those guides this afternoon and I'll also drop a shared project doc where we can track all the milestones. Thanks everyone, this was a great kickoff.",
+  "summary": "This was an onboarding kickoff call for Aegis Identity with Victor Zheng and Olivia Strand as the new customers, joined by James Mitchell (account manager) and Ananya Sharma (senior engineer, technical point of contact). The customer is migrating from Okta and their primary goals are consolidating SSO across eight tools and implementing more granular MFA and conditional access policies, particularly for contractor vs. full-time employee differentiation. Ananya outlined a two-to-three week timeline for baseline SSO configuration and MFA rollout, faster than the customer anticipated. Next steps were clearly established, including Victor completing Okta API token setup and a user attribute mapping template before scheduling a live working session.",
+  "topics": [
+    "onboarding",
+    "sso configuration",
+    "mfa policy",
+    "identity access management",
+    "contractor access controls",
+    "okta migration"
+  ],
+  "action_items": [
+    "Victor Zheng: Complete the Okta API token request and fill out the user attribute mapping template by end of next week",
+    "Ananya Sharma: Send Okta API token request guide and user attribute mapping template to Victor this afternoon",
+    "Ananya Sharma: Create and share a project milestone tracking document with the team",
+    "Victor Zheng: Schedule a 90-minute working session with Ananya for the Okta connector setup after completing prerequisites"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Victor expresses frustration with Okta's clunky MFA policy management and contractor provisioning issues, revealing pain points driving the migration.",
+      "type": "concern",
+      "speaker": "Victor Zheng"
+    },
+    {
+      "time": 160.0,
+      "text": "Olivia confirms contractor access differentiation directly addresses a finding from a recent security review, validating the business case for the implementation.",
+      "type": "positive_pivot",
+      "speaker": "Olivia Strand"
+    },
+    {
+      "time": 390.0,
+      "text": "Ananya confirms all seven third-party tools have prebuilt connectors and projects SSO can go live across all eight apps within two weeks, well ahead of the customer's six-week estimate.",
+      "type": "praise",
+      "speaker": "Ananya Sharma"
+    },
+    {
+      "time": 530.0,
+      "text": "Olivia highlights that Aegis Identity's per-app, per-group MFA method enforcement is functionality they could not achieve with Okta, reinforcing product differentiation.",
+      "type": "feature_gap",
+      "speaker": "Olivia Strand"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 5.0,
+      "timestamp_ms": 1771497005000
+    },
+    {
+      "participant_name": "Victor Zheng",
+      "event_type": "Join",
+      "time_seconds": 8.0,
+      "timestamp_ms": 1771497008000
+    },
+    {
+      "participant_name": "James Mitchell",
+      "event_type": "Join",
+      "time_seconds": 31.0,
+      "timestamp_ms": 1771497031000
+    },
+    {
+      "participant_name": "Olivia Strand",
+      "event_type": "Join",
+      "time_seconds": 32.0,
+      "timestamp_ms": 1771497032000
+    },
+    {
+      "participant_name": "James Mitchell",
+      "event_type": "Leave",
+      "time_seconds": 1935.9999999999998,
+      "timestamp_ms": 1771498936000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 1910.9999999999998,
+      "timestamp_ms": 1771498911000
+    },
+    {
+      "participant_name": "Victor Zheng",
+      "event_type": "Leave",
+      "time_seconds": 1912.9999999999998,
+      "timestamp_ms": 1771498913000
+    },
+    {
+      "participant_name": "Olivia Strand",
+      "event_type": "Leave",
+      "time_seconds": 1929.9999999999998,
+      "timestamp_ms": 1771498930000
+    }
+  ],
+  "stats": {
+    "turn_count": 42,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "James Mitchell": 4,
+      "Victor Zheng": 16,
+      "Olivia Strand": 7,
+      "Ananya Sharma": 15
+    },
+    "speaker_total_seconds": {
+      "James Mitchell": 47.7,
+      "Victor Zheng": 136.9,
+      "Olivia Strand": 54.3,
+      "Ananya Sharma": 230.7
+    }
+  }
+}

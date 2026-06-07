@@ -1,0 +1,435 @@
+{
+  "meeting_id": "01KQEDE682B4A8D67C657CF1",
+  "title": "Support Case #3103 - Silverline Brands Detect False Positives After Patch",
+  "organizer_email": "sarah.chen@aegiscloud.com",
+  "host_email": "sarah.chen@aegiscloud.com",
+  "start_time": "2026-03-16T16:15:00.000Z",
+  "end_time": "2026-03-16T16:28:48.000Z",
+  "duration_minutes": 13.8,
+  "participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "d.flores@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "m.tan@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "d.flores@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "m.tan@silverlinebrands.com",
+      "domain": "silverlinebrands.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Sarah Chen",
+    "1": "Dominic Flores",
+    "2": "Michelle Tan"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 3.7,
+      "end_time": 10.3,
+      "duration": 6.6000000000000005,
+      "text": "Hi, this is Sarah Chen calling from Aegis Cloud Security support - am I speaking with Dominic Flores?"
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 11.6,
+      "end_time": 21.7,
+      "duration": 10.1,
+      "text": "Yeah, that's me. Hi Sarah. I've got Michelle Tan on the line too, she's our Security Manager - she's been dealing with this more directly than I have."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 22.0,
+      "end_time": 28.7,
+      "duration": 6.699999999999999,
+      "text": "Hi Sarah, yeah, I've been the one actually in the platform trying to figure out what's going on."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 29.0,
+      "end_time": 41.5,
+      "duration": 12.5,
+      "text": "Great, hi Michelle, thanks for jumping on. So I pulled up Support Case 3103 before this call - you're seeing a spike in false positives from Aegis Detect after a patch was applied, is that right?"
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 42.3,
+      "end_time": 52.5,
+      "duration": 10.200000000000003,
+      "text": "That's correct. And look, I want to be upfront - we're already pretty frustrated. This is the second issue we've had with Detect in, like, the past couple weeks."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 54.0,
+      "end_time": 65.3,
+      "duration": 11.299999999999997,
+      "text": "I completely understand, Dominic, and I appreciate you flagging that. Can you walk me through what you're seeing specifically? Like when did it start and what kind of alerts are triggering?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 65.9,
+      "end_time": 78.2,
+      "duration": 12.299999999999997,
+      "text": "So, um, we applied the agent patch - I think it was version 4.2.1 - on Friday night. Saturday morning I come in and my dashboard is just... lit up. Hundreds of critical alerts."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 78.6,
+      "end_time": 81.9,
+      "duration": 3.3000000000000114,
+      "text": "Hundreds? Like, what's your normal alert volume on a Saturday?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 83.0,
+      "end_time": 99.5,
+      "duration": 16.5,
+      "text": "Maybe fifteen, twenty alerts on a slow day. We're a retail company, we have a lot of endpoints, but our baseline is pretty well established at this point. So going from twenty to, I don't know, I counted over three hundred by 9 AM - that's not normal."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 100.6,
+      "end_time": 111.0,
+      "duration": 10.400000000000006,
+      "text": "And our on-call person spent the entire morning triaging and every single one of them was a false positive. Every. Single. One. That's hours of wasted time right there."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 111.9,
+      "end_time": 123.5,
+      "duration": 11.599999999999994,
+      "text": "Yeah, that's - okay, I hear you, that's a significant operational impact. Michelle, do you know what categories of alerts were triggering? Like was it lateral movement, unusual login patterns, data exfiltration flags, or...?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 124.1,
+      "end_time": 137.6,
+      "duration": 13.5,
+      "text": "It was mostly the behavioral anomaly ones. Uh, specifically around process execution - we were getting flagged for what looked like, I think the alert type was something like 'suspicious child process spawning' or something along those lines."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 138.5,
+      "end_time": 143.4,
+      "duration": 4.900000000000006,
+      "text": "Okay. And those endpoints - are those your POS systems, back-office servers, or a mix?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 144.2,
+      "end_time": 156.1,
+      "duration": 11.900000000000006,
+      "text": "Mix, but predominantly back-office. Our inventory management system runs a lot of scheduled jobs on Saturday mornings - restocking workflows, that kind of thing. We've never had issues with those being flagged before."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 157.2,
+      "end_time": 173.9,
+      "duration": 16.700000000000017,
+      "text": "Right, right. So the patch may have reset or recalibrated the behavioral baseline thresholds. That's... yeah, that's a known issue we've been tracking with 4.2.1 actually. The patch included updates to the behavioral detection engine and in some environments it's basically starting the learning period over from scratch."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 174.3,
+      "end_time": 179.3,
+      "duration": 5.0,
+      "text": "I'm sorry - it's a known issue? Why weren't we notified before we applied it?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 180.1,
+      "end_time": 196.2,
+      "duration": 16.099999999999994,
+      "text": "That's a fair point, Dominic, and I'm not going to make excuses for that. The advisory did go out but I think it was posted to the release notes portal and honestly that's not sufficient for an issue of this scope. I'll be flagging that internally."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 197.5,
+      "end_time": 211.3,
+      "duration": 13.800000000000011,
+      "text": "We shouldn't have to check a portal every time we apply a patch to find out if it's going to break our alerting. We have an account manager, we have a support contract - this should be proactive communication."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 212.4,
+      "end_time": 223.8,
+      "duration": 11.400000000000006,
+      "text": "You're absolutely right. And I will make sure that feedback gets escalated after this call. Right now though I want to focus on getting you fixed up - can we do that?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 224.8,
+      "end_time": 227.3,
+      "duration": 2.5,
+      "text": "Yeah, okay. Yes. What do we do?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 227.8,
+      "end_time": 248.9,
+      "duration": 21.099999999999994,
+      "text": "So there are two things we can do. First, I can push a configuration update to manually restore your previous baseline snapshot - we keep a 30-day history of your tuning profiles, so we can roll back to where you were before the patch. That should stop the flood of false positives within a couple hours of applying it."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 249.9,
+      "end_time": 253.0,
+      "duration": 3.0999999999999943,
+      "text": "Okay, that sounds good. And what's the second thing?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 254.3,
+      "end_time": 273.7,
+      "duration": 19.399999999999977,
+      "text": "The second thing is we need to get you on a supervised re-learning period so the engine actually learns your environment properly after the patch - rather than just resetting blind. I'd want to work with you to set some suppression rules for those Saturday batch jobs specifically, so they don't trigger during the relearning window."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 274.9,
+      "end_time": 280.9,
+      "duration": 6.0,
+      "text": "How long does the relearning period take? Because we can't have our team babysitting alerts for weeks."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 282.2,
+      "end_time": 297.4,
+      "duration": 15.199999999999989,
+      "text": "Typically seven to fourteen days for a retail environment with your endpoint count. But with the suppression rules in place and the baseline restore, you should be back to normal alert volumes pretty much immediately - the relearning just happens in the background."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 298.0,
+      "end_time": 307.4,
+      "duration": 9.399999999999977,
+      "text": "Okay. And this won't affect our actual threat detection coverage during that window? Because - I mean, we can't just be blind to real threats either."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 308.0,
+      "end_time": 322.1,
+      "duration": 14.100000000000023,
+      "text": "No, the signature-based detection stays fully active throughout. The behavioral engine is supplementary - it catches things signatures might miss, but you're not losing your core detection capability. The suppression rules will be scoped really narrowly to those specific process patterns."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 323.4,
+      "end_time": 334.1,
+      "duration": 10.700000000000045,
+      "text": "Okay. That's - yeah, that's somewhat reassuring. Though I want to say, this is all happening, what, a week after we already had issues with Detect? The outage earlier this month?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 335.2,
+      "end_time": 341.1,
+      "duration": 5.900000000000034,
+      "text": "I know. I know, and I won't pretend that's not a rough stretch. We take that seriously."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 342.2,
+      "end_time": 355.5,
+      "duration": 13.300000000000011,
+      "text": "We're evaluating other vendors at renewal time, Sarah. I want to be transparent about that. This isn't a threat, it's just - we need to be confident in this platform and right now our confidence is shaken."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 356.1,
+      "end_time": 371.7,
+      "duration": 15.599999999999966,
+      "text": "I appreciate you being direct with me, Dominic. All I can do right now is make sure we get this fixed correctly today and make sure your account team follows up with you on the bigger picture. That conversation deserves more than a support call."
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 372.8,
+      "end_time": 379.8,
+      "duration": 7.0,
+      "text": "Agreed. For now, how do we start the baseline restore? Do you need access to something on our end?"
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 380.2,
+      "end_time": 395.9,
+      "duration": 15.699999999999989,
+      "text": "I'll initiate it from our side - I just need you to confirm the tenant ID and which agent group you want me to target first. Do you want to start with the back-office servers since that's where most of the noise is coming from?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 396.6,
+      "end_time": 404.4,
+      "duration": 7.7999999999999545,
+      "text": "Yes, start there. The tenant ID is SLB-0047. And I can stay on the line while you do it if that helps."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 405.3,
+      "end_time": 420.1,
+      "duration": 14.800000000000011,
+      "text": "That would be great actually, yeah. Give me just a moment to pull that up... okay, I've got your tenant, I can see the baseline history. Your last stable profile is from March 13th - does that sound right, before the patch?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 421.6,
+      "end_time": 426.7,
+      "duration": 5.099999999999966,
+      "text": "Yeah, we applied the patch on the 14th. So March 13th would be clean."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 427.0,
+      "end_time": 444.2,
+      "duration": 17.19999999999999,
+      "text": "Perfect. Initiating the restore now to the back-office agent group. You should start seeing alert volumes normalize within the next hour or two. I'll send you a follow-up email with the suppression rule recommendations and a write-up of what happened - something you can share with your team."
+    },
+    {
+      "speaker_name": "Dominic Flores",
+      "start_time": 445.6,
+      "end_time": 454.0,
+      "duration": 8.399999999999977,
+      "text": "Okay. And the account manager follow-up you mentioned - can you put that in writing too? I want to make sure it actually happens."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 455.1,
+      "end_time": 463.9,
+      "duration": 8.799999999999955,
+      "text": "Absolutely. I'll copy your account manager directly on the case notes so it's documented. Is there anything else pressing before I let you both go?"
+    },
+    {
+      "speaker_name": "Michelle Tan",
+      "start_time": 464.7,
+      "end_time": 478.8,
+      "duration": 14.100000000000023,
+      "text": "No, I think that's it for now. We'll keep an eye on the alert volumes. Thanks Sarah - I don't want it to sound like we're not appreciating the help today, we just... we need things to be more stable."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 479.3,
+      "end_time": 485.4,
+      "duration": 6.099999999999966,
+      "text": "I hear you, Michelle. Thanks for your patience. I'll get that email over to you within the hour."
+    }
+  ],
+  "transcript_text": "Sarah Chen: Hi, this is Sarah Chen calling from Aegis Cloud Security support - am I speaking with Dominic Flores?\nDominic Flores: Yeah, that's me. Hi Sarah. I've got Michelle Tan on the line too, she's our Security Manager - she's been dealing with this more directly than I have.\nMichelle Tan: Hi Sarah, yeah, I've been the one actually in the platform trying to figure out what's going on.\nSarah Chen: Great, hi Michelle, thanks for jumping on. So I pulled up Support Case 3103 before this call - you're seeing a spike in false positives from Aegis Detect after a patch was applied, is that right?\nDominic Flores: That's correct. And look, I want to be upfront - we're already pretty frustrated. This is the second issue we've had with Detect in, like, the past couple weeks.\nSarah Chen: I completely understand, Dominic, and I appreciate you flagging that. Can you walk me through what you're seeing specifically? Like when did it start and what kind of alerts are triggering?\nMichelle Tan: So, um, we applied the agent patch - I think it was version 4.2.1 - on Friday night. Saturday morning I come in and my dashboard is just... lit up. Hundreds of critical alerts.\nSarah Chen: Hundreds? Like, what's your normal alert volume on a Saturday?\nMichelle Tan: Maybe fifteen, twenty alerts on a slow day. We're a retail company, we have a lot of endpoints, but our baseline is pretty well established at this point. So going from twenty to, I don't know, I counted over three hundred by 9 AM - that's not normal.\nDominic Flores: And our on-call person spent the entire morning triaging and every single one of them was a false positive. Every. Single. One. That's hours of wasted time right there.\nSarah Chen: Yeah, that's - okay, I hear you, that's a significant operational impact. Michelle, do you know what categories of alerts were triggering? Like was it lateral movement, unusual login patterns, data exfiltration flags, or...?\nMichelle Tan: It was mostly the behavioral anomaly ones. Uh, specifically around process execution - we were getting flagged for what looked like, I think the alert type was something like 'suspicious child process spawning' or something along those lines.\nSarah Chen: Okay. And those endpoints - are those your POS systems, back-office servers, or a mix?\nMichelle Tan: Mix, but predominantly back-office. Our inventory management system runs a lot of scheduled jobs on Saturday mornings - restocking workflows, that kind of thing. We've never had issues with those being flagged before.\nSarah Chen: Right, right. So the patch may have reset or recalibrated the behavioral baseline thresholds. That's... yeah, that's a known issue we've been tracking with 4.2.1 actually. The patch included updates to the behavioral detection engine and in some environments it's basically starting the learning period over from scratch.\nDominic Flores: I'm sorry - it's a known issue? Why weren't we notified before we applied it?\nSarah Chen: That's a fair point, Dominic, and I'm not going to make excuses for that. The advisory did go out but I think it was posted to the release notes portal and honestly that's not sufficient for an issue of this scope. I'll be flagging that internally.\nDominic Flores: We shouldn't have to check a portal every time we apply a patch to find out if it's going to break our alerting. We have an account manager, we have a support contract - this should be proactive communication.\nSarah Chen: You're absolutely right. And I will make sure that feedback gets escalated after this call. Right now though I want to focus on getting you fixed up - can we do that?\nMichelle Tan: Yeah, okay. Yes. What do we do?\nSarah Chen: So there are two things we can do. First, I can push a configuration update to manually restore your previous baseline snapshot - we keep a 30-day history of your tuning profiles, so we can roll back to where you were before the patch. That should stop the flood of false positives within a couple hours of applying it.\nMichelle Tan: Okay, that sounds good. And what's the second thing?\nSarah Chen: The second thing is we need to get you on a supervised re-learning period so the engine actually learns your environment properly after the patch - rather than just resetting blind. I'd want to work with you to set some suppression rules for those Saturday batch jobs specifically, so they don't trigger during the relearning window.\nDominic Flores: How long does the relearning period take? Because we can't have our team babysitting alerts for weeks.\nSarah Chen: Typically seven to fourteen days for a retail environment with your endpoint count. But with the suppression rules in place and the baseline restore, you should be back to normal alert volumes pretty much immediately - the relearning just happens in the background.\nMichelle Tan: Okay. And this won't affect our actual threat detection coverage during that window? Because - I mean, we can't just be blind to real threats either.\nSarah Chen: No, the signature-based detection stays fully active throughout. The behavioral engine is supplementary - it catches things signatures might miss, but you're not losing your core detection capability. The suppression rules will be scoped really narrowly to those specific process patterns.\nDominic Flores: Okay. That's - yeah, that's somewhat reassuring. Though I want to say, this is all happening, what, a week after we already had issues with Detect? The outage earlier this month?\nSarah Chen: I know. I know, and I won't pretend that's not a rough stretch. We take that seriously.\nDominic Flores: We're evaluating other vendors at renewal time, Sarah. I want to be transparent about that. This isn't a threat, it's just - we need to be confident in this platform and right now our confidence is shaken.\nSarah Chen: I appreciate you being direct with me, Dominic. All I can do right now is make sure we get this fixed correctly today and make sure your account team follows up with you on the bigger picture. That conversation deserves more than a support call.\nMichelle Tan: Agreed. For now, how do we start the baseline restore? Do you need access to something on our end?\nSarah Chen: I'll initiate it from our side - I just need you to confirm the tenant ID and which agent group you want me to target first. Do you want to start with the back-office servers since that's where most of the noise is coming from?\nMichelle Tan: Yes, start there. The tenant ID is SLB-0047. And I can stay on the line while you do it if that helps.\nSarah Chen: That would be great actually, yeah. Give me just a moment to pull that up... okay, I've got your tenant, I can see the baseline history. Your last stable profile is from March 13th - does that sound right, before the patch?\nMichelle Tan: Yeah, we applied the patch on the 14th. So March 13th would be clean.\nSarah Chen: Perfect. Initiating the restore now to the back-office agent group. You should start seeing alert volumes normalize within the next hour or two. I'll send you a follow-up email with the suppression rule recommendations and a write-up of what happened - something you can share with your team.\nDominic Flores: Okay. And the account manager follow-up you mentioned - can you put that in writing too? I want to make sure it actually happens.\nSarah Chen: Absolutely. I'll copy your account manager directly on the case notes so it's documented. Is there anything else pressing before I let you both go?\nMichelle Tan: No, I think that's it for now. We'll keep an eye on the alert volumes. Thanks Sarah - I don't want it to sound like we're not appreciating the help today, we just... we need things to be more stable.\nSarah Chen: I hear you, Michelle. Thanks for your patience. I'll get that email over to you within the hour.",
+  "summary": "Sarah Chen from Aegis Cloud Security support spoke with Dominic Flores and Michelle Tan (Security Manager) regarding a surge of false positive alerts following the application of agent patch 4.2.1 on Friday night. The patch reset the behavioral detection baseline, causing over 300 false positive alerts on Saturday morning compared to their normal volume of 15-20, resulting in hours of wasted on-call time. Sarah identified the issue as a known problem with the 4.2.1 patch and initiated a baseline restore to the pre-patch profile from March 13th, while also recommending suppression rules for Saturday batch jobs during the relearning period. The customer expressed frustration over two incidents in two weeks and disclosed they are evaluating other vendors at renewal time.",
+  "topics": [
+    "false positives",
+    "patch management",
+    "behavioral detection",
+    "customer retention risk",
+    "incident communication",
+    "baseline configuration"
+  ],
+  "action_items": [
+    "Sarah Chen: Send follow-up email with suppression rule recommendations and a written explanation of the incident within one hour",
+    "Sarah Chen: Copy account manager directly on case notes to ensure a follow-up conversation about the broader confidence and stability concerns",
+    "Sarah Chen: Escalate internal feedback about inadequate proactive patch advisory communication to the appropriate team",
+    "Michelle Tan: Monitor alert volumes on back-office server agent group after baseline restore and confirm normalization"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Dominic reveals this is the second issue with Aegis Detect in two weeks and flags frustration upfront",
+      "type": "concern",
+      "speaker": "Dominic Flores"
+    },
+    {
+      "time": 310.0,
+      "text": "Sarah confirms the false positive spike is a known issue with patch 4.2.1 that resets behavioral baselines, prompting pushback on lack of proactive notification",
+      "type": "technical_issue",
+      "speaker": "Sarah Chen"
+    },
+    {
+      "time": 530.0,
+      "text": "Dominic discloses they are evaluating other vendors at renewal time due to shaken confidence in the platform",
+      "type": "churn_signal",
+      "speaker": "Dominic Flores"
+    },
+    {
+      "time": 620.0,
+      "text": "Sarah initiates baseline restore to pre-patch profile from March 13th targeting the back-office agent group, with Michelle confirming the tenant ID and staying on the line",
+      "type": "action_item",
+      "speaker": "Sarah Chen"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 9.0,
+      "timestamp_ms": 1773677709000
+    },
+    {
+      "participant_name": "Michelle Tan",
+      "event_type": "Join",
+      "time_seconds": 20.0,
+      "timestamp_ms": 1773677720000
+    },
+    {
+      "participant_name": "Dominic Flores",
+      "event_type": "Join",
+      "time_seconds": 34.0,
+      "timestamp_ms": 1773677734000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 816.0,
+      "timestamp_ms": 1773678516000
+    },
+    {
+      "participant_name": "Dominic Flores",
+      "event_type": "Leave",
+      "time_seconds": 810.0,
+      "timestamp_ms": 1773678510000
+    },
+    {
+      "participant_name": "Michelle Tan",
+      "event_type": "Leave",
+      "time_seconds": 808.0,
+      "timestamp_ms": 1773678508000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Sarah Chen": 20,
+      "Dominic Flores": 9,
+      "Michelle Tan": 12
+    },
+    "speaker_total_seconds": {
+      "Sarah Chen": 248.3,
+      "Dominic Flores": 87.9,
+      "Michelle Tan": 109.9
+    }
+  }
+}

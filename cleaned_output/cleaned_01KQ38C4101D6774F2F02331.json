@@ -1,0 +1,445 @@
+{
+  "meeting_id": "01KQ38C4101D6774F2F02331",
+  "title": "INCIDENT: Detect Pipeline Failure - War Room",
+  "organizer_email": "brian.cho@aegiscloud.com",
+  "host_email": "brian.cho@aegiscloud.com",
+  "start_time": "2026-03-10T13:15:00.000Z",
+  "end_time": "2026-03-10T13:44:54.000Z",
+  "duration_minutes": 29.9,
+  "participants": [
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Brian Cho",
+    "1": "Sofia Petrov",
+    "2": "Tom Bradley",
+    "3": "Ananya Sharma"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 6.3,
+      "end_time": 12.4,
+      "duration": 6.1000000000000005,
+      "text": "Okay, I think we've got everyone. Tom, you there? Brian's on, Ananya's on - Sofia, can you confirm?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 13.0,
+      "end_time": 16.7,
+      "duration": 3.6999999999999993,
+      "text": "Yeah I'm here, sorry, I was just pulling up the dashboards."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 17.4,
+      "end_time": 23.5,
+      "duration": 6.100000000000001,
+      "text": "Good. Okay, let's not waste time. Tom, do you want to kick us off or should I?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 24.6,
+      "end_time": 44.2,
+      "duration": 19.6,
+      "text": "I'll start. So, uh, at approximately 9:14 AM Pacific we started seeing alerts - or rather, the absence of alerts - from the Detect event processing pipeline. The ingestion layer just... stopped. No events coming through, no throughput, and the monitoring didn't catch it immediately which is its own problem we're going to talk about."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 44.9,
+      "end_time": 52.2,
+      "duration": 7.300000000000004,
+      "text": "When you say the monitoring didn't catch it - are we talking about our internal alerting or the customer-facing status stuff?"
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 53.0,
+      "end_time": 61.4,
+      "duration": 8.399999999999999,
+      "text": "Both, honestly. Internal alerting had a lag, and the status page wasn't updated until... Ananya, when did we actually post to the status page?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 61.7,
+      "end_time": 81.1,
+      "duration": 19.39999999999999,
+      "text": "It was around 10:40, so that's - yeah, that's about an hour and a half after the initial failure. And I want to be upfront, that's on me partly because I was the one who was supposed to pull the trigger on that and I was heads-down trying to figure out the root cause first."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 81.4,
+      "end_time": 92.7,
+      "duration": 11.299999999999997,
+      "text": "Ananya, I appreciate you saying that but that's a process failure, not a you failure. We shouldn't have a single person making the call on when to post. That's a systemic issue."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 93.9,
+      "end_time": 108.9,
+      "duration": 15.0,
+      "text": "I mean - I agree with that, but we can talk process later. Right now I've got customers blowing up my team's queue and I need to understand what actually happened technically so I can give my support engineers something to say."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 109.9,
+      "end_time": 117.5,
+      "duration": 7.599999999999994,
+      "text": "Right, yeah. Sofia, you want to walk through the technical failure? You were in the weeds on this from the start."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 118.6,
+      "end_time": 139.6,
+      "duration": 21.0,
+      "text": "Sure. So the event ingestion pipeline - basically it's a single primary node that handles all incoming threat event data before it fans out to the processing workers. That node hit a memory ceiling, started throwing OOM errors, and because we don't have a circuit breaker or any redundancy on that node, it just cascaded. Everything downstream starved out."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 140.0,
+      "end_time": 149.2,
+      "duration": 9.199999999999989,
+      "text": "Wait, so there's literally one node doing all of the ingestion? That's... okay I'm not an engineer but that sounds like a really bad design."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 149.8,
+      "end_time": 158.9,
+      "duration": 9.099999999999994,
+      "text": "It's not ideal, no. It's - look, it's a legacy architecture decision and it's been on the roadmap to address. We just hadn't prioritized it."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 159.9,
+      "end_time": 164.2,
+      "duration": 4.299999999999983,
+      "text": "It was flagged in the Q4 tech debt review, Tom. I flagged it."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 164.9,
+      "end_time": 178.3,
+      "duration": 13.400000000000006,
+      "text": "I know you did. And I'm not - look, this is not the time for that conversation. Yes, it was flagged, yes, it should have been prioritized, and now we're dealing with the consequences. I own that."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 179.2,
+      "end_time": 185.5,
+      "duration": 6.300000000000011,
+      "text": "Okay. So what's the current status? Are customers seeing data right now or are we still down?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 187.0,
+      "end_time": 201.2,
+      "duration": 14.199999999999989,
+      "text": "We're still down as of this call. Sofia and I have been working on a hotfix - we're spinning up a secondary ingestion node and routing traffic through a temporary load balancer config, but it's not clean. It's a stopgap."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 202.1,
+      "end_time": 204.5,
+      "duration": 2.4000000000000057,
+      "text": "How long until that stopgap is live?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 205.9,
+      "end_time": 212.3,
+      "duration": 6.400000000000006,
+      "text": "Best case? Another hour, maybe ninety minutes. But I don't want to commit to that publicly yet."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 213.2,
+      "end_time": 218.1,
+      "duration": 4.900000000000006,
+      "text": "Brian, what are you hearing from customers? Like, who's screaming the loudest right now?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 219.2,
+      "end_time": 247.8,
+      "duration": 28.600000000000023,
+      "text": "I mean, everyone in the enterprise tier is screaming. We've got - let me just look at my notes here - Harmon Financial has escalated twice, they're threatening to call their account manager directly. TerraLogix is asking whether this is a breach, which is a great question to get at 10 in the morning. And we've got at least a dozen mid-market customers who are just, you know, sitting there with a broken security product and no visibility into their threat environment."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 248.3,
+      "end_time": 253.0,
+      "duration": 4.699999999999989,
+      "text": "TerraLogix thinks it's a breach? We need to get ahead of that immediately."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 254.2,
+      "end_time": 269.8,
+      "duration": 15.600000000000023,
+      "text": "I know, I've got one of my senior support reps on the phone with them right now. But Tom, I need an actual statement I can give customers about what happened. Something honest that doesn't make us look like we don't know what we're doing."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 270.7,
+      "end_time": 276.5,
+      "duration": 5.800000000000011,
+      "text": "The problem is we're still root-causing. I don't want to put out a statement that's wrong."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 276.8,
+      "end_time": 288.1,
+      "duration": 11.300000000000011,
+      "text": "Tom, we know enough. It's a pipeline failure. It's not a breach. That's the most important thing to communicate right now. Customers would rather have an incomplete honest update than silence."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 289.3,
+      "end_time": 295.2,
+      "duration": 5.899999999999977,
+      "text": "I agree with Brian on this one. We've been in communications blackout for too long already."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 295.9,
+      "end_time": 303.5,
+      "duration": 7.600000000000023,
+      "text": "Fine. Fine. I'll draft something in the next - can someone give me fifteen minutes and I'll have a customer statement?"
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 304.9,
+      "end_time": 311.5,
+      "duration": 6.600000000000023,
+      "text": "Please. And make sure it explicitly says this is not a security breach, that's the first question everyone's asking."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 312.9,
+      "end_time": 323.6,
+      "duration": 10.700000000000045,
+      "text": "Yeah, I will. Sofia, while I'm doing that - can you document what you know so far about the failure sequence? We're going to need a timeline for the post-mortem."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 324.0,
+      "end_time": 346.8,
+      "duration": 22.80000000000001,
+      "text": "Already started. I've got a doc in Confluence, I'll drop the link in Slack. One thing I want to flag though - when we bring the stopgap online, customers are going to start seeing alerts again but there may be a gap in their event history. Like, events that occurred during the outage window may not be recoverable. We need to be upfront about that."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 347.7,
+      "end_time": 359.2,
+      "duration": 11.5,
+      "text": "Oh, that's - yeah, that's going to be a very bad conversation to have with customers in regulated industries. Are we sure about that? Is there any way to replay the events?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 359.8,
+      "end_time": 370.3,
+      "duration": 10.5,
+      "text": "We have some buffering at the source layer but it's limited. I'd say we can recover maybe sixty to seventy percent of what was lost. The rest is... gone."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 370.9,
+      "end_time": 379.1,
+      "duration": 8.200000000000045,
+      "text": "Okay. That's - we need to think carefully about how we communicate that. That's a significant data loss event for a security monitoring product."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 380.6,
+      "end_time": 385.8,
+      "duration": 5.199999999999989,
+      "text": "Agreed. Let's not bury it. Put it in the post-incident report. Customers deserve to know."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 387.0,
+      "end_time": 403.5,
+      "duration": 16.5,
+      "text": "Can we talk about the immediate next steps? I just want to make sure we have a clear owner on each thing before we get off this call, because the last two hours have been a lot of people doing a lot of things without coordination."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 404.9,
+      "end_time": 423.4,
+      "duration": 18.5,
+      "text": "Yes. Okay. Sofia and Ananya, you own the stopgap fix and the technical timeline doc. Brian, you own customer communications and escalation triage. I'll draft the public statement and then I'm going to get on a call with the CTO because she's going to need to know about this if she doesn't already."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 423.9,
+      "end_time": 428.4,
+      "duration": 4.5,
+      "text": "She knows. I got a Slack from her about forty minutes ago."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 429.3,
+      "end_time": 442.3,
+      "duration": 13.0,
+      "text": "Great. That's... great. Okay. Let's reconvene in ninety minutes or sooner if the fix goes live. Everybody check in on Slack. And - I know this has been a rough morning. Let's just get it fixed."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 442.7,
+      "end_time": 444.2,
+      "duration": 1.5,
+      "text": "Agreed. Let's go."
+    }
+  ],
+  "transcript_text": "Brian Cho: Okay, I think we've got everyone. Tom, you there? Brian's on, Ananya's on - Sofia, can you confirm?\nSofia Petrov: Yeah I'm here, sorry, I was just pulling up the dashboards.\nBrian Cho: Good. Okay, let's not waste time. Tom, do you want to kick us off or should I?\nTom Bradley: I'll start. So, uh, at approximately 9:14 AM Pacific we started seeing alerts - or rather, the absence of alerts - from the Detect event processing pipeline. The ingestion layer just... stopped. No events coming through, no throughput, and the monitoring didn't catch it immediately which is its own problem we're going to talk about.\nBrian Cho: When you say the monitoring didn't catch it - are we talking about our internal alerting or the customer-facing status stuff?\nTom Bradley: Both, honestly. Internal alerting had a lag, and the status page wasn't updated until... Ananya, when did we actually post to the status page?\nAnanya Sharma: It was around 10:40, so that's - yeah, that's about an hour and a half after the initial failure. And I want to be upfront, that's on me partly because I was the one who was supposed to pull the trigger on that and I was heads-down trying to figure out the root cause first.\nTom Bradley: Ananya, I appreciate you saying that but that's a process failure, not a you failure. We shouldn't have a single person making the call on when to post. That's a systemic issue.\nBrian Cho: I mean - I agree with that, but we can talk process later. Right now I've got customers blowing up my team's queue and I need to understand what actually happened technically so I can give my support engineers something to say.\nTom Bradley: Right, yeah. Sofia, you want to walk through the technical failure? You were in the weeds on this from the start.\nSofia Petrov: Sure. So the event ingestion pipeline - basically it's a single primary node that handles all incoming threat event data before it fans out to the processing workers. That node hit a memory ceiling, started throwing OOM errors, and because we don't have a circuit breaker or any redundancy on that node, it just cascaded. Everything downstream starved out.\nBrian Cho: Wait, so there's literally one node doing all of the ingestion? That's... okay I'm not an engineer but that sounds like a really bad design.\nTom Bradley: It's not ideal, no. It's - look, it's a legacy architecture decision and it's been on the roadmap to address. We just hadn't prioritized it.\nAnanya Sharma: It was flagged in the Q4 tech debt review, Tom. I flagged it.\nTom Bradley: I know you did. And I'm not - look, this is not the time for that conversation. Yes, it was flagged, yes, it should have been prioritized, and now we're dealing with the consequences. I own that.\nBrian Cho: Okay. So what's the current status? Are customers seeing data right now or are we still down?\nAnanya Sharma: We're still down as of this call. Sofia and I have been working on a hotfix - we're spinning up a secondary ingestion node and routing traffic through a temporary load balancer config, but it's not clean. It's a stopgap.\nBrian Cho: How long until that stopgap is live?\nSofia Petrov: Best case? Another hour, maybe ninety minutes. But I don't want to commit to that publicly yet.\nTom Bradley: Brian, what are you hearing from customers? Like, who's screaming the loudest right now?\nBrian Cho: I mean, everyone in the enterprise tier is screaming. We've got - let me just look at my notes here - Harmon Financial has escalated twice, they're threatening to call their account manager directly. TerraLogix is asking whether this is a breach, which is a great question to get at 10 in the morning. And we've got at least a dozen mid-market customers who are just, you know, sitting there with a broken security product and no visibility into their threat environment.\nTom Bradley: TerraLogix thinks it's a breach? We need to get ahead of that immediately.\nBrian Cho: I know, I've got one of my senior support reps on the phone with them right now. But Tom, I need an actual statement I can give customers about what happened. Something honest that doesn't make us look like we don't know what we're doing.\nTom Bradley: The problem is we're still root-causing. I don't want to put out a statement that's wrong.\nBrian Cho: Tom, we know enough. It's a pipeline failure. It's not a breach. That's the most important thing to communicate right now. Customers would rather have an incomplete honest update than silence.\nAnanya Sharma: I agree with Brian on this one. We've been in communications blackout for too long already.\nTom Bradley: Fine. Fine. I'll draft something in the next - can someone give me fifteen minutes and I'll have a customer statement?\nBrian Cho: Please. And make sure it explicitly says this is not a security breach, that's the first question everyone's asking.\nTom Bradley: Yeah, I will. Sofia, while I'm doing that - can you document what you know so far about the failure sequence? We're going to need a timeline for the post-mortem.\nSofia Petrov: Already started. I've got a doc in Confluence, I'll drop the link in Slack. One thing I want to flag though - when we bring the stopgap online, customers are going to start seeing alerts again but there may be a gap in their event history. Like, events that occurred during the outage window may not be recoverable. We need to be upfront about that.\nBrian Cho: Oh, that's - yeah, that's going to be a very bad conversation to have with customers in regulated industries. Are we sure about that? Is there any way to replay the events?\nAnanya Sharma: We have some buffering at the source layer but it's limited. I'd say we can recover maybe sixty to seventy percent of what was lost. The rest is... gone.\nBrian Cho: Okay. That's - we need to think carefully about how we communicate that. That's a significant data loss event for a security monitoring product.\nTom Bradley: Agreed. Let's not bury it. Put it in the post-incident report. Customers deserve to know.\nBrian Cho: Can we talk about the immediate next steps? I just want to make sure we have a clear owner on each thing before we get off this call, because the last two hours have been a lot of people doing a lot of things without coordination.\nTom Bradley: Yes. Okay. Sofia and Ananya, you own the stopgap fix and the technical timeline doc. Brian, you own customer communications and escalation triage. I'll draft the public statement and then I'm going to get on a call with the CTO because she's going to need to know about this if she doesn't already.\nAnanya Sharma: She knows. I got a Slack from her about forty minutes ago.\nTom Bradley: Great. That's... great. Okay. Let's reconvene in ninety minutes or sooner if the fix goes live. Everybody check in on Slack. And - I know this has been a rough morning. Let's just get it fixed.\nBrian Cho: Agreed. Let's go.",
+  "summary": "A critical outage call was convened to address a complete failure of the Detect event processing pipeline that began around 9:14 AM Pacific. The ingestion pipeline's single primary node hit a memory ceiling and crashed due to lack of redundancy, a known tech debt issue that had been flagged but not prioritized. The outage went unannounced on the status page for approximately 90 minutes, causing enterprise customers including Harmon Financial and TerraLogix to escalate, with some customers mistakenly fearing a security breach. The team aligned on immediate actions: a stopgap fix involving a secondary node and temporary load balancer, a public customer statement clarifying there was no breach, and a post-mortem timeline, while acknowledging that 30-40% of event data during the outage window may be unrecoverable.",
+  "topics": [
+    "outage",
+    "pipeline failure",
+    "customer escalation",
+    "incident response",
+    "data loss",
+    "technical debt"
+  ],
+  "action_items": [
+    "Tom Bradley: Draft and publish a customer-facing statement within 15 minutes explicitly clarifying this is not a security breach and providing an honest update on the pipeline failure",
+    "Sofia Petrov: Complete the stopgap fix (secondary ingestion node and temporary load balancer) and document the full failure sequence timeline in Confluence",
+    "Ananya Sharma: Support Sofia on the technical fix and assist with the incident timeline documentation",
+    "Brian Cho: Manage customer communications and escalation triage, including addressing Harmon Financial and TerraLogix, and prepare messaging around partial event data loss"
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": 1.8,
+  "key_moments": [
+    {
+      "time": 95,
+      "text": "Tom reveals the monitoring system failed to catch the outage promptly and the status page wasn't updated for 90 minutes after the initial failure",
+      "type": "technical_issue",
+      "speaker": "Tom Bradley"
+    },
+    {
+      "time": 230,
+      "text": "Sofia discloses the single-node ingestion architecture with no redundancy or circuit breaker as the root cause of the cascading failure",
+      "type": "technical_issue",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 480,
+      "text": "Brian reports enterprise customers are threatening escalation and TerraLogix is asking whether the outage is a security breach",
+      "type": "churn_signal",
+      "speaker": "Brian Cho"
+    },
+    {
+      "time": 710,
+      "text": "Ananya reveals that 30-40% of event data during the outage window may be permanently unrecoverable, flagging a significant data loss concern for regulated-industry customers",
+      "type": "concern",
+      "speaker": "Ananya Sharma"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 6.0,
+      "timestamp_ms": 1773148506000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Join",
+      "time_seconds": 12.0,
+      "timestamp_ms": 1773148512000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Join",
+      "time_seconds": 30.0,
+      "timestamp_ms": 1773148530000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 34.0,
+      "timestamp_ms": 1773148534000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Leave",
+      "time_seconds": 1776.0,
+      "timestamp_ms": 1773150276000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Leave",
+      "time_seconds": 1788.0,
+      "timestamp_ms": 1773150288000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 1775.0,
+      "timestamp_ms": 1773150275000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 1779.0,
+      "timestamp_ms": 1773150279000
+    }
+  ],
+  "stats": {
+    "turn_count": 39,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Brian Cho": 15,
+      "Sofia Petrov": 4,
+      "Tom Bradley": 14,
+      "Ananya Sharma": 6
+    },
+    "speaker_total_seconds": {
+      "Brian Cho": 152.2,
+      "Sofia Petrov": 53.9,
+      "Tom Bradley": 139.8,
+      "Ananya Sharma": 58.8
+    }
+  }
+}

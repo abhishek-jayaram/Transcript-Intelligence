@@ -1,0 +1,374 @@
+{
+  "meeting_id": "01KQ7F58A2E07B857C24624D",
+  "title": "Competitive Landscape Review",
+  "organizer_email": "jordan.whitfield@aegiscloud.com",
+  "host_email": "jordan.whitfield@aegiscloud.com",
+  "start_time": "2026-02-19T09:15:00.000Z",
+  "end_time": "2026-02-19T09:35:12.000Z",
+  "duration_minutes": 20.2,
+  "participants": [
+    {
+      "email": "jordan.whitfield@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "jordan.whitfield@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "tom.bradley@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Jordan Whitfield",
+    "1": "Tom Bradley"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 4.6,
+      "end_time": 8.9,
+      "duration": 4.300000000000001,
+      "text": "Hey Tom, you there? I think you might be on mute."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 9.9,
+      "end_time": 15.4,
+      "duration": 5.5,
+      "text": "Oh, yeah sorry, I was - yeah, I had myself muted. Can you hear me now?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 16.5,
+      "end_time": 32.0,
+      "duration": 15.5,
+      "text": "Yeah, loud and clear. Okay cool, so I figured we should probably carve out some time to actually go through the competitive landscape before the product review next week, because I feel like we've been kind of operating on vibes a little bit."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 32.8,
+      "end_time": 45.1,
+      "duration": 12.300000000000004,
+      "text": "Yeah no, agreed. I got the deck you sent over this morning. Hadn't had a chance to fully go through it but I did skim the section on SentinelShield. That one stood out to me."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 45.6,
+      "end_time": 60.6,
+      "duration": 15.0,
+      "text": "Right, yeah. So that's kind of where I wanted to start actually, because they've been showing up more in deal cycles lately. I've been hearing that from the sales team - like Marcus's team specifically flagged them twice in the last month."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 62.1,
+      "end_time": 66.9,
+      "duration": 4.800000000000004,
+      "text": "Mm. What's the - what's the pitch they're running? Like what's SentinelShield leading with?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 68.0,
+      "end_time": 87.9,
+      "duration": 19.900000000000006,
+      "text": "So from what I've been able to piece together - and some of this is from public stuff, some of it is from what reps are hearing in calls - they're leading pretty hard on the SIEM integration story. Like native integrations with LogVault, with Nextera Sentinel, and they're positioning that as kind of a no-rip-and-replace approach."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 88.4,
+      "end_time": 94.2,
+      "duration": 5.799999999999997,
+      "text": "Okay. And how does that actually compare to what we have in Detect right now?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 94.5,
+      "end_time": 109.1,
+      "duration": 14.599999999999994,
+      "text": "Honestly? We're not as strong there. We have the LogVault connector but it's - it's kind of janky, right? I know the team has been working on it but I don't think it's at parity with what SentinelShield is showing in demos."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 109.5,
+      "end_time": 121.5,
+      "duration": 12.0,
+      "text": "Yeah I'd push back on calling it janky, but... it's not polished. The connector works, the issue is more around the configuration experience. There's like a lot of manual steps that honestly shouldn't be manual."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 122.5,
+      "end_time": 140.5,
+      "duration": 18.0,
+      "text": "Okay, that's a fair distinction. But from a buyer's perspective, right, if they're seeing a slick demo from SentinelShield where it's like, here's our three-click setup, and then they're talking to us and there's like a six-page config guide... that's a perception gap regardless of whether the underlying tech is actually better."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 141.6,
+      "end_time": 152.0,
+      "duration": 10.400000000000006,
+      "text": "Sure, yeah. That's fair. I don't disagree with that. We've got it on the roadmap but it's been deprioritized a couple times because of other things that were more urgent."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 152.4,
+      "end_time": 164.2,
+      "duration": 11.799999999999983,
+      "text": "Right, okay. So let's - let's park SentinelShield for a second and talk about VaultEdge, because I think they're a different kind of threat. They're not really going after Detect, they're going after Protect."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 165.6,
+      "end_time": 169.4,
+      "duration": 3.8000000000000114,
+      "text": "Yeah, backup and recovery. What are you seeing from them?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 170.1,
+      "end_time": 181.4,
+      "duration": 11.300000000000011,
+      "text": "So VaultEdge is making a lot of noise about their RTO and RPO numbers. They're claiming like sub-fifteen-minute recovery times for enterprise workloads, which, I mean, that's a pretty aggressive claim."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 182.4,
+      "end_time": 187.1,
+      "duration": 4.699999999999989,
+      "text": "Mm-hmm. Do we know if that's, like, validated anywhere or is that just marketing?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 188.1,
+      "end_time": 208.0,
+      "duration": 19.900000000000006,
+      "text": "I mean, it's mostly marketing as far as I can tell. There's one Gartner Peer Insights review that kind of backs it up but it's a single data point. What I think is more interesting is that they're starting to bundle in some compliance reporting features, which starts to get adjacent to what we're doing with Comply."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 208.5,
+      "end_time": 215.6,
+      "duration": 7.099999999999994,
+      "text": "Oh that's - yeah, that's worth watching. Like, are they doing real compliance reporting or is it more like checkbox stuff?"
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 216.6,
+      "end_time": 232.7,
+      "duration": 16.099999999999994,
+      "text": "From what I can see it's pretty surface level right now. Like they're doing some basic audit log exports, maybe some pre-built report templates. But it's not - it doesn't seem like a serious compliance play yet. But the concern is they're moving in that direction."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 233.7,
+      "end_time": 250.3,
+      "duration": 16.600000000000023,
+      "text": "Right. Well, the good news there is we've got a lot coming with Comply in the next couple months. I don't want to get too deep into roadmap stuff but the on-demand reporting capabilities are going to be a significant step up from what we have today."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 251.7,
+      "end_time": 267.0,
+      "duration": 15.300000000000011,
+      "text": "Yeah, I know. And I think that's going to be a strong differentiator. I just want to make sure we're timing the competitive messaging right, because if VaultEdge is building toward this space, we want to be out front before they get there."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 268.4,
+      "end_time": 273.7,
+      "duration": 5.300000000000011,
+      "text": "Agreed. Okay, what about CyberNova? I feel like I don't have a great read on them."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 274.3,
+      "end_time": 289.4,
+      "duration": 15.099999999999966,
+      "text": "Yeah so CyberNova is kind of the interesting one. They're not - they don't have the brand recognition of SentinelShield, they're smaller. But they've been very aggressive on pricing, like significantly undercutting on Identity specifically. And they've got a decent SSO story."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 290.4,
+      "end_time": 295.4,
+      "duration": 5.0,
+      "text": "How are they on MFA? Because that's where we tend to have more depth."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 295.7,
+      "end_time": 319.3,
+      "duration": 23.600000000000023,
+      "text": "MFA is where they fall down a bit, from what I can tell. They support the standard stuff - TOTP, push notifications - but they don't have the hardware key support or the adaptive authentication policies that we have in Identity. So like, for mid-market it might be a closer call, but for enterprise buyers who care about that stuff, we're still in a good position."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 319.8,
+      "end_time": 327.2,
+      "duration": 7.399999999999977,
+      "text": "Okay. And then Fortiguard Pro - I mean, they're a different category of competitor really, aren't they? Like they're so broad."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 328.0,
+      "end_time": 350.0,
+      "duration": 22.0,
+      "text": "Yeah, Fortiguard Pro is more of a legacy incumbent situation. They show up in deals but usually in larger enterprises that already have a relationship with them. The main thing I hear is that customers who are using Fortiguard are often frustrated with the complexity and the cost of professional services to do anything. So our consolidation play works well against them."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 350.6,
+      "end_time": 368.1,
+      "duration": 17.5,
+      "text": "Right, the platform story. Yeah. Okay so if I'm summarizing - SentinelShield is the most immediate threat in Detect, VaultEdge is one to watch in Protect and potentially Comply, CyberNova is a pricing threat in Identity for mid-market, and Fortiguard is the big incumbent we're differentiating against on simplicity."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 369.2,
+      "end_time": 384.7,
+      "duration": 15.5,
+      "text": "Yeah, that's roughly the picture. And I think the thing I want to flag for next week's review is that the LogVault connector thing - like, the SentinelShield gap - is probably the most actionable near-term thing we should be thinking about prioritizing."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 385.3,
+      "end_time": 398.1,
+      "duration": 12.800000000000011,
+      "text": "I hear you on that. I'm going to push back a little though, because engineering bandwidth right now is pretty constrained, and I don't want to make commitments that we can't actually back up with capacity."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 398.7,
+      "end_time": 411.5,
+      "duration": 12.800000000000011,
+      "text": "No, that's fair. I'm not asking you to commit to anything today. I just think we need to at least surface it as a risk in the review so that leadership has visibility into the tradeoff."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 412.1,
+      "end_time": 421.6,
+      "duration": 9.5,
+      "text": "Yeah, okay. I can get behind that framing. Surface the gap, let the conversation happen at the right level, and then we see what prioritization shakes out."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 422.4,
+      "end_time": 434.6,
+      "duration": 12.200000000000045,
+      "text": "Exactly. Okay, I think that's probably enough to work with for now. I'll clean up the deck, add a summary slide with that competitive matrix you basically just articulated, and share it before EOD tomorrow."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 435.0,
+      "end_time": 442.3,
+      "duration": 7.300000000000011,
+      "text": "Sounds good. Yeah, send it over and I'll take a proper look before the review. Appreciate you pulling this together."
+    },
+    {
+      "speaker_name": "Jordan Whitfield",
+      "start_time": 442.8,
+      "end_time": 445.3,
+      "duration": 2.5,
+      "text": "Yeah of course. Alright, talk soon."
+    },
+    {
+      "speaker_name": "Tom Bradley",
+      "start_time": 446.5,
+      "end_time": 448.0,
+      "duration": 1.5,
+      "text": "Yep, take care."
+    }
+  ],
+  "transcript_text": "Jordan Whitfield: Hey Tom, you there? I think you might be on mute.\nTom Bradley: Oh, yeah sorry, I was - yeah, I had myself muted. Can you hear me now?\nJordan Whitfield: Yeah, loud and clear. Okay cool, so I figured we should probably carve out some time to actually go through the competitive landscape before the product review next week, because I feel like we've been kind of operating on vibes a little bit.\nTom Bradley: Yeah no, agreed. I got the deck you sent over this morning. Hadn't had a chance to fully go through it but I did skim the section on SentinelShield. That one stood out to me.\nJordan Whitfield: Right, yeah. So that's kind of where I wanted to start actually, because they've been showing up more in deal cycles lately. I've been hearing that from the sales team - like Marcus's team specifically flagged them twice in the last month.\nTom Bradley: Mm. What's the - what's the pitch they're running? Like what's SentinelShield leading with?\nJordan Whitfield: So from what I've been able to piece together - and some of this is from public stuff, some of it is from what reps are hearing in calls - they're leading pretty hard on the SIEM integration story. Like native integrations with LogVault, with Nextera Sentinel, and they're positioning that as kind of a no-rip-and-replace approach.\nTom Bradley: Okay. And how does that actually compare to what we have in Detect right now?\nJordan Whitfield: Honestly? We're not as strong there. We have the LogVault connector but it's - it's kind of janky, right? I know the team has been working on it but I don't think it's at parity with what SentinelShield is showing in demos.\nTom Bradley: Yeah I'd push back on calling it janky, but... it's not polished. The connector works, the issue is more around the configuration experience. There's like a lot of manual steps that honestly shouldn't be manual.\nJordan Whitfield: Okay, that's a fair distinction. But from a buyer's perspective, right, if they're seeing a slick demo from SentinelShield where it's like, here's our three-click setup, and then they're talking to us and there's like a six-page config guide... that's a perception gap regardless of whether the underlying tech is actually better.\nTom Bradley: Sure, yeah. That's fair. I don't disagree with that. We've got it on the roadmap but it's been deprioritized a couple times because of other things that were more urgent.\nJordan Whitfield: Right, okay. So let's - let's park SentinelShield for a second and talk about VaultEdge, because I think they're a different kind of threat. They're not really going after Detect, they're going after Protect.\nTom Bradley: Yeah, backup and recovery. What are you seeing from them?\nJordan Whitfield: So VaultEdge is making a lot of noise about their RTO and RPO numbers. They're claiming like sub-fifteen-minute recovery times for enterprise workloads, which, I mean, that's a pretty aggressive claim.\nTom Bradley: Mm-hmm. Do we know if that's, like, validated anywhere or is that just marketing?\nJordan Whitfield: I mean, it's mostly marketing as far as I can tell. There's one Gartner Peer Insights review that kind of backs it up but it's a single data point. What I think is more interesting is that they're starting to bundle in some compliance reporting features, which starts to get adjacent to what we're doing with Comply.\nTom Bradley: Oh that's - yeah, that's worth watching. Like, are they doing real compliance reporting or is it more like checkbox stuff?\nJordan Whitfield: From what I can see it's pretty surface level right now. Like they're doing some basic audit log exports, maybe some pre-built report templates. But it's not - it doesn't seem like a serious compliance play yet. But the concern is they're moving in that direction.\nTom Bradley: Right. Well, the good news there is we've got a lot coming with Comply in the next couple months. I don't want to get too deep into roadmap stuff but the on-demand reporting capabilities are going to be a significant step up from what we have today.\nJordan Whitfield: Yeah, I know. And I think that's going to be a strong differentiator. I just want to make sure we're timing the competitive messaging right, because if VaultEdge is building toward this space, we want to be out front before they get there.\nTom Bradley: Agreed. Okay, what about CyberNova? I feel like I don't have a great read on them.\nJordan Whitfield: Yeah so CyberNova is kind of the interesting one. They're not - they don't have the brand recognition of SentinelShield, they're smaller. But they've been very aggressive on pricing, like significantly undercutting on Identity specifically. And they've got a decent SSO story.\nTom Bradley: How are they on MFA? Because that's where we tend to have more depth.\nJordan Whitfield: MFA is where they fall down a bit, from what I can tell. They support the standard stuff - TOTP, push notifications - but they don't have the hardware key support or the adaptive authentication policies that we have in Identity. So like, for mid-market it might be a closer call, but for enterprise buyers who care about that stuff, we're still in a good position.\nTom Bradley: Okay. And then Fortiguard Pro - I mean, they're a different category of competitor really, aren't they? Like they're so broad.\nJordan Whitfield: Yeah, Fortiguard Pro is more of a legacy incumbent situation. They show up in deals but usually in larger enterprises that already have a relationship with them. The main thing I hear is that customers who are using Fortiguard are often frustrated with the complexity and the cost of professional services to do anything. So our consolidation play works well against them.\nTom Bradley: Right, the platform story. Yeah. Okay so if I'm summarizing - SentinelShield is the most immediate threat in Detect, VaultEdge is one to watch in Protect and potentially Comply, CyberNova is a pricing threat in Identity for mid-market, and Fortiguard is the big incumbent we're differentiating against on simplicity.\nJordan Whitfield: Yeah, that's roughly the picture. And I think the thing I want to flag for next week's review is that the LogVault connector thing - like, the SentinelShield gap - is probably the most actionable near-term thing we should be thinking about prioritizing.\nTom Bradley: I hear you on that. I'm going to push back a little though, because engineering bandwidth right now is pretty constrained, and I don't want to make commitments that we can't actually back up with capacity.\nJordan Whitfield: No, that's fair. I'm not asking you to commit to anything today. I just think we need to at least surface it as a risk in the review so that leadership has visibility into the tradeoff.\nTom Bradley: Yeah, okay. I can get behind that framing. Surface the gap, let the conversation happen at the right level, and then we see what prioritization shakes out.\nJordan Whitfield: Exactly. Okay, I think that's probably enough to work with for now. I'll clean up the deck, add a summary slide with that competitive matrix you basically just articulated, and share it before EOD tomorrow.\nTom Bradley: Sounds good. Yeah, send it over and I'll take a proper look before the review. Appreciate you pulling this together.\nJordan Whitfield: Yeah of course. Alright, talk soon.\nTom Bradley: Yep, take care.",
+  "summary": "Jordan Whitfield and Tom Bradley conducted a competitive landscape review in preparation for an upcoming product review meeting. They discussed four key competitors: SentinelShield (threatening Detect with a strong SIEM integration story), VaultEdge (a growing threat to Protect and potentially Comply), CyberNova (aggressive pricing in Identity for mid-market), and Fortiguard Pro (a legacy incumbent). The most pressing concern identified was a gap in the LogVault connector experience compared to SentinelShield, which Jordan plans to surface as a risk item for leadership at next week's review. Jordan agreed to update and share the competitive deck before EOD the following day.",
+  "topics": [
+    "competitive analysis",
+    "product gaps",
+    "siem integration",
+    "compliance features",
+    "pricing pressure",
+    "roadmap prioritization"
+  ],
+  "action_items": [
+    "Jordan Whitfield: Clean up the competitive deck, add a summary slide with the competitive matrix, and share before EOD tomorrow",
+    "Tom Bradley: Review the updated deck thoroughly before the product review meeting next week",
+    "Jordan Whitfield: Frame the LogVault connector gap as a risk item for leadership visibility in the product review",
+    "Tom Bradley: Assess engineering bandwidth feasibility around improving the LogVault connector configuration experience"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.4,
+  "key_moments": [
+    {
+      "time": 78.0,
+      "text": "Jordan flags SentinelShield appearing more frequently in deal cycles, identified as the most immediate competitive threat in Detect",
+      "type": "concern",
+      "speaker": "Jordan Whitfield"
+    },
+    {
+      "time": 175.0,
+      "text": "Jordan highlights a meaningful perception gap between SentinelShield's polished three-click SIEM setup and the company's six-page configuration guide for the LogVault connector",
+      "type": "feature_gap",
+      "speaker": "Jordan Whitfield"
+    },
+    {
+      "time": 390.0,
+      "text": "Tom notes that upcoming on-demand reporting capabilities in Comply will be a significant differentiator against VaultEdge's emerging compliance play",
+      "type": "positive_pivot",
+      "speaker": "Tom Bradley"
+    },
+    {
+      "time": 620.0,
+      "text": "Tom pushes back on committing to LogVault connector improvements due to constrained engineering bandwidth, but agrees to surface the gap as a leadership-level risk in the review",
+      "type": "action_item",
+      "speaker": "Tom Bradley"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Jordan Whitfield",
+      "event_type": "Join",
+      "time_seconds": 58.0,
+      "timestamp_ms": 1771492558000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Join",
+      "time_seconds": 60.0,
+      "timestamp_ms": 1771492560000
+    },
+    {
+      "participant_name": "Jordan Whitfield",
+      "event_type": "Leave",
+      "time_seconds": 1206.0,
+      "timestamp_ms": 1771493706000
+    },
+    {
+      "participant_name": "Tom Bradley",
+      "event_type": "Leave",
+      "time_seconds": 1200.0,
+      "timestamp_ms": 1771493700000
+    }
+  ],
+  "stats": {
+    "turn_count": 36,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Jordan Whitfield": 18,
+      "Tom Bradley": 18
+    },
+    "speaker_total_seconds": {
+      "Jordan Whitfield": 265.4,
+      "Tom Bradley": 149.3
+    }
+  }
+}

@@ -1,0 +1,495 @@
+{
+  "meeting_id": "01KQ3BD8DEEBC7FECD107F0F",
+  "title": "Aegis / Blackridge Investments - HIPAA Compliance Review",
+  "organizer_email": "lisa.park@aegiscloud.com",
+  "host_email": "lisa.park@aegiscloud.com",
+  "start_time": "2026-04-21T14:15:00.000Z",
+  "end_time": "2026-04-21T15:04:06.000Z",
+  "duration_minutes": 49.1,
+  "participants": [
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "j.tran@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "w.beck@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "lisa.park@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "j.tran@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "w.beck@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Warren Beck",
+    "1": "Lisa Park",
+    "2": "Maria Santos",
+    "3": "Julia Tran"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 7.0,
+      "end_time": 12.5,
+      "duration": 5.5,
+      "text": "Good morning everyone, thanks for jumping on - Lisa, Maria, can you hear us okay?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 13.8,
+      "end_time": 21.9,
+      "duration": 8.099999999999998,
+      "text": "Yeah, loud and clear Warren, good morning! Thanks for making time for this - I know your calendar's been pretty packed lately."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 22.8,
+      "end_time": 29.2,
+      "duration": 6.399999999999999,
+      "text": "Morning! Really excited for this one, we have a lot of good stuff to walk through today."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 30.6,
+      "end_time": 37.6,
+      "duration": 7.0,
+      "text": "Morning everyone, Julia Tran here from the security team - looking forward to digging into the HIPAA piece specifically."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 38.4,
+      "end_time": 53.7,
+      "duration": 15.300000000000004,
+      "text": "Perfect, yeah, that's really the main focus for us today. Um, so just to set the stage a little - Warren, do you want to give everyone a quick overview of where Blackridge is at from a compliance standpoint before we jump in?"
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 54.9,
+      "end_time": 83.0,
+      "duration": 28.1,
+      "text": "Sure, yeah, happy to. So, uh, as you know we're primarily a financial services firm, right, but we have a subsidiary - Blackridge Health Finance - that handles healthcare lending and some benefits administration, and that arm of the business has to be fully HIPAA compliant. We went through an internal audit last quarter and honestly, the reporting piece was just... it was painful. A lot of manual work, a lot of spreadsheets, and our auditors were not happy."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 84.3,
+      "end_time": 100.3,
+      "duration": 16.0,
+      "text": "Yeah, that's such a common story and it's - honestly it's one of the exact things that the new Comply v2 release was built to address. Julia, I'm curious, from your perspective on the analyst side, where were the biggest friction points in that audit process?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 101.4,
+      "end_time": 123.9,
+      "duration": 22.5,
+      "text": "So, um, the biggest thing for me was just the evidence gathering. Like I was spending, I don't know, probably two full weeks before the audit just pulling logs from different systems, trying to reconcile timestamps, making sure our access control documentation was current. It was... yeah, it was a lot of manual effort that felt like it shouldn't have to be manual."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 125.3,
+      "end_time": 132.0,
+      "duration": 6.700000000000003,
+      "text": "Two weeks - yeah, that's significant. And that's two weeks of your time that's not going toward actual security work."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 133.3,
+      "end_time": 143.2,
+      "duration": 9.899999999999977,
+      "text": "Exactly, exactly. And we had a near-miss on a deadline last time because of it, so Warren kind of lit a fire under us to find a better solution."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 144.5,
+      "end_time": 164.5,
+      "duration": 20.0,
+      "text": "Right, and that's - that's kind of what led us back to this conversation with Aegis. We've been running Protect and Identity for about, what, eight months now? And those have been really solid. So when Lisa mentioned that the Comply module had a major update, it felt like the right time to take a closer look."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 165.7,
+      "end_time": 188.7,
+      "duration": 23.0,
+      "text": "Yeah, exactly, and honestly Warren your timing could not be better. So Aegis Comply v2 went generally available on April 7th - just a couple weeks ago - and the headline feature for a customer in your situation is really the on-demand compliance reporting. So instead of that two-week evidence gathering scramble, you can generate a full HIPAA report... basically whenever you need it. On demand."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 189.6,
+      "end_time": 199.2,
+      "duration": 9.599999999999994,
+      "text": "When you say on-demand, are we talking like, I click a button and it's done in minutes, or is there still some configuration and setup time involved?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 200.0,
+      "end_time": 217.2,
+      "duration": 17.19999999999999,
+      "text": "Great question. So there's an initial configuration pass - you're mapping your environment, defining your scope, connecting your data sources - and that typically takes, uh, Maria correct me if I'm off, but somewhere in the range of a few days to maybe a week depending on environment complexity?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 217.5,
+      "end_time": 242.4,
+      "duration": 24.900000000000006,
+      "text": "Yeah, that's right. For a environment like yours where you already have Aegis Identity and Protect running, honestly it could be even faster because we're already pulling a lot of the relevant signals. The IAM data, the access logs, the backup records - a lot of that is already flowing into the platform. So once Comply is scoped and configured, generating a HIPAA report is... yeah, it's essentially a few clicks."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 243.9,
+      "end_time": 255.3,
+      "duration": 11.400000000000006,
+      "text": "Okay, that's - that's actually really compelling. Because right now it's like, we have all this data in various places and it's just not... connected in any meaningful way for audit purposes."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 256.1,
+      "end_time": 277.3,
+      "duration": 21.19999999999999,
+      "text": "That's exactly the problem Comply v2 was designed to solve. And you mentioned HIPAA but I do want to flag - the multi-framework support is a big part of this release too. So you get SOC 2, PCI DSS, ISO 27001 all in the same platform. Given that you're in financial services, I'd imagine PCI DSS is also on your radar."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 277.9,
+      "end_time": 291.3,
+      "duration": 13.400000000000034,
+      "text": "Oh yeah, absolutely. We have a separate compliance cycle for PCI and right now that's managed by a completely different team using completely different tools, so the idea of consolidating that is... yeah, Warren, that's something we've talked about."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 291.8,
+      "end_time": 305.8,
+      "duration": 14.0,
+      "text": "We have, yeah. I mean, the consolidation story is attractive from a cost standpoint and also just from an operational standpoint. Having one pane of glass for compliance across frameworks - that's something our board has actually been asking about."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 307.0,
+      "end_time": 327.7,
+      "duration": 20.69999999999999,
+      "text": "That's great to hear, and I think that's a really strong use case we can build out for you. But let's stay focused on HIPAA for now since that's the urgent one - we can absolutely come back to the multi-framework story. Maria, do you want to walk through what a HIPAA report actually looks like in v2?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 328.2,
+      "end_time": 357.0,
+      "duration": 28.80000000000001,
+      "text": "Yeah, definitely. So I'm going to pull up a sample report here - bear with me one second - okay, so what you're seeing is the executive summary view, which is what you'd typically hand to an auditor or your leadership team. It maps your controls directly to the HIPAA Security Rule safeguards - administrative, physical, technical. Each control has a status, an evidence log, and a timestamp. Auditors love the timestamp piece because it removes a lot of the back and forth."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 357.3,
+      "end_time": 366.7,
+      "duration": 9.399999999999977,
+      "text": "Oh, that's really clean actually. Can you click into - um, can you show the technical safeguards section? That's typically where we have the most scrutiny."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 367.2,
+      "end_time": 387.6,
+      "duration": 20.400000000000034,
+      "text": "Of course, yeah. So here you can see access controls, audit controls, integrity controls, transmission security - each one has a detailed evidence panel. And if you have a gap, it'll flag it and give you a recommended remediation action. It's not just telling you that you have a problem, it's pointing you toward how to fix it."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 389.1,
+      "end_time": 403.2,
+      "duration": 14.099999999999966,
+      "text": "Okay I have to say, that remediation guidance piece is something we're missing completely right now. Like our current process is finding a gap and then going okay, now what? And it usually involves a lot of internal back and forth."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 404.4,
+      "end_time": 420.7,
+      "duration": 16.30000000000001,
+      "text": "Yeah, and that back and forth is where time really bleeds out. And honestly, Warren, from a CISO perspective, that remediation guidance also gives you a cleaner audit trail to show that gaps were identified and actioned - which is exactly what regulators want to see."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 421.9,
+      "end_time": 433.3,
+      "duration": 11.400000000000034,
+      "text": "That's a really good point. The ability to demonstrate that we have a process for finding and remediating issues is almost as important as the issues themselves in the eyes of HHS."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 433.9,
+      "end_time": 463.7,
+      "duration": 29.80000000000001,
+      "text": "Exactly, yeah. So, um, I do want to just mention one thing - and Maria, jump in here - but we did have a period of instability on the Detect side back in March, some of you may have been aware of that. We were very upfront about it. That was a six-hour window where event processing had an issue. That's been fully resolved with redundant nodes and a circuit breaker pattern, and I want to be transparent that we took that very seriously."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 464.8,
+      "end_time": 477.8,
+      "duration": 13.0,
+      "text": "Yeah, we did see the incident notification. Appreciate that you were proactive about communicating it. Honestly, the transparency there actually... it increased my confidence in Aegis a little, weirdly enough. Like you didn't try to hide it."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 478.4,
+      "end_time": 492.9,
+      "duration": 14.5,
+      "text": "That means a lot to hear, Warren, really. And just to be clear, Comply v2 - the reporting infrastructure - runs on a completely separate pipeline from the Detect event processing, so that incident has no bearing on the compliance reporting capabilities."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 493.3,
+      "end_time": 505.0,
+      "duration": 11.699999999999989,
+      "text": "Good to know, and yeah, I didn't think it was related but it's good to have that confirmed. Julia, any other questions on the technical side before we talk about next steps?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 506.4,
+      "end_time": 514.9,
+      "duration": 8.5,
+      "text": "Um, yeah, one thing - what does the scheduling look like? Can we set up automated recurring reports or is it purely on-demand?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 515.3,
+      "end_time": 534.8,
+      "duration": 19.5,
+      "text": "Both, actually. You can do on-demand whenever you need a fresh snapshot, but you can also configure scheduled reports - monthly, quarterly, whatever cadence makes sense for your audit cycles. And they get delivered to whatever stakeholders you define, so Warren could get an executive summary automatically without Julia having to manually generate and send it."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 535.3,
+      "end_time": 546.6,
+      "duration": 11.300000000000068,
+      "text": "Oh that's a nice feature. Yeah, I currently send Warren a monthly compliance status email that takes me like an hour to put together. That's... I could see that going away."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 548.0,
+      "end_time": 550.5,
+      "duration": 2.5,
+      "text": "Ha, one less thing on your plate, Julia."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 551.8,
+      "end_time": 562.0,
+      "duration": 10.200000000000045,
+      "text": "I'll take it! Um, one more question - and this is maybe a bigger one - what does the integration look like with our existing SIEM? We're running LogVault."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 563.1,
+      "end_time": 578.2,
+      "duration": 15.100000000000023,
+      "text": "LogVault is fully supported, yeah. We have a native connector - it's not a custom integration, it's out of the box. So Comply can pull relevant log data from LogVault as part of the evidence collection, which again reduces the manual work significantly."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 579.5,
+      "end_time": 589.4,
+      "duration": 9.899999999999977,
+      "text": "Okay, that's a big one for us. We were a little worried we'd have to do some heavy lifting on the integration side but that's - that's reassuring."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 589.9,
+      "end_time": 617.6,
+      "duration": 27.700000000000045,
+      "text": "So from a next steps standpoint - and I want to make sure we're leaving this call with something concrete - I'd love to propose that we put together a scoped proof of concept specifically for the HIPAA reporting against your Blackridge Health Finance environment. We can have our implementation team map out the configuration, give you a realistic timeline, and then do a demo with your actual data architecture. Does that sound like a reasonable path forward?"
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 618.7,
+      "end_time": 624.0,
+      "duration": 5.2999999999999545,
+      "text": "Yeah, I think that makes a lot of sense. Warren, what do you think?"
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 624.4,
+      "end_time": 639.8,
+      "duration": 15.399999999999977,
+      "text": "I think so, yeah. I'd want our legal and compliance team looped in before we go too far down the path, but a scoped POC sounds like the right way to validate the approach. Lisa, can you get us a proposed timeline for that?"
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 641.3,
+      "end_time": 656.1,
+      "duration": 14.800000000000068,
+      "text": "Absolutely, I'll have something over to you by end of week. And I'll include a contact from our implementation team so Julia can connect directly with them on the technical environment questions. Maria, anything else you want to cover before we close out?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 657.0,
+      "end_time": 675.3,
+      "duration": 18.299999999999955,
+      "text": "Just one thing - I'll send over the v2 release notes and a sample HIPAA report PDF after this call so Julia and the team can review it offline. And Warren, I'll include some customer case studies from other regulated industries - not exactly financial services but close enough that they should resonate."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 676.4,
+      "end_time": 687.0,
+      "duration": 10.600000000000023,
+      "text": "That's great, really appreciate it. This has been a really productive conversation - honestly more than I expected going in. I feel like we have a clear path forward here."
+    },
+    {
+      "speaker_name": "Julia Tran",
+      "start_time": 688.2,
+      "end_time": 691.3,
+      "duration": 3.099999999999909,
+      "text": "Same, yeah. Thank you both, this was super helpful."
+    },
+    {
+      "speaker_name": "Lisa Park",
+      "start_time": 692.7,
+      "end_time": 707.9,
+      "duration": 15.199999999999932,
+      "text": "Really appreciate your time Warren, Julia. We're excited about this one and I think Comply v2 is going to make a real difference for your team. We'll be in touch by Friday with the POC proposal. Have a great rest of your week everyone."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 708.3,
+      "end_time": 709.8,
+      "duration": 1.5,
+      "text": "Thanks everyone, take care!"
+    }
+  ],
+  "transcript_text": "Warren Beck: Good morning everyone, thanks for jumping on - Lisa, Maria, can you hear us okay?\nLisa Park: Yeah, loud and clear Warren, good morning! Thanks for making time for this - I know your calendar's been pretty packed lately.\nMaria Santos: Morning! Really excited for this one, we have a lot of good stuff to walk through today.\nJulia Tran: Morning everyone, Julia Tran here from the security team - looking forward to digging into the HIPAA piece specifically.\nLisa Park: Perfect, yeah, that's really the main focus for us today. Um, so just to set the stage a little - Warren, do you want to give everyone a quick overview of where Blackridge is at from a compliance standpoint before we jump in?\nWarren Beck: Sure, yeah, happy to. So, uh, as you know we're primarily a financial services firm, right, but we have a subsidiary - Blackridge Health Finance - that handles healthcare lending and some benefits administration, and that arm of the business has to be fully HIPAA compliant. We went through an internal audit last quarter and honestly, the reporting piece was just... it was painful. A lot of manual work, a lot of spreadsheets, and our auditors were not happy.\nMaria Santos: Yeah, that's such a common story and it's - honestly it's one of the exact things that the new Comply v2 release was built to address. Julia, I'm curious, from your perspective on the analyst side, where were the biggest friction points in that audit process?\nJulia Tran: So, um, the biggest thing for me was just the evidence gathering. Like I was spending, I don't know, probably two full weeks before the audit just pulling logs from different systems, trying to reconcile timestamps, making sure our access control documentation was current. It was... yeah, it was a lot of manual effort that felt like it shouldn't have to be manual.\nLisa Park: Two weeks - yeah, that's significant. And that's two weeks of your time that's not going toward actual security work.\nJulia Tran: Exactly, exactly. And we had a near-miss on a deadline last time because of it, so Warren kind of lit a fire under us to find a better solution.\nWarren Beck: Right, and that's - that's kind of what led us back to this conversation with Aegis. We've been running Protect and Identity for about, what, eight months now? And those have been really solid. So when Lisa mentioned that the Comply module had a major update, it felt like the right time to take a closer look.\nMaria Santos: Yeah, exactly, and honestly Warren your timing could not be better. So Aegis Comply v2 went generally available on April 7th - just a couple weeks ago - and the headline feature for a customer in your situation is really the on-demand compliance reporting. So instead of that two-week evidence gathering scramble, you can generate a full HIPAA report... basically whenever you need it. On demand.\nJulia Tran: When you say on-demand, are we talking like, I click a button and it's done in minutes, or is there still some configuration and setup time involved?\nLisa Park: Great question. So there's an initial configuration pass - you're mapping your environment, defining your scope, connecting your data sources - and that typically takes, uh, Maria correct me if I'm off, but somewhere in the range of a few days to maybe a week depending on environment complexity?\nMaria Santos: Yeah, that's right. For a environment like yours where you already have Aegis Identity and Protect running, honestly it could be even faster because we're already pulling a lot of the relevant signals. The IAM data, the access logs, the backup records - a lot of that is already flowing into the platform. So once Comply is scoped and configured, generating a HIPAA report is... yeah, it's essentially a few clicks.\nJulia Tran: Okay, that's - that's actually really compelling. Because right now it's like, we have all this data in various places and it's just not... connected in any meaningful way for audit purposes.\nMaria Santos: That's exactly the problem Comply v2 was designed to solve. And you mentioned HIPAA but I do want to flag - the multi-framework support is a big part of this release too. So you get SOC 2, PCI DSS, ISO 27001 all in the same platform. Given that you're in financial services, I'd imagine PCI DSS is also on your radar.\nJulia Tran: Oh yeah, absolutely. We have a separate compliance cycle for PCI and right now that's managed by a completely different team using completely different tools, so the idea of consolidating that is... yeah, Warren, that's something we've talked about.\nWarren Beck: We have, yeah. I mean, the consolidation story is attractive from a cost standpoint and also just from an operational standpoint. Having one pane of glass for compliance across frameworks - that's something our board has actually been asking about.\nLisa Park: That's great to hear, and I think that's a really strong use case we can build out for you. But let's stay focused on HIPAA for now since that's the urgent one - we can absolutely come back to the multi-framework story. Maria, do you want to walk through what a HIPAA report actually looks like in v2?\nMaria Santos: Yeah, definitely. So I'm going to pull up a sample report here - bear with me one second - okay, so what you're seeing is the executive summary view, which is what you'd typically hand to an auditor or your leadership team. It maps your controls directly to the HIPAA Security Rule safeguards - administrative, physical, technical. Each control has a status, an evidence log, and a timestamp. Auditors love the timestamp piece because it removes a lot of the back and forth.\nJulia Tran: Oh, that's really clean actually. Can you click into - um, can you show the technical safeguards section? That's typically where we have the most scrutiny.\nMaria Santos: Of course, yeah. So here you can see access controls, audit controls, integrity controls, transmission security - each one has a detailed evidence panel. And if you have a gap, it'll flag it and give you a recommended remediation action. It's not just telling you that you have a problem, it's pointing you toward how to fix it.\nJulia Tran: Okay I have to say, that remediation guidance piece is something we're missing completely right now. Like our current process is finding a gap and then going okay, now what? And it usually involves a lot of internal back and forth.\nLisa Park: Yeah, and that back and forth is where time really bleeds out. And honestly, Warren, from a CISO perspective, that remediation guidance also gives you a cleaner audit trail to show that gaps were identified and actioned - which is exactly what regulators want to see.\nWarren Beck: That's a really good point. The ability to demonstrate that we have a process for finding and remediating issues is almost as important as the issues themselves in the eyes of HHS.\nLisa Park: Exactly, yeah. So, um, I do want to just mention one thing - and Maria, jump in here - but we did have a period of instability on the Detect side back in March, some of you may have been aware of that. We were very upfront about it. That was a six-hour window where event processing had an issue. That's been fully resolved with redundant nodes and a circuit breaker pattern, and I want to be transparent that we took that very seriously.\nWarren Beck: Yeah, we did see the incident notification. Appreciate that you were proactive about communicating it. Honestly, the transparency there actually... it increased my confidence in Aegis a little, weirdly enough. Like you didn't try to hide it.\nMaria Santos: That means a lot to hear, Warren, really. And just to be clear, Comply v2 - the reporting infrastructure - runs on a completely separate pipeline from the Detect event processing, so that incident has no bearing on the compliance reporting capabilities.\nWarren Beck: Good to know, and yeah, I didn't think it was related but it's good to have that confirmed. Julia, any other questions on the technical side before we talk about next steps?\nJulia Tran: Um, yeah, one thing - what does the scheduling look like? Can we set up automated recurring reports or is it purely on-demand?\nMaria Santos: Both, actually. You can do on-demand whenever you need a fresh snapshot, but you can also configure scheduled reports - monthly, quarterly, whatever cadence makes sense for your audit cycles. And they get delivered to whatever stakeholders you define, so Warren could get an executive summary automatically without Julia having to manually generate and send it.\nJulia Tran: Oh that's a nice feature. Yeah, I currently send Warren a monthly compliance status email that takes me like an hour to put together. That's... I could see that going away.\nWarren Beck: Ha, one less thing on your plate, Julia.\nJulia Tran: I'll take it! Um, one more question - and this is maybe a bigger one - what does the integration look like with our existing SIEM? We're running LogVault.\nMaria Santos: LogVault is fully supported, yeah. We have a native connector - it's not a custom integration, it's out of the box. So Comply can pull relevant log data from LogVault as part of the evidence collection, which again reduces the manual work significantly.\nJulia Tran: Okay, that's a big one for us. We were a little worried we'd have to do some heavy lifting on the integration side but that's - that's reassuring.\nLisa Park: So from a next steps standpoint - and I want to make sure we're leaving this call with something concrete - I'd love to propose that we put together a scoped proof of concept specifically for the HIPAA reporting against your Blackridge Health Finance environment. We can have our implementation team map out the configuration, give you a realistic timeline, and then do a demo with your actual data architecture. Does that sound like a reasonable path forward?\nJulia Tran: Yeah, I think that makes a lot of sense. Warren, what do you think?\nWarren Beck: I think so, yeah. I'd want our legal and compliance team looped in before we go too far down the path, but a scoped POC sounds like the right way to validate the approach. Lisa, can you get us a proposed timeline for that?\nLisa Park: Absolutely, I'll have something over to you by end of week. And I'll include a contact from our implementation team so Julia can connect directly with them on the technical environment questions. Maria, anything else you want to cover before we close out?\nMaria Santos: Just one thing - I'll send over the v2 release notes and a sample HIPAA report PDF after this call so Julia and the team can review it offline. And Warren, I'll include some customer case studies from other regulated industries - not exactly financial services but close enough that they should resonate.\nWarren Beck: That's great, really appreciate it. This has been a really productive conversation - honestly more than I expected going in. I feel like we have a clear path forward here.\nJulia Tran: Same, yeah. Thank you both, this was super helpful.\nLisa Park: Really appreciate your time Warren, Julia. We're excited about this one and I think Comply v2 is going to make a real difference for your team. We'll be in touch by Friday with the POC proposal. Have a great rest of your week everyone.\nMaria Santos: Thanks everyone, take care!",
+  "summary": "Aegis held a product demo call with Warren Beck (CISO) and Julia Tran (security analyst) from Blackridge, a financial services firm with a HIPAA-regulated healthcare subsidiary. The discussion centered on Aegis Comply v2, a newly released compliance reporting module, and how it could eliminate the manual, two-week evidence-gathering process Julia's team currently endures before audits. Key capabilities highlighted included on-demand and scheduled HIPAA reporting, multi-framework support (SOC 2, PCI DSS, ISO 27001), remediation guidance, and native LogVault integration. The call concluded with agreement to pursue a scoped proof of concept for the Blackridge Health Finance HIPAA environment, with Aegis to deliver a proposal by end of week.",
+  "topics": [
+    "hipaa compliance",
+    "compliance reporting",
+    "proof of concept",
+    "logvault integration",
+    "multi-framework support",
+    "audit automation"
+  ],
+  "action_items": [
+    "Lisa Park: Send Warren a proposed POC timeline and scope for the HIPAA reporting proof of concept by end of week",
+    "Lisa Park: Provide Julia with a direct contact from the Aegis implementation team for technical environment discussions",
+    "Maria Santos: Send Julia and Warren the Comply v2 release notes, a sample HIPAA report PDF, and regulated-industry customer case studies",
+    "Warren Beck: Loop in Blackridge legal and compliance team before advancing further into the POC process"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.7,
+  "key_moments": [
+    {
+      "time": 142.0,
+      "text": "Julia describes spending two full weeks manually gathering audit evidence, with a near-miss on a compliance deadline, establishing the core pain point driving this evaluation.",
+      "type": "concern",
+      "speaker": "Julia Tran"
+    },
+    {
+      "time": 420.0,
+      "text": "Julia reacts positively to the remediation guidance feature, noting her current process leaves gaps unresolved due to lack of direction — a clear feature gap in their existing tooling.",
+      "type": "feature_gap",
+      "speaker": "Julia Tran"
+    },
+    {
+      "time": 530.0,
+      "text": "Warren acknowledges the March Detect incident but says Aegis's proactive transparency actually increased his confidence in the vendor, turning a potential concern into a positive pivot.",
+      "type": "positive_pivot",
+      "speaker": "Warren Beck"
+    },
+    {
+      "time": 720.0,
+      "text": "Julia confirms native LogVault support resolves a major integration concern, and Warren closes by calling the conversation more productive than expected, with both parties aligned on a POC path forward.",
+      "type": "action_item",
+      "speaker": "Lisa Park"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Join",
+      "time_seconds": 5.0,
+      "timestamp_ms": 1776780905000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Join",
+      "time_seconds": 22.0,
+      "timestamp_ms": 1776780922000
+    },
+    {
+      "participant_name": "Warren Beck",
+      "event_type": "Join",
+      "time_seconds": 35.0,
+      "timestamp_ms": 1776780935000
+    },
+    {
+      "participant_name": "Julia Tran",
+      "event_type": "Join",
+      "time_seconds": 45.0,
+      "timestamp_ms": 1776780945000
+    },
+    {
+      "participant_name": "Lisa Park",
+      "event_type": "Leave",
+      "time_seconds": 2926.0,
+      "timestamp_ms": 1776783826000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Leave",
+      "time_seconds": 2937.0,
+      "timestamp_ms": 1776783837000
+    },
+    {
+      "participant_name": "Julia Tran",
+      "event_type": "Leave",
+      "time_seconds": 2932.0,
+      "timestamp_ms": 1776783832000
+    },
+    {
+      "participant_name": "Warren Beck",
+      "event_type": "Leave",
+      "time_seconds": 2923.0,
+      "timestamp_ms": 1776783823000
+    }
+  ],
+  "stats": {
+    "turn_count": 46,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Warren Beck": 10,
+      "Lisa Park": 10,
+      "Maria Santos": 12,
+      "Julia Tran": 14
+    },
+    "speaker_total_seconds": {
+      "Warren Beck": 132.2,
+      "Lisa Park": 171.8,
+      "Maria Santos": 209.6,
+      "Julia Tran": 145.6
+    }
+  }
+}

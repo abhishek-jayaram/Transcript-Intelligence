@@ -1,0 +1,449 @@
+{
+  "meeting_id": "01KQ773D68723289E4A98889",
+  "title": "Support Case #7572 - Brightpath Commerce Invoice Discrepancy",
+  "organizer_email": "sarah.chen@aegiscloud.com",
+  "host_email": "sarah.chen@aegiscloud.com",
+  "start_time": "2026-02-27T13:00:00.000Z",
+  "end_time": "2026-02-27T13:12:36.000Z",
+  "duration_minutes": 12.6,
+  "participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "k.wallace@brightpathcommerce.com",
+      "domain": "brightpathcommerce.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "sarah.chen@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "k.wallace@brightpathcommerce.com",
+      "domain": "brightpathcommerce.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Sarah Chen",
+    "1": "Marcus Williams",
+    "2": "Kendra Wallace"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 7.7,
+      "end_time": 18.8,
+      "duration": 11.100000000000001,
+      "text": "Hi, thanks for joining, this is Sarah Chen from Aegis Cloud Security support, I have Marcus Williams here with me as well - he handles a lot of our billing-side cases."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 19.4,
+      "end_time": 22.3,
+      "duration": 2.900000000000002,
+      "text": "Hey there, Marcus Williams, good to be on."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 22.6,
+      "end_time": 33.8,
+      "duration": 11.199999999999996,
+      "text": "Hi Sarah, hi Marcus, this is Kendra Wallace, I'm the CTO over at Brightpath Commerce - thanks for getting this scheduled quickly, I know it's end of month so I appreciate it."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 34.7,
+      "end_time": 43.6,
+      "duration": 8.899999999999999,
+      "text": "Of course, yeah, end of month is always a busy time so we wanted to get eyes on this sooner rather than later for you."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 44.5,
+      "end_time": 52.4,
+      "duration": 7.899999999999999,
+      "text": "So, just to frame this up - the case notes say you're seeing a discrepancy on your February invoice, is that right?"
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 52.9,
+      "end_time": 64.8,
+      "duration": 11.899999999999999,
+      "text": "Yes, exactly. So we received the invoice on, I think it was February 20th, and the total came in about fourteen hundred dollars higher than what we were expecting based on our contract."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 65.4,
+      "end_time": 72.1,
+      "duration": 6.699999999999989,
+      "text": "Okay, and the contract - is that the renewal you signed back in, uh, Q4 of last year?"
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 73.0,
+      "end_time": 81.4,
+      "duration": 8.400000000000006,
+      "text": "Yeah, November. We renewed in November and locked in pricing for Aegis Protect and Aegis Detect, those are the two modules we're currently on."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 82.6,
+      "end_time": 90.6,
+      "duration": 8.0,
+      "text": "Got it. And do you have the invoice number handy? I want to pull it up on my end while we're talking."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 92.1,
+      "end_time": 94.5,
+      "duration": 2.4000000000000057,
+      "text": "Yeah, one sec - it's INV-2026-0847."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 95.7,
+      "end_time": 97.5,
+      "duration": 1.7999999999999972,
+      "text": "INV-2026-0847, okay pulling that up now."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 98.4,
+      "end_time": 112.0,
+      "duration": 13.599999999999994,
+      "text": "While Marcus is pulling that up, Kendra, can you tell me a little more about what specifically looked off - was it a line item that seemed wrong, or was it more like an unexpected charge category entirely?"
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 113.2,
+      "end_time": 131.0,
+      "duration": 17.799999999999997,
+      "text": "So there's a line item that says, um, overage charges - data retention overage - and it's for something like 2.3 terabytes. And we just, we weren't expecting that at all. We've been pretty consistent in our data footprint, we're a retail operation, not a huge amount of log volume."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 132.0,
+      "end_time": 141.3,
+      "duration": 9.300000000000011,
+      "text": "Okay yeah I see it, I've got the invoice open. The overage charge is listed under Aegis Protect, it's flagging 2.31 terabytes above your contracted tier."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 142.3,
+      "end_time": 150.6,
+      "duration": 8.299999999999983,
+      "text": "Right, and that's what surprised us because we're on the, I believe it's the 10 terabyte tier, and we've never come close to that."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 151.7,
+      "end_time": 162.3,
+      "duration": 10.600000000000023,
+      "text": "Yeah, so your contracted limit is 10 TB for Protect - Marcus, can you check what the usage reporting shows for January? That's the billing period this invoice covers."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 162.7,
+      "end_time": 173.2,
+      "duration": 10.5,
+      "text": "Already on it, yeah. So... okay this is interesting. The usage report is showing 12.31 terabytes for the January period, but let me cross-check that against the actual backup logs."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 173.6,
+      "end_time": 181.0,
+      "duration": 7.400000000000006,
+      "text": "And is that, um - is that 12 terabytes compressed or uncompressed? Because I know that can sometimes be the thing."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 182.2,
+      "end_time": 188.9,
+      "duration": 6.700000000000017,
+      "text": "Good question, that's actually a really common source of confusion and it might be exactly what's happening here."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 190.1,
+      "end_time": 206.4,
+      "duration": 16.30000000000001,
+      "text": "So, the billing metric we use for Protect is pre-compression - it's the raw data size before our dedup and compression runs. Some customers, especially if they changed any backup policies, can see that number jump even if the stored footprint looks the same on their end."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 206.9,
+      "end_time": 220.8,
+      "duration": 13.900000000000006,
+      "text": "Hm. Okay, so that could be it. We did actually - our infrastructure team made some changes to our backup policy configuration in, I want to say early January. We added a few additional workloads to the backup scope."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 221.7,
+      "end_time": 231.7,
+      "duration": 10.0,
+      "text": "That would do it, yeah. If you added workloads mid-cycle or even at the start of January, those would count toward the raw ingestion metric for the whole month."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 233.1,
+      "end_time": 240.1,
+      "duration": 7.0,
+      "text": "Let me see if I can pull the backup policy change log for Brightpath's org. Give me just a moment."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 241.3,
+      "end_time": 242.8,
+      "duration": 1.5,
+      "text": "Sure, no problem."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 244.0,
+      "end_time": 256.1,
+      "duration": 12.100000000000023,
+      "text": "And Kendra, while he's doing that - does your team have visibility into the usage dashboard in the portal? Sometimes customers aren't aware that we have a real-time usage tracker under the Protect module settings."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 256.7,
+      "end_time": 266.4,
+      "duration": 9.699999999999989,
+      "text": "Honestly I'm not sure if my team checks that regularly. I'm more on the strategy side, our infrastructure lead would be the one managing that day to day."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 267.8,
+      "end_time": 281.1,
+      "duration": 13.300000000000011,
+      "text": "That's fair. It might be worth looping them in after this call - there's also an option to set usage threshold alerts so you get notified before you hit your limit, rather than finding out on the invoice."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 281.6,
+      "end_time": 285.8,
+      "duration": 4.199999999999989,
+      "text": "Yeah that would actually be useful, we'd want that enabled going forward."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 286.5,
+      "end_time": 302.6,
+      "duration": 16.100000000000023,
+      "text": "Okay, I've got the change log - so there's a policy update on January 3rd, looks like five new workloads were added to the Brightpath backup scope, and that includes what appears to be a couple of database instances that weren't in the previous config."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 303.2,
+      "end_time": 319.5,
+      "duration": 16.30000000000001,
+      "text": "Yep, that tracks with what I was saying. So the overage is real in the sense that the usage did happen, but it sounds like it may have been an unintentional consequence of the policy change rather than something the team expected to trigger billing implications."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 320.3,
+      "end_time": 342.3,
+      "duration": 22.0,
+      "text": "Right, and that's kind of my issue - like I'm not disputing that the data was backed up, I just don't think anyone on our team realized that adding those workloads would push us over the tier. Is there anything that can be done about the charge given that it was essentially, you know, a configuration thing and not like intentional overuse?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 343.8,
+      "end_time": 366.5,
+      "duration": 22.69999999999999,
+      "text": "That's a fair point to raise. I don't have authority to adjust billing charges directly, that would need to go through your account team - but what I can do is document this in the case notes with the full context, the policy change date, the workloads added, so that when your account manager reviews it they have everything they need to make a determination."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 367.1,
+      "end_time": 377.6,
+      "duration": 10.5,
+      "text": "Yeah and honestly that's the right path - billing adjustments or credits, those decisions sit with the account team, but a well-documented support case absolutely helps move that conversation along."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 378.4,
+      "end_time": 385.5,
+      "duration": 7.100000000000023,
+      "text": "Okay, that works. Who's our account manager currently? I want to make sure I'm reaching out to the right person."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 386.0,
+      "end_time": 397.7,
+      "duration": 11.699999999999989,
+      "text": "Let me look that up - it looks like your account manager is... Devon Park, and I can include their contact info in the follow-up email I send you after this call."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 398.8,
+      "end_time": 409.9,
+      "duration": 11.099999999999966,
+      "text": "Perfect, yeah please include that. And just to confirm - you'll send me a summary of what we found today as well? The policy change, the usage breakdown, all of that?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 410.9,
+      "end_time": 425.5,
+      "duration": 14.600000000000023,
+      "text": "Absolutely. I'll put together a case summary with the invoice reference, the January usage figures, the January 3rd policy change log entry, and a recommendation to connect with Devon about the billing review. You should have that within a couple hours."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 426.4,
+      "end_time": 437.7,
+      "duration": 11.300000000000011,
+      "text": "Great. And just so I'm clear - nothing needs to change on our end right now in terms of the active configuration or the backup policy, right? Like this doesn't affect anything operationally."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 438.5,
+      "end_time": 451.9,
+      "duration": 13.399999999999977,
+      "text": "Correct, no operational changes needed. Your backups are running fine, everything is healthy. This is purely a billing clarification. If you wanted to adjust your tier going forward you'd do that through your account manager, but there's nothing broken."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 453.1,
+      "end_time": 461.7,
+      "duration": 8.599999999999966,
+      "text": "Okay good, that's good to hear. Alright, I think that covers everything I needed from this call. I appreciate you both digging into it."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 463.1,
+      "end_time": 474.0,
+      "duration": 10.899999999999977,
+      "text": "Of course, happy to help work through it. Keep an eye out for that email, and feel free to reply directly if anything looks off or you have follow-up questions."
+    },
+    {
+      "speaker_name": "Sarah Chen",
+      "start_time": 475.4,
+      "end_time": 481.9,
+      "duration": 6.5,
+      "text": "Thanks Kendra, good luck with the account team conversation and we'll get that case summary over to you shortly."
+    },
+    {
+      "speaker_name": "Kendra Wallace",
+      "start_time": 483.4,
+      "end_time": 484.9,
+      "duration": 1.5,
+      "text": "Thanks, take care."
+    }
+  ],
+  "transcript_text": "Sarah Chen: Hi, thanks for joining, this is Sarah Chen from Aegis Cloud Security support, I have Marcus Williams here with me as well - he handles a lot of our billing-side cases.\nMarcus Williams: Hey there, Marcus Williams, good to be on.\nKendra Wallace: Hi Sarah, hi Marcus, this is Kendra Wallace, I'm the CTO over at Brightpath Commerce - thanks for getting this scheduled quickly, I know it's end of month so I appreciate it.\nSarah Chen: Of course, yeah, end of month is always a busy time so we wanted to get eyes on this sooner rather than later for you.\nMarcus Williams: So, just to frame this up - the case notes say you're seeing a discrepancy on your February invoice, is that right?\nKendra Wallace: Yes, exactly. So we received the invoice on, I think it was February 20th, and the total came in about fourteen hundred dollars higher than what we were expecting based on our contract.\nMarcus Williams: Okay, and the contract - is that the renewal you signed back in, uh, Q4 of last year?\nKendra Wallace: Yeah, November. We renewed in November and locked in pricing for Aegis Protect and Aegis Detect, those are the two modules we're currently on.\nSarah Chen: Got it. And do you have the invoice number handy? I want to pull it up on my end while we're talking.\nKendra Wallace: Yeah, one sec - it's INV-2026-0847.\nMarcus Williams: INV-2026-0847, okay pulling that up now.\nSarah Chen: While Marcus is pulling that up, Kendra, can you tell me a little more about what specifically looked off - was it a line item that seemed wrong, or was it more like an unexpected charge category entirely?\nKendra Wallace: So there's a line item that says, um, overage charges - data retention overage - and it's for something like 2.3 terabytes. And we just, we weren't expecting that at all. We've been pretty consistent in our data footprint, we're a retail operation, not a huge amount of log volume.\nMarcus Williams: Okay yeah I see it, I've got the invoice open. The overage charge is listed under Aegis Protect, it's flagging 2.31 terabytes above your contracted tier.\nKendra Wallace: Right, and that's what surprised us because we're on the, I believe it's the 10 terabyte tier, and we've never come close to that.\nSarah Chen: Yeah, so your contracted limit is 10 TB for Protect - Marcus, can you check what the usage reporting shows for January? That's the billing period this invoice covers.\nMarcus Williams: Already on it, yeah. So... okay this is interesting. The usage report is showing 12.31 terabytes for the January period, but let me cross-check that against the actual backup logs.\nKendra Wallace: And is that, um - is that 12 terabytes compressed or uncompressed? Because I know that can sometimes be the thing.\nSarah Chen: Good question, that's actually a really common source of confusion and it might be exactly what's happening here.\nMarcus Williams: So, the billing metric we use for Protect is pre-compression - it's the raw data size before our dedup and compression runs. Some customers, especially if they changed any backup policies, can see that number jump even if the stored footprint looks the same on their end.\nKendra Wallace: Hm. Okay, so that could be it. We did actually - our infrastructure team made some changes to our backup policy configuration in, I want to say early January. We added a few additional workloads to the backup scope.\nSarah Chen: That would do it, yeah. If you added workloads mid-cycle or even at the start of January, those would count toward the raw ingestion metric for the whole month.\nMarcus Williams: Let me see if I can pull the backup policy change log for Brightpath's org. Give me just a moment.\nKendra Wallace: Sure, no problem.\nSarah Chen: And Kendra, while he's doing that - does your team have visibility into the usage dashboard in the portal? Sometimes customers aren't aware that we have a real-time usage tracker under the Protect module settings.\nKendra Wallace: Honestly I'm not sure if my team checks that regularly. I'm more on the strategy side, our infrastructure lead would be the one managing that day to day.\nSarah Chen: That's fair. It might be worth looping them in after this call - there's also an option to set usage threshold alerts so you get notified before you hit your limit, rather than finding out on the invoice.\nKendra Wallace: Yeah that would actually be useful, we'd want that enabled going forward.\nMarcus Williams: Okay, I've got the change log - so there's a policy update on January 3rd, looks like five new workloads were added to the Brightpath backup scope, and that includes what appears to be a couple of database instances that weren't in the previous config.\nSarah Chen: Yep, that tracks with what I was saying. So the overage is real in the sense that the usage did happen, but it sounds like it may have been an unintentional consequence of the policy change rather than something the team expected to trigger billing implications.\nKendra Wallace: Right, and that's kind of my issue - like I'm not disputing that the data was backed up, I just don't think anyone on our team realized that adding those workloads would push us over the tier. Is there anything that can be done about the charge given that it was essentially, you know, a configuration thing and not like intentional overuse?\nMarcus Williams: That's a fair point to raise. I don't have authority to adjust billing charges directly, that would need to go through your account team - but what I can do is document this in the case notes with the full context, the policy change date, the workloads added, so that when your account manager reviews it they have everything they need to make a determination.\nSarah Chen: Yeah and honestly that's the right path - billing adjustments or credits, those decisions sit with the account team, but a well-documented support case absolutely helps move that conversation along.\nKendra Wallace: Okay, that works. Who's our account manager currently? I want to make sure I'm reaching out to the right person.\nMarcus Williams: Let me look that up - it looks like your account manager is... Devon Park, and I can include their contact info in the follow-up email I send you after this call.\nKendra Wallace: Perfect, yeah please include that. And just to confirm - you'll send me a summary of what we found today as well? The policy change, the usage breakdown, all of that?\nMarcus Williams: Absolutely. I'll put together a case summary with the invoice reference, the January usage figures, the January 3rd policy change log entry, and a recommendation to connect with Devon about the billing review. You should have that within a couple hours.\nKendra Wallace: Great. And just so I'm clear - nothing needs to change on our end right now in terms of the active configuration or the backup policy, right? Like this doesn't affect anything operationally.\nSarah Chen: Correct, no operational changes needed. Your backups are running fine, everything is healthy. This is purely a billing clarification. If you wanted to adjust your tier going forward you'd do that through your account manager, but there's nothing broken.\nKendra Wallace: Okay good, that's good to hear. Alright, I think that covers everything I needed from this call. I appreciate you both digging into it.\nMarcus Williams: Of course, happy to help work through it. Keep an eye out for that email, and feel free to reply directly if anything looks off or you have follow-up questions.\nSarah Chen: Thanks Kendra, good luck with the account team conversation and we'll get that case summary over to you shortly.\nKendra Wallace: Thanks, take care.",
+  "summary": "Kendra Wallace, CTO of Brightpath Commerce, contacted Aegis Cloud Security support regarding a $1,400 discrepancy on her February invoice. Marcus Williams identified an overage charge of 2.31 terabytes under the Aegis Protect module, which was traced to a backup policy change made on January 3rd that added five new workloads including database instances. The team clarified that billing is calculated on pre-compression raw data, meaning the policy expansion unintentionally pushed usage over the 10 TB contracted tier. Marcus agreed to document the findings in a case summary and connect Kendra with account manager Devon Park to discuss a potential billing adjustment.",
+  "topics": [
+    "billing dispute",
+    "invoice overage",
+    "data retention",
+    "backup policy",
+    "account management",
+    "usage monitoring"
+  ],
+  "action_items": [
+    "Marcus Williams: Send case summary email to Kendra including invoice reference INV-2026-0847, January usage figures, January 3rd policy change log, and Devon Park's contact information",
+    "Kendra Wallace: Reach out to account manager Devon Park to discuss potential billing adjustment for the overage charge",
+    "Sarah Chen: Ensure Kendra's infrastructure lead is looped in to enable usage threshold alerts in the Aegis Protect portal dashboard",
+    "Kendra Wallace: Have infrastructure lead review usage dashboard in the portal and configure real-time usage alerts going forward"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.7,
+  "key_moments": [
+    {
+      "time": 90.0,
+      "text": "Kendra identifies the unexpected data retention overage charge of 2.3 TB on the invoice, expressing surprise given their consistent data footprint",
+      "type": "concern",
+      "speaker": "Kendra Wallace"
+    },
+    {
+      "time": 285.0,
+      "text": "Marcus discovers a backup policy change on January 3rd adding five new workloads, explaining the root cause of the overage",
+      "type": "technical_issue",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 370.0,
+      "text": "Kendra questions whether anything can be done about the charge given it was an unintentional configuration consequence rather than deliberate overuse",
+      "type": "pricing_offer",
+      "speaker": "Kendra Wallace"
+    },
+    {
+      "time": 430.0,
+      "text": "Sarah recommends enabling usage threshold alerts in the portal to proactively notify the team before hitting tier limits in the future",
+      "type": "action_item",
+      "speaker": "Sarah Chen"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 14.0,
+      "timestamp_ms": 1772197214000
+    },
+    {
+      "participant_name": "Kendra Wallace",
+      "event_type": "Join",
+      "time_seconds": 34.0,
+      "timestamp_ms": 1772197234000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Join",
+      "time_seconds": 36.0,
+      "timestamp_ms": 1772197236000
+    },
+    {
+      "participant_name": "Sarah Chen",
+      "event_type": "Leave",
+      "time_seconds": 733.0,
+      "timestamp_ms": 1772197933000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 733.0,
+      "timestamp_ms": 1772197933000
+    },
+    {
+      "participant_name": "Kendra Wallace",
+      "event_type": "Leave",
+      "time_seconds": 729.0,
+      "timestamp_ms": 1772197929000
+    }
+  ],
+  "stats": {
+    "turn_count": 43,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Sarah Chen": 13,
+      "Marcus Williams": 13,
+      "Kendra Wallace": 17
+    },
+    "speaker_total_seconds": {
+      "Sarah Chen": 141.0,
+      "Marcus Williams": 138.4,
+      "Kendra Wallace": 158.3
+    }
+  }
+}

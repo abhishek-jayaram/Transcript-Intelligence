@@ -1,0 +1,452 @@
+{
+  "meeting_id": "01KQ4529010F423FD9DB40BD",
+  "title": "Win/Loss Analysis - Q1",
+  "organizer_email": "kevin.obrien@aegiscloud.com",
+  "host_email": "kevin.obrien@aegiscloud.com",
+  "start_time": "2026-04-24T12:45:00.000Z",
+  "end_time": "2026-04-24T13:01:30.000Z",
+  "duration_minutes": 16.5,
+  "participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "brian.cho@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "raj.kapoor@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Maria Santos",
+    "1": "Raj Kapoor",
+    "2": "Kevin O'Brien",
+    "3": "Brian Cho"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 5.2,
+      "end_time": 12.1,
+      "duration": 6.8999999999999995,
+      "text": "Alright, I think everyone's on now - Raj, you're good? I can see you joined but your video's off."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 12.7,
+      "end_time": 18.8,
+      "duration": 6.100000000000001,
+      "text": "Yeah sorry, I'm on a laptop today, camera's being weird. Audio's fine though, let's just go."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 19.2,
+      "end_time": 35.7,
+      "duration": 16.500000000000004,
+      "text": "Okay cool. So, um, I wanted to get us all together before the end of April because we need to actually talk about Q1 win-loss - not just look at the numbers in Salesforce and call it a day. There's some stuff here that's honestly pretty troubling."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 36.0,
+      "end_time": 45.9,
+      "duration": 9.899999999999999,
+      "text": "Yeah I've been wanting to have this conversation for a few weeks. I pulled the closed-lost records going back to January and the pattern is not great."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 46.5,
+      "end_time": 63.3,
+      "duration": 16.799999999999997,
+      "text": "Before we get into the data, I just want to say - some of what I'm hearing from the support side is also feeding into this. Like we're not just losing deals, we're losing deals to specific competitors for specific reasons and I think those reasons are avoidable."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 64.6,
+      "end_time": 70.7,
+      "duration": 6.1000000000000085,
+      "text": "Okay so let's just get into it. Kevin, you want to walk through what you pulled together?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 71.3,
+      "end_time": 93.0,
+      "duration": 21.700000000000003,
+      "text": "Sure. So in Q1 we had - I'm looking at my sheet here - 34 closed-lost opportunities with a total combined ACV of around 2.1 million. Of those, 22 had a named competitor as the reason or it was noted in the loss notes. SentinelShield shows up the most, 9 times. VaultEdge was 6. CyberNova was 4. The rest were kind of scattered."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 93.4,
+      "end_time": 99.3,
+      "duration": 5.8999999999999915,
+      "text": "SentinelShield nine times. That's - that's a lot. Do we know what specifically they were winning on?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 100.1,
+      "end_time": 117.0,
+      "duration": 16.900000000000006,
+      "text": "That's the frustrating part. The loss notes are inconsistent. Some AEs write paragraphs, some write 'went with competitor' and that's it. But from the ones that had detail, the recurring themes were pricing, and - this is the one that stings - reliability concerns post the March outage."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 118.5,
+      "end_time": 130.1,
+      "duration": 11.599999999999994,
+      "text": "Yeah, I was afraid that was going to come up. The March outage is still haunting us. I've had multiple customers ask me directly about it during QBRs in the last few weeks."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 130.5,
+      "end_time": 141.8,
+      "duration": 11.300000000000011,
+      "text": "How many of the Q1 losses do we think are directly attributable to the outage versus just timing? Like Q1 was already in progress when the outage happened on March 10th."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 142.8,
+      "end_time": 164.9,
+      "duration": 22.099999999999994,
+      "text": "It's hard to isolate cleanly, but deals that were in late-stage negotiation in mid-March - I counted at least five that slipped or went cold right around that window. And two of them explicitly cited it in the loss notes. One prospect said, and I'm quoting from the notes here, 'we can't afford six hours of no threat visibility in our environment.'"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 166.4,
+      "end_time": 179.5,
+      "duration": 13.099999999999994,
+      "text": "That's fair feedback though, right? Like I'm not going to sit here and say that's unfair. Six hours was bad. The cascading failure in the event ingestion pipeline - that should never have gotten to that point."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 180.8,
+      "end_time": 196.2,
+      "duration": 15.399999999999977,
+      "text": "And to be clear, the fix is in place. The redundant processing nodes are live, we've got the circuit breaker pattern deployed. But the optics problem is that prospects don't know that unless we tell them and apparently we're not always telling them effectively."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 197.3,
+      "end_time": 212.6,
+      "duration": 15.299999999999983,
+      "text": "That's actually something I want to flag - do we have a leave-behind or a one-pager that specifically addresses the March incident and what we did to fix it? Because I don't have one and I've been kind of winging it in conversations."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 213.9,
+      "end_time": 222.9,
+      "duration": 9.0,
+      "text": "We don't. And that's a gap. Like we put out a postmortem internally and we sent customer comms but there's nothing packaged for sales conversations."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 224.2,
+      "end_time": 233.5,
+      "duration": 9.300000000000011,
+      "text": "Okay, that's an action item, let's flag that. Someone needs to own a one-pager on the Detect outage resolution. Kevin, can you work with product on that?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 234.8,
+      "end_time": 247.3,
+      "duration": 12.5,
+      "text": "Yeah I can do that. I'll pull in the postmortem details and frame it as a 'here's what happened, here's what we did, here's why it won't happen again' kind of thing. Should be pretty straightforward."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 248.7,
+      "end_time": 253.4,
+      "duration": 4.700000000000017,
+      "text": "Good. Okay what about the VaultEdge losses - what's the pattern there?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 254.9,
+      "end_time": 272.2,
+      "duration": 17.299999999999983,
+      "text": "VaultEdge is mostly showing up in deals where Protect is the primary use case. They're undercutting us on backup pricing pretty aggressively and a couple of the notes mention their recovery time benchmarks. Apparently they're claiming sub-15-minute RTO in their pitch and we're not matching that claim in conversations."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 273.5,
+      "end_time": 278.7,
+      "duration": 5.199999999999989,
+      "text": "Are their RTO numbers even real? Like has anyone done a head-to-head on that?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 279.7,
+      "end_time": 295.7,
+      "duration": 16.0,
+      "text": "That's exactly what I want to know. And I don't have a good answer. We need competitive testing data or at least a way to challenge those claims in the room. Right now when a prospect brings up VaultEdge's RTO numbers we're kind of just... nodding."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 297.1,
+      "end_time": 313.4,
+      "duration": 16.299999999999955,
+      "text": "That's a problem. We should not be nodding. We need either our own benchmarks or a way to reframe the conversation around total recovery workflow, not just raw RTO. Because point-in-time recovery, data integrity validation - those are things we do well and VaultEdge's pitch glosses over."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 313.8,
+      "end_time": 324.3,
+      "duration": 10.5,
+      "text": "Agreed, but it's hard to reframe in the moment when the prospect already has a datasheet in front of them. We need that collateral to exist before the call happens."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 325.5,
+      "end_time": 342.3,
+      "duration": 16.80000000000001,
+      "text": "Yeah, I hear that. Okay let's talk about Comply for a second because that's actually - I think that's a potential bright spot even if Q1 was rough. Comply v2 just launched on April 7th and I'm curious if anyone's already seeing it move the needle in conversations."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 342.7,
+      "end_time": 362.3,
+      "duration": 19.600000000000023,
+      "text": "It's too early to show up in win data obviously, but I've had three demos in the last two weeks where on-demand SOC 2 and HIPAA reporting was like, the thing that got the prospect excited. One of them literally said 'okay this is the first time I've actually wanted to stay on a compliance demo.'"
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 363.8,
+      "end_time": 377.7,
+      "duration": 13.899999999999977,
+      "text": "Okay that's good to hear. But let's not let that distract from the Q1 problems. The concern I have is that we go into Q2 still carrying this reliability baggage from March and we don't have good answers for it."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 379.1,
+      "end_time": 400.4,
+      "duration": 21.299999999999955,
+      "text": "There's also something I want to bring up that's a little uncomfortable - I think some of the Q1 losses are partially on us, meaning Customer Success. There are a couple accounts where I think we didn't stay close enough during the evaluation and competitors got more face time. That's on me to fix but I wanted to name it."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 400.9,
+      "end_time": 417.8,
+      "duration": 16.900000000000034,
+      "text": "I appreciate you saying that. Honestly the same is true on the support side - we had a couple of escalations during March that probably scared off prospects who were watching how we handled things. Like our response time during the outage was not what it should have been."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 419.2,
+      "end_time": 432.4,
+      "duration": 13.199999999999989,
+      "text": "Okay so we have a few themes here. Reliability perception from the March Detect outage, lack of competitive collateral especially against VaultEdge on Protect, and some execution gaps on our side. Does that feel like a fair summary?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 433.8,
+      "end_time": 446.8,
+      "duration": 13.0,
+      "text": "I'd add one more - loss note quality. If we can't consistently capture why we're losing, we can't fix it. The data I pulled was useful but it's incomplete and that means we're probably missing patterns."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 447.8,
+      "end_time": 458.0,
+      "duration": 10.199999999999989,
+      "text": "Yeah that's been a chronic problem. I've brought it up in sales meetings before and it just doesn't stick. Maybe it needs to come from leadership more forcefully."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 458.6,
+      "end_time": 470.4,
+      "duration": 11.799999999999955,
+      "text": "I'll take that one. I'll talk to the VP of Sales about making loss notes a required field with a minimum character count or something. It's not a technical problem, it's a process problem."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 470.9,
+      "end_time": 488.0,
+      "duration": 17.100000000000023,
+      "text": "Good. Okay so action items - Kevin owns the Detect outage one-pager, we need someone to own a competitive brief on VaultEdge and Protect specifically, Raj you're talking to VP Sales about loss note quality, and I guess I need to tighten up the engagement model for late-stage evaluations."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 488.4,
+      "end_time": 496.8,
+      "duration": 8.400000000000034,
+      "text": "I can take the VaultEdge competitive brief. I've been doing some informal research anyway and I'd rather have something formal to point to."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 497.1,
+      "end_time": 508.8,
+      "duration": 11.699999999999989,
+      "text": "Perfect. Can we aim to have drafts of both the one-pager and the competitive brief by end of next week? That gives us something to work with before we're too deep into Q2."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 509.2,
+      "end_time": 515.1,
+      "duration": 5.900000000000034,
+      "text": "End of next week is tight but yeah, I think doable. I'll block time for it."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 516.2,
+      "end_time": 528.2,
+      "duration": 12.0,
+      "text": "Same. Okay I think that's probably a good place to wrap. I'll send out a summary with the action items after this. Thanks everyone - this was a hard conversation but it needed to happen."
+    },
+    {
+      "speaker_name": "Raj Kapoor",
+      "start_time": 528.7,
+      "end_time": 534.4,
+      "duration": 5.699999999999932,
+      "text": "Agreed. Let's not wait until Q2 close to do this again. Monthly would be better."
+    },
+    {
+      "speaker_name": "Brian Cho",
+      "start_time": 535.1,
+      "end_time": 536.9,
+      "duration": 1.7999999999999545,
+      "text": "Seconded. Alright, talk soon."
+    }
+  ],
+  "transcript_text": "Maria Santos: Alright, I think everyone's on now - Raj, you're good? I can see you joined but your video's off.\nRaj Kapoor: Yeah sorry, I'm on a laptop today, camera's being weird. Audio's fine though, let's just go.\nMaria Santos: Okay cool. So, um, I wanted to get us all together before the end of April because we need to actually talk about Q1 win-loss - not just look at the numbers in Salesforce and call it a day. There's some stuff here that's honestly pretty troubling.\nKevin O'Brien: Yeah I've been wanting to have this conversation for a few weeks. I pulled the closed-lost records going back to January and the pattern is not great.\nBrian Cho: Before we get into the data, I just want to say - some of what I'm hearing from the support side is also feeding into this. Like we're not just losing deals, we're losing deals to specific competitors for specific reasons and I think those reasons are avoidable.\nRaj Kapoor: Okay so let's just get into it. Kevin, you want to walk through what you pulled together?\nKevin O'Brien: Sure. So in Q1 we had - I'm looking at my sheet here - 34 closed-lost opportunities with a total combined ACV of around 2.1 million. Of those, 22 had a named competitor as the reason or it was noted in the loss notes. SentinelShield shows up the most, 9 times. VaultEdge was 6. CyberNova was 4. The rest were kind of scattered.\nMaria Santos: SentinelShield nine times. That's - that's a lot. Do we know what specifically they were winning on?\nKevin O'Brien: That's the frustrating part. The loss notes are inconsistent. Some AEs write paragraphs, some write 'went with competitor' and that's it. But from the ones that had detail, the recurring themes were pricing, and - this is the one that stings - reliability concerns post the March outage.\nBrian Cho: Yeah, I was afraid that was going to come up. The March outage is still haunting us. I've had multiple customers ask me directly about it during QBRs in the last few weeks.\nRaj Kapoor: How many of the Q1 losses do we think are directly attributable to the outage versus just timing? Like Q1 was already in progress when the outage happened on March 10th.\nKevin O'Brien: It's hard to isolate cleanly, but deals that were in late-stage negotiation in mid-March - I counted at least five that slipped or went cold right around that window. And two of them explicitly cited it in the loss notes. One prospect said, and I'm quoting from the notes here, 'we can't afford six hours of no threat visibility in our environment.'\nRaj Kapoor: That's fair feedback though, right? Like I'm not going to sit here and say that's unfair. Six hours was bad. The cascading failure in the event ingestion pipeline - that should never have gotten to that point.\nKevin O'Brien: And to be clear, the fix is in place. The redundant processing nodes are live, we've got the circuit breaker pattern deployed. But the optics problem is that prospects don't know that unless we tell them and apparently we're not always telling them effectively.\nMaria Santos: That's actually something I want to flag - do we have a leave-behind or a one-pager that specifically addresses the March incident and what we did to fix it? Because I don't have one and I've been kind of winging it in conversations.\nBrian Cho: We don't. And that's a gap. Like we put out a postmortem internally and we sent customer comms but there's nothing packaged for sales conversations.\nRaj Kapoor: Okay, that's an action item, let's flag that. Someone needs to own a one-pager on the Detect outage resolution. Kevin, can you work with product on that?\nKevin O'Brien: Yeah I can do that. I'll pull in the postmortem details and frame it as a 'here's what happened, here's what we did, here's why it won't happen again' kind of thing. Should be pretty straightforward.\nRaj Kapoor: Good. Okay what about the VaultEdge losses - what's the pattern there?\nKevin O'Brien: VaultEdge is mostly showing up in deals where Protect is the primary use case. They're undercutting us on backup pricing pretty aggressively and a couple of the notes mention their recovery time benchmarks. Apparently they're claiming sub-15-minute RTO in their pitch and we're not matching that claim in conversations.\nBrian Cho: Are their RTO numbers even real? Like has anyone done a head-to-head on that?\nKevin O'Brien: That's exactly what I want to know. And I don't have a good answer. We need competitive testing data or at least a way to challenge those claims in the room. Right now when a prospect brings up VaultEdge's RTO numbers we're kind of just... nodding.\nRaj Kapoor: That's a problem. We should not be nodding. We need either our own benchmarks or a way to reframe the conversation around total recovery workflow, not just raw RTO. Because point-in-time recovery, data integrity validation - those are things we do well and VaultEdge's pitch glosses over.\nMaria Santos: Agreed, but it's hard to reframe in the moment when the prospect already has a datasheet in front of them. We need that collateral to exist before the call happens.\nBrian Cho: Yeah, I hear that. Okay let's talk about Comply for a second because that's actually - I think that's a potential bright spot even if Q1 was rough. Comply v2 just launched on April 7th and I'm curious if anyone's already seeing it move the needle in conversations.\nMaria Santos: It's too early to show up in win data obviously, but I've had three demos in the last two weeks where on-demand SOC 2 and HIPAA reporting was like, the thing that got the prospect excited. One of them literally said 'okay this is the first time I've actually wanted to stay on a compliance demo.'\nRaj Kapoor: Okay that's good to hear. But let's not let that distract from the Q1 problems. The concern I have is that we go into Q2 still carrying this reliability baggage from March and we don't have good answers for it.\nMaria Santos: There's also something I want to bring up that's a little uncomfortable - I think some of the Q1 losses are partially on us, meaning Customer Success. There are a couple accounts where I think we didn't stay close enough during the evaluation and competitors got more face time. That's on me to fix but I wanted to name it.\nBrian Cho: I appreciate you saying that. Honestly the same is true on the support side - we had a couple of escalations during March that probably scared off prospects who were watching how we handled things. Like our response time during the outage was not what it should have been.\nRaj Kapoor: Okay so we have a few themes here. Reliability perception from the March Detect outage, lack of competitive collateral especially against VaultEdge on Protect, and some execution gaps on our side. Does that feel like a fair summary?\nKevin O'Brien: I'd add one more - loss note quality. If we can't consistently capture why we're losing, we can't fix it. The data I pulled was useful but it's incomplete and that means we're probably missing patterns.\nMaria Santos: Yeah that's been a chronic problem. I've brought it up in sales meetings before and it just doesn't stick. Maybe it needs to come from leadership more forcefully.\nRaj Kapoor: I'll take that one. I'll talk to the VP of Sales about making loss notes a required field with a minimum character count or something. It's not a technical problem, it's a process problem.\nMaria Santos: Good. Okay so action items - Kevin owns the Detect outage one-pager, we need someone to own a competitive brief on VaultEdge and Protect specifically, Raj you're talking to VP Sales about loss note quality, and I guess I need to tighten up the engagement model for late-stage evaluations.\nBrian Cho: I can take the VaultEdge competitive brief. I've been doing some informal research anyway and I'd rather have something formal to point to.\nRaj Kapoor: Perfect. Can we aim to have drafts of both the one-pager and the competitive brief by end of next week? That gives us something to work with before we're too deep into Q2.\nKevin O'Brien: End of next week is tight but yeah, I think doable. I'll block time for it.\nMaria Santos: Same. Okay I think that's probably a good place to wrap. I'll send out a summary with the action items after this. Thanks everyone - this was a hard conversation but it needed to happen.\nRaj Kapoor: Agreed. Let's not wait until Q2 close to do this again. Monthly would be better.\nBrian Cho: Seconded. Alright, talk soon.",
+  "summary": "The team held a Q1 win-loss review revealing 34 closed-lost opportunities totaling $2.1M ACV, with SentinelShield (9 losses), VaultEdge (6), and CyberNova (4) as the primary competitors. A significant concern is the March Detect outage continuing to haunt late-stage deals, with at least five deals attributed to reliability concerns stemming from the incident. Additional issues include a lack of competitive collateral against VaultEdge on RTO claims, inconsistent loss note quality limiting pattern recognition, and execution gaps on the Customer Success and Support sides during evaluations. The team agreed on several action items and proposed monthly win-loss reviews going forward.",
+  "topics": [
+    "win-loss analysis",
+    "competitive intelligence",
+    "reliability / outage impact",
+    "sales process",
+    "collateral gaps",
+    "q1 review"
+  ],
+  "action_items": [
+    "Kevin O'Brien: Create a one-pager on the March Detect outage resolution covering what happened, what was fixed, and why it won't recur",
+    "Brian Cho: Develop a formal competitive brief on VaultEdge focused on Protect and RTO benchmarking",
+    "Raj Kapoor: Speak with VP of Sales about enforcing loss note quality with required fields and minimum character counts",
+    "Maria Santos: Tighten the engagement model for late-stage evaluations to ensure Customer Success stays closer during competitive deals"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Kevin reveals 34 closed-lost deals totaling $2.1M ACV in Q1, with SentinelShield appearing 9 times as a named competitor",
+      "type": "churn_signal",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 198.0,
+      "text": "March outage identified as a recurring loss driver, with one prospect quoted as saying 'we can't afford six hours of no threat visibility'",
+      "type": "concern",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 310.0,
+      "text": "Team identifies there is no sales-facing one-pager addressing the March outage and its resolution, flagged as a critical collateral gap",
+      "type": "feature_gap",
+      "speaker": "Maria Santos"
+    },
+    {
+      "time": 520.0,
+      "text": "Maria shares that Comply v2 demos are generating strong prospect excitement, with one prospect saying it was the first time they wanted to stay on a compliance demo",
+      "type": "positive_pivot",
+      "speaker": "Maria Santos"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Join",
+      "time_seconds": 2.0,
+      "timestamp_ms": 1777034702000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Join",
+      "time_seconds": 10.0,
+      "timestamp_ms": 1777034710000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Join",
+      "time_seconds": 19.0,
+      "timestamp_ms": 1777034719000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Join",
+      "time_seconds": 57.0,
+      "timestamp_ms": 1777034757000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Leave",
+      "time_seconds": 980.0,
+      "timestamp_ms": 1777035680000
+    },
+    {
+      "participant_name": "Brian Cho",
+      "event_type": "Leave",
+      "time_seconds": 987.0,
+      "timestamp_ms": 1777035687000
+    },
+    {
+      "participant_name": "Raj Kapoor",
+      "event_type": "Leave",
+      "time_seconds": 989.0,
+      "timestamp_ms": 1777035689000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Leave",
+      "time_seconds": 972.0,
+      "timestamp_ms": 1777035672000
+    }
+  ],
+  "stats": {
+    "turn_count": 40,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Maria Santos": 10,
+      "Raj Kapoor": 12,
+      "Kevin O'Brien": 10,
+      "Brian Cho": 8
+    },
+    "speaker_total_seconds": {
+      "Maria Santos": 135.3,
+      "Raj Kapoor": 123.2,
+      "Kevin O'Brien": 150.7,
+      "Brian Cho": 86.5
+    }
+  }
+}

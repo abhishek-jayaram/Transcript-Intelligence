@@ -1,0 +1,431 @@
+{
+  "meeting_id": "01KQAC572C34475A8791F2C3",
+  "title": "Protect Team - Quarterly Planning",
+  "organizer_email": "mike.romano@aegiscloud.com",
+  "host_email": "mike.romano@aegiscloud.com",
+  "start_time": "2026-02-23T12:45:00.000Z",
+  "end_time": "2026-02-23T13:15:48.000Z",
+  "duration_minutes": 30.8,
+  "participants": [
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "mike.romano@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ananya.sharma@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "ravi.gupta@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "sofia.petrov@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [],
+  "speaker_map": {
+    "0": "Mike Romano",
+    "1": "Ananya Sharma",
+    "2": "Ravi Gupta",
+    "3": "Sofia Petrov"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 4.9,
+      "end_time": 11.6,
+      "duration": 6.699999999999999,
+      "text": "Alright, I think we've got everyone on now - Ananya, Ravi, Sofia, you all can hear me okay?"
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 13.1,
+      "end_time": 14.6,
+      "duration": 1.5,
+      "text": "Yep, loud and clear."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 15.1,
+      "end_time": 16.6,
+      "duration": 1.5000000000000018,
+      "text": "Good here."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 18.0,
+      "end_time": 22.3,
+      "duration": 4.300000000000001,
+      "text": "Yeah, I'm here, just had to grab my coffee real quick, sorry."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 22.7,
+      "end_time": 39.3,
+      "duration": 16.599999999999998,
+      "text": "Ha, no worries at all, I literally just poured mine too. Okay so - quarterly planning for Protect, Q2 is coming up fast, I want to make sure we actually go into it with a solid plan this time and not scrambling like we did in Q4."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 40.4,
+      "end_time": 43.3,
+      "duration": 2.8999999999999986,
+      "text": "Q4 was... yeah, let's not repeat that."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 44.5,
+      "end_time": 52.3,
+      "duration": 7.799999999999997,
+      "text": "Right, exactly. So I shared the doc in the channel this morning - did everyone get a chance to at least skim it?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 53.3,
+      "end_time": 59.5,
+      "duration": 6.200000000000003,
+      "text": "I went through most of it, yeah. The incremental backup performance section jumped out at me immediately."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 60.4,
+      "end_time": 73.0,
+      "duration": 12.600000000000001,
+      "text": "Same, and honestly I'm really excited about that one. Like the benchmarks we ran in January - we're seeing like a 30-something percent reduction in backup window times on the test clusters, which is pretty significant."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 73.5,
+      "end_time": 84.9,
+      "duration": 11.400000000000006,
+      "text": "Yeah that's - that's a big deal for customers with large data sets, right, because that's been one of the top complaints in the feedback we've been getting from the CSM team."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 85.9,
+      "end_time": 101.6,
+      "duration": 15.699999999999989,
+      "text": "Totally, and I think if we can ship that in Q2 we're in a really good spot heading into the back half of the year. I'd love to see us target like late April for the rollout, give us enough buffer to do proper testing."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 102.7,
+      "end_time": 118.0,
+      "duration": 15.299999999999997,
+      "text": "Late April works for me from an infra standpoint. I've already been thinking about how we'd stage the deployment - I want to do a canary rollout, maybe start with like ten percent of production traffic, watch it for a week, then ramp."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 118.5,
+      "end_time": 125.3,
+      "duration": 6.799999999999997,
+      "text": "That's exactly the right approach, Ravi, yeah. I don't want to do a big bang release on something like this."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 126.6,
+      "end_time": 136.1,
+      "duration": 9.5,
+      "text": "Agreed. And honestly the canary setup we built for the last Protect release was solid, so it shouldn't be a ton of new work to adapt it."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 137.2,
+      "end_time": 151.6,
+      "duration": 14.400000000000006,
+      "text": "Oh good, yeah, that's good to hear. Okay so - Sofia, I know you had some thoughts on the recovery side of things, the restore flow improvements? Do you want to walk us through where your head's at on that?"
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 152.3,
+      "end_time": 172.4,
+      "duration": 20.099999999999994,
+      "text": "Sure, yeah. So basically the restore UX right now is... fine, but it's clunky, especially for partial restores at the file level. Users have to go through like five or six steps to get to what they actually want and we've had a couple of support tickets that are basically just people getting lost in the flow."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 173.6,
+      "end_time": 177.7,
+      "duration": 4.099999999999994,
+      "text": "Ugh, yeah, I've seen those tickets. It's not a great experience."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 179.1,
+      "end_time": 199.6,
+      "duration": 20.5,
+      "text": "Right, and I think we can cut that down significantly. I've been prototyping a new restore wizard - I'll share the Figma link in the doc after this - that basically lets you search for the file or directory you want directly from step one, and it surfaces the most recent backup snapshots automatically. It's a lot more... intuitive."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 201.1,
+      "end_time": 205.6,
+      "duration": 4.5,
+      "text": "Oh I love that. That sounds way better. Like search-first instead of navigate-first."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 205.9,
+      "end_time": 221.3,
+      "duration": 15.400000000000006,
+      "text": "Exactly, yeah. And on the back end it means we need to make sure the file index is being kept more up to date - Ravi, that's something I wanted to loop you in on because it might have some implications for the pipeline."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 222.4,
+      "end_time": 240.8,
+      "duration": 18.400000000000006,
+      "text": "Yeah for sure, that's doable. If we're doing more frequent index updates I want to make sure we're not creating contention with the backup jobs themselves - but I think we can schedule around it. Let me take a look at the current pipeline config and I'll post some notes in the thread."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 242.1,
+      "end_time": 258.1,
+      "duration": 16.00000000000003,
+      "text": "Perfect, yeah, let's sync on that separately. Okay, um - I also want to spend a few minutes talking about the multi-region replication piece because that one's been on the roadmap for a while and I keep getting asked about it by the enterprise sales team."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 258.6,
+      "end_time": 272.4,
+      "duration": 13.799999999999955,
+      "text": "Ah, yeah. I mean - I want to be honest, I think multi-region is a Q3 thing realistically, not Q2. There's a lot of complexity there, especially around consistency guarantees when you're replicating across regions with different latency profiles."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 273.5,
+      "end_time": 284.3,
+      "duration": 10.800000000000011,
+      "text": "No that's - that's fair, I appreciate you saying that because I don't want to overpromise to sales and then have us scrambling. I'd rather set the right expectation now."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 285.6,
+      "end_time": 301.6,
+      "duration": 16.0,
+      "text": "Yeah I think Q3 is actually a really achievable target for that if we lay the groundwork in Q2 - like some of the architectural work we're doing for the incremental backup improvements will actually help with the replication stuff too, so it's not wasted effort."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 302.6,
+      "end_time": 310.0,
+      "duration": 7.399999999999977,
+      "text": "Oh that's a good point, like the work compounds. I like that framing, that's helpful for explaining it to leadership too."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 311.3,
+      "end_time": 324.4,
+      "duration": 13.099999999999966,
+      "text": "Yeah exactly. And I can write up a short technical brief on it if that would help - like here's what we're doing in Q2 and here's how it sets us up for multi-region in Q3."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 324.8,
+      "end_time": 335.1,
+      "duration": 10.300000000000011,
+      "text": "That would be amazing, honestly. Yes please. Okay, um, anything else anyone wants to flag before we wrap up? I feel like we actually covered a lot of ground today."
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 335.5,
+      "end_time": 350.8,
+      "duration": 15.300000000000011,
+      "text": "One small thing - I want to carve out some time in Q2 for tech debt. We've got a few places in the backup scheduler that are... not pretty, and I think it's starting to slow us down when we're adding new features."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 351.1,
+      "end_time": 356.7,
+      "duration": 5.599999999999966,
+      "text": "Yes, a hundred percent. I'll make sure we protect some capacity for that - no pun intended."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 357.8,
+      "end_time": 359.3,
+      "duration": 1.5,
+      "text": "Ha, nice one."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 360.7,
+      "end_time": 362.7,
+      "duration": 2.0,
+      "text": "I'll be here all quarter."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 364.2,
+      "end_time": 374.6,
+      "duration": 10.400000000000034,
+      "text": "Okay cool, I think this was a really productive session honestly. Way better than last quarter's planning call where we spent like forty minutes arguing about story point estimates."
+    },
+    {
+      "speaker_name": "Mike Romano",
+      "start_time": 375.8,
+      "end_time": 387.0,
+      "duration": 11.199999999999989,
+      "text": "Let's just... never speak of that again. Alright, I'll update the planning doc with everything we talked about today and I'll send a summary to the channel. Thanks everyone, this was great."
+    },
+    {
+      "speaker_name": "Sofia Petrov",
+      "start_time": 387.7,
+      "end_time": 389.2,
+      "duration": 1.5,
+      "text": "Thanks Mike!"
+    },
+    {
+      "speaker_name": "Ravi Gupta",
+      "start_time": 389.9,
+      "end_time": 391.4,
+      "duration": 1.5,
+      "text": "Yeah, good call everyone."
+    },
+    {
+      "speaker_name": "Ananya Sharma",
+      "start_time": 392.0,
+      "end_time": 393.5,
+      "duration": 1.5,
+      "text": "Talk soon."
+    }
+  ],
+  "transcript_text": "Mike Romano: Alright, I think we've got everyone on now - Ananya, Ravi, Sofia, you all can hear me okay?\nAnanya Sharma: Yep, loud and clear.\nRavi Gupta: Good here.\nSofia Petrov: Yeah, I'm here, just had to grab my coffee real quick, sorry.\nMike Romano: Ha, no worries at all, I literally just poured mine too. Okay so - quarterly planning for Protect, Q2 is coming up fast, I want to make sure we actually go into it with a solid plan this time and not scrambling like we did in Q4.\nAnanya Sharma: Q4 was... yeah, let's not repeat that.\nMike Romano: Right, exactly. So I shared the doc in the channel this morning - did everyone get a chance to at least skim it?\nSofia Petrov: I went through most of it, yeah. The incremental backup performance section jumped out at me immediately.\nAnanya Sharma: Same, and honestly I'm really excited about that one. Like the benchmarks we ran in January - we're seeing like a 30-something percent reduction in backup window times on the test clusters, which is pretty significant.\nMike Romano: Yeah that's - that's a big deal for customers with large data sets, right, because that's been one of the top complaints in the feedback we've been getting from the CSM team.\nAnanya Sharma: Totally, and I think if we can ship that in Q2 we're in a really good spot heading into the back half of the year. I'd love to see us target like late April for the rollout, give us enough buffer to do proper testing.\nRavi Gupta: Late April works for me from an infra standpoint. I've already been thinking about how we'd stage the deployment - I want to do a canary rollout, maybe start with like ten percent of production traffic, watch it for a week, then ramp.\nMike Romano: That's exactly the right approach, Ravi, yeah. I don't want to do a big bang release on something like this.\nRavi Gupta: Agreed. And honestly the canary setup we built for the last Protect release was solid, so it shouldn't be a ton of new work to adapt it.\nMike Romano: Oh good, yeah, that's good to hear. Okay so - Sofia, I know you had some thoughts on the recovery side of things, the restore flow improvements? Do you want to walk us through where your head's at on that?\nSofia Petrov: Sure, yeah. So basically the restore UX right now is... fine, but it's clunky, especially for partial restores at the file level. Users have to go through like five or six steps to get to what they actually want and we've had a couple of support tickets that are basically just people getting lost in the flow.\nAnanya Sharma: Ugh, yeah, I've seen those tickets. It's not a great experience.\nSofia Petrov: Right, and I think we can cut that down significantly. I've been prototyping a new restore wizard - I'll share the Figma link in the doc after this - that basically lets you search for the file or directory you want directly from step one, and it surfaces the most recent backup snapshots automatically. It's a lot more... intuitive.\nAnanya Sharma: Oh I love that. That sounds way better. Like search-first instead of navigate-first.\nSofia Petrov: Exactly, yeah. And on the back end it means we need to make sure the file index is being kept more up to date - Ravi, that's something I wanted to loop you in on because it might have some implications for the pipeline.\nRavi Gupta: Yeah for sure, that's doable. If we're doing more frequent index updates I want to make sure we're not creating contention with the backup jobs themselves - but I think we can schedule around it. Let me take a look at the current pipeline config and I'll post some notes in the thread.\nMike Romano: Perfect, yeah, let's sync on that separately. Okay, um - I also want to spend a few minutes talking about the multi-region replication piece because that one's been on the roadmap for a while and I keep getting asked about it by the enterprise sales team.\nAnanya Sharma: Ah, yeah. I mean - I want to be honest, I think multi-region is a Q3 thing realistically, not Q2. There's a lot of complexity there, especially around consistency guarantees when you're replicating across regions with different latency profiles.\nMike Romano: No that's - that's fair, I appreciate you saying that because I don't want to overpromise to sales and then have us scrambling. I'd rather set the right expectation now.\nAnanya Sharma: Yeah I think Q3 is actually a really achievable target for that if we lay the groundwork in Q2 - like some of the architectural work we're doing for the incremental backup improvements will actually help with the replication stuff too, so it's not wasted effort.\nMike Romano: Oh that's a good point, like the work compounds. I like that framing, that's helpful for explaining it to leadership too.\nAnanya Sharma: Yeah exactly. And I can write up a short technical brief on it if that would help - like here's what we're doing in Q2 and here's how it sets us up for multi-region in Q3.\nMike Romano: That would be amazing, honestly. Yes please. Okay, um, anything else anyone wants to flag before we wrap up? I feel like we actually covered a lot of ground today.\nRavi Gupta: One small thing - I want to carve out some time in Q2 for tech debt. We've got a few places in the backup scheduler that are... not pretty, and I think it's starting to slow us down when we're adding new features.\nMike Romano: Yes, a hundred percent. I'll make sure we protect some capacity for that - no pun intended.\nSofia Petrov: Ha, nice one.\nMike Romano: I'll be here all quarter.\nAnanya Sharma: Okay cool, I think this was a really productive session honestly. Way better than last quarter's planning call where we spent like forty minutes arguing about story point estimates.\nMike Romano: Let's just... never speak of that again. Alright, I'll update the planning doc with everything we talked about today and I'll send a summary to the channel. Thanks everyone, this was great.\nSofia Petrov: Thanks Mike!\nRavi Gupta: Yeah, good call everyone.\nAnanya Sharma: Talk soon.",
+  "summary": "Mike Romano led a Q2 quarterly planning call for the Protect product with Ananya Sharma, Ravi Gupta, and Sofia Petrov. The team discussed three main initiatives: a 30%+ improvement to incremental backup performance targeting a late April canary rollout, a redesigned restore wizard UX that enables search-first file recovery, and multi-region replication which was scoped to Q3 rather than Q2 to avoid overpromising. The team also agreed to carve out capacity for tech debt work in the backup scheduler during Q2.",
+  "topics": [
+    "quarterly planning",
+    "incremental backup performance",
+    "restore ux improvement",
+    "multi-region replication",
+    "canary deployment",
+    "tech debt"
+  ],
+  "action_items": [
+    "Ananya Sharma: Write a technical brief explaining Q2 incremental backup work and how it sets up multi-region replication for Q3",
+    "Sofia Petrov: Share Figma prototype link for the new restore wizard in the planning doc",
+    "Ravi Gupta: Review current pipeline config and post notes on scheduling file index updates without contention with backup jobs",
+    "Mike Romano: Update the planning doc with meeting outcomes and send a summary to the channel"
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 4.4,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Ananya shares benchmark results showing a 30%+ reduction in backup window times, calling it significant for customers with large data sets.",
+      "type": "positive_pivot",
+      "speaker": "Ananya Sharma"
+    },
+    {
+      "time": 245.0,
+      "text": "Sofia identifies the clunky multi-step restore UX as a pain point backed by support tickets, signaling a meaningful feature gap.",
+      "type": "feature_gap",
+      "speaker": "Sofia Petrov"
+    },
+    {
+      "time": 390.0,
+      "text": "Ananya pushes back on putting multi-region replication in Q2, recommending an honest Q3 target to avoid overpromising to enterprise sales.",
+      "type": "concern",
+      "speaker": "Ananya Sharma"
+    },
+    {
+      "time": 530.0,
+      "text": "Ravi requests dedicated Q2 capacity for tech debt in the backup scheduler, noting it is slowing down feature development.",
+      "type": "technical_issue",
+      "speaker": "Ravi Gupta"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Join",
+      "time_seconds": 22.0,
+      "timestamp_ms": 1771850722000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Join",
+      "time_seconds": 22.0,
+      "timestamp_ms": 1771850722000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Join",
+      "time_seconds": 23.0,
+      "timestamp_ms": 1771850723000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Join",
+      "time_seconds": 37.0,
+      "timestamp_ms": 1771850737000
+    },
+    {
+      "participant_name": "Mike Romano",
+      "event_type": "Leave",
+      "time_seconds": 1824.0,
+      "timestamp_ms": 1771852524000
+    },
+    {
+      "participant_name": "Ananya Sharma",
+      "event_type": "Leave",
+      "time_seconds": 1828.0,
+      "timestamp_ms": 1771852528000
+    },
+    {
+      "participant_name": "Ravi Gupta",
+      "event_type": "Leave",
+      "time_seconds": 1832.0,
+      "timestamp_ms": 1771852532000
+    },
+    {
+      "participant_name": "Sofia Petrov",
+      "event_type": "Leave",
+      "time_seconds": 1834.0,
+      "timestamp_ms": 1771852534000
+    }
+  ],
+  "stats": {
+    "turn_count": 37,
+    "participant_count": 4,
+    "speaker_turn_counts": {
+      "Mike Romano": 13,
+      "Ananya Sharma": 11,
+      "Ravi Gupta": 6,
+      "Sofia Petrov": 7
+    },
+    "speaker_total_seconds": {
+      "Mike Romano": 127.0,
+      "Ananya Sharma": 96.1,
+      "Ravi Gupta": 61.5,
+      "Sofia Petrov": 69.5
+    }
+  }
+}

@@ -1,0 +1,448 @@
+{
+  "meeting_id": "01KQ1DC6CA536DE1B31ED8F5",
+  "title": "Aegis / Atlas Precision - Contract Discussion",
+  "organizer_email": "rachel.torres@aegiscloud.com",
+  "host_email": "rachel.torres@aegiscloud.com",
+  "start_time": "2026-02-25T15:00:00.000Z",
+  "end_time": "2026-02-25T15:33:30.000Z",
+  "duration_minutes": 33.5,
+  "participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "w.keller@atlasprecision.com",
+      "domain": "atlasprecision.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "rachel.torres@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "maria.santos@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "w.keller@atlasprecision.com",
+      "domain": "atlasprecision.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Rachel Torres",
+    "1": "Wayne Keller",
+    "2": "Maria Santos"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 3.2,
+      "end_time": 8.5,
+      "duration": 5.3,
+      "text": "Hey Wayne, thanks for making time today - I know your schedule's been pretty packed lately."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 9.7,
+      "end_time": 15.4,
+      "duration": 5.700000000000001,
+      "text": "Yeah, no, appreciate it. February's always a little hectic on our end, quarter close and all that."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 16.3,
+      "end_time": 24.0,
+      "duration": 7.699999999999999,
+      "text": "Totally understandable. I've got Maria Santos from our customer success team on the line as well - Maria, you want to say hi?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 24.4,
+      "end_time": 32.6,
+      "duration": 8.200000000000003,
+      "text": "Hey Wayne, good to meet you. I've been supporting the Atlas account for a few months now so I'm pretty familiar with your setup."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 33.3,
+      "end_time": 42.1,
+      "duration": 8.800000000000004,
+      "text": "Good to have you both on. So Rachel mentioned this was around the contract renewal and some billing questions - is that still the main agenda?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 43.2,
+      "end_time": 57.0,
+      "duration": 13.799999999999997,
+      "text": "Yeah, that's exactly right. Your current contract runs through end of March, so we wanted to get ahead of it a bit, talk through the current structure, see if anything needs to be adjusted going into the next term."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 57.7,
+      "end_time": 70.0,
+      "duration": 12.299999999999997,
+      "text": "Sure, that makes sense. I did want to bring up a few things actually. Our finance team flagged a couple of line items on the last two invoices that they weren't totally clear on."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 70.4,
+      "end_time": 78.1,
+      "duration": 7.699999999999989,
+      "text": "Okay, yeah, let's dig into that. Do you have the invoice numbers handy or should I pull them up on my end?"
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 79.2,
+      "end_time": 84.3,
+      "duration": 5.099999999999994,
+      "text": "I've got them - it's invoice 8847 and 8901. Both from January and February respectively."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 85.2,
+      "end_time": 89.7,
+      "duration": 4.5,
+      "text": "Got it, I'm pulling those up right now. Give me just a second."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 90.4,
+      "end_time": 99.6,
+      "duration": 9.199999999999989,
+      "text": "While Rachel does that, Wayne, can you tell me which line items specifically your finance team was asking about? That'll help us address it faster."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 100.7,
+      "end_time": 113.3,
+      "duration": 12.599999999999994,
+      "text": "Sure. So the main one is - there's an overage charge on both invoices under the Aegis Detect module. And honestly our team wasn't totally aware that we had a usage cap on that tier."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 114.1,
+      "end_time": 129.8,
+      "duration": 15.700000000000017,
+      "text": "Okay, I can see it on my end now. So yeah, the overage is tied to event volume - your current contract includes up to 500 million events per month processed through Detect, and it looks like you went over that in both months."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 130.4,
+      "end_time": 136.2,
+      "duration": 5.799999999999983,
+      "text": "By how much? Because I don't think our operations have changed that dramatically since we signed."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 137.6,
+      "end_time": 148.4,
+      "duration": 10.800000000000011,
+      "text": "Uh, let me see - January was about 620 million, and February looks like 590 million. So not a huge overage but it does trigger the per-million rate in the contract."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 149.2,
+      "end_time": 151.5,
+      "duration": 2.3000000000000114,
+      "text": "Hmm. And what is that rate?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 152.4,
+      "end_time": 160.2,
+      "duration": 7.799999999999983,
+      "text": "It's $0.004 per million events over the threshold. So in January that worked out to - roughly $480, and February around $360."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 160.7,
+      "end_time": 173.7,
+      "duration": 13.0,
+      "text": "Okay so it's not a massive number, but my finance team's concern is more just the principle of it - they didn't know the cap existed and they want to understand if this is going to keep happening."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 175.2,
+      "end_time": 185.4,
+      "duration": 10.200000000000017,
+      "text": "That's a totally fair concern and honestly it's something we should have been more proactive about flagging. Maria, do you have visibility into the event volume trending for Atlas?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 186.6,
+      "end_time": 204.9,
+      "duration": 18.30000000000001,
+      "text": "Yeah I do. So looking at the last six months, Wayne, your event volume has been gradually climbing - which honestly makes sense, you've got more endpoints connected to the platform than you did at contract start. You added, I think, two new production facilities to the monitoring scope back in November?"
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 206.4,
+      "end_time": 214.9,
+      "duration": 8.5,
+      "text": "Yeah, that's right, we brought the Dayton and Phoenix plants online for Detect coverage. I guess that would account for some of it."
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 215.2,
+      "end_time": 227.8,
+      "duration": 12.600000000000023,
+      "text": "Right, exactly. So that's probably the main driver. The good news is it gives us a pretty clear picture of where your volume is heading and we can right-size the contract tier accordingly for the renewal."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 228.9,
+      "end_time": 237.6,
+      "duration": 8.699999999999989,
+      "text": "What would that look like from a pricing standpoint? Are we talking about just bumping the event cap, or is it a full tier change?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 238.7,
+      "end_time": 254.2,
+      "duration": 15.5,
+      "text": "So we have a 750 million event tier that would likely cover your current volume with some headroom. The price difference per month compared to your current tier is - let me check - it comes out to about $310 more per month."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 255.5,
+      "end_time": 258.9,
+      "duration": 3.3999999999999773,
+      "text": "And that would eliminate the overage charges going forward."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 259.5,
+      "end_time": 271.4,
+      "duration": 11.899999999999977,
+      "text": "Correct. And when you do the math, if you're consistently going over, the tier bump actually costs you less than the overage rate on average. So it's cleaner from a budgeting perspective too."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 272.2,
+      "end_time": 281.4,
+      "duration": 9.199999999999989,
+      "text": "Yeah that makes sense. I'd want to see that laid out in writing so I can show my finance team, but directionally it seems reasonable."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 282.5,
+      "end_time": 293.9,
+      "duration": 11.399999999999977,
+      "text": "Absolutely, I'll put together a revised pricing summary that shows the current tier versus the 750 million tier with the cost comparison. I can have that to you by end of week."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 294.2,
+      "end_time": 308.3,
+      "duration": 14.100000000000023,
+      "text": "That works. The other thing I wanted to ask about - and this is more forward-looking - we've been getting some pressure internally to get better compliance reporting in place. Specifically around SOC 2. Is that something Aegis handles?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 309.6,
+      "end_time": 320.6,
+      "duration": 11.0,
+      "text": "Yes, that falls under Aegis Comply - you're currently not subscribed to that module but it's something we can definitely talk through. Maria, do you want to give a quick overview?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 321.9,
+      "end_time": 338.0,
+      "duration": 16.100000000000023,
+      "text": "Sure. So Aegis Comply is our compliance reporting and audit module. It supports multiple frameworks - SOC 2 is one of them, along with things like HIPAA and PCI DSS. It's designed to give you on-demand reporting rather than having to manually compile audit evidence."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 338.4,
+      "end_time": 343.9,
+      "duration": 5.5,
+      "text": "Okay. Is that something that would be priced separately on top of the existing contract?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 344.3,
+      "end_time": 357.9,
+      "duration": 13.599999999999966,
+      "text": "It is a separate add-on, yeah. We can include the Comply pricing in that summary doc I'm putting together so you have the full picture. Depending on the scope, there are also some bundle discounts available when you're renewing."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 359.2,
+      "end_time": 368.3,
+      "duration": 9.100000000000023,
+      "text": "Sure, include it. I'm not committing to anything yet but I want to have the numbers in front of me when I talk to our CFO."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 368.7,
+      "end_time": 386.4,
+      "duration": 17.69999999999999,
+      "text": "Completely understood. So to recap - I'll send over the pricing comparison for the Detect tier upgrade, include the Comply module pricing with renewal bundle options, and we should also talk about the renewal term length. Are you open to a two-year term or would you prefer to stay annual?"
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 387.1,
+      "end_time": 397.8,
+      "duration": 10.699999999999989,
+      "text": "Annual for now. We've got some internal budget planning happening and I don't want to lock in a multi-year until we have more visibility into our infrastructure roadmap for next year."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 398.1,
+      "end_time": 408.0,
+      "duration": 9.899999999999977,
+      "text": "That's totally fine, we can absolutely work on an annual renewal. I'll structure the proposal that way and flag that multi-year options are available if the conversation changes internally."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 408.7,
+      "end_time": 417.3,
+      "duration": 8.600000000000023,
+      "text": "Sounds good. And timing-wise, if I get this to my finance and legal team by mid-March, is that still enough runway before the contract expires?"
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 418.0,
+      "end_time": 432.6,
+      "duration": 14.600000000000023,
+      "text": "Yeah, mid-March gives us enough time to get the paperwork sorted before end of March. I'd say try to target the 13th or 14th internally so we have a buffer. I'll follow up with you if anything looks like it's getting close."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 433.6,
+      "end_time": 438.8,
+      "duration": 5.199999999999989,
+      "text": "Alright, I think that covers what I needed. Maria, anything else on your end?"
+    },
+    {
+      "speaker_name": "Maria Santos",
+      "start_time": 439.9,
+      "end_time": 451.3,
+      "duration": 11.400000000000034,
+      "text": "Nothing urgent from me - I'll just make sure we have a check-in scheduled after the proposal goes out in case you have questions. I'll reach out to get something on the calendar."
+    },
+    {
+      "speaker_name": "Wayne Keller",
+      "start_time": 452.6,
+      "end_time": 456.9,
+      "duration": 4.2999999999999545,
+      "text": "Perfect. Thanks both of you, I'll keep an eye out for that doc."
+    },
+    {
+      "speaker_name": "Rachel Torres",
+      "start_time": 458.3,
+      "end_time": 459.9,
+      "duration": 1.599999999999966,
+      "text": "Thanks Wayne, talk soon."
+    }
+  ],
+  "transcript_text": "Rachel Torres: Hey Wayne, thanks for making time today - I know your schedule's been pretty packed lately.\nWayne Keller: Yeah, no, appreciate it. February's always a little hectic on our end, quarter close and all that.\nRachel Torres: Totally understandable. I've got Maria Santos from our customer success team on the line as well - Maria, you want to say hi?\nMaria Santos: Hey Wayne, good to meet you. I've been supporting the Atlas account for a few months now so I'm pretty familiar with your setup.\nWayne Keller: Good to have you both on. So Rachel mentioned this was around the contract renewal and some billing questions - is that still the main agenda?\nRachel Torres: Yeah, that's exactly right. Your current contract runs through end of March, so we wanted to get ahead of it a bit, talk through the current structure, see if anything needs to be adjusted going into the next term.\nWayne Keller: Sure, that makes sense. I did want to bring up a few things actually. Our finance team flagged a couple of line items on the last two invoices that they weren't totally clear on.\nRachel Torres: Okay, yeah, let's dig into that. Do you have the invoice numbers handy or should I pull them up on my end?\nWayne Keller: I've got them - it's invoice 8847 and 8901. Both from January and February respectively.\nRachel Torres: Got it, I'm pulling those up right now. Give me just a second.\nMaria Santos: While Rachel does that, Wayne, can you tell me which line items specifically your finance team was asking about? That'll help us address it faster.\nWayne Keller: Sure. So the main one is - there's an overage charge on both invoices under the Aegis Detect module. And honestly our team wasn't totally aware that we had a usage cap on that tier.\nRachel Torres: Okay, I can see it on my end now. So yeah, the overage is tied to event volume - your current contract includes up to 500 million events per month processed through Detect, and it looks like you went over that in both months.\nWayne Keller: By how much? Because I don't think our operations have changed that dramatically since we signed.\nRachel Torres: Uh, let me see - January was about 620 million, and February looks like 590 million. So not a huge overage but it does trigger the per-million rate in the contract.\nWayne Keller: Hmm. And what is that rate?\nRachel Torres: It's $0.004 per million events over the threshold. So in January that worked out to - roughly $480, and February around $360.\nWayne Keller: Okay so it's not a massive number, but my finance team's concern is more just the principle of it - they didn't know the cap existed and they want to understand if this is going to keep happening.\nRachel Torres: That's a totally fair concern and honestly it's something we should have been more proactive about flagging. Maria, do you have visibility into the event volume trending for Atlas?\nMaria Santos: Yeah I do. So looking at the last six months, Wayne, your event volume has been gradually climbing - which honestly makes sense, you've got more endpoints connected to the platform than you did at contract start. You added, I think, two new production facilities to the monitoring scope back in November?\nWayne Keller: Yeah, that's right, we brought the Dayton and Phoenix plants online for Detect coverage. I guess that would account for some of it.\nMaria Santos: Right, exactly. So that's probably the main driver. The good news is it gives us a pretty clear picture of where your volume is heading and we can right-size the contract tier accordingly for the renewal.\nWayne Keller: What would that look like from a pricing standpoint? Are we talking about just bumping the event cap, or is it a full tier change?\nRachel Torres: So we have a 750 million event tier that would likely cover your current volume with some headroom. The price difference per month compared to your current tier is - let me check - it comes out to about $310 more per month.\nWayne Keller: And that would eliminate the overage charges going forward.\nRachel Torres: Correct. And when you do the math, if you're consistently going over, the tier bump actually costs you less than the overage rate on average. So it's cleaner from a budgeting perspective too.\nWayne Keller: Yeah that makes sense. I'd want to see that laid out in writing so I can show my finance team, but directionally it seems reasonable.\nRachel Torres: Absolutely, I'll put together a revised pricing summary that shows the current tier versus the 750 million tier with the cost comparison. I can have that to you by end of week.\nWayne Keller: That works. The other thing I wanted to ask about - and this is more forward-looking - we've been getting some pressure internally to get better compliance reporting in place. Specifically around SOC 2. Is that something Aegis handles?\nRachel Torres: Yes, that falls under Aegis Comply - you're currently not subscribed to that module but it's something we can definitely talk through. Maria, do you want to give a quick overview?\nMaria Santos: Sure. So Aegis Comply is our compliance reporting and audit module. It supports multiple frameworks - SOC 2 is one of them, along with things like HIPAA and PCI DSS. It's designed to give you on-demand reporting rather than having to manually compile audit evidence.\nWayne Keller: Okay. Is that something that would be priced separately on top of the existing contract?\nRachel Torres: It is a separate add-on, yeah. We can include the Comply pricing in that summary doc I'm putting together so you have the full picture. Depending on the scope, there are also some bundle discounts available when you're renewing.\nWayne Keller: Sure, include it. I'm not committing to anything yet but I want to have the numbers in front of me when I talk to our CFO.\nRachel Torres: Completely understood. So to recap - I'll send over the pricing comparison for the Detect tier upgrade, include the Comply module pricing with renewal bundle options, and we should also talk about the renewal term length. Are you open to a two-year term or would you prefer to stay annual?\nWayne Keller: Annual for now. We've got some internal budget planning happening and I don't want to lock in a multi-year until we have more visibility into our infrastructure roadmap for next year.\nRachel Torres: That's totally fine, we can absolutely work on an annual renewal. I'll structure the proposal that way and flag that multi-year options are available if the conversation changes internally.\nWayne Keller: Sounds good. And timing-wise, if I get this to my finance and legal team by mid-March, is that still enough runway before the contract expires?\nRachel Torres: Yeah, mid-March gives us enough time to get the paperwork sorted before end of March. I'd say try to target the 13th or 14th internally so we have a buffer. I'll follow up with you if anything looks like it's getting close.\nWayne Keller: Alright, I think that covers what I needed. Maria, anything else on your end?\nMaria Santos: Nothing urgent from me - I'll just make sure we have a check-in scheduled after the proposal goes out in case you have questions. I'll reach out to get something on the calendar.\nWayne Keller: Perfect. Thanks both of you, I'll keep an eye out for that doc.\nRachel Torres: Thanks Wayne, talk soon.",
+  "summary": "Rachel Torres and Maria Santos from Aegis met with Wayne Keller of Atlas to discuss the upcoming end-of-March contract renewal and billing concerns. Wayne's finance team flagged overage charges on the Aegis Detect module for January and February, which were caused by the addition of two new production facilities expanding event volume beyond the 500 million monthly cap. Rachel proposed upgrading to a 750 million event tier at an additional $310/month, which would likely be more cost-effective than continued overages. Wayne also expressed interest in exploring the Aegis Comply module for SOC 2 reporting, and both sides agreed on an annual renewal with a mid-March internal target deadline.",
+  "topics": [
+    "renewal",
+    "billing dispute",
+    "overage charges",
+    "compliance",
+    "contract negotiation",
+    "product add-on"
+  ],
+  "action_items": [
+    "Rachel Torres: Send a revised pricing summary by end of week comparing the current Detect tier vs. 750M event tier, including Comply module pricing and renewal bundle options",
+    "Maria Santos: Schedule a follow-up check-in with Wayne after the proposal is sent to address any questions",
+    "Wayne Keller: Share the pricing proposal with finance and legal teams by mid-March to allow processing time before contract expiration"
+  ],
+  "overall_sentiment": "mixed-positive",
+  "sentiment_score": 3.7,
+  "key_moments": [
+    {
+      "time": 112.0,
+      "text": "Wayne raises billing concern — finance team flagged overage charges on two invoices they weren't aware were possible under their current tier",
+      "type": "concern",
+      "speaker": "Wayne Keller"
+    },
+    {
+      "time": 285.0,
+      "text": "Maria identifies root cause of overages as the addition of Dayton and Phoenix plants in November, providing a clear explanation for volume increase",
+      "type": "positive_pivot",
+      "speaker": "Maria Santos"
+    },
+    {
+      "time": 370.0,
+      "text": "Rachel presents 750M event tier upgrade at $310/month more, noting it would be cheaper overall than continued overage charges",
+      "type": "pricing_offer",
+      "speaker": "Rachel Torres"
+    },
+    {
+      "time": 480.0,
+      "text": "Wayne asks about SOC 2 compliance reporting, signaling potential expansion opportunity with the Aegis Comply add-on module",
+      "type": "feature_gap",
+      "speaker": "Wayne Keller"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Wayne Keller",
+      "event_type": "Join",
+      "time_seconds": 30.0,
+      "timestamp_ms": 1772031630000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Join",
+      "time_seconds": 49.0,
+      "timestamp_ms": 1772031649000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Join",
+      "time_seconds": 50.0,
+      "timestamp_ms": 1772031650000
+    },
+    {
+      "participant_name": "Rachel Torres",
+      "event_type": "Leave",
+      "time_seconds": 1988.0,
+      "timestamp_ms": 1772033588000
+    },
+    {
+      "participant_name": "Maria Santos",
+      "event_type": "Leave",
+      "time_seconds": 2006.0,
+      "timestamp_ms": 1772033606000
+    },
+    {
+      "participant_name": "Wayne Keller",
+      "event_type": "Leave",
+      "time_seconds": 2004.0,
+      "timestamp_ms": 1772033604000
+    }
+  ],
+  "stats": {
+    "turn_count": 43,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "Rachel Torres": 18,
+      "Wayne Keller": 19,
+      "Maria Santos": 6
+    },
+    "speaker_total_seconds": {
+      "Rachel Torres": 190.7,
+      "Wayne Keller": 152.9,
+      "Maria Santos": 75.8
+    }
+  }
+}

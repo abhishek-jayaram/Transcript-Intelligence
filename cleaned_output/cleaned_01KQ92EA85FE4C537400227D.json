@@ -1,0 +1,375 @@
+{
+  "meeting_id": "01KQ92EA85FE4C537400227D",
+  "title": "Support Case #8811 - Blackridge Investments Custom Compliance Template",
+  "organizer_email": "priya.patel@aegiscloud.com",
+  "host_email": "priya.patel@aegiscloud.com",
+  "start_time": "2026-04-25T17:15:00.000Z",
+  "end_time": "2026-04-25T17:24:18.000Z",
+  "duration_minutes": 9.3,
+  "participants": [
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "w.beck@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "w.beck@blackridgeinvest.com",
+      "domain": "blackridgeinvest.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Priya Patel",
+    "1": "Warren Beck"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 7.2,
+      "end_time": 17.7,
+      "duration": 10.5,
+      "text": "Hi Warren, thanks for holding - this is Priya Patel from the Aegis support team, I'm the team lead on the compliance side of things. How are you doing today?"
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 18.7,
+      "end_time": 30.0,
+      "duration": 11.3,
+      "text": "Priya! Yeah, doing well, doing well. Thanks for jumping on this - I know it's a bit of an unusual support case, but we're pretty excited about where this could go."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 31.5,
+      "end_time": 46.7,
+      "duration": 15.200000000000003,
+      "text": "Absolutely, no that's - unusual is fine, we love those. So I've got the case here, case number 8811, and it looks like you're coming in with a feature request around custom compliance templates in Aegis Comply. Is that the right starting point?"
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 48.2,
+      "end_time": 64.0,
+      "duration": 15.799999999999997,
+      "text": "That's exactly it. So, you know, we upgraded to Comply v2 - gosh, what was it, like mid-April? - and honestly the on-demand reporting has been phenomenal. The SOC 2 and the PCI DSS reports especially, our audit team is basically over the moon."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 64.4,
+      "end_time": 77.6,
+      "duration": 13.199999999999989,
+      "text": "Oh that's great to hear, we launched v2 on April 7th so yeah you're right around that mark. And yeah the on-demand piece was a big lift for our engineering team so I'm glad it's landing well."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 78.3,
+      "end_time": 99.8,
+      "duration": 21.5,
+      "text": "Yeah it really has. But here's the thing - we're a financial services firm, right, so on top of the standard frameworks we've got some internal control requirements. Blackridge-specific stuff that our board and our regulators kind of expect us to track. And I'm wondering if there's any way to build a custom template inside Comply that maps to those internal controls."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 100.4,
+      "end_time": 111.5,
+      "duration": 11.099999999999994,
+      "text": "Right, so like a bespoke framework essentially - where you define the control categories, the evidence requirements, all of that, rather than using one of the out-of-the-box frameworks we ship with."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 112.0,
+      "end_time": 127.1,
+      "duration": 15.099999999999994,
+      "text": "Exactly, yeah. We're not trying to replace SOC 2 or anything like that, we still need those. But we want something that can sit alongside them. Like maybe a Blackridge Internal Controls Report - something I can hand to our board quarterly."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 127.6,
+      "end_time": 139.7,
+      "duration": 12.099999999999994,
+      "text": "That makes total sense, and honestly Warren this is something we've been hearing from a few of our enterprise customers, particularly on the financial services side. So you're definitely not alone in wanting this."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 140.3,
+      "end_time": 150.0,
+      "duration": 9.699999999999989,
+      "text": "Oh good, good. So is it - I mean, is this something that's on the roadmap, or is it more of a, uh, submit-your-feedback-and-we'll-see kind of situation?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 151.0,
+      "end_time": 172.6,
+      "duration": 21.599999999999994,
+      "text": "So I want to be transparent with you - it's not in the current GA release of v2, what you have today is the four supported frameworks. But it is something that our product team has been actively scoping. I don't want to give you a hard date because I genuinely don't have one, but it is on the near-term roadmap."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 174.1,
+      "end_time": 178.5,
+      "duration": 4.400000000000006,
+      "text": "Okay, okay that's actually more encouraging than I expected to be honest."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 178.9,
+      "end_time": 198.0,
+      "duration": 19.099999999999994,
+      "text": "Ha, well I'll take that! And look, what I can do - and this is something I'd really encourage - is I can formally log this as a feature request with the product team and tag it with your account specifically. That kind of direct customer attribution actually does carry weight internally when they're prioritizing."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 198.6,
+      "end_time": 214.8,
+      "duration": 16.200000000000017,
+      "text": "Yeah, please do that. And if there's any way to like, loop me in with the product team directly - even just a call - I'd be happy to walk them through our specific use case. Sometimes I find those conversations go a long way."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 215.5,
+      "end_time": 230.8,
+      "duration": 15.300000000000011,
+      "text": "A hundred percent, and that's actually something I can set up. We have a customer advisory track where we bring in, um, customers who are willing to provide detailed requirements and potentially participate in early access. You'd be a perfect fit for that honestly."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 231.5,
+      "end_time": 242.2,
+      "duration": 10.699999999999989,
+      "text": "Early access - okay yeah, I like where this is going. So would that mean we could potentially get access to a beta version of custom templates before it goes GA?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 243.0,
+      "end_time": 264.3,
+      "duration": 21.30000000000001,
+      "text": "That's the idea, yeah. Obviously it depends on how the scoping shakes out and your environment, but typically the way our early access program works is we identify a handful of design partners, you get preview builds, you provide feedback, and in exchange you get the feature earlier and you get to shape it. So it's kind of a win-win."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 265.4,
+      "end_time": 272.2,
+      "duration": 6.800000000000011,
+      "text": "I mean that sounds - yeah, that sounds excellent. What do I need to do to opt into that?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 273.5,
+      "end_time": 295.0,
+      "duration": 21.5,
+      "text": "So I'll send you a follow-up email after this call with a short intake form - it's not long, maybe ten minutes to fill out. It covers your use case, the types of controls you'd want to define, your reporting cadence, stuff like that. And then I'll flag your account to our product liaison and they'll reach out to schedule that conversation."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 295.7,
+      "end_time": 305.1,
+      "duration": 9.400000000000034,
+      "text": "Perfect. And in the meantime, is there anything within what we have today that could serve as like a stopgap? Even something manual or a workaround?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 306.1,
+      "end_time": 328.9,
+      "duration": 22.799999999999955,
+      "text": "Yeah, actually - so this isn't perfect but there are a couple of things. One is that within the existing framework reports, you can add custom control annotations and notes to individual line items. So if some of your internal controls map partially to SOC 2 criteria you could tag those. It's not a standalone report but it does let you document against those controls."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 330.0,
+      "end_time": 335.7,
+      "duration": 5.699999999999989,
+      "text": "Oh I didn't know that - the annotation piece. Where does that live in the UI?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 336.5,
+      "end_time": 356.2,
+      "duration": 19.69999999999999,
+      "text": "So if you go into a report - let's say your SOC 2 report - and you open any individual control item, there's a little edit icon on the right side of the control row. You can add a custom note there, and it actually gets included in the exported PDF. It's subtle but it's there."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 356.6,
+      "end_time": 365.8,
+      "duration": 9.199999999999989,
+      "text": "Huh. Okay that's - yeah I'm going to look at that this afternoon actually. That might buy us some time until the custom template feature is available."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 366.5,
+      "end_time": 387.9,
+      "duration": 21.399999999999977,
+      "text": "Yeah exactly, and the other thing - if you want to get really creative - you could export the report data via our API and pipe it into whatever internal reporting tool your board uses. Our Comply v2 API docs have the endpoint for pulling structured control data. Might be worth a look if your team has some dev bandwidth."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 388.4,
+      "end_time": 401.9,
+      "duration": 13.5,
+      "text": "We do have an internal data team, yeah. I'll rope them in on that. That could actually be really useful even beyond the compliance reporting - we pull a lot of our security data into our internal dashboards."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 403.1,
+      "end_time": 412.2,
+      "duration": 9.099999999999966,
+      "text": "Yeah totally, and once custom templates do ship, you'd presumably be able to pull those through the API too so it's all kind of additive."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 413.3,
+      "end_time": 429.5,
+      "duration": 16.19999999999999,
+      "text": "Right, right. That's a good point. Okay so - to summarize where we landed: you're going to log the feature request, send me the intake form for the early access program, and I should look at the annotation feature and potentially the API. Is that right?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 430.8,
+      "end_time": 439.6,
+      "duration": 8.800000000000011,
+      "text": "That's exactly right, yeah. And I'll also include links to the API docs in that follow-up email so you don't have to go hunting for them."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 440.2,
+      "end_time": 452.9,
+      "duration": 12.699999999999989,
+      "text": "Awesome. Priya this has been genuinely one of the more productive support calls I've had in a while - usually I call support expecting to be told no, so, you know, this is a nice change."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 454.0,
+      "end_time": 468.0,
+      "duration": 14.0,
+      "text": "Ha! Well I'm really glad. And honestly your use case is compelling - I think the product team is going to want to hear from you. I'll make sure to flag this as a priority when I write it up."
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 469.4,
+      "end_time": 477.5,
+      "duration": 8.100000000000023,
+      "text": "I appreciate that. And yeah, feel free to have them reach out directly - my calendar's usually pretty open in the mornings."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 477.9,
+      "end_time": 490.0,
+      "duration": 12.100000000000023,
+      "text": "Will do, I'll pass that along. Alright Warren, I think we've covered everything on case 8811. I'll get that email out to you within the hour. Is there anything else before I let you go?"
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 490.7,
+      "end_time": 494.5,
+      "duration": 3.8000000000000114,
+      "text": "Nope, I think we're good. Thanks again Priya, really appreciate it."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 495.9,
+      "end_time": 499.3,
+      "duration": 3.400000000000034,
+      "text": "Of course, take care Warren. Have a great weekend!"
+    },
+    {
+      "speaker_name": "Warren Beck",
+      "start_time": 500.5,
+      "end_time": 502.0,
+      "duration": 1.5,
+      "text": "You too, bye!"
+    }
+  ],
+  "transcript_text": "Priya Patel: Hi Warren, thanks for holding - this is Priya Patel from the Aegis support team, I'm the team lead on the compliance side of things. How are you doing today?\nWarren Beck: Priya! Yeah, doing well, doing well. Thanks for jumping on this - I know it's a bit of an unusual support case, but we're pretty excited about where this could go.\nPriya Patel: Absolutely, no that's - unusual is fine, we love those. So I've got the case here, case number 8811, and it looks like you're coming in with a feature request around custom compliance templates in Aegis Comply. Is that the right starting point?\nWarren Beck: That's exactly it. So, you know, we upgraded to Comply v2 - gosh, what was it, like mid-April? - and honestly the on-demand reporting has been phenomenal. The SOC 2 and the PCI DSS reports especially, our audit team is basically over the moon.\nPriya Patel: Oh that's great to hear, we launched v2 on April 7th so yeah you're right around that mark. And yeah the on-demand piece was a big lift for our engineering team so I'm glad it's landing well.\nWarren Beck: Yeah it really has. But here's the thing - we're a financial services firm, right, so on top of the standard frameworks we've got some internal control requirements. Blackridge-specific stuff that our board and our regulators kind of expect us to track. And I'm wondering if there's any way to build a custom template inside Comply that maps to those internal controls.\nPriya Patel: Right, so like a bespoke framework essentially - where you define the control categories, the evidence requirements, all of that, rather than using one of the out-of-the-box frameworks we ship with.\nWarren Beck: Exactly, yeah. We're not trying to replace SOC 2 or anything like that, we still need those. But we want something that can sit alongside them. Like maybe a Blackridge Internal Controls Report - something I can hand to our board quarterly.\nPriya Patel: That makes total sense, and honestly Warren this is something we've been hearing from a few of our enterprise customers, particularly on the financial services side. So you're definitely not alone in wanting this.\nWarren Beck: Oh good, good. So is it - I mean, is this something that's on the roadmap, or is it more of a, uh, submit-your-feedback-and-we'll-see kind of situation?\nPriya Patel: So I want to be transparent with you - it's not in the current GA release of v2, what you have today is the four supported frameworks. But it is something that our product team has been actively scoping. I don't want to give you a hard date because I genuinely don't have one, but it is on the near-term roadmap.\nWarren Beck: Okay, okay that's actually more encouraging than I expected to be honest.\nPriya Patel: Ha, well I'll take that! And look, what I can do - and this is something I'd really encourage - is I can formally log this as a feature request with the product team and tag it with your account specifically. That kind of direct customer attribution actually does carry weight internally when they're prioritizing.\nWarren Beck: Yeah, please do that. And if there's any way to like, loop me in with the product team directly - even just a call - I'd be happy to walk them through our specific use case. Sometimes I find those conversations go a long way.\nPriya Patel: A hundred percent, and that's actually something I can set up. We have a customer advisory track where we bring in, um, customers who are willing to provide detailed requirements and potentially participate in early access. You'd be a perfect fit for that honestly.\nWarren Beck: Early access - okay yeah, I like where this is going. So would that mean we could potentially get access to a beta version of custom templates before it goes GA?\nPriya Patel: That's the idea, yeah. Obviously it depends on how the scoping shakes out and your environment, but typically the way our early access program works is we identify a handful of design partners, you get preview builds, you provide feedback, and in exchange you get the feature earlier and you get to shape it. So it's kind of a win-win.\nWarren Beck: I mean that sounds - yeah, that sounds excellent. What do I need to do to opt into that?\nPriya Patel: So I'll send you a follow-up email after this call with a short intake form - it's not long, maybe ten minutes to fill out. It covers your use case, the types of controls you'd want to define, your reporting cadence, stuff like that. And then I'll flag your account to our product liaison and they'll reach out to schedule that conversation.\nWarren Beck: Perfect. And in the meantime, is there anything within what we have today that could serve as like a stopgap? Even something manual or a workaround?\nPriya Patel: Yeah, actually - so this isn't perfect but there are a couple of things. One is that within the existing framework reports, you can add custom control annotations and notes to individual line items. So if some of your internal controls map partially to SOC 2 criteria you could tag those. It's not a standalone report but it does let you document against those controls.\nWarren Beck: Oh I didn't know that - the annotation piece. Where does that live in the UI?\nPriya Patel: So if you go into a report - let's say your SOC 2 report - and you open any individual control item, there's a little edit icon on the right side of the control row. You can add a custom note there, and it actually gets included in the exported PDF. It's subtle but it's there.\nWarren Beck: Huh. Okay that's - yeah I'm going to look at that this afternoon actually. That might buy us some time until the custom template feature is available.\nPriya Patel: Yeah exactly, and the other thing - if you want to get really creative - you could export the report data via our API and pipe it into whatever internal reporting tool your board uses. Our Comply v2 API docs have the endpoint for pulling structured control data. Might be worth a look if your team has some dev bandwidth.\nWarren Beck: We do have an internal data team, yeah. I'll rope them in on that. That could actually be really useful even beyond the compliance reporting - we pull a lot of our security data into our internal dashboards.\nPriya Patel: Yeah totally, and once custom templates do ship, you'd presumably be able to pull those through the API too so it's all kind of additive.\nWarren Beck: Right, right. That's a good point. Okay so - to summarize where we landed: you're going to log the feature request, send me the intake form for the early access program, and I should look at the annotation feature and potentially the API. Is that right?\nPriya Patel: That's exactly right, yeah. And I'll also include links to the API docs in that follow-up email so you don't have to go hunting for them.\nWarren Beck: Awesome. Priya this has been genuinely one of the more productive support calls I've had in a while - usually I call support expecting to be told no, so, you know, this is a nice change.\nPriya Patel: Ha! Well I'm really glad. And honestly your use case is compelling - I think the product team is going to want to hear from you. I'll make sure to flag this as a priority when I write it up.\nWarren Beck: I appreciate that. And yeah, feel free to have them reach out directly - my calendar's usually pretty open in the mornings.\nPriya Patel: Will do, I'll pass that along. Alright Warren, I think we've covered everything on case 8811. I'll get that email out to you within the hour. Is there anything else before I let you go?\nWarren Beck: Nope, I think we're good. Thanks again Priya, really appreciate it.\nPriya Patel: Of course, take care Warren. Have a great weekend!\nWarren Beck: You too, bye!",
+  "summary": "Warren Beck from Blackridge, a financial services firm, contacted Aegis support to request a custom compliance template feature in Aegis Comply v2 that would allow them to track internal board and regulator controls alongside standard frameworks like SOC 2 and PCI DSS. Priya Patel confirmed the feature is on the near-term product roadmap and enrolled Warren in the early access/design partner program. In the meantime, Priya walked Warren through two workarounds: custom control annotations within existing reports and the Comply v2 API for exporting structured control data. The call concluded with clear next steps and a very positive tone from both parties.",
+  "topics": [
+    "feature request",
+    "custom compliance templates",
+    "early access program",
+    "api integration",
+    "workaround",
+    "financial services"
+  ],
+  "action_items": [
+    "Priya Patel: Log feature request for custom compliance templates against Warren's account and flag as priority to the product team",
+    "Priya Patel: Send follow-up email within the hour with early access intake form and links to Comply v2 API documentation",
+    "Warren Beck: Complete the early access intake form and explore the custom annotation feature in the SOC 2 report UI",
+    "Warren Beck: Loop in internal data team to evaluate the Comply v2 API for pulling control data into internal dashboards"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 97.0,
+      "text": "Warren praises Comply v2 on-demand reporting, saying his audit team is 'over the moon' about SOC 2 and PCI DSS reports",
+      "type": "praise",
+      "speaker": "Warren Beck"
+    },
+    {
+      "time": 210.0,
+      "text": "Warren requests a bespoke custom compliance template feature to track Blackridge-specific internal controls for board reporting",
+      "type": "feature_gap",
+      "speaker": "Warren Beck"
+    },
+    {
+      "time": 390.0,
+      "text": "Priya offers enrollment in the customer advisory early access program, positioning Warren as a design partner to shape and receive the feature before GA",
+      "type": "positive_pivot",
+      "speaker": "Priya Patel"
+    },
+    {
+      "time": 620.0,
+      "text": "Priya surfaces the undiscovered custom annotation feature within existing reports as an immediate workaround, which Warren plans to explore that afternoon",
+      "type": "action_item",
+      "speaker": "Priya Patel"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Warren Beck",
+      "event_type": "Join",
+      "time_seconds": 9.0,
+      "timestamp_ms": 1777137309000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Join",
+      "time_seconds": 55.0,
+      "timestamp_ms": 1777137355000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Leave",
+      "time_seconds": 535.0,
+      "timestamp_ms": 1777137835000
+    },
+    {
+      "participant_name": "Warren Beck",
+      "event_type": "Leave",
+      "time_seconds": 535.0,
+      "timestamp_ms": 1777137835000
+    }
+  ],
+  "stats": {
+    "turn_count": 36,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Priya Patel": 18,
+      "Warren Beck": 18
+    },
+    "speaker_total_seconds": {
+      "Priya Patel": 272.2,
+      "Warren Beck": 191.6
+    }
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "meeting_id": "01KQ6A5CEAAFFBE3B0099E75",
+  "title": "Support Case #6539 - Steelpoint Manufacturing LDAP Sync Failures",
+  "organizer_email": "marcus.williams@aegiscloud.com",
+  "host_email": "marcus.williams@aegiscloud.com",
+  "start_time": "2026-03-22T09:15:00.000Z",
+  "end_time": "2026-03-22T09:35:54.000Z",
+  "duration_minutes": 20.9,
+  "participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "h.jensen@steelpointmfg.com",
+      "domain": "steelpointmfg.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "marcus.williams@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "h.jensen@steelpointmfg.com",
+      "domain": "steelpointmfg.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Marcus Williams",
+    "1": "Harold Jensen"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 5.3,
+      "end_time": 11.1,
+      "duration": 5.8,
+      "text": "Thanks for calling Aegis Cloud Security support, this is Marcus Williams, how can I help you today?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 12.5,
+      "end_time": 27.9,
+      "duration": 15.399999999999999,
+      "text": "Yeah, hi Marcus, this is Harold Jensen, IT Director over at Steelpoint Manufacturing. I've got a case open - it's case number 6539 - and honestly I'm pretty frustrated at this point because this has been going on for a few days now."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 28.3,
+      "end_time": 42.0,
+      "duration": 13.7,
+      "text": "I completely understand Harold, and I appreciate you calling in. Let me pull up case 6539 right here... okay I'm seeing it, LDAP sync failures with Aegis Identity. Can you walk me through what you're experiencing on your end?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 42.7,
+      "end_time": 61.3,
+      "duration": 18.599999999999994,
+      "text": "Sure, so - basically our Active Directory sync through Aegis Identity just stopped working. Users aren't getting provisioned, group memberships aren't syncing, and we've got about, uh, I'd say 200 plus employees who can't get into systems they need access to. This is a manufacturing floor environment, Marcus. People can't do their jobs."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 62.5,
+      "end_time": 71.3,
+      "duration": 8.799999999999997,
+      "text": "Yeah, that's - that's a serious impact and I hear you. When did you first notice the sync failures? Do you have an approximate timestamp?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 72.6,
+      "end_time": 85.9,
+      "duration": 13.300000000000011,
+      "text": "It started March 19th, around 7 AM our time, Central. And look, I submitted the case that same morning and it took almost 24 hours to get a response, which is not acceptable for something this critical."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 86.6,
+      "end_time": 103.6,
+      "duration": 17.0,
+      "text": "You're right and I - I want to apologize for that response delay, that shouldn't have happened on a case with this kind of operational impact. I'm going to personally own this from here on out. Now, the 19th... let me check something real quick on our end."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 104.1,
+      "end_time": 124.9,
+      "duration": 20.80000000000001,
+      "text": "Okay, and while you're doing that - I also want to mention that we had some issues earlier in the month with Aegis Detect, the outage you guys had, and now this. My leadership is starting to ask questions about whether we made the right call going with Aegis and that's a conversation I really don't want to be having."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 126.1,
+      "end_time": 147.1,
+      "duration": 21.0,
+      "text": "I understand, and that's a fair concern. The Detect outage was - yeah, that was a significant incident and I know it affected a lot of customers. We've made infrastructure changes since then. But let's focus on getting your LDAP sync resolved right now because that's what's actively hurting you. So I'm looking at our sync logs for your tenant..."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 147.5,
+      "end_time": 149.0,
+      "duration": 1.5,
+      "text": "Right, yeah."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 149.5,
+      "end_time": 170.9,
+      "duration": 21.400000000000006,
+      "text": "Okay so I'm seeing a high volume of sync errors starting the 19th, you're correct. The error codes being thrown are mostly - it looks like connection timeout errors and then some authentication failures against your LDAP endpoint. Can you tell me, did anything change in your environment around that time? Any firewall rule updates, certificate rotations, anything like that?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 171.8,
+      "end_time": 184.6,
+      "duration": 12.799999999999983,
+      "text": "That's - hm, that's actually a good question. We did have a scheduled maintenance window on the 18th, overnight. Our network team pushed some firewall policy updates. I didn't think that would affect the LDAP connector but..."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 185.0,
+      "end_time": 196.0,
+      "duration": 11.0,
+      "text": "Yeah that could absolutely be it. The Aegis Identity LDAP connector needs outbound access on port 389 for standard LDAP or 636 for LDAPS - are you running LDAPS by any chance?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 196.3,
+      "end_time": 199.0,
+      "duration": 2.6999999999999886,
+      "text": "We are, yeah, we're using LDAPS. Port 636."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 199.6,
+      "end_time": 220.8,
+      "duration": 21.200000000000017,
+      "text": "Okay, so there's two things I want to check then. First, can you verify with your network team that port 636 is still open from our connector's IP range? I can send you the current list of Aegis egress IPs. And second - did anything happen with your SSL certificate on the LDAP server during or after that maintenance window?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 222.2,
+      "end_time": 243.4,
+      "duration": 21.200000000000017,
+      "text": "I - I'm not sure about the certificate. I'd have to check. But I'll tell you what, this is information that should have been asked three days ago when I first filed the case. I had to chase your team for a response and now we're just starting the basic troubleshooting. Do you understand how that feels from my side?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 244.8,
+      "end_time": 263.2,
+      "duration": 18.399999999999977,
+      "text": "Yes, and honestly Harold, you're completely right. There's no excuse for the delay and I'm not going to try to make one. What I can do right now is move fast. Can you get your network team on a quick message while we're talking to check that port 636 egress rule?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 263.7,
+      "end_time": 272.4,
+      "duration": 8.699999999999989,
+      "text": "Yeah, let me - hold on, I'm going to ping Dave on our network team right now via Teams. Give me just a second."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 272.9,
+      "end_time": 289.6,
+      "duration": 16.700000000000045,
+      "text": "Of course, take your time. And while you're doing that I'm going to look at the specific authentication error details more closely. The error is... okay so it's saying SSL handshake failure. Which actually - Harold, that points more to a certificate issue than a firewall issue."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 290.1,
+      "end_time": 297.5,
+      "duration": 7.399999999999977,
+      "text": "Okay, Dave's responding. He says the firewall rules look - yeah he says 636 should be open. So it's not the firewall."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 298.9,
+      "end_time": 323.7,
+      "duration": 24.80000000000001,
+      "text": "Right, which is consistent with what I'm seeing. The SSL handshake failure means our connector is trying to establish the encrypted connection and something's going wrong on the certificate side. Two possibilities - either your LDAP server's SSL cert was renewed or changed during maintenance and the new cert isn't trusted by our connector, or the cert expired. Can you have Dave check the certificate on your Active Directory server?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 324.6,
+      "end_time": 342.2,
+      "duration": 17.599999999999966,
+      "text": "Okay I'm asking him now... he's checking... oh for the love of - Marcus, he's saying the SSL certificate on the AD server was renewed as part of the maintenance on the 18th and, uh, it looks like it was issued by an internal CA. Would that cause a problem?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 342.9,
+      "end_time": 359.6,
+      "duration": 16.700000000000045,
+      "text": "That is exactly the problem. If your certificate was issued by an internal certificate authority, our connector doesn't inherently trust that CA. You need to upload your internal CA's root certificate into Aegis Identity so that we can validate the chain. This is why the handshake is failing."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 360.4,
+      "end_time": 372.5,
+      "duration": 12.100000000000023,
+      "text": "Okay so - three days of my people not being able to work because of a certificate. That's - I'm glad we found it but I'm also really annoyed that it took this long."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 373.6,
+      "end_time": 388.7,
+      "duration": 15.099999999999966,
+      "text": "I hear that completely. Let me walk you through uploading the CA cert right now so we can get this fixed in the next few minutes. In Aegis Identity, go to Settings, then Directory Connectors, find your LDAP connector and click into it."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 390.1,
+      "end_time": 397.9,
+      "duration": 7.7999999999999545,
+      "text": "Alright, I'm in Identity, going to Settings... Directory Connectors... okay I see our LDAP connector listed here, it's showing a red status icon."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 398.7,
+      "end_time": 410.1,
+      "duration": 11.400000000000034,
+      "text": "Yeah that red status is the sync failure. Click into the connector and you should see a tab called Security or TLS Settings - it might vary slightly depending on your version."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 411.3,
+      "end_time": 416.0,
+      "duration": 4.699999999999989,
+      "text": "I see... there's a tab that says TLS Configuration. Is that it?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 417.0,
+      "end_time": 431.3,
+      "duration": 14.300000000000011,
+      "text": "Perfect, yes. In there you should see an option to upload a custom CA certificate. You'll need the root CA cert from your internal certificate authority - your team should be able to export that as a PEM or CER file."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 432.5,
+      "end_time": 457.3,
+      "duration": 24.80000000000001,
+      "text": "Okay I'm asking Dave to pull that cert. He should have it... yeah he's exporting it now, says he'll have it in a minute. And Marcus - look, while we're waiting - I need to understand why this wasn't documented anywhere. Like shouldn't there be some kind of alert or error message in the UI that says 'hey your certificate is untrusted' instead of just showing a generic sync failure?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 458.0,
+      "end_time": 477.6,
+      "duration": 19.600000000000023,
+      "text": "That is a completely valid piece of feedback and honestly you're not the first person to raise that. The current error messaging in the connector is not specific enough and I'm going to log this as product feedback with our Identity team. A more descriptive SSL error message would have made this much faster to diagnose."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 478.2,
+      "end_time": 489.2,
+      "duration": 11.0,
+      "text": "Yeah it would have saved us three days. Okay, Dave just dropped the cert in our shared drive, I'm downloading it now. It's a.cer file, is that going to work?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 489.6,
+      "end_time": 497.2,
+      "duration": 7.599999999999966,
+      "text": "CER should work, yep. Go ahead and upload it through that TLS Configuration tab - there should be an Upload Certificate button."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 498.5,
+      "end_time": 503.7,
+      "duration": 5.199999999999989,
+      "text": "Uploading... okay it's uploaded. Now do I just save and it'll try to reconnect automatically?"
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 504.7,
+      "end_time": 513.3,
+      "duration": 8.599999999999966,
+      "text": "Hit Save and then there should be a Test Connection button - click that to trigger a manual test before you do a full sync."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 513.9,
+      "end_time": 520.3,
+      "duration": 6.399999999999977,
+      "text": "Okay saving... and Test Connection... it's running... Marcus, it says Connection Successful. The status icon just turned green."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 521.6,
+      "end_time": 530.3,
+      "duration": 8.699999999999932,
+      "text": "That's what we want to see. Now trigger a manual sync from the sync options and let's make sure user provisioning starts flowing correctly."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 531.7,
+      "end_time": 548.6,
+      "duration": 16.899999999999977,
+      "text": "Running manual sync now... okay it's running and I'm already seeing sync events populating. Users are coming through. This looks like it's working. I'm glad it's fixed but I - yeah, I still want to talk about the support response time issue because this cannot happen again."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 549.4,
+      "end_time": 572.0,
+      "duration": 22.600000000000023,
+      "text": "Absolutely, and I want to make sure that's addressed. I'm going to escalate the response time failure internally and make sure your account is flagged for priority routing on future cases. I'd also like to set up a brief call with your account manager this week so we can have that broader conversation about your experience, including the Detect outage and now this."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 572.5,
+      "end_time": 586.8,
+      "duration": 14.299999999999955,
+      "text": "Yeah, I think that's a good idea. I need someone from Aegis leadership to understand the impact this has had on Steelpoint. We're a 24-7 manufacturing operation - downtime isn't abstract for us, it's real dollars and real people standing around."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 588.0,
+      "end_time": 604.6,
+      "duration": 16.600000000000023,
+      "text": "I completely understand that and I will make sure that message gets communicated. I'll document everything in the case notes today and reach out to your account manager to schedule that follow-up. Is there anything else I can help you with right now while I have you?"
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 605.7,
+      "end_time": 619.5,
+      "duration": 13.799999999999955,
+      "text": "No, I think we're - we're good for now. Sync looks like it's running clean. Just make sure those case notes are thorough and that someone actually follows up with me. I've had cases fall through the cracks before."
+    },
+    {
+      "speaker_name": "Marcus Williams",
+      "start_time": 620.0,
+      "end_time": 633.3,
+      "duration": 13.299999999999955,
+      "text": "You have my word on that Harold. I'll send you a case summary email within the hour and copy your account manager. Thank you for your patience today and again I'm sorry for the trouble this caused."
+    },
+    {
+      "speaker_name": "Harold Jensen",
+      "start_time": 634.6,
+      "end_time": 636.1,
+      "duration": 1.5,
+      "text": "Alright. Thanks Marcus. Bye."
+    }
+  ],
+  "transcript_text": "Marcus Williams: Thanks for calling Aegis Cloud Security support, this is Marcus Williams, how can I help you today?\nHarold Jensen: Yeah, hi Marcus, this is Harold Jensen, IT Director over at Steelpoint Manufacturing. I've got a case open - it's case number 6539 - and honestly I'm pretty frustrated at this point because this has been going on for a few days now.\nMarcus Williams: I completely understand Harold, and I appreciate you calling in. Let me pull up case 6539 right here... okay I'm seeing it, LDAP sync failures with Aegis Identity. Can you walk me through what you're experiencing on your end?\nHarold Jensen: Sure, so - basically our Active Directory sync through Aegis Identity just stopped working. Users aren't getting provisioned, group memberships aren't syncing, and we've got about, uh, I'd say 200 plus employees who can't get into systems they need access to. This is a manufacturing floor environment, Marcus. People can't do their jobs.\nMarcus Williams: Yeah, that's - that's a serious impact and I hear you. When did you first notice the sync failures? Do you have an approximate timestamp?\nHarold Jensen: It started March 19th, around 7 AM our time, Central. And look, I submitted the case that same morning and it took almost 24 hours to get a response, which is not acceptable for something this critical.\nMarcus Williams: You're right and I - I want to apologize for that response delay, that shouldn't have happened on a case with this kind of operational impact. I'm going to personally own this from here on out. Now, the 19th... let me check something real quick on our end.\nHarold Jensen: Okay, and while you're doing that - I also want to mention that we had some issues earlier in the month with Aegis Detect, the outage you guys had, and now this. My leadership is starting to ask questions about whether we made the right call going with Aegis and that's a conversation I really don't want to be having.\nMarcus Williams: I understand, and that's a fair concern. The Detect outage was - yeah, that was a significant incident and I know it affected a lot of customers. We've made infrastructure changes since then. But let's focus on getting your LDAP sync resolved right now because that's what's actively hurting you. So I'm looking at our sync logs for your tenant...\nHarold Jensen: Right, yeah.\nMarcus Williams: Okay so I'm seeing a high volume of sync errors starting the 19th, you're correct. The error codes being thrown are mostly - it looks like connection timeout errors and then some authentication failures against your LDAP endpoint. Can you tell me, did anything change in your environment around that time? Any firewall rule updates, certificate rotations, anything like that?\nHarold Jensen: That's - hm, that's actually a good question. We did have a scheduled maintenance window on the 18th, overnight. Our network team pushed some firewall policy updates. I didn't think that would affect the LDAP connector but...\nMarcus Williams: Yeah that could absolutely be it. The Aegis Identity LDAP connector needs outbound access on port 389 for standard LDAP or 636 for LDAPS - are you running LDAPS by any chance?\nHarold Jensen: We are, yeah, we're using LDAPS. Port 636.\nMarcus Williams: Okay, so there's two things I want to check then. First, can you verify with your network team that port 636 is still open from our connector's IP range? I can send you the current list of Aegis egress IPs. And second - did anything happen with your SSL certificate on the LDAP server during or after that maintenance window?\nHarold Jensen: I - I'm not sure about the certificate. I'd have to check. But I'll tell you what, this is information that should have been asked three days ago when I first filed the case. I had to chase your team for a response and now we're just starting the basic troubleshooting. Do you understand how that feels from my side?\nMarcus Williams: Yes, and honestly Harold, you're completely right. There's no excuse for the delay and I'm not going to try to make one. What I can do right now is move fast. Can you get your network team on a quick message while we're talking to check that port 636 egress rule?\nHarold Jensen: Yeah, let me - hold on, I'm going to ping Dave on our network team right now via Teams. Give me just a second.\nMarcus Williams: Of course, take your time. And while you're doing that I'm going to look at the specific authentication error details more closely. The error is... okay so it's saying SSL handshake failure. Which actually - Harold, that points more to a certificate issue than a firewall issue.\nHarold Jensen: Okay, Dave's responding. He says the firewall rules look - yeah he says 636 should be open. So it's not the firewall.\nMarcus Williams: Right, which is consistent with what I'm seeing. The SSL handshake failure means our connector is trying to establish the encrypted connection and something's going wrong on the certificate side. Two possibilities - either your LDAP server's SSL cert was renewed or changed during maintenance and the new cert isn't trusted by our connector, or the cert expired. Can you have Dave check the certificate on your Active Directory server?\nHarold Jensen: Okay I'm asking him now... he's checking... oh for the love of - Marcus, he's saying the SSL certificate on the AD server was renewed as part of the maintenance on the 18th and, uh, it looks like it was issued by an internal CA. Would that cause a problem?\nMarcus Williams: That is exactly the problem. If your certificate was issued by an internal certificate authority, our connector doesn't inherently trust that CA. You need to upload your internal CA's root certificate into Aegis Identity so that we can validate the chain. This is why the handshake is failing.\nHarold Jensen: Okay so - three days of my people not being able to work because of a certificate. That's - I'm glad we found it but I'm also really annoyed that it took this long.\nMarcus Williams: I hear that completely. Let me walk you through uploading the CA cert right now so we can get this fixed in the next few minutes. In Aegis Identity, go to Settings, then Directory Connectors, find your LDAP connector and click into it.\nHarold Jensen: Alright, I'm in Identity, going to Settings... Directory Connectors... okay I see our LDAP connector listed here, it's showing a red status icon.\nMarcus Williams: Yeah that red status is the sync failure. Click into the connector and you should see a tab called Security or TLS Settings - it might vary slightly depending on your version.\nHarold Jensen: I see... there's a tab that says TLS Configuration. Is that it?\nMarcus Williams: Perfect, yes. In there you should see an option to upload a custom CA certificate. You'll need the root CA cert from your internal certificate authority - your team should be able to export that as a PEM or CER file.\nHarold Jensen: Okay I'm asking Dave to pull that cert. He should have it... yeah he's exporting it now, says he'll have it in a minute. And Marcus - look, while we're waiting - I need to understand why this wasn't documented anywhere. Like shouldn't there be some kind of alert or error message in the UI that says 'hey your certificate is untrusted' instead of just showing a generic sync failure?\nMarcus Williams: That is a completely valid piece of feedback and honestly you're not the first person to raise that. The current error messaging in the connector is not specific enough and I'm going to log this as product feedback with our Identity team. A more descriptive SSL error message would have made this much faster to diagnose.\nHarold Jensen: Yeah it would have saved us three days. Okay, Dave just dropped the cert in our shared drive, I'm downloading it now. It's a.cer file, is that going to work?\nMarcus Williams: CER should work, yep. Go ahead and upload it through that TLS Configuration tab - there should be an Upload Certificate button.\nHarold Jensen: Uploading... okay it's uploaded. Now do I just save and it'll try to reconnect automatically?\nMarcus Williams: Hit Save and then there should be a Test Connection button - click that to trigger a manual test before you do a full sync.\nHarold Jensen: Okay saving... and Test Connection... it's running... Marcus, it says Connection Successful. The status icon just turned green.\nMarcus Williams: That's what we want to see. Now trigger a manual sync from the sync options and let's make sure user provisioning starts flowing correctly.\nHarold Jensen: Running manual sync now... okay it's running and I'm already seeing sync events populating. Users are coming through. This looks like it's working. I'm glad it's fixed but I - yeah, I still want to talk about the support response time issue because this cannot happen again.\nMarcus Williams: Absolutely, and I want to make sure that's addressed. I'm going to escalate the response time failure internally and make sure your account is flagged for priority routing on future cases. I'd also like to set up a brief call with your account manager this week so we can have that broader conversation about your experience, including the Detect outage and now this.\nHarold Jensen: Yeah, I think that's a good idea. I need someone from Aegis leadership to understand the impact this has had on Steelpoint. We're a 24-7 manufacturing operation - downtime isn't abstract for us, it's real dollars and real people standing around.\nMarcus Williams: I completely understand that and I will make sure that message gets communicated. I'll document everything in the case notes today and reach out to your account manager to schedule that follow-up. Is there anything else I can help you with right now while I have you?\nHarold Jensen: No, I think we're - we're good for now. Sync looks like it's running clean. Just make sure those case notes are thorough and that someone actually follows up with me. I've had cases fall through the cracks before.\nMarcus Williams: You have my word on that Harold. I'll send you a case summary email within the hour and copy your account manager. Thank you for your patience today and again I'm sorry for the trouble this caused.\nHarold Jensen: Alright. Thanks Marcus. Bye.",
+  "summary": "Harold Jensen, IT Director at Steelpoint Manufacturing, called regarding a 3-day-old unresolved LDAP sync failure with Aegis Identity affecting 200+ employees on a 24/7 manufacturing floor. Marcus Williams diagnosed the root cause as an SSL handshake failure caused by an internal CA-issued certificate renewed during a maintenance window on March 18th that was not trusted by the Aegis connector. The issue was resolved live on the call by uploading the internal CA root certificate into the Aegis Identity TLS Configuration settings. Harold expressed significant frustration over the slow initial support response and broader confidence concerns about Aegis following a prior Detect outage, and Marcus committed to escalating the response time failure and arranging a follow-up call with the account manager.",
+  "topics": [
+    "ldap sync failure",
+    "ssl certificate",
+    "support response time",
+    "active directory",
+    "product feedback",
+    "churn risk"
+  ],
+  "action_items": [
+    "Marcus Williams: Send case summary email within the hour and copy the account manager on all case notes",
+    "Marcus Williams: Escalate response time failure internally and flag Steelpoint account for priority routing on future cases",
+    "Marcus Williams: Coordinate with account manager to schedule a follow-up call with Harold Jensen to address broader experience concerns including the Detect outage",
+    "Marcus Williams: Log product feedback with the Identity team requesting more descriptive SSL/TLS error messaging in the LDAP connector UI"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 98.0,
+      "text": "Harold mentions leadership is questioning whether they made the right call going with Aegis, citing both this incident and a prior Detect outage",
+      "type": "churn_signal",
+      "speaker": "Harold Jensen"
+    },
+    {
+      "time": 310.0,
+      "text": "Harold points out that basic troubleshooting is only starting three days after the case was filed, expressing frustration at the delayed response",
+      "type": "concern",
+      "speaker": "Harold Jensen"
+    },
+    {
+      "time": 480.0,
+      "text": "Root cause identified: internal CA certificate renewed during maintenance on March 18th is not trusted by the Aegis connector, causing SSL handshake failures",
+      "type": "technical_issue",
+      "speaker": "Marcus Williams"
+    },
+    {
+      "time": 620.0,
+      "text": "Connection test returns successful and sync events begin populating after uploading the internal CA root certificate",
+      "type": "positive_pivot",
+      "speaker": "Harold Jensen"
+    },
+    {
+      "time": 565.0,
+      "text": "Harold raises valid product feedback that the UI should show a specific SSL trust error rather than a generic sync failure message",
+      "type": "feature_gap",
+      "speaker": "Harold Jensen"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Join",
+      "time_seconds": 3.0,
+      "timestamp_ms": 1774170903000
+    },
+    {
+      "participant_name": "Harold Jensen",
+      "event_type": "Join",
+      "time_seconds": 14.0,
+      "timestamp_ms": 1774170914000
+    },
+    {
+      "participant_name": "Marcus Williams",
+      "event_type": "Leave",
+      "time_seconds": 1235.0,
+      "timestamp_ms": 1774172135000
+    },
+    {
+      "participant_name": "Harold Jensen",
+      "event_type": "Leave",
+      "time_seconds": 1247.0,
+      "timestamp_ms": 1774172147000
+    }
+  ],
+  "stats": {
+    "turn_count": 44,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Marcus Williams": 22,
+      "Harold Jensen": 22
+    },
+    "speaker_total_seconds": {
+      "Marcus Williams": 334.3,
+      "Harold Jensen": 258.5
+    }
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "meeting_id": "01KQDD5172176D02DB51360A",
+  "title": "Support Case #3286 - Vanta Health Systems API Integration Error",
+  "organizer_email": "priya.patel@aegiscloud.com",
+  "host_email": "priya.patel@aegiscloud.com",
+  "start_time": "2026-02-03T10:00:00.000Z",
+  "end_time": "2026-02-03T10:21:00.000Z",
+  "duration_minutes": 21.0,
+  "participants": [
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "l.cheng@vantahealth.com",
+      "domain": "vantahealth.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "priya.patel@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "l.cheng@vantahealth.com",
+      "domain": "vantahealth.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Priya Patel",
+    "1": "Dr. Linda Cheng"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 7.6,
+      "end_time": 12.9,
+      "duration": 5.300000000000001,
+      "text": "Hi, this is Priya Patel from Aegis Cloud Security support, am I speaking with Dr. Cheng?"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 13.3,
+      "end_time": 26.8,
+      "duration": 13.5,
+      "text": "Yes, this is Linda Cheng, and I have to say I'm - I'm really frustrated right now, we've been dealing with this API issue for going on three days and it is actively impacting our backup workflows."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 27.2,
+      "end_time": 39.3,
+      "duration": 12.099999999999998,
+      "text": "I completely understand, Dr. Cheng, and I sincerely apologize for the disruption - I've pulled up your support case, number 3286, and I want to make sure we get to the bottom of this today."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 40.4,
+      "end_time": 49.2,
+      "duration": 8.800000000000004,
+      "text": "Three days, Priya. We're a healthcare organization, we have patient data, we have regulatory obligations - this isn't a minor inconvenience, this is a serious problem."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 49.9,
+      "end_time": 64.0,
+      "duration": 14.100000000000001,
+      "text": "Absolutely, and I take that very seriously, I do. Can you walk me through what you're seeing on your end? The case notes mention an API integration error with Aegis Protect but I want to hear it directly from you."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 65.5,
+      "end_time": 79.9,
+      "duration": 14.400000000000006,
+      "text": "So we have our EHR system - it's a custom-built platform - integrated with Aegis Protect through your REST API, and starting Sunday we started getting 503 errors on the backup initiation endpoint. Specifically the... um, it's the /v2/backup/jobs/create endpoint."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 80.8,
+      "end_time": 88.3,
+      "duration": 7.5,
+      "text": "Okay, the /v2/backup/jobs/create endpoint, got it. And are these errors consistent or intermittent? Like are they happening on every call or-"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 88.9,
+      "end_time": 98.3,
+      "duration": 9.399999999999991,
+      "text": "Every single call. One hundred percent failure rate since Sunday morning, approximately 6 AM our time, which is Pacific. We have zero successful backup jobs since then."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 98.9,
+      "end_time": 111.3,
+      "duration": 12.399999999999991,
+      "text": "Zero successful jobs in three days, okay, that's - yeah, that's significant. And are you seeing anything in the response body with the 503? Any error message or is it just the status code?"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 112.5,
+      "end_time": 123.4,
+      "duration": 10.900000000000006,
+      "text": "We get a very unhelpful message that says 'service temporarily unavailable, please retry' - which we have been retrying, with exponential backoff as your documentation specifies, and it hasn't made a difference."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 123.9,
+      "end_time": 130.3,
+      "duration": 6.400000000000006,
+      "text": "Right, right. And the retry behavior - are you using our SDK or are you making direct HTTP calls?"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 131.0,
+      "end_time": 139.7,
+      "duration": 8.699999999999989,
+      "text": "Direct HTTP calls, our dev team built a custom integration because your SDK didn't support some of the authentication patterns we needed for our environment."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 140.6,
+      "end_time": 145.1,
+      "duration": 4.5,
+      "text": "Okay, and what authentication method are you using? Bearer token, API key, or-"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 146.3,
+      "end_time": 158.7,
+      "duration": 12.399999999999977,
+      "text": "Bearer token, OAuth 2.0 client credentials flow. And before you ask - yes, the tokens are valid, yes they're being refreshed properly, we're not hitting any 401s or 403s, the 503s start immediately after auth succeeds."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 159.7,
+      "end_time": 176.4,
+      "duration": 16.700000000000017,
+      "text": "That's - that's actually really helpful context, thank you. So authentication is working fine, it's specifically the job creation call that's failing. Okay. Can I ask, do you have a request ID from any of the failed calls? That would help me trace it on our backend."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 177.3,
+      "end_time": 185.6,
+      "duration": 8.299999999999983,
+      "text": "I have several. I'll read you one - it's X-Request-ID: ae7f2c-b339-48d1-9cf2-7744d0a8e312. My team logged about two hundred of them over the past three days."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 186.7,
+      "end_time": 193.6,
+      "duration": 6.900000000000006,
+      "text": "Perfect, let me pull that up... okay, I'm in our trace logs now. Give me just a second here."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 194.9,
+      "end_time": 213.8,
+      "duration": 18.900000000000006,
+      "text": "And while you're doing that, I want to raise something else - we noticed that when we try to manually trigger backups through the Aegis Protect web console, those also fail. So this doesn't seem like it's purely an API integration issue on our side, this looks like something is broken on your end."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 214.7,
+      "end_time": 236.2,
+      "duration": 21.5,
+      "text": "Oh, that's - that's a really important data point, the console failures too. That does shift the picture significantly. Okay so I'm looking at this request ID and I can see... hm. Okay. So it looks like the job is hitting our backup orchestration service and it's timing out before it can queue. Let me see what's upstream from that."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 237.7,
+      "end_time": 254.6,
+      "duration": 16.900000000000006,
+      "text": "What does that mean in plain English? Because I need to understand whether this is something my team caused or something on Aegis's end, because right now my CTO position - I'm the one responsible for data integrity and I need to give my board an explanation."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 255.7,
+      "end_time": 272.5,
+      "duration": 16.80000000000001,
+      "text": "I understand, and I want to be transparent with you. What I'm seeing in the logs is that the backup orchestration layer is rejecting job submissions, and it's not a client-side error - this is happening at our infrastructure level. This is not something your team did wrong."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 274.0,
+      "end_time": 280.7,
+      "duration": 6.699999999999989,
+      "text": "Okay, so Aegis broke something. And it took three days and a support call for someone to tell me that."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 281.5,
+      "end_time": 296.8,
+      "duration": 15.300000000000011,
+      "text": "Dr. Cheng, I - I hear you, and that is a fair criticism. We should have proactive alerting that catches this for affected customers and reaches out. I'm going to escalate this right now to our Protect infrastructure team while we're on this call."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 298.0,
+      "end_time": 311.6,
+      "duration": 13.600000000000023,
+      "text": "Good. And in the meantime, what are my options? Because we have a - we have a compliance window coming up, we need to demonstrate backup continuity for our HIPAA audit, and right now I cannot do that."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 312.4,
+      "end_time": 332.8,
+      "duration": 20.400000000000034,
+      "text": "So there are a couple of things we can do right now. First, I can have our team manually trigger backup snapshots on your behalf from our admin side, which would bypass the orchestration layer that's having the issue. That's not a long-term solution but it would get your data protected while we work on the fix."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 334.0,
+      "end_time": 336.5,
+      "duration": 2.5,
+      "text": "Okay. How quickly can that happen?"
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 337.7,
+      "end_time": 360.2,
+      "duration": 22.5,
+      "text": "I can get that initiated within the next hour - I'll coordinate with our Protect ops team directly. Second thing - I want to make sure we document everything for your audit purposes, so I'll send you a written incident summary that you can use to demonstrate to your HIPAA auditors that there was a platform-level issue and what mitigation steps were taken."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 361.4,
+      "end_time": 376.8,
+      "duration": 15.400000000000034,
+      "text": "That - okay, that's actually helpful. A written incident summary, that I can work with. But I want a timeline on when the actual fix is going to be deployed because we cannot operate indefinitely with manual backups being triggered by your team."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 377.4,
+      "end_time": 396.2,
+      "duration": 18.80000000000001,
+      "text": "Absolutely, that's a completely reasonable ask. I'm going to be honest with you - I don't have that answer right now because I need the infrastructure team to assess the root cause, but I will have a timeline for you within four hours, and I will personally follow up via email and phone call."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 397.4,
+      "end_time": 412.7,
+      "duration": 15.300000000000011,
+      "text": "Four hours. Okay. And I want to be clear - I'm not just frustrated about the technical issue, I'm frustrated about the communication. Three days of radio silence from Aegis is not acceptable for a healthcare customer. We are handling protected health information."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 413.1,
+      "end_time": 429.8,
+      "duration": 16.69999999999999,
+      "text": "You're completely right, and I'm not going to make excuses for that. The lack of proactive communication on our end was a failure, and I'm going to make sure that's fed back to our leadership and that you receive a formal apology along with that incident report."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 430.1,
+      "end_time": 444.9,
+      "duration": 14.799999999999955,
+      "text": "I appreciate you saying that. And look - I don't want to tear apart the whole relationship with Aegis, we've had a good experience overall with Protect up until this point, but this is serious and I need to see it treated seriously."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 445.6,
+      "end_time": 456.9,
+      "duration": 11.299999999999955,
+      "text": "And it will be, I promise you that. Can I also ask - are any other modules affected? Are you seeing anything unusual with Identity or anything else on the platform?"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 457.6,
+      "end_time": 463.1,
+      "duration": 5.5,
+      "text": "No, just Protect. Identity and SSO seem to be working fine, it's specifically the backup functionality."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 464.3,
+      "end_time": 487.1,
+      "duration": 22.80000000000001,
+      "text": "Okay, good - that actually helps narrow down the scope. Alright, so to recap what we're doing: I'm escalating to Protect infrastructure right now, we'll initiate manual backup snapshots for your environment within the hour, I'll send you a written incident summary by end of day, and I'll follow up with a root cause and fix timeline within four hours. Does that all sound right?"
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 488.0,
+      "end_time": 500.7,
+      "duration": 12.699999999999989,
+      "text": "Yes, that covers it. And Priya - I want your direct contact information, not the general support queue. If something changes or if I need to escalate further, I need to be able to reach you directly."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 502.1,
+      "end_time": 518.0,
+      "duration": 15.899999999999977,
+      "text": "Of course. I'll include my direct email and my direct line in the confirmation email I'm sending you in the next few minutes. And Dr. Cheng, I am sorry - genuinely - for the disruption this has caused. We're going to make this right."
+    },
+    {
+      "speaker_name": "Dr. Linda Cheng",
+      "start_time": 518.7,
+      "end_time": 526.7,
+      "duration": 8.0,
+      "text": "I'm going to hold you to that. Thank you for finally getting some clarity on this, I'll be waiting for your follow-up."
+    },
+    {
+      "speaker_name": "Priya Patel",
+      "start_time": 527.6,
+      "end_time": 529.6,
+      "duration": 2.0,
+      "text": "Absolutely. Talk soon, Dr. Cheng."
+    }
+  ],
+  "transcript_text": "Priya Patel: Hi, this is Priya Patel from Aegis Cloud Security support, am I speaking with Dr. Cheng?\nDr. Linda Cheng: Yes, this is Linda Cheng, and I have to say I'm - I'm really frustrated right now, we've been dealing with this API issue for going on three days and it is actively impacting our backup workflows.\nPriya Patel: I completely understand, Dr. Cheng, and I sincerely apologize for the disruption - I've pulled up your support case, number 3286, and I want to make sure we get to the bottom of this today.\nDr. Linda Cheng: Three days, Priya. We're a healthcare organization, we have patient data, we have regulatory obligations - this isn't a minor inconvenience, this is a serious problem.\nPriya Patel: Absolutely, and I take that very seriously, I do. Can you walk me through what you're seeing on your end? The case notes mention an API integration error with Aegis Protect but I want to hear it directly from you.\nDr. Linda Cheng: So we have our EHR system - it's a custom-built platform - integrated with Aegis Protect through your REST API, and starting Sunday we started getting 503 errors on the backup initiation endpoint. Specifically the... um, it's the /v2/backup/jobs/create endpoint.\nPriya Patel: Okay, the /v2/backup/jobs/create endpoint, got it. And are these errors consistent or intermittent? Like are they happening on every call or-\nDr. Linda Cheng: Every single call. One hundred percent failure rate since Sunday morning, approximately 6 AM our time, which is Pacific. We have zero successful backup jobs since then.\nPriya Patel: Zero successful jobs in three days, okay, that's - yeah, that's significant. And are you seeing anything in the response body with the 503? Any error message or is it just the status code?\nDr. Linda Cheng: We get a very unhelpful message that says 'service temporarily unavailable, please retry' - which we have been retrying, with exponential backoff as your documentation specifies, and it hasn't made a difference.\nPriya Patel: Right, right. And the retry behavior - are you using our SDK or are you making direct HTTP calls?\nDr. Linda Cheng: Direct HTTP calls, our dev team built a custom integration because your SDK didn't support some of the authentication patterns we needed for our environment.\nPriya Patel: Okay, and what authentication method are you using? Bearer token, API key, or-\nDr. Linda Cheng: Bearer token, OAuth 2.0 client credentials flow. And before you ask - yes, the tokens are valid, yes they're being refreshed properly, we're not hitting any 401s or 403s, the 503s start immediately after auth succeeds.\nPriya Patel: That's - that's actually really helpful context, thank you. So authentication is working fine, it's specifically the job creation call that's failing. Okay. Can I ask, do you have a request ID from any of the failed calls? That would help me trace it on our backend.\nDr. Linda Cheng: I have several. I'll read you one - it's X-Request-ID: ae7f2c-b339-48d1-9cf2-7744d0a8e312. My team logged about two hundred of them over the past three days.\nPriya Patel: Perfect, let me pull that up... okay, I'm in our trace logs now. Give me just a second here.\nDr. Linda Cheng: And while you're doing that, I want to raise something else - we noticed that when we try to manually trigger backups through the Aegis Protect web console, those also fail. So this doesn't seem like it's purely an API integration issue on our side, this looks like something is broken on your end.\nPriya Patel: Oh, that's - that's a really important data point, the console failures too. That does shift the picture significantly. Okay so I'm looking at this request ID and I can see... hm. Okay. So it looks like the job is hitting our backup orchestration service and it's timing out before it can queue. Let me see what's upstream from that.\nDr. Linda Cheng: What does that mean in plain English? Because I need to understand whether this is something my team caused or something on Aegis's end, because right now my CTO position - I'm the one responsible for data integrity and I need to give my board an explanation.\nPriya Patel: I understand, and I want to be transparent with you. What I'm seeing in the logs is that the backup orchestration layer is rejecting job submissions, and it's not a client-side error - this is happening at our infrastructure level. This is not something your team did wrong.\nDr. Linda Cheng: Okay, so Aegis broke something. And it took three days and a support call for someone to tell me that.\nPriya Patel: Dr. Cheng, I - I hear you, and that is a fair criticism. We should have proactive alerting that catches this for affected customers and reaches out. I'm going to escalate this right now to our Protect infrastructure team while we're on this call.\nDr. Linda Cheng: Good. And in the meantime, what are my options? Because we have a - we have a compliance window coming up, we need to demonstrate backup continuity for our HIPAA audit, and right now I cannot do that.\nPriya Patel: So there are a couple of things we can do right now. First, I can have our team manually trigger backup snapshots on your behalf from our admin side, which would bypass the orchestration layer that's having the issue. That's not a long-term solution but it would get your data protected while we work on the fix.\nDr. Linda Cheng: Okay. How quickly can that happen?\nPriya Patel: I can get that initiated within the next hour - I'll coordinate with our Protect ops team directly. Second thing - I want to make sure we document everything for your audit purposes, so I'll send you a written incident summary that you can use to demonstrate to your HIPAA auditors that there was a platform-level issue and what mitigation steps were taken.\nDr. Linda Cheng: That - okay, that's actually helpful. A written incident summary, that I can work with. But I want a timeline on when the actual fix is going to be deployed because we cannot operate indefinitely with manual backups being triggered by your team.\nPriya Patel: Absolutely, that's a completely reasonable ask. I'm going to be honest with you - I don't have that answer right now because I need the infrastructure team to assess the root cause, but I will have a timeline for you within four hours, and I will personally follow up via email and phone call.\nDr. Linda Cheng: Four hours. Okay. And I want to be clear - I'm not just frustrated about the technical issue, I'm frustrated about the communication. Three days of radio silence from Aegis is not acceptable for a healthcare customer. We are handling protected health information.\nPriya Patel: You're completely right, and I'm not going to make excuses for that. The lack of proactive communication on our end was a failure, and I'm going to make sure that's fed back to our leadership and that you receive a formal apology along with that incident report.\nDr. Linda Cheng: I appreciate you saying that. And look - I don't want to tear apart the whole relationship with Aegis, we've had a good experience overall with Protect up until this point, but this is serious and I need to see it treated seriously.\nPriya Patel: And it will be, I promise you that. Can I also ask - are any other modules affected? Are you seeing anything unusual with Identity or anything else on the platform?\nDr. Linda Cheng: No, just Protect. Identity and SSO seem to be working fine, it's specifically the backup functionality.\nPriya Patel: Okay, good - that actually helps narrow down the scope. Alright, so to recap what we're doing: I'm escalating to Protect infrastructure right now, we'll initiate manual backup snapshots for your environment within the hour, I'll send you a written incident summary by end of day, and I'll follow up with a root cause and fix timeline within four hours. Does that all sound right?\nDr. Linda Cheng: Yes, that covers it. And Priya - I want your direct contact information, not the general support queue. If something changes or if I need to escalate further, I need to be able to reach you directly.\nPriya Patel: Of course. I'll include my direct email and my direct line in the confirmation email I'm sending you in the next few minutes. And Dr. Cheng, I am sorry - genuinely - for the disruption this has caused. We're going to make this right.\nDr. Linda Cheng: I'm going to hold you to that. Thank you for finally getting some clarity on this, I'll be waiting for your follow-up.\nPriya Patel: Absolutely. Talk soon, Dr. Cheng.",
+  "summary": "Dr. Linda Cheng, CTO of a healthcare organization, contacted Aegis Cloud Security support regarding a three-day outage of the Aegis Protect backup API affecting patient data backup workflows. Support agent Priya Patel investigated the issue and confirmed it was a platform-level failure in Aegis's backup orchestration infrastructure, not a client-side error. Priya committed to initiating manual backup snapshots within the hour, providing a written incident summary for HIPAA audit purposes, and delivering a root cause and fix timeline within four hours. Dr. Cheng expressed significant frustration over both the technical failure and the lack of proactive communication from Aegis over the three-day period.",
+  "topics": [
+    "api outage",
+    "backup failure",
+    "hipaa compliance",
+    "healthcare data",
+    "incident communication",
+    "escalation"
+  ],
+  "action_items": [
+    "Priya Patel: Escalate to Protect infrastructure team immediately and initiate manual backup snapshots for Dr. Cheng's environment within one hour",
+    "Priya Patel: Send written incident summary to Dr. Cheng by end of day for use in HIPAA audit documentation",
+    "Priya Patel: Follow up with root cause analysis and fix deployment timeline within four hours via email and phone",
+    "Priya Patel: Include direct contact information in confirmation email and escalate communication failure feedback to Aegis leadership"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 45.0,
+      "text": "Dr. Cheng expresses serious concern about the impact on a healthcare organization with regulatory obligations, framing the outage as more than a minor inconvenience.",
+      "type": "concern",
+      "speaker": "Dr. Linda Cheng"
+    },
+    {
+      "time": 245.0,
+      "text": "Dr. Cheng reveals that manual backups through the web console also fail, shifting the evidence clearly toward a platform-side infrastructure issue.",
+      "type": "technical_issue",
+      "speaker": "Dr. Linda Cheng"
+    },
+    {
+      "time": 390.0,
+      "text": "Priya confirms the backup orchestration layer failure is on Aegis's infrastructure and not caused by the customer's team, providing long-awaited clarity.",
+      "type": "positive_pivot",
+      "speaker": "Priya Patel"
+    },
+    {
+      "time": 530.0,
+      "text": "Dr. Cheng warns that while she does not want to end the relationship with Aegis, the situation is serious and must be treated as such, signaling churn risk if not resolved properly.",
+      "type": "churn_signal",
+      "speaker": "Dr. Linda Cheng"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Dr. Linda Cheng",
+      "event_type": "Join",
+      "time_seconds": 25.0,
+      "timestamp_ms": 1770112825000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Join",
+      "time_seconds": 43.0,
+      "timestamp_ms": 1770112843000
+    },
+    {
+      "participant_name": "Priya Patel",
+      "event_type": "Leave",
+      "time_seconds": 1230.0,
+      "timestamp_ms": 1770114030000
+    },
+    {
+      "participant_name": "Dr. Linda Cheng",
+      "event_type": "Leave",
+      "time_seconds": 1233.0,
+      "timestamp_ms": 1770114033000
+    }
+  ],
+  "stats": {
+    "turn_count": 39,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Priya Patel": 20,
+      "Dr. Linda Cheng": 19
+    },
+    "speaker_total_seconds": {
+      "Priya Patel": 269.9,
+      "Dr. Linda Cheng": 216.7
+    }
+  }
+}

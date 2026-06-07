@@ -1,0 +1,466 @@
+{
+  "meeting_id": "01KQ54917E3931712516916D",
+  "title": "Aegis / Nimbus Platform - Comply v2 Preview",
+  "organizer_email": "kevin.obrien@aegiscloud.com",
+  "host_email": "kevin.obrien@aegiscloud.com",
+  "start_time": "2026-04-01T16:15:00.000Z",
+  "end_time": "2026-04-01T17:09:18.000Z",
+  "duration_minutes": 54.3,
+  "participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "k.donovan@nimbusplatform.com",
+      "domain": "nimbusplatform.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "kevin.obrien@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "k.donovan@nimbusplatform.com",
+      "domain": "nimbusplatform.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "Kevin O'Brien",
+    "1": "Keith Donovan"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 5.2,
+      "end_time": 13.3,
+      "duration": 8.100000000000001,
+      "text": "Hey Keith, good to finally catch you - I know we've been trying to get this on the calendar for like two weeks now."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 14.4,
+      "end_time": 25.5,
+      "duration": 11.1,
+      "text": "Yeah, no kidding, it's been a crazy couple of weeks on our end, but I'm glad we made it work - this is a call I've actually been looking forward to."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 26.6,
+      "end_time": 38.0,
+      "duration": 11.399999999999999,
+      "text": "Same, same. So before we jump in, how are things going at Nimbus? I saw you guys announced that new data platform partnership last week - that looked like a big deal."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 38.9,
+      "end_time": 56.1,
+      "duration": 17.200000000000003,
+      "text": "Yeah that was - that was a long time coming, honestly. It opens up a whole new set of customers for us in the financial services space, which is exciting but also, you know, comes with its own compliance headaches, which is actually very relevant to why we're here today."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 56.9,
+      "end_time": 79.5,
+      "duration": 22.6,
+      "text": "Oh perfect, yeah that's a great segue actually. So, um, the whole reason I wanted to get this call on the books is that we've got Comply v2 going GA on April seventh - so like a week from today - and I really wanted to get you guys in front of it early, kind of a sneak peek before the broader announcement goes out."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 80.9,
+      "end_time": 98.1,
+      "duration": 17.19999999999999,
+      "text": "Yeah I appreciate that. And honestly, the timing is - it's almost too good, like we were literally in a board meeting two days ago where our CFO was asking about our compliance posture going into Q2 and I didn't have a great answer for him on the reporting side."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 98.4,
+      "end_time": 112.1,
+      "duration": 13.699999999999989,
+      "text": "Okay so let's fix that. Let me share my screen here and I'll walk you through what we've built - and Keith feel free to just interrupt me whenever, this is not meant to be a one-way demo."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 113.2,
+      "end_time": 118.9,
+      "duration": 5.700000000000003,
+      "text": "Absolutely, yeah I'm not a passive audience kind of guy so you'll hear from me."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 119.4,
+      "end_time": 136.4,
+      "duration": 17.0,
+      "text": "Perfect, that's exactly what I want. Okay so, uh, you can see the new dashboard here - and the biggest headline with v2 is the on-demand reporting engine. So previously, as you know, generating a SOC 2 report was kind of this... painful, manual export process. That's gone."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 137.6,
+      "end_time": 149.9,
+      "duration": 12.300000000000011,
+      "text": "Okay yeah because I remember when we went through our last SOC 2 audit and my team spent like three days just pulling data together. Three days. That's not a compliance process, that's just suffering."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 151.2,
+      "end_time": 163.6,
+      "duration": 12.400000000000006,
+      "text": "Ha - yeah, suffering is a good word for it. So what you're looking at now is - you click here, select your framework, and the report generates. Full audit-ready SOC 2 report, on demand."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 164.7,
+      "end_time": 171.7,
+      "duration": 7.0,
+      "text": "Wait, how long does that actually take? Like when you click generate, what's the - what's the actual wait time?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 172.5,
+      "end_time": 186.7,
+      "duration": 14.199999999999989,
+      "text": "So it depends on the size of your environment, but in our testing with accounts similar to Nimbus in terms of scale, we're seeing somewhere between, uh, ninety seconds and about four minutes for a full SOC 2 Type II report."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 187.3,
+      "end_time": 192.1,
+      "duration": 4.799999999999983,
+      "text": "Four minutes versus three days. That's - yeah, that's a meaningful difference, Kevin."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 192.4,
+      "end_time": 212.6,
+      "duration": 20.19999999999999,
+      "text": "Right? And it's not just SOC 2 - so v2 launches with multi-framework support out of the gate. You've got SOC 2, PCI DSS, HIPAA, and ISO 27001 all in the same interface. And given what you just said about financial services customers, PCI DSS is probably relevant now in a way it maybe wasn't six months ago."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 213.7,
+      "end_time": 229.3,
+      "duration": 15.600000000000023,
+      "text": "That is - yeah, that is extremely relevant. We've been kind of, um, putting off the PCI conversation internally because nobody wanted to deal with the overhead of standing up a whole new reporting workflow. If this just... works, that changes the conversation completely."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 229.6,
+      "end_time": 242.6,
+      "duration": 13.0,
+      "text": "And that's exactly the intent. Like the whole philosophy behind v2 was, compliance reporting shouldn't require a project. It should just be part of how you operate. So - let me show you the framework selector here."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 243.8,
+      "end_time": 246.1,
+      "duration": 2.299999999999983,
+      "text": "Yeah go ahead, I'm watching."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 247.2,
+      "end_time": 269.0,
+      "duration": 21.80000000000001,
+      "text": "So you click frameworks, you get this dropdown, and you can actually - this is something our customers have loved - you can run reports for multiple frameworks simultaneously. So if you need SOC 2 and ISO 27001 at the same time for a customer who's asking for both, you just check both boxes, hit generate, and it queues them up."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 270.0,
+      "end_time": 283.4,
+      "duration": 13.399999999999977,
+      "text": "Okay I need to send this recording to my head of security engineering because he has been building, like, a custom internal tool to do exactly this and I think I just saved him about three months of work."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 284.1,
+      "end_time": 297.8,
+      "duration": 13.699999999999989,
+      "text": "Ha, yeah - well, you know, we've heard that from a few accounts actually, people who had kind of started building something in-house and then saw v2 and were like, oh, okay, we don't need to do that anymore."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 299.2,
+      "end_time": 312.0,
+      "duration": 12.800000000000011,
+      "text": "That's a win. Okay, so - walk me through the output. Like what does the actual report look like? Is it something I can hand directly to an auditor or is there still cleanup work to do?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 312.5,
+      "end_time": 334.8,
+      "duration": 22.30000000000001,
+      "text": "Great question and honestly this is where v2 really shines. The output is a structured PDF - it's formatted specifically for auditor consumption, so it's got your control mapping, your evidence artifacts, timestamps, everything organized by control category. We worked with a few of our customers' auditors directly in the design process to make sure the format actually worked in the real world."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 336.2,
+      "end_time": 352.1,
+      "duration": 15.900000000000034,
+      "text": "You worked with actual auditors? That's - I mean that's the right way to do it, most vendors just guess at what auditors want and then you end up with this beautiful PDF that your auditor looks at and goes, I can't use any of this."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 352.4,
+      "end_time": 366.8,
+      "duration": 14.400000000000034,
+      "text": "Yeah exactly, we've been on the receiving end of those complaints too so we wanted to get it right from the jump. Let me actually show you a sample output - I've got one pulled up here from a test environment."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 367.7,
+      "end_time": 369.2,
+      "duration": 1.5,
+      "text": "Yeah please."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 370.4,
+      "end_time": 393.2,
+      "duration": 22.80000000000001,
+      "text": "So this is a SOC 2 Type II sample - you can see the trust service criteria on the left, the controls mapped to each one, and then for each control there's a linked evidence section that pulls directly from your Aegis environment. So like here, for availability, it's pulling in the uptime data, the incident logs, backup verification records from Protect - it all connects."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 394.4,
+      "end_time": 408.3,
+      "duration": 13.900000000000034,
+      "text": "The cross-module data pull is - that's actually huge. Because right now we're stitching that together manually across three different tools and it's - it's a mess. Having it come out of a single platform is a massive operational improvement."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 409.1,
+      "end_time": 423.9,
+      "duration": 14.799999999999955,
+      "text": "Yep, and that's really the power of having Protect and Comply sitting in the same ecosystem. Um, I want to ask you something actually - you mentioned you're also using Detect, right? Are you on the full suite or just Protect and Comply?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 424.4,
+      "end_time": 432.7,
+      "duration": 8.300000000000011,
+      "text": "We're on Protect, Comply, and Detect. We're not on Identity yet - that's actually something we've been evaluating but haven't pulled the trigger on."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 433.4,
+      "end_time": 453.9,
+      "duration": 20.5,
+      "text": "Got it, okay. I'll put a pin in Identity for now. But the reason I ask about Detect is - and this is something I wanted to mention - Detect also feeds into the compliance reports in v2. So your threat monitoring data, your detection events, your incident response logs - those surface in the relevant control sections automatically."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 455.1,
+      "end_time": 463.2,
+      "duration": 8.099999999999966,
+      "text": "Oh that's interesting. So when an auditor asks about our incident detection and response capability, the evidence is just... already in the report."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 464.6,
+      "end_time": 491.5,
+      "duration": 26.899999999999977,
+      "text": "Exactly. You don't have to go pull it separately, it's baked in. Now - and I want to be transparent here - there was a period in March where Detect had some availability issues, you may have noticed that, the outage around March tenth through the eighteenth. We've made significant infrastructure changes since then - redundant processing nodes, circuit breaker architecture - so the reliability story is much stronger now, but I wanted to flag that proactively."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 492.7,
+      "end_time": 512.7,
+      "duration": 20.000000000000057,
+      "text": "Yeah we did notice that, and honestly I appreciated the communication during it - your team was pretty on top of the status updates. It wasn't fun but I felt like we knew what was happening. And the fix sounds solid, the circuit breaker pattern is the right call for that kind of cascading failure scenario."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 513.5,
+      "end_time": 531.6,
+      "duration": 18.100000000000023,
+      "text": "Yeah our engineering team was - they moved fast on it and I think the architecture is genuinely better for it. Okay so - let me swing back to Comply v2, I want to make sure we cover the onboarding side of this since that's really the point of today's call."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 532.2,
+      "end_time": 540.2,
+      "duration": 8.0,
+      "text": "Yes, yeah - let's talk about what actually getting live on v2 looks like for us. What's the migration path from current Comply?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 540.8,
+      "end_time": 563.9,
+      "duration": 23.100000000000023,
+      "text": "So the good news is there's no big bang migration here. v2 is deployed as an upgrade to your existing Comply instance, your historical data comes with you, your custom configurations and any existing scheduled reports are preserved. The typical onboarding for an account your size is - we're looking at kind of a one to two week window to get fully configured and validated."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 565.4,
+      "end_time": 575.5,
+      "duration": 10.100000000000023,
+      "text": "One to two weeks is very manageable. And is there a dedicated resource from your side for that, or is it more of a self-serve setup with documentation?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 576.0,
+      "end_time": 590.2,
+      "duration": 14.200000000000045,
+      "text": "So you'd have me as your SA throughout, and we'll also loop in a dedicated onboarding specialist from our CS team - they'll run the technical setup sessions with your team. It's not self-serve, we're hands-on for the whole window."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 590.7,
+      "end_time": 600.6,
+      "duration": 9.899999999999977,
+      "text": "That's great to hear, honestly. The last time we onboarded something new it was basically a Confluence page and good luck to you, so this is a different experience."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 601.5,
+      "end_time": 620.5,
+      "duration": 19.0,
+      "text": "Ha, yeah, we try to make it a little more human than that. Okay, so - given that v2 goes GA on April seventh, what would your ideal timeline look like? Do you want to be in the first wave of production upgrades, or do you want to let it bake for a few weeks?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 622.0,
+      "end_time": 638.6,
+      "duration": 16.600000000000023,
+      "text": "Honestly, given the PCI angle and the board conversation I mentioned, I'd love to be in the first wave. Like if I can go back to my CFO in mid-April and say we have on-demand PCI DSS reporting live and ready, that's a very good story to tell."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 639.1,
+      "end_time": 660.8,
+      "duration": 21.699999999999932,
+      "text": "I love that. Okay, so let's talk about what we'd need to do to make that happen - I'd want to get the upgrade scheduled for the week of April seventh, kick off the onboarding sessions the week of the fourteenth, and target you being fully live and validated by April twenty-first. Does that rough timeline work for your team's bandwidth?"
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 661.3,
+      "end_time": 676.0,
+      "duration": 14.700000000000045,
+      "text": "April twenty-first is - yeah, that works. I'd want to loop in my security engineering lead, Priya, she'd be the one running point on the technical side. Can I have her connect with you directly after this call to get the details?"
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 676.9,
+      "end_time": 696.0,
+      "duration": 19.100000000000023,
+      "text": "Absolutely, yes - have her shoot me an email and I'll get the onboarding specialist intro'd right away. And Keith, honestly, I'm really excited about this one - I think v2 is going to genuinely change the way your team experiences compliance and I can't wait to see you use it with auditors for real."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 696.8,
+      "end_time": 709.7,
+      "duration": 12.900000000000091,
+      "text": "Same, yeah - this has been one of those calls where I feel like I'm getting off with more than I expected to, which is a good feeling. Thanks for the early look, Kevin, really appreciate it."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 710.7,
+      "end_time": 722.8,
+      "duration": 12.099999999999909,
+      "text": "Of course, that's what we're here for. I'll send over a recap and the onboarding guide this afternoon, and I'll hold a spot for you in the April seventh first-wave rollout. Looking forward to it."
+    },
+    {
+      "speaker_name": "Keith Donovan",
+      "start_time": 724.1,
+      "end_time": 728.8,
+      "duration": 4.699999999999932,
+      "text": "Perfect. Alright, I'll talk to you soon Kevin - appreciate the time."
+    },
+    {
+      "speaker_name": "Kevin O'Brien",
+      "start_time": 729.5,
+      "end_time": 731.4,
+      "duration": 1.8999999999999773,
+      "text": "You too, Keith. Take care."
+    }
+  ],
+  "transcript_text": "Kevin O'Brien: Hey Keith, good to finally catch you - I know we've been trying to get this on the calendar for like two weeks now.\nKeith Donovan: Yeah, no kidding, it's been a crazy couple of weeks on our end, but I'm glad we made it work - this is a call I've actually been looking forward to.\nKevin O'Brien: Same, same. So before we jump in, how are things going at Nimbus? I saw you guys announced that new data platform partnership last week - that looked like a big deal.\nKeith Donovan: Yeah that was - that was a long time coming, honestly. It opens up a whole new set of customers for us in the financial services space, which is exciting but also, you know, comes with its own compliance headaches, which is actually very relevant to why we're here today.\nKevin O'Brien: Oh perfect, yeah that's a great segue actually. So, um, the whole reason I wanted to get this call on the books is that we've got Comply v2 going GA on April seventh - so like a week from today - and I really wanted to get you guys in front of it early, kind of a sneak peek before the broader announcement goes out.\nKeith Donovan: Yeah I appreciate that. And honestly, the timing is - it's almost too good, like we were literally in a board meeting two days ago where our CFO was asking about our compliance posture going into Q2 and I didn't have a great answer for him on the reporting side.\nKevin O'Brien: Okay so let's fix that. Let me share my screen here and I'll walk you through what we've built - and Keith feel free to just interrupt me whenever, this is not meant to be a one-way demo.\nKeith Donovan: Absolutely, yeah I'm not a passive audience kind of guy so you'll hear from me.\nKevin O'Brien: Perfect, that's exactly what I want. Okay so, uh, you can see the new dashboard here - and the biggest headline with v2 is the on-demand reporting engine. So previously, as you know, generating a SOC 2 report was kind of this... painful, manual export process. That's gone.\nKeith Donovan: Okay yeah because I remember when we went through our last SOC 2 audit and my team spent like three days just pulling data together. Three days. That's not a compliance process, that's just suffering.\nKevin O'Brien: Ha - yeah, suffering is a good word for it. So what you're looking at now is - you click here, select your framework, and the report generates. Full audit-ready SOC 2 report, on demand.\nKeith Donovan: Wait, how long does that actually take? Like when you click generate, what's the - what's the actual wait time?\nKevin O'Brien: So it depends on the size of your environment, but in our testing with accounts similar to Nimbus in terms of scale, we're seeing somewhere between, uh, ninety seconds and about four minutes for a full SOC 2 Type II report.\nKeith Donovan: Four minutes versus three days. That's - yeah, that's a meaningful difference, Kevin.\nKevin O'Brien: Right? And it's not just SOC 2 - so v2 launches with multi-framework support out of the gate. You've got SOC 2, PCI DSS, HIPAA, and ISO 27001 all in the same interface. And given what you just said about financial services customers, PCI DSS is probably relevant now in a way it maybe wasn't six months ago.\nKeith Donovan: That is - yeah, that is extremely relevant. We've been kind of, um, putting off the PCI conversation internally because nobody wanted to deal with the overhead of standing up a whole new reporting workflow. If this just... works, that changes the conversation completely.\nKevin O'Brien: And that's exactly the intent. Like the whole philosophy behind v2 was, compliance reporting shouldn't require a project. It should just be part of how you operate. So - let me show you the framework selector here.\nKeith Donovan: Yeah go ahead, I'm watching.\nKevin O'Brien: So you click frameworks, you get this dropdown, and you can actually - this is something our customers have loved - you can run reports for multiple frameworks simultaneously. So if you need SOC 2 and ISO 27001 at the same time for a customer who's asking for both, you just check both boxes, hit generate, and it queues them up.\nKeith Donovan: Okay I need to send this recording to my head of security engineering because he has been building, like, a custom internal tool to do exactly this and I think I just saved him about three months of work.\nKevin O'Brien: Ha, yeah - well, you know, we've heard that from a few accounts actually, people who had kind of started building something in-house and then saw v2 and were like, oh, okay, we don't need to do that anymore.\nKeith Donovan: That's a win. Okay, so - walk me through the output. Like what does the actual report look like? Is it something I can hand directly to an auditor or is there still cleanup work to do?\nKevin O'Brien: Great question and honestly this is where v2 really shines. The output is a structured PDF - it's formatted specifically for auditor consumption, so it's got your control mapping, your evidence artifacts, timestamps, everything organized by control category. We worked with a few of our customers' auditors directly in the design process to make sure the format actually worked in the real world.\nKeith Donovan: You worked with actual auditors? That's - I mean that's the right way to do it, most vendors just guess at what auditors want and then you end up with this beautiful PDF that your auditor looks at and goes, I can't use any of this.\nKevin O'Brien: Yeah exactly, we've been on the receiving end of those complaints too so we wanted to get it right from the jump. Let me actually show you a sample output - I've got one pulled up here from a test environment.\nKeith Donovan: Yeah please.\nKevin O'Brien: So this is a SOC 2 Type II sample - you can see the trust service criteria on the left, the controls mapped to each one, and then for each control there's a linked evidence section that pulls directly from your Aegis environment. So like here, for availability, it's pulling in the uptime data, the incident logs, backup verification records from Protect - it all connects.\nKeith Donovan: The cross-module data pull is - that's actually huge. Because right now we're stitching that together manually across three different tools and it's - it's a mess. Having it come out of a single platform is a massive operational improvement.\nKevin O'Brien: Yep, and that's really the power of having Protect and Comply sitting in the same ecosystem. Um, I want to ask you something actually - you mentioned you're also using Detect, right? Are you on the full suite or just Protect and Comply?\nKeith Donovan: We're on Protect, Comply, and Detect. We're not on Identity yet - that's actually something we've been evaluating but haven't pulled the trigger on.\nKevin O'Brien: Got it, okay. I'll put a pin in Identity for now. But the reason I ask about Detect is - and this is something I wanted to mention - Detect also feeds into the compliance reports in v2. So your threat monitoring data, your detection events, your incident response logs - those surface in the relevant control sections automatically.\nKeith Donovan: Oh that's interesting. So when an auditor asks about our incident detection and response capability, the evidence is just... already in the report.\nKevin O'Brien: Exactly. You don't have to go pull it separately, it's baked in. Now - and I want to be transparent here - there was a period in March where Detect had some availability issues, you may have noticed that, the outage around March tenth through the eighteenth. We've made significant infrastructure changes since then - redundant processing nodes, circuit breaker architecture - so the reliability story is much stronger now, but I wanted to flag that proactively.\nKeith Donovan: Yeah we did notice that, and honestly I appreciated the communication during it - your team was pretty on top of the status updates. It wasn't fun but I felt like we knew what was happening. And the fix sounds solid, the circuit breaker pattern is the right call for that kind of cascading failure scenario.\nKevin O'Brien: Yeah our engineering team was - they moved fast on it and I think the architecture is genuinely better for it. Okay so - let me swing back to Comply v2, I want to make sure we cover the onboarding side of this since that's really the point of today's call.\nKeith Donovan: Yes, yeah - let's talk about what actually getting live on v2 looks like for us. What's the migration path from current Comply?\nKevin O'Brien: So the good news is there's no big bang migration here. v2 is deployed as an upgrade to your existing Comply instance, your historical data comes with you, your custom configurations and any existing scheduled reports are preserved. The typical onboarding for an account your size is - we're looking at kind of a one to two week window to get fully configured and validated.\nKeith Donovan: One to two weeks is very manageable. And is there a dedicated resource from your side for that, or is it more of a self-serve setup with documentation?\nKevin O'Brien: So you'd have me as your SA throughout, and we'll also loop in a dedicated onboarding specialist from our CS team - they'll run the technical setup sessions with your team. It's not self-serve, we're hands-on for the whole window.\nKeith Donovan: That's great to hear, honestly. The last time we onboarded something new it was basically a Confluence page and good luck to you, so this is a different experience.\nKevin O'Brien: Ha, yeah, we try to make it a little more human than that. Okay, so - given that v2 goes GA on April seventh, what would your ideal timeline look like? Do you want to be in the first wave of production upgrades, or do you want to let it bake for a few weeks?\nKeith Donovan: Honestly, given the PCI angle and the board conversation I mentioned, I'd love to be in the first wave. Like if I can go back to my CFO in mid-April and say we have on-demand PCI DSS reporting live and ready, that's a very good story to tell.\nKevin O'Brien: I love that. Okay, so let's talk about what we'd need to do to make that happen - I'd want to get the upgrade scheduled for the week of April seventh, kick off the onboarding sessions the week of the fourteenth, and target you being fully live and validated by April twenty-first. Does that rough timeline work for your team's bandwidth?\nKeith Donovan: April twenty-first is - yeah, that works. I'd want to loop in my security engineering lead, Priya, she'd be the one running point on the technical side. Can I have her connect with you directly after this call to get the details?\nKevin O'Brien: Absolutely, yes - have her shoot me an email and I'll get the onboarding specialist intro'd right away. And Keith, honestly, I'm really excited about this one - I think v2 is going to genuinely change the way your team experiences compliance and I can't wait to see you use it with auditors for real.\nKeith Donovan: Same, yeah - this has been one of those calls where I feel like I'm getting off with more than I expected to, which is a good feeling. Thanks for the early look, Kevin, really appreciate it.\nKevin O'Brien: Of course, that's what we're here for. I'll send over a recap and the onboarding guide this afternoon, and I'll hold a spot for you in the April seventh first-wave rollout. Looking forward to it.\nKeith Donovan: Perfect. Alright, I'll talk to you soon Kevin - appreciate the time.\nKevin O'Brien: You too, Keith. Take care.",
+  "summary": "Kevin O'Brien demoed Comply v2 to Keith Donovan of Nimbus ahead of its April 7th general availability launch. The demo highlighted on-demand multi-framework compliance reporting (SOC 2, PCI DSS, HIPAA, ISO 27001), cross-module data integration with Protect and Detect, and auditor-ready PDF output. Keith expressed strong enthusiasm, particularly around PCI DSS reporting given Nimbus's new financial services partnership. They aligned on a timeline to get Nimbus live on v2 by April 21st, with Keith's security engineering lead Priya handling the technical onboarding.",
+  "topics": [
+    "compliance reporting",
+    "product demo",
+    "onboarding",
+    "pci dss",
+    "multi-framework support",
+    "upgrade rollout"
+  ],
+  "action_items": [
+    "Keith Donovan: Have Priya (security engineering lead) email Kevin to coordinate technical onboarding details",
+    "Kevin O'Brien: Send recap email and onboarding guide to Keith this afternoon",
+    "Kevin O'Brien: Reserve Nimbus a spot in the April 7th first-wave rollout and intro onboarding specialist to Priya",
+    "Keith Donovan: Share call recording with head of security engineering regarding multi-framework reporting capabilities"
+  ],
+  "overall_sentiment": "very-positive",
+  "sentiment_score": 4.8,
+  "key_moments": [
+    {
+      "time": 142.0,
+      "text": "Keith describes his team spending three days pulling data for their last SOC 2 audit, immediately validating the pain point Comply v2 addresses",
+      "type": "concern",
+      "speaker": "Keith Donovan"
+    },
+    {
+      "time": 310.0,
+      "text": "Keith realizes Comply v2 renders his security engineering lead's three-month custom internal tool project unnecessary",
+      "type": "positive_pivot",
+      "speaker": "Keith Donovan"
+    },
+    {
+      "time": 530.0,
+      "text": "Kevin proactively discloses the Detect outage from March 10-18 and explains the infrastructure fixes implemented",
+      "type": "technical_issue",
+      "speaker": "Kevin O'Brien"
+    },
+    {
+      "time": 720.0,
+      "text": "Keith commits to the first-wave April 7th rollout, motivated by PCI DSS reporting needs and an upcoming CFO board conversation",
+      "type": "action_item",
+      "speaker": "Keith Donovan"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Join",
+      "time_seconds": 27.0,
+      "timestamp_ms": 1775060127000
+    },
+    {
+      "participant_name": "Keith Donovan",
+      "event_type": "Join",
+      "time_seconds": 48.0,
+      "timestamp_ms": 1775060148000
+    },
+    {
+      "participant_name": "Kevin O'Brien",
+      "event_type": "Leave",
+      "time_seconds": 3254.0,
+      "timestamp_ms": 1775063354000
+    },
+    {
+      "participant_name": "Keith Donovan",
+      "event_type": "Leave",
+      "time_seconds": 3232.0,
+      "timestamp_ms": 1775063332000
+    }
+  ],
+  "stats": {
+    "turn_count": 49,
+    "participant_count": 2,
+    "speaker_turn_counts": {
+      "Kevin O'Brien": 25,
+      "Keith Donovan": 24
+    },
+    "speaker_total_seconds": {
+      "Kevin O'Brien": 419.0,
+      "Keith Donovan": 264.0
+    }
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "meeting_id": "01KQBBF753B44DE677670E6D",
+  "title": "Support Case #6147 - Summit Trust Detect Alert Delays",
+  "organizer_email": "david.kim@aegiscloud.com",
+  "host_email": "david.kim@aegiscloud.com",
+  "start_time": "2026-04-15T12:30:00.000Z",
+  "end_time": "2026-04-15T12:46:42.000Z",
+  "duration_minutes": 16.7,
+  "participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    },
+    {
+      "email": "a.monroe@summittrust.com",
+      "domain": "summittrust.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "g.fisk@summittrust.com",
+      "domain": "summittrust.com",
+      "role_hint": "external"
+    }
+  ],
+  "internal_participants": [
+    {
+      "email": "david.kim@aegiscloud.com",
+      "domain": "aegiscloud.com",
+      "role_hint": "internal"
+    }
+  ],
+  "external_participants": [
+    {
+      "email": "a.monroe@summittrust.com",
+      "domain": "summittrust.com",
+      "role_hint": "external"
+    },
+    {
+      "email": "g.fisk@summittrust.com",
+      "domain": "summittrust.com",
+      "role_hint": "external"
+    }
+  ],
+  "speaker_map": {
+    "0": "David Kim",
+    "1": "Alicia Monroe",
+    "2": "Gregory Fisk"
+  },
+  "transcript_turns": [
+    {
+      "speaker_name": "David Kim",
+      "start_time": 3.5,
+      "end_time": 12.0,
+      "duration": 8.5,
+      "text": "Hi, this is David Kim from Aegis Cloud Security support, I have support case number 6147 open here - am I speaking with Alicia Monroe?"
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 12.9,
+      "end_time": 20.7,
+      "duration": 7.799999999999999,
+      "text": "Yes, hi David, this is Alicia, and I also have Gregory Fisk our IT Director on the line with me today."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 21.3,
+      "end_time": 33.2,
+      "duration": 11.900000000000002,
+      "text": "Gregory, Alicia, great - thanks for jumping on. I've reviewed the case notes you submitted, but I'd love to hear it in your own words. What exactly are you seeing with the alert delays?"
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 33.7,
+      "end_time": 53.0,
+      "duration": 19.299999999999997,
+      "text": "Yeah, so - okay, I'll let Gregory kind of walk through the technical side, but from my perspective as risk manager, the core issue is that we're in financial services, we have regulatory obligations, and our threat alerts are coming in anywhere from 20 to 45 minutes late. That is not acceptable for us."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 54.0,
+      "end_time": 74.7,
+      "duration": 20.700000000000003,
+      "text": "Right, and to add to what Alicia said - we started noticing this around, I want to say, April 9th or 10th, so just last week. Our SOC team flagged it because they were correlating timestamps on alerts versus when the actual events were logged in our SIEM, and there's a consistent lag. It's not occasional, it's every single alert."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 75.8,
+      "end_time": 85.9,
+      "duration": 10.100000000000009,
+      "text": "Every single alert, okay - and Gregory, when you say you're comparing against your SIEM, what are you using on that side, just so I have the full picture?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 86.6,
+      "end_time": 103.6,
+      "duration": 17.0,
+      "text": "We're running LogVault for our primary SIEM integration, and we have Aegis Detect configured to push alerts via webhook. The events are hitting LogVault with the correct original timestamps, but the Aegis alert notification - the one our security team acts on - that's the thing that's delayed."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 104.2,
+      "end_time": 124.6,
+      "duration": 20.39999999999999,
+      "text": "Okay, that's helpful. And - I do want to be upfront with you both - you may be aware that we had a significant outage with Detect back in mid-March, the event processing pipeline issue. We addressed that with some architectural changes. I want to make sure what you're seeing now isn't a residual effect of those changes."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 125.3,
+      "end_time": 129.8,
+      "duration": 4.500000000000014,
+      "text": "Wait, hold on - what outage? We weren't notified of any outage."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 131.0,
+      "end_time": 140.0,
+      "duration": 9.0,
+      "text": "Yeah, I was going to ask the same thing. We had no communication from Aegis about a platform outage affecting Detect. When did this happen?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 140.9,
+      "end_time": 162.4,
+      "duration": 21.5,
+      "text": "So the outage was March 10th through the 18th - it was a cascading failure in our event ingestion pipeline, approximately six hours of reduced visibility. There were status page updates posted, and there should have been email notifications to primary account contacts. I - I'm genuinely sorry if that communication didn't reach you, that's something I'm going to flag internally."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 163.0,
+      "end_time": 174.5,
+      "duration": 11.5,
+      "text": "David, six hours of no threat monitoring visibility and we're hearing about it right now, on April 15th? That is - I mean, Gregory, are you as frustrated as I am right now?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 175.7,
+      "end_time": 194.3,
+      "duration": 18.600000000000023,
+      "text": "Very much so. Look David, I don't want to pile on you personally here, you're support, I get it - but this is a serious gap. We have examiners who ask us whether our security tooling was operational. If we didn't know there was an outage, we can't accurately answer that question."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 195.4,
+      "end_time": 221.3,
+      "duration": 25.900000000000006,
+      "text": "That is completely fair, and I hear you both. I'm documenting this specifically - the communication failure - as a separate escalation item on top of the technical issue. Your account team needs to follow up on that. But let me stay focused on what's happening right now because the delays you're seeing, the 20 to 45 minutes - that's a current, active problem and I want to fix it today if I can."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 222.5,
+      "end_time": 231.1,
+      "duration": 8.599999999999994,
+      "text": "Okay, yeah - let's figure out what's going on. I pulled our Detect configuration settings this morning, I can share my screen if that helps."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 231.9,
+      "end_time": 249.8,
+      "duration": 17.900000000000006,
+      "text": "That would be great, but actually let me start by pulling up your tenant on our backend first - um - okay, Summit Trust, I'm looking at your Detect configuration now. Gregory, can you tell me what alert priority thresholds you have set? Are you filtering on severity levels at all?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 251.0,
+      "end_time": 257.8,
+      "duration": 6.800000000000011,
+      "text": "We're set to receive all severity levels, so critical, high, medium, and low. We didn't want to filter anything out."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 259.3,
+      "end_time": 267.1,
+      "duration": 7.800000000000011,
+      "text": "Okay, so you're ingesting the full volume. And your webhook endpoint - is that pointing to an internal receiver or a third-party relay?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 267.6,
+      "end_time": 286.2,
+      "duration": 18.599999999999966,
+      "text": "It's going to an internal middleware layer we built, it normalizes the payload before it hits LogVault. But again - the timestamps tell us the delay is happening before the webhook fires, not in our middleware. The event timestamp and the alert-sent timestamp in the Aegis payload itself have a 20-plus minute gap."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 286.5,
+      "end_time": 303.5,
+      "duration": 17.0,
+      "text": "Right, okay - yeah that's actually really telling. If the delay is baked into the payload itself, that means it's happening on our processing side, not yours. Let me look at... okay, so I'm looking at your event processing queue metrics and - hm. Yeah, I'm seeing something here."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 303.8,
+      "end_time": 309.9,
+      "duration": 6.099999999999966,
+      "text": "What are you seeing? Because honestly at this point I'm just hoping there's a clear answer."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 310.9,
+      "end_time": 339.2,
+      "duration": 28.30000000000001,
+      "text": "So - and I want to be careful not to over-promise here - but what I'm seeing is that your tenant is sitting on a processing node cluster that's running significantly higher queue depth than it should be. This is likely connected to the redistribution work we did after the March outage, when we moved to redundant processing nodes. It looks like Summit Trust got placed on a cluster that's, uh, handling a disproportionate share of event volume right now."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 340.2,
+      "end_time": 346.9,
+      "duration": 6.699999999999989,
+      "text": "So you fixed your outage problem and accidentally caused our latency problem. Is that what you're telling me?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 347.9,
+      "end_time": 364.2,
+      "duration": 16.30000000000001,
+      "text": "I - yeah, that's essentially what the data is suggesting. I want to be honest with you rather than dance around it. The remediation work introduced an imbalance in tenant distribution across our processing infrastructure, and Summit Trust appears to be on the short end of that."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 365.3,
+      "end_time": 370.5,
+      "duration": 5.199999999999989,
+      "text": "Okay. So what do we do about it? What's the fix and what's the timeline?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 370.9,
+      "end_time": 388.5,
+      "duration": 17.600000000000023,
+      "text": "The fix is migrating your tenant to a less-loaded node cluster. I can initiate that request right now as an emergency rebalance - that goes to our infrastructure team with a priority flag. Typically that kind of migration completes within two to four hours with zero downtime on your end."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 389.0,
+      "end_time": 393.7,
+      "duration": 4.699999999999989,
+      "text": "Two to four hours - okay. And we'd see the latency drop after that?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 394.3,
+      "end_time": 416.1,
+      "duration": 21.80000000000001,
+      "text": "That's what I'd expect, yes. I want to set the expectation that there may be a brief period - maybe 10, 15 minutes - during the migration where queue processing pauses momentarily, but you shouldn't see an alert gap, alerts will catch up immediately after. I'll monitor it on my end and I'll send you a direct update when the migration is complete."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 417.6,
+      "end_time": 420.8,
+      "duration": 3.1999999999999886,
+      "text": "Alright. Gregory, does that make sense technically to you?"
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 421.5,
+      "end_time": 441.6,
+      "duration": 20.100000000000023,
+      "text": "It does, yeah. David, I'd also ask - can we get some kind of written summary of what happened? The March outage, the root cause of the latency we're experiencing, and what was done to fix it? Because I need to be able to document this for our risk register and potentially for our next regulatory review."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 442.8,
+      "end_time": 458.3,
+      "duration": 15.5,
+      "text": "Absolutely, yes. I'll put together a formal incident summary - it'll cover the March pipeline event, the remediation steps taken, the unintended impact on tenant node distribution, and the resolution we're implementing today. I can have a draft to you by end of business tomorrow."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 459.0,
+      "end_time": 472.7,
+      "duration": 13.699999999999989,
+      "text": "That would be really helpful. And I'd like that to go to our account manager as well, not just this support ticket, because we have a QBR coming up and this needs to be part of that conversation."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 473.4,
+      "end_time": 492.9,
+      "duration": 19.5,
+      "text": "Noted, I'll loop in your account manager explicitly. And Alicia, I just want to - I want to acknowledge again that the communication piece of this, not being notified about the March outage - that's a real failure on our side and it shouldn't have happened. That's going to be a separate escalation I document today."
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 494.0,
+      "end_time": 513.3,
+      "duration": 19.299999999999955,
+      "text": "I appreciate you saying that. I'm not - look, we're not looking to be difficult customers, we're trying to run a secure operation and we rely on Detect to do that. When it's not working right and we don't even know it's not working right, that's when it becomes a real problem for us."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 514.3,
+      "end_time": 532.9,
+      "duration": 18.600000000000023,
+      "text": "No, I completely understand. You're right to be frustrated. Okay - let me go ahead and submit that emergency rebalance request right now while we're on the call. I'm submitting it as I speak... okay, that's in, ticket reference for the infrastructure team is internal IR-8842, I'll include that in your summary doc."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 533.3,
+      "end_time": 550.0,
+      "duration": 16.700000000000045,
+      "text": "Perfect. And David, just one last thing - is there any way to set up some kind of monitoring alert on our end, or on yours, so that if alert latency creeps above a threshold we know about it proactively? Rather than our SOC team manually catching it?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 551.5,
+      "end_time": 579.9,
+      "duration": 28.399999999999977,
+      "text": "That's a great question and honestly it's something we should have had in place. Right now in Detect there isn't a native self-monitoring latency alert for customers, but - and I'll flag this as product feedback - that's a gap. In the short term, I can work with you on setting up a synthetic monitoring check using your existing LogVault infrastructure that compares event timestamps against alert-received timestamps on a schedule. It's a workaround but it'd give you early warning."
+    },
+    {
+      "speaker_name": "Gregory Fisk",
+      "start_time": 581.3,
+      "end_time": 586.7,
+      "duration": 5.400000000000091,
+      "text": "Yeah, let's do that. Can you send us documentation on how to set that up?"
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 587.8,
+      "end_time": 608.3,
+      "duration": 20.5,
+      "text": "I will include that in the follow-up email along with the incident summary. Alright - I think we have a clear path forward here. Rebalance request is submitted, I'll monitor progress, you'll have a written summary by EOB tomorrow, and I'll reach out directly once the migration is confirmed complete. Any other questions before I let you go?"
+    },
+    {
+      "speaker_name": "Alicia Monroe",
+      "start_time": 609.5,
+      "end_time": 617.3,
+      "duration": 7.7999999999999545,
+      "text": "I think that covers it for now. We'll be watching our alert latency closely and we expect to hear from you."
+    },
+    {
+      "speaker_name": "David Kim",
+      "start_time": 618.2,
+      "end_time": 625.0,
+      "duration": 6.7999999999999545,
+      "text": "You will. Thank you both for your time, I'm sorry this happened, and we'll get it sorted. Take care."
+    }
+  ],
+  "transcript_text": "David Kim: Hi, this is David Kim from Aegis Cloud Security support, I have support case number 6147 open here - am I speaking with Alicia Monroe?\nAlicia Monroe: Yes, hi David, this is Alicia, and I also have Gregory Fisk our IT Director on the line with me today.\nDavid Kim: Gregory, Alicia, great - thanks for jumping on. I've reviewed the case notes you submitted, but I'd love to hear it in your own words. What exactly are you seeing with the alert delays?\nAlicia Monroe: Yeah, so - okay, I'll let Gregory kind of walk through the technical side, but from my perspective as risk manager, the core issue is that we're in financial services, we have regulatory obligations, and our threat alerts are coming in anywhere from 20 to 45 minutes late. That is not acceptable for us.\nGregory Fisk: Right, and to add to what Alicia said - we started noticing this around, I want to say, April 9th or 10th, so just last week. Our SOC team flagged it because they were correlating timestamps on alerts versus when the actual events were logged in our SIEM, and there's a consistent lag. It's not occasional, it's every single alert.\nDavid Kim: Every single alert, okay - and Gregory, when you say you're comparing against your SIEM, what are you using on that side, just so I have the full picture?\nGregory Fisk: We're running LogVault for our primary SIEM integration, and we have Aegis Detect configured to push alerts via webhook. The events are hitting LogVault with the correct original timestamps, but the Aegis alert notification - the one our security team acts on - that's the thing that's delayed.\nDavid Kim: Okay, that's helpful. And - I do want to be upfront with you both - you may be aware that we had a significant outage with Detect back in mid-March, the event processing pipeline issue. We addressed that with some architectural changes. I want to make sure what you're seeing now isn't a residual effect of those changes.\nAlicia Monroe: Wait, hold on - what outage? We weren't notified of any outage.\nGregory Fisk: Yeah, I was going to ask the same thing. We had no communication from Aegis about a platform outage affecting Detect. When did this happen?\nDavid Kim: So the outage was March 10th through the 18th - it was a cascading failure in our event ingestion pipeline, approximately six hours of reduced visibility. There were status page updates posted, and there should have been email notifications to primary account contacts. I - I'm genuinely sorry if that communication didn't reach you, that's something I'm going to flag internally.\nAlicia Monroe: David, six hours of no threat monitoring visibility and we're hearing about it right now, on April 15th? That is - I mean, Gregory, are you as frustrated as I am right now?\nGregory Fisk: Very much so. Look David, I don't want to pile on you personally here, you're support, I get it - but this is a serious gap. We have examiners who ask us whether our security tooling was operational. If we didn't know there was an outage, we can't accurately answer that question.\nDavid Kim: That is completely fair, and I hear you both. I'm documenting this specifically - the communication failure - as a separate escalation item on top of the technical issue. Your account team needs to follow up on that. But let me stay focused on what's happening right now because the delays you're seeing, the 20 to 45 minutes - that's a current, active problem and I want to fix it today if I can.\nGregory Fisk: Okay, yeah - let's figure out what's going on. I pulled our Detect configuration settings this morning, I can share my screen if that helps.\nDavid Kim: That would be great, but actually let me start by pulling up your tenant on our backend first - um - okay, Summit Trust, I'm looking at your Detect configuration now. Gregory, can you tell me what alert priority thresholds you have set? Are you filtering on severity levels at all?\nGregory Fisk: We're set to receive all severity levels, so critical, high, medium, and low. We didn't want to filter anything out.\nDavid Kim: Okay, so you're ingesting the full volume. And your webhook endpoint - is that pointing to an internal receiver or a third-party relay?\nGregory Fisk: It's going to an internal middleware layer we built, it normalizes the payload before it hits LogVault. But again - the timestamps tell us the delay is happening before the webhook fires, not in our middleware. The event timestamp and the alert-sent timestamp in the Aegis payload itself have a 20-plus minute gap.\nDavid Kim: Right, okay - yeah that's actually really telling. If the delay is baked into the payload itself, that means it's happening on our processing side, not yours. Let me look at... okay, so I'm looking at your event processing queue metrics and - hm. Yeah, I'm seeing something here.\nAlicia Monroe: What are you seeing? Because honestly at this point I'm just hoping there's a clear answer.\nDavid Kim: So - and I want to be careful not to over-promise here - but what I'm seeing is that your tenant is sitting on a processing node cluster that's running significantly higher queue depth than it should be. This is likely connected to the redistribution work we did after the March outage, when we moved to redundant processing nodes. It looks like Summit Trust got placed on a cluster that's, uh, handling a disproportionate share of event volume right now.\nAlicia Monroe: So you fixed your outage problem and accidentally caused our latency problem. Is that what you're telling me?\nDavid Kim: I - yeah, that's essentially what the data is suggesting. I want to be honest with you rather than dance around it. The remediation work introduced an imbalance in tenant distribution across our processing infrastructure, and Summit Trust appears to be on the short end of that.\nGregory Fisk: Okay. So what do we do about it? What's the fix and what's the timeline?\nDavid Kim: The fix is migrating your tenant to a less-loaded node cluster. I can initiate that request right now as an emergency rebalance - that goes to our infrastructure team with a priority flag. Typically that kind of migration completes within two to four hours with zero downtime on your end.\nGregory Fisk: Two to four hours - okay. And we'd see the latency drop after that?\nDavid Kim: That's what I'd expect, yes. I want to set the expectation that there may be a brief period - maybe 10, 15 minutes - during the migration where queue processing pauses momentarily, but you shouldn't see an alert gap, alerts will catch up immediately after. I'll monitor it on my end and I'll send you a direct update when the migration is complete.\nAlicia Monroe: Alright. Gregory, does that make sense technically to you?\nGregory Fisk: It does, yeah. David, I'd also ask - can we get some kind of written summary of what happened? The March outage, the root cause of the latency we're experiencing, and what was done to fix it? Because I need to be able to document this for our risk register and potentially for our next regulatory review.\nDavid Kim: Absolutely, yes. I'll put together a formal incident summary - it'll cover the March pipeline event, the remediation steps taken, the unintended impact on tenant node distribution, and the resolution we're implementing today. I can have a draft to you by end of business tomorrow.\nAlicia Monroe: That would be really helpful. And I'd like that to go to our account manager as well, not just this support ticket, because we have a QBR coming up and this needs to be part of that conversation.\nDavid Kim: Noted, I'll loop in your account manager explicitly. And Alicia, I just want to - I want to acknowledge again that the communication piece of this, not being notified about the March outage - that's a real failure on our side and it shouldn't have happened. That's going to be a separate escalation I document today.\nAlicia Monroe: I appreciate you saying that. I'm not - look, we're not looking to be difficult customers, we're trying to run a secure operation and we rely on Detect to do that. When it's not working right and we don't even know it's not working right, that's when it becomes a real problem for us.\nDavid Kim: No, I completely understand. You're right to be frustrated. Okay - let me go ahead and submit that emergency rebalance request right now while we're on the call. I'm submitting it as I speak... okay, that's in, ticket reference for the infrastructure team is internal IR-8842, I'll include that in your summary doc.\nGregory Fisk: Perfect. And David, just one last thing - is there any way to set up some kind of monitoring alert on our end, or on yours, so that if alert latency creeps above a threshold we know about it proactively? Rather than our SOC team manually catching it?\nDavid Kim: That's a great question and honestly it's something we should have had in place. Right now in Detect there isn't a native self-monitoring latency alert for customers, but - and I'll flag this as product feedback - that's a gap. In the short term, I can work with you on setting up a synthetic monitoring check using your existing LogVault infrastructure that compares event timestamps against alert-received timestamps on a schedule. It's a workaround but it'd give you early warning.\nGregory Fisk: Yeah, let's do that. Can you send us documentation on how to set that up?\nDavid Kim: I will include that in the follow-up email along with the incident summary. Alright - I think we have a clear path forward here. Rebalance request is submitted, I'll monitor progress, you'll have a written summary by EOB tomorrow, and I'll reach out directly once the migration is confirmed complete. Any other questions before I let you go?\nAlicia Monroe: I think that covers it for now. We'll be watching our alert latency closely and we expect to hear from you.\nDavid Kim: You will. Thank you both for your time, I'm sorry this happened, and we'll get it sorted. Take care.",
+  "summary": "Alicia Monroe (Risk Manager) and Gregory Fisk (IT Director) from Summit Trust contacted Aegis Cloud Security support regarding threat alert delays of 20-45 minutes in their Detect platform, which is critical given their financial services regulatory obligations. David Kim identified the root cause as Summit Trust's tenant being placed on an overloaded processing node cluster during post-outage infrastructure remediation in March. Additionally, it was revealed that Summit Trust had never been notified of a significant platform outage in March (March 10-18) involving six hours of reduced visibility, which raised serious compliance concerns. David submitted an emergency rebalance request during the call and committed to delivering a formal incident summary document by end of business the following day.",
+  "topics": [
+    "alert latency",
+    "incident communication failure",
+    "platform outage",
+    "regulatory compliance",
+    "infrastructure rebalancing",
+    "product gap"
+  ],
+  "action_items": [
+    "David Kim: Submit emergency infrastructure rebalance request (IR-8842) to migrate Summit Trust tenant to a less-loaded node cluster and monitor completion",
+    "David Kim: Deliver formal written incident summary covering the March outage, latency root cause, and resolution to Alicia, Gregory, and their account manager by EOB tomorrow",
+    "David Kim: Escalate the March outage communication failure as a separate internal escalation item and loop in the account manager for upcoming QBR",
+    "David Kim: Include documentation on setting up a synthetic LogVault-based latency monitoring workaround in the follow-up email, and flag native latency alerting as a product feedback gap"
+  ],
+  "overall_sentiment": "mixed-negative",
+  "sentiment_score": 2.4,
+  "key_moments": [
+    {
+      "time": 95.0,
+      "text": "Alicia reveals that 20-45 minute alert delays are unacceptable given Summit Trust's financial services regulatory obligations",
+      "type": "concern",
+      "speaker": "Alicia Monroe"
+    },
+    {
+      "time": 310.0,
+      "text": "Alicia and Gregory express shock and frustration upon learning about the March 10-18 platform outage for the first time, raising compliance documentation concerns",
+      "type": "churn_signal",
+      "speaker": "Alicia Monroe"
+    },
+    {
+      "time": 620.0,
+      "text": "David identifies that Summit Trust's tenant is on an overloaded processing node cluster resulting from post-outage infrastructure redistribution, confirming Aegis caused the latency issue",
+      "type": "technical_issue",
+      "speaker": "David Kim"
+    },
+    {
+      "time": 890.0,
+      "text": "Gregory requests a native latency alerting feature; David acknowledges it as a product gap and proposes a LogVault-based synthetic monitoring workaround",
+      "type": "feature_gap",
+      "speaker": "Gregory Fisk"
+    }
+  ],
+  "events": [
+    {
+      "participant_name": "David Kim",
+      "event_type": "Join",
+      "time_seconds": 4.0,
+      "timestamp_ms": 1776256204000
+    },
+    {
+      "participant_name": "Alicia Monroe",
+      "event_type": "Join",
+      "time_seconds": 24.0,
+      "timestamp_ms": 1776256224000
+    },
+    {
+      "participant_name": "Gregory Fisk",
+      "event_type": "Join",
+      "time_seconds": 40.0,
+      "timestamp_ms": 1776256240000
+    },
+    {
+      "participant_name": "David Kim",
+      "event_type": "Leave",
+      "time_seconds": 977.0,
+      "timestamp_ms": 1776257177000
+    },
+    {
+      "participant_name": "Alicia Monroe",
+      "event_type": "Leave",
+      "time_seconds": 995.0,
+      "timestamp_ms": 1776257195000
+    },
+    {
+      "participant_name": "Gregory Fisk",
+      "event_type": "Leave",
+      "time_seconds": 981.0,
+      "timestamp_ms": 1776257181000
+    }
+  ],
+  "stats": {
+    "turn_count": 41,
+    "participant_count": 3,
+    "speaker_turn_counts": {
+      "David Kim": 19,
+      "Alicia Monroe": 10,
+      "Gregory Fisk": 12
+    },
+    "speaker_total_seconds": {
+      "David Kim": 334.3,
+      "Alicia Monroe": 99.9,
+      "Gregory Fisk": 151.4
+    }
+  }
+}
