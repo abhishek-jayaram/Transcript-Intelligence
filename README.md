@@ -18,23 +18,28 @@ External
 customer-facing calls (56 meetings) are markedly more positive,indicating healthy renewals, demos, and adoption discussions. We include tables of theme counts andsentiment summary, plus charts to visualize these trends. Finally, we outline stakeholderimplications, limitations, and next steps in an actionable roadmap (see Appendix for scripts and datasources)
 
 
-Data Sources & Assumptions
-Data:
+<img width="1440" height="1840" alt="image" src="https://github.com/user-attachments/assets/ae9e524e-5d94-47fc-b80a-d4ba670e00f0" />
+
+
+
+# Data Sources & Assumptions
+# Data:
 We analyzed
 master_meetings.json
 (100 meetings with transcripts, summaries, titles, and pre-computed sentiment scores) and
 themes_by_meeting.csv
 (meeting themes assigned via our pipeline).No other datasets were used.
-Assumptions:
+# Assumptions:
 We assume the provided sentiment labels (very-positive, mixed-negative, etc.) andscores are correct. Meetings without clear matches were left unthemed. Unless noted, results belowrefer to these 100 meetings.
-Methods
-Theme Discovery:
+
+# Methods
+# Theme Discovery:
 We used a
 hybrid approach
 . First, rule-based patterns (from keywords in titles/summaries/transcripts) assigned meetings to predefined business themes (e.g. “HIPAA” or “audit” →
 compliance_audit
-). Second, we validated these assignments with an unsupervised topic model (TF-IDFvectorization + Non-Negative Matrix Factorization, NMF) to ensure clusters aligned with ourcategories【8†L61-L69】. NMF is a common unsupervised technique for discovering “hidden” topicsin text【8†L61-L69】. The final report focuses on the human-readable rule-based themes, with theNMF results serving as supporting evidence of coherent clusters.
-Sentiment Analysis:
+). Second, we validated these assignments with an unsupervised topic model (TF-IDFvectorization + Non-Negative Matrix Factorization, NMF) to ensure clusters aligned with ourcategories. NMF is a common unsupervised technique for discovering “hidden” topicsin text. The final report focuses on the human-readable rule-based themes, with theNMF results serving as supporting evidence of coherent clusters.
+# Sentiment Analysis:
 We used existing sentiment scores from the transcripts (presumably using aneutral/positive/negative classifier). For the report, we grouped themes into three call types:
 customer_support
 (escalations),
