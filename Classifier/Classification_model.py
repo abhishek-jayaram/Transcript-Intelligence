@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 
-df = pd.read_csv(r"C:\Users\Abhishek\OneDrive\Documents\AIML Projects\Transcript Intelligence\Data\labeling_sheet.csv")
+df = pd.read_csv(r"C:\Users\Abhishek\OneDrive\Documents\AIML Projects\Transcript Intelligence\Data\LLM_labeling_sheet.csv")
 
 # Clean labels
 df["manual_label"] = df["manual_label"].astype(str).str.strip()

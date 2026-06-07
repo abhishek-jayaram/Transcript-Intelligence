@@ -5,8 +5,8 @@ from pathlib import Path
 
 # Locate files relative to this script so it works when run from Data/
 here = Path(__file__).parent
-master_path = here / "master_meetings.json"
-labels_path = here.parent / "labeling_sheet.csv"
+master_path = here / "C:\\Users\\Abhishek\\OneDrive\\Documents\\AIML Projects\\Transcript Intelligence\\Classifier\\master_meetings.json"
+labels_path = here.parent / "C:\\Users\\Abhishek\\OneDrive\\Documents\\AIML Projects\\Transcript Intelligence\\Data\\LLM_labeling_sheet.csv"
 
 # Load master meetings (support wrapper with metadata)
 with open(master_path, "r", encoding="utf-8") as f:

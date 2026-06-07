@@ -1,6 +1,6 @@
 import json
 
-with open("master_meetings.json", "r", encoding="utf-8") as f:
+with open("C:\\Users\\Abhishek\\OneDrive\\Documents\\AIML Projects\\Transcript Intelligence\\Classifier\\master_meetings.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 meetings = data.get("meetings", [])
